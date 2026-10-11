@@ -62,7 +62,8 @@ type DocsIndexData struct {
 type CodeFile struct {
 	ID      string
 	Name    string // install target
-	Content string
+	Content string // plain source (the copy button reads it)
+	HTML    string // highlighted source (chroma token spans, escaped)
 }
 
 type RuntimePanel struct {
@@ -81,7 +82,24 @@ type Related struct {
 	Href string
 }
 
+type PropRow struct {
+	Name     string
+	Type     string
+	Required bool
+	Default  string
+	Desc     string
+}
+
+type PropTable struct {
+	Part string
+	Docs string
+	Rows []PropRow
+}
+
 type ItemData struct {
+	Preview      string // static HTML of the item rendered at build time (trusted: built from the monorepo by registry/src/previews.ts)
+	PropTables   []PropTable
+	UsedIn       []Related
 	Name         string
 	Title        string
 	Kind         string

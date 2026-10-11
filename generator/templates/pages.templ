@@ -101,6 +101,55 @@ templ Doc(d DocData) {
 	</article>
 }
 
+templ PropsTable(t PropTable, single bool) {
+	<div class="mb-8">
+		if !single {
+			<h3 class="mb-2 font-mono text-base font-semibold">{ t.Part }</h3>
+		}
+		if t.Docs != "" {
+			<p class="mb-2 max-w-3xl whitespace-pre-line text-sm text-muted-foreground">{ t.Docs }</p>
+		}
+		if len(t.Rows) == 0 {
+			<p class="text-sm text-muted-foreground">No props.</p>
+		} else {
+			<div class="overflow-x-auto" tabindex="0" role="region" aria-label={ "Props of " + t.Part }>
+				<table class="w-full min-w-[40rem] text-left text-sm">
+					<caption class="sr-only">{ "Props of " + t.Part }</caption>
+					<thead>
+						<tr class="border-b border-border">
+							<th scope="col" class="py-2 pr-4 font-medium">Prop</th>
+							<th scope="col" class="py-2 pr-4 font-medium">Type</th>
+							<th scope="col" class="py-2 pr-4 font-medium">Default</th>
+							<th scope="col" class="py-2 font-medium">Description</th>
+						</tr>
+					</thead>
+					<tbody>
+						for _, r := range t.Rows {
+							<tr class="border-b border-border align-top">
+								<th scope="row" class="py-2 pr-4 font-mono text-xs font-medium">
+									{ r.Name }
+									if r.Required {
+										<span class="font-sans text-muted-foreground"> (required)</span>
+									}
+								</th>
+								<td class="py-2 pr-4 font-mono text-xs">{ r.Type }</td>
+								<td class="py-2 pr-4 font-mono text-xs">
+									if r.Default != "" {
+										{ r.Default }
+									} else {
+										<span class="text-muted-foreground">-</span>
+									}
+								</td>
+								<td class="py-2 text-muted-foreground">{ r.Desc }</td>
+							</tr>
+						}
+					</tbody>
+				</table>
+			</div>
+		}
+	</div>
+}
+
 templ Item(d ItemData) {
 	<article>
 		<p class="text-sm text-muted-foreground"><a class="underline" href={ templ.SafeURL(d.CategoryHref) }>{ d.Kind } / { d.Category }</a></p>
@@ -121,11 +170,24 @@ templ Item(d ItemData) {
 				}
 			</p>
 		}
+		<h2 class="mb-2 text-xl font-semibold">Preview</h2>
+		if d.Preview != "" {
+			<div class={ "preview mb-8 rounded border border-border bg-background", templ.KV("p-6", d.Kind != "block") } role="group" tabindex="0" aria-label={ d.Title + " preview" }>
+				@templ.Raw(d.Preview)
+			</div>
+		} else {
+			<p class="mb-8 text-sm text-muted-foreground">No static preview for this item: it needs content or a parent that this page cannot supply. The code is below.</p>
+		}
 		<h2 class="mb-2 text-xl font-semibold">Code</h2>
-		<div data-tabs>
+		<div class="rt mb-8">
+			<div class="rt-bar" role="radiogroup" aria-label="Runtime">
+				for i, p := range d.Panels {
+					<input type="radio" name="rt" id={ "rt-" + p.Runtime } value={ p.Runtime } class="sr-only" checked?={ i == 0 }/>
+					<label for={ "rt-" + p.Runtime }>{ p.Label }</label>
+				}
+			</div>
 			for _, p := range d.Panels {
-				<section id={ p.ID } data-panel data-runtime={ p.Runtime } data-label={ p.Label } aria-label={ p.Label } class="mb-8">
-					<h3 class="mb-2 text-lg font-semibold">{ p.Label }</h3>
+				<section id={ p.ID } class="rt-panel" data-runtime={ p.Runtime } aria-label={ p.Label + " code" }>
 					<p class="mb-2 text-sm text-muted-foreground">Point the CLI at this runtime once, then add the item:</p>
 					<div class="mb-2">
 						@Command(p.ID+"-init", p.InstallInit)
@@ -139,12 +201,28 @@ templ Item(d ItemData) {
 								<span class="font-mono text-xs">{ f.Name }</span>
 								@CopyButton(f.ID)
 							</div>
-							<pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id={ f.ID } class="font-mono">{ f.Content }</code></pre>
+							<pre tabindex="0" class="hl max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id={ f.ID } class="font-mono">@templ.Raw(f.HTML)</code></pre>
 						</div>
 					}
 					<p class="text-sm"><a class="underline" href={ templ.SafeURL(p.JSONHref) }>{ p.Label } registry item (JSON)</a></p>
 				</section>
 			}
 		</div>
+		<h2 class="mb-2 text-xl font-semibold">Props</h2>
+		<p class="mb-4 max-w-3xl text-sm text-muted-foreground">Names and types come from the xgen specs of the source. Standard HTML attributes (id, role, tabIndex, aria-*) pass through to the root element; the class prop is className in React.</p>
+		if len(d.PropTables) == 0 {
+			<p class="mb-8 text-sm text-muted-foreground">No props data for this item.</p>
+		}
+		for _, t := range d.PropTables {
+			@PropsTable(t, len(d.PropTables) == 1)
+		}
+		if len(d.UsedIn) > 0 {
+			<h2 class="mb-2 text-xl font-semibold">Used in</h2>
+			<ul class="flex flex-wrap gap-x-4 gap-y-1 text-sm">
+				for _, r := range d.UsedIn {
+					<li><a class="underline" href={ templ.SafeURL(r.Href) }>{ r.Name }</a></li>
+				}
+			</ul>
+		}
 	</article>
 }

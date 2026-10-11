@@ -13,6 +13,7 @@ import (
 	"encoding/json"
 	"flag"
 	"fmt"
+	stdhtml "html"
 	"io/fs"
 	"log"
 	"os"
@@ -63,6 +64,22 @@ type itemFile struct {
 	} `json:"files"`
 }
 
+// props.json from previews/: one table per part of the item (from the xgen specs of the source monorepo)
+type propRow struct {
+	Name     string   `json:"name"`
+	Type     string   `json:"type"`
+	Required bool     `json:"required"`
+	Default  string   `json:"default"`
+	Values   []string `json:"values"`
+	Desc     string   `json:"desc"`
+}
+
+type propTable struct {
+	Part string    `json:"part"`
+	Docs string    `json:"docs"`
+	Rows []propRow `json:"rows"`
+}
+
 type doc struct {
 	Slug, Title, Desc, Section, Filter, HTML string
 	Order                                    int
@@ -71,8 +88,8 @@ type doc struct {
 var runtimeLabels = map[string]string{"svelte": "Svelte", "react": "React", "vue": "Vue"}
 
 var cfg struct {
-	registry, content, out, siteURL, registryURL string
-	includeRegistry                              bool
+	registry, content, previews, out, siteURL, registryURL string
+	includeRegistry                                        bool
 }
 
 const (
@@ -96,6 +113,7 @@ func must(err error) {
 func main() {
 	flag.StringVar(&cfg.registry, "registry", "../r", "registry directory (r/)")
 	flag.StringVar(&cfg.content, "content", "../content", "markdown content directory")
+	flag.StringVar(&cfg.previews, "previews", "../previews", "static previews and props data (previews/, built by bun run previews:build)")
 	flag.StringVar(&cfg.out, "out", "../dist", "output directory")
 	flag.StringVar(&cfg.siteURL, "site-url", envOr("SITE_URL", defaultSiteURL), "absolute site URL (canonical links, sitemap, robots)")
 	flag.StringVar(&cfg.registryURL, "registry-url", envOr("REGISTRY_URL", defaultRegistryURL), "absolute registry base URL (install commands, JSON links); <registry-url>/<runtime> is the CLI registryUrl")
@@ -119,6 +137,21 @@ func main() {
 	}
 	if cfg.includeRegistry {
 		must(copyDir(cfg.registry, filepath.Join(cfg.out, "r")))
+	}
+
+	// previews: html/<name>.html, ph/*.svg (shared placeholder pictures), props.json
+	allProps := map[string][]propTable{}
+	if _, err := os.Stat(filepath.Join(cfg.previews, "props.json")); err == nil {
+		readJSON(filepath.Join(cfg.previews, "props.json"), &allProps)
+		must(copyDir(filepath.Join(cfg.previews, "ph"), filepath.Join(cfg.out, "assets", "ph")))
+	}
+	usedIn := map[string][]string{}
+	for _, it := range reg.Items {
+		if ref, ok := it.Runtimes["react"]; ok && (it.Kind == "block" || it.Kind == "component") {
+			for _, r := range ref.RegistryDependencies {
+				usedIn[r] = append(usedIn[r], it.Name)
+			}
+		}
 	}
 
 	itemURL := map[string]string{}
@@ -194,6 +227,23 @@ func main() {
 			Description: it.Description, Install: "npx ui8kit add " + it.Name,
 			CategoryHref: categoryHref(docs, it),
 		}
+		if b, err := os.ReadFile(filepath.Join(cfg.previews, "html", it.Name+".html")); err == nil {
+			d.Preview = string(b)
+		}
+		for _, t := range allProps[it.Name] {
+			pt := templates.PropTable{Part: t.Part, Docs: t.Docs}
+			for _, r := range t.Rows {
+				pt.Rows = append(pt.Rows, templates.PropRow{Name: r.Name, Type: r.Type, Required: r.Required, Default: r.Default, Desc: r.Desc})
+			}
+			d.PropTables = append(d.PropTables, pt)
+		}
+		users := usedIn[it.Name]
+		sort.Strings(users)
+		for _, u := range users {
+			if href, ok := itemURL[u]; ok {
+				d.UsedIn = append(d.UsedIn, templates.Related{Name: u, Href: href})
+			}
+		}
 		reqSeen := map[string]bool{}
 		for _, rt := range reg.Runtimes {
 			ref, ok := it.Runtimes[rt]
@@ -207,8 +257,14 @@ func main() {
 				InstallInit: fmt.Sprintf("npx ui8kit init --yes --framework %s --dir src --registry-url %s/%s --strict-cdn", rt, cfg.registryURL, rt),
 				InstallAdd:  "npx ui8kit add " + it.Name,
 			}
+			budget := highlightBudget // per runtime panel: the first files are highlighted, the rest stay plain (page weight)
 			for i, fl := range f.Files {
-				p.Files = append(p.Files, templates.CodeFile{ID: fmt.Sprintf("code-%s-%d", rt, i), Name: fl.Target, Content: fl.Content})
+				code := stdhtml.EscapeString(fl.Content)
+				if it.Kind != "utils" && it.Kind != "lib" && len(fl.Content) <= budget && len(fl.Content) <= maxHighlight {
+					budget -= len(fl.Content)
+					code = highlight(fl.Target, fl.Content)
+				}
+				p.Files = append(p.Files, templates.CodeFile{ID: fmt.Sprintf("code-%s-%d", rt, i), Name: fl.Target, Content: fl.Content, HTML: code})
 			}
 			d.Panels = append(d.Panels, p)
 			for _, r := range ref.RegistryDependencies {

@@ -3,4 +3,41 @@
 @import "./styles/theme.css";
 @import "./styles/kit.css";
 @source "../templates";
+/* shadcn neutral --destructive (hsl 0.6 88% 52%) gives white text 4.25:1 on the destructive button; this site needs AA (4.5:1), so light mode uses hsl(0 72% 47%) (5.4:1 on white, 5.0:1 on muted). Dark keeps the theme value. */
+:root { --destructive: hsl(0 72% 47%); }
 @source "./app.js";
+@source "../../previews/html";
+
+/* ---- syntax highlighting: chroma token classes at build time, colours as variables (light and dark, AA on card/muted/background) ---- */
+:root {
+  --tok-keyword: #6d28d9; --tok-string: #047857; --tok-function: #1d4ed8; --tok-number: #92400e;
+  --tok-comment: #525252; --tok-tag: #be123c; --tok-attr: #155e75;
+}
+:is(.dark, [data-theme="dark"]) {
+  --tok-keyword: #c4b5fd; --tok-string: #6ee7b7; --tok-function: #93c5fd; --tok-number: #fcd34d;
+  --tok-comment: #a3a3a3; --tok-tag: #fda4af; --tok-attr: #67e8f9;
+}
+.hl code { color: var(--card-foreground); }
+.hl [class^="k"] { color: var(--tok-keyword); }
+.hl [class^="s"], .hl .sx, .hl .sr { color: var(--tok-string); }
+.hl [class^="m"], .hl .no, .hl .kc { color: var(--tok-number); }
+.hl [class^="c"] { color: var(--tok-comment); font-style: italic; }
+.hl .nf, .hl .nb, .hl .nc, .hl .nd, .hl .nn { color: var(--tok-function); }
+.hl .nt { color: var(--tok-tag); }
+.hl .na, .hl .nv, .hl .py { color: var(--tok-attr); }
+
+/* ---- code tabs without JavaScript: radio + label, panels switched with :has() ---- */
+.rt-bar { display: flex; gap: 8px; margin-bottom: 16px; border-bottom: 1px solid var(--border); }
+.rt-bar label { display: inline-flex; align-items: center; height: 40px; padding: 0 16px; border-bottom: 2px solid transparent; margin-bottom: -1px;
+  font-size: 0.875rem; font-weight: 500; color: var(--muted-foreground); cursor: pointer; }
+.rt-bar label:hover { color: var(--foreground); }
+.rt-bar input:checked + label { color: var(--foreground); border-bottom-color: var(--primary); }
+.rt-bar input:focus-visible + label { outline: 2px solid var(--ring); outline-offset: -2px; border-radius: var(--radius); }
+.rt-panel { display: none; }
+.rt:has(input[value="svelte"]:checked) .rt-panel[data-runtime="svelte"],
+.rt:has(input[value="react"]:checked) .rt-panel[data-runtime="react"],
+.rt:has(input[value="vue"]:checked) .rt-panel[data-runtime="vue"] { display: block; }
+
+/* ---- static preview frame: fixed/sticky parts of a sample stay inside the frame, wide samples scroll instead of widening the page ---- */
+.preview { contain: layout paint; overflow-x: auto; max-height: 48rem; overflow-y: auto; isolation: isolate; }
+.preview a, .preview button { pointer-events: none; }

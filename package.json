@@ -10,6 +10,7 @@
   "scripts": {
     "registry:build": "bun run --cwd registry build",
     "registry:validate": "bun run --cwd registry validate",
+    "previews:build": "bun run registry/src/previews.ts",
     "site:generate": "cd generator && go run . --registry ../r --content ../content --out ../dist",
     "docs:build": "bash scripts/build-docs.sh",
     "site:build": "bun run registry:build && bun run registry:validate && bun run site:generate",

@@ -8,4 +8,8 @@ require (
 	github.com/yuin/goldmark-meta v1.1.0
 )
 
-require gopkg.in/yaml.v2 v2.3.0 // indirect
+require (
+	github.com/alecthomas/chroma/v2 v2.27.0 // indirect
+	github.com/dlclark/regexp2/v2 v2.2.1 // indirect
+	gopkg.in/yaml.v2 v2.3.0 // indirect
+)

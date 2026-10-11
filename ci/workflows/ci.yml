@@ -22,6 +22,8 @@ jobs:
           git diff --exit-code -- generator
       - name: Tailwind CSS is up to date
         run: bun run site:css && git diff --exit-code -- generator/assets/site.css
+      - name: Highlighting tokens meet AA in light and dark
+        run: node scripts/check-contrast.mjs
       - run: cd generator && go vet ./... && go build ./...
       - name: Generate the static site
         run: bun run site:generate
@@ -32,7 +34,7 @@ jobs:
       - name: Landing page checks (web/)
         run: node scripts/check-web.mjs web
       - name: axe (WCAG A/AA) on sample pages
-        run: node scripts/a11y.mjs dist /,/docs/,/blocks/hero-split/,/primitives/button/
+        run: node scripts/a11y.mjs dist /,/docs/,/blocks/hero-split/,/components/faq-cards/,/primitives/button/
         env: { CHROME_PATH: /usr/bin/google-chrome }
       - name: CLI smoke (real ui8kit CLI against the local registry)
         run: scripts/cli-smoke.sh

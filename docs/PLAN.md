@@ -1,15 +1,15 @@
 # ui8kit/site: plan
 
 Monorepo for the **registry** (`r/`), its **tooling**, the **docs content** and the **static site generator**.
-Decisions (2026-10-11): static HTML first (Go + templ, SSR later with the same templates), no iframe previews or live hosts, the site shows code and the
-install command only, runtime correctness is guaranteed by the CI of the private source monorepo before a registry is published.
+Decisions (2026-10-11): static HTML first (Go + templ, SSR later with the same templates), no iframe previews or live hosts, the site shows the code, the install command, build-time static previews and props tables (stage 1, 2026-10-12); runtime correctness is guaranteed by the CI of the private source monorepo before a registry is published.
 
 ## Layout
 
 | Path | Role |
 |---|---|
 | `r/` | Registry output (committed). `registry.json` (site index), `manifest.json` (runtime, version, source commit, sha256 per file), `<runtime>/...` (CLI roots) |
-| `registry/` | Bun/TS tooling: `build.ts` (reads the ui8kit packages, emits `r/`), `validate.ts`, `npm/` (stub package.json) |
+| `registry/` | Bun/TS tooling: `build.ts` (reads the ui8kit packages, emits `r/`), `validate.ts`, `previews.ts` (SSR previews + props to `previews/`), `npm/` (stub package.json) |
+| `previews/` | Committed output of `previews.ts`: `html/<name>.html`, `ph/*.svg`, `props.json`, `sources.json` (where each sample came from) |
 | `content/` | Markdown with front matter (`title`, `description`, `order`, `section: categories`, `filter: kind[:category]`) |
 | `generator/` | Go module: `main.go` + `templates/*.templ`; `assets/` (CSS from ui8kit, built `site.css`, `app.js`) |
 | `scripts/` | `cli-smoke.sh` (real CLI vs local registry), `check-imports.mjs`, `check-site.mjs`, `a11y.mjs` (axe) |
@@ -53,7 +53,7 @@ so `add --all` resolves every relative import. See `content/installation.md`.
 
 1. Optional: publish `r/` to unpkg/jsDelivr (`@ui8kit/registry`; the domains ui.buildy.tw, registry.buildy.tw and buildy.tw are live, `SITE_URL` / `REGISTRY_URL` default to them).
 2. CLI (`ui8kit/cli`): pull `registry:utils` via `registryDependencies`, honour `paths` with `target`, handle type-only cycles.
-3. Syntax highlighting at generation time (Go, no client JS); per-block props table from the source specs.
-4. Dark mode toggle and skin picker (CSS variables only); more category copy; block thumbnails as static images from the source monorepo.
+3. ~~Syntax highlighting at generation time; props tables; static previews~~ done (stage 1, see README "Previews, code highlighting, props tables"). Open: previews for components that no block sample uses, preview of more than the first block variant.
+4. Dark mode toggle and skin picker (CSS variables only; the `--tok-*` highlight tokens and the previews already follow `.dark`); more category copy.
 5. Templates tab (page skeletons) and collections; SSR variant reusing `templates/`.
 6. Split item pages by group (`hero`, `pricing`, ...), add `registry:theme` items for skins.
