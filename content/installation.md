@@ -1,6 +1,6 @@
 ---
 title: Installation
-description: "Registry roots, what lands where, and the one config gotcha with --runtime."
+description: "Registry roots, what lands where, and how to pick the framework."
 order: 2
 ---
 ## Registry roots

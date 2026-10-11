@@ -32,27 +32,26 @@ npx ui8kit init --yes --framework svelte --dir src --registry-url https://regist
 npx ui8kit add hero-split
 ```
 
-## Deploy (three Vercel projects on this repo)
+## Deploy (three Vercel projects on this repo, all live)
 
-| | Registry | Docs |
-|---|---|---|
-| Domain | `registry.buildy.tw` | `ui.buildy.tw` |
-| Root Directory | `r` | repo root |
-| Framework | Other | Other |
-| Build / Install | none | none (overridden by `vercel.json`) |
-| Output | `.` | `docs-dist` |
-| Config | `r/vercel.json` (CORS, JSON headers, cache) | `vercel.json` (headers) |
+| | Landing | Registry | Docs |
+|---|---|---|---|
+| Domain | `buildy.tw` | `registry.buildy.tw` | `ui.buildy.tw` |
+| Root Directory | `web` | `r` | repo root |
+| Framework | Other | Other | Other |
+| Build / Install | none | none | none (overridden by `vercel.json`) |
+| Output | `.` | `.` | `docs-dist` |
+| Config | `web/vercel.json` | `r/vercel.json` (CORS, JSON headers, cache) | `vercel.json` (headers) |
 
 The docs project serves the committed `docs-dist/` (Vercel's build image has no Go toolchain, so nothing is built there).
 After changing `content/`, `generator/` or `r/`, run `bun run docs:build` (`scripts/build-docs.sh`) and commit `docs-dist/`.
-Third project, the landing page of the root domain: Root Directory `web`, Framework Other, no Build / Install, Output `.`, config `web/vercel.json`, domain `buildy.tw`.
-Plain static files (`web/index.html`, `web/style.css`), no build, not part of `docs-dist/`. Check with `node scripts/check-web.mjs`.
+The landing page (`buildy.tw`) is plain static files (`web/index.html`, `web/style.css`), no build, not part of `docs-dist/`. Check with `node scripts/check-web.mjs`.
 The registry project redirects only its root path `/` to `https://ui.buildy.tw/` (301, `r/vercel.json`).
 Registry URLs: `https://registry.buildy.tw/<svelte|react|vue>` (no `/r/` prefix, the root directory is `r/`).
 
 ## Gates
 
-`scripts/cli-smoke.sh` (real CLI 2.0.2 against a local server rooted at `r/`), `scripts/check-site.mjs` (landmarks, links, no external requests),
+`scripts/cli-smoke.sh` (real CLI ui8kit 2.0.2 against a local server rooted at `r/`), `scripts/check-site.mjs` (landmarks, links, no external requests),
 `scripts/a11y.mjs` (axe WCAG A/AA in headless Chrome).
 
 ## Licence

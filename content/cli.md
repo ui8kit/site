@@ -3,7 +3,7 @@ title: CLI
 description: "The ui8kit v2 commands and how they map to the r/ registry."
 order: 3
 ---
-The CLI is `ui8kit` on npm (contract 2.0.0). Source: [github.com/ui8kit/cli](https://github.com/ui8kit/cli).
+The CLI is `ui8kit` on npm (current version 2.0.2, contract 2.0.0). Source: [github.com/ui8kit/cli](https://github.com/ui8kit/cli).
 
 | Command | What it does |
 |---|---|

@@ -38,8 +38,8 @@ Determinism: sorted keys/items, no timestamps (`lastUpdated` = source commit dat
 ## How the CLI maps to `r/`
 
 `init --framework <rt> --dir src --registry-url https://registry.buildy.tw/<rt> --strict-cdn` installs `utils` and `lib` items from `index.json`;
-`add <name>` fetches `<folder by type>/<name>.json` and writes every file to `target` under `dir`. Use `--framework none` (not `--runtime`): the CLI runtime
-filter drops `*.types.ts`. See `content/installation.md` for the gaps.
+`add <name>` fetches `<folder by type>/<name>.json` and writes every file to `target` under `dir`. Use `--framework <rt>`: with ui8kit 2.0.2 the CLI keeps `*.types.ts`,
+so `add --all` resolves every relative import. See `content/installation.md`.
 
 ## CI and what runs where
 
@@ -51,8 +51,8 @@ filter drops `*.types.ts`. See `content/installation.md` for the gaps.
 
 ## Next steps
 
-1. Decide the public domain; set `SITE_URL` and `REGISTRY_URL` (defaults ui.buildy.tw / registry.buildy.tw) and publish `r/` to unpkg/jsDelivr (`@ui8kit/registry`).
-2. Fix in the CLI: pull `registry:utils` via `registryDependencies`, honour `paths` with `target`, keep `*.types.ts` under `--runtime`, handle type-only cycles.
+1. Optional: publish `r/` to unpkg/jsDelivr (`@ui8kit/registry`; the domains ui.buildy.tw, registry.buildy.tw and buildy.tw are live, `SITE_URL` / `REGISTRY_URL` default to them).
+2. CLI (`ui8kit/cli`): pull `registry:utils` via `registryDependencies`, honour `paths` with `target`, handle type-only cycles.
 3. Syntax highlighting at generation time (Go, no client JS); per-block props table from the source specs.
 4. Dark mode toggle and skin picker (CSS variables only); more category copy; block thumbnails as static images from the source monorepo.
 5. Templates tab (page skeletons) and collections; SSR variant reusing `templates/`.
