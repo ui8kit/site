@@ -1,0 +1,8 @@
+{
+  "name": "@ui8kit/registry",
+  "version": "0.0.0-stub",
+  "description": "STUB, not published: ui8kit registry artifacts (r/). Version is set by the release workflow.",
+  "license": "MIT",
+  "files": ["r"],
+  "publishConfig": { "access": "public" }
+}
