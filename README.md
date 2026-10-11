@@ -41,7 +41,7 @@ npx ui8kit add hero-split
 | Framework | Other | Other |
 | Build / Install | none | none (overridden by `vercel.json`) |
 | Output | `.` | `docs-dist` |
-| Config | `r/vercel.json` (CORS, JSON headers, cache) | `vercel.json` (headers, `ignoreCommand`) |
+| Config | `r/vercel.json` (CORS, JSON headers, cache) | `vercel.json` (headers) |
 
 The docs project serves the committed `docs-dist/` (Vercel's build image has no Go toolchain, so nothing is built there).
 After changing `content/`, `generator/` or `r/`, run `bun run docs:build` (`scripts/build-docs.sh`) and commit `docs-dist/`.
