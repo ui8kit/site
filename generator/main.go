@@ -31,7 +31,7 @@ import (
 	"github.com/yuin/goldmark/renderer/html"
 )
 
-//go:embed assets/site.css assets/app.js
+//go:embed assets/site.css assets/skins.css assets/skins.json assets/app.js assets/theme.js
 var assets embed.FS
 
 type registry struct {
@@ -122,6 +122,10 @@ func main() {
 	cfg.siteURL = strings.TrimRight(cfg.siteURL, "/")
 	cfg.registryURL = strings.TrimRight(cfg.registryURL, "/")
 
+	sb, err0 := assets.ReadFile("assets/skins.json")
+	must(err0)
+	must(json.Unmarshal(sb, &templates.Skins))
+
 	var reg registry
 	readJSON(filepath.Join(cfg.registry, "registry.json"), &reg)
 	docs := loadDocs()
@@ -130,7 +134,7 @@ func main() {
 	nav := buildNav(docs)
 
 	// assets and registry copy
-	for _, f := range []string{"site.css", "app.js"} {
+	for _, f := range []string{"site.css", "skins.css", "app.js", "theme.js"} {
 		b, err := assets.ReadFile("assets/" + f)
 		must(err)
 		write("assets/"+f, b)

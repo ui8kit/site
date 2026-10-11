@@ -4,8 +4,13 @@
 @import "./styles/kit.css";
 @source "../templates";
 /* shadcn neutral --destructive (hsl 0.6 88% 52%) gives white text 4.25:1 on the destructive button; this site needs AA (4.5:1), so light mode uses hsl(0 72% 47%) (5.4:1 on white, 5.0:1 on muted). Dark keeps the theme value. */
-:root { --destructive: hsl(0 72% 47%); }
+:root:not(.dark, [data-theme="dark"]) { --destructive: hsl(0 72% 47%); }
 @source "./app.js";
+/* colour mode: native controls follow it; the theme/skin selects exist only with JS (theme.js adds html.js) */
+:root { color-scheme: light; }
+:root.dark { color-scheme: dark; }
+.theme-ctl { display: none; }
+.js .theme-ctl { display: flex; }
 @source "../../previews/html";
 
 /* ---- syntax highlighting: chroma token classes at build time, colours as variables (light and dark, AA on card/muted/background) ---- */

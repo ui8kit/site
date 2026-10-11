@@ -1,0 +1,62 @@
+[
+ {
+  "id": "sky",
+  "label": "Sky"
+ },
+ {
+  "id": "modern-minimal",
+  "label": "Modern Minimal"
+ },
+ {
+  "id": "violet-bloom",
+  "label": "Violet Bloom"
+ },
+ {
+  "id": "t3-chat",
+  "label": "T3 Chat"
+ },
+ {
+  "id": "bubblegum",
+  "label": "Bubblegum"
+ },
+ {
+  "id": "doom-64",
+  "label": "Doom 64"
+ },
+ {
+  "id": "amber-minimal",
+  "label": "Amber Minimal"
+ },
+ {
+  "id": "supabase",
+  "label": "Supabase"
+ },
+ {
+  "id": "kodama-grove",
+  "label": "Kodama Grove"
+ },
+ {
+  "id": "perpetuity",
+  "label": "Perpetuity"
+ },
+ {
+  "id": "cosmic-night",
+  "label": "Cosmic Night"
+ },
+ {
+  "id": "claude",
+  "label": "Claude"
+ },
+ {
+  "id": "mocha-mousse",
+  "label": "Mocha Mousse"
+ },
+ {
+  "id": "neo-brutalism",
+  "label": "Neo Brutalism"
+ },
+ {
+  "id": "notebook",
+  "label": "Notebook"
+ }
+]

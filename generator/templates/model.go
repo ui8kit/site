@@ -12,6 +12,15 @@ type Meta struct {
 	Nav         []NavGroup
 }
 
+// Skin is one choice of the skin picker (id = value of data-skin on <html>).
+type Skin struct {
+	ID    string `json:"id"`
+	Label string `json:"label"`
+}
+
+// Skins is filled by the generator from assets/skins.json.
+var Skins []Skin
+
 type NavGroup struct {
 	Title string
 	Links []NavLink

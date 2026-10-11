@@ -62,7 +62,11 @@ Registry URLs: `https://registry.buildy.tw/<svelte|react|vue>` (no `/r/` prefix,
 ## Gates
 
 `scripts/cli-smoke.sh` (real CLI ui8kit 2.0.2 against a local server rooted at `r/`), `scripts/check-site.mjs` (landmarks, links, no external requests),
-`scripts/a11y.mjs` (axe WCAG A/AA in headless Chrome), `scripts/check-contrast.mjs` (highlight tokens, AA).
+`scripts/a11y.mjs` (axe WCAG A/AA in headless Chrome), `scripts/check-contrast.mjs` (AA over 16 skins x 2 modes: highlight tokens and chrome text pairs; `--table` prints a summary).
+
+## Dark mode and skins
+
+The header has a colour mode select (System, Light, Dark) and a skin select (Default + 15 skins). `generator/assets/theme.js` (same-origin, synchronous in `<head>`, CSP `script-src 'self'` is enough) reads `localStorage` (`ui8kit-theme`, `ui8kit-skin`) and sets `html.dark` / `data-skin` before first paint; with no choice the site follows `prefers-color-scheme` and the shadcn neutral theme. `generator/assets/skins.css` (32.8 KB, 5.8 KB gzip) is generated: `node scripts/gen-skins.mjs <monorepo>/xgen/runtimes/core/assets/styles` (colour tokens, 8px radius step, system fonts, plus contrast fixes in a separate "site overrides" section). `node scripts/check-contrast.mjs --table` checks every skin x mode; axe: `A11Y_THEME=dark A11Y_SKIN=claude node scripts/a11y.mjs docs-dist /,/docs/`. Details in docs/PLAN.md.
 
 ## Licence
 

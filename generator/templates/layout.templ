@@ -9,7 +9,9 @@ templ Layout(m Meta) {
 			<title>{ m.Title }</title>
 			<meta name="description" content={ m.Description }/>
 			<link rel="canonical" href={ m.SiteURL + m.Path }/>
+			<script src="/assets/theme.js"></script>
 			<link rel="stylesheet" href="/assets/site.css"/>
+			<link rel="stylesheet" href="/assets/skins.css"/>
 			<script src="/assets/app.js" defer></script>
 		</head>
 		<body class="min-h-screen bg-background text-foreground font-sans">
@@ -28,6 +30,21 @@ templ Layout(m Meta) {
 						<input id="search-input" type="search" autocomplete="off" placeholder="Search, press /" class="h-10 w-full rounded border border-input bg-card px-4 text-sm"/>
 						<ul id="search-results" hidden class="absolute left-0 right-0 top-12 z-40 rounded border border-border bg-popover text-popover-foreground shadow-md" aria-live="polite"></ul>
 					</form>
+					<div class="theme-ctl items-center gap-2 text-sm">
+						<label for="theme-select" class="sr-only">Colour mode</label>
+						<select id="theme-select" class="h-10 rounded border border-input bg-card px-2 text-sm text-card-foreground">
+							<option value="system">System</option>
+							<option value="light">Light</option>
+							<option value="dark">Dark</option>
+						</select>
+						<label for="skin-select" class="sr-only">Skin</label>
+						<select id="skin-select" class="h-10 rounded border border-input bg-card px-2 text-sm text-card-foreground">
+							<option value="">Default</option>
+							for _, s := range Skins {
+								<option value={ s.ID }>{ s.Label }</option>
+							}
+						</select>
+					</div>
 				</div>
 			</header>
 			<div class="mx-auto flex max-w-6xl flex-col gap-8 px-4 py-8 md:flex-row">
