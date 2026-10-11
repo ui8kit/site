@@ -8421,7 +8421,7 @@
     "commit": "8efbb7e81376eb7704a43288bca63212bc2b97cd",
     "commitDate": "2026-10-11T23:04:31+03:00",
     "dirty": false,
-    "repo": "ui8kit (private monorepo)"
+    "repo": "private source monorepo"
   },
   "version": "0.1.0"
 }

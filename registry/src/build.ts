@@ -1,7 +1,7 @@
-// Builds r/ (registry for every runtime) from the generated packages of the ui8kit monorepo.
+// Builds r/ (registry for every runtime) from the generated packages of the private source monorepo.
 //
-//   bun run registry:build                       # source from $UI8KIT_SRC or ../ui8kit next to this repo
-//   bun run registry:build -- --src /path/to/ui8kit --out r --version 0.1.0
+//   bun run registry:build                       # source from $UI8KIT_SRC or ../source next to this repo
+//   bun run registry:build -- --src /path/to/source --out r --version 0.1.0
 //
 // Deterministic: sorted keys and items, no timestamps (lastUpdated = commit date of the source), sha256 per file.
 import { createHash } from "node:crypto";
@@ -26,7 +26,7 @@ function arg(name: string, env: string, def: string): string {
   return i > 0 ? process.argv[i + 1]! : process.env[env] ?? def;
 }
 const repoRoot = path.resolve(import.meta.dir, "../..");
-const SRC = path.resolve(arg("src", "UI8KIT_SRC", path.join(repoRoot, "..", "ui8kit")));
+const SRC = path.resolve(arg("src", "UI8KIT_SRC", path.join(repoRoot, "..", "source")));
 const OUT = path.resolve(arg("out", "UI8KIT_OUT", path.join(repoRoot, "r")));
 const VERSION = arg("version", "UI8KIT_REGISTRY_VERSION", JSON.parse(readFileSync(path.join(repoRoot, "package.json"), "utf8")).version);
 
@@ -161,10 +161,14 @@ function main() {
   const commit = git(["rev-parse", "HEAD"]);
   const commitDate = git(["show", "-s", "--format=%cI", "HEAD"]) || "1970-01-01T00:00:00.000Z";
   const dirty = git(["status", "--porcelain", "--", "packages", "xgen/specs"]) !== "";
+  // r/vercel.json (deploy config of the registry project) is hand-written: keep it across rebuilds
+  const keepFile = path.join(OUT, "vercel.json");
+  const kept = existsSync(keepFile) ? readFileSync(keepFile) : null;
   if (existsSync(OUT)) rmSync(OUT, { recursive: true });
   mkdirSync(OUT, { recursive: true });
+  if (kept) writeFileSync(keepFile, kept);
   const meta = blockMeta();
-  const manifest: any = { contractVersion: "2.0.0", version: VERSION, source: { repo: "ui8kit (private monorepo)", commit, dirty, commitDate }, runtimes: {} };
+  const manifest: any = { contractVersion: "2.0.0", version: VERSION, source: { repo: "private source monorepo", commit, dirty, commitDate }, runtimes: {} };
   const site: Record<string, any> = {};
 
   for (const rt of RUNTIMES) {
