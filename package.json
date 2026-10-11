@@ -1,0 +1,24 @@
+{
+  "name": "ui8kit-site",
+  "private": true,
+  "version": "0.1.0",
+  "description": "ui8kit monorepo: registry (r/), registry tooling, docs content and the static site generator",
+  "license": "MIT",
+  "workspaces": [
+    "registry"
+  ],
+  "scripts": {
+    "registry:build": "bun run --cwd registry build",
+    "registry:validate": "bun run --cwd registry validate",
+    "site:generate": "cd generator && go run . --registry ../r --content ../content --out ../dist",
+    "site:build": "bun run registry:build && bun run registry:validate && bun run site:generate",
+    "site:css": "tailwindcss -i generator/assets/site.src.css -o generator/assets/site.css --minify",
+    "site:templ": "cd generator && templ generate"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.3.3",
+    "axe-core": "^4.14.0",
+    "puppeteer-core": "^25.13.0",
+    "tailwindcss": "^4.3.3"
+  }
+}

@@ -1,0 +1,33 @@
+# TEMPLATE: nothing here runs on its own and nothing needs a secret unless you flip `publish_npm`.
+# Packs r/ as a GitHub Release asset (r.tar.gz + sha256) and prepares the @ui8kit/registry npm package.
+name: release
+on:
+  workflow_dispatch:
+    inputs:
+      version: { description: "Registry version, e.g. 0.1.0", required: true }
+      publish_release: { description: "Create the GitHub Release", type: boolean, default: false }
+      publish_npm: { description: "npm publish (needs NPM_TOKEN)", type: boolean, default: false }
+permissions:
+  contents: write
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
+      - run: bun install --frozen-lockfile
+      - run: bun run registry:validate
+      - name: Pack r/
+        run: |
+          tar -czf r.tar.gz r
+          sha256sum r.tar.gz > r.tar.gz.sha256
+          mkdir -p npm-pkg && cp -r r npm-pkg/r && cp registry/npm/package.json npm-pkg/package.json
+          (cd npm-pkg && npm pkg set version="${{ inputs.version }}" && npm pack --dry-run)
+      - name: GitHub Release
+        if: ${{ inputs.publish_release }}
+        run: gh release create "r-v${{ inputs.version }}" r.tar.gz r.tar.gz.sha256 --title "registry ${{ inputs.version }}" --notes "ui8kit registry r/ (svelte, react, vue)"
+        env: { GH_TOKEN: "${{ github.token }}" }
+      - name: npm publish
+        if: ${{ inputs.publish_npm }}
+        run: cd npm-pkg && npm publish --access public
+        env: { NODE_AUTH_TOKEN: "${{ secrets.NPM_TOKEN }}" }

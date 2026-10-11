@@ -1,0 +1,54 @@
+# TEMPLATE: runs without secrets. Validates the committed r/, regenerates the site and runs the gates.
+name: ci
+on:
+  push: { branches: [main] }
+  pull_request:
+  workflow_dispatch:
+jobs:
+  site:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
+      - uses: actions/setup-go@v5
+        with: { go-version-file: generator/go.mod }
+      - run: bun install --frozen-lockfile
+      - name: Registry is valid (shape, sha256, dependencies)
+        run: bun run registry:validate
+      - name: templ output is up to date
+        run: |
+          go install github.com/a-h/templ/cmd/templ@latest
+          (cd generator && "$(go env GOPATH)/bin/templ" generate)
+          git diff --exit-code -- generator
+      - name: Tailwind CSS is up to date
+        run: bun run site:css && git diff --exit-code -- generator/assets/site.css
+      - run: cd generator && go vet ./... && go build ./...
+      - name: Generate the static site
+        run: bun run site:generate
+      - name: Site checks (landmarks, links, no external requests)
+        run: node scripts/check-site.mjs dist
+      - name: axe (WCAG A/AA) on sample pages
+        run: node scripts/a11y.mjs dist /,/docs/,/blocks/hero-split/,/primitives/button/
+        env: { CHROME_PATH: /usr/bin/google-chrome }
+      - name: CLI smoke (real ui8kit CLI against the local registry)
+        run: scripts/cli-smoke.sh
+      - uses: actions/upload-artifact@v4
+        with: { name: site, path: dist }
+
+  # Rebuild r/ from the private ui8kit monorepo. Manual, and only when the repo variable and secret exist.
+  registry-rebuild:
+    if: ${{ github.event_name == 'workflow_dispatch' && vars.UI8KIT_SRC_REPO != '' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          repository: ${{ vars.UI8KIT_SRC_REPO }}
+          token: ${{ secrets.UI8KIT_SRC_TOKEN }}
+          path: ui8kit
+      - uses: oven-sh/setup-bun@v2
+      - run: bun install --frozen-lockfile
+      - run: bun run registry:build -- --src ui8kit
+      - run: bun run registry:validate
+      - uses: actions/upload-artifact@v4
+        with: { name: r, path: r }
