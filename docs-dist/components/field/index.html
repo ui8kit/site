@@ -1,124 +1,125 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Field (component) | ui8kit</title><meta name="description" content="Field component"><link rel="canonical" href="https://ui.buildy.tw/components/field/"><link rel="stylesheet" href="/assets/site.css"><script src="/assets/app.js" defer></script></head><body class="min-h-screen bg-background text-foreground font-sans"><a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:left-2 focus:top-2 focus:bg-background focus:px-4 focus:py-2 focus:z-50">Skip to content</a><header class="border-b border-border"><div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-4 py-4"><a href="/" class="text-lg font-semibold">ui8kit</a><nav aria-label="Main" class="flex items-center gap-4 text-sm"><a href="/docs/" class="hover:underline">Docs</a> <a href="/docs/categories/blocks-marketing/" class="hover:underline">Blocks</a> <a href="/docs/categories/primitives/" class="hover:underline">Primitives</a> <a href="/docs/cli/" class="hover:underline">CLI</a></nav><form id="search" role="search" class="relative w-full sm:w-72" data-index="/search-index.json"><label for="search-input" class="sr-only">Search components and blocks</label> <input id="search-input" type="search" autocomplete="off" placeholder="Search, press /" class="h-10 w-full rounded border border-input bg-card px-4 text-sm"><ul id="search-results" hidden class="absolute left-0 right-0 top-12 z-40 rounded border border-border bg-popover text-popover-foreground shadow-md" aria-live="polite"></ul></form></div></header><div class="mx-auto flex max-w-6xl flex-col gap-8 px-4 py-8 md:flex-row"><nav aria-label="Docs" class="md:w-64 md:shrink-0"><h2 class="mb-2 text-sm font-semibold">Guides</h2><ul class="mb-6 flex flex-col gap-1"><li><a href="/docs/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Overview</a></li><li><a href="/docs/getting-started/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Getting started</a></li><li><a href="/docs/installation/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Installation</a></li><li><a href="/docs/cli/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">CLI</a></li><li><a href="/docs/theming-skins/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Theming and skins</a></li><li><a href="/docs/grid-8px/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">The 8px grid</a></li></ul><h2 class="mb-2 text-sm font-semibold">Categories</h2><ul class="mb-6 flex flex-col gap-1"><li><a href="/docs/categories/primitives/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Primitives</a></li><li><a href="/docs/categories/components/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Components</a></li><li><a href="/docs/categories/blocks-marketing/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: marketing</a></li><li><a href="/docs/categories/blocks-commerce/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: commerce</a></li><li><a href="/docs/categories/blocks-dashboard/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: dashboard</a></li><li><a href="/docs/categories/blocks-content/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: content</a></li><li><a href="/docs/categories/blocks-account/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: account</a></li><li><a href="/docs/categories/blocks-promo/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: promo</a></li><li><a href="/docs/categories/blocks-support/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: support</a></li><li><a href="/docs/categories/blocks-onboarding/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: onboarding</a></li><li><a href="/docs/categories/blocks-general/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: general</a></li></ul></nav><main id="main" class="min-w-0 flex-1"><article><p class="text-sm text-muted-foreground"><a class="underline" href="/docs/categories/components/">component / components</a></p><h1 class="mb-2 text-3xl font-semibold tracking-tight">Field</h1><p class="mb-6 max-w-3xl text-muted-foreground">Field component</p><h2 class="mb-2 text-xl font-semibold">Install</h2><div class="mb-6 max-w-xl"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="install-field" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit add field</code><button type="button" hidden data-copy="install-field" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><p class="mb-6 text-sm text-muted-foreground">Pulls in:  <a class="underline" href="/primitives/block/">block</a><span>, </span> <a class="underline" href="/primitives/label/">label</a><span>, </span> <a class="underline" href="/primitives/text/">text</a><span>, </span> <a class="underline" href="/lib/utils/">utils</a></p><h2 class="mb-2 text-xl font-semibold">Code</h2><div data-tabs><section id="panel-svelte" data-panel data-runtime="svelte" data-label="Svelte" aria-label="Svelte" class="mb-8"><h3 class="mb-2 text-lg font-semibold">Svelte</h3><p class="mb-2 text-sm text-muted-foreground">Point the CLI at this runtime once, then add the item:</p><div class="mb-2"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-svelte-init" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit init --yes --framework svelte --dir src --registry-url https://registry.buildy.tw/svelte --strict-cdn</code><button type="button" hidden data-copy="panel-svelte-init" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-svelte-add" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit add field</code><button type="button" hidden data-copy="panel-svelte-add" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">components/field.svelte</span><button type="button" hidden data-copy="code-svelte-0" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-svelte-0" class="font-mono">&lt;!-- Code generated by xgen. DO NOT EDIT. --&gt;
-&lt;!-- Source: xgen/screens/src/authoring/components/parts.ts --&gt;
-&lt;!--
-  A form field: label, control (children), hint and error text. `htmlFor` ties the label to the id of the
-  control.
---&gt;
-&lt;script lang=&#34;ts&#34; module&gt;
-  import type { Snippet } from &#34;svelte&#34;;
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Field (component) | ui8kit</title><meta name="description" content="Field component"><link rel="canonical" href="https://ui.buildy.tw/components/field/"><link rel="stylesheet" href="/assets/site.css"><script src="/assets/app.js" defer></script></head><body class="min-h-screen bg-background text-foreground font-sans"><a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:left-2 focus:top-2 focus:bg-background focus:px-4 focus:py-2 focus:z-50">Skip to content</a><header class="border-b border-border"><div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-4 py-4"><a href="/" class="text-lg font-semibold">ui8kit</a><nav aria-label="Main" class="flex items-center gap-4 text-sm"><a href="/docs/" class="hover:underline">Docs</a> <a href="/docs/categories/blocks-marketing/" class="hover:underline">Blocks</a> <a href="/docs/categories/primitives/" class="hover:underline">Primitives</a> <a href="/docs/cli/" class="hover:underline">CLI</a></nav><form id="search" role="search" class="relative w-full sm:w-72" data-index="/search-index.json"><label for="search-input" class="sr-only">Search components and blocks</label> <input id="search-input" type="search" autocomplete="off" placeholder="Search, press /" class="h-10 w-full rounded border border-input bg-card px-4 text-sm"><ul id="search-results" hidden class="absolute left-0 right-0 top-12 z-40 rounded border border-border bg-popover text-popover-foreground shadow-md" aria-live="polite"></ul></form></div></header><div class="mx-auto flex max-w-6xl flex-col gap-8 px-4 py-8 md:flex-row"><nav aria-label="Docs" class="md:w-64 md:shrink-0"><h2 class="mb-2 text-sm font-semibold">Guides</h2><ul class="mb-6 flex flex-col gap-1"><li><a href="/docs/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Overview</a></li><li><a href="/docs/getting-started/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Getting started</a></li><li><a href="/docs/installation/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Installation</a></li><li><a href="/docs/cli/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">CLI</a></li><li><a href="/docs/theming-skins/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Theming and skins</a></li><li><a href="/docs/grid-8px/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">The 8px grid</a></li></ul><h2 class="mb-2 text-sm font-semibold">Categories</h2><ul class="mb-6 flex flex-col gap-1"><li><a href="/docs/categories/primitives/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Primitives</a></li><li><a href="/docs/categories/components/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Components</a></li><li><a href="/docs/categories/blocks-marketing/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: marketing</a></li><li><a href="/docs/categories/blocks-commerce/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: commerce</a></li><li><a href="/docs/categories/blocks-dashboard/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: dashboard</a></li><li><a href="/docs/categories/blocks-content/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: content</a></li><li><a href="/docs/categories/blocks-account/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: account</a></li><li><a href="/docs/categories/blocks-promo/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: promo</a></li><li><a href="/docs/categories/blocks-support/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: support</a></li><li><a href="/docs/categories/blocks-onboarding/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: onboarding</a></li><li><a href="/docs/categories/blocks-general/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: general</a></li></ul></nav><main id="main" class="min-w-0 flex-1"><article><p class="text-sm text-muted-foreground"><a class="underline" href="/docs/categories/components/">component / components</a></p><h1 class="mb-2 text-3xl font-semibold tracking-tight">Field</h1><p class="mb-6 max-w-3xl text-muted-foreground">Field component</p><h2 class="mb-2 text-xl font-semibold">Install</h2><div class="mb-6 max-w-xl"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="install-field" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit add field</code><button type="button" hidden data-copy="install-field" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><p class="mb-6 text-sm text-muted-foreground">Pulls in:  <a class="underline" href="/primitives/block/">block</a><span>, </span> <a class="underline" href="/primitives/label/">label</a><span>, </span> <a class="underline" href="/primitives/text/">text</a><span>, </span> <a class="underline" href="/lib/utils/">utils</a></p><h2 class="mb-2 text-xl font-semibold">Preview</h2><div class="preview mb-8 rounded border border-border bg-background p-6" role="group" tabindex="0" aria-label="Field preview"><div class="flex min-w-0 flex-col gap-2"><label class="text-xs font-bold text-foreground" for="auth-password">Password</label><input type="password" class="w-full min-w-0 bg-background text-foreground inset-ring inset-ring-input outline-none placeholder:text-muted-foreground disabled:cursor-not-allowed disabled:opacity-50 focus-visible:inset-ring-ring rounded h-10 px-3 text-base md:text-sm" autoComplete="current-password" id="auth-password" data-testid="field" name="password"/></div>
+</div><h2 class="mb-2 text-xl font-semibold">Code</h2><div class="rt mb-8"><div class="rt-bar" role="radiogroup" aria-label="Runtime"><input type="radio" name="rt" id="rt-svelte" value="svelte" class="sr-only" checked> <label for="rt-svelte">Svelte</label><input type="radio" name="rt" id="rt-react" value="react" class="sr-only"> <label for="rt-react">React</label><input type="radio" name="rt" id="rt-vue" value="vue" class="sr-only"> <label for="rt-vue">Vue</label></div><section id="panel-svelte" class="rt-panel" data-runtime="svelte" aria-label="Svelte code"><p class="mb-2 text-sm text-muted-foreground">Point the CLI at this runtime once, then add the item:</p><div class="mb-2"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-svelte-init" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit init --yes --framework svelte --dir src --registry-url https://registry.buildy.tw/svelte --strict-cdn</code><button type="button" hidden data-copy="panel-svelte-init" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-svelte-add" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit add field</code><button type="button" hidden data-copy="panel-svelte-add" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">components/field.svelte</span><button type="button" hidden data-copy="code-svelte-0" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="hl max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-svelte-0" class="font-mono"><span class="c">&lt;!-- Code generated by xgen. DO NOT EDIT. --&gt;</span>
+<span class="c">&lt;!-- Source: xgen/screens/src/authoring/components/parts.ts --&gt;</span>
+<span class="c">&lt;!--
+</span><span class="c">  A form field: label, control (children), hint and error text. `htmlFor` ties the label to the id of the
+</span><span class="c">  control.
+</span><span class="c">--&gt;</span>
+&lt;<span class="nt">script</span> <span class="na">lang</span>=<span class="s">&#34;ts&#34;</span> <span class="na">module</span>&gt;
+  <span class="kr">import</span> <span class="kr">type</span> { Snippet } <span class="kr">from</span> <span class="s2">&#34;svelte&#34;</span>;
 
-  export type FieldProps = {
-    label: string;
-    htmlFor: string;
-    hint?: string;
-    error?: string;
-    class?: string;
-    children?: Snippet;
+  <span class="kr">export</span> <span class="kr">type</span> FieldProps = {
+    label: <span class="kt">string</span>;
+    htmlFor: <span class="kt">string</span>;
+    hint?: <span class="kt">string</span>;
+    error?: <span class="kt">string</span>;
+    <span class="kr">class</span>?: <span class="kt">string</span>;
+    children?: <span class="kt">Snippet</span>;
   };
-&lt;/script&gt;
+&lt;/<span class="nt">script</span>&gt;
 
-&lt;script lang=&#34;ts&#34;&gt;
-  import Block from &#34;../primitives/block/block.svelte&#34;;
-  import Label from &#34;../primitives/label/label.svelte&#34;;
-  import Text from &#34;../primitives/text/text.svelte&#34;;
-  import { cn } from &#34;../utils&#34;;
+&lt;<span class="nt">script</span> <span class="na">lang</span>=<span class="s">&#34;ts&#34;</span>&gt;
+  <span class="kr">import</span> Block <span class="kr">from</span> <span class="s2">&#34;../primitives/block/block.svelte&#34;</span>;
+  <span class="kr">import</span> Label <span class="kr">from</span> <span class="s2">&#34;../primitives/label/label.svelte&#34;</span>;
+  <span class="kr">import</span> Text <span class="kr">from</span> <span class="s2">&#34;../primitives/text/text.svelte&#34;</span>;
+  <span class="kr">import</span> { cn } <span class="kr">from</span> <span class="s2">&#34;../utils&#34;</span>;
 
-  let { label, htmlFor, hint, error, class: className, children }: FieldProps = $props();
-&lt;/script&gt;
+  <span class="kd">let</span> { label, htmlFor, hint, error, <span class="kr">class</span>: className, children }: FieldProps = $props();
+&lt;/<span class="nt">script</span>&gt;
 
-&lt;Block class={cn(&#34;flex min-w-0 flex-col gap-2&#34;, className)}&gt;
-  &lt;Label class=&#34;text-xs font-bold text-foreground&#34; for={htmlFor}&gt;
+&lt;<span class="nt">Block</span> <span class="na">class</span>={cn(<span class="s2">&#34;flex min-w-0 flex-col gap-2&#34;</span>, className)}<span class="err">&gt;</span>
+  &lt;<span class="nt">Label</span> <span class="na">class</span>=<span class="s">&#34;text-xs font-bold text-foreground&#34;</span> <span class="na">for</span>={htmlFor}<span class="err">&gt;</span>
     {label}
-  &lt;/Label&gt;
-  {@render children?.()}
-  {#if error}
-    &lt;Text class=&#34;m-0 text-xs font-semibold text-destructive&#34; role=&#34;alert&#34;&gt;
+  &lt;/<span class="nt">Label</span>&gt;
+  {<span class="kd">@render</span> children?.()}
+  {<span class="k">#if</span> error}
+    &lt;<span class="nt">Text</span> <span class="na">class</span>=<span class="s">&#34;m-0 text-xs font-semibold text-destructive&#34;</span> <span class="na">role</span>=<span class="s">&#34;alert&#34;</span>&gt;
       {error}
-    &lt;/Text&gt;
-  {:else if hint}
-    &lt;Text class=&#34;m-0 text-xs font-medium text-muted-foreground&#34;&gt;
+    &lt;/<span class="nt">Text</span>&gt;
+  {<span class="k">:else</span> <span class="k">if</span> hint}
+    &lt;<span class="nt">Text</span> <span class="na">class</span>=<span class="s">&#34;m-0 text-xs font-medium text-muted-foreground&#34;</span>&gt;
       {hint}
-    &lt;/Text&gt;
-  {/if}
-&lt;/Block&gt;
-</code></pre></div><p class="text-sm"><a class="underline" href="https://registry.buildy.tw/svelte/components/field.json">Svelte registry item (JSON)</a></p></section><section id="panel-react" data-panel data-runtime="react" data-label="React" aria-label="React" class="mb-8"><h3 class="mb-2 text-lg font-semibold">React</h3><p class="mb-2 text-sm text-muted-foreground">Point the CLI at this runtime once, then add the item:</p><div class="mb-2"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-react-init" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit init --yes --framework react --dir src --registry-url https://registry.buildy.tw/react --strict-cdn</code><button type="button" hidden data-copy="panel-react-init" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-react-add" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit add field</code><button type="button" hidden data-copy="panel-react-add" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">components/field.tsx</span><button type="button" hidden data-copy="code-react-0" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-react-0" class="font-mono">// Code generated by xgen. DO NOT EDIT.
-// Source: xgen/screens/src/authoring/components/parts.ts
-/**
- * A form field: label, control (children), hint and error text. `htmlFor` ties the label to the id of the
- * control.
- */
-import { type ReactNode } from &#34;react&#34;;
-import { Block } from &#34;../primitives/block/block&#34;;
-import { Label } from &#34;../primitives/label/label&#34;;
-import { Text } from &#34;../primitives/text/text&#34;;
-import { cn } from &#34;../utils&#34;;
+    &lt;/<span class="nt">Text</span>&gt;
+  {<span class="k">/if</span>}
+&lt;/<span class="nt">Block</span>&gt;
+</code></pre></div><p class="text-sm"><a class="underline" href="https://registry.buildy.tw/svelte/components/field.json">Svelte registry item (JSON)</a></p></section><section id="panel-react" class="rt-panel" data-runtime="react" aria-label="React code"><p class="mb-2 text-sm text-muted-foreground">Point the CLI at this runtime once, then add the item:</p><div class="mb-2"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-react-init" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit init --yes --framework react --dir src --registry-url https://registry.buildy.tw/react --strict-cdn</code><button type="button" hidden data-copy="panel-react-init" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-react-add" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit add field</code><button type="button" hidden data-copy="panel-react-add" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">components/field.tsx</span><button type="button" hidden data-copy="code-react-0" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="hl max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-react-0" class="font-mono"><span class="c1">// Code generated by xgen. DO NOT EDIT.
+</span><span class="c1">// Source: xgen/screens/src/authoring/components/parts.ts
+</span><span class="cm">/**
+</span><span class="cm"> * A form field: label, control (children), hint and error text. `htmlFor` ties the label to the id of the
+</span><span class="cm"> * control.
+</span><span class="cm"> */</span>
+<span class="kr">import</span> { <span class="kr">type</span> ReactNode } <span class="kr">from</span> <span class="s2">&#34;react&#34;</span>;
+<span class="kr">import</span> { Block } <span class="kr">from</span> <span class="s2">&#34;../primitives/block/block&#34;</span>;
+<span class="kr">import</span> { Label } <span class="kr">from</span> <span class="s2">&#34;../primitives/label/label&#34;</span>;
+<span class="kr">import</span> { Text } <span class="kr">from</span> <span class="s2">&#34;../primitives/text/text&#34;</span>;
+<span class="kr">import</span> { cn } <span class="kr">from</span> <span class="s2">&#34;../utils&#34;</span>;
 
-export type FieldProps = {
-  label: string;
-  htmlFor: string;
-  hint?: string;
-  error?: string;
-  className?: string;
-  children?: ReactNode;
+<span class="kr">export</span> <span class="kr">type</span> FieldProps = {
+  label: <span class="kt">string</span>;
+  htmlFor: <span class="kt">string</span>;
+  hint?: <span class="kt">string</span>;
+  error?: <span class="kt">string</span>;
+  className?: <span class="kt">string</span>;
+  children?: <span class="kt">ReactNode</span>;
 };
 
-export function Field({ label, htmlFor, hint, error, className, children }: FieldProps) {
-  return (
-    &lt;Block className={cn(&#34;flex min-w-0 flex-col gap-2&#34;, className)}&gt;
-      &lt;Label className=&#34;text-xs font-bold text-foreground&#34; htmlFor={htmlFor}&gt;
+<span class="kr">export</span> <span class="kd">function</span> Field({ label, htmlFor, hint, error, className, children }: FieldProps) {
+  <span class="k">return</span> (
+    &lt;<span class="nt">Block</span> <span class="na">className</span>={cn(<span class="s2">&#34;flex min-w-0 flex-col gap-2&#34;</span>, className)}&gt;
+      &lt;<span class="nt">Label</span> <span class="na">className</span>=<span class="s">&#34;text-xs font-bold text-foreground&#34;</span> <span class="na">htmlFor</span>={htmlFor}&gt;
         {label}
-      &lt;/Label&gt;
+      &lt;/<span class="nt">Label</span>&gt;
       {children}
       {error ? (
-        &lt;Text className=&#34;m-0 text-xs font-semibold text-destructive&#34; role=&#34;alert&#34;&gt;
+        &lt;<span class="nt">Text</span> <span class="na">className</span>=<span class="s">&#34;m-0 text-xs font-semibold text-destructive&#34;</span> <span class="na">role</span>=<span class="s">&#34;alert&#34;</span>&gt;
           {error}
-        &lt;/Text&gt;
+        &lt;/<span class="nt">Text</span>&gt;
       ) : hint ? (
-        &lt;Text className=&#34;m-0 text-xs font-medium text-muted-foreground&#34;&gt;
+        &lt;<span class="nt">Text</span> <span class="na">className</span>=<span class="s">&#34;m-0 text-xs font-medium text-muted-foreground&#34;</span>&gt;
           {hint}
-        &lt;/Text&gt;
-      ) : null}
-    &lt;/Block&gt;
+        &lt;/<span class="nt">Text</span>&gt;
+      ) : <span class="kc">null</span>}
+    &lt;/<span class="nt">Block</span>&gt;
   );
 }
-</code></pre></div><p class="text-sm"><a class="underline" href="https://registry.buildy.tw/react/components/field.json">React registry item (JSON)</a></p></section><section id="panel-vue" data-panel data-runtime="vue" data-label="Vue" aria-label="Vue" class="mb-8"><h3 class="mb-2 text-lg font-semibold">Vue</h3><p class="mb-2 text-sm text-muted-foreground">Point the CLI at this runtime once, then add the item:</p><div class="mb-2"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-vue-init" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit init --yes --framework vue --dir src --registry-url https://registry.buildy.tw/vue --strict-cdn</code><button type="button" hidden data-copy="panel-vue-init" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-vue-add" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit add field</code><button type="button" hidden data-copy="panel-vue-add" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">components/field.vue</span><button type="button" hidden data-copy="code-vue-0" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-vue-0" class="font-mono">&lt;!-- Code generated by xgen. DO NOT EDIT. --&gt;
-&lt;!-- Source: xgen/screens/src/authoring/components/parts.ts --&gt;
-&lt;!--
-  A form field: label, control (children), hint and error text. `htmlFor` ties the label to the id of the
+</code></pre></div><p class="text-sm"><a class="underline" href="https://registry.buildy.tw/react/components/field.json">React registry item (JSON)</a></p></section><section id="panel-vue" class="rt-panel" data-runtime="vue" aria-label="Vue code"><p class="mb-2 text-sm text-muted-foreground">Point the CLI at this runtime once, then add the item:</p><div class="mb-2"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-vue-init" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit init --yes --framework vue --dir src --registry-url https://registry.buildy.tw/vue --strict-cdn</code><button type="button" hidden data-copy="panel-vue-init" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-vue-add" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit add field</code><button type="button" hidden data-copy="panel-vue-add" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">components/field.vue</span><button type="button" hidden data-copy="code-vue-0" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="hl max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-vue-0" class="font-mono"><span class="c">&lt;!--</span> Code generated by xgen. DO NOT EDIT. --&gt;
+<span class="c">&lt;!--</span> Source: xgen/screens/src/authoring/components/parts.ts --&gt;
+<span class="c">&lt;!--</span>
+  A form field: label, control (children), hint and error text. <span class="sb">`htmlFor`</span> ties the label to the id <span class="k">of</span> the
   control.
 --&gt;
-&lt;script lang=&#34;ts&#34;&gt;
-export type FieldProps = {
+&lt;<span class="nt">script</span> <span class="na">lang</span>=<span class="s">&#34;ts&#34;</span>&gt;
+<span class="kr">export</span> type FieldProps = {
   label: string;
   htmlFor: string;
   hint?: string;
   error?: string;
-  class?: string;
+  <span class="kr">class</span>?: string;
 };
-&lt;/script&gt;
+&lt;/<span class="nt">script</span>&gt;
 
-&lt;script setup lang=&#34;ts&#34;&gt;
-import Block from &#34;../primitives/block/block.vue&#34;;
-import Label from &#34;../primitives/label/label.vue&#34;;
-import Text from &#34;../primitives/text/text.vue&#34;;
-import { cn } from &#34;../utils&#34;;
+&lt;<span class="nt">script</span> <span class="na">setup</span> <span class="na">lang</span>=<span class="s">&#34;ts&#34;</span>&gt;
+<span class="kr">import</span> Block from <span class="s2">&#34;../primitives/block/block.vue&#34;</span>;
+<span class="kr">import</span> Label from <span class="s2">&#34;../primitives/label/label.vue&#34;</span>;
+<span class="kr">import</span> Text from <span class="s2">&#34;../primitives/text/text.vue&#34;</span>;
+<span class="kr">import</span> { cn } from <span class="s2">&#34;../utils&#34;</span>;
 
-const { label, htmlFor, hint, error, class: className } = defineProps&lt;FieldProps&gt;();
-defineSlots&lt;{ default?(): unknown }&gt;();
-&lt;/script&gt;
+<span class="kr">const</span> { label, htmlFor, hint, error, <span class="kr">class</span>: className } = defineProps&lt;<span class="nt">FieldProps</span>&gt;();
+defineSlots&lt;{ <span class="k">default</span>?(): unknown }&gt;();
+&lt;/<span class="nt">script</span>&gt;
 
-&lt;template&gt;
-  &lt;Block :class=&#34;cn(&#39;flex min-w-0 flex-col gap-2&#39;, className)&#34;&gt;
-    &lt;Label class=&#34;text-xs font-bold text-foreground&#34; :for=&#34;htmlFor&#34;&gt;
+&lt;<span class="nt">template</span>&gt;
+  &lt;<span class="nt">Block</span> :<span class="na">class</span>=<span class="s">&#34;cn(&#39;flex min-w-0 flex-col gap-2&#39;, className)&#34;</span>&gt;
+    &lt;<span class="nt">Label</span> <span class="na">class</span>=<span class="s">&#34;text-xs font-bold text-foreground&#34;</span> <span class="nt">:for</span>=<span class="s">&#34;htmlFor&#34;</span>&gt;
       {{ label }}
-    &lt;/Label&gt;
-    &lt;slot /&gt;
-    &lt;Text v-if=&#34;error&#34; class=&#34;m-0 text-xs font-semibold text-destructive&#34; role=&#34;alert&#34;&gt;
-      {{ error }}
-    &lt;/Text&gt;
-    &lt;Text v-else-if=&#34;hint&#34; class=&#34;m-0 text-xs font-medium text-muted-foreground&#34;&gt;
-      {{ hint }}
-    &lt;/Text&gt;
-  &lt;/Block&gt;
-&lt;/template&gt;
-</code></pre></div><p class="text-sm"><a class="underline" href="https://registry.buildy.tw/vue/components/field.json">Vue registry item (JSON)</a></p></section></div></article></main></div><footer class="border-t border-border"><div class="mx-auto max-w-6xl px-4 py-8 text-sm text-muted-foreground">ui8kit, MIT licence. Static docs generated from markdown and the registry (<a class="underline" href="https://registry.buildy.tw/registry.json">registry.json</a>).</div></footer></body></html>
+    &lt;/<span class="nt">Label</span>&gt;
+    &lt;<span class="nt">slot</span> /&gt;
+    &lt;<span class="nt">Text</span> <span class="nt">v-if</span>=<span class="s">&#34;error&#34; class=&#34;m-0 text-xs font-semibold text-destructive&#34; role=&#34;alert&#34;</span>&gt;
+      {{ <span class="na">error</span> }}
+    &lt;/<span class="nt">Text</span>&gt;
+    &lt;<span class="nt">Text</span> <span class="nt">v-else-if</span>=<span class="s">&#34;hint&#34; class=&#34;m-0 text-xs font-medium text-muted-foreground&#34;</span>&gt;
+      {{ <span class="na">hint</span> }}
+    &lt;/<span class="nt">Text</span>&gt;
+  &lt;/<span class="nt">Block</span>&gt;
+&lt;/<span class="nt">template</span>&gt;
+</code></pre></div><p class="text-sm"><a class="underline" href="https://registry.buildy.tw/vue/components/field.json">Vue registry item (JSON)</a></p></section></div><h2 class="mb-2 text-xl font-semibold">Props</h2><p class="mb-4 max-w-3xl text-sm text-muted-foreground">Names and types come from the xgen specs of the source. Standard HTML attributes (id, role, tabIndex, aria-*) pass through to the root element; the class prop is className in React.</p><div class="mb-8"><p class="mb-2 max-w-3xl whitespace-pre-line text-sm text-muted-foreground">A form field: label, control (children), hint and error text. `htmlFor` ties the label to the id of the control.</p><div class="overflow-x-auto" tabindex="0" role="region" aria-label="Props of Field"><table class="w-full min-w-[40rem] text-left text-sm"><caption class="sr-only">Props of Field</caption> <thead><tr class="border-b border-border"><th scope="col" class="py-2 pr-4 font-medium">Prop</th><th scope="col" class="py-2 pr-4 font-medium">Type</th><th scope="col" class="py-2 pr-4 font-medium">Default</th><th scope="col" class="py-2 font-medium">Description</th></tr></thead> <tbody><tr class="border-b border-border align-top"><th scope="row" class="py-2 pr-4 font-mono text-xs font-medium">label <span class="font-sans text-muted-foreground">(required)</span></th><td class="py-2 pr-4 font-mono text-xs">string</td><td class="py-2 pr-4 font-mono text-xs"><span class="text-muted-foreground">-</span></td><td class="py-2 text-muted-foreground"></td></tr><tr class="border-b border-border align-top"><th scope="row" class="py-2 pr-4 font-mono text-xs font-medium">htmlFor <span class="font-sans text-muted-foreground">(required)</span></th><td class="py-2 pr-4 font-mono text-xs">string</td><td class="py-2 pr-4 font-mono text-xs"><span class="text-muted-foreground">-</span></td><td class="py-2 text-muted-foreground">id of the control</td></tr><tr class="border-b border-border align-top"><th scope="row" class="py-2 pr-4 font-mono text-xs font-medium">hint </th><td class="py-2 pr-4 font-mono text-xs">string</td><td class="py-2 pr-4 font-mono text-xs"><span class="text-muted-foreground">-</span></td><td class="py-2 text-muted-foreground"></td></tr><tr class="border-b border-border align-top"><th scope="row" class="py-2 pr-4 font-mono text-xs font-medium">error </th><td class="py-2 pr-4 font-mono text-xs">string</td><td class="py-2 pr-4 font-mono text-xs"><span class="text-muted-foreground">-</span></td><td class="py-2 text-muted-foreground">when set it replaces the hint and is announced (role alert)</td></tr></tbody></table></div></div><h2 class="mb-2 text-xl font-semibold">Used in</h2><ul class="flex flex-wrap gap-x-4 gap-y-1 text-sm"><li><a class="underline" href="/components/auth-form/">auth-form</a></li><li><a class="underline" href="/blocks/checkout-form/">checkout-form</a></li><li><a class="underline" href="/blocks/contact-form/">contact-form</a></li><li><a class="underline" href="/blocks/profile-form/">profile-form</a></li><li><a class="underline" href="/blocks/signup-wizard/">signup-wizard</a></li><li><a class="underline" href="/blocks/slot-board/">slot-board</a></li></ul></article></main></div><footer class="border-t border-border"><div class="mx-auto max-w-6xl px-4 py-8 text-sm text-muted-foreground">ui8kit, MIT licence. Static docs generated from markdown and the registry (<a class="underline" href="https://registry.buildy.tw/registry.json">registry.json</a>).</div></footer></body></html>

@@ -1,327 +1,328 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Disclosure (primitive) | ui8kit</title><meta name="description" content="Disclosure primitive"><link rel="canonical" href="https://ui.buildy.tw/primitives/disclosure/"><link rel="stylesheet" href="/assets/site.css"><script src="/assets/app.js" defer></script></head><body class="min-h-screen bg-background text-foreground font-sans"><a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:left-2 focus:top-2 focus:bg-background focus:px-4 focus:py-2 focus:z-50">Skip to content</a><header class="border-b border-border"><div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-4 py-4"><a href="/" class="text-lg font-semibold">ui8kit</a><nav aria-label="Main" class="flex items-center gap-4 text-sm"><a href="/docs/" class="hover:underline">Docs</a> <a href="/docs/categories/blocks-marketing/" class="hover:underline">Blocks</a> <a href="/docs/categories/primitives/" class="hover:underline">Primitives</a> <a href="/docs/cli/" class="hover:underline">CLI</a></nav><form id="search" role="search" class="relative w-full sm:w-72" data-index="/search-index.json"><label for="search-input" class="sr-only">Search components and blocks</label> <input id="search-input" type="search" autocomplete="off" placeholder="Search, press /" class="h-10 w-full rounded border border-input bg-card px-4 text-sm"><ul id="search-results" hidden class="absolute left-0 right-0 top-12 z-40 rounded border border-border bg-popover text-popover-foreground shadow-md" aria-live="polite"></ul></form></div></header><div class="mx-auto flex max-w-6xl flex-col gap-8 px-4 py-8 md:flex-row"><nav aria-label="Docs" class="md:w-64 md:shrink-0"><h2 class="mb-2 text-sm font-semibold">Guides</h2><ul class="mb-6 flex flex-col gap-1"><li><a href="/docs/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Overview</a></li><li><a href="/docs/getting-started/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Getting started</a></li><li><a href="/docs/installation/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Installation</a></li><li><a href="/docs/cli/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">CLI</a></li><li><a href="/docs/theming-skins/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Theming and skins</a></li><li><a href="/docs/grid-8px/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">The 8px grid</a></li></ul><h2 class="mb-2 text-sm font-semibold">Categories</h2><ul class="mb-6 flex flex-col gap-1"><li><a href="/docs/categories/primitives/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Primitives</a></li><li><a href="/docs/categories/components/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Components</a></li><li><a href="/docs/categories/blocks-marketing/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: marketing</a></li><li><a href="/docs/categories/blocks-commerce/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: commerce</a></li><li><a href="/docs/categories/blocks-dashboard/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: dashboard</a></li><li><a href="/docs/categories/blocks-content/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: content</a></li><li><a href="/docs/categories/blocks-account/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: account</a></li><li><a href="/docs/categories/blocks-promo/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: promo</a></li><li><a href="/docs/categories/blocks-support/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: support</a></li><li><a href="/docs/categories/blocks-onboarding/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: onboarding</a></li><li><a href="/docs/categories/blocks-general/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: general</a></li></ul></nav><main id="main" class="min-w-0 flex-1"><article><p class="text-sm text-muted-foreground"><a class="underline" href="/docs/categories/primitives/">primitive / primitives</a></p><h1 class="mb-2 text-3xl font-semibold tracking-tight">Disclosure</h1><p class="mb-6 max-w-3xl text-muted-foreground">Disclosure primitive</p><h2 class="mb-2 text-xl font-semibold">Install</h2><div class="mb-6 max-w-xl"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="install-disclosure" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit add disclosure</code><button type="button" hidden data-copy="install-disclosure" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><p class="mb-6 text-sm text-muted-foreground">Pulls in:  <a class="underline" href="/lib/utils/">utils</a></p><h2 class="mb-2 text-xl font-semibold">Code</h2><div data-tabs><section id="panel-svelte" data-panel data-runtime="svelte" data-label="Svelte" aria-label="Svelte" class="mb-8"><h3 class="mb-2 text-lg font-semibold">Svelte</h3><p class="mb-2 text-sm text-muted-foreground">Point the CLI at this runtime once, then add the item:</p><div class="mb-2"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-svelte-init" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit init --yes --framework svelte --dir src --registry-url https://registry.buildy.tw/svelte --strict-cdn</code><button type="button" hidden data-copy="panel-svelte-init" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-svelte-add" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit add disclosure</code><button type="button" hidden data-copy="panel-svelte-add" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/disclosure/disclosure.svelte</span><button type="button" hidden data-copy="code-svelte-0" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-svelte-0" class="font-mono">&lt;!-- Code generated by xgen. DO NOT EDIT. --&gt;
-&lt;!-- Source: xgen/specs/ui/disclosure.json --&gt;
-&lt;!--
-  Disclosure renders native details.
---&gt;
-&lt;script lang=&#34;ts&#34; module&gt;
-  import type { Snippet } from &#34;svelte&#34;;
-  import { variants, type VariantKey } from &#34;../../utils&#34;;
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Disclosure (primitive) | ui8kit</title><meta name="description" content="Disclosure primitive"><link rel="canonical" href="https://ui.buildy.tw/primitives/disclosure/"><link rel="stylesheet" href="/assets/site.css"><script src="/assets/app.js" defer></script></head><body class="min-h-screen bg-background text-foreground font-sans"><a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:left-2 focus:top-2 focus:bg-background focus:px-4 focus:py-2 focus:z-50">Skip to content</a><header class="border-b border-border"><div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-4 py-4"><a href="/" class="text-lg font-semibold">ui8kit</a><nav aria-label="Main" class="flex items-center gap-4 text-sm"><a href="/docs/" class="hover:underline">Docs</a> <a href="/docs/categories/blocks-marketing/" class="hover:underline">Blocks</a> <a href="/docs/categories/primitives/" class="hover:underline">Primitives</a> <a href="/docs/cli/" class="hover:underline">CLI</a></nav><form id="search" role="search" class="relative w-full sm:w-72" data-index="/search-index.json"><label for="search-input" class="sr-only">Search components and blocks</label> <input id="search-input" type="search" autocomplete="off" placeholder="Search, press /" class="h-10 w-full rounded border border-input bg-card px-4 text-sm"><ul id="search-results" hidden class="absolute left-0 right-0 top-12 z-40 rounded border border-border bg-popover text-popover-foreground shadow-md" aria-live="polite"></ul></form></div></header><div class="mx-auto flex max-w-6xl flex-col gap-8 px-4 py-8 md:flex-row"><nav aria-label="Docs" class="md:w-64 md:shrink-0"><h2 class="mb-2 text-sm font-semibold">Guides</h2><ul class="mb-6 flex flex-col gap-1"><li><a href="/docs/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Overview</a></li><li><a href="/docs/getting-started/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Getting started</a></li><li><a href="/docs/installation/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Installation</a></li><li><a href="/docs/cli/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">CLI</a></li><li><a href="/docs/theming-skins/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Theming and skins</a></li><li><a href="/docs/grid-8px/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">The 8px grid</a></li></ul><h2 class="mb-2 text-sm font-semibold">Categories</h2><ul class="mb-6 flex flex-col gap-1"><li><a href="/docs/categories/primitives/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Primitives</a></li><li><a href="/docs/categories/components/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Components</a></li><li><a href="/docs/categories/blocks-marketing/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: marketing</a></li><li><a href="/docs/categories/blocks-commerce/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: commerce</a></li><li><a href="/docs/categories/blocks-dashboard/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: dashboard</a></li><li><a href="/docs/categories/blocks-content/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: content</a></li><li><a href="/docs/categories/blocks-account/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: account</a></li><li><a href="/docs/categories/blocks-promo/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: promo</a></li><li><a href="/docs/categories/blocks-support/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: support</a></li><li><a href="/docs/categories/blocks-onboarding/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: onboarding</a></li><li><a href="/docs/categories/blocks-general/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: general</a></li></ul></nav><main id="main" class="min-w-0 flex-1"><article><p class="text-sm text-muted-foreground"><a class="underline" href="/docs/categories/primitives/">primitive / primitives</a></p><h1 class="mb-2 text-3xl font-semibold tracking-tight">Disclosure</h1><p class="mb-6 max-w-3xl text-muted-foreground">Disclosure primitive</p><h2 class="mb-2 text-xl font-semibold">Install</h2><div class="mb-6 max-w-xl"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="install-disclosure" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit add disclosure</code><button type="button" hidden data-copy="install-disclosure" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><p class="mb-6 text-sm text-muted-foreground">Pulls in:  <a class="underline" href="/lib/utils/">utils</a></p><h2 class="mb-2 text-xl font-semibold">Preview</h2><div class="preview mb-8 rounded border border-border bg-background p-6" role="group" tabindex="0" aria-label="Disclosure preview"><details class="group border-b border-border last:border-b-0" name="faq-faq" data-testid="faq-item"><summary class="flex cursor-pointer list-none items-center justify-between gap-2 [&amp;::-webkit-details-marker]:hidden text-sm font-semibold py-4 text-muted-foreground hover:text-foreground group-open:text-foreground">Can I change plans later?<span class="size-4 shrink-0 text-muted-foreground transition-transform group-open:rotate-180" aria-hidden="true" data-slot="summary-indicator"></span></summary><p class="text-sm pb-4 text-muted-foreground">You can move up or down at any time; the change applies to the next month.</p></details>
+</div><h2 class="mb-2 text-xl font-semibold">Code</h2><div class="rt mb-8"><div class="rt-bar" role="radiogroup" aria-label="Runtime"><input type="radio" name="rt" id="rt-svelte" value="svelte" class="sr-only" checked> <label for="rt-svelte">Svelte</label><input type="radio" name="rt" id="rt-react" value="react" class="sr-only"> <label for="rt-react">React</label><input type="radio" name="rt" id="rt-vue" value="vue" class="sr-only"> <label for="rt-vue">Vue</label></div><section id="panel-svelte" class="rt-panel" data-runtime="svelte" aria-label="Svelte code"><p class="mb-2 text-sm text-muted-foreground">Point the CLI at this runtime once, then add the item:</p><div class="mb-2"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-svelte-init" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit init --yes --framework svelte --dir src --registry-url https://registry.buildy.tw/svelte --strict-cdn</code><button type="button" hidden data-copy="panel-svelte-init" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-svelte-add" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit add disclosure</code><button type="button" hidden data-copy="panel-svelte-add" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/disclosure/disclosure.svelte</span><button type="button" hidden data-copy="code-svelte-0" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="hl max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-svelte-0" class="font-mono"><span class="c">&lt;!-- Code generated by xgen. DO NOT EDIT. --&gt;</span>
+<span class="c">&lt;!-- Source: xgen/specs/ui/disclosure.json --&gt;</span>
+<span class="c">&lt;!--
+</span><span class="c">  Disclosure renders native details.
+</span><span class="c">--&gt;</span>
+&lt;<span class="nt">script</span> <span class="na">lang</span>=<span class="s">&#34;ts&#34;</span> <span class="na">module</span>&gt;
+  <span class="kr">import</span> <span class="kr">type</span> { Snippet } <span class="kr">from</span> <span class="s2">&#34;svelte&#34;</span>;
+  <span class="kr">import</span> { variants, <span class="kr">type</span> VariantKey } <span class="kr">from</span> <span class="s2">&#34;../../utils&#34;</span>;
 
-  /** Disclosure: the classes of each value of each prop (shadcn/cva style). */
-  export const disclosureVariants = variants({
-    base: &#34;group&#34;,
+  <span class="cm">/** Disclosure: the classes of each value of each prop (shadcn/cva style). */</span>
+  <span class="kr">export</span> <span class="kr">const</span> disclosureVariants = variants({
+    base: <span class="s2">&#34;group&#34;</span>,
     variants: {
       variant: {
-        card: &#34;rounded bg-card inset-ring inset-ring-border&#34;,
-        default: &#34;rounded inset-ring inset-ring-border&#34;,
-        ghost: &#34;&#34;,
-        item: &#34;border-b border-border last:border-b-0&#34;,
+        card: <span class="s2">&#34;rounded bg-card inset-ring inset-ring-border&#34;</span>,
+        <span class="k">default</span>: <span class="s2">&#34;rounded inset-ring inset-ring-border&#34;</span>,
+        ghost: <span class="s2">&#34;&#34;</span>,
+        item: <span class="s2">&#34;border-b border-border last:border-b-0&#34;</span>,
       },
     },
-    defaultVariants: { variant: &#34;default&#34; },
+    defaultVariants: { variant: <span class="s2">&#34;default&#34;</span> },
   });
 
-  export type DisclosureVariant = VariantKey&lt;typeof disclosureVariants, &#34;variant&#34;&gt;;
+  <span class="kr">export</span> <span class="kr">type</span> DisclosureVariant = VariantKey&lt;<span class="nt">typeof</span> <span class="na">disclosureVariants</span>, <span class="s2">&#34;variant&#34;</span>&gt;;
 
-  export type DisclosureProps = {
-    variant?: DisclosureVariant;
-    open?: boolean;
-    class?: string;
-    children?: Snippet;
-    [key: string]: unknown;
+  <span class="kr">export</span> <span class="kr">type</span> DisclosureProps = {
+    variant?: <span class="kt">DisclosureVariant</span>;
+    open?: <span class="kt">boolean</span>;
+    <span class="kr">class</span>?: <span class="kt">string</span>;
+    children?: <span class="kt">Snippet</span>;
+    [key: <span class="kt">string</span>]: <span class="kt">unknown</span>;
   };
-&lt;/script&gt;
+&lt;/<span class="nt">script</span>&gt;
 
-&lt;script lang=&#34;ts&#34;&gt;
-  import { cn } from &#34;../../utils&#34;;
+&lt;<span class="nt">script</span> <span class="na">lang</span>=<span class="s">&#34;ts&#34;</span>&gt;
+  <span class="kr">import</span> { cn } <span class="kr">from</span> <span class="s2">&#34;../../utils&#34;</span>;
 
-  let {
+  <span class="kd">let</span> {
     variant,
     open,
-    class: className,
+    <span class="kr">class</span>: className,
     children,
     ...rest
   }: DisclosureProps = $props();
 
-  const cls = $derived(cn(disclosureVariants({ variant }), className));
-&lt;/script&gt;
+  <span class="kr">const</span> cls = $derived(cn(disclosureVariants({ variant }), className));
+&lt;/<span class="nt">script</span>&gt;
 
-&lt;details {...(cls ? { class: cls } : {})} open={open || undefined} {...rest}&gt;
-  {@render children?.()}
-&lt;/details&gt;
-</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/disclosure/summary.svelte</span><button type="button" hidden data-copy="code-svelte-1" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-svelte-1" class="font-mono">&lt;!-- Code generated by xgen. DO NOT EDIT. --&gt;
-&lt;!-- Source: xgen/specs/ui/disclosure.json --&gt;
-&lt;!--
-  Summary renders native summary, followed by a Lucide chevron-down indicator that turns over when the details
-  open (CSS only: group-open:rotate-180 on the Disclosure group).
---&gt;
-&lt;script lang=&#34;ts&#34; module&gt;
-  import type { Snippet } from &#34;svelte&#34;;
-  import { variants, type VariantKey } from &#34;../../utils&#34;;
+&lt;<span class="nt">details</span> {...(cls ? { <span class="kr">class</span>: cls } : {})} <span class="na">open</span>={open || <span class="kc">undefined</span>} {...rest}<span class="err">&gt;</span>
+  {<span class="kd">@render</span> children?.()}
+&lt;/<span class="nt">details</span>&gt;
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/disclosure/summary.svelte</span><button type="button" hidden data-copy="code-svelte-1" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="hl max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-svelte-1" class="font-mono"><span class="c">&lt;!-- Code generated by xgen. DO NOT EDIT. --&gt;</span>
+<span class="c">&lt;!-- Source: xgen/specs/ui/disclosure.json --&gt;</span>
+<span class="c">&lt;!--
+</span><span class="c">  Summary renders native summary, followed by a Lucide chevron-down indicator that turns over when the details
+</span><span class="c">  open (CSS only: group-open:rotate-180 on the Disclosure group).
+</span><span class="c">--&gt;</span>
+&lt;<span class="nt">script</span> <span class="na">lang</span>=<span class="s">&#34;ts&#34;</span> <span class="na">module</span>&gt;
+  <span class="kr">import</span> <span class="kr">type</span> { Snippet } <span class="kr">from</span> <span class="s2">&#34;svelte&#34;</span>;
+  <span class="kr">import</span> { variants, <span class="kr">type</span> VariantKey } <span class="kr">from</span> <span class="s2">&#34;../../utils&#34;</span>;
 
-  /** Summary: the classes of each value of each prop (shadcn/cva style). */
-  export const summaryVariants = variants({
-    base: &#34;flex cursor-pointer list-none items-center justify-between gap-2 [&amp;::-webkit-details-marker]:hidden&#34;,
+  <span class="cm">/** Summary: the classes of each value of each prop (shadcn/cva style). */</span>
+  <span class="kr">export</span> <span class="kr">const</span> summaryVariants = variants({
+    base: <span class="s2">&#34;flex cursor-pointer list-none items-center justify-between gap-2 [&amp;::-webkit-details-marker]:hidden&#34;</span>,
     variants: {
       size: {
-        sm: &#34;text-xs font-semibold&#34;,
-        default: &#34;text-sm font-semibold&#34;,
-        lg: &#34;text-base font-semibold&#34;,
+        sm: <span class="s2">&#34;text-xs font-semibold&#34;</span>,
+        <span class="k">default</span>: <span class="s2">&#34;text-sm font-semibold&#34;</span>,
+        lg: <span class="s2">&#34;text-base font-semibold&#34;</span>,
       },
       variant: {
-        card: &#34;py-2 pr-4 pl-4&#34;,
-        default: &#34;py-2 pr-4 pl-4&#34;,
-        ghost: &#34;py-2&#34;,
-        item: &#34;py-4 text-muted-foreground hover:text-foreground group-open:text-foreground&#34;,
+        card: <span class="s2">&#34;py-2 pr-4 pl-4&#34;</span>,
+        <span class="k">default</span>: <span class="s2">&#34;py-2 pr-4 pl-4&#34;</span>,
+        ghost: <span class="s2">&#34;py-2&#34;</span>,
+        item: <span class="s2">&#34;py-4 text-muted-foreground hover:text-foreground group-open:text-foreground&#34;</span>,
       },
     },
-    defaultVariants: { size: &#34;default&#34;, variant: &#34;default&#34; },
+    defaultVariants: { size: <span class="s2">&#34;default&#34;</span>, variant: <span class="s2">&#34;default&#34;</span> },
   });
 
-  export type SummaryVariant = VariantKey&lt;typeof summaryVariants, &#34;variant&#34;&gt;;
+  <span class="kr">export</span> <span class="kr">type</span> SummaryVariant = VariantKey&lt;<span class="nt">typeof</span> <span class="na">summaryVariants</span>, <span class="s2">&#34;variant&#34;</span>&gt;;
 
-  export type SummaryProps = {
-    variant?: SummaryVariant;
-    class?: string;
-    children?: Snippet;
-    [key: string]: unknown;
+  <span class="kr">export</span> <span class="kr">type</span> SummaryProps = {
+    variant?: <span class="kt">SummaryVariant</span>;
+    <span class="kr">class</span>?: <span class="kt">string</span>;
+    children?: <span class="kt">Snippet</span>;
+    [key: <span class="kt">string</span>]: <span class="kt">unknown</span>;
   };
-&lt;/script&gt;
+&lt;/<span class="nt">script</span>&gt;
 
-&lt;script lang=&#34;ts&#34;&gt;
-  import { cn } from &#34;../../utils&#34;;
+&lt;<span class="nt">script</span> <span class="na">lang</span>=<span class="s">&#34;ts&#34;</span>&gt;
+  <span class="kr">import</span> { cn } <span class="kr">from</span> <span class="s2">&#34;../../utils&#34;</span>;
 
-  let {
+  <span class="kd">let</span> {
     variant,
-    class: className,
+    <span class="kr">class</span>: className,
     children,
     ...rest
   }: SummaryProps = $props();
 
-  const cls = $derived(cn(summaryVariants({ variant }), className));
-&lt;/script&gt;
+  <span class="kr">const</span> cls = $derived(cn(summaryVariants({ variant }), className));
+&lt;/<span class="nt">script</span>&gt;
 
-&lt;summary {...(cls ? { class: cls } : {})} {...rest}&gt;
-  {@render children?.()}
-  &lt;span
-    class=&#34;size-4 shrink-0 text-muted-foreground transition-transform group-open:rotate-180&#34;
-    aria-hidden=&#34;true&#34;
-    data-slot=&#34;summary-indicator&#34;
-  &gt;&lt;/span&gt;
-&lt;/summary&gt;
-</code></pre></div><p class="text-sm"><a class="underline" href="https://registry.buildy.tw/svelte/components/ui/disclosure.json">Svelte registry item (JSON)</a></p></section><section id="panel-react" data-panel data-runtime="react" data-label="React" aria-label="React" class="mb-8"><h3 class="mb-2 text-lg font-semibold">React</h3><p class="mb-2 text-sm text-muted-foreground">Point the CLI at this runtime once, then add the item:</p><div class="mb-2"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-react-init" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit init --yes --framework react --dir src --registry-url https://registry.buildy.tw/react --strict-cdn</code><button type="button" hidden data-copy="panel-react-init" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-react-add" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit add disclosure</code><button type="button" hidden data-copy="panel-react-add" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/disclosure/disclosure.tsx</span><button type="button" hidden data-copy="code-react-0" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-react-0" class="font-mono">// Code generated by xgen. DO NOT EDIT.
-// Source: xgen/specs/ui/disclosure.json
-/**
- * Disclosure renders native details and summary elements.
- * Open is a static attribute only — no controlled-state contract.
- */
+&lt;<span class="nt">summary</span> {...(cls ? { <span class="kr">class</span>: cls } : {})} {...rest}&gt;
+  {<span class="kd">@render</span> children?.()}
+  &lt;<span class="nt">span</span>
+    <span class="na">class</span>=<span class="s">&#34;size-4 shrink-0 text-muted-foreground transition-transform group-open:rotate-180&#34;</span>
+    <span class="na">aria-hidden</span>=<span class="s">&#34;true&#34;</span>
+    <span class="na">data-slot</span>=<span class="s">&#34;summary-indicator&#34;</span>
+  &gt;&lt;/<span class="nt">span</span>&gt;
+&lt;/<span class="nt">summary</span>&gt;
+</code></pre></div><p class="text-sm"><a class="underline" href="https://registry.buildy.tw/svelte/components/ui/disclosure.json">Svelte registry item (JSON)</a></p></section><section id="panel-react" class="rt-panel" data-runtime="react" aria-label="React code"><p class="mb-2 text-sm text-muted-foreground">Point the CLI at this runtime once, then add the item:</p><div class="mb-2"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-react-init" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit init --yes --framework react --dir src --registry-url https://registry.buildy.tw/react --strict-cdn</code><button type="button" hidden data-copy="panel-react-init" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-react-add" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit add disclosure</code><button type="button" hidden data-copy="panel-react-add" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/disclosure/disclosure.tsx</span><button type="button" hidden data-copy="code-react-0" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="hl max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-react-0" class="font-mono"><span class="c1">// Code generated by xgen. DO NOT EDIT.
+</span><span class="c1">// Source: xgen/specs/ui/disclosure.json
+</span><span class="cm">/**
+</span><span class="cm"> * Disclosure renders native details and summary elements.
+</span><span class="cm"> * Open is a static attribute only — no controlled-state contract.
+</span><span class="cm"> */</span>
 
-import { forwardRef, type ReactNode, type DetailsHTMLAttributes } from &#34;react&#34;;
-import { cn, variants, type VariantKey } from &#34;../../utils&#34;;
+<span class="kr">import</span> { forwardRef, <span class="kr">type</span> ReactNode, <span class="kr">type</span> DetailsHTMLAttributes } <span class="kr">from</span> <span class="s2">&#34;react&#34;</span>;
+<span class="kr">import</span> { cn, variants, <span class="kr">type</span> VariantKey } <span class="kr">from</span> <span class="s2">&#34;../../utils&#34;</span>;
 
-/** Disclosure: the classes of each value of each prop (shadcn/cva style). */
-export const disclosureVariants = variants({
-  base: &#34;group&#34;,
+<span class="cm">/** Disclosure: the classes of each value of each prop (shadcn/cva style). */</span>
+<span class="kr">export</span> <span class="kr">const</span> disclosureVariants = variants({
+  base: <span class="s2">&#34;group&#34;</span>,
   variants: {
     variant: {
-      card: &#34;rounded bg-card inset-ring inset-ring-border&#34;,
-      default: &#34;rounded inset-ring inset-ring-border&#34;,
-      ghost: &#34;&#34;,
-      item: &#34;border-b border-border last:border-b-0&#34;,
+      card: <span class="s2">&#34;rounded bg-card inset-ring inset-ring-border&#34;</span>,
+      <span class="k">default</span>: <span class="s2">&#34;rounded inset-ring inset-ring-border&#34;</span>,
+      ghost: <span class="s2">&#34;&#34;</span>,
+      item: <span class="s2">&#34;border-b border-border last:border-b-0&#34;</span>,
     },
   },
-  defaultVariants: { variant: &#34;default&#34; },
+  defaultVariants: { variant: <span class="s2">&#34;default&#34;</span> },
 });
 
-export type DisclosureVariant = VariantKey&lt;typeof disclosureVariants, &#34;variant&#34;&gt;;
+<span class="kr">export</span> <span class="kr">type</span> DisclosureVariant = VariantKey&lt;<span class="nt">typeof</span> <span class="na">disclosureVariants</span>, <span class="s2">&#34;variant&#34;</span>&gt;;
 
-/**
- * Disclosure renders native details.
- */
-export type DisclosureProps = Omit&lt;
-  DetailsHTMLAttributes&lt;HTMLDetailsElement&gt;,
-  | &#34;className&#34; | &#34;children&#34; | &#34;variant&#34; | &#34;open&#34;
+<span class="cm">/**
+</span><span class="cm"> * Disclosure renders native details.
+</span><span class="cm"> */</span>
+<span class="kr">export</span> <span class="kr">type</span> DisclosureProps = Omit&lt;
+  DetailsHTMLAttributes&lt;<span class="nt">HTMLDetailsElement</span>&gt;,
+  | <span class="s2">&#34;className&#34;</span> | <span class="s2">&#34;children&#34;</span> | <span class="s2">&#34;variant&#34;</span> | <span class="s2">&#34;open&#34;</span>
 &gt; &amp; {
-  variant?: DisclosureVariant;
-  open?: boolean;
-  className?: string;
-  children?: ReactNode;
+  variant?: <span class="kt">DisclosureVariant</span>;
+  open?: <span class="kt">boolean</span>;
+  className?: <span class="kt">string</span>;
+  children?: <span class="kt">ReactNode</span>;
 };
 
-export const Disclosure = forwardRef&lt;HTMLDetailsElement, DisclosureProps&gt;(function Disclosure(
+<span class="kr">export</span> <span class="kr">const</span> Disclosure = forwardRef&lt;<span class="nt">HTMLDetailsElement</span>, <span class="na">DisclosureProps</span>&gt;(<span class="kd">function</span> Disclosure(
   { variant, open, className, children, ...rest },
   ref
 ) {
-  const cls = cn(disclosureVariants({ variant }), className);
-  return (
-    &lt;details ref={ref} className={cls || undefined} open={open || undefined} {...rest}&gt;
+  <span class="kr">const</span> cls = cn(disclosureVariants({ variant }), className);
+  <span class="k">return</span> (
+    &lt;<span class="nt">details</span> <span class="na">ref</span>={ref} <span class="na">className</span>={cls || <span class="kc">undefined</span>} <span class="na">open</span>={open || <span class="kc">undefined</span>} {<span class="na">...rest</span>}&gt;
       {children}
-    &lt;/details&gt;
+    &lt;/<span class="nt">details</span>&gt;
   );
 });
-Disclosure.displayName = &#34;Disclosure&#34;;
-</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/disclosure/summary.tsx</span><button type="button" hidden data-copy="code-react-1" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-react-1" class="font-mono">// Code generated by xgen. DO NOT EDIT.
-// Source: xgen/specs/ui/disclosure.json
-/**
- * Summary: one part of Disclosure (one file per part, as in the Svelte package).
- */
+Disclosure.displayName = <span class="s2">&#34;Disclosure&#34;</span>;
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/disclosure/summary.tsx</span><button type="button" hidden data-copy="code-react-1" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="hl max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-react-1" class="font-mono"><span class="c1">// Code generated by xgen. DO NOT EDIT.
+</span><span class="c1">// Source: xgen/specs/ui/disclosure.json
+</span><span class="cm">/**
+</span><span class="cm"> * Summary: one part of Disclosure (one file per part, as in the Svelte package).
+</span><span class="cm"> */</span>
 
-import { forwardRef, type ReactNode, type HTMLAttributes } from &#34;react&#34;;
-import { cn, variants, type VariantKey } from &#34;../../utils&#34;;
+<span class="kr">import</span> { forwardRef, <span class="kr">type</span> ReactNode, <span class="kr">type</span> HTMLAttributes } <span class="kr">from</span> <span class="s2">&#34;react&#34;</span>;
+<span class="kr">import</span> { cn, variants, <span class="kr">type</span> VariantKey } <span class="kr">from</span> <span class="s2">&#34;../../utils&#34;</span>;
 
-/** Summary: the classes of each value of each prop (shadcn/cva style). */
-export const summaryVariants = variants({
-  base: &#34;flex cursor-pointer list-none items-center justify-between gap-2 [&amp;::-webkit-details-marker]:hidden&#34;,
+<span class="cm">/** Summary: the classes of each value of each prop (shadcn/cva style). */</span>
+<span class="kr">export</span> <span class="kr">const</span> summaryVariants = variants({
+  base: <span class="s2">&#34;flex cursor-pointer list-none items-center justify-between gap-2 [&amp;::-webkit-details-marker]:hidden&#34;</span>,
   variants: {
     size: {
-      sm: &#34;text-xs font-semibold&#34;,
-      default: &#34;text-sm font-semibold&#34;,
-      lg: &#34;text-base font-semibold&#34;,
+      sm: <span class="s2">&#34;text-xs font-semibold&#34;</span>,
+      <span class="k">default</span>: <span class="s2">&#34;text-sm font-semibold&#34;</span>,
+      lg: <span class="s2">&#34;text-base font-semibold&#34;</span>,
     },
     variant: {
-      card: &#34;py-2 pr-4 pl-4&#34;,
-      default: &#34;py-2 pr-4 pl-4&#34;,
-      ghost: &#34;py-2&#34;,
-      item: &#34;py-4 text-muted-foreground hover:text-foreground group-open:text-foreground&#34;,
+      card: <span class="s2">&#34;py-2 pr-4 pl-4&#34;</span>,
+      <span class="k">default</span>: <span class="s2">&#34;py-2 pr-4 pl-4&#34;</span>,
+      ghost: <span class="s2">&#34;py-2&#34;</span>,
+      item: <span class="s2">&#34;py-4 text-muted-foreground hover:text-foreground group-open:text-foreground&#34;</span>,
     },
   },
-  defaultVariants: { size: &#34;default&#34;, variant: &#34;default&#34; },
+  defaultVariants: { size: <span class="s2">&#34;default&#34;</span>, variant: <span class="s2">&#34;default&#34;</span> },
 });
 
-export type SummaryVariant = VariantKey&lt;typeof summaryVariants, &#34;variant&#34;&gt;;
+<span class="kr">export</span> <span class="kr">type</span> SummaryVariant = VariantKey&lt;<span class="nt">typeof</span> <span class="na">summaryVariants</span>, <span class="s2">&#34;variant&#34;</span>&gt;;
 
-/**
- * Summary renders native summary, followed by a Lucide chevron-down indicator that turns over when the details
- * open (CSS only: group-open:rotate-180 on the Disclosure group).
- */
-export type SummaryProps = Omit&lt;
-  HTMLAttributes&lt;HTMLElement&gt;,
-  | &#34;className&#34; | &#34;children&#34; | &#34;variant&#34;
+<span class="cm">/**
+</span><span class="cm"> * Summary renders native summary, followed by a Lucide chevron-down indicator that turns over when the details
+</span><span class="cm"> * open (CSS only: group-open:rotate-180 on the Disclosure group).
+</span><span class="cm"> */</span>
+<span class="kr">export</span> <span class="kr">type</span> SummaryProps = Omit&lt;
+  HTMLAttributes&lt;<span class="nt">HTMLElement</span>&gt;,
+  | <span class="s2">&#34;className&#34;</span> | <span class="s2">&#34;children&#34;</span> | <span class="s2">&#34;variant&#34;</span>
 &gt; &amp; {
-  variant?: SummaryVariant;
-  className?: string;
-  children?: ReactNode;
+  variant?: <span class="kt">SummaryVariant</span>;
+  className?: <span class="kt">string</span>;
+  children?: <span class="kt">ReactNode</span>;
 };
 
-export const Summary = forwardRef&lt;HTMLElement, SummaryProps&gt;(function Summary(
+<span class="kr">export</span> <span class="kr">const</span> Summary = forwardRef&lt;<span class="nt">HTMLElement</span>, <span class="na">SummaryProps</span>&gt;(<span class="kd">function</span> Summary(
   { variant, className, children, ...rest },
   ref
 ) {
-  const cls = cn(summaryVariants({ variant }), className);
-  return (
-    &lt;summary ref={ref} className={cls || undefined} {...rest}&gt;
+  <span class="kr">const</span> cls = cn(summaryVariants({ variant }), className);
+  <span class="k">return</span> (
+    &lt;<span class="nt">summary</span> <span class="na">ref</span>={ref} <span class="na">className</span>={cls || <span class="kc">undefined</span>} {<span class="na">...rest</span>}&gt;
       {children}
-      &lt;span
-        className=&#34;size-4 shrink-0 text-muted-foreground transition-transform group-open:rotate-180&#34;
-        aria-hidden=&#34;true&#34;
-        data-slot=&#34;summary-indicator&#34;
+      &lt;<span class="nt">span</span>
+        <span class="na">className</span>=<span class="s">&#34;size-4 shrink-0 text-muted-foreground transition-transform group-open:rotate-180&#34;</span>
+        <span class="na">aria-hidden</span>=<span class="s">&#34;true&#34;</span>
+        <span class="na">data-slot</span>=<span class="s">&#34;summary-indicator&#34;</span>
       /&gt;
-    &lt;/summary&gt;
+    &lt;/<span class="nt">summary</span>&gt;
   );
 });
-Summary.displayName = &#34;Summary&#34;;
-</code></pre></div><p class="text-sm"><a class="underline" href="https://registry.buildy.tw/react/components/ui/disclosure.json">React registry item (JSON)</a></p></section><section id="panel-vue" data-panel data-runtime="vue" data-label="Vue" aria-label="Vue" class="mb-8"><h3 class="mb-2 text-lg font-semibold">Vue</h3><p class="mb-2 text-sm text-muted-foreground">Point the CLI at this runtime once, then add the item:</p><div class="mb-2"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-vue-init" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit init --yes --framework vue --dir src --registry-url https://registry.buildy.tw/vue --strict-cdn</code><button type="button" hidden data-copy="panel-vue-init" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-vue-add" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit add disclosure</code><button type="button" hidden data-copy="panel-vue-add" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/disclosure/disclosure.vue</span><button type="button" hidden data-copy="code-vue-0" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-vue-0" class="font-mono">&lt;!-- Code generated by xgen. DO NOT EDIT. --&gt;
-&lt;!-- Source: xgen/specs/ui/disclosure.json --&gt;
-&lt;!--
-  Disclosure renders native details.
+Summary.displayName = <span class="s2">&#34;Summary&#34;</span>;
+</code></pre></div><p class="text-sm"><a class="underline" href="https://registry.buildy.tw/react/components/ui/disclosure.json">React registry item (JSON)</a></p></section><section id="panel-vue" class="rt-panel" data-runtime="vue" aria-label="Vue code"><p class="mb-2 text-sm text-muted-foreground">Point the CLI at this runtime once, then add the item:</p><div class="mb-2"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-vue-init" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit init --yes --framework vue --dir src --registry-url https://registry.buildy.tw/vue --strict-cdn</code><button type="button" hidden data-copy="panel-vue-init" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-vue-add" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit add disclosure</code><button type="button" hidden data-copy="panel-vue-add" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/disclosure/disclosure.vue</span><button type="button" hidden data-copy="code-vue-0" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="hl max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-vue-0" class="font-mono"><span class="c">&lt;!--</span> Code generated by xgen. DO NOT EDIT. --&gt;
+<span class="c">&lt;!--</span> Source: xgen/specs/ui/disclosure.json --&gt;
+<span class="c">&lt;!--</span>
+  Disclosure renders <span class="kr">native</span> details.
 --&gt;
-&lt;script lang=&#34;ts&#34;&gt;
-import { variants, type VariantKey } from &#34;../../utils&#34;;
+&lt;<span class="nt">script</span> <span class="na">lang</span>=<span class="s">&#34;ts&#34;</span>&gt;
+<span class="kr">import</span> { variants, type VariantKey } from <span class="s2">&#34;../../utils&#34;</span>;
 
-/** Disclosure: the classes of each value of each prop (shadcn/cva style). */
-export const disclosureVariants = variants({
-  base: &#34;group&#34;,
+<span class="cm">/** Disclosure: the classes of each value of each prop (shadcn/cva style). */</span>
+<span class="kr">export</span> <span class="kr">const</span> disclosureVariants = variants({
+  base: <span class="s2">&#34;group&#34;</span>,
   variants: {
     variant: {
-      card: &#34;rounded bg-card inset-ring inset-ring-border&#34;,
-      default: &#34;rounded inset-ring inset-ring-border&#34;,
-      ghost: &#34;&#34;,
-      item: &#34;border-b border-border last:border-b-0&#34;,
+      card: <span class="s2">&#34;rounded bg-card inset-ring inset-ring-border&#34;</span>,
+      <span class="k">default</span>: <span class="s2">&#34;rounded inset-ring inset-ring-border&#34;</span>,
+      ghost: <span class="s2">&#34;&#34;</span>,
+      item: <span class="s2">&#34;border-b border-border last:border-b-0&#34;</span>,
     },
   },
-  defaultVariants: { variant: &#34;default&#34; },
+  defaultVariants: { variant: <span class="s2">&#34;default&#34;</span> },
 });
 
-export type DisclosureVariant = VariantKey&lt;typeof disclosureVariants, &#34;variant&#34;&gt;;
+<span class="kr">export</span> type DisclosureVariant = VariantKey&lt;<span class="nt">typeof</span> <span class="na">disclosureVariants</span><span class="err">,</span> <span class="err">&#34;</span><span class="na">variant</span><span class="err">&#34;</span>&gt;;
 
-export type DisclosureProps = {
+<span class="kr">export</span> type DisclosureProps = {
   variant?: DisclosureVariant;
-  open?: boolean;
-  class?: string;
+  open?: <span class="kr">boolean</span>;
+  <span class="kr">class</span>?: string;
 };
-&lt;/script&gt;
+&lt;/<span class="nt">script</span>&gt;
 
-&lt;script setup lang=&#34;ts&#34;&gt;
-import { computed, useAttrs } from &#34;vue&#34;;
-import { cn } from &#34;../../utils&#34;;
+&lt;<span class="nt">script</span> <span class="na">setup</span> <span class="na">lang</span>=<span class="s">&#34;ts&#34;</span>&gt;
+<span class="kr">import</span> { computed, useAttrs } from <span class="s2">&#34;vue&#34;</span>;
+<span class="kr">import</span> { cn } from <span class="s2">&#34;../../utils&#34;</span>;
 
-defineOptions({ inheritAttrs: false });
-defineSlots&lt;{ default?(): unknown }&gt;();
-const { variant, open, class: className } = defineProps&lt;DisclosureProps&gt;();
-const attrs = useAttrs();
-const cls = computed(() =&gt; cn(disclosureVariants({ variant }), className));
-&lt;/script&gt;
+defineOptions({ inheritAttrs: <span class="kc">false</span> });
+defineSlots&lt;{ <span class="k">default</span>?(): unknown }&gt;();
+<span class="kr">const</span> { variant, open, <span class="kr">class</span>: className } = defineProps&lt;<span class="nt">DisclosureProps</span>&gt;();
+<span class="kr">const</span> attrs = useAttrs();
+<span class="kr">const</span> cls = computed(() =&gt; cn(disclosureVariants({ variant }), className));
+&lt;/<span class="nt">script</span>&gt;
 
-&lt;template&gt;
-  &lt;details :class=&#34;cls || undefined&#34; :open=&#34;open || undefined&#34; v-bind=&#34;attrs&#34;&gt;
-    &lt;slot /&gt;
-  &lt;/details&gt;
-&lt;/template&gt;
-</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/disclosure/summary.vue</span><button type="button" hidden data-copy="code-vue-1" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-vue-1" class="font-mono">&lt;!-- Code generated by xgen. DO NOT EDIT. --&gt;
-&lt;!-- Source: xgen/specs/ui/disclosure.json --&gt;
-&lt;!--
-  Summary renders native summary, followed by a Lucide chevron-down indicator that turns over when the details
-  open (CSS only: group-open:rotate-180 on the Disclosure group).
+&lt;<span class="nt">template</span>&gt;
+  &lt;<span class="nt">details</span> :<span class="na">class</span>=<span class="s">&#34;cls || undefined&#34;</span> :<span class="na">open</span>=<span class="s">&#34;open || undefined&#34;</span> <span class="nt">v-bind</span>=<span class="s">&#34;attrs&#34;</span>&gt;
+    &lt;<span class="nt">slot</span> /&gt;
+  &lt;/<span class="nt">details</span>&gt;
+&lt;/<span class="nt">template</span>&gt;
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/disclosure/summary.vue</span><button type="button" hidden data-copy="code-vue-1" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="hl max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-vue-1" class="font-mono"><span class="c">&lt;!--</span> Code generated by xgen. DO NOT EDIT. --&gt;
+<span class="c">&lt;!--</span> Source: xgen/specs/ui/disclosure.json --&gt;
+<span class="c">&lt;!--</span>
+  Summary renders <span class="kr">native</span> summary, followed by a Lucide chevron-down indicator that turns over when the details
+  open (CSS only: group-open:rotate-<span class="mi">180</span> on the Disclosure group).
 --&gt;
-&lt;script lang=&#34;ts&#34;&gt;
-import { variants, type VariantKey } from &#34;../../utils&#34;;
+&lt;<span class="nt">script</span> <span class="na">lang</span>=<span class="s">&#34;ts&#34;</span>&gt;
+<span class="kr">import</span> { variants, type VariantKey } from <span class="s2">&#34;../../utils&#34;</span>;
 
-/** Summary: the classes of each value of each prop (shadcn/cva style). */
-export const summaryVariants = variants({
-  base: &#34;flex cursor-pointer list-none items-center justify-between gap-2 [&amp;::-webkit-details-marker]:hidden&#34;,
+<span class="cm">/** Summary: the classes of each value of each prop (shadcn/cva style). */</span>
+<span class="kr">export</span> <span class="kr">const</span> summaryVariants = variants({
+  base: <span class="s2">&#34;flex cursor-pointer list-none items-center justify-between gap-2 [&amp;::-webkit-details-marker]:hidden&#34;</span>,
   variants: {
     size: {
-      sm: &#34;text-xs font-semibold&#34;,
-      default: &#34;text-sm font-semibold&#34;,
-      lg: &#34;text-base font-semibold&#34;,
+      sm: <span class="s2">&#34;text-xs font-semibold&#34;</span>,
+      <span class="k">default</span>: <span class="s2">&#34;text-sm font-semibold&#34;</span>,
+      lg: <span class="s2">&#34;text-base font-semibold&#34;</span>,
     },
     variant: {
-      card: &#34;py-2 pr-4 pl-4&#34;,
-      default: &#34;py-2 pr-4 pl-4&#34;,
-      ghost: &#34;py-2&#34;,
-      item: &#34;py-4 text-muted-foreground hover:text-foreground group-open:text-foreground&#34;,
+      card: <span class="s2">&#34;py-2 pr-4 pl-4&#34;</span>,
+      <span class="k">default</span>: <span class="s2">&#34;py-2 pr-4 pl-4&#34;</span>,
+      ghost: <span class="s2">&#34;py-2&#34;</span>,
+      item: <span class="s2">&#34;py-4 text-muted-foreground hover:text-foreground group-open:text-foreground&#34;</span>,
     },
   },
-  defaultVariants: { size: &#34;default&#34;, variant: &#34;default&#34; },
+  defaultVariants: { size: <span class="s2">&#34;default&#34;</span>, variant: <span class="s2">&#34;default&#34;</span> },
 });
 
-export type SummaryVariant = VariantKey&lt;typeof summaryVariants, &#34;variant&#34;&gt;;
+<span class="kr">export</span> type SummaryVariant = VariantKey&lt;<span class="nt">typeof</span> <span class="na">summaryVariants</span><span class="err">,</span> <span class="err">&#34;</span><span class="na">variant</span><span class="err">&#34;</span>&gt;;
 
-export type SummaryProps = {
+<span class="kr">export</span> type SummaryProps = {
   variant?: SummaryVariant;
-  class?: string;
+  <span class="kr">class</span>?: string;
 };
-&lt;/script&gt;
+&lt;/<span class="nt">script</span>&gt;
 
-&lt;script setup lang=&#34;ts&#34;&gt;
-import { computed, useAttrs } from &#34;vue&#34;;
-import { cn } from &#34;../../utils&#34;;
+&lt;<span class="nt">script</span> <span class="na">setup</span> <span class="na">lang</span>=<span class="s">&#34;ts&#34;</span>&gt;
+<span class="kr">import</span> { computed, useAttrs } from <span class="s2">&#34;vue&#34;</span>;
+<span class="kr">import</span> { cn } from <span class="s2">&#34;../../utils&#34;</span>;
 
-defineOptions({ inheritAttrs: false });
-defineSlots&lt;{ default?(): unknown }&gt;();
-const { variant, class: className } = defineProps&lt;SummaryProps&gt;();
-const attrs = useAttrs();
-const cls = computed(() =&gt; cn(summaryVariants({ variant }), className));
-&lt;/script&gt;
+defineOptions({ inheritAttrs: <span class="kc">false</span> });
+defineSlots&lt;{ <span class="k">default</span>?(): unknown }&gt;();
+<span class="kr">const</span> { variant, <span class="kr">class</span>: className } = defineProps&lt;<span class="nt">SummaryProps</span>&gt;();
+<span class="kr">const</span> attrs = useAttrs();
+<span class="kr">const</span> cls = computed(() =&gt; cn(summaryVariants({ variant }), className));
+&lt;/<span class="nt">script</span>&gt;
 
-&lt;template&gt;
-  &lt;summary :class=&#34;cls || undefined&#34; v-bind=&#34;attrs&#34;&gt;
-    &lt;slot /&gt;
-    &lt;span
-      class=&#34;size-4 shrink-0 text-muted-foreground transition-transform group-open:rotate-180&#34;
-      aria-hidden=&#34;true&#34;
-      data-slot=&#34;summary-indicator&#34;
-    &gt;&lt;/span&gt;
-  &lt;/summary&gt;
-&lt;/template&gt;
-</code></pre></div><p class="text-sm"><a class="underline" href="https://registry.buildy.tw/vue/components/ui/disclosure.json">Vue registry item (JSON)</a></p></section></div></article></main></div><footer class="border-t border-border"><div class="mx-auto max-w-6xl px-4 py-8 text-sm text-muted-foreground">ui8kit, MIT licence. Static docs generated from markdown and the registry (<a class="underline" href="https://registry.buildy.tw/registry.json">registry.json</a>).</div></footer></body></html>
+&lt;<span class="nt">template</span>&gt;
+  &lt;<span class="nt">summary</span> :<span class="na">class</span>=<span class="s">&#34;cls || undefined&#34;</span> <span class="nt">v-bind</span>=<span class="s">&#34;attrs&#34;</span>&gt;
+    &lt;<span class="nt">slot</span> /&gt;
+    &lt;<span class="nt">span</span>
+      <span class="na">class</span>=<span class="s">&#34;size-4 shrink-0 text-muted-foreground transition-transform group-open:rotate-180&#34;</span>
+      <span class="na">aria</span><span class="nt">-hidden</span><span class="err">=&#34;</span><span class="na">true</span><span class="err">&#34;</span>
+      <span class="na">data</span><span class="nt">-slot</span><span class="err">=&#34;</span><span class="na">summary</span><span class="nt">-indicator</span><span class="err">&#34;</span>
+    &gt;&lt;/<span class="nt">span</span>&gt;
+  &lt;/<span class="nt">summary</span>&gt;
+&lt;/<span class="nt">template</span>&gt;
+</code></pre></div><p class="text-sm"><a class="underline" href="https://registry.buildy.tw/vue/components/ui/disclosure.json">Vue registry item (JSON)</a></p></section></div><h2 class="mb-2 text-xl font-semibold">Props</h2><p class="mb-4 max-w-3xl text-sm text-muted-foreground">Names and types come from the xgen specs of the source. Standard HTML attributes (id, role, tabIndex, aria-*) pass through to the root element; the class prop is className in React.</p><div class="mb-8"><h3 class="mb-2 font-mono text-base font-semibold">Disclosure</h3><p class="mb-2 max-w-3xl whitespace-pre-line text-sm text-muted-foreground">Disclosure renders native details.</p><div class="overflow-x-auto" tabindex="0" role="region" aria-label="Props of Disclosure"><table class="w-full min-w-[40rem] text-left text-sm"><caption class="sr-only">Props of Disclosure</caption> <thead><tr class="border-b border-border"><th scope="col" class="py-2 pr-4 font-medium">Prop</th><th scope="col" class="py-2 pr-4 font-medium">Type</th><th scope="col" class="py-2 pr-4 font-medium">Default</th><th scope="col" class="py-2 font-medium">Description</th></tr></thead> <tbody><tr class="border-b border-border align-top"><th scope="row" class="py-2 pr-4 font-mono text-xs font-medium">variant </th><td class="py-2 pr-4 font-mono text-xs">&#34;card&#34; | &#34;default&#34; | &#34;ghost&#34; | &#34;item&#34;</td><td class="py-2 pr-4 font-mono text-xs">&#34;default&#34;</td><td class="py-2 text-muted-foreground">sets appearance preset</td></tr><tr class="border-b border-border align-top"><th scope="row" class="py-2 pr-4 font-mono text-xs font-medium">class </th><td class="py-2 pr-4 font-mono text-xs">string</td><td class="py-2 pr-4 font-mono text-xs"><span class="text-muted-foreground">-</span></td><td class="py-2 text-muted-foreground">adds Tailwind utilities</td></tr><tr class="border-b border-border align-top"><th scope="row" class="py-2 pr-4 font-mono text-xs font-medium">open </th><td class="py-2 pr-4 font-mono text-xs">boolean</td><td class="py-2 pr-4 font-mono text-xs"><span class="text-muted-foreground">-</span></td><td class="py-2 text-muted-foreground">initial open state (static attribute only)</td></tr><tr class="border-b border-border align-top"><th scope="row" class="py-2 pr-4 font-mono text-xs font-medium">children </th><td class="py-2 pr-4 font-mono text-xs">children</td><td class="py-2 pr-4 font-mono text-xs"><span class="text-muted-foreground">-</span></td><td class="py-2 text-muted-foreground"></td></tr></tbody></table></div></div><div class="mb-8"><h3 class="mb-2 font-mono text-base font-semibold">Summary</h3><p class="mb-2 max-w-3xl whitespace-pre-line text-sm text-muted-foreground">Summary renders native summary, followed by a Lucide chevron-down indicator that turns over when the details open (CSS only: group-open:rotate-180 on the Disclosure group).</p><div class="overflow-x-auto" tabindex="0" role="region" aria-label="Props of Summary"><table class="w-full min-w-[40rem] text-left text-sm"><caption class="sr-only">Props of Summary</caption> <thead><tr class="border-b border-border"><th scope="col" class="py-2 pr-4 font-medium">Prop</th><th scope="col" class="py-2 pr-4 font-medium">Type</th><th scope="col" class="py-2 pr-4 font-medium">Default</th><th scope="col" class="py-2 font-medium">Description</th></tr></thead> <tbody><tr class="border-b border-border align-top"><th scope="row" class="py-2 pr-4 font-mono text-xs font-medium">variant </th><td class="py-2 pr-4 font-mono text-xs">&#34;card&#34; | &#34;default&#34; | &#34;ghost&#34; | &#34;item&#34;</td><td class="py-2 pr-4 font-mono text-xs">&#34;default&#34;</td><td class="py-2 text-muted-foreground">sets appearance preset</td></tr><tr class="border-b border-border align-top"><th scope="row" class="py-2 pr-4 font-mono text-xs font-medium">class </th><td class="py-2 pr-4 font-mono text-xs">string</td><td class="py-2 pr-4 font-mono text-xs"><span class="text-muted-foreground">-</span></td><td class="py-2 text-muted-foreground">adds Tailwind utilities</td></tr><tr class="border-b border-border align-top"><th scope="row" class="py-2 pr-4 font-mono text-xs font-medium">children </th><td class="py-2 pr-4 font-mono text-xs">children</td><td class="py-2 pr-4 font-mono text-xs"><span class="text-muted-foreground">-</span></td><td class="py-2 text-muted-foreground"></td></tr></tbody></table></div></div><h2 class="mb-2 text-xl font-semibold">Used in</h2><ul class="flex flex-wrap gap-x-4 gap-y-1 text-sm"><li><a class="underline" href="/blocks/checklist/">checklist</a></li><li><a class="underline" href="/components/faq-disclosures/">faq-disclosures</a></li><li><a class="underline" href="/blocks/faq-list/">faq-list</a></li><li><a class="underline" href="/blocks/feature-accordion/">feature-accordion</a></li><li><a class="underline" href="/blocks/product-info/">product-info</a></li></ul></article></main></div><footer class="border-t border-border"><div class="mx-auto max-w-6xl px-4 py-8 text-sm text-muted-foreground">ui8kit, MIT licence. Static docs generated from markdown and the registry (<a class="underline" href="https://registry.buildy.tw/registry.json">registry.json</a>).</div></footer></body></html>

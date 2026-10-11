@@ -1,247 +1,248 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Feature Split (block) | ui8kit</title><meta name="description" content="Features beside a picture: plain in two columns, as cards with actions, two figures over checked rows, or four metric cards with actions."><link rel="canonical" href="https://ui.buildy.tw/blocks/feature-split/"><link rel="stylesheet" href="/assets/site.css"><script src="/assets/app.js" defer></script></head><body class="min-h-screen bg-background text-foreground font-sans"><a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:left-2 focus:top-2 focus:bg-background focus:px-4 focus:py-2 focus:z-50">Skip to content</a><header class="border-b border-border"><div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-4 py-4"><a href="/" class="text-lg font-semibold">ui8kit</a><nav aria-label="Main" class="flex items-center gap-4 text-sm"><a href="/docs/" class="hover:underline">Docs</a> <a href="/docs/categories/blocks-marketing/" class="hover:underline">Blocks</a> <a href="/docs/categories/primitives/" class="hover:underline">Primitives</a> <a href="/docs/cli/" class="hover:underline">CLI</a></nav><form id="search" role="search" class="relative w-full sm:w-72" data-index="/search-index.json"><label for="search-input" class="sr-only">Search components and blocks</label> <input id="search-input" type="search" autocomplete="off" placeholder="Search, press /" class="h-10 w-full rounded border border-input bg-card px-4 text-sm"><ul id="search-results" hidden class="absolute left-0 right-0 top-12 z-40 rounded border border-border bg-popover text-popover-foreground shadow-md" aria-live="polite"></ul></form></div></header><div class="mx-auto flex max-w-6xl flex-col gap-8 px-4 py-8 md:flex-row"><nav aria-label="Docs" class="md:w-64 md:shrink-0"><h2 class="mb-2 text-sm font-semibold">Guides</h2><ul class="mb-6 flex flex-col gap-1"><li><a href="/docs/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Overview</a></li><li><a href="/docs/getting-started/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Getting started</a></li><li><a href="/docs/installation/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Installation</a></li><li><a href="/docs/cli/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">CLI</a></li><li><a href="/docs/theming-skins/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Theming and skins</a></li><li><a href="/docs/grid-8px/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">The 8px grid</a></li></ul><h2 class="mb-2 text-sm font-semibold">Categories</h2><ul class="mb-6 flex flex-col gap-1"><li><a href="/docs/categories/primitives/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Primitives</a></li><li><a href="/docs/categories/components/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Components</a></li><li><a href="/docs/categories/blocks-marketing/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: marketing</a></li><li><a href="/docs/categories/blocks-commerce/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: commerce</a></li><li><a href="/docs/categories/blocks-dashboard/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: dashboard</a></li><li><a href="/docs/categories/blocks-content/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: content</a></li><li><a href="/docs/categories/blocks-account/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: account</a></li><li><a href="/docs/categories/blocks-promo/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: promo</a></li><li><a href="/docs/categories/blocks-support/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: support</a></li><li><a href="/docs/categories/blocks-onboarding/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: onboarding</a></li><li><a href="/docs/categories/blocks-general/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: general</a></li></ul></nav><main id="main" class="min-w-0 flex-1"><article><p class="text-sm text-muted-foreground"><a class="underline" href="/docs/categories/blocks-marketing/">block / marketing</a></p><h1 class="mb-2 text-3xl font-semibold tracking-tight">Feature Split</h1><p class="mb-6 max-w-3xl text-muted-foreground">Features beside a picture: plain in two columns, as cards with actions, two figures over checked rows, or four metric cards with actions.</p><h2 class="mb-2 text-xl font-semibold">Install</h2><div class="mb-6 max-w-xl"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="install-feature-split" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit add feature-split</code><button type="button" hidden data-copy="install-feature-split" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><p class="mb-6 text-sm text-muted-foreground">Pulls in:  <a class="underline" href="/components/action-group/">action-group</a><span>, </span> <a class="underline" href="/blocks/error-page/">error-page</a><span>, </span> <a class="underline" href="/components/feature-cards/">feature-cards</a><span>, </span> <a class="underline" href="/blocks/feature-grid/">feature-grid</a><span>, </span> <a class="underline" href="/components/feature-metric-cards/">feature-metric-cards</a><span>, </span> <a class="underline" href="/components/feature-pairs/">feature-pairs</a><span>, </span> <a class="underline" href="/components/feature-stat-rows/">feature-stat-rows</a><span>, </span> <a class="underline" href="/components/media-frame/">media-frame</a><span>, </span> <a class="underline" href="/components/section-frame/">section-frame</a><span>, </span> <a class="underline" href="/blocks/stats-band/">stats-band</a><span>, </span> <a class="underline" href="/lib/utils/">utils</a></p><h2 class="mb-2 text-xl font-semibold">Code</h2><div data-tabs><section id="panel-svelte" data-panel data-runtime="svelte" data-label="Svelte" aria-label="Svelte" class="mb-8"><h3 class="mb-2 text-lg font-semibold">Svelte</h3><p class="mb-2 text-sm text-muted-foreground">Point the CLI at this runtime once, then add the item:</p><div class="mb-2"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-svelte-init" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit init --yes --framework svelte --dir src --registry-url https://registry.buildy.tw/svelte --strict-cdn</code><button type="button" hidden data-copy="panel-svelte-init" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-svelte-add" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit add feature-split</code><button type="button" hidden data-copy="panel-svelte-add" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">blocks/feature-split.svelte</span><button type="button" hidden data-copy="code-svelte-0" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-svelte-0" class="font-mono">&lt;!-- Code generated by xgen. DO NOT EDIT. --&gt;
-&lt;!-- Source: xgen/screens/src/authoring/blocks/feature-split.ts --&gt;
-&lt;!--
-  Features beside a picture. Axes: layout (grid: four plain features in two columns, cards: four features as
-  cards and the actions, stats: two figure cards over three checked rows beside a square picture, metrics: four
-  metric cards and the actions), mediaSide, tone.
---&gt;
-&lt;script lang=&#34;ts&#34; module&gt;
-  import type { Snippet } from &#34;svelte&#34;;
-  import type { Feature } from &#34;./feature-grid.types&#34;;
-  import type { Stat } from &#34;./stats-band.types&#34;;
-  import type { LinkActions } from &#34;./error-page.types&#34;;
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Feature Split (block) | ui8kit</title><meta name="description" content="Features beside a picture: plain in two columns, as cards with actions, two figures over checked rows, or four metric cards with actions."><link rel="canonical" href="https://ui.buildy.tw/blocks/feature-split/"><link rel="stylesheet" href="/assets/site.css"><script src="/assets/app.js" defer></script></head><body class="min-h-screen bg-background text-foreground font-sans"><a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:left-2 focus:top-2 focus:bg-background focus:px-4 focus:py-2 focus:z-50">Skip to content</a><header class="border-b border-border"><div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-4 py-4"><a href="/" class="text-lg font-semibold">ui8kit</a><nav aria-label="Main" class="flex items-center gap-4 text-sm"><a href="/docs/" class="hover:underline">Docs</a> <a href="/docs/categories/blocks-marketing/" class="hover:underline">Blocks</a> <a href="/docs/categories/primitives/" class="hover:underline">Primitives</a> <a href="/docs/cli/" class="hover:underline">CLI</a></nav><form id="search" role="search" class="relative w-full sm:w-72" data-index="/search-index.json"><label for="search-input" class="sr-only">Search components and blocks</label> <input id="search-input" type="search" autocomplete="off" placeholder="Search, press /" class="h-10 w-full rounded border border-input bg-card px-4 text-sm"><ul id="search-results" hidden class="absolute left-0 right-0 top-12 z-40 rounded border border-border bg-popover text-popover-foreground shadow-md" aria-live="polite"></ul></form></div></header><div class="mx-auto flex max-w-6xl flex-col gap-8 px-4 py-8 md:flex-row"><nav aria-label="Docs" class="md:w-64 md:shrink-0"><h2 class="mb-2 text-sm font-semibold">Guides</h2><ul class="mb-6 flex flex-col gap-1"><li><a href="/docs/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Overview</a></li><li><a href="/docs/getting-started/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Getting started</a></li><li><a href="/docs/installation/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Installation</a></li><li><a href="/docs/cli/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">CLI</a></li><li><a href="/docs/theming-skins/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Theming and skins</a></li><li><a href="/docs/grid-8px/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">The 8px grid</a></li></ul><h2 class="mb-2 text-sm font-semibold">Categories</h2><ul class="mb-6 flex flex-col gap-1"><li><a href="/docs/categories/primitives/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Primitives</a></li><li><a href="/docs/categories/components/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Components</a></li><li><a href="/docs/categories/blocks-marketing/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: marketing</a></li><li><a href="/docs/categories/blocks-commerce/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: commerce</a></li><li><a href="/docs/categories/blocks-dashboard/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: dashboard</a></li><li><a href="/docs/categories/blocks-content/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: content</a></li><li><a href="/docs/categories/blocks-account/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: account</a></li><li><a href="/docs/categories/blocks-promo/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: promo</a></li><li><a href="/docs/categories/blocks-support/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: support</a></li><li><a href="/docs/categories/blocks-onboarding/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: onboarding</a></li><li><a href="/docs/categories/blocks-general/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: general</a></li></ul></nav><main id="main" class="min-w-0 flex-1"><article><p class="text-sm text-muted-foreground"><a class="underline" href="/docs/categories/blocks-marketing/">block / marketing</a></p><h1 class="mb-2 text-3xl font-semibold tracking-tight">Feature Split</h1><p class="mb-6 max-w-3xl text-muted-foreground">Features beside a picture: plain in two columns, as cards with actions, two figures over checked rows, or four metric cards with actions.</p><h2 class="mb-2 text-xl font-semibold">Install</h2><div class="mb-6 max-w-xl"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="install-feature-split" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit add feature-split</code><button type="button" hidden data-copy="install-feature-split" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><p class="mb-6 text-sm text-muted-foreground">Pulls in:  <a class="underline" href="/components/action-group/">action-group</a><span>, </span> <a class="underline" href="/blocks/error-page/">error-page</a><span>, </span> <a class="underline" href="/components/feature-cards/">feature-cards</a><span>, </span> <a class="underline" href="/blocks/feature-grid/">feature-grid</a><span>, </span> <a class="underline" href="/components/feature-metric-cards/">feature-metric-cards</a><span>, </span> <a class="underline" href="/components/feature-pairs/">feature-pairs</a><span>, </span> <a class="underline" href="/components/feature-stat-rows/">feature-stat-rows</a><span>, </span> <a class="underline" href="/components/media-frame/">media-frame</a><span>, </span> <a class="underline" href="/components/section-frame/">section-frame</a><span>, </span> <a class="underline" href="/blocks/stats-band/">stats-band</a><span>, </span> <a class="underline" href="/lib/utils/">utils</a></p><h2 class="mb-2 text-xl font-semibold">Preview</h2><div class="preview mb-8 rounded border border-border bg-background" role="group" tabindex="0" aria-label="Feature Split preview"><section class="w-full py-10" aria-labelledby="featuresplit-title" data-testid="section" data-tone="default" data-density="default"><div class="mx-auto w-full max-w-6xl px-4" data-slot="container"><div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center"><div class="w-full" data-slot="media"><div class="relative w-full overflow-hidden bg-muted text-muted-foreground inset-ring inset-ring-border rounded aspect-4/3" data-slot="media-frame" data-placeholder="true"><img alt="Built for teams that ship" loading="lazy" decoding="async" class="block max-w-full aspect-auto object-center absolute inset-0 size-full object-cover dark:hidden" src="/assets/ph/86775df0.svg" data-theme-src="light"/><img alt="Built for teams that ship" loading="lazy" decoding="async" class="max-w-full aspect-auto object-center absolute inset-0 hidden size-full object-cover dark:block" src="/assets/ph/3e1cc509.svg" data-theme-src="dark"/></div></div><div class="flex flex-col gap-6 items-stretch justify-start"><div class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring rounded-full h-8 px-4 text-sm bg-transparent text-foreground inset-ring-border w-fit" data-slot="badge" data-testid="section-badge">Features</div><h2 class="text-foreground text-xl font-semibold leading-7" id="featuresplit-title">Built for teams that ship</h2><p class="text-base max-w-2xl text-muted-foreground">Everything you need to plan, build and publish, in one place.</p><div class="grid grid-cols-1 gap-6 sm:grid-cols-2"><div class="flex min-w-0 gap-4 items-start justify-start" data-testid="feature-item"><span class="flex size-8 shrink-0 items-center justify-center rounded bg-primary text-primary-foreground"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block shrink-0" aria-hidden="true" data-slot="icon" data-lucide="zap"><path d="M15.914 4a1.5 1.5 0 00-2.474-1.561l-9 9A1.5 1.5 0 005.5 14h4.002a.5.5 0 01.471.666L8.086 20a1.5 1.5 0 002.475 1.56l9-9A1.5 1.5 0 0018.5 10h-3.997a.5.5 0 01-.472-.667z"></path></svg></span><div class="flex flex-col gap-2 items-start justify-start min-w-0"><h3 class="text-foreground text-sm font-semibold">Fast by default</h3><p class="text-sm text-muted-foreground">Pages render from static data and ship little script.</p></div></div><div class="flex min-w-0 gap-4 items-start justify-start" data-testid="feature-item"><span class="flex size-8 shrink-0 items-center justify-center rounded bg-primary text-primary-foreground"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block shrink-0" aria-hidden="true" data-slot="icon" data-lucide="layers"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z"></path><path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12"></path><path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17"></path></svg></span><div class="flex flex-col gap-2 items-start justify-start min-w-0"><h3 class="text-foreground text-sm font-semibold">Clear structure</h3><p class="text-sm text-muted-foreground">One heading per page, landmarks and a skip link come built in.</p></div></div><div class="flex min-w-0 gap-4 items-start justify-start" data-testid="feature-item"><span class="flex size-8 shrink-0 items-center justify-center rounded bg-primary text-primary-foreground"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block shrink-0" aria-hidden="true" data-slot="icon" data-lucide="shield-check"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="m9 12 2 2 4-4"></path></svg></span><div class="flex flex-col gap-2 items-start justify-start min-w-0"><h3 class="text-foreground text-sm font-semibold">Safe forms</h3><p class="text-sm text-muted-foreground">Inputs carry labels and errors are announced to assistive tools.</p></div></div><div class="flex min-w-0 gap-4 items-start justify-start" data-testid="feature-item"><span class="flex size-8 shrink-0 items-center justify-center rounded bg-primary text-primary-foreground"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block shrink-0" aria-hidden="true" data-slot="icon" data-lucide="globe"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg></span><div class="flex flex-col gap-2 items-start justify-start min-w-0"><h3 class="text-foreground text-sm font-semibold">Ready for any language</h3><p class="text-sm text-muted-foreground">Every text lives in a dictionary, so a new language is one more file.</p></div></div></div></div></div></div></section>
+</div><h2 class="mb-2 text-xl font-semibold">Code</h2><div class="rt mb-8"><div class="rt-bar" role="radiogroup" aria-label="Runtime"><input type="radio" name="rt" id="rt-svelte" value="svelte" class="sr-only" checked> <label for="rt-svelte">Svelte</label><input type="radio" name="rt" id="rt-react" value="react" class="sr-only"> <label for="rt-react">React</label><input type="radio" name="rt" id="rt-vue" value="vue" class="sr-only"> <label for="rt-vue">Vue</label></div><section id="panel-svelte" class="rt-panel" data-runtime="svelte" aria-label="Svelte code"><p class="mb-2 text-sm text-muted-foreground">Point the CLI at this runtime once, then add the item:</p><div class="mb-2"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-svelte-init" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit init --yes --framework svelte --dir src --registry-url https://registry.buildy.tw/svelte --strict-cdn</code><button type="button" hidden data-copy="panel-svelte-init" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-svelte-add" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit add feature-split</code><button type="button" hidden data-copy="panel-svelte-add" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">blocks/feature-split.svelte</span><button type="button" hidden data-copy="code-svelte-0" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="hl max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-svelte-0" class="font-mono"><span class="c">&lt;!-- Code generated by xgen. DO NOT EDIT. --&gt;</span>
+<span class="c">&lt;!-- Source: xgen/screens/src/authoring/blocks/feature-split.ts --&gt;</span>
+<span class="c">&lt;!--
+</span><span class="c">  Features beside a picture. Axes: layout (grid: four plain features in two columns, cards: four features as
+</span><span class="c">  cards and the actions, stats: two figure cards over three checked rows beside a square picture, metrics: four
+</span><span class="c">  metric cards and the actions), mediaSide, tone.
+</span><span class="c">--&gt;</span>
+&lt;<span class="nt">script</span> <span class="na">lang</span>=<span class="s">&#34;ts&#34;</span> <span class="na">module</span>&gt;
+  <span class="kr">import</span> <span class="kr">type</span> { Snippet } <span class="kr">from</span> <span class="s2">&#34;svelte&#34;</span>;
+  <span class="kr">import</span> <span class="kr">type</span> { Feature } <span class="kr">from</span> <span class="s2">&#34;./feature-grid.types&#34;</span>;
+  <span class="kr">import</span> <span class="kr">type</span> { Stat } <span class="kr">from</span> <span class="s2">&#34;./stats-band.types&#34;</span>;
+  <span class="kr">import</span> <span class="kr">type</span> { LinkActions } <span class="kr">from</span> <span class="s2">&#34;./error-page.types&#34;</span>;
 
-  export type FeatureSplitProps = {
-    id: string;
-    title: string;
-    lead?: string;
-    badge?: string;
-    level?: 1 | 2;
-    features: Feature[];
-    stats: Stat[];
-    actions: LinkActions;
-    layout?: &#34;grid&#34; | &#34;cards&#34; | &#34;stats&#34; | &#34;metrics&#34;;
-    mediaSide?: &#34;end&#34; | &#34;start&#34;;
-    tone?: &#34;default&#34; | &#34;muted&#34;;
+  <span class="kr">export</span> <span class="kr">type</span> FeatureSplitProps = {
+    id: <span class="kt">string</span>;
+    title: <span class="kt">string</span>;
+    lead?: <span class="kt">string</span>;
+    badge?: <span class="kt">string</span>;
+    level?: <span class="kt">1</span> | <span class="mi">2</span>;
+    features: <span class="kt">Feature</span>[];
+    stats: <span class="kt">Stat</span>[];
+    actions: <span class="kt">LinkActions</span>;
+    layout?: <span class="s2">&#34;grid&#34;</span> | <span class="s2">&#34;cards&#34;</span> | <span class="s2">&#34;stats&#34;</span> | <span class="s2">&#34;metrics&#34;</span>;
+    mediaSide?: <span class="s2">&#34;end&#34;</span> | <span class="s2">&#34;start&#34;</span>;
+    tone?: <span class="s2">&#34;default&#34;</span> | <span class="s2">&#34;muted&#34;</span>;
   };
-&lt;/script&gt;
+&lt;/<span class="nt">script</span>&gt;
 
-&lt;script lang=&#34;ts&#34;&gt;
-  import ActionGroup from &#34;../components/action-group.svelte&#34;;
-  import FeatureCards from &#34;../components/feature-cards.svelte&#34;;
-  import FeatureMetricCards from &#34;../components/feature-metric-cards.svelte&#34;;
-  import FeaturePairs from &#34;../components/feature-pairs.svelte&#34;;
-  import FeatureStatRows from &#34;../components/feature-stat-rows.svelte&#34;;
-  import MediaFrame from &#34;../components/media-frame.svelte&#34;;
-  import SectionFrame from &#34;../components/section-frame.svelte&#34;;
+&lt;<span class="nt">script</span> <span class="na">lang</span>=<span class="s">&#34;ts&#34;</span>&gt;
+  <span class="kr">import</span> ActionGroup <span class="kr">from</span> <span class="s2">&#34;../components/action-group.svelte&#34;</span>;
+  <span class="kr">import</span> FeatureCards <span class="kr">from</span> <span class="s2">&#34;../components/feature-cards.svelte&#34;</span>;
+  <span class="kr">import</span> FeatureMetricCards <span class="kr">from</span> <span class="s2">&#34;../components/feature-metric-cards.svelte&#34;</span>;
+  <span class="kr">import</span> FeaturePairs <span class="kr">from</span> <span class="s2">&#34;../components/feature-pairs.svelte&#34;</span>;
+  <span class="kr">import</span> FeatureStatRows <span class="kr">from</span> <span class="s2">&#34;../components/feature-stat-rows.svelte&#34;</span>;
+  <span class="kr">import</span> MediaFrame <span class="kr">from</span> <span class="s2">&#34;../components/media-frame.svelte&#34;</span>;
+  <span class="kr">import</span> SectionFrame <span class="kr">from</span> <span class="s2">&#34;../components/section-frame.svelte&#34;</span>;
 
-  let {
+  <span class="kd">let</span> {
     id,
     title,
-    lead = &#34;&#34;,
-    badge = &#34;&#34;,
-    level = 2,
+    lead = <span class="s2">&#34;&#34;</span>,
+    badge = <span class="s2">&#34;&#34;</span>,
+    level = <span class="mi">2</span>,
     features,
     stats,
     actions,
-    layout = &#34;grid&#34;,
-    mediaSide = &#34;end&#34;,
-    tone = &#34;default&#34;,
+    layout = <span class="s2">&#34;grid&#34;</span>,
+    mediaSide = <span class="s2">&#34;end&#34;</span>,
+    tone = <span class="s2">&#34;default&#34;</span>,
   }: FeatureSplitProps = $props();
-&lt;/script&gt;
+&lt;/<span class="nt">script</span>&gt;
 
-&lt;SectionFrame
-  id={id}
-  title={title}
-  lead={lead}
-  heading={{ badge, level }}
-  tone={tone}
-  layout=&#34;split&#34;
-  media={{ show: true, side: mediaSide }}
-&gt;
-  {#if ((layout as string) === &#34;grid&#34;)}
-    &lt;FeaturePairs features={features} /&gt;
-  {/if}
-  {#if ((layout as string) === &#34;cards&#34;)}
-    &lt;FeatureCards features={features} cols=&#34;1-2&#34; item=&#34;tile&#34; /&gt;
-  {/if}
-  {#if ((layout as string) === &#34;stats&#34;)}
-    &lt;FeatureStatRows features={features} stats={stats} /&gt;
-  {/if}
-  {#if ((layout as string) === &#34;metrics&#34;)}
-    &lt;FeatureMetricCards stats={stats} /&gt;
-  {/if}
-  {#if (((layout as string) === &#34;cards&#34;) || ((layout as string) === &#34;metrics&#34;))}
-    &lt;ActionGroup
-      primary={actions.cta}
-      primaryHref={actions.href}
-      secondary={((actions.mode === &#34;two&#34;) ? actions.secondary : undefined)}
-      secondaryHref={actions.secondaryHref}
-      align=&#34;start&#34;
+&lt;<span class="nt">SectionFrame</span>
+  <span class="na">id</span>={id}
+  <span class="s">title=</span>{title}
+  <span class="na">lead</span>={lead}
+  <span class="s">heading=</span>{{ badge, level }}
+  <span class="na">tone</span>={tone}
+  <span class="s">layout=&#34;split&#34;</span>
+  <span class="na">media</span>={{ show: <span class="kt">true</span>, side: <span class="kt">mediaSide</span> }}
+<span class="err">&gt;</span>
+  {<span class="k">#if</span> ((layout <span class="kr">as</span> <span class="kt">string</span>) === <span class="s2">&#34;grid&#34;</span>)}
+    &lt;<span class="nt">FeaturePairs</span> <span class="na">features</span>={features} <span class="s">/</span>&gt;
+  {<span class="k">/if</span>}
+  {<span class="k">#if</span> ((layout <span class="kr">as</span> <span class="kt">string</span>) === <span class="s2">&#34;cards&#34;</span>)}
+    &lt;<span class="nt">FeatureCards</span> <span class="na">features</span>={features} <span class="s">cols=&#34;1-2&#34;</span> <span class="na">item</span>=<span class="s">&#34;tile&#34;</span> /&gt;
+  {<span class="k">/if</span>}
+  {<span class="k">#if</span> ((layout <span class="kr">as</span> <span class="kt">string</span>) === <span class="s2">&#34;stats&#34;</span>)}
+    &lt;<span class="nt">FeatureStatRows</span> <span class="na">features</span>={features} <span class="s">stats=</span>{stats} /&gt;
+  {<span class="k">/if</span>}
+  {<span class="k">#if</span> ((layout <span class="kr">as</span> <span class="kt">string</span>) === <span class="s2">&#34;metrics&#34;</span>)}
+    &lt;<span class="nt">FeatureMetricCards</span> <span class="na">stats</span>={stats} <span class="s">/</span>&gt;
+  {<span class="k">/if</span>}
+  {<span class="k">#if</span> (((layout <span class="kr">as</span> <span class="kt">string</span>) === <span class="s2">&#34;cards&#34;</span>) || ((layout <span class="kr">as</span> <span class="kt">string</span>) === <span class="s2">&#34;metrics&#34;</span>))}
+    &lt;<span class="nt">ActionGroup</span>
+      <span class="na">primary</span>={actions.cta}
+      <span class="s">primaryHref=</span>{actions.href}
+      <span class="na">secondary</span>={((actions.mode === <span class="s2">&#34;two&#34;</span>) ? actions.secondary : <span class="kt">undefined</span>)}
+      <span class="s">secondaryHref=</span>{actions.secondaryHref}
+      <span class="na">align</span>=<span class="s">&#34;start&#34;</span>
     /&gt;
-  {/if}
-  {#snippet aside()}
-    &lt;MediaFrame alt={title} ratio={(((layout as string) === &#34;stats&#34;) ? &#34;1/1&#34; : &#34;4/3&#34;)} /&gt;
-  {/snippet}
-&lt;/SectionFrame&gt;
-</code></pre></div><p class="text-sm"><a class="underline" href="https://registry.buildy.tw/svelte/blocks/feature-split.json">Svelte registry item (JSON)</a></p></section><section id="panel-react" data-panel data-runtime="react" data-label="React" aria-label="React" class="mb-8"><h3 class="mb-2 text-lg font-semibold">React</h3><p class="mb-2 text-sm text-muted-foreground">Point the CLI at this runtime once, then add the item:</p><div class="mb-2"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-react-init" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit init --yes --framework react --dir src --registry-url https://registry.buildy.tw/react --strict-cdn</code><button type="button" hidden data-copy="panel-react-init" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-react-add" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit add feature-split</code><button type="button" hidden data-copy="panel-react-add" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">blocks/feature-split.tsx</span><button type="button" hidden data-copy="code-react-0" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-react-0" class="font-mono">// Code generated by xgen. DO NOT EDIT.
-// Source: xgen/screens/src/authoring/blocks/feature-split.ts
-/**
- * Features beside a picture. Axes: layout (grid: four plain features in two columns, cards: four features as
- * cards and the actions, stats: two figure cards over three checked rows beside a square picture, metrics: four
- * metric cards and the actions), mediaSide, tone.
- */
-import { type ReactNode } from &#34;react&#34;;
-import { ActionGroup } from &#34;../components/action-group&#34;;
-import { FeatureCards } from &#34;../components/feature-cards&#34;;
-import { FeatureMetricCards } from &#34;../components/feature-metric-cards&#34;;
-import { FeaturePairs } from &#34;../components/feature-pairs&#34;;
-import { FeatureStatRows } from &#34;../components/feature-stat-rows&#34;;
-import { MediaFrame } from &#34;../components/media-frame&#34;;
-import { SectionFrame } from &#34;../components/section-frame&#34;;
-import type { Feature } from &#34;./feature-grid.types&#34;;
-import type { Stat } from &#34;./stats-band.types&#34;;
-import type { LinkActions } from &#34;./error-page.types&#34;;
+  {<span class="k">/if</span>}
+  {<span class="err">#</span>snippet aside()}
+    &lt;<span class="nt">MediaFrame</span> <span class="na">alt</span>={title} <span class="s">ratio=</span>{(((layout <span class="kr">as</span> <span class="kt">string</span>) === <span class="s2">&#34;stats&#34;</span>) ? <span class="s2">&#34;1/1&#34;</span> : <span class="s2">&#34;4/3&#34;</span>)} /&gt;
+  {<span class="err">/snippet</span>}
+&lt;/<span class="nt">SectionFrame</span>&gt;
+</code></pre></div><p class="text-sm"><a class="underline" href="https://registry.buildy.tw/svelte/blocks/feature-split.json">Svelte registry item (JSON)</a></p></section><section id="panel-react" class="rt-panel" data-runtime="react" aria-label="React code"><p class="mb-2 text-sm text-muted-foreground">Point the CLI at this runtime once, then add the item:</p><div class="mb-2"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-react-init" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit init --yes --framework react --dir src --registry-url https://registry.buildy.tw/react --strict-cdn</code><button type="button" hidden data-copy="panel-react-init" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-react-add" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit add feature-split</code><button type="button" hidden data-copy="panel-react-add" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">blocks/feature-split.tsx</span><button type="button" hidden data-copy="code-react-0" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="hl max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-react-0" class="font-mono"><span class="c1">// Code generated by xgen. DO NOT EDIT.
+</span><span class="c1">// Source: xgen/screens/src/authoring/blocks/feature-split.ts
+</span><span class="cm">/**
+</span><span class="cm"> * Features beside a picture. Axes: layout (grid: four plain features in two columns, cards: four features as
+</span><span class="cm"> * cards and the actions, stats: two figure cards over three checked rows beside a square picture, metrics: four
+</span><span class="cm"> * metric cards and the actions), mediaSide, tone.
+</span><span class="cm"> */</span>
+<span class="kr">import</span> { <span class="kr">type</span> ReactNode } <span class="kr">from</span> <span class="s2">&#34;react&#34;</span>;
+<span class="kr">import</span> { ActionGroup } <span class="kr">from</span> <span class="s2">&#34;../components/action-group&#34;</span>;
+<span class="kr">import</span> { FeatureCards } <span class="kr">from</span> <span class="s2">&#34;../components/feature-cards&#34;</span>;
+<span class="kr">import</span> { FeatureMetricCards } <span class="kr">from</span> <span class="s2">&#34;../components/feature-metric-cards&#34;</span>;
+<span class="kr">import</span> { FeaturePairs } <span class="kr">from</span> <span class="s2">&#34;../components/feature-pairs&#34;</span>;
+<span class="kr">import</span> { FeatureStatRows } <span class="kr">from</span> <span class="s2">&#34;../components/feature-stat-rows&#34;</span>;
+<span class="kr">import</span> { MediaFrame } <span class="kr">from</span> <span class="s2">&#34;../components/media-frame&#34;</span>;
+<span class="kr">import</span> { SectionFrame } <span class="kr">from</span> <span class="s2">&#34;../components/section-frame&#34;</span>;
+<span class="kr">import</span> <span class="kr">type</span> { Feature } <span class="kr">from</span> <span class="s2">&#34;./feature-grid.types&#34;</span>;
+<span class="kr">import</span> <span class="kr">type</span> { Stat } <span class="kr">from</span> <span class="s2">&#34;./stats-band.types&#34;</span>;
+<span class="kr">import</span> <span class="kr">type</span> { LinkActions } <span class="kr">from</span> <span class="s2">&#34;./error-page.types&#34;</span>;
 
-export type FeatureSplitProps = {
-  id: string;
-  title: string;
-  lead?: string;
-  badge?: string;
-  level?: 1 | 2;
-  features: Feature[];
-  stats: Stat[];
-  actions: LinkActions;
-  layout?: &#34;grid&#34; | &#34;cards&#34; | &#34;stats&#34; | &#34;metrics&#34;;
-  mediaSide?: &#34;end&#34; | &#34;start&#34;;
-  tone?: &#34;default&#34; | &#34;muted&#34;;
+<span class="kr">export</span> <span class="kr">type</span> FeatureSplitProps = {
+  id: <span class="kt">string</span>;
+  title: <span class="kt">string</span>;
+  lead?: <span class="kt">string</span>;
+  badge?: <span class="kt">string</span>;
+  level?: <span class="kt">1</span> | <span class="mi">2</span>;
+  features: <span class="kt">Feature</span>[];
+  stats: <span class="kt">Stat</span>[];
+  actions: <span class="kt">LinkActions</span>;
+  layout?: <span class="s2">&#34;grid&#34;</span> | <span class="s2">&#34;cards&#34;</span> | <span class="s2">&#34;stats&#34;</span> | <span class="s2">&#34;metrics&#34;</span>;
+  mediaSide?: <span class="s2">&#34;end&#34;</span> | <span class="s2">&#34;start&#34;</span>;
+  tone?: <span class="s2">&#34;default&#34;</span> | <span class="s2">&#34;muted&#34;</span>;
 };
 
-export function FeatureSplit({
+<span class="kr">export</span> <span class="kd">function</span> FeatureSplit({
   id,
   title,
-  lead = &#34;&#34;,
-  badge = &#34;&#34;,
-  level = 2,
+  lead = <span class="s2">&#34;&#34;</span>,
+  badge = <span class="s2">&#34;&#34;</span>,
+  level = <span class="mi">2</span>,
   features,
   stats,
   actions,
-  layout = &#34;grid&#34;,
-  mediaSide = &#34;end&#34;,
-  tone = &#34;default&#34;,
+  layout = <span class="s2">&#34;grid&#34;</span>,
+  mediaSide = <span class="s2">&#34;end&#34;</span>,
+  tone = <span class="s2">&#34;default&#34;</span>,
 }: FeatureSplitProps) {
-  return (
-    &lt;SectionFrame
-      id={id}
-      title={title}
-      lead={lead}
-      heading={{ badge, level }}
-      tone={tone}
-      layout=&#34;split&#34;
-      media={{ show: true, side: mediaSide }}
-      aside={(
-        &lt;MediaFrame alt={title} ratio={(((layout as string) === &#34;stats&#34;) ? &#34;1/1&#34; : &#34;4/3&#34;)} /&gt;
+  <span class="k">return</span> (
+    &lt;<span class="nt">SectionFrame</span>
+      <span class="na">id</span>={id}
+      <span class="na">title</span>={title}
+      <span class="na">lead</span>={lead}
+      <span class="na">heading</span>={{ badge, level }}
+      <span class="na">tone</span>={tone}
+      <span class="na">layout</span>=<span class="s">&#34;split&#34;</span>
+      <span class="na">media</span>={{ show: <span class="kt">true</span>, side: <span class="kt">mediaSide</span> }}
+      <span class="na">aside</span>={(
+        &lt;<span class="nt">MediaFrame</span> <span class="na">alt</span>={title} <span class="na">ratio</span>={(((layout <span class="kr">as</span> <span class="kt">string</span>) === <span class="s2">&#34;stats&#34;</span>) ? <span class="s2">&#34;1/1&#34;</span> : <span class="s2">&#34;4/3&#34;</span>)} /&gt;
       )}
     &gt;
-      {((layout as string) === &#34;grid&#34;) ? (
-        &lt;FeaturePairs features={features} /&gt;
-      ) : null}
-      {((layout as string) === &#34;cards&#34;) ? (
-        &lt;FeatureCards features={features} cols=&#34;1-2&#34; item=&#34;tile&#34; /&gt;
-      ) : null}
-      {((layout as string) === &#34;stats&#34;) ? (
-        &lt;FeatureStatRows features={features} stats={stats} /&gt;
-      ) : null}
-      {((layout as string) === &#34;metrics&#34;) ? (
-        &lt;FeatureMetricCards stats={stats} /&gt;
-      ) : null}
-      {(((layout as string) === &#34;cards&#34;) || ((layout as string) === &#34;metrics&#34;)) ? (
-        &lt;ActionGroup
-          primary={actions.cta}
-          primaryHref={actions.href}
-          secondary={((actions.mode === &#34;two&#34;) ? actions.secondary : undefined)}
-          secondaryHref={actions.secondaryHref}
-          align=&#34;start&#34;
+      {((layout <span class="kr">as</span> <span class="kt">string</span>) === <span class="s2">&#34;grid&#34;</span>) ? (
+        &lt;<span class="nt">FeaturePairs</span> <span class="na">features</span>={features} /&gt;
+      ) : <span class="kc">null</span>}
+      {((layout <span class="kr">as</span> <span class="kt">string</span>) === <span class="s2">&#34;cards&#34;</span>) ? (
+        &lt;<span class="nt">FeatureCards</span> <span class="na">features</span>={features} <span class="na">cols</span>=<span class="s">&#34;1-2&#34;</span> <span class="na">item</span>=<span class="s">&#34;tile&#34;</span> /&gt;
+      ) : <span class="kc">null</span>}
+      {((layout <span class="kr">as</span> <span class="kt">string</span>) === <span class="s2">&#34;stats&#34;</span>) ? (
+        &lt;<span class="nt">FeatureStatRows</span> <span class="na">features</span>={features} <span class="na">stats</span>={stats} /&gt;
+      ) : <span class="kc">null</span>}
+      {((layout <span class="kr">as</span> <span class="kt">string</span>) === <span class="s2">&#34;metrics&#34;</span>) ? (
+        &lt;<span class="nt">FeatureMetricCards</span> <span class="na">stats</span>={stats} /&gt;
+      ) : <span class="kc">null</span>}
+      {(((layout <span class="kr">as</span> <span class="kt">string</span>) === <span class="s2">&#34;cards&#34;</span>) || ((layout <span class="kr">as</span> <span class="kt">string</span>) === <span class="s2">&#34;metrics&#34;</span>)) ? (
+        &lt;<span class="nt">ActionGroup</span>
+          <span class="na">primary</span>={actions.cta}
+          <span class="na">primaryHref</span>={actions.href}
+          <span class="na">secondary</span>={((actions.mode === <span class="s2">&#34;two&#34;</span>) ? actions.secondary : <span class="kt">undefined</span>)}
+          <span class="na">secondaryHref</span>={actions.secondaryHref}
+          <span class="na">align</span>=<span class="s">&#34;start&#34;</span>
         /&gt;
-      ) : null}
-    &lt;/SectionFrame&gt;
+      ) : <span class="kc">null</span>}
+    &lt;/<span class="nt">SectionFrame</span>&gt;
   );
 }
-</code></pre></div><p class="text-sm"><a class="underline" href="https://registry.buildy.tw/react/blocks/feature-split.json">React registry item (JSON)</a></p></section><section id="panel-vue" data-panel data-runtime="vue" data-label="Vue" aria-label="Vue" class="mb-8"><h3 class="mb-2 text-lg font-semibold">Vue</h3><p class="mb-2 text-sm text-muted-foreground">Point the CLI at this runtime once, then add the item:</p><div class="mb-2"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-vue-init" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit init --yes --framework vue --dir src --registry-url https://registry.buildy.tw/vue --strict-cdn</code><button type="button" hidden data-copy="panel-vue-init" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-vue-add" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit add feature-split</code><button type="button" hidden data-copy="panel-vue-add" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">blocks/feature-split.vue</span><button type="button" hidden data-copy="code-vue-0" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-vue-0" class="font-mono">&lt;!-- Code generated by xgen. DO NOT EDIT. --&gt;
-&lt;!-- Source: xgen/screens/src/authoring/blocks/feature-split.ts --&gt;
-&lt;!--
-  Features beside a picture. Axes: layout (grid: four plain features in two columns, cards: four features as
+</code></pre></div><p class="text-sm"><a class="underline" href="https://registry.buildy.tw/react/blocks/feature-split.json">React registry item (JSON)</a></p></section><section id="panel-vue" class="rt-panel" data-runtime="vue" aria-label="Vue code"><p class="mb-2 text-sm text-muted-foreground">Point the CLI at this runtime once, then add the item:</p><div class="mb-2"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-vue-init" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit init --yes --framework vue --dir src --registry-url https://registry.buildy.tw/vue --strict-cdn</code><button type="button" hidden data-copy="panel-vue-init" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-vue-add" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit add feature-split</code><button type="button" hidden data-copy="panel-vue-add" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">blocks/feature-split.vue</span><button type="button" hidden data-copy="code-vue-0" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="hl max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-vue-0" class="font-mono"><span class="c">&lt;!--</span> Code generated by xgen. DO NOT EDIT. --&gt;
+<span class="c">&lt;!--</span> Source: xgen/screens/src/authoring/blocks/feature-split.ts --&gt;
+<span class="c">&lt;!--</span>
+  Features beside a picture. Axes: layout (grid: four plain features <span class="k">in</span> two columns, cards: four features as
   cards and the actions, stats: two figure cards over three checked rows beside a square picture, metrics: four
   metric cards and the actions), mediaSide, tone.
 --&gt;
-&lt;script lang=&#34;ts&#34;&gt;
-import type { Feature } from &#34;./feature-grid.types&#34;;
-import type { Stat } from &#34;./stats-band.types&#34;;
-import type { LinkActions } from &#34;./error-page.types&#34;;
+&lt;<span class="nt">script</span> <span class="na">lang</span>=<span class="s">&#34;ts&#34;</span>&gt;
+<span class="kr">import</span> type { Feature } from <span class="s2">&#34;./feature-grid.types&#34;</span>;
+<span class="kr">import</span> type { Stat } from <span class="s2">&#34;./stats-band.types&#34;</span>;
+<span class="kr">import</span> type { LinkActions } from <span class="s2">&#34;./error-page.types&#34;</span>;
 
-export type FeatureSplitProps = {
+<span class="kr">export</span> type FeatureSplitProps = {
   id: string;
   title: string;
   lead?: string;
   badge?: string;
-  level?: 1 | 2;
+  level?: <span class="mi">1</span> | <span class="mi">2</span>;
   features: Feature[];
   stats: Stat[];
   actions: LinkActions;
-  layout?: &#34;grid&#34; | &#34;cards&#34; | &#34;stats&#34; | &#34;metrics&#34;;
-  mediaSide?: &#34;end&#34; | &#34;start&#34;;
-  tone?: &#34;default&#34; | &#34;muted&#34;;
+  layout?: <span class="s2">&#34;grid&#34;</span> | <span class="s2">&#34;cards&#34;</span> | <span class="s2">&#34;stats&#34;</span> | <span class="s2">&#34;metrics&#34;</span>;
+  mediaSide?: <span class="s2">&#34;end&#34;</span> | <span class="s2">&#34;start&#34;</span>;
+  tone?: <span class="s2">&#34;default&#34;</span> | <span class="s2">&#34;muted&#34;</span>;
 };
-&lt;/script&gt;
+&lt;/<span class="nt">script</span>&gt;
 
-&lt;script setup lang=&#34;ts&#34;&gt;
-import ActionGroup from &#34;../components/action-group.vue&#34;;
-import FeatureCards from &#34;../components/feature-cards.vue&#34;;
-import FeatureMetricCards from &#34;../components/feature-metric-cards.vue&#34;;
-import FeaturePairs from &#34;../components/feature-pairs.vue&#34;;
-import FeatureStatRows from &#34;../components/feature-stat-rows.vue&#34;;
-import MediaFrame from &#34;../components/media-frame.vue&#34;;
-import SectionFrame from &#34;../components/section-frame.vue&#34;;
+&lt;<span class="nt">script</span> <span class="na">setup</span> <span class="na">lang</span>=<span class="s">&#34;ts&#34;</span>&gt;
+<span class="kr">import</span> ActionGroup from <span class="s2">&#34;../components/action-group.vue&#34;</span>;
+<span class="kr">import</span> FeatureCards from <span class="s2">&#34;../components/feature-cards.vue&#34;</span>;
+<span class="kr">import</span> FeatureMetricCards from <span class="s2">&#34;../components/feature-metric-cards.vue&#34;</span>;
+<span class="kr">import</span> FeaturePairs from <span class="s2">&#34;../components/feature-pairs.vue&#34;</span>;
+<span class="kr">import</span> FeatureStatRows from <span class="s2">&#34;../components/feature-stat-rows.vue&#34;</span>;
+<span class="kr">import</span> MediaFrame from <span class="s2">&#34;../components/media-frame.vue&#34;</span>;
+<span class="kr">import</span> SectionFrame from <span class="s2">&#34;../components/section-frame.vue&#34;</span>;
 
-const {
+<span class="kr">const</span> {
   id,
   title,
-  lead = &#34;&#34;,
-  badge = &#34;&#34;,
-  level = 2,
+  lead = <span class="s2">&#34;&#34;</span>,
+  badge = <span class="s2">&#34;&#34;</span>,
+  level = <span class="mi">2</span>,
   features,
   stats,
   actions,
-  layout = &#34;grid&#34;,
-  mediaSide = &#34;end&#34;,
-  tone = &#34;default&#34;,
-} = defineProps&lt;FeatureSplitProps&gt;();
-&lt;/script&gt;
+  layout = <span class="s2">&#34;grid&#34;</span>,
+  mediaSide = <span class="s2">&#34;end&#34;</span>,
+  tone = <span class="s2">&#34;default&#34;</span>,
+} = defineProps&lt;<span class="nt">FeatureSplitProps</span>&gt;();
+&lt;/<span class="nt">script</span>&gt;
 
-&lt;template&gt;
-  &lt;SectionFrame
-    :id=&#34;id&#34;
-    :title=&#34;title&#34;
-    :lead=&#34;lead&#34;
-    :heading=&#34;{ badge, level }&#34;
-    :tone=&#34;tone&#34;
-    layout=&#34;split&#34;
-    :media=&#34;{ show: true, side: mediaSide }&#34;
+&lt;<span class="nt">template</span>&gt;
+  &lt;<span class="nt">SectionFrame</span>
+    <span class="nt">:id</span>=<span class="s">&#34;id&#34;</span>
+    <span class="nt">:title</span>=<span class="s">&#34;title&#34;</span>
+    <span class="nt">:lead</span>=<span class="s">&#34;lead&#34;</span>
+    :<span class="na">heading</span>=<span class="s">&#34;{ badge, level }&#34;</span>
+    <span class="nt">:tone</span>=<span class="s">&#34;tone&#34;</span>
+    <span class="na">layout</span>=<span class="s">&#34;split&#34;</span>
+    :<span class="na">media</span>=<span class="s">&#34;{ show: true, side: mediaSide }&#34;</span>
   &gt;
-    &lt;FeaturePairs v-if=&#34;((layout as string) === &#39;grid&#39;)&#34; :features=&#34;features&#34; /&gt;
-    &lt;FeatureCards v-if=&#34;((layout as string) === &#39;cards&#39;)&#34; :features=&#34;features&#34; cols=&#34;1-2&#34; item=&#34;tile&#34; /&gt;
-    &lt;FeatureStatRows v-if=&#34;((layout as string) === &#39;stats&#39;)&#34; :features=&#34;features&#34; :stats=&#34;stats&#34; /&gt;
-    &lt;FeatureMetricCards v-if=&#34;((layout as string) === &#39;metrics&#39;)&#34; :stats=&#34;stats&#34; /&gt;
-    &lt;ActionGroup v-if=&#34;(((layout as string) === &#39;cards&#39;) || ((layout as string) === &#39;metrics&#39;))&#34;
-      :primary=&#34;actions.cta&#34;
-      :primaryHref=&#34;actions.href&#34;
-      :secondary=&#34;((actions.mode === &#39;two&#39;) ? actions.secondary : undefined)&#34;
-      :secondaryHref=&#34;actions.secondaryHref&#34;
-      align=&#34;start&#34;
+    &lt;<span class="nt">FeaturePairs</span> <span class="nt">v-if</span>=<span class="s">&#34;((layout as string) === &#39;grid&#39;)&#34; :features=&#34;features&#34;</span> /&gt;
+    &lt;<span class="nt">FeatureCards</span> <span class="nt">v-if</span>=<span class="s">&#34;((layout as string) === &#39;cards&#39;)&#34; :features=&#34;features&#34; cols=&#34;1-2&#34; item=&#34;tile&#34;</span> /&gt;
+    &lt;<span class="nt">FeatureStatRows</span> <span class="nt">v-if</span>=<span class="s">&#34;((layout as string) === &#39;stats&#39;)&#34; :features=&#34;features&#34; :stats=&#34;stats&#34;</span> /&gt;
+    &lt;<span class="nt">FeatureMetricCards</span> <span class="nt">v-if</span>=<span class="s">&#34;((layout as string) === &#39;metrics&#39;)&#34; :stats=&#34;stats&#34;</span> /&gt;
+    &lt;<span class="nt">ActionGroup</span> <span class="nt">v-if</span>=<span class="s">&#34;(((layout as string) === &#39;cards&#39;) || ((layout as string) === &#39;metrics&#39;))&#34;</span>
+      <span class="nt">:primary</span>=<span class="s">&#34;actions.cta&#34;</span>
+      <span class="nt">:primaryHref</span>=<span class="s">&#34;actions.href&#34;</span>
+      :<span class="na">secondary</span>=<span class="s">&#34;((actions.mode === &#39;two&#39;) ? actions.secondary : undefined)&#34;</span>
+      <span class="nt">:secondaryHref</span>=<span class="s">&#34;actions.secondaryHref&#34;</span>
+      <span class="na">align</span>=<span class="s">&#34;start&#34;</span>
     /&gt;
-    &lt;template #aside&gt;
-      &lt;MediaFrame :alt=&#34;title&#34; :ratio=&#34;(((layout as string) === &#39;stats&#39;) ? &#39;1/1&#39; : &#39;4/3&#39;)&#34; /&gt;
-    &lt;/template&gt;
-  &lt;/SectionFrame&gt;
-&lt;/template&gt;
-</code></pre></div><p class="text-sm"><a class="underline" href="https://registry.buildy.tw/vue/blocks/feature-split.json">Vue registry item (JSON)</a></p></section></div></article></main></div><footer class="border-t border-border"><div class="mx-auto max-w-6xl px-4 py-8 text-sm text-muted-foreground">ui8kit, MIT licence. Static docs generated from markdown and the registry (<a class="underline" href="https://registry.buildy.tw/registry.json">registry.json</a>).</div></footer></body></html>
+    &lt;<span class="nt">template</span> <span class="err">#</span><span class="na">aside</span>&gt;
+      &lt;<span class="nt">MediaFrame</span> <span class="nt">:alt</span>=<span class="s">&#34;title&#34;</span> :<span class="na">ratio</span>=<span class="s">&#34;(((layout as string) === &#39;stats&#39;) ? &#39;1/1&#39; : &#39;4/3&#39;)&#34;</span> /&gt;
+    &lt;/<span class="nt">template</span>&gt;
+  &lt;/<span class="nt">SectionFrame</span>&gt;
+&lt;/<span class="nt">template</span>&gt;
+</code></pre></div><p class="text-sm"><a class="underline" href="https://registry.buildy.tw/vue/blocks/feature-split.json">Vue registry item (JSON)</a></p></section></div><h2 class="mb-2 text-xl font-semibold">Props</h2><p class="mb-4 max-w-3xl text-sm text-muted-foreground">Names and types come from the xgen specs of the source. Standard HTML attributes (id, role, tabIndex, aria-*) pass through to the root element; the class prop is className in React.</p><div class="mb-8"><p class="mb-2 max-w-3xl whitespace-pre-line text-sm text-muted-foreground">Features beside a picture. Axes: layout (grid: four plain features in two columns, cards: four features as cards and the actions, stats: two figure cards over three checked rows beside a square picture, metrics: four metric cards and the actions), mediaSide, tone.</p><div class="overflow-x-auto" tabindex="0" role="region" aria-label="Props of FeatureSplit"><table class="w-full min-w-[40rem] text-left text-sm"><caption class="sr-only">Props of FeatureSplit</caption> <thead><tr class="border-b border-border"><th scope="col" class="py-2 pr-4 font-medium">Prop</th><th scope="col" class="py-2 pr-4 font-medium">Type</th><th scope="col" class="py-2 pr-4 font-medium">Default</th><th scope="col" class="py-2 font-medium">Description</th></tr></thead> <tbody><tr class="border-b border-border align-top"><th scope="row" class="py-2 pr-4 font-mono text-xs font-medium">id <span class="font-sans text-muted-foreground">(required)</span></th><td class="py-2 pr-4 font-mono text-xs">string</td><td class="py-2 pr-4 font-mono text-xs"><span class="text-muted-foreground">-</span></td><td class="py-2 text-muted-foreground"></td></tr><tr class="border-b border-border align-top"><th scope="row" class="py-2 pr-4 font-mono text-xs font-medium">title <span class="font-sans text-muted-foreground">(required)</span></th><td class="py-2 pr-4 font-mono text-xs">string</td><td class="py-2 pr-4 font-mono text-xs"><span class="text-muted-foreground">-</span></td><td class="py-2 text-muted-foreground"></td></tr><tr class="border-b border-border align-top"><th scope="row" class="py-2 pr-4 font-mono text-xs font-medium">lead </th><td class="py-2 pr-4 font-mono text-xs">string</td><td class="py-2 pr-4 font-mono text-xs">&#34;&#34;</td><td class="py-2 text-muted-foreground"></td></tr><tr class="border-b border-border align-top"><th scope="row" class="py-2 pr-4 font-mono text-xs font-medium">badge </th><td class="py-2 pr-4 font-mono text-xs">string</td><td class="py-2 pr-4 font-mono text-xs">&#34;&#34;</td><td class="py-2 text-muted-foreground">a short pill above the heading</td></tr><tr class="border-b border-border align-top"><th scope="row" class="py-2 pr-4 font-mono text-xs font-medium">level </th><td class="py-2 pr-4 font-mono text-xs">1 | 2</td><td class="py-2 pr-4 font-mono text-xs">2</td><td class="py-2 text-muted-foreground"></td></tr><tr class="border-b border-border align-top"><th scope="row" class="py-2 pr-4 font-mono text-xs font-medium">features <span class="font-sans text-muted-foreground">(required)</span></th><td class="py-2 pr-4 font-mono text-xs">Feature[]</td><td class="py-2 pr-4 font-mono text-xs"><span class="text-muted-foreground">-</span></td><td class="py-2 text-muted-foreground"></td></tr><tr class="border-b border-border align-top"><th scope="row" class="py-2 pr-4 font-mono text-xs font-medium">stats <span class="font-sans text-muted-foreground">(required)</span></th><td class="py-2 pr-4 font-mono text-xs">Stat[]</td><td class="py-2 pr-4 font-mono text-xs"><span class="text-muted-foreground">-</span></td><td class="py-2 text-muted-foreground"></td></tr><tr class="border-b border-border align-top"><th scope="row" class="py-2 pr-4 font-mono text-xs font-medium">actions <span class="font-sans text-muted-foreground">(required)</span></th><td class="py-2 pr-4 font-mono text-xs">LinkActions</td><td class="py-2 pr-4 font-mono text-xs"><span class="text-muted-foreground">-</span></td><td class="py-2 text-muted-foreground">shown in the cards and metrics layouts</td></tr><tr class="border-b border-border align-top"><th scope="row" class="py-2 pr-4 font-mono text-xs font-medium">layout </th><td class="py-2 pr-4 font-mono text-xs">&#34;grid&#34; | &#34;cards&#34; | &#34;stats&#34; | &#34;metrics&#34;</td><td class="py-2 pr-4 font-mono text-xs">&#34;grid&#34;</td><td class="py-2 text-muted-foreground"></td></tr><tr class="border-b border-border align-top"><th scope="row" class="py-2 pr-4 font-mono text-xs font-medium">mediaSide </th><td class="py-2 pr-4 font-mono text-xs">&#34;end&#34; | &#34;start&#34;</td><td class="py-2 pr-4 font-mono text-xs">&#34;end&#34;</td><td class="py-2 text-muted-foreground"></td></tr><tr class="border-b border-border align-top"><th scope="row" class="py-2 pr-4 font-mono text-xs font-medium">tone </th><td class="py-2 pr-4 font-mono text-xs">&#34;default&#34; | &#34;muted&#34;</td><td class="py-2 pr-4 font-mono text-xs">&#34;default&#34;</td><td class="py-2 text-muted-foreground"></td></tr></tbody></table></div></div></article></main></div><footer class="border-t border-border"><div class="mx-auto max-w-6xl px-4 py-8 text-sm text-muted-foreground">ui8kit, MIT licence. Static docs generated from markdown and the registry (<a class="underline" href="https://registry.buildy.tw/registry.json">registry.json</a>).</div></footer></body></html>

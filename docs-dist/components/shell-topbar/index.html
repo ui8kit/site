@@ -1,283 +1,284 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Shell Topbar (component) | ui8kit</title><meta name="description" content="Shell Topbar component"><link rel="canonical" href="https://ui.buildy.tw/components/shell-topbar/"><link rel="stylesheet" href="/assets/site.css"><script src="/assets/app.js" defer></script></head><body class="min-h-screen bg-background text-foreground font-sans"><a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:left-2 focus:top-2 focus:bg-background focus:px-4 focus:py-2 focus:z-50">Skip to content</a><header class="border-b border-border"><div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-4 py-4"><a href="/" class="text-lg font-semibold">ui8kit</a><nav aria-label="Main" class="flex items-center gap-4 text-sm"><a href="/docs/" class="hover:underline">Docs</a> <a href="/docs/categories/blocks-marketing/" class="hover:underline">Blocks</a> <a href="/docs/categories/primitives/" class="hover:underline">Primitives</a> <a href="/docs/cli/" class="hover:underline">CLI</a></nav><form id="search" role="search" class="relative w-full sm:w-72" data-index="/search-index.json"><label for="search-input" class="sr-only">Search components and blocks</label> <input id="search-input" type="search" autocomplete="off" placeholder="Search, press /" class="h-10 w-full rounded border border-input bg-card px-4 text-sm"><ul id="search-results" hidden class="absolute left-0 right-0 top-12 z-40 rounded border border-border bg-popover text-popover-foreground shadow-md" aria-live="polite"></ul></form></div></header><div class="mx-auto flex max-w-6xl flex-col gap-8 px-4 py-8 md:flex-row"><nav aria-label="Docs" class="md:w-64 md:shrink-0"><h2 class="mb-2 text-sm font-semibold">Guides</h2><ul class="mb-6 flex flex-col gap-1"><li><a href="/docs/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Overview</a></li><li><a href="/docs/getting-started/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Getting started</a></li><li><a href="/docs/installation/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Installation</a></li><li><a href="/docs/cli/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">CLI</a></li><li><a href="/docs/theming-skins/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Theming and skins</a></li><li><a href="/docs/grid-8px/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">The 8px grid</a></li></ul><h2 class="mb-2 text-sm font-semibold">Categories</h2><ul class="mb-6 flex flex-col gap-1"><li><a href="/docs/categories/primitives/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Primitives</a></li><li><a href="/docs/categories/components/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Components</a></li><li><a href="/docs/categories/blocks-marketing/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: marketing</a></li><li><a href="/docs/categories/blocks-commerce/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: commerce</a></li><li><a href="/docs/categories/blocks-dashboard/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: dashboard</a></li><li><a href="/docs/categories/blocks-content/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: content</a></li><li><a href="/docs/categories/blocks-account/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: account</a></li><li><a href="/docs/categories/blocks-promo/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: promo</a></li><li><a href="/docs/categories/blocks-support/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: support</a></li><li><a href="/docs/categories/blocks-onboarding/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: onboarding</a></li><li><a href="/docs/categories/blocks-general/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: general</a></li></ul></nav><main id="main" class="min-w-0 flex-1"><article><p class="text-sm text-muted-foreground"><a class="underline" href="/docs/categories/components/">component / components</a></p><h1 class="mb-2 text-3xl font-semibold tracking-tight">Shell Topbar</h1><p class="mb-6 max-w-3xl text-muted-foreground">Shell Topbar component</p><h2 class="mb-2 text-xl font-semibold">Install</h2><div class="mb-6 max-w-xl"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="install-shell-topbar" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit add shell-topbar</code><button type="button" hidden data-copy="install-shell-topbar" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><p class="mb-6 text-sm text-muted-foreground">Pulls in:  <a class="underline" href="/primitives/block/">block</a><span>, </span> <a class="underline" href="/primitives/box/">box</a><span>, </span> <a class="underline" href="/blocks/dashboard-shell/">dashboard-shell</a><span>, </span> <a class="underline" href="/primitives/group/">group</a><span>, </span> <a class="underline" href="/primitives/inline/">inline</a><span>, </span> <a class="underline" href="/primitives/link/">link</a><span>, </span> <a class="underline" href="/primitives/list/">list</a><span>, </span> <a class="underline" href="/primitives/lucide-icon/">lucide-icon</a><span>, </span> <a class="underline" href="/components/media-frame/">media-frame</a><span>, </span> <a class="underline" href="/components/search-palette/">search-palette</a><span>, </span> <a class="underline" href="/primitives/text/">text</a><span>, </span> <a class="underline" href="/lib/utils/">utils</a></p><h2 class="mb-2 text-xl font-semibold">Code</h2><div data-tabs><section id="panel-svelte" data-panel data-runtime="svelte" data-label="Svelte" aria-label="Svelte" class="mb-8"><h3 class="mb-2 text-lg font-semibold">Svelte</h3><p class="mb-2 text-sm text-muted-foreground">Point the CLI at this runtime once, then add the item:</p><div class="mb-2"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-svelte-init" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit init --yes --framework svelte --dir src --registry-url https://registry.buildy.tw/svelte --strict-cdn</code><button type="button" hidden data-copy="panel-svelte-init" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-svelte-add" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit add shell-topbar</code><button type="button" hidden data-copy="panel-svelte-add" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">components/shell-topbar.svelte</span><button type="button" hidden data-copy="code-svelte-0" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-svelte-0" class="font-mono">&lt;!-- Code generated by xgen. DO NOT EDIT. --&gt;
-&lt;!-- Source: xgen/screens/src/authoring/components/shell-parts.ts --&gt;
-&lt;!--
-  The top bar of DashboardShell: the brand (when no sidebar carries it), the links (when there is no sidebar),
-  an optional search field, and the signed-in person.
---&gt;
-&lt;script lang=&#34;ts&#34; module&gt;
-  import type { Snippet } from &#34;svelte&#34;;
-  import type { ShellNav } from &#34;../blocks/dashboard-shell.types&#34;;
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Shell Topbar (component) | ui8kit</title><meta name="description" content="Shell Topbar component"><link rel="canonical" href="https://ui.buildy.tw/components/shell-topbar/"><link rel="stylesheet" href="/assets/site.css"><script src="/assets/app.js" defer></script></head><body class="min-h-screen bg-background text-foreground font-sans"><a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:left-2 focus:top-2 focus:bg-background focus:px-4 focus:py-2 focus:z-50">Skip to content</a><header class="border-b border-border"><div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-4 py-4"><a href="/" class="text-lg font-semibold">ui8kit</a><nav aria-label="Main" class="flex items-center gap-4 text-sm"><a href="/docs/" class="hover:underline">Docs</a> <a href="/docs/categories/blocks-marketing/" class="hover:underline">Blocks</a> <a href="/docs/categories/primitives/" class="hover:underline">Primitives</a> <a href="/docs/cli/" class="hover:underline">CLI</a></nav><form id="search" role="search" class="relative w-full sm:w-72" data-index="/search-index.json"><label for="search-input" class="sr-only">Search components and blocks</label> <input id="search-input" type="search" autocomplete="off" placeholder="Search, press /" class="h-10 w-full rounded border border-input bg-card px-4 text-sm"><ul id="search-results" hidden class="absolute left-0 right-0 top-12 z-40 rounded border border-border bg-popover text-popover-foreground shadow-md" aria-live="polite"></ul></form></div></header><div class="mx-auto flex max-w-6xl flex-col gap-8 px-4 py-8 md:flex-row"><nav aria-label="Docs" class="md:w-64 md:shrink-0"><h2 class="mb-2 text-sm font-semibold">Guides</h2><ul class="mb-6 flex flex-col gap-1"><li><a href="/docs/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Overview</a></li><li><a href="/docs/getting-started/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Getting started</a></li><li><a href="/docs/installation/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Installation</a></li><li><a href="/docs/cli/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">CLI</a></li><li><a href="/docs/theming-skins/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Theming and skins</a></li><li><a href="/docs/grid-8px/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">The 8px grid</a></li></ul><h2 class="mb-2 text-sm font-semibold">Categories</h2><ul class="mb-6 flex flex-col gap-1"><li><a href="/docs/categories/primitives/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Primitives</a></li><li><a href="/docs/categories/components/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Components</a></li><li><a href="/docs/categories/blocks-marketing/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: marketing</a></li><li><a href="/docs/categories/blocks-commerce/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: commerce</a></li><li><a href="/docs/categories/blocks-dashboard/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: dashboard</a></li><li><a href="/docs/categories/blocks-content/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: content</a></li><li><a href="/docs/categories/blocks-account/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: account</a></li><li><a href="/docs/categories/blocks-promo/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: promo</a></li><li><a href="/docs/categories/blocks-support/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: support</a></li><li><a href="/docs/categories/blocks-onboarding/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: onboarding</a></li><li><a href="/docs/categories/blocks-general/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: general</a></li></ul></nav><main id="main" class="min-w-0 flex-1"><article><p class="text-sm text-muted-foreground"><a class="underline" href="/docs/categories/components/">component / components</a></p><h1 class="mb-2 text-3xl font-semibold tracking-tight">Shell Topbar</h1><p class="mb-6 max-w-3xl text-muted-foreground">Shell Topbar component</p><h2 class="mb-2 text-xl font-semibold">Install</h2><div class="mb-6 max-w-xl"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="install-shell-topbar" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit add shell-topbar</code><button type="button" hidden data-copy="install-shell-topbar" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><p class="mb-6 text-sm text-muted-foreground">Pulls in:  <a class="underline" href="/primitives/block/">block</a><span>, </span> <a class="underline" href="/primitives/box/">box</a><span>, </span> <a class="underline" href="/blocks/dashboard-shell/">dashboard-shell</a><span>, </span> <a class="underline" href="/primitives/group/">group</a><span>, </span> <a class="underline" href="/primitives/inline/">inline</a><span>, </span> <a class="underline" href="/primitives/link/">link</a><span>, </span> <a class="underline" href="/primitives/list/">list</a><span>, </span> <a class="underline" href="/primitives/lucide-icon/">lucide-icon</a><span>, </span> <a class="underline" href="/components/media-frame/">media-frame</a><span>, </span> <a class="underline" href="/components/search-palette/">search-palette</a><span>, </span> <a class="underline" href="/primitives/text/">text</a><span>, </span> <a class="underline" href="/lib/utils/">utils</a></p><h2 class="mb-2 text-xl font-semibold">Preview</h2><div class="preview mb-8 rounded border border-border bg-background p-6" role="group" tabindex="0" aria-label="Shell Topbar preview"><header class="flex h-16 shrink-0 items-center gap-6 border-b border-border bg-background px-6" data-testid="topbar"><div class="flex min-w-0 gap-2 items-center justify-start shrink-0" data-testid="brand"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block shrink-0" aria-hidden="true" data-slot="icon" data-lucide="layers"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z"></path><path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12"></path><path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17"></path></svg><p class="text-base font-bold">Northwind</p></div><div class="relative w-full max-w-sm" data-testid="palette"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block shrink-0 pointer-events-none absolute top-2 left-3 text-muted-foreground" aria-hidden="true" data-slot="icon" data-lucide="search"><path d="m21 21-4.34-4.34"></path><circle cx="11" cy="11" r="8"></circle></svg><input type="search" class="w-full min-w-0 bg-background text-foreground inset-ring inset-ring-input outline-none placeholder:text-muted-foreground disabled:cursor-not-allowed disabled:opacity-50 focus-visible:inset-ring-ring rounded h-8 px-3 text-base md:text-sm pr-12 pl-10" placeholder="Search orders" aria-label="Search orders"/><span class="pointer-events-none absolute top-2 right-2 rounded px-2 py-0 text-xs text-muted-foreground inset-ring inset-ring-border">Ctrl K</span></div><div class="flex min-w-0 gap-4 items-center justify-start ml-auto shrink-0" data-testid="user"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block shrink-0 text-muted-foreground" aria-hidden="true" data-slot="icon" data-lucide="bell"><path d="M10.268 21a2 2 0 0 0 3.464 0"></path><path d="M3.262 15.326A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673C19.41 13.956 18 12.499 18 8A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.738 7.326"></path></svg><div class="relative overflow-hidden bg-muted text-muted-foreground inset-ring inset-ring-border aspect-square size-8 shrink-0 rounded-full" data-slot="media-frame" data-placeholder="true"><img alt="Mara Quinn" loading="lazy" decoding="async" class="block max-w-full aspect-auto object-center absolute inset-0 size-full object-cover dark:hidden" src="/assets/ph/86775df0.svg" data-theme-src="light"/><img alt="Mara Quinn" loading="lazy" decoding="async" class="max-w-full aspect-auto object-center absolute inset-0 hidden size-full object-cover dark:block" src="/assets/ph/3e1cc509.svg" data-theme-src="dark"/></div></div></header>
+</div><h2 class="mb-2 text-xl font-semibold">Code</h2><div class="rt mb-8"><div class="rt-bar" role="radiogroup" aria-label="Runtime"><input type="radio" name="rt" id="rt-svelte" value="svelte" class="sr-only" checked> <label for="rt-svelte">Svelte</label><input type="radio" name="rt" id="rt-react" value="react" class="sr-only"> <label for="rt-react">React</label><input type="radio" name="rt" id="rt-vue" value="vue" class="sr-only"> <label for="rt-vue">Vue</label></div><section id="panel-svelte" class="rt-panel" data-runtime="svelte" aria-label="Svelte code"><p class="mb-2 text-sm text-muted-foreground">Point the CLI at this runtime once, then add the item:</p><div class="mb-2"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-svelte-init" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit init --yes --framework svelte --dir src --registry-url https://registry.buildy.tw/svelte --strict-cdn</code><button type="button" hidden data-copy="panel-svelte-init" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-svelte-add" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit add shell-topbar</code><button type="button" hidden data-copy="panel-svelte-add" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">components/shell-topbar.svelte</span><button type="button" hidden data-copy="code-svelte-0" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="hl max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-svelte-0" class="font-mono"><span class="c">&lt;!-- Code generated by xgen. DO NOT EDIT. --&gt;</span>
+<span class="c">&lt;!-- Source: xgen/screens/src/authoring/components/shell-parts.ts --&gt;</span>
+<span class="c">&lt;!--
+</span><span class="c">  The top bar of DashboardShell: the brand (when no sidebar carries it), the links (when there is no sidebar),
+</span><span class="c">  an optional search field, and the signed-in person.
+</span><span class="c">--&gt;</span>
+&lt;<span class="nt">script</span> <span class="na">lang</span>=<span class="s">&#34;ts&#34;</span> <span class="na">module</span>&gt;
+  <span class="kr">import</span> <span class="kr">type</span> { Snippet } <span class="kr">from</span> <span class="s2">&#34;svelte&#34;</span>;
+  <span class="kr">import</span> <span class="kr">type</span> { ShellNav } <span class="kr">from</span> <span class="s2">&#34;../blocks/dashboard-shell.types&#34;</span>;
 
-  export type ShellTopbarProps = {
-    nav: ShellNav;
-    brand?: &#34;show&#34; | &#34;hide&#34;;
-    links?: &#34;show&#34; | &#34;hide&#34;;
-    search?: &#34;show&#34; | &#34;hide&#34;;
+  <span class="kr">export</span> <span class="kr">type</span> ShellTopbarProps = {
+    nav: <span class="kt">ShellNav</span>;
+    brand?: <span class="s2">&#34;show&#34;</span> | <span class="s2">&#34;hide&#34;</span>;
+    links?: <span class="s2">&#34;show&#34;</span> | <span class="s2">&#34;hide&#34;</span>;
+    search?: <span class="s2">&#34;show&#34;</span> | <span class="s2">&#34;hide&#34;</span>;
   };
-&lt;/script&gt;
+&lt;/<span class="nt">script</span>&gt;
 
-&lt;script lang=&#34;ts&#34;&gt;
-  import Block from &#34;../primitives/block/block.svelte&#34;;
-  import Box from &#34;../primitives/box/box.svelte&#34;;
-  import Group from &#34;../primitives/group/group.svelte&#34;;
-  import Inline from &#34;../primitives/inline/inline.svelte&#34;;
-  import Link from &#34;../primitives/link/link.svelte&#34;;
-  import List from &#34;../primitives/list/list.svelte&#34;;
-  import ListItem from &#34;../primitives/list/list-item.svelte&#34;;
-  import LucideIcon from &#34;../primitives/lucide-icon/lucide-icon.svelte&#34;;
-  import Text from &#34;../primitives/text/text.svelte&#34;;
-  import MediaFrame from &#34;../components/media-frame.svelte&#34;;
-  import SearchPalette from &#34;../components/search-palette.svelte&#34;;
-  import { cn } from &#34;../utils&#34;;
+&lt;<span class="nt">script</span> <span class="na">lang</span>=<span class="s">&#34;ts&#34;</span>&gt;
+  <span class="kr">import</span> Block <span class="kr">from</span> <span class="s2">&#34;../primitives/block/block.svelte&#34;</span>;
+  <span class="kr">import</span> Box <span class="kr">from</span> <span class="s2">&#34;../primitives/box/box.svelte&#34;</span>;
+  <span class="kr">import</span> Group <span class="kr">from</span> <span class="s2">&#34;../primitives/group/group.svelte&#34;</span>;
+  <span class="kr">import</span> Inline <span class="kr">from</span> <span class="s2">&#34;../primitives/inline/inline.svelte&#34;</span>;
+  <span class="kr">import</span> Link <span class="kr">from</span> <span class="s2">&#34;../primitives/link/link.svelte&#34;</span>;
+  <span class="kr">import</span> List <span class="kr">from</span> <span class="s2">&#34;../primitives/list/list.svelte&#34;</span>;
+  <span class="kr">import</span> ListItem <span class="kr">from</span> <span class="s2">&#34;../primitives/list/list-item.svelte&#34;</span>;
+  <span class="kr">import</span> LucideIcon <span class="kr">from</span> <span class="s2">&#34;../primitives/lucide-icon/lucide-icon.svelte&#34;</span>;
+  <span class="kr">import</span> Text <span class="kr">from</span> <span class="s2">&#34;../primitives/text/text.svelte&#34;</span>;
+  <span class="kr">import</span> MediaFrame <span class="kr">from</span> <span class="s2">&#34;../components/media-frame.svelte&#34;</span>;
+  <span class="kr">import</span> SearchPalette <span class="kr">from</span> <span class="s2">&#34;../components/search-palette.svelte&#34;</span>;
+  <span class="kr">import</span> { cn } <span class="kr">from</span> <span class="s2">&#34;../utils&#34;</span>;
 
-  let { nav, brand = &#34;show&#34;, links = &#34;hide&#34;, search = &#34;show&#34; }: ShellTopbarProps = $props();
-&lt;/script&gt;
+  <span class="kd">let</span> { nav, brand = <span class="s2">&#34;show&#34;</span>, links = <span class="s2">&#34;hide&#34;</span>, search = <span class="s2">&#34;show&#34;</span> }: ShellTopbarProps = $props();
+&lt;/<span class="nt">script</span>&gt;
 
-&lt;Block
-  tag=&#34;header&#34;
-  class=&#34;flex h-16 shrink-0 items-center gap-6 border-b border-border bg-background px-6&#34;
-  data-testid=&#34;topbar&#34;
+&lt;<span class="nt">Block</span>
+  <span class="na">tag</span>=<span class="s">&#34;header&#34;</span>
+  <span class="na">class</span>=<span class="s">&#34;flex h-16 shrink-0 items-center gap-6 border-b border-border bg-background px-6&#34;</span>
+  <span class="na">data-testid</span>=<span class="s">&#34;topbar&#34;</span>
 &gt;
-  {#if ((brand as string) === &#34;show&#34;)}
-    &lt;Group gap=&#34;2&#34; align=&#34;center&#34; class=&#34;shrink-0&#34; data-testid=&#34;brand&#34;&gt;
-      &lt;LucideIcon name=&#34;layers&#34; size={24} /&gt;
-      &lt;Text size=&#34;base&#34; weight=&#34;bold&#34; class={(true ? &#34;&#34; : &#34;sr-only&#34;)}&gt;
+  {<span class="k">#if</span> ((brand <span class="kr">as</span> <span class="kt">string</span>) === <span class="s2">&#34;show&#34;</span>)}
+    &lt;<span class="nt">Group</span> <span class="na">gap</span>=<span class="s">&#34;2&#34;</span> <span class="na">align</span>=<span class="s">&#34;center&#34;</span> <span class="na">class</span>=<span class="s">&#34;shrink-0&#34;</span> <span class="na">data-testid</span>=<span class="s">&#34;brand&#34;</span>&gt;
+      &lt;<span class="nt">LucideIcon</span> <span class="na">name</span>=<span class="s">&#34;layers&#34;</span> <span class="na">size</span>={<span class="mi">24</span>} <span class="s">/</span>&gt;
+      &lt;<span class="nt">Text</span> <span class="na">size</span>=<span class="s">&#34;base&#34;</span> <span class="na">weight</span>=<span class="s">&#34;bold&#34;</span> <span class="na">class</span>={(<span class="kc">true</span> ? <span class="s2">&#34;&#34;</span> : <span class="s2">&#34;sr-only&#34;</span>)}<span class="err">&gt;</span>
         {nav.brand}
-      &lt;/Text&gt;
-    &lt;/Group&gt;
-  {/if}
-  {#if ((links as string) === &#34;show&#34;)}
-    &lt;Block tag=&#34;nav&#34; class=&#34;hidden lg:block&#34; aria-label={nav.label}&gt;
-      &lt;List class=&#34;m-0 flex list-none items-center gap-2 p-0&#34;&gt;
-        {#each nav.links as l (l.id)}
-          &lt;ListItem&gt;
-            &lt;Link
-              href=&#34;#/&#34;
-              variant=&#34;default&#34;
-              size=&#34;sm&#34;
-              aria-current={((l.id === nav.current) ? &#34;page&#34; : undefined)}
-              class={cn(
-                &#34;flex items-center gap-4 rounded py-2&#34;,
-                (true ? &#34;px-4&#34; : &#34;justify-center px-2&#34;),
-                ((l.id === nav.current) ? &#34;bg-muted font-medium&#34; : &#34;&#34;)
+      &lt;/<span class="nt">Text</span>&gt;
+    &lt;/<span class="nt">Group</span>&gt;
+  {<span class="k">/if</span>}
+  {<span class="k">#if</span> ((links <span class="kr">as</span> <span class="kt">string</span>) === <span class="s2">&#34;show&#34;</span>)}
+    &lt;<span class="nt">Block</span> <span class="na">tag</span>=<span class="s">&#34;nav&#34;</span> <span class="na">class</span>=<span class="s">&#34;hidden lg:block&#34;</span> <span class="na">aria-label</span>={nav.label}<span class="err">&gt;</span>
+      &lt;<span class="nt">List</span> <span class="na">class</span>=<span class="s">&#34;m-0 flex list-none items-center gap-2 p-0&#34;</span>&gt;
+        {<span class="k">#each</span> nav.links <span class="kr">as</span> l (l.id)}
+          &lt;<span class="nt">ListItem</span>&gt;
+            &lt;<span class="nt">Link</span>
+              <span class="na">href</span>=<span class="s">&#34;#/&#34;</span>
+              <span class="na">variant</span>=<span class="s">&#34;default&#34;</span>
+              <span class="na">size</span>=<span class="s">&#34;sm&#34;</span>
+              <span class="na">aria-current</span>={((l.id === nav.current) ? <span class="s2">&#34;page&#34;</span> : <span class="kc">undefined</span>)}
+              <span class="s">class=</span>{cn(
+                <span class="s2">&#34;flex items-center gap-4 rounded py-2&#34;</span>,
+                (<span class="kc">true</span> ? <span class="s2">&#34;px-4&#34;</span> : <span class="s2">&#34;justify-center px-2&#34;</span>),
+                ((l.id === nav.current) ? <span class="s2">&#34;bg-muted font-medium&#34;</span> : <span class="s2">&#34;&#34;</span>)
               )}
-              data-testid=&#34;item&#34;
+              <span class="na">data-testid</span>=<span class="s">&#34;item&#34;</span>
             &gt;
-              &lt;LucideIcon name={l.icon} size={16} /&gt;
-              &lt;Inline class={(true ? &#34;&#34; : &#34;sr-only&#34;)}&gt;
+              &lt;<span class="nt">LucideIcon</span> <span class="na">name</span>={l.icon} <span class="s">size=</span>{<span class="mi">16</span>} /&gt;
+              &lt;<span class="nt">Inline</span> <span class="na">class</span>={(<span class="kc">true</span> ? <span class="s2">&#34;&#34;</span> : <span class="s2">&#34;sr-only&#34;</span>)}<span class="err">&gt;</span>
                 {l.name}
-              &lt;/Inline&gt;
-            &lt;/Link&gt;
-          &lt;/ListItem&gt;
-        {/each}
-      &lt;/List&gt;
-    &lt;/Block&gt;
-  {/if}
-  {#if ((search as string) === &#34;show&#34;)}
-    {#if ((links as string) === &#34;show&#34;)}
-      &lt;Box class=&#34;ml-auto hidden w-64 shrink-0 xl:block&#34;&gt;
-        &lt;SearchPalette label={nav.search} shortcut={nav.shortcut} /&gt;
-      &lt;/Box&gt;
-    {:else}
-      &lt;SearchPalette label={nav.search} shortcut={nav.shortcut} /&gt;
-    {/if}
-  {/if}
-  &lt;Group
-    gap=&#34;4&#34;
-    align=&#34;center&#34;
-    class={
-      ((links as string) === &#34;show&#34;) &amp;&amp; ((search as string) === &#34;show&#34;) ? &#34;shrink-0&#34;
-      : &#34;ml-auto shrink-0&#34;
+              &lt;/<span class="nt">Inline</span>&gt;
+            &lt;/<span class="nt">Link</span>&gt;
+          &lt;/<span class="nt">ListItem</span>&gt;
+        {<span class="k">/each</span>}
+      &lt;/<span class="nt">List</span>&gt;
+    &lt;/<span class="nt">Block</span>&gt;
+  {<span class="k">/if</span>}
+  {<span class="k">#if</span> ((search <span class="kr">as</span> <span class="kt">string</span>) === <span class="s2">&#34;show&#34;</span>)}
+    {<span class="k">#if</span> ((links <span class="kr">as</span> <span class="kt">string</span>) === <span class="s2">&#34;show&#34;</span>)}
+      &lt;<span class="nt">Box</span> <span class="na">class</span>=<span class="s">&#34;ml-auto hidden w-64 shrink-0 xl:block&#34;</span>&gt;
+        &lt;<span class="nt">SearchPalette</span> <span class="na">label</span>={nav.search} <span class="s">shortcut=</span>{nav.shortcut} /&gt;
+      &lt;/<span class="nt">Box</span>&gt;
+    {:<span class="k">else</span>}
+      &lt;<span class="nt">SearchPalette</span> <span class="na">label</span>={nav.search} <span class="s">shortcut=</span>{nav.shortcut} /&gt;
+    {<span class="k">/if</span>}
+  {<span class="k">/if</span>}
+  &lt;<span class="nt">Group</span>
+    <span class="na">gap</span>=<span class="s">&#34;4&#34;</span>
+    <span class="na">align</span>=<span class="s">&#34;center&#34;</span>
+    <span class="na">class</span>={
+      ((links <span class="kr">as</span> <span class="kt">string</span>) === <span class="s2">&#34;show&#34;</span>) &amp;&amp; ((search <span class="kr">as</span> <span class="kt">string</span>) === <span class="s2">&#34;show&#34;</span>) ? <span class="s2">&#34;shrink-0&#34;</span>
+      : <span class="s2">&#34;ml-auto shrink-0&#34;</span>
     }
-    data-testid=&#34;user&#34;
+    <span class="s">data-testid=&#34;user&#34;</span>
   &gt;
-    &lt;LucideIcon name=&#34;bell&#34; size={20} class=&#34;text-muted-foreground&#34; /&gt;
-    &lt;MediaFrame alt={nav.userName} ratio=&#34;1/1&#34; class=&#34;size-8 shrink-0 rounded-full&#34; /&gt;
-  &lt;/Group&gt;
-&lt;/Block&gt;
-</code></pre></div><p class="text-sm"><a class="underline" href="https://registry.buildy.tw/svelte/components/shell-topbar.json">Svelte registry item (JSON)</a></p></section><section id="panel-react" data-panel data-runtime="react" data-label="React" aria-label="React" class="mb-8"><h3 class="mb-2 text-lg font-semibold">React</h3><p class="mb-2 text-sm text-muted-foreground">Point the CLI at this runtime once, then add the item:</p><div class="mb-2"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-react-init" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit init --yes --framework react --dir src --registry-url https://registry.buildy.tw/react --strict-cdn</code><button type="button" hidden data-copy="panel-react-init" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-react-add" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit add shell-topbar</code><button type="button" hidden data-copy="panel-react-add" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">components/shell-topbar.tsx</span><button type="button" hidden data-copy="code-react-0" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-react-0" class="font-mono">// Code generated by xgen. DO NOT EDIT.
-// Source: xgen/screens/src/authoring/components/shell-parts.ts
-/**
- * The top bar of DashboardShell: the brand (when no sidebar carries it), the links (when there is no sidebar),
- * an optional search field, and the signed-in person.
- */
-import { type ReactNode } from &#34;react&#34;;
-import { Block } from &#34;../primitives/block/block&#34;;
-import { Box } from &#34;../primitives/box/box&#34;;
-import { Group } from &#34;../primitives/group/group&#34;;
-import { Inline } from &#34;../primitives/inline/inline&#34;;
-import { Link } from &#34;../primitives/link/link&#34;;
-import { List } from &#34;../primitives/list/list&#34;;
-import { ListItem } from &#34;../primitives/list/list-item&#34;;
-import { LucideIcon } from &#34;../primitives/lucide-icon/lucide-icon&#34;;
-import { Text } from &#34;../primitives/text/text&#34;;
-import { MediaFrame } from &#34;../components/media-frame&#34;;
-import { SearchPalette } from &#34;../components/search-palette&#34;;
-import { cn } from &#34;../utils&#34;;
-import type { ShellNav } from &#34;../blocks/dashboard-shell.types&#34;;
+    &lt;<span class="nt">LucideIcon</span> <span class="na">name</span>=<span class="s">&#34;bell&#34;</span> <span class="na">size</span>={<span class="mi">20</span>} <span class="s">class=&#34;text-muted-foreground&#34;</span> /&gt;
+    &lt;<span class="nt">MediaFrame</span> <span class="na">alt</span>={nav.userName} <span class="s">ratio=&#34;1/1&#34;</span> <span class="na">class</span>=<span class="s">&#34;size-8 shrink-0 rounded-full&#34;</span> /&gt;
+  &lt;/<span class="nt">Group</span>&gt;
+&lt;/<span class="nt">Block</span>&gt;
+</code></pre></div><p class="text-sm"><a class="underline" href="https://registry.buildy.tw/svelte/components/shell-topbar.json">Svelte registry item (JSON)</a></p></section><section id="panel-react" class="rt-panel" data-runtime="react" aria-label="React code"><p class="mb-2 text-sm text-muted-foreground">Point the CLI at this runtime once, then add the item:</p><div class="mb-2"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-react-init" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit init --yes --framework react --dir src --registry-url https://registry.buildy.tw/react --strict-cdn</code><button type="button" hidden data-copy="panel-react-init" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-react-add" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit add shell-topbar</code><button type="button" hidden data-copy="panel-react-add" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">components/shell-topbar.tsx</span><button type="button" hidden data-copy="code-react-0" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="hl max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-react-0" class="font-mono"><span class="c1">// Code generated by xgen. DO NOT EDIT.
+</span><span class="c1">// Source: xgen/screens/src/authoring/components/shell-parts.ts
+</span><span class="cm">/**
+</span><span class="cm"> * The top bar of DashboardShell: the brand (when no sidebar carries it), the links (when there is no sidebar),
+</span><span class="cm"> * an optional search field, and the signed-in person.
+</span><span class="cm"> */</span>
+<span class="kr">import</span> { <span class="kr">type</span> ReactNode } <span class="kr">from</span> <span class="s2">&#34;react&#34;</span>;
+<span class="kr">import</span> { Block } <span class="kr">from</span> <span class="s2">&#34;../primitives/block/block&#34;</span>;
+<span class="kr">import</span> { Box } <span class="kr">from</span> <span class="s2">&#34;../primitives/box/box&#34;</span>;
+<span class="kr">import</span> { Group } <span class="kr">from</span> <span class="s2">&#34;../primitives/group/group&#34;</span>;
+<span class="kr">import</span> { Inline } <span class="kr">from</span> <span class="s2">&#34;../primitives/inline/inline&#34;</span>;
+<span class="kr">import</span> { Link } <span class="kr">from</span> <span class="s2">&#34;../primitives/link/link&#34;</span>;
+<span class="kr">import</span> { List } <span class="kr">from</span> <span class="s2">&#34;../primitives/list/list&#34;</span>;
+<span class="kr">import</span> { ListItem } <span class="kr">from</span> <span class="s2">&#34;../primitives/list/list-item&#34;</span>;
+<span class="kr">import</span> { LucideIcon } <span class="kr">from</span> <span class="s2">&#34;../primitives/lucide-icon/lucide-icon&#34;</span>;
+<span class="kr">import</span> { Text } <span class="kr">from</span> <span class="s2">&#34;../primitives/text/text&#34;</span>;
+<span class="kr">import</span> { MediaFrame } <span class="kr">from</span> <span class="s2">&#34;../components/media-frame&#34;</span>;
+<span class="kr">import</span> { SearchPalette } <span class="kr">from</span> <span class="s2">&#34;../components/search-palette&#34;</span>;
+<span class="kr">import</span> { cn } <span class="kr">from</span> <span class="s2">&#34;../utils&#34;</span>;
+<span class="kr">import</span> <span class="kr">type</span> { ShellNav } <span class="kr">from</span> <span class="s2">&#34;../blocks/dashboard-shell.types&#34;</span>;
 
-export type ShellTopbarProps = {
-  nav: ShellNav;
-  brand?: &#34;show&#34; | &#34;hide&#34;;
-  links?: &#34;show&#34; | &#34;hide&#34;;
-  search?: &#34;show&#34; | &#34;hide&#34;;
+<span class="kr">export</span> <span class="kr">type</span> ShellTopbarProps = {
+  nav: <span class="kt">ShellNav</span>;
+  brand?: <span class="s2">&#34;show&#34;</span> | <span class="s2">&#34;hide&#34;</span>;
+  links?: <span class="s2">&#34;show&#34;</span> | <span class="s2">&#34;hide&#34;</span>;
+  search?: <span class="s2">&#34;show&#34;</span> | <span class="s2">&#34;hide&#34;</span>;
 };
 
-export function ShellTopbar({ nav, brand = &#34;show&#34;, links = &#34;hide&#34;, search = &#34;show&#34; }: ShellTopbarProps) {
-  return (
-    &lt;Block
-      tag=&#34;header&#34;
-      className=&#34;flex h-16 shrink-0 items-center gap-6 border-b border-border bg-background px-6&#34;
-      data-testid=&#34;topbar&#34;
+<span class="kr">export</span> <span class="kd">function</span> ShellTopbar({ nav, brand = <span class="s2">&#34;show&#34;</span>, links = <span class="s2">&#34;hide&#34;</span>, search = <span class="s2">&#34;show&#34;</span> }: ShellTopbarProps) {
+  <span class="k">return</span> (
+    &lt;<span class="nt">Block</span>
+      <span class="na">tag</span>=<span class="s">&#34;header&#34;</span>
+      <span class="na">className</span>=<span class="s">&#34;flex h-16 shrink-0 items-center gap-6 border-b border-border bg-background px-6&#34;</span>
+      <span class="na">data-testid</span>=<span class="s">&#34;topbar&#34;</span>
     &gt;
-      {((brand as string) === &#34;show&#34;) ? (
-        &lt;Group gap=&#34;2&#34; align=&#34;center&#34; className=&#34;shrink-0&#34; data-testid=&#34;brand&#34;&gt;
-          &lt;LucideIcon name=&#34;layers&#34; size={24} /&gt;
-          &lt;Text size=&#34;base&#34; weight=&#34;bold&#34; className={(true ? &#34;&#34; : &#34;sr-only&#34;)}&gt;
+      {((brand <span class="kr">as</span> <span class="kt">string</span>) === <span class="s2">&#34;show&#34;</span>) ? (
+        &lt;<span class="nt">Group</span> <span class="na">gap</span>=<span class="s">&#34;2&#34;</span> <span class="na">align</span>=<span class="s">&#34;center&#34;</span> <span class="na">className</span>=<span class="s">&#34;shrink-0&#34;</span> <span class="na">data-testid</span>=<span class="s">&#34;brand&#34;</span>&gt;
+          &lt;<span class="nt">LucideIcon</span> <span class="na">name</span>=<span class="s">&#34;layers&#34;</span> <span class="na">size</span>={<span class="mi">24</span>} /&gt;
+          &lt;<span class="nt">Text</span> <span class="na">size</span>=<span class="s">&#34;base&#34;</span> <span class="na">weight</span>=<span class="s">&#34;bold&#34;</span> <span class="na">className</span>={(<span class="kc">true</span> ? <span class="s2">&#34;&#34;</span> : <span class="s2">&#34;sr-only&#34;</span>)}&gt;
             {nav.brand}
-          &lt;/Text&gt;
-        &lt;/Group&gt;
-      ) : null}
-      {((links as string) === &#34;show&#34;) ? (
-        &lt;Block tag=&#34;nav&#34; className=&#34;hidden lg:block&#34; aria-label={nav.label}&gt;
-          &lt;List className=&#34;m-0 flex list-none items-center gap-2 p-0&#34;&gt;
+          &lt;/<span class="nt">Text</span>&gt;
+        &lt;/<span class="nt">Group</span>&gt;
+      ) : <span class="kc">null</span>}
+      {((links <span class="kr">as</span> <span class="kt">string</span>) === <span class="s2">&#34;show&#34;</span>) ? (
+        &lt;<span class="nt">Block</span> <span class="na">tag</span>=<span class="s">&#34;nav&#34;</span> <span class="na">className</span>=<span class="s">&#34;hidden lg:block&#34;</span> <span class="na">aria-label</span>={nav.label}&gt;
+          &lt;<span class="nt">List</span> <span class="na">className</span>=<span class="s">&#34;m-0 flex list-none items-center gap-2 p-0&#34;</span>&gt;
             {(nav.links ?? []).map((l) =&gt; (
-              &lt;ListItem key={l.id}&gt;
-                &lt;Link
-                  href=&#34;#/&#34;
-                  variant=&#34;default&#34;
-                  size=&#34;sm&#34;
-                  aria-current={((l.id === nav.current) ? &#34;page&#34; : undefined)}
-                  className={cn(
-                    &#34;flex items-center gap-4 rounded py-2&#34;,
-                    (true ? &#34;px-4&#34; : &#34;justify-center px-2&#34;),
-                    ((l.id === nav.current) ? &#34;bg-muted font-medium&#34; : &#34;&#34;)
+              &lt;<span class="nt">ListItem</span> <span class="na">key</span>={l.id}&gt;
+                &lt;<span class="nt">Link</span>
+                  <span class="na">href</span>=<span class="s">&#34;#/&#34;</span>
+                  <span class="na">variant</span>=<span class="s">&#34;default&#34;</span>
+                  <span class="na">size</span>=<span class="s">&#34;sm&#34;</span>
+                  <span class="na">aria-current</span>={((l.id === nav.current) ? <span class="s2">&#34;page&#34;</span> : <span class="kc">undefined</span>)}
+                  <span class="na">className</span>={cn(
+                    <span class="s2">&#34;flex items-center gap-4 rounded py-2&#34;</span>,
+                    (<span class="kc">true</span> ? <span class="s2">&#34;px-4&#34;</span> : <span class="s2">&#34;justify-center px-2&#34;</span>),
+                    ((l.id === nav.current) ? <span class="s2">&#34;bg-muted font-medium&#34;</span> : <span class="s2">&#34;&#34;</span>)
                   )}
-                  data-testid=&#34;item&#34;
+                  <span class="na">data-testid</span>=<span class="s">&#34;item&#34;</span>
                 &gt;
-                  &lt;LucideIcon name={l.icon} size={16} /&gt;
-                  &lt;Inline className={(true ? &#34;&#34; : &#34;sr-only&#34;)}&gt;
+                  &lt;<span class="nt">LucideIcon</span> <span class="na">name</span>={l.icon} <span class="na">size</span>={<span class="mi">16</span>} /&gt;
+                  &lt;<span class="nt">Inline</span> <span class="na">className</span>={(<span class="kc">true</span> ? <span class="s2">&#34;&#34;</span> : <span class="s2">&#34;sr-only&#34;</span>)}&gt;
                     {l.name}
-                  &lt;/Inline&gt;
-                &lt;/Link&gt;
-              &lt;/ListItem&gt;
+                  &lt;/<span class="nt">Inline</span>&gt;
+                &lt;/<span class="nt">Link</span>&gt;
+              &lt;/<span class="nt">ListItem</span>&gt;
             ))}
-          &lt;/List&gt;
-        &lt;/Block&gt;
-      ) : null}
-      {((search as string) === &#34;show&#34;) ? (
+          &lt;/<span class="nt">List</span>&gt;
+        &lt;/<span class="nt">Block</span>&gt;
+      ) : <span class="kc">null</span>}
+      {((search <span class="kr">as</span> <span class="kt">string</span>) === <span class="s2">&#34;show&#34;</span>) ? (
         &lt;&gt;
-          {((links as string) === &#34;show&#34;) ? (
-            &lt;Box className=&#34;ml-auto hidden w-64 shrink-0 xl:block&#34;&gt;
-              &lt;SearchPalette label={nav.search} shortcut={nav.shortcut} /&gt;
-            &lt;/Box&gt;
+          {((links <span class="kr">as</span> <span class="kt">string</span>) === <span class="s2">&#34;show&#34;</span>) ? (
+            &lt;<span class="nt">Box</span> <span class="na">className</span>=<span class="s">&#34;ml-auto hidden w-64 shrink-0 xl:block&#34;</span>&gt;
+              &lt;<span class="nt">SearchPalette</span> <span class="na">label</span>={nav.search} <span class="na">shortcut</span>={nav.shortcut} /&gt;
+            &lt;/<span class="nt">Box</span>&gt;
           ) : (
-            &lt;SearchPalette label={nav.search} shortcut={nav.shortcut} /&gt;
+            &lt;<span class="nt">SearchPalette</span> <span class="na">label</span>={nav.search} <span class="na">shortcut</span>={nav.shortcut} /&gt;
           )}
         &lt;/&gt;
-      ) : null}
-      &lt;Group
-        gap=&#34;4&#34;
-        align=&#34;center&#34;
-        className={
-          ((links as string) === &#34;show&#34;) &amp;&amp; ((search as string) === &#34;show&#34;) ? &#34;shrink-0&#34;
-          : &#34;ml-auto shrink-0&#34;
+      ) : <span class="kc">null</span>}
+      &lt;<span class="nt">Group</span>
+        <span class="na">gap</span>=<span class="s">&#34;4&#34;</span>
+        <span class="na">align</span>=<span class="s">&#34;center&#34;</span>
+        <span class="na">className</span>={
+          ((links <span class="kr">as</span> <span class="kt">string</span>) === <span class="s2">&#34;show&#34;</span>) &amp;&amp; ((search <span class="kr">as</span> <span class="kt">string</span>) === <span class="s2">&#34;show&#34;</span>) ? <span class="s2">&#34;shrink-0&#34;</span>
+          : <span class="s2">&#34;ml-auto shrink-0&#34;</span>
         }
-        data-testid=&#34;user&#34;
+        <span class="na">data-testid</span>=<span class="s">&#34;user&#34;</span>
       &gt;
-        &lt;LucideIcon name=&#34;bell&#34; size={20} className=&#34;text-muted-foreground&#34; /&gt;
-        &lt;MediaFrame alt={nav.userName} ratio=&#34;1/1&#34; className=&#34;size-8 shrink-0 rounded-full&#34; /&gt;
-      &lt;/Group&gt;
-    &lt;/Block&gt;
+        &lt;<span class="nt">LucideIcon</span> <span class="na">name</span>=<span class="s">&#34;bell&#34;</span> <span class="na">size</span>={<span class="mi">20</span>} <span class="na">className</span>=<span class="s">&#34;text-muted-foreground&#34;</span> /&gt;
+        &lt;<span class="nt">MediaFrame</span> <span class="na">alt</span>={nav.userName} <span class="na">ratio</span>=<span class="s">&#34;1/1&#34;</span> <span class="na">className</span>=<span class="s">&#34;size-8 shrink-0 rounded-full&#34;</span> /&gt;
+      &lt;/<span class="nt">Group</span>&gt;
+    &lt;/<span class="nt">Block</span>&gt;
   );
 }
-</code></pre></div><p class="text-sm"><a class="underline" href="https://registry.buildy.tw/react/components/shell-topbar.json">React registry item (JSON)</a></p></section><section id="panel-vue" data-panel data-runtime="vue" data-label="Vue" aria-label="Vue" class="mb-8"><h3 class="mb-2 text-lg font-semibold">Vue</h3><p class="mb-2 text-sm text-muted-foreground">Point the CLI at this runtime once, then add the item:</p><div class="mb-2"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-vue-init" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit init --yes --framework vue --dir src --registry-url https://registry.buildy.tw/vue --strict-cdn</code><button type="button" hidden data-copy="panel-vue-init" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-vue-add" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit add shell-topbar</code><button type="button" hidden data-copy="panel-vue-add" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">components/shell-topbar.vue</span><button type="button" hidden data-copy="code-vue-0" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-vue-0" class="font-mono">&lt;!-- Code generated by xgen. DO NOT EDIT. --&gt;
-&lt;!-- Source: xgen/screens/src/authoring/components/shell-parts.ts --&gt;
-&lt;!--
-  The top bar of DashboardShell: the brand (when no sidebar carries it), the links (when there is no sidebar),
-  an optional search field, and the signed-in person.
+</code></pre></div><p class="text-sm"><a class="underline" href="https://registry.buildy.tw/react/components/shell-topbar.json">React registry item (JSON)</a></p></section><section id="panel-vue" class="rt-panel" data-runtime="vue" aria-label="Vue code"><p class="mb-2 text-sm text-muted-foreground">Point the CLI at this runtime once, then add the item:</p><div class="mb-2"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-vue-init" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit init --yes --framework vue --dir src --registry-url https://registry.buildy.tw/vue --strict-cdn</code><button type="button" hidden data-copy="panel-vue-init" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-vue-add" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit add shell-topbar</code><button type="button" hidden data-copy="panel-vue-add" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">components/shell-topbar.vue</span><button type="button" hidden data-copy="code-vue-0" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="hl max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-vue-0" class="font-mono"><span class="c">&lt;!--</span> Code generated by xgen. DO NOT EDIT. --&gt;
+<span class="c">&lt;!--</span> Source: xgen/screens/src/authoring/components/shell-parts.ts --&gt;
+<span class="c">&lt;!--</span>
+  The top bar <span class="k">of</span> DashboardShell: the brand (when no sidebar carries it), the links (when there is no sidebar),
+  an optional search field, and the signed-<span class="k">in</span> person.
 --&gt;
-&lt;script lang=&#34;ts&#34;&gt;
-import type { ShellNav } from &#34;../blocks/dashboard-shell.types&#34;;
+&lt;<span class="nt">script</span> <span class="na">lang</span>=<span class="s">&#34;ts&#34;</span>&gt;
+<span class="kr">import</span> type { ShellNav } from <span class="s2">&#34;../blocks/dashboard-shell.types&#34;</span>;
 
-export type ShellTopbarProps = {
+<span class="kr">export</span> type ShellTopbarProps = {
   nav: ShellNav;
-  brand?: &#34;show&#34; | &#34;hide&#34;;
-  links?: &#34;show&#34; | &#34;hide&#34;;
-  search?: &#34;show&#34; | &#34;hide&#34;;
+  brand?: <span class="s2">&#34;show&#34;</span> | <span class="s2">&#34;hide&#34;</span>;
+  links?: <span class="s2">&#34;show&#34;</span> | <span class="s2">&#34;hide&#34;</span>;
+  search?: <span class="s2">&#34;show&#34;</span> | <span class="s2">&#34;hide&#34;</span>;
 };
-&lt;/script&gt;
+&lt;/<span class="nt">script</span>&gt;
 
-&lt;script setup lang=&#34;ts&#34;&gt;
-import Block from &#34;../primitives/block/block.vue&#34;;
-import Box from &#34;../primitives/box/box.vue&#34;;
-import Group from &#34;../primitives/group/group.vue&#34;;
-import Inline from &#34;../primitives/inline/inline.vue&#34;;
-import Link from &#34;../primitives/link/link.vue&#34;;
-import List from &#34;../primitives/list/list.vue&#34;;
-import ListItem from &#34;../primitives/list/list-item.vue&#34;;
-import LucideIcon from &#34;../primitives/lucide-icon/lucide-icon.vue&#34;;
-import Text from &#34;../primitives/text/text.vue&#34;;
-import MediaFrame from &#34;../components/media-frame.vue&#34;;
-import SearchPalette from &#34;../components/search-palette.vue&#34;;
-import { cn } from &#34;../utils&#34;;
+&lt;<span class="nt">script</span> <span class="na">setup</span> <span class="na">lang</span>=<span class="s">&#34;ts&#34;</span>&gt;
+<span class="kr">import</span> Block from <span class="s2">&#34;../primitives/block/block.vue&#34;</span>;
+<span class="kr">import</span> Box from <span class="s2">&#34;../primitives/box/box.vue&#34;</span>;
+<span class="kr">import</span> Group from <span class="s2">&#34;../primitives/group/group.vue&#34;</span>;
+<span class="kr">import</span> Inline from <span class="s2">&#34;../primitives/inline/inline.vue&#34;</span>;
+<span class="kr">import</span> Link from <span class="s2">&#34;../primitives/link/link.vue&#34;</span>;
+<span class="kr">import</span> List from <span class="s2">&#34;../primitives/list/list.vue&#34;</span>;
+<span class="kr">import</span> ListItem from <span class="s2">&#34;../primitives/list/list-item.vue&#34;</span>;
+<span class="kr">import</span> LucideIcon from <span class="s2">&#34;../primitives/lucide-icon/lucide-icon.vue&#34;</span>;
+<span class="kr">import</span> Text from <span class="s2">&#34;../primitives/text/text.vue&#34;</span>;
+<span class="kr">import</span> MediaFrame from <span class="s2">&#34;../components/media-frame.vue&#34;</span>;
+<span class="kr">import</span> SearchPalette from <span class="s2">&#34;../components/search-palette.vue&#34;</span>;
+<span class="kr">import</span> { cn } from <span class="s2">&#34;../utils&#34;</span>;
 
-const { nav, brand = &#34;show&#34;, links = &#34;hide&#34;, search = &#34;show&#34; } = defineProps&lt;ShellTopbarProps&gt;();
-&lt;/script&gt;
+<span class="kr">const</span> { nav, brand = <span class="s2">&#34;show&#34;</span>, links = <span class="s2">&#34;hide&#34;</span>, search = <span class="s2">&#34;show&#34;</span> } = defineProps&lt;<span class="nt">ShellTopbarProps</span>&gt;();
+&lt;/<span class="nt">script</span>&gt;
 
-&lt;template&gt;
-  &lt;Block
-    tag=&#34;header&#34;
-    class=&#34;flex h-16 shrink-0 items-center gap-6 border-b border-border bg-background px-6&#34;
-    data-testid=&#34;topbar&#34;
+&lt;<span class="nt">template</span>&gt;
+  &lt;<span class="nt">Block</span>
+    <span class="na">tag</span>=<span class="s">&#34;header&#34;</span>
+    <span class="na">class</span>=<span class="s">&#34;flex h-16 shrink-0 items-center gap-6 border-b border-border bg-background px-6&#34;</span>
+    <span class="na">data</span><span class="nt">-testid</span><span class="err">=&#34;</span><span class="na">topbar</span><span class="err">&#34;</span>
   &gt;
-    &lt;Group v-if=&#34;((brand as string) === &#39;show&#39;)&#34; gap=&#34;2&#34; align=&#34;center&#34; class=&#34;shrink-0&#34; data-testid=&#34;brand&#34;&gt;
-      &lt;LucideIcon name=&#34;layers&#34; :size=&#34;24&#34; /&gt;
-      &lt;Text size=&#34;base&#34; weight=&#34;bold&#34; :class=&#34;(true ? &#39;&#39; : &#39;sr-only&#39;)&#34;&gt;
+    &lt;<span class="nt">Group</span> <span class="nt">v-if</span>=<span class="s">&#34;((brand as string) === &#39;show&#39;)&#34; gap=&#34;2&#34; align=&#34;center&#34; class=&#34;shrink-0&#34; data-testid=&#34;brand&#34;</span>&gt;
+      &lt;<span class="nt">LucideIcon</span> <span class="na">name</span>=<span class="s">&#34;layers&#34;</span> <span class="nt">:size</span>=<span class="s">&#34;24&#34;</span> /&gt;
+      &lt;<span class="nt">Text</span> <span class="na">size</span>=<span class="s">&#34;base&#34;</span> <span class="na">weight</span>=<span class="s">&#34;bold&#34;</span> :<span class="na">class</span>=<span class="s">&#34;(true ? &#39;&#39; : &#39;sr-only&#39;)&#34;</span>&gt;
         {{ nav.brand }}
-      &lt;/Text&gt;
-    &lt;/Group&gt;
-    &lt;Block v-if=&#34;((links as string) === &#39;show&#39;)&#34; tag=&#34;nav&#34; class=&#34;hidden lg:block&#34; :aria-label=&#34;nav.label&#34;&gt;
-      &lt;List class=&#34;m-0 flex list-none items-center gap-2 p-0&#34;&gt;
-        &lt;ListItem v-for=&#34;l in nav.links&#34; :key=&#34;l.id&#34;&gt;
-          &lt;Link
-            href=&#34;#/&#34;
-            variant=&#34;default&#34;
-            size=&#34;sm&#34;
-            :aria-current=&#34;((l.id === nav.current) ? &#39;page&#39; : undefined)&#34;
-            :class=&#34;cn(
-              &#39;flex items-center gap-4 rounded py-2&#39;,
-              (true ? &#39;px-4&#39; : &#39;justify-center px-2&#39;),
-              ((l.id === nav.current) ? &#39;bg-muted font-medium&#39; : &#39;&#39;)
-            )&#34;
-            data-testid=&#34;item&#34;
+      &lt;/<span class="nt">Text</span>&gt;
+    &lt;/<span class="nt">Group</span>&gt;
+    &lt;<span class="nt">Block</span> <span class="nt">v-if</span>=<span class="s">&#34;((links as string) === &#39;show&#39;)&#34; tag=&#34;nav&#34; class=&#34;hidden lg:block&#34; :aria-label=&#34;nav.label&#34;</span>&gt;
+      &lt;<span class="nt">List</span> <span class="na">class</span>=<span class="s">&#34;m-0 flex list-none items-center gap-2 p-0&#34;</span>&gt;
+        &lt;<span class="nt">ListItem</span> <span class="nt">v-for</span>=<span class="s">&#34;l in nav.links&#34; :key=&#34;l.id&#34;</span>&gt;
+          &lt;<span class="nt">Link</span>
+            <span class="na">href</span>=<span class="s">&#34;#/&#34;</span>
+            <span class="na">variant</span>=<span class="s">&#34;default&#34;</span>
+            <span class="na">size</span>=<span class="s">&#34;sm&#34;</span>
+            :<span class="na">aria</span><span class="nt">-current</span><span class="err">=&#34;((</span><span class="na">l.id</span> <span class="err">===</span> <span class="na">nav.current</span><span class="err">)</span> <span class="err">?</span> <span class="err">&#39;</span><span class="na">page</span><span class="err">&#39;</span> : <span class="na">undefined</span><span class="err">)&#34;</span>
+            :<span class="na">class</span>=<span class="s">&#34;cn(
+</span><span class="s">              &#39;flex items-center gap-4 rounded py-2&#39;,
+</span><span class="s">              (true ? &#39;px-4&#39; : &#39;justify-center px-2&#39;),
+</span><span class="s">              ((l.id === nav.current) ? &#39;bg-muted font-medium&#39; : &#39;&#39;)
+</span><span class="s">            )&#34;</span>
+            <span class="na">data</span><span class="nt">-testid</span><span class="err">=&#34;</span><span class="na">item</span><span class="err">&#34;</span>
           &gt;
-            &lt;LucideIcon :name=&#34;l.icon&#34; :size=&#34;16&#34; /&gt;
-            &lt;Inline :class=&#34;(true ? &#39;&#39; : &#39;sr-only&#39;)&#34;&gt;
+            &lt;<span class="nt">LucideIcon</span> <span class="nt">:name</span>=<span class="s">&#34;l.icon&#34;</span> <span class="nt">:size</span>=<span class="s">&#34;16&#34;</span> /&gt;
+            &lt;<span class="nt">Inline</span> :<span class="na">class</span>=<span class="s">&#34;(true ? &#39;&#39; : &#39;sr-only&#39;)&#34;</span>&gt;
               {{ l.name }}
-            &lt;/Inline&gt;
-          &lt;/Link&gt;
-        &lt;/ListItem&gt;
-      &lt;/List&gt;
-    &lt;/Block&gt;
-    &lt;template v-if=&#34;((search as string) === &#39;show&#39;)&#34;&gt;
-      &lt;Box v-if=&#34;((links as string) === &#39;show&#39;)&#34; class=&#34;ml-auto hidden w-64 shrink-0 xl:block&#34;&gt;
-        &lt;SearchPalette :label=&#34;nav.search&#34; :shortcut=&#34;nav.shortcut&#34; /&gt;
-      &lt;/Box&gt;
-      &lt;SearchPalette v-else :label=&#34;nav.search&#34; :shortcut=&#34;nav.shortcut&#34; /&gt;
-    &lt;/template&gt;
-    &lt;Group
-      gap=&#34;4&#34;
-      align=&#34;center&#34;
-      :class=&#34;
-        ((links as string) === &#39;show&#39;) &amp;&amp; ((search as string) === &#39;show&#39;) ? &#39;shrink-0&#39;
-        : &#39;ml-auto shrink-0&#39;
-      &#34;
-      data-testid=&#34;user&#34;
+            &lt;/<span class="nt">Inline</span>&gt;
+          &lt;/<span class="nt">Link</span>&gt;
+        &lt;/<span class="nt">ListItem</span>&gt;
+      &lt;/<span class="nt">List</span>&gt;
+    &lt;/<span class="nt">Block</span>&gt;
+    &lt;<span class="nt">template</span> <span class="nt">v-if</span>=<span class="s">&#34;((search as string) === &#39;show&#39;)&#34;</span>&gt;
+      &lt;<span class="nt">Box</span> <span class="nt">v-if</span>=<span class="s">&#34;((links as string) === &#39;show&#39;)&#34; class=&#34;ml-auto hidden w-64 shrink-0 xl:block&#34;</span>&gt;
+        &lt;<span class="nt">SearchPalette</span> <span class="nt">:label</span>=<span class="s">&#34;nav.search&#34;</span> <span class="nt">:shortcut</span>=<span class="s">&#34;nav.shortcut&#34;</span> /&gt;
+      &lt;/<span class="nt">Box</span>&gt;
+      &lt;<span class="nt">SearchPalette</span> <span class="nt">v-else</span> <span class="nt">:label</span>=<span class="s">&#34;nav.search&#34;</span> <span class="nt">:shortcut</span>=<span class="s">&#34;nav.shortcut&#34;</span> /&gt;
+    &lt;/<span class="nt">template</span>&gt;
+    &lt;<span class="nt">Group</span>
+      <span class="na">gap</span>=<span class="s">&#34;4&#34;</span>
+      <span class="na">align</span>=<span class="s">&#34;center&#34;</span>
+      :<span class="na">class</span>=<span class="s">&#34;
+</span><span class="s">        ((links as string) === &#39;show&#39;) &amp;&amp; ((search as string) === &#39;show&#39;) ? &#39;shrink-0&#39;
+</span><span class="s">        : &#39;ml-auto shrink-0&#39;
+</span><span class="s">      &#34;</span>
+      <span class="na">data</span><span class="nt">-testid</span><span class="err">=&#34;</span><span class="na">user</span><span class="err">&#34;</span>
     &gt;
-      &lt;LucideIcon name=&#34;bell&#34; :size=&#34;20&#34; class=&#34;text-muted-foreground&#34; /&gt;
-      &lt;MediaFrame :alt=&#34;nav.userName&#34; ratio=&#34;1/1&#34; class=&#34;size-8 shrink-0 rounded-full&#34; /&gt;
-    &lt;/Group&gt;
-  &lt;/Block&gt;
-&lt;/template&gt;
-</code></pre></div><p class="text-sm"><a class="underline" href="https://registry.buildy.tw/vue/components/shell-topbar.json">Vue registry item (JSON)</a></p></section></div></article></main></div><footer class="border-t border-border"><div class="mx-auto max-w-6xl px-4 py-8 text-sm text-muted-foreground">ui8kit, MIT licence. Static docs generated from markdown and the registry (<a class="underline" href="https://registry.buildy.tw/registry.json">registry.json</a>).</div></footer></body></html>
+      &lt;<span class="nt">LucideIcon</span> <span class="na">name</span>=<span class="s">&#34;bell&#34;</span> <span class="nt">:size</span>=<span class="s">&#34;20&#34;</span> <span class="na">class</span>=<span class="s">&#34;text-muted-foreground&#34;</span> /&gt;
+      &lt;<span class="nt">MediaFrame</span> <span class="nt">:alt</span>=<span class="s">&#34;nav.userName&#34;</span> <span class="na">ratio</span>=<span class="s">&#34;1/1&#34;</span> <span class="na">class</span>=<span class="s">&#34;size-8 shrink-0 rounded-full&#34;</span> /&gt;
+    &lt;/<span class="nt">Group</span>&gt;
+  &lt;/<span class="nt">Block</span>&gt;
+&lt;/<span class="nt">template</span>&gt;
+</code></pre></div><p class="text-sm"><a class="underline" href="https://registry.buildy.tw/vue/components/shell-topbar.json">Vue registry item (JSON)</a></p></section></div><h2 class="mb-2 text-xl font-semibold">Props</h2><p class="mb-4 max-w-3xl text-sm text-muted-foreground">Names and types come from the xgen specs of the source. Standard HTML attributes (id, role, tabIndex, aria-*) pass through to the root element; the class prop is className in React.</p><div class="mb-8"><p class="mb-2 max-w-3xl whitespace-pre-line text-sm text-muted-foreground">The top bar of DashboardShell: the brand (when no sidebar carries it), the links (when there is no sidebar), an optional search field, and the signed-in person.</p><div class="overflow-x-auto" tabindex="0" role="region" aria-label="Props of ShellTopbar"><table class="w-full min-w-[40rem] text-left text-sm"><caption class="sr-only">Props of ShellTopbar</caption> <thead><tr class="border-b border-border"><th scope="col" class="py-2 pr-4 font-medium">Prop</th><th scope="col" class="py-2 pr-4 font-medium">Type</th><th scope="col" class="py-2 pr-4 font-medium">Default</th><th scope="col" class="py-2 font-medium">Description</th></tr></thead> <tbody><tr class="border-b border-border align-top"><th scope="row" class="py-2 pr-4 font-mono text-xs font-medium">nav <span class="font-sans text-muted-foreground">(required)</span></th><td class="py-2 pr-4 font-mono text-xs">ShellNav</td><td class="py-2 pr-4 font-mono text-xs"><span class="text-muted-foreground">-</span></td><td class="py-2 text-muted-foreground">the brand, the links and the texts of the shell</td></tr><tr class="border-b border-border align-top"><th scope="row" class="py-2 pr-4 font-mono text-xs font-medium">brand </th><td class="py-2 pr-4 font-mono text-xs">&#34;show&#34; | &#34;hide&#34;</td><td class="py-2 pr-4 font-mono text-xs">&#34;show&#34;</td><td class="py-2 text-muted-foreground"></td></tr><tr class="border-b border-border align-top"><th scope="row" class="py-2 pr-4 font-mono text-xs font-medium">links </th><td class="py-2 pr-4 font-mono text-xs">&#34;show&#34; | &#34;hide&#34;</td><td class="py-2 pr-4 font-mono text-xs">&#34;hide&#34;</td><td class="py-2 text-muted-foreground"></td></tr><tr class="border-b border-border align-top"><th scope="row" class="py-2 pr-4 font-mono text-xs font-medium">search </th><td class="py-2 pr-4 font-mono text-xs">&#34;show&#34; | &#34;hide&#34;</td><td class="py-2 pr-4 font-mono text-xs">&#34;show&#34;</td><td class="py-2 text-muted-foreground"></td></tr></tbody></table></div></div><h2 class="mb-2 text-xl font-semibold">Used in</h2><ul class="flex flex-wrap gap-x-4 gap-y-1 text-sm"><li><a class="underline" href="/blocks/dashboard-shell/">dashboard-shell</a></li></ul></article></main></div><footer class="border-t border-border"><div class="mx-auto max-w-6xl px-4 py-8 text-sm text-muted-foreground">ui8kit, MIT licence. Static docs generated from markdown and the registry (<a class="underline" href="https://registry.buildy.tw/registry.json">registry.json</a>).</div></footer></body></html>

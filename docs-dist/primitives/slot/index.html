@@ -1,99 +1,99 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Slot (primitive) | ui8kit</title><meta name="description" content="Slot accepts arbitrary props and merges them onto its single child. Props are intentionally permissive (string-keyed) because Slot is a composition primitive — the parent component decides what to forward."><link rel="canonical" href="https://ui.buildy.tw/primitives/slot/"><link rel="stylesheet" href="/assets/site.css"><script src="/assets/app.js" defer></script></head><body class="min-h-screen bg-background text-foreground font-sans"><a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:left-2 focus:top-2 focus:bg-background focus:px-4 focus:py-2 focus:z-50">Skip to content</a><header class="border-b border-border"><div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-4 py-4"><a href="/" class="text-lg font-semibold">ui8kit</a><nav aria-label="Main" class="flex items-center gap-4 text-sm"><a href="/docs/" class="hover:underline">Docs</a> <a href="/docs/categories/blocks-marketing/" class="hover:underline">Blocks</a> <a href="/docs/categories/primitives/" class="hover:underline">Primitives</a> <a href="/docs/cli/" class="hover:underline">CLI</a></nav><form id="search" role="search" class="relative w-full sm:w-72" data-index="/search-index.json"><label for="search-input" class="sr-only">Search components and blocks</label> <input id="search-input" type="search" autocomplete="off" placeholder="Search, press /" class="h-10 w-full rounded border border-input bg-card px-4 text-sm"><ul id="search-results" hidden class="absolute left-0 right-0 top-12 z-40 rounded border border-border bg-popover text-popover-foreground shadow-md" aria-live="polite"></ul></form></div></header><div class="mx-auto flex max-w-6xl flex-col gap-8 px-4 py-8 md:flex-row"><nav aria-label="Docs" class="md:w-64 md:shrink-0"><h2 class="mb-2 text-sm font-semibold">Guides</h2><ul class="mb-6 flex flex-col gap-1"><li><a href="/docs/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Overview</a></li><li><a href="/docs/getting-started/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Getting started</a></li><li><a href="/docs/installation/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Installation</a></li><li><a href="/docs/cli/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">CLI</a></li><li><a href="/docs/theming-skins/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Theming and skins</a></li><li><a href="/docs/grid-8px/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">The 8px grid</a></li></ul><h2 class="mb-2 text-sm font-semibold">Categories</h2><ul class="mb-6 flex flex-col gap-1"><li><a href="/docs/categories/primitives/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Primitives</a></li><li><a href="/docs/categories/components/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Components</a></li><li><a href="/docs/categories/blocks-marketing/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: marketing</a></li><li><a href="/docs/categories/blocks-commerce/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: commerce</a></li><li><a href="/docs/categories/blocks-dashboard/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: dashboard</a></li><li><a href="/docs/categories/blocks-content/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: content</a></li><li><a href="/docs/categories/blocks-account/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: account</a></li><li><a href="/docs/categories/blocks-promo/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: promo</a></li><li><a href="/docs/categories/blocks-support/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: support</a></li><li><a href="/docs/categories/blocks-onboarding/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: onboarding</a></li><li><a href="/docs/categories/blocks-general/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: general</a></li></ul></nav><main id="main" class="min-w-0 flex-1"><article><p class="text-sm text-muted-foreground"><a class="underline" href="/docs/categories/primitives/">primitive / primitives</a></p><h1 class="mb-2 text-3xl font-semibold tracking-tight">Slot</h1><p class="mb-6 max-w-3xl text-muted-foreground">Slot accepts arbitrary props and merges them onto its single child. Props are intentionally permissive (string-keyed) because Slot is a composition primitive — the parent component decides what to forward.</p><h2 class="mb-2 text-xl font-semibold">Install</h2><div class="mb-6 max-w-xl"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="install-slot" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit add slot</code><button type="button" hidden data-copy="install-slot" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><p class="mb-6 text-sm text-muted-foreground">Pulls in:  <a class="underline" href="/lib/utils/">utils</a></p><h2 class="mb-2 text-xl font-semibold">Code</h2><div data-tabs><section id="panel-react" data-panel data-runtime="react" data-label="React" aria-label="React" class="mb-8"><h3 class="mb-2 text-lg font-semibold">React</h3><p class="mb-2 text-sm text-muted-foreground">Point the CLI at this runtime once, then add the item:</p><div class="mb-2"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-react-init" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit init --yes --framework react --dir src --registry-url https://registry.buildy.tw/react --strict-cdn</code><button type="button" hidden data-copy="panel-react-init" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-react-add" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit add slot</code><button type="button" hidden data-copy="panel-react-add" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/slot/slot.tsx</span><button type="button" hidden data-copy="code-react-0" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-react-0" class="font-mono">// Code generated by xgen. DO NOT EDIT.
-// Source: xgen/runtimes/react/assets/slot.tsx
-import {
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Slot (primitive) | ui8kit</title><meta name="description" content="Slot accepts arbitrary props and merges them onto its single child. Props are intentionally permissive (string-keyed) because Slot is a composition primitive — the parent component decides what to forward."><link rel="canonical" href="https://ui.buildy.tw/primitives/slot/"><link rel="stylesheet" href="/assets/site.css"><script src="/assets/app.js" defer></script></head><body class="min-h-screen bg-background text-foreground font-sans"><a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:left-2 focus:top-2 focus:bg-background focus:px-4 focus:py-2 focus:z-50">Skip to content</a><header class="border-b border-border"><div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-4 py-4"><a href="/" class="text-lg font-semibold">ui8kit</a><nav aria-label="Main" class="flex items-center gap-4 text-sm"><a href="/docs/" class="hover:underline">Docs</a> <a href="/docs/categories/blocks-marketing/" class="hover:underline">Blocks</a> <a href="/docs/categories/primitives/" class="hover:underline">Primitives</a> <a href="/docs/cli/" class="hover:underline">CLI</a></nav><form id="search" role="search" class="relative w-full sm:w-72" data-index="/search-index.json"><label for="search-input" class="sr-only">Search components and blocks</label> <input id="search-input" type="search" autocomplete="off" placeholder="Search, press /" class="h-10 w-full rounded border border-input bg-card px-4 text-sm"><ul id="search-results" hidden class="absolute left-0 right-0 top-12 z-40 rounded border border-border bg-popover text-popover-foreground shadow-md" aria-live="polite"></ul></form></div></header><div class="mx-auto flex max-w-6xl flex-col gap-8 px-4 py-8 md:flex-row"><nav aria-label="Docs" class="md:w-64 md:shrink-0"><h2 class="mb-2 text-sm font-semibold">Guides</h2><ul class="mb-6 flex flex-col gap-1"><li><a href="/docs/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Overview</a></li><li><a href="/docs/getting-started/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Getting started</a></li><li><a href="/docs/installation/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Installation</a></li><li><a href="/docs/cli/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">CLI</a></li><li><a href="/docs/theming-skins/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Theming and skins</a></li><li><a href="/docs/grid-8px/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">The 8px grid</a></li></ul><h2 class="mb-2 text-sm font-semibold">Categories</h2><ul class="mb-6 flex flex-col gap-1"><li><a href="/docs/categories/primitives/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Primitives</a></li><li><a href="/docs/categories/components/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Components</a></li><li><a href="/docs/categories/blocks-marketing/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: marketing</a></li><li><a href="/docs/categories/blocks-commerce/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: commerce</a></li><li><a href="/docs/categories/blocks-dashboard/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: dashboard</a></li><li><a href="/docs/categories/blocks-content/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: content</a></li><li><a href="/docs/categories/blocks-account/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: account</a></li><li><a href="/docs/categories/blocks-promo/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: promo</a></li><li><a href="/docs/categories/blocks-support/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: support</a></li><li><a href="/docs/categories/blocks-onboarding/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: onboarding</a></li><li><a href="/docs/categories/blocks-general/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: general</a></li></ul></nav><main id="main" class="min-w-0 flex-1"><article><p class="text-sm text-muted-foreground"><a class="underline" href="/docs/categories/primitives/">primitive / primitives</a></p><h1 class="mb-2 text-3xl font-semibold tracking-tight">Slot</h1><p class="mb-6 max-w-3xl text-muted-foreground">Slot accepts arbitrary props and merges them onto its single child. Props are intentionally permissive (string-keyed) because Slot is a composition primitive — the parent component decides what to forward.</p><h2 class="mb-2 text-xl font-semibold">Install</h2><div class="mb-6 max-w-xl"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="install-slot" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit add slot</code><button type="button" hidden data-copy="install-slot" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><p class="mb-6 text-sm text-muted-foreground">Pulls in:  <a class="underline" href="/lib/utils/">utils</a></p><h2 class="mb-2 text-xl font-semibold">Preview</h2><p class="mb-8 text-sm text-muted-foreground">No static preview for this item: it needs content or a parent that this page cannot supply. The code is below.</p><h2 class="mb-2 text-xl font-semibold">Code</h2><div class="rt mb-8"><div class="rt-bar" role="radiogroup" aria-label="Runtime"><input type="radio" name="rt" id="rt-react" value="react" class="sr-only" checked> <label for="rt-react">React</label></div><section id="panel-react" class="rt-panel" data-runtime="react" aria-label="React code"><p class="mb-2 text-sm text-muted-foreground">Point the CLI at this runtime once, then add the item:</p><div class="mb-2"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-react-init" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit init --yes --framework react --dir src --registry-url https://registry.buildy.tw/react --strict-cdn</code><button type="button" hidden data-copy="panel-react-init" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-react-add" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit add slot</code><button type="button" hidden data-copy="panel-react-add" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/slot/slot.tsx</span><button type="button" hidden data-copy="code-react-0" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="hl max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-react-0" class="font-mono"><span class="c1">// Code generated by xgen. DO NOT EDIT.
+</span><span class="c1">// Source: xgen/runtimes/react/assets/slot.tsx
+</span><span class="kr">import</span> {
   Children,
   cloneElement,
   forwardRef,
   isValidElement,
-  type ComponentProps,
-  type ElementType,
-  type MutableRefObject,
-  type ReactElement,
-  type ReactNode,
-  type Ref,
-} from &#34;react&#34;;
-import { cn } from &#34;../../utils&#34;;
+  <span class="kr">type</span> ComponentProps,
+  <span class="kr">type</span> ElementType,
+  <span class="kr">type</span> MutableRefObject,
+  <span class="kr">type</span> ReactElement,
+  <span class="kr">type</span> ReactNode,
+  <span class="kr">type</span> Ref,
+} <span class="kr">from</span> <span class="s2">&#34;react&#34;</span>;
+<span class="kr">import</span> { cn } <span class="kr">from</span> <span class="s2">&#34;../../utils&#34;</span>;
 
-/**
- * Slot accepts arbitrary props and merges them onto its single child.
- * Props are intentionally permissive (string-keyed) because Slot is a
- * composition primitive — the parent component decides what to forward.
- */
-export type SlotProps = {
-  children?: ReactNode;
-  className?: string;
-  ref?: Ref&lt;HTMLElement&gt;;
-  [key: string]: unknown;
+<span class="cm">/**
+</span><span class="cm"> * Slot accepts arbitrary props and merges them onto its single child.
+</span><span class="cm"> * Props are intentionally permissive (string-keyed) because Slot is a
+</span><span class="cm"> * composition primitive — the parent component decides what to forward.
+</span><span class="cm"> */</span>
+<span class="kr">export</span> <span class="kr">type</span> SlotProps = {
+  children?: <span class="kt">ReactNode</span>;
+  className?: <span class="kt">string</span>;
+  ref?: <span class="kt">Ref</span>&lt;<span class="nt">HTMLElement</span>&gt;;
+  [key: <span class="kt">string</span>]: <span class="kt">unknown</span>;
 };
 
-function mergeRefs&lt;T&gt;(...refs: (Ref&lt;T&gt; | undefined)[]) {
-  return (node: T) =&gt; {
-    for (const r of refs) {
-      if (typeof r === &#34;function&#34;) {
+<span class="kd">function</span> mergeRefs&lt;<span class="nt">T</span>&gt;(...refs: (Ref&lt;<span class="nt">T</span>&gt; | <span class="kc">undefined</span>)[]) {
+  <span class="k">return</span> (node: <span class="kt">T</span>) =&gt; {
+    <span class="k">for</span> (<span class="kr">const</span> r <span class="k">of</span> refs) {
+      <span class="k">if</span> (<span class="k">typeof</span> r === <span class="s2">&#34;function&#34;</span>) {
         r(node);
-      } else if (r &amp;&amp; typeof r === &#34;object&#34;) {
-        (r as MutableRefObject&lt;T&gt;).current = node;
+      } <span class="k">else</span> <span class="k">if</span> (r &amp;&amp; <span class="k">typeof</span> r === <span class="s2">&#34;object&#34;</span>) {
+        (r <span class="kr">as</span> MutableRefObject&lt;<span class="nt">T</span>&gt;).current = node;
       }
     }
   };
 }
 
-function isEventHandler(key: string, value: unknown): value is (...args: unknown[]) =&gt; void {
-  return key.startsWith(&#34;on&#34;) &amp;&amp; typeof value === &#34;function&#34;;
+<span class="kd">function</span> isEventHandler(key: <span class="kt">string</span>, value: <span class="kt">unknown</span>): value <span class="k">is</span> (...args: <span class="kt">unknown</span>[]) =&gt; <span class="k">void</span> {
+  <span class="k">return</span> key.startsWith(<span class="s2">&#34;on&#34;</span>) &amp;&amp; <span class="k">typeof</span> value === <span class="s2">&#34;function&#34;</span>;
 }
 
-/**
- * Slot merges its props onto its single child element (Radix-style `asChild`).
- *
- * - `className` is merged via `cn` (clsx + tailwind-merge), so caller classes win.
- * - `ref` is merged with the child&#39;s own ref.
- * - `on*` event handlers fire child-first, then slot&#39;s.
- * - Other props from slot override child&#39;s (slot wins).
- *
- * Use this to compose components: `&lt;Button asChild&gt;&lt;a href=&#34;/x&#34;&gt;x&lt;/a&gt;&lt;/Button&gt;`.
- */
-export const Slot = forwardRef&lt;HTMLElement, SlotProps&gt;(function Slot(
+<span class="cm">/**
+</span><span class="cm"> * Slot merges its props onto its single child element (Radix-style `asChild`).
+</span><span class="cm"> *
+</span><span class="cm"> * - `className` is merged via `cn` (clsx + tailwind-merge), so caller classes win.
+</span><span class="cm"> * - `ref` is merged with the child&#39;s own ref.
+</span><span class="cm"> * - `on*` event handlers fire child-first, then slot&#39;s.
+</span><span class="cm"> * - Other props from slot override child&#39;s (slot wins).
+</span><span class="cm"> *
+</span><span class="cm"> * Use this to compose components: `&lt;Button asChild&gt;&lt;a href=&#34;/x&#34;&gt;x&lt;/a&gt;&lt;/Button&gt;`.
+</span><span class="cm"> */</span>
+<span class="kr">export</span> <span class="kr">const</span> Slot = forwardRef&lt;<span class="nt">HTMLElement</span>, <span class="na">SlotProps</span>&gt;(<span class="kd">function</span> Slot(
   { children, className, ...rest },
   ref
 ) {
-  const child = Children.toArray(children as ReactNode[])[0] as ReactNode;
-  if (!isValidElement(child)) {
-    return null;
+  <span class="kr">const</span> child = Children.toArray(children <span class="kr">as</span> ReactNode[])[<span class="mi">0</span>] <span class="kr">as</span> ReactNode;
+  <span class="k">if</span> (!isValidElement(child)) {
+    <span class="k">return</span> <span class="kc">null</span>;
   }
 
-  const childProps = (child as ReactElement&lt;Record&lt;string, unknown&gt;&gt;).props;
-  const childRef = (childProps as { ref?: Ref&lt;HTMLElement&gt; }).ref as Ref&lt;HTMLElement&gt; | undefined;
+  <span class="kr">const</span> childProps = (child <span class="kr">as</span> ReactElement&lt;<span class="nt">Record</span>&lt;<span class="nt">string</span>, <span class="na">unknown</span>&gt;&gt;).props;
+  <span class="kr">const</span> childRef = (childProps <span class="kr">as</span> { ref?: <span class="kt">Ref</span>&lt;<span class="nt">HTMLElement</span>&gt; }).ref <span class="kr">as</span> Ref&lt;<span class="nt">HTMLElement</span>&gt; | <span class="kc">undefined</span>;
 
-  const merged: Record&lt;string, unknown&gt; = { ...childProps };
-  for (const [key, value] of Object.entries(rest)) {
-    if (isEventHandler(key, value)) {
-      const slotHandler = value;
-      const childHandler = childProps[key];
-      if (typeof childHandler === &#34;function&#34;) {
-        merged[key] = (...args: unknown[]) =&gt; {
-          (childHandler as (...a: unknown[]) =&gt; void)(...args);
+  <span class="kr">const</span> merged: <span class="kt">Record</span>&lt;<span class="nt">string</span>, <span class="na">unknown</span>&gt; = { ...childProps };
+  <span class="k">for</span> (<span class="kr">const</span> [key, value] <span class="k">of</span> <span class="nb">Object</span>.entries(rest)) {
+    <span class="k">if</span> (isEventHandler(key, value)) {
+      <span class="kr">const</span> slotHandler = value;
+      <span class="kr">const</span> childHandler = childProps[key];
+      <span class="k">if</span> (<span class="k">typeof</span> childHandler === <span class="s2">&#34;function&#34;</span>) {
+        merged[key] = (...args: <span class="kt">unknown</span>[]) =&gt; {
+          (childHandler <span class="kr">as</span> (...a: <span class="kt">unknown</span>[]) =&gt; <span class="k">void</span>)(...args);
           slotHandler(...args);
         };
-      } else {
+      } <span class="k">else</span> {
         merged[key] = slotHandler;
       }
-    } else if (value !== undefined) {
+    } <span class="k">else</span> <span class="k">if</span> (value !== <span class="kc">undefined</span>) {
       merged[key] = value;
     }
   }
 
-  const childClassName =
-    typeof childProps.className === &#34;string&#34; ? childProps.className : undefined;
-  merged.className = cn(String(className ?? &#34;&#34;), childClassName);
+  <span class="kr">const</span> childClassName =
+    <span class="k">typeof</span> childProps.className === <span class="s2">&#34;string&#34;</span> ? childProps.className : <span class="kt">undefined</span>;
+  merged.className = cn(<span class="nb">String</span>(className ?? <span class="s2">&#34;&#34;</span>), childClassName);
   merged.ref = mergeRefs(ref, childRef);
 
-  return cloneElement(child as ReactElement&lt;Record&lt;string, unknown&gt;&gt;, merged);
+  <span class="k">return</span> cloneElement(child <span class="kr">as</span> ReactElement&lt;<span class="nt">Record</span>&lt;<span class="nt">string</span>, <span class="na">unknown</span>&gt;&gt;, merged);
 });
 
-Slot.displayName = &#34;Slot&#34;;
+Slot.displayName = <span class="s2">&#34;Slot&#34;</span>;
 
-export type SlotChildProps&lt;C extends ElementType&gt; = ComponentProps&lt;C&gt; &amp; {
-  asChild?: boolean;
-  children?: ReactNode;
+<span class="kr">export</span> <span class="kr">type</span> SlotChildProps&lt;<span class="nt">C</span> <span class="na">extends</span> <span class="na">ElementType</span>&gt; = ComponentProps&lt;<span class="nt">C</span>&gt; &amp; {
+  asChild?: <span class="kt">boolean</span>;
+  children?: <span class="kt">ReactNode</span>;
 };
-</code></pre></div><p class="text-sm"><a class="underline" href="https://registry.buildy.tw/react/components/ui/slot.json">React registry item (JSON)</a></p></section></div></article></main></div><footer class="border-t border-border"><div class="mx-auto max-w-6xl px-4 py-8 text-sm text-muted-foreground">ui8kit, MIT licence. Static docs generated from markdown and the registry (<a class="underline" href="https://registry.buildy.tw/registry.json">registry.json</a>).</div></footer></body></html>
+</code></pre></div><p class="text-sm"><a class="underline" href="https://registry.buildy.tw/react/components/ui/slot.json">React registry item (JSON)</a></p></section></div><h2 class="mb-2 text-xl font-semibold">Props</h2><p class="mb-4 max-w-3xl text-sm text-muted-foreground">Names and types come from the xgen specs of the source. Standard HTML attributes (id, role, tabIndex, aria-*) pass through to the root element; the class prop is className in React.</p><p class="mb-8 text-sm text-muted-foreground">No props data for this item.</p></article></main></div><footer class="border-t border-border"><div class="mx-auto max-w-6xl px-4 py-8 text-sm text-muted-foreground">ui8kit, MIT licence. Static docs generated from markdown and the registry (<a class="underline" href="https://registry.buildy.tw/registry.json">registry.json</a>).</div></footer></body></html>

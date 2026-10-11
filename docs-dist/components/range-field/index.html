@@ -1,116 +1,116 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Range Field (component) | ui8kit</title><meta name="description" content="Range Field component"><link rel="canonical" href="https://ui.buildy.tw/components/range-field/"><link rel="stylesheet" href="/assets/site.css"><script src="/assets/app.js" defer></script></head><body class="min-h-screen bg-background text-foreground font-sans"><a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:left-2 focus:top-2 focus:bg-background focus:px-4 focus:py-2 focus:z-50">Skip to content</a><header class="border-b border-border"><div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-4 py-4"><a href="/" class="text-lg font-semibold">ui8kit</a><nav aria-label="Main" class="flex items-center gap-4 text-sm"><a href="/docs/" class="hover:underline">Docs</a> <a href="/docs/categories/blocks-marketing/" class="hover:underline">Blocks</a> <a href="/docs/categories/primitives/" class="hover:underline">Primitives</a> <a href="/docs/cli/" class="hover:underline">CLI</a></nav><form id="search" role="search" class="relative w-full sm:w-72" data-index="/search-index.json"><label for="search-input" class="sr-only">Search components and blocks</label> <input id="search-input" type="search" autocomplete="off" placeholder="Search, press /" class="h-10 w-full rounded border border-input bg-card px-4 text-sm"><ul id="search-results" hidden class="absolute left-0 right-0 top-12 z-40 rounded border border-border bg-popover text-popover-foreground shadow-md" aria-live="polite"></ul></form></div></header><div class="mx-auto flex max-w-6xl flex-col gap-8 px-4 py-8 md:flex-row"><nav aria-label="Docs" class="md:w-64 md:shrink-0"><h2 class="mb-2 text-sm font-semibold">Guides</h2><ul class="mb-6 flex flex-col gap-1"><li><a href="/docs/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Overview</a></li><li><a href="/docs/getting-started/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Getting started</a></li><li><a href="/docs/installation/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Installation</a></li><li><a href="/docs/cli/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">CLI</a></li><li><a href="/docs/theming-skins/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Theming and skins</a></li><li><a href="/docs/grid-8px/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">The 8px grid</a></li></ul><h2 class="mb-2 text-sm font-semibold">Categories</h2><ul class="mb-6 flex flex-col gap-1"><li><a href="/docs/categories/primitives/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Primitives</a></li><li><a href="/docs/categories/components/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Components</a></li><li><a href="/docs/categories/blocks-marketing/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: marketing</a></li><li><a href="/docs/categories/blocks-commerce/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: commerce</a></li><li><a href="/docs/categories/blocks-dashboard/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: dashboard</a></li><li><a href="/docs/categories/blocks-content/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: content</a></li><li><a href="/docs/categories/blocks-account/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: account</a></li><li><a href="/docs/categories/blocks-promo/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: promo</a></li><li><a href="/docs/categories/blocks-support/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: support</a></li><li><a href="/docs/categories/blocks-onboarding/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: onboarding</a></li><li><a href="/docs/categories/blocks-general/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: general</a></li></ul></nav><main id="main" class="min-w-0 flex-1"><article><p class="text-sm text-muted-foreground"><a class="underline" href="/docs/categories/components/">component / components</a></p><h1 class="mb-2 text-3xl font-semibold tracking-tight">Range Field</h1><p class="mb-6 max-w-3xl text-muted-foreground">Range Field component</p><h2 class="mb-2 text-xl font-semibold">Install</h2><div class="mb-6 max-w-xl"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="install-range-field" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit add range-field</code><button type="button" hidden data-copy="install-range-field" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><p class="mb-6 text-sm text-muted-foreground">Pulls in:  <a class="underline" href="/primitives/block/">block</a><span>, </span> <a class="underline" href="/primitives/inline/">inline</a><span>, </span> <a class="underline" href="/primitives/input/">input</a><span>, </span> <a class="underline" href="/primitives/range/">range</a><span>, </span> <a class="underline" href="/lib/utils/">utils</a></p><h2 class="mb-2 text-xl font-semibold">Code</h2><div data-tabs><section id="panel-svelte" data-panel data-runtime="svelte" data-label="Svelte" aria-label="Svelte" class="mb-8"><h3 class="mb-2 text-lg font-semibold">Svelte</h3><p class="mb-2 text-sm text-muted-foreground">Point the CLI at this runtime once, then add the item:</p><div class="mb-2"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-svelte-init" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit init --yes --framework svelte --dir src --registry-url https://registry.buildy.tw/svelte --strict-cdn</code><button type="button" hidden data-copy="panel-svelte-init" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-svelte-add" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit add range-field</code><button type="button" hidden data-copy="panel-svelte-add" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">components/range-field.svelte</span><button type="button" hidden data-copy="code-svelte-0" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-svelte-0" class="font-mono">&lt;!-- Code generated by xgen. DO NOT EDIT. --&gt;
-&lt;!-- Source: xgen/screens/src/authoring/components/parts.ts --&gt;
-&lt;!--
-  A from–to pair for numbers or dates (price range, period). Empty means an open end. With numeric bounds two
-  sliders sit above the inputs. Each control has its own accessible name; every change reports both ends.
---&gt;
-&lt;script lang=&#34;ts&#34; module&gt;
-  import type { Snippet } from &#34;svelte&#34;;
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Range Field (component) | ui8kit</title><meta name="description" content="Range Field component"><link rel="canonical" href="https://ui.buildy.tw/components/range-field/"><link rel="stylesheet" href="/assets/site.css"><script src="/assets/app.js" defer></script></head><body class="min-h-screen bg-background text-foreground font-sans"><a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:left-2 focus:top-2 focus:bg-background focus:px-4 focus:py-2 focus:z-50">Skip to content</a><header class="border-b border-border"><div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-4 py-4"><a href="/" class="text-lg font-semibold">ui8kit</a><nav aria-label="Main" class="flex items-center gap-4 text-sm"><a href="/docs/" class="hover:underline">Docs</a> <a href="/docs/categories/blocks-marketing/" class="hover:underline">Blocks</a> <a href="/docs/categories/primitives/" class="hover:underline">Primitives</a> <a href="/docs/cli/" class="hover:underline">CLI</a></nav><form id="search" role="search" class="relative w-full sm:w-72" data-index="/search-index.json"><label for="search-input" class="sr-only">Search components and blocks</label> <input id="search-input" type="search" autocomplete="off" placeholder="Search, press /" class="h-10 w-full rounded border border-input bg-card px-4 text-sm"><ul id="search-results" hidden class="absolute left-0 right-0 top-12 z-40 rounded border border-border bg-popover text-popover-foreground shadow-md" aria-live="polite"></ul></form></div></header><div class="mx-auto flex max-w-6xl flex-col gap-8 px-4 py-8 md:flex-row"><nav aria-label="Docs" class="md:w-64 md:shrink-0"><h2 class="mb-2 text-sm font-semibold">Guides</h2><ul class="mb-6 flex flex-col gap-1"><li><a href="/docs/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Overview</a></li><li><a href="/docs/getting-started/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Getting started</a></li><li><a href="/docs/installation/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Installation</a></li><li><a href="/docs/cli/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">CLI</a></li><li><a href="/docs/theming-skins/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Theming and skins</a></li><li><a href="/docs/grid-8px/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">The 8px grid</a></li></ul><h2 class="mb-2 text-sm font-semibold">Categories</h2><ul class="mb-6 flex flex-col gap-1"><li><a href="/docs/categories/primitives/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Primitives</a></li><li><a href="/docs/categories/components/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Components</a></li><li><a href="/docs/categories/blocks-marketing/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: marketing</a></li><li><a href="/docs/categories/blocks-commerce/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: commerce</a></li><li><a href="/docs/categories/blocks-dashboard/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: dashboard</a></li><li><a href="/docs/categories/blocks-content/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: content</a></li><li><a href="/docs/categories/blocks-account/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: account</a></li><li><a href="/docs/categories/blocks-promo/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: promo</a></li><li><a href="/docs/categories/blocks-support/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: support</a></li><li><a href="/docs/categories/blocks-onboarding/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: onboarding</a></li><li><a href="/docs/categories/blocks-general/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: general</a></li></ul></nav><main id="main" class="min-w-0 flex-1"><article><p class="text-sm text-muted-foreground"><a class="underline" href="/docs/categories/components/">component / components</a></p><h1 class="mb-2 text-3xl font-semibold tracking-tight">Range Field</h1><p class="mb-6 max-w-3xl text-muted-foreground">Range Field component</p><h2 class="mb-2 text-xl font-semibold">Install</h2><div class="mb-6 max-w-xl"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="install-range-field" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit add range-field</code><button type="button" hidden data-copy="install-range-field" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><p class="mb-6 text-sm text-muted-foreground">Pulls in:  <a class="underline" href="/primitives/block/">block</a><span>, </span> <a class="underline" href="/primitives/inline/">inline</a><span>, </span> <a class="underline" href="/primitives/input/">input</a><span>, </span> <a class="underline" href="/primitives/range/">range</a><span>, </span> <a class="underline" href="/lib/utils/">utils</a></p><h2 class="mb-2 text-xl font-semibold">Preview</h2><p class="mb-8 text-sm text-muted-foreground">No static preview for this item: it needs content or a parent that this page cannot supply. The code is below.</p><h2 class="mb-2 text-xl font-semibold">Code</h2><div class="rt mb-8"><div class="rt-bar" role="radiogroup" aria-label="Runtime"><input type="radio" name="rt" id="rt-svelte" value="svelte" class="sr-only" checked> <label for="rt-svelte">Svelte</label><input type="radio" name="rt" id="rt-react" value="react" class="sr-only"> <label for="rt-react">React</label><input type="radio" name="rt" id="rt-vue" value="vue" class="sr-only"> <label for="rt-vue">Vue</label></div><section id="panel-svelte" class="rt-panel" data-runtime="svelte" aria-label="Svelte code"><p class="mb-2 text-sm text-muted-foreground">Point the CLI at this runtime once, then add the item:</p><div class="mb-2"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-svelte-init" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit init --yes --framework svelte --dir src --registry-url https://registry.buildy.tw/svelte --strict-cdn</code><button type="button" hidden data-copy="panel-svelte-init" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-svelte-add" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit add range-field</code><button type="button" hidden data-copy="panel-svelte-add" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">components/range-field.svelte</span><button type="button" hidden data-copy="code-svelte-0" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="hl max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-svelte-0" class="font-mono"><span class="c">&lt;!-- Code generated by xgen. DO NOT EDIT. --&gt;</span>
+<span class="c">&lt;!-- Source: xgen/screens/src/authoring/components/parts.ts --&gt;</span>
+<span class="c">&lt;!--
+</span><span class="c">  A from–to pair for numbers or dates (price range, period). Empty means an open end. With numeric bounds two
+</span><span class="c">  sliders sit above the inputs. Each control has its own accessible name; every change reports both ends.
+</span><span class="c">--&gt;</span>
+&lt;<span class="nt">script</span> <span class="na">lang</span>=<span class="s">&#34;ts&#34;</span> <span class="na">module</span>&gt;
+  <span class="kr">import</span> <span class="kr">type</span> { Snippet } <span class="kr">from</span> <span class="s2">&#34;svelte&#34;</span>;
 
-  export type RangeFieldProps = {
-    type: &#34;number&#34; | &#34;date&#34;;
-    from: string;
-    to: string;
-    fromLabel: string;
-    toLabel: string;
-    min?: number;
-    max?: number;
-    class?: string;
-    onchange?: (from: string, to: string) =&gt; void;
+  <span class="kr">export</span> <span class="kr">type</span> RangeFieldProps = {
+    <span class="kr">type</span>: <span class="s2">&#34;number&#34;</span> | <span class="s2">&#34;date&#34;</span>;
+    <span class="kr">from</span>: <span class="kt">string</span>;
+    to: <span class="kt">string</span>;
+    fromLabel: <span class="kt">string</span>;
+    toLabel: <span class="kt">string</span>;
+    min?: <span class="kt">number</span>;
+    max?: <span class="kt">number</span>;
+    <span class="kr">class</span>?: <span class="kt">string</span>;
+    onchange?: (<span class="kr">from</span>: <span class="kt">string</span>, to: <span class="kt">string</span>) =&gt; <span class="k">void</span>;
   };
-&lt;/script&gt;
+&lt;/<span class="nt">script</span>&gt;
 
-&lt;script lang=&#34;ts&#34;&gt;
-  import Block from &#34;../primitives/block/block.svelte&#34;;
-  import Inline from &#34;../primitives/inline/inline.svelte&#34;;
-  import Input from &#34;../primitives/input/input.svelte&#34;;
-  import Range from &#34;../primitives/range/range.svelte&#34;;
-  import { cn } from &#34;../utils&#34;;
+&lt;<span class="nt">script</span> <span class="na">lang</span>=<span class="s">&#34;ts&#34;</span>&gt;
+  <span class="kr">import</span> Block <span class="kr">from</span> <span class="s2">&#34;../primitives/block/block.svelte&#34;</span>;
+  <span class="kr">import</span> Inline <span class="kr">from</span> <span class="s2">&#34;../primitives/inline/inline.svelte&#34;</span>;
+  <span class="kr">import</span> Input <span class="kr">from</span> <span class="s2">&#34;../primitives/input/input.svelte&#34;</span>;
+  <span class="kr">import</span> Range <span class="kr">from</span> <span class="s2">&#34;../primitives/range/range.svelte&#34;</span>;
+  <span class="kr">import</span> { cn } <span class="kr">from</span> <span class="s2">&#34;../utils&#34;</span>;
 
-  let {
-    type,
-    from,
+  <span class="kd">let</span> {
+    <span class="kr">type</span>,
+    <span class="kr">from</span>,
     to,
     fromLabel,
     toLabel,
     min,
     max,
-    class: className,
+    <span class="kr">class</span>: className,
     onchange,
   }: RangeFieldProps = $props();
-&lt;/script&gt;
+&lt;/<span class="nt">script</span>&gt;
 
-&lt;Block class={cn(&#34;flex flex-col gap-2&#34;, className)} data-slot=&#34;range-field&#34;&gt;
-  {#if (((type as string) === &#34;number&#34;) &amp;&amp; (min != null) &amp;&amp; (max != null) &amp;&amp; (min &lt; max))}
-    &lt;Range
-      min={min}
-      max={max}
-      aria-label={fromLabel}
-      value={(((from as string) === &#34;&#34;) ? (min == null ? undefined : String(min)) : from)}
-      data-testid=&#34;range-from&#34;
-      oninput={(event: Event &amp; { currentTarget: HTMLInputElement }) =&gt; onchange?.(event.currentTarget.value, to)}
-    /&gt;
-    &lt;Range
-      min={min}
-      max={max}
-      aria-label={toLabel}
-      value={(((to as string) === &#34;&#34;) ? (max == null ? undefined : String(max)) : to)}
-      data-testid=&#34;range-to&#34;
-      oninput={(event: Event &amp; { currentTarget: HTMLInputElement }) =&gt; onchange?.(from, event.currentTarget.value)}
-    /&gt;
-  {/if}
-  &lt;Inline class=&#34;flex items-center gap-2&#34;&gt;
-    &lt;Input
-      type={type}
-      size=&#34;sm&#34;
-      aria-label={fromLabel}
-      value={from}
-      min={(min == null ? undefined : String(min))}
-      max={(max == null ? undefined : String(max))}
-      oninput={(event: Event &amp; { currentTarget: HTMLInputElement }) =&gt; onchange?.(event.currentTarget.value, to)}
-    /&gt;
-    &lt;Inline class=&#34;text-muted-foreground&#34;&gt;
-      {&#34;–&#34;}
-    &lt;/Inline&gt;
-    &lt;Input
-      type={type}
-      size=&#34;sm&#34;
-      aria-label={toLabel}
-      value={to}
-      min={(min == null ? undefined : String(min))}
-      max={(max == null ? undefined : String(max))}
-      oninput={(event: Event &amp; { currentTarget: HTMLInputElement }) =&gt; onchange?.(from, event.currentTarget.value)}
-    /&gt;
-  &lt;/Inline&gt;
-&lt;/Block&gt;
-</code></pre></div><p class="text-sm"><a class="underline" href="https://registry.buildy.tw/svelte/components/range-field.json">Svelte registry item (JSON)</a></p></section><section id="panel-react" data-panel data-runtime="react" data-label="React" aria-label="React" class="mb-8"><h3 class="mb-2 text-lg font-semibold">React</h3><p class="mb-2 text-sm text-muted-foreground">Point the CLI at this runtime once, then add the item:</p><div class="mb-2"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-react-init" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit init --yes --framework react --dir src --registry-url https://registry.buildy.tw/react --strict-cdn</code><button type="button" hidden data-copy="panel-react-init" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-react-add" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit add range-field</code><button type="button" hidden data-copy="panel-react-add" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">components/range-field.tsx</span><button type="button" hidden data-copy="code-react-0" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-react-0" class="font-mono">// Code generated by xgen. DO NOT EDIT.
-// Source: xgen/screens/src/authoring/components/parts.ts
-/**
- * A from–to pair for numbers or dates (price range, period). Empty means an open end. With numeric bounds two
- * sliders sit above the inputs. Each control has its own accessible name; every change reports both ends.
- */
-import { type ChangeEvent, type ReactNode } from &#34;react&#34;;
-import { Block } from &#34;../primitives/block/block&#34;;
-import { Inline } from &#34;../primitives/inline/inline&#34;;
-import { Input } from &#34;../primitives/input/input&#34;;
-import { Range } from &#34;../primitives/range/range&#34;;
-import { cn } from &#34;../utils&#34;;
+&lt;<span class="nt">Block</span> <span class="na">class</span>={cn(<span class="s2">&#34;flex flex-col gap-2&#34;</span>, className)} <span class="s">data-slot=&#34;range-field&#34;</span>&gt;
+  {<span class="k">#if</span> (((<span class="kr">type</span> <span class="kr">as</span> <span class="kt">string</span>) === <span class="s2">&#34;number&#34;</span>) &amp;&amp; (min != <span class="kc">null</span>) &amp;&amp; (max != <span class="kc">null</span>) &amp;&amp; (min &lt; max))}
+    &lt;<span class="nt">Range</span>
+      <span class="na">min</span>={min}
+      <span class="s">max=</span>{max}
+      <span class="na">aria-label</span>={fromLabel}
+      <span class="s">value=</span>{(((<span class="kr">from</span> <span class="kr">as</span> <span class="kt">string</span>) === <span class="s2">&#34;&#34;</span>) ? (min == <span class="kc">null</span> ? <span class="kc">undefined</span> : <span class="nb">String</span>(min)) : <span class="kr">from</span>)}
+      <span class="na">data-testid</span>=<span class="s">&#34;range-from&#34;</span>
+      <span class="na">oninput</span>={(event: <span class="kt">Event</span> &amp; { currentTarget: <span class="kt">HTMLInputElement</span> }) =&gt; onchange?.(event.currentTarget.value, to)}
+    <span class="s">/</span>&gt;
+    &lt;<span class="nt">Range</span>
+      <span class="na">min</span>={min}
+      <span class="s">max=</span>{max}
+      <span class="na">aria-label</span>={toLabel}
+      <span class="s">value=</span>{(((to <span class="kr">as</span> <span class="kt">string</span>) === <span class="s2">&#34;&#34;</span>) ? (max == <span class="kc">null</span> ? <span class="kc">undefined</span> : <span class="nb">String</span>(max)) : to)}
+      <span class="na">data-testid</span>=<span class="s">&#34;range-to&#34;</span>
+      <span class="na">oninput</span>={(event: <span class="kt">Event</span> &amp; { currentTarget: <span class="kt">HTMLInputElement</span> }) =&gt; onchange?.(<span class="kr">from</span>, event.currentTarget.value)}
+    <span class="s">/</span>&gt;
+  {<span class="k">/if</span>}
+  &lt;<span class="nt">Inline</span> <span class="na">class</span>=<span class="s">&#34;flex items-center gap-2&#34;</span>&gt;
+    &lt;<span class="nt">Input</span>
+      <span class="na">type</span>={<span class="kr">type</span>}
+      <span class="s">size=&#34;sm&#34;</span>
+      <span class="na">aria-label</span>={fromLabel}
+      <span class="s">value=</span>{<span class="kr">from</span>}
+      <span class="na">min</span>={(min == <span class="kc">null</span> ? <span class="kc">undefined</span> : <span class="nb">String</span>(min))}
+      <span class="s">max=</span>{(max == <span class="kc">null</span> ? <span class="kc">undefined</span> : <span class="nb">String</span>(max))}
+      <span class="na">oninput</span>={(event: <span class="kt">Event</span> &amp; { currentTarget: <span class="kt">HTMLInputElement</span> }) =&gt; onchange?.(event.currentTarget.value, to)}
+    <span class="s">/</span>&gt;
+    &lt;<span class="nt">Inline</span> <span class="na">class</span>=<span class="s">&#34;text-muted-foreground&#34;</span>&gt;
+      {<span class="s2">&#34;–&#34;</span>}
+    &lt;/<span class="nt">Inline</span>&gt;
+    &lt;<span class="nt">Input</span>
+      <span class="na">type</span>={<span class="kr">type</span>}
+      <span class="s">size=&#34;sm&#34;</span>
+      <span class="na">aria-label</span>={toLabel}
+      <span class="s">value=</span>{to}
+      <span class="na">min</span>={(min == <span class="kc">null</span> ? <span class="kc">undefined</span> : <span class="nb">String</span>(min))}
+      <span class="s">max=</span>{(max == <span class="kc">null</span> ? <span class="kc">undefined</span> : <span class="nb">String</span>(max))}
+      <span class="na">oninput</span>={(event: <span class="kt">Event</span> &amp; { currentTarget: <span class="kt">HTMLInputElement</span> }) =&gt; onchange?.(<span class="kr">from</span>, event.currentTarget.value)}
+    <span class="s">/</span>&gt;
+  &lt;/<span class="nt">Inline</span>&gt;
+&lt;/<span class="nt">Block</span>&gt;
+</code></pre></div><p class="text-sm"><a class="underline" href="https://registry.buildy.tw/svelte/components/range-field.json">Svelte registry item (JSON)</a></p></section><section id="panel-react" class="rt-panel" data-runtime="react" aria-label="React code"><p class="mb-2 text-sm text-muted-foreground">Point the CLI at this runtime once, then add the item:</p><div class="mb-2"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-react-init" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit init --yes --framework react --dir src --registry-url https://registry.buildy.tw/react --strict-cdn</code><button type="button" hidden data-copy="panel-react-init" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-react-add" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit add range-field</code><button type="button" hidden data-copy="panel-react-add" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">components/range-field.tsx</span><button type="button" hidden data-copy="code-react-0" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="hl max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-react-0" class="font-mono"><span class="c1">// Code generated by xgen. DO NOT EDIT.
+</span><span class="c1">// Source: xgen/screens/src/authoring/components/parts.ts
+</span><span class="cm">/**
+</span><span class="cm"> * A from–to pair for numbers or dates (price range, period). Empty means an open end. With numeric bounds two
+</span><span class="cm"> * sliders sit above the inputs. Each control has its own accessible name; every change reports both ends.
+</span><span class="cm"> */</span>
+<span class="kr">import</span> { <span class="kr">type</span> ChangeEvent, <span class="kr">type</span> ReactNode } <span class="kr">from</span> <span class="s2">&#34;react&#34;</span>;
+<span class="kr">import</span> { Block } <span class="kr">from</span> <span class="s2">&#34;../primitives/block/block&#34;</span>;
+<span class="kr">import</span> { Inline } <span class="kr">from</span> <span class="s2">&#34;../primitives/inline/inline&#34;</span>;
+<span class="kr">import</span> { Input } <span class="kr">from</span> <span class="s2">&#34;../primitives/input/input&#34;</span>;
+<span class="kr">import</span> { Range } <span class="kr">from</span> <span class="s2">&#34;../primitives/range/range&#34;</span>;
+<span class="kr">import</span> { cn } <span class="kr">from</span> <span class="s2">&#34;../utils&#34;</span>;
 
-export type RangeFieldProps = {
-  type: &#34;number&#34; | &#34;date&#34;;
-  from: string;
-  to: string;
-  fromLabel: string;
-  toLabel: string;
-  min?: number;
-  max?: number;
-  className?: string;
-  onChange?: (from: string, to: string) =&gt; void;
+<span class="kr">export</span> <span class="kr">type</span> RangeFieldProps = {
+  <span class="kr">type</span>: <span class="s2">&#34;number&#34;</span> | <span class="s2">&#34;date&#34;</span>;
+  <span class="kr">from</span>: <span class="kt">string</span>;
+  to: <span class="kt">string</span>;
+  fromLabel: <span class="kt">string</span>;
+  toLabel: <span class="kt">string</span>;
+  min?: <span class="kt">number</span>;
+  max?: <span class="kt">number</span>;
+  className?: <span class="kt">string</span>;
+  onChange?: (<span class="kr">from</span>: <span class="kt">string</span>, to: <span class="kt">string</span>) =&gt; <span class="k">void</span>;
 };
 
-export function RangeField({
-  type,
-  from,
+<span class="kr">export</span> <span class="kd">function</span> RangeField({
+  <span class="kr">type</span>,
+  <span class="kr">from</span>,
   to,
   fromLabel,
   toLabel,
@@ -119,127 +119,127 @@ export function RangeField({
   className,
   onChange,
 }: RangeFieldProps) {
-  return (
-    &lt;Block className={cn(&#34;flex flex-col gap-2&#34;, className)} data-slot=&#34;range-field&#34;&gt;
-      {(((type as string) === &#34;number&#34;) &amp;&amp; (min != null) &amp;&amp; (max != null) &amp;&amp; (min &lt; max)) ? (
+  <span class="k">return</span> (
+    &lt;<span class="nt">Block</span> <span class="na">className</span>={cn(<span class="s2">&#34;flex flex-col gap-2&#34;</span>, className)} <span class="na">data-slot</span>=<span class="s">&#34;range-field&#34;</span>&gt;
+      {(((<span class="kr">type</span> <span class="kr">as</span> <span class="kt">string</span>) === <span class="s2">&#34;number&#34;</span>) &amp;&amp; (min != <span class="kc">null</span>) &amp;&amp; (max != <span class="kc">null</span>) &amp;&amp; (min &lt; max)) ? (
         &lt;&gt;
-          &lt;Range
-            min={min}
-            max={max}
-            aria-label={fromLabel}
-            value={(((from as string) === &#34;&#34;) ? (min == null ? undefined : String(min)) : from)}
-            data-testid=&#34;range-from&#34;
-            onChange={(event: ChangeEvent&lt;HTMLInputElement&gt;) =&gt; onChange?.(event.currentTarget.value, to)}
+          &lt;<span class="nt">Range</span>
+            <span class="na">min</span>={min}
+            <span class="na">max</span>={max}
+            <span class="na">aria-label</span>={fromLabel}
+            <span class="na">value</span>={(((<span class="kr">from</span> <span class="kr">as</span> <span class="kt">string</span>) === <span class="s2">&#34;&#34;</span>) ? (min == <span class="kc">null</span> ? <span class="kc">undefined</span> : <span class="nb">String</span>(min)) : <span class="kr">from</span>)}
+            <span class="na">data-testid</span>=<span class="s">&#34;range-from&#34;</span>
+            <span class="na">onChange</span>={(event: <span class="kt">ChangeEvent</span>&lt;<span class="nt">HTMLInputElement</span>&gt;) =&gt; onChange?.(event.currentTarget.value, to)}
           /&gt;
-          &lt;Range
-            min={min}
-            max={max}
-            aria-label={toLabel}
-            value={(((to as string) === &#34;&#34;) ? (max == null ? undefined : String(max)) : to)}
-            data-testid=&#34;range-to&#34;
-            onChange={(event: ChangeEvent&lt;HTMLInputElement&gt;) =&gt; onChange?.(from, event.currentTarget.value)}
+          &lt;<span class="nt">Range</span>
+            <span class="na">min</span>={min}
+            <span class="na">max</span>={max}
+            <span class="na">aria-label</span>={toLabel}
+            <span class="na">value</span>={(((to <span class="kr">as</span> <span class="kt">string</span>) === <span class="s2">&#34;&#34;</span>) ? (max == <span class="kc">null</span> ? <span class="kc">undefined</span> : <span class="nb">String</span>(max)) : to)}
+            <span class="na">data-testid</span>=<span class="s">&#34;range-to&#34;</span>
+            <span class="na">onChange</span>={(event: <span class="kt">ChangeEvent</span>&lt;<span class="nt">HTMLInputElement</span>&gt;) =&gt; onChange?.(<span class="kr">from</span>, event.currentTarget.value)}
           /&gt;
         &lt;/&gt;
-      ) : null}
-      &lt;Inline className=&#34;flex items-center gap-2&#34;&gt;
-        &lt;Input
-          type={type}
-          size=&#34;sm&#34;
-          aria-label={fromLabel}
-          value={from}
-          min={(min == null ? undefined : String(min))}
-          max={(max == null ? undefined : String(max))}
-          onChange={(event: ChangeEvent&lt;HTMLInputElement&gt;) =&gt; onChange?.(event.currentTarget.value, to)}
+      ) : <span class="kc">null</span>}
+      &lt;<span class="nt">Inline</span> <span class="na">className</span>=<span class="s">&#34;flex items-center gap-2&#34;</span>&gt;
+        &lt;<span class="nt">Input</span>
+          <span class="na">type</span>={<span class="kr">type</span>}
+          <span class="na">size</span>=<span class="s">&#34;sm&#34;</span>
+          <span class="na">aria-label</span>={fromLabel}
+          <span class="na">value</span>={<span class="kr">from</span>}
+          <span class="na">min</span>={(min == <span class="kc">null</span> ? <span class="kc">undefined</span> : <span class="nb">String</span>(min))}
+          <span class="na">max</span>={(max == <span class="kc">null</span> ? <span class="kc">undefined</span> : <span class="nb">String</span>(max))}
+          <span class="na">onChange</span>={(event: <span class="kt">ChangeEvent</span>&lt;<span class="nt">HTMLInputElement</span>&gt;) =&gt; onChange?.(event.currentTarget.value, to)}
         /&gt;
-        &lt;Inline className=&#34;text-muted-foreground&#34;&gt;
-          {&#34;–&#34;}
-        &lt;/Inline&gt;
-        &lt;Input
-          type={type}
-          size=&#34;sm&#34;
-          aria-label={toLabel}
-          value={to}
-          min={(min == null ? undefined : String(min))}
-          max={(max == null ? undefined : String(max))}
-          onChange={(event: ChangeEvent&lt;HTMLInputElement&gt;) =&gt; onChange?.(from, event.currentTarget.value)}
+        &lt;<span class="nt">Inline</span> <span class="na">className</span>=<span class="s">&#34;text-muted-foreground&#34;</span>&gt;
+          {<span class="s2">&#34;–&#34;</span>}
+        &lt;/<span class="nt">Inline</span>&gt;
+        &lt;<span class="nt">Input</span>
+          <span class="na">type</span>={<span class="kr">type</span>}
+          <span class="na">size</span>=<span class="s">&#34;sm&#34;</span>
+          <span class="na">aria-label</span>={toLabel}
+          <span class="na">value</span>={to}
+          <span class="na">min</span>={(min == <span class="kc">null</span> ? <span class="kc">undefined</span> : <span class="nb">String</span>(min))}
+          <span class="na">max</span>={(max == <span class="kc">null</span> ? <span class="kc">undefined</span> : <span class="nb">String</span>(max))}
+          <span class="na">onChange</span>={(event: <span class="kt">ChangeEvent</span>&lt;<span class="nt">HTMLInputElement</span>&gt;) =&gt; onChange?.(<span class="kr">from</span>, event.currentTarget.value)}
         /&gt;
-      &lt;/Inline&gt;
-    &lt;/Block&gt;
+      &lt;/<span class="nt">Inline</span>&gt;
+    &lt;/<span class="nt">Block</span>&gt;
   );
 }
-</code></pre></div><p class="text-sm"><a class="underline" href="https://registry.buildy.tw/react/components/range-field.json">React registry item (JSON)</a></p></section><section id="panel-vue" data-panel data-runtime="vue" data-label="Vue" aria-label="Vue" class="mb-8"><h3 class="mb-2 text-lg font-semibold">Vue</h3><p class="mb-2 text-sm text-muted-foreground">Point the CLI at this runtime once, then add the item:</p><div class="mb-2"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-vue-init" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit init --yes --framework vue --dir src --registry-url https://registry.buildy.tw/vue --strict-cdn</code><button type="button" hidden data-copy="panel-vue-init" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-vue-add" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit add range-field</code><button type="button" hidden data-copy="panel-vue-add" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">components/range-field.vue</span><button type="button" hidden data-copy="code-vue-0" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-vue-0" class="font-mono">&lt;!-- Code generated by xgen. DO NOT EDIT. --&gt;
-&lt;!-- Source: xgen/screens/src/authoring/components/parts.ts --&gt;
-&lt;!--
-  A from–to pair for numbers or dates (price range, period). Empty means an open end. With numeric bounds two
+</code></pre></div><p class="text-sm"><a class="underline" href="https://registry.buildy.tw/react/components/range-field.json">React registry item (JSON)</a></p></section><section id="panel-vue" class="rt-panel" data-runtime="vue" aria-label="Vue code"><p class="mb-2 text-sm text-muted-foreground">Point the CLI at this runtime once, then add the item:</p><div class="mb-2"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-vue-init" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit init --yes --framework vue --dir src --registry-url https://registry.buildy.tw/vue --strict-cdn</code><button type="button" hidden data-copy="panel-vue-init" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-vue-add" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit add range-field</code><button type="button" hidden data-copy="panel-vue-add" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">components/range-field.vue</span><button type="button" hidden data-copy="code-vue-0" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="hl max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-vue-0" class="font-mono"><span class="c">&lt;!--</span> Code generated by xgen. DO NOT EDIT. --&gt;
+<span class="c">&lt;!--</span> Source: xgen/screens/src/authoring/components/parts.ts --&gt;
+<span class="c">&lt;!--</span>
+  A from<span class="err">–</span>to pair <span class="k">for</span> numbers or dates (price range, period). Empty means an open end. With numeric bounds two
   sliders sit above the inputs. Each control has its own accessible name; every change reports both ends.
 --&gt;
-&lt;script lang=&#34;ts&#34;&gt;
-export type RangeFieldProps = {
-  type: &#34;number&#34; | &#34;date&#34;;
+&lt;<span class="nt">script</span> <span class="na">lang</span>=<span class="s">&#34;ts&#34;</span>&gt;
+<span class="kr">export</span> type RangeFieldProps = {
+  type: <span class="s2">&#34;number&#34;</span> | <span class="s2">&#34;date&#34;</span>;
   from: string;
   to: string;
   fromLabel: string;
   toLabel: string;
   min?: number;
   max?: number;
-  class?: string;
+  <span class="kr">class</span>?: string;
 };
-&lt;/script&gt;
+&lt;/<span class="nt">script</span>&gt;
 
-&lt;script setup lang=&#34;ts&#34;&gt;
-import Block from &#34;../primitives/block/block.vue&#34;;
-import Inline from &#34;../primitives/inline/inline.vue&#34;;
-import Input from &#34;../primitives/input/input.vue&#34;;
-import Range from &#34;../primitives/range/range.vue&#34;;
-import { cn } from &#34;../utils&#34;;
+&lt;<span class="nt">script</span> <span class="na">setup</span> <span class="na">lang</span>=<span class="s">&#34;ts&#34;</span>&gt;
+<span class="kr">import</span> Block from <span class="s2">&#34;../primitives/block/block.vue&#34;</span>;
+<span class="kr">import</span> Inline from <span class="s2">&#34;../primitives/inline/inline.vue&#34;</span>;
+<span class="kr">import</span> Input from <span class="s2">&#34;../primitives/input/input.vue&#34;</span>;
+<span class="kr">import</span> Range from <span class="s2">&#34;../primitives/range/range.vue&#34;</span>;
+<span class="kr">import</span> { cn } from <span class="s2">&#34;../utils&#34;</span>;
 
-const { type, from, to, fromLabel, toLabel, min, max, class: className } = defineProps&lt;RangeFieldProps&gt;();
-const emit = defineEmits&lt;{ change: [from: string, to: string] }&gt;();
-&lt;/script&gt;
+<span class="kr">const</span> { type, from, to, fromLabel, toLabel, min, max, <span class="kr">class</span>: className } = defineProps&lt;<span class="nt">RangeFieldProps</span>&gt;();
+<span class="kr">const</span> emit = defineEmits&lt;{ change: [from: string, to: string] }&gt;();
+&lt;/<span class="nt">script</span>&gt;
 
-&lt;template&gt;
-  &lt;Block :class=&#34;cn(&#39;flex flex-col gap-2&#39;, className)&#34; data-slot=&#34;range-field&#34;&gt;
-    &lt;template v-if=&#34;(((type as string) === &#39;number&#39;) &amp;&amp; (min != null) &amp;&amp; (max != null) &amp;&amp; (min &lt; max))&#34;&gt;
-      &lt;Range
-        :min=&#34;min&#34;
-        :max=&#34;max&#34;
-        :aria-label=&#34;fromLabel&#34;
-        :value=&#34;(((from as string) === &#39;&#39;) ? (min == null ? undefined : String(min)) : from)&#34;
-        data-testid=&#34;range-from&#34;
-        @input=&#34;(event: Event &amp; { currentTarget: HTMLInputElement }) =&gt; emit(&#39;change&#39;, event.currentTarget.value, to)&#34;
+&lt;<span class="nt">template</span>&gt;
+  &lt;<span class="nt">Block</span> :<span class="na">class</span>=<span class="s">&#34;cn(&#39;flex flex-col gap-2&#39;, className)&#34;</span> <span class="na">data</span><span class="nt">-slot</span><span class="err">=&#34;</span><span class="na">range</span><span class="nt">-field</span><span class="err">&#34;</span>&gt;
+    &lt;<span class="nt">template</span> <span class="nt">v-if</span>=<span class="s">&#34;(((type as string) === &#39;number&#39;) &amp;&amp; (min != null) &amp;&amp; (max != null) &amp;&amp; (min &lt; max))&#34;</span>&gt;
+      &lt;<span class="nt">Range</span>
+        <span class="nt">:min</span>=<span class="s">&#34;min&#34;</span>
+        <span class="nt">:max</span>=<span class="s">&#34;max&#34;</span>
+        <span class="nt">:aria-label</span>=<span class="s">&#34;fromLabel&#34;</span>
+        :<span class="na">value</span>=<span class="s">&#34;(((from as string) === &#39;&#39;) ? (min == null ? undefined : String(min)) : from)&#34;</span>
+        <span class="na">data</span><span class="nt">-testid</span><span class="err">=&#34;</span><span class="na">range</span><span class="nt">-from</span><span class="err">&#34;</span>
+        <span class="nt">@input</span><span class="s">=&#34;(event: Event &amp; { currentTarget: HTMLInputElement }) =&gt; emit(&#39;change&#39;, event.currentTarget.value, to)&#34;</span>
       /&gt;
-      &lt;Range
-        :min=&#34;min&#34;
-        :max=&#34;max&#34;
-        :aria-label=&#34;toLabel&#34;
-        :value=&#34;(((to as string) === &#39;&#39;) ? (max == null ? undefined : String(max)) : to)&#34;
-        data-testid=&#34;range-to&#34;
-        @input=&#34;(event: Event &amp; { currentTarget: HTMLInputElement }) =&gt; emit(&#39;change&#39;, from, event.currentTarget.value)&#34;
+      &lt;<span class="nt">Range</span>
+        <span class="nt">:min</span>=<span class="s">&#34;min&#34;</span>
+        <span class="nt">:max</span>=<span class="s">&#34;max&#34;</span>
+        <span class="nt">:aria-label</span>=<span class="s">&#34;toLabel&#34;</span>
+        :<span class="na">value</span>=<span class="s">&#34;(((to as string) === &#39;&#39;) ? (max == null ? undefined : String(max)) : to)&#34;</span>
+        <span class="na">data</span><span class="nt">-testid</span><span class="err">=&#34;</span><span class="na">range</span><span class="nt">-to</span><span class="err">&#34;</span>
+        <span class="nt">@input</span><span class="s">=&#34;(event: Event &amp; { currentTarget: HTMLInputElement }) =&gt; emit(&#39;change&#39;, from, event.currentTarget.value)&#34;</span>
       /&gt;
-    &lt;/template&gt;
-    &lt;Inline class=&#34;flex items-center gap-2&#34;&gt;
-      &lt;Input
-        :type=&#34;type&#34;
-        size=&#34;sm&#34;
-        :aria-label=&#34;fromLabel&#34;
-        :value=&#34;from&#34;
-        :min=&#34;(min == null ? undefined : String(min))&#34;
-        :max=&#34;(max == null ? undefined : String(max))&#34;
-        @input=&#34;(event: Event &amp; { currentTarget: HTMLInputElement }) =&gt; emit(&#39;change&#39;, event.currentTarget.value, to)&#34;
+    &lt;/<span class="nt">template</span>&gt;
+    &lt;<span class="nt">Inline</span> <span class="na">class</span>=<span class="s">&#34;flex items-center gap-2&#34;</span>&gt;
+      &lt;<span class="nt">Input</span>
+        <span class="nt">:type</span>=<span class="s">&#34;type&#34;</span>
+        <span class="na">size</span>=<span class="s">&#34;sm&#34;</span>
+        <span class="nt">:aria-label</span>=<span class="s">&#34;fromLabel&#34;</span>
+        <span class="nt">:value</span>=<span class="s">&#34;from&#34;</span>
+        :<span class="na">min</span>=<span class="s">&#34;(min == null ? undefined : String(min))&#34;</span>
+        :<span class="na">max</span>=<span class="s">&#34;(max == null ? undefined : String(max))&#34;</span>
+        <span class="nt">@input</span><span class="s">=&#34;(event: Event &amp; { currentTarget: HTMLInputElement }) =&gt; emit(&#39;change&#39;, event.currentTarget.value, to)&#34;</span>
       /&gt;
-      &lt;Inline class=&#34;text-muted-foreground&#34;&gt;
-        {{ &#34;–&#34; }}
-      &lt;/Inline&gt;
-      &lt;Input
-        :type=&#34;type&#34;
-        size=&#34;sm&#34;
-        :aria-label=&#34;toLabel&#34;
-        :value=&#34;to&#34;
-        :min=&#34;(min == null ? undefined : String(min))&#34;
-        :max=&#34;(max == null ? undefined : String(max))&#34;
-        @input=&#34;(event: Event &amp; { currentTarget: HTMLInputElement }) =&gt; emit(&#39;change&#39;, from, event.currentTarget.value)&#34;
+      &lt;<span class="nt">Inline</span> <span class="na">class</span>=<span class="s">&#34;text-muted-foreground&#34;</span>&gt;
+        {{ <span class="s2">&#34;–&#34;</span> }}
+      &lt;/<span class="nt">Inline</span>&gt;
+      &lt;<span class="nt">Input</span>
+        <span class="nt">:type</span>=<span class="s">&#34;type&#34;</span>
+        <span class="na">size</span>=<span class="s">&#34;sm&#34;</span>
+        <span class="nt">:aria-label</span>=<span class="s">&#34;toLabel&#34;</span>
+        <span class="nt">:value</span>=<span class="s">&#34;to&#34;</span>
+        :<span class="na">min</span>=<span class="s">&#34;(min == null ? undefined : String(min))&#34;</span>
+        :<span class="na">max</span>=<span class="s">&#34;(max == null ? undefined : String(max))&#34;</span>
+        <span class="nt">@input</span><span class="s">=&#34;(event: Event &amp; { currentTarget: HTMLInputElement }) =&gt; emit(&#39;change&#39;, from, event.currentTarget.value)&#34;</span>
       /&gt;
-    &lt;/Inline&gt;
-  &lt;/Block&gt;
-&lt;/template&gt;
-</code></pre></div><p class="text-sm"><a class="underline" href="https://registry.buildy.tw/vue/components/range-field.json">Vue registry item (JSON)</a></p></section></div></article></main></div><footer class="border-t border-border"><div class="mx-auto max-w-6xl px-4 py-8 text-sm text-muted-foreground">ui8kit, MIT licence. Static docs generated from markdown and the registry (<a class="underline" href="https://registry.buildy.tw/registry.json">registry.json</a>).</div></footer></body></html>
+    &lt;/<span class="nt">Inline</span>&gt;
+  &lt;/<span class="nt">Block</span>&gt;
+&lt;/<span class="nt">template</span>&gt;
+</code></pre></div><p class="text-sm"><a class="underline" href="https://registry.buildy.tw/vue/components/range-field.json">Vue registry item (JSON)</a></p></section></div><h2 class="mb-2 text-xl font-semibold">Props</h2><p class="mb-4 max-w-3xl text-sm text-muted-foreground">Names and types come from the xgen specs of the source. Standard HTML attributes (id, role, tabIndex, aria-*) pass through to the root element; the class prop is className in React.</p><div class="mb-8"><p class="mb-2 max-w-3xl whitespace-pre-line text-sm text-muted-foreground">A from–to pair for numbers or dates (price range, period). Empty means an open end. With numeric bounds two sliders sit above the inputs. Each control has its own accessible name; every change reports both ends.</p><div class="overflow-x-auto" tabindex="0" role="region" aria-label="Props of RangeField"><table class="w-full min-w-[40rem] text-left text-sm"><caption class="sr-only">Props of RangeField</caption> <thead><tr class="border-b border-border"><th scope="col" class="py-2 pr-4 font-medium">Prop</th><th scope="col" class="py-2 pr-4 font-medium">Type</th><th scope="col" class="py-2 pr-4 font-medium">Default</th><th scope="col" class="py-2 font-medium">Description</th></tr></thead> <tbody><tr class="border-b border-border align-top"><th scope="row" class="py-2 pr-4 font-mono text-xs font-medium">type <span class="font-sans text-muted-foreground">(required)</span></th><td class="py-2 pr-4 font-mono text-xs">&#34;number&#34; | &#34;date&#34;</td><td class="py-2 pr-4 font-mono text-xs"><span class="text-muted-foreground">-</span></td><td class="py-2 text-muted-foreground"></td></tr><tr class="border-b border-border align-top"><th scope="row" class="py-2 pr-4 font-mono text-xs font-medium">from <span class="font-sans text-muted-foreground">(required)</span></th><td class="py-2 pr-4 font-mono text-xs">string</td><td class="py-2 pr-4 font-mono text-xs"><span class="text-muted-foreground">-</span></td><td class="py-2 text-muted-foreground"></td></tr><tr class="border-b border-border align-top"><th scope="row" class="py-2 pr-4 font-mono text-xs font-medium">to <span class="font-sans text-muted-foreground">(required)</span></th><td class="py-2 pr-4 font-mono text-xs">string</td><td class="py-2 pr-4 font-mono text-xs"><span class="text-muted-foreground">-</span></td><td class="py-2 text-muted-foreground"></td></tr><tr class="border-b border-border align-top"><th scope="row" class="py-2 pr-4 font-mono text-xs font-medium">fromLabel <span class="font-sans text-muted-foreground">(required)</span></th><td class="py-2 pr-4 font-mono text-xs">string</td><td class="py-2 pr-4 font-mono text-xs"><span class="text-muted-foreground">-</span></td><td class="py-2 text-muted-foreground"></td></tr><tr class="border-b border-border align-top"><th scope="row" class="py-2 pr-4 font-mono text-xs font-medium">toLabel <span class="font-sans text-muted-foreground">(required)</span></th><td class="py-2 pr-4 font-mono text-xs">string</td><td class="py-2 pr-4 font-mono text-xs"><span class="text-muted-foreground">-</span></td><td class="py-2 text-muted-foreground"></td></tr><tr class="border-b border-border align-top"><th scope="row" class="py-2 pr-4 font-mono text-xs font-medium">min </th><td class="py-2 pr-4 font-mono text-xs">number</td><td class="py-2 pr-4 font-mono text-xs"><span class="text-muted-foreground">-</span></td><td class="py-2 text-muted-foreground"></td></tr><tr class="border-b border-border align-top"><th scope="row" class="py-2 pr-4 font-mono text-xs font-medium">max </th><td class="py-2 pr-4 font-mono text-xs">number</td><td class="py-2 pr-4 font-mono text-xs"><span class="text-muted-foreground">-</span></td><td class="py-2 text-muted-foreground"></td></tr></tbody></table></div></div></article></main></div><footer class="border-t border-border"><div class="mx-auto max-w-6xl px-4 py-8 text-sm text-muted-foreground">ui8kit, MIT licence. Static docs generated from markdown and the registry (<a class="underline" href="https://registry.buildy.tw/registry.json">registry.json</a>).</div></footer></body></html>

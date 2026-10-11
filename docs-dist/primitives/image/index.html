@@ -1,82 +1,83 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Image (primitive) | ui8kit</title><meta name="description" content="Image primitive"><link rel="canonical" href="https://ui.buildy.tw/primitives/image/"><link rel="stylesheet" href="/assets/site.css"><script src="/assets/app.js" defer></script></head><body class="min-h-screen bg-background text-foreground font-sans"><a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:left-2 focus:top-2 focus:bg-background focus:px-4 focus:py-2 focus:z-50">Skip to content</a><header class="border-b border-border"><div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-4 py-4"><a href="/" class="text-lg font-semibold">ui8kit</a><nav aria-label="Main" class="flex items-center gap-4 text-sm"><a href="/docs/" class="hover:underline">Docs</a> <a href="/docs/categories/blocks-marketing/" class="hover:underline">Blocks</a> <a href="/docs/categories/primitives/" class="hover:underline">Primitives</a> <a href="/docs/cli/" class="hover:underline">CLI</a></nav><form id="search" role="search" class="relative w-full sm:w-72" data-index="/search-index.json"><label for="search-input" class="sr-only">Search components and blocks</label> <input id="search-input" type="search" autocomplete="off" placeholder="Search, press /" class="h-10 w-full rounded border border-input bg-card px-4 text-sm"><ul id="search-results" hidden class="absolute left-0 right-0 top-12 z-40 rounded border border-border bg-popover text-popover-foreground shadow-md" aria-live="polite"></ul></form></div></header><div class="mx-auto flex max-w-6xl flex-col gap-8 px-4 py-8 md:flex-row"><nav aria-label="Docs" class="md:w-64 md:shrink-0"><h2 class="mb-2 text-sm font-semibold">Guides</h2><ul class="mb-6 flex flex-col gap-1"><li><a href="/docs/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Overview</a></li><li><a href="/docs/getting-started/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Getting started</a></li><li><a href="/docs/installation/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Installation</a></li><li><a href="/docs/cli/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">CLI</a></li><li><a href="/docs/theming-skins/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Theming and skins</a></li><li><a href="/docs/grid-8px/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">The 8px grid</a></li></ul><h2 class="mb-2 text-sm font-semibold">Categories</h2><ul class="mb-6 flex flex-col gap-1"><li><a href="/docs/categories/primitives/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Primitives</a></li><li><a href="/docs/categories/components/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Components</a></li><li><a href="/docs/categories/blocks-marketing/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: marketing</a></li><li><a href="/docs/categories/blocks-commerce/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: commerce</a></li><li><a href="/docs/categories/blocks-dashboard/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: dashboard</a></li><li><a href="/docs/categories/blocks-content/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: content</a></li><li><a href="/docs/categories/blocks-account/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: account</a></li><li><a href="/docs/categories/blocks-promo/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: promo</a></li><li><a href="/docs/categories/blocks-support/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: support</a></li><li><a href="/docs/categories/blocks-onboarding/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: onboarding</a></li><li><a href="/docs/categories/blocks-general/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: general</a></li></ul></nav><main id="main" class="min-w-0 flex-1"><article><p class="text-sm text-muted-foreground"><a class="underline" href="/docs/categories/primitives/">primitive / primitives</a></p><h1 class="mb-2 text-3xl font-semibold tracking-tight">Image</h1><p class="mb-6 max-w-3xl text-muted-foreground">Image primitive</p><h2 class="mb-2 text-xl font-semibold">Install</h2><div class="mb-6 max-w-xl"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="install-image" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit add image</code><button type="button" hidden data-copy="install-image" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><p class="mb-6 text-sm text-muted-foreground">Pulls in:  <a class="underline" href="/lib/utils/">utils</a></p><h2 class="mb-2 text-xl font-semibold">Code</h2><div data-tabs><section id="panel-svelte" data-panel data-runtime="svelte" data-label="Svelte" aria-label="Svelte" class="mb-8"><h3 class="mb-2 text-lg font-semibold">Svelte</h3><p class="mb-2 text-sm text-muted-foreground">Point the CLI at this runtime once, then add the item:</p><div class="mb-2"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-svelte-init" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit init --yes --framework svelte --dir src --registry-url https://registry.buildy.tw/svelte --strict-cdn</code><button type="button" hidden data-copy="panel-svelte-init" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-svelte-add" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit add image</code><button type="button" hidden data-copy="panel-svelte-add" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/image/image.svelte</span><button type="button" hidden data-copy="code-svelte-0" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-svelte-0" class="font-mono">&lt;!-- Code generated by xgen. DO NOT EDIT. --&gt;
-&lt;!-- Source: xgen/specs/ui/image.json --&gt;
-&lt;!--
-  Image renders an accessible img element.
---&gt;
-&lt;script lang=&#34;ts&#34; module&gt;
-  import { variants, type VariantKey } from &#34;../../utils&#34;;
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Image (primitive) | ui8kit</title><meta name="description" content="Image primitive"><link rel="canonical" href="https://ui.buildy.tw/primitives/image/"><link rel="stylesheet" href="/assets/site.css"><script src="/assets/app.js" defer></script></head><body class="min-h-screen bg-background text-foreground font-sans"><a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:left-2 focus:top-2 focus:bg-background focus:px-4 focus:py-2 focus:z-50">Skip to content</a><header class="border-b border-border"><div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-4 py-4"><a href="/" class="text-lg font-semibold">ui8kit</a><nav aria-label="Main" class="flex items-center gap-4 text-sm"><a href="/docs/" class="hover:underline">Docs</a> <a href="/docs/categories/blocks-marketing/" class="hover:underline">Blocks</a> <a href="/docs/categories/primitives/" class="hover:underline">Primitives</a> <a href="/docs/cli/" class="hover:underline">CLI</a></nav><form id="search" role="search" class="relative w-full sm:w-72" data-index="/search-index.json"><label for="search-input" class="sr-only">Search components and blocks</label> <input id="search-input" type="search" autocomplete="off" placeholder="Search, press /" class="h-10 w-full rounded border border-input bg-card px-4 text-sm"><ul id="search-results" hidden class="absolute left-0 right-0 top-12 z-40 rounded border border-border bg-popover text-popover-foreground shadow-md" aria-live="polite"></ul></form></div></header><div class="mx-auto flex max-w-6xl flex-col gap-8 px-4 py-8 md:flex-row"><nav aria-label="Docs" class="md:w-64 md:shrink-0"><h2 class="mb-2 text-sm font-semibold">Guides</h2><ul class="mb-6 flex flex-col gap-1"><li><a href="/docs/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Overview</a></li><li><a href="/docs/getting-started/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Getting started</a></li><li><a href="/docs/installation/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Installation</a></li><li><a href="/docs/cli/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">CLI</a></li><li><a href="/docs/theming-skins/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Theming and skins</a></li><li><a href="/docs/grid-8px/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">The 8px grid</a></li></ul><h2 class="mb-2 text-sm font-semibold">Categories</h2><ul class="mb-6 flex flex-col gap-1"><li><a href="/docs/categories/primitives/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Primitives</a></li><li><a href="/docs/categories/components/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Components</a></li><li><a href="/docs/categories/blocks-marketing/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: marketing</a></li><li><a href="/docs/categories/blocks-commerce/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: commerce</a></li><li><a href="/docs/categories/blocks-dashboard/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: dashboard</a></li><li><a href="/docs/categories/blocks-content/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: content</a></li><li><a href="/docs/categories/blocks-account/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: account</a></li><li><a href="/docs/categories/blocks-promo/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: promo</a></li><li><a href="/docs/categories/blocks-support/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: support</a></li><li><a href="/docs/categories/blocks-onboarding/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: onboarding</a></li><li><a href="/docs/categories/blocks-general/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: general</a></li></ul></nav><main id="main" class="min-w-0 flex-1"><article><p class="text-sm text-muted-foreground"><a class="underline" href="/docs/categories/primitives/">primitive / primitives</a></p><h1 class="mb-2 text-3xl font-semibold tracking-tight">Image</h1><p class="mb-6 max-w-3xl text-muted-foreground">Image primitive</p><h2 class="mb-2 text-xl font-semibold">Install</h2><div class="mb-6 max-w-xl"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="install-image" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit add image</code><button type="button" hidden data-copy="install-image" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><p class="mb-6 text-sm text-muted-foreground">Pulls in:  <a class="underline" href="/lib/utils/">utils</a></p><h2 class="mb-2 text-xl font-semibold">Preview</h2><div class="preview mb-8 rounded border border-border bg-background p-6" role="group" tabindex="0" aria-label="Image preview"><img alt="How we work" loading="lazy" decoding="async" class="block max-w-full aspect-auto object-center absolute inset-0 size-full object-cover dark:hidden" src="/assets/ph/86775df0.svg" data-theme-src="light"/>
+</div><h2 class="mb-2 text-xl font-semibold">Code</h2><div class="rt mb-8"><div class="rt-bar" role="radiogroup" aria-label="Runtime"><input type="radio" name="rt" id="rt-svelte" value="svelte" class="sr-only" checked> <label for="rt-svelte">Svelte</label><input type="radio" name="rt" id="rt-react" value="react" class="sr-only"> <label for="rt-react">React</label><input type="radio" name="rt" id="rt-vue" value="vue" class="sr-only"> <label for="rt-vue">Vue</label></div><section id="panel-svelte" class="rt-panel" data-runtime="svelte" aria-label="Svelte code"><p class="mb-2 text-sm text-muted-foreground">Point the CLI at this runtime once, then add the item:</p><div class="mb-2"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-svelte-init" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit init --yes --framework svelte --dir src --registry-url https://registry.buildy.tw/svelte --strict-cdn</code><button type="button" hidden data-copy="panel-svelte-init" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-svelte-add" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit add image</code><button type="button" hidden data-copy="panel-svelte-add" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/image/image.svelte</span><button type="button" hidden data-copy="code-svelte-0" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="hl max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-svelte-0" class="font-mono"><span class="c">&lt;!-- Code generated by xgen. DO NOT EDIT. --&gt;</span>
+<span class="c">&lt;!-- Source: xgen/specs/ui/image.json --&gt;</span>
+<span class="c">&lt;!--
+</span><span class="c">  Image renders an accessible img element.
+</span><span class="c">--&gt;</span>
+&lt;<span class="nt">script</span> <span class="na">lang</span>=<span class="s">&#34;ts&#34;</span> <span class="na">module</span>&gt;
+  <span class="kr">import</span> { variants, <span class="kr">type</span> VariantKey } <span class="kr">from</span> <span class="s2">&#34;../../utils&#34;</span>;
 
-  /** Image: the classes of each value of each prop (shadcn/cva style). */
-  export const imageVariants = variants({
-    base: &#34;block max-w-full&#34;,
+  <span class="cm">/** Image: the classes of each value of each prop (shadcn/cva style). */</span>
+  <span class="kr">export</span> <span class="kr">const</span> imageVariants = variants({
+    base: <span class="s2">&#34;block max-w-full&#34;</span>,
     variants: {
       aspect: {
-        auto: &#34;aspect-auto&#34;,
-        square: &#34;aspect-square&#34;,
-        video: &#34;aspect-video&#34;,
+        auto: <span class="s2">&#34;aspect-auto&#34;</span>,
+        square: <span class="s2">&#34;aspect-square&#34;</span>,
+        video: <span class="s2">&#34;aspect-video&#34;</span>,
       },
       fit: {
-        contain: &#34;object-contain&#34;,
-        cover: &#34;object-cover&#34;,
-        fill: &#34;object-fill&#34;,
-        none: &#34;object-none&#34;,
-        &#34;scale-down&#34;: &#34;object-scale-down&#34;,
+        contain: <span class="s2">&#34;object-contain&#34;</span>,
+        cover: <span class="s2">&#34;object-cover&#34;</span>,
+        fill: <span class="s2">&#34;object-fill&#34;</span>,
+        none: <span class="s2">&#34;object-none&#34;</span>,
+        <span class="s2">&#34;scale-down&#34;</span>: <span class="s2">&#34;object-scale-down&#34;</span>,
       },
       position: {
-        bottom: &#34;object-bottom&#34;,
-        center: &#34;object-center&#34;,
-        left: &#34;object-left&#34;,
-        &#34;left-bottom&#34;: &#34;object-left-bottom&#34;,
-        &#34;left-top&#34;: &#34;object-left-top&#34;,
-        right: &#34;object-right&#34;,
-        &#34;right-bottom&#34;: &#34;object-right-bottom&#34;,
-        &#34;right-top&#34;: &#34;object-right-top&#34;,
-        top: &#34;object-top&#34;,
+        bottom: <span class="s2">&#34;object-bottom&#34;</span>,
+        center: <span class="s2">&#34;object-center&#34;</span>,
+        left: <span class="s2">&#34;object-left&#34;</span>,
+        <span class="s2">&#34;left-bottom&#34;</span>: <span class="s2">&#34;object-left-bottom&#34;</span>,
+        <span class="s2">&#34;left-top&#34;</span>: <span class="s2">&#34;object-left-top&#34;</span>,
+        right: <span class="s2">&#34;object-right&#34;</span>,
+        <span class="s2">&#34;right-bottom&#34;</span>: <span class="s2">&#34;object-right-bottom&#34;</span>,
+        <span class="s2">&#34;right-top&#34;</span>: <span class="s2">&#34;object-right-top&#34;</span>,
+        top: <span class="s2">&#34;object-top&#34;</span>,
       },
       size: {
-        auto: &#34;&#34;,
-        default: &#34;&#34;,
-        full: &#34;h-full w-full&#34;,
-        xs: &#34;size-6&#34;,
-        sm: &#34;size-8&#34;,
-        md: &#34;size-12&#34;,
-        lg: &#34;size-16&#34;,
-        xl: &#34;size-20&#34;,
+        auto: <span class="s2">&#34;&#34;</span>,
+        <span class="k">default</span>: <span class="s2">&#34;&#34;</span>,
+        full: <span class="s2">&#34;h-full w-full&#34;</span>,
+        xs: <span class="s2">&#34;size-6&#34;</span>,
+        sm: <span class="s2">&#34;size-8&#34;</span>,
+        md: <span class="s2">&#34;size-12&#34;</span>,
+        lg: <span class="s2">&#34;size-16&#34;</span>,
+        xl: <span class="s2">&#34;size-20&#34;</span>,
       },
       variant: {
-        default: &#34;&#34;,
-        logo: &#34;object-contain&#34;,
+        <span class="k">default</span>: <span class="s2">&#34;&#34;</span>,
+        logo: <span class="s2">&#34;object-contain&#34;</span>,
       },
     },
-    defaultVariants: { aspect: &#34;auto&#34;, fit: &#34;cover&#34;, position: &#34;center&#34;, size: &#34;auto&#34;, variant: &#34;default&#34; },
+    defaultVariants: { aspect: <span class="s2">&#34;auto&#34;</span>, fit: <span class="s2">&#34;cover&#34;</span>, position: <span class="s2">&#34;center&#34;</span>, size: <span class="s2">&#34;auto&#34;</span>, variant: <span class="s2">&#34;default&#34;</span> },
   });
 
-  export type ImageVariant = VariantKey&lt;typeof imageVariants, &#34;variant&#34;&gt;;
-  export type ImageSize = VariantKey&lt;typeof imageVariants, &#34;size&#34;&gt;;
-  export type ImageFit = VariantKey&lt;typeof imageVariants, &#34;fit&#34;&gt;;
-  export type ImagePosition = VariantKey&lt;typeof imageVariants, &#34;position&#34;&gt;;
-  export type ImageAspect = VariantKey&lt;typeof imageVariants, &#34;aspect&#34;&gt;;
+  <span class="kr">export</span> <span class="kr">type</span> ImageVariant = VariantKey&lt;<span class="nt">typeof</span> <span class="na">imageVariants</span>, <span class="s2">&#34;variant&#34;</span>&gt;;
+  <span class="kr">export</span> <span class="kr">type</span> ImageSize = VariantKey&lt;<span class="nt">typeof</span> <span class="na">imageVariants</span>, <span class="s2">&#34;size&#34;</span>&gt;;
+  <span class="kr">export</span> <span class="kr">type</span> ImageFit = VariantKey&lt;<span class="nt">typeof</span> <span class="na">imageVariants</span>, <span class="s2">&#34;fit&#34;</span>&gt;;
+  <span class="kr">export</span> <span class="kr">type</span> ImagePosition = VariantKey&lt;<span class="nt">typeof</span> <span class="na">imageVariants</span>, <span class="s2">&#34;position&#34;</span>&gt;;
+  <span class="kr">export</span> <span class="kr">type</span> ImageAspect = VariantKey&lt;<span class="nt">typeof</span> <span class="na">imageVariants</span>, <span class="s2">&#34;aspect&#34;</span>&gt;;
 
-  export type ImageProps = {
-    variant?: ImageVariant;
-    size?: ImageSize;
-    alt?: string;
-    fit?: ImageFit;
-    position?: ImagePosition;
-    aspect?: ImageAspect;
-    loading?: string;
-    decoding?: string;
-    decorative?: boolean;
-    class?: string;
-    [key: string]: unknown;
+  <span class="kr">export</span> <span class="kr">type</span> ImageProps = {
+    variant?: <span class="kt">ImageVariant</span>;
+    size?: <span class="kt">ImageSize</span>;
+    alt?: <span class="kt">string</span>;
+    fit?: <span class="kt">ImageFit</span>;
+    position?: <span class="kt">ImagePosition</span>;
+    aspect?: <span class="kt">ImageAspect</span>;
+    loading?: <span class="kt">string</span>;
+    decoding?: <span class="kt">string</span>;
+    decorative?: <span class="kt">boolean</span>;
+    <span class="kr">class</span>?: <span class="kt">string</span>;
+    [key: <span class="kt">string</span>]: <span class="kt">unknown</span>;
   };
-&lt;/script&gt;
+&lt;/<span class="nt">script</span>&gt;
 
-&lt;script lang=&#34;ts&#34;&gt;
-  import { cn } from &#34;../../utils&#34;;
-  import { oneOfOr } from &#34;../../utils/expr&#34;;
+&lt;<span class="nt">script</span> <span class="na">lang</span>=<span class="s">&#34;ts&#34;</span>&gt;
+  <span class="kr">import</span> { cn } <span class="kr">from</span> <span class="s2">&#34;../../utils&#34;</span>;
+  <span class="kr">import</span> { oneOfOr } <span class="kr">from</span> <span class="s2">&#34;../../utils/expr&#34;</span>;
 
-  let {
+  <span class="kd">let</span> {
     variant,
     size,
     alt,
@@ -86,288 +87,288 @@
     loading,
     decoding,
     decorative,
-    class: className,
+    <span class="kr">class</span>: className,
     ...rest
   }: ImageProps = $props();
 
-  const cls = $derived(cn(imageVariants({ aspect, fit, position, size, variant }), className));
-&lt;/script&gt;
+  <span class="kr">const</span> cls = $derived(cn(imageVariants({ aspect, fit, position, size, variant }), className));
+&lt;/<span class="nt">script</span>&gt;
 
-&lt;img
-  alt={((decorative ? &#34;&#34; : alt)) ?? &#34;&#34;}
-  loading={oneOfOr(loading, &#34;lazy&#34;, &#34;eager&#34;)}
-  decoding={oneOfOr(decoding, &#34;async&#34;, &#34;sync&#34;, &#34;auto&#34;)}
-  {...(cls ? { class: cls } : {})}
-  aria-hidden={decorative ? &#34;true&#34; : undefined}
+&lt;<span class="nt">img</span>
+  <span class="na">alt</span>={((decorative ? <span class="s2">&#34;&#34;</span> : alt)) ?? <span class="s2">&#34;&#34;</span>}
+  <span class="s">loading=</span>{oneOfOr(loading, <span class="s2">&#34;lazy&#34;</span>, <span class="s2">&#34;eager&#34;</span>)}
+  <span class="na">decoding</span>={oneOfOr(decoding, <span class="s2">&#34;async&#34;</span>, <span class="s2">&#34;sync&#34;</span>, <span class="s2">&#34;auto&#34;</span>)}
+  {...(cls ? { <span class="kr">class</span>: cls } : {})}
+  <span class="s">aria-hidden=</span>{decorative ? <span class="s2">&#34;true&#34;</span> : <span class="kc">undefined</span>}
   {...rest}
 /&gt;
-</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/image/picture.svelte</span><button type="button" hidden data-copy="code-svelte-1" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-svelte-1" class="font-mono">&lt;!-- Code generated by xgen. DO NOT EDIT. --&gt;
-&lt;!-- Source: xgen/specs/ui/image.json --&gt;
-&lt;!--
-  Picture renders a responsive image wrapper.
---&gt;
-&lt;script lang=&#34;ts&#34; module&gt;
-  import type { Snippet } from &#34;svelte&#34;;
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/image/picture.svelte</span><button type="button" hidden data-copy="code-svelte-1" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="hl max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-svelte-1" class="font-mono"><span class="c">&lt;!-- Code generated by xgen. DO NOT EDIT. --&gt;</span>
+<span class="c">&lt;!-- Source: xgen/specs/ui/image.json --&gt;</span>
+<span class="c">&lt;!--
+</span><span class="c">  Picture renders a responsive image wrapper.
+</span><span class="c">--&gt;</span>
+&lt;<span class="nt">script</span> <span class="na">lang</span>=<span class="s">&#34;ts&#34;</span> <span class="na">module</span>&gt;
+  <span class="kr">import</span> <span class="kr">type</span> { Snippet } <span class="kr">from</span> <span class="s2">&#34;svelte&#34;</span>;
 
-  export type PictureProps = {
-    class?: string;
-    children?: Snippet;
-    [key: string]: unknown;
+  <span class="kr">export</span> <span class="kr">type</span> PictureProps = {
+    <span class="kr">class</span>?: <span class="kt">string</span>;
+    children?: <span class="kt">Snippet</span>;
+    [key: <span class="kt">string</span>]: <span class="kt">unknown</span>;
   };
-&lt;/script&gt;
+&lt;/<span class="nt">script</span>&gt;
 
-&lt;script lang=&#34;ts&#34;&gt;
-  import { cn } from &#34;../../utils&#34;;
+&lt;<span class="nt">script</span> <span class="na">lang</span>=<span class="s">&#34;ts&#34;</span>&gt;
+  <span class="kr">import</span> { cn } <span class="kr">from</span> <span class="s2">&#34;../../utils&#34;</span>;
 
-  let {
-    class: className,
+  <span class="kd">let</span> {
+    <span class="kr">class</span>: className,
     children,
     ...rest
   }: PictureProps = $props();
 
-  const cls = $derived(cn(className));
-&lt;/script&gt;
+  <span class="kr">const</span> cls = $derived(cn(className));
+&lt;/<span class="nt">script</span>&gt;
 
-&lt;picture {...(cls ? { class: cls } : {})} {...rest}&gt;
-  {@render children?.()}
-&lt;/picture&gt;
-</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/image/source.svelte</span><button type="button" hidden data-copy="code-svelte-2" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-svelte-2" class="font-mono">&lt;!-- Code generated by xgen. DO NOT EDIT. --&gt;
-&lt;!-- Source: xgen/specs/ui/image.json --&gt;
-&lt;!--
-  Source renders a source candidate for picture, video, or audio.
---&gt;
-&lt;script lang=&#34;ts&#34; module&gt;
+&lt;<span class="nt">picture</span> {...(cls ? { <span class="kr">class</span>: cls } : {})} {...rest}&gt;
+  {<span class="kd">@render</span> children?.()}
+&lt;/<span class="nt">picture</span>&gt;
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/image/source.svelte</span><button type="button" hidden data-copy="code-svelte-2" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="hl max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-svelte-2" class="font-mono"><span class="c">&lt;!-- Code generated by xgen. DO NOT EDIT. --&gt;</span>
+<span class="c">&lt;!-- Source: xgen/specs/ui/image.json --&gt;</span>
+<span class="c">&lt;!--
+</span><span class="c">  Source renders a source candidate for picture, video, or audio.
+</span><span class="c">--&gt;</span>
+&lt;<span class="nt">script</span> <span class="na">lang</span>=<span class="s">&#34;ts&#34;</span> <span class="na">module</span>&gt;
 
-  export type SourceProps = {
-    class?: string;
-    [key: string]: unknown;
+  <span class="kr">export</span> <span class="kr">type</span> SourceProps = {
+    <span class="kr">class</span>?: <span class="kt">string</span>;
+    [key: <span class="kt">string</span>]: <span class="kt">unknown</span>;
   };
-&lt;/script&gt;
+&lt;/<span class="nt">script</span>&gt;
 
-&lt;script lang=&#34;ts&#34;&gt;
-  let {
-    class: className,
+&lt;<span class="nt">script</span> <span class="na">lang</span>=<span class="s">&#34;ts&#34;</span>&gt;
+  <span class="kd">let</span> {
+    <span class="kr">class</span>: className,
     ...rest
   }: SourceProps = $props();
-&lt;/script&gt;
+&lt;/<span class="nt">script</span>&gt;
 
-&lt;source {...rest} /&gt;
-</code></pre></div><p class="text-sm"><a class="underline" href="https://registry.buildy.tw/svelte/components/ui/image.json">Svelte registry item (JSON)</a></p></section><section id="panel-react" data-panel data-runtime="react" data-label="React" aria-label="React" class="mb-8"><h3 class="mb-2 text-lg font-semibold">React</h3><p class="mb-2 text-sm text-muted-foreground">Point the CLI at this runtime once, then add the item:</p><div class="mb-2"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-react-init" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit init --yes --framework react --dir src --registry-url https://registry.buildy.tw/react --strict-cdn</code><button type="button" hidden data-copy="panel-react-init" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-react-add" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit add image</code><button type="button" hidden data-copy="panel-react-add" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/image/image.tsx</span><button type="button" hidden data-copy="code-react-0" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-react-0" class="font-mono">// Code generated by xgen. DO NOT EDIT.
-// Source: xgen/specs/ui/image.json
-/**
- * Image renders accessible img, picture, and source primitives.
- * Use Decorative for purely visual images so alt stays empty.
- */
+&lt;<span class="nt">source</span> {...rest} /&gt;
+</code></pre></div><p class="text-sm"><a class="underline" href="https://registry.buildy.tw/svelte/components/ui/image.json">Svelte registry item (JSON)</a></p></section><section id="panel-react" class="rt-panel" data-runtime="react" aria-label="React code"><p class="mb-2 text-sm text-muted-foreground">Point the CLI at this runtime once, then add the item:</p><div class="mb-2"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-react-init" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit init --yes --framework react --dir src --registry-url https://registry.buildy.tw/react --strict-cdn</code><button type="button" hidden data-copy="panel-react-init" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-react-add" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit add image</code><button type="button" hidden data-copy="panel-react-add" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/image/image.tsx</span><button type="button" hidden data-copy="code-react-0" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="hl max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-react-0" class="font-mono"><span class="c1">// Code generated by xgen. DO NOT EDIT.
+</span><span class="c1">// Source: xgen/specs/ui/image.json
+</span><span class="cm">/**
+</span><span class="cm"> * Image renders accessible img, picture, and source primitives.
+</span><span class="cm"> * Use Decorative for purely visual images so alt stays empty.
+</span><span class="cm"> */</span>
 
-import { forwardRef, type ReactNode, type ImgHTMLAttributes } from &#34;react&#34;;
-import { cn, variants, type VariantKey } from &#34;../../utils&#34;;
-import { oneOfOr } from &#34;../../utils/expr&#34;;
+<span class="kr">import</span> { forwardRef, <span class="kr">type</span> ReactNode, <span class="kr">type</span> ImgHTMLAttributes } <span class="kr">from</span> <span class="s2">&#34;react&#34;</span>;
+<span class="kr">import</span> { cn, variants, <span class="kr">type</span> VariantKey } <span class="kr">from</span> <span class="s2">&#34;../../utils&#34;</span>;
+<span class="kr">import</span> { oneOfOr } <span class="kr">from</span> <span class="s2">&#34;../../utils/expr&#34;</span>;
 
-/** Image: the classes of each value of each prop (shadcn/cva style). */
-export const imageVariants = variants({
-  base: &#34;block max-w-full&#34;,
+<span class="cm">/** Image: the classes of each value of each prop (shadcn/cva style). */</span>
+<span class="kr">export</span> <span class="kr">const</span> imageVariants = variants({
+  base: <span class="s2">&#34;block max-w-full&#34;</span>,
   variants: {
     aspect: {
-      auto: &#34;aspect-auto&#34;,
-      square: &#34;aspect-square&#34;,
-      video: &#34;aspect-video&#34;,
+      auto: <span class="s2">&#34;aspect-auto&#34;</span>,
+      square: <span class="s2">&#34;aspect-square&#34;</span>,
+      video: <span class="s2">&#34;aspect-video&#34;</span>,
     },
     fit: {
-      contain: &#34;object-contain&#34;,
-      cover: &#34;object-cover&#34;,
-      fill: &#34;object-fill&#34;,
-      none: &#34;object-none&#34;,
-      &#34;scale-down&#34;: &#34;object-scale-down&#34;,
+      contain: <span class="s2">&#34;object-contain&#34;</span>,
+      cover: <span class="s2">&#34;object-cover&#34;</span>,
+      fill: <span class="s2">&#34;object-fill&#34;</span>,
+      none: <span class="s2">&#34;object-none&#34;</span>,
+      <span class="s2">&#34;scale-down&#34;</span>: <span class="s2">&#34;object-scale-down&#34;</span>,
     },
     position: {
-      bottom: &#34;object-bottom&#34;,
-      center: &#34;object-center&#34;,
-      left: &#34;object-left&#34;,
-      &#34;left-bottom&#34;: &#34;object-left-bottom&#34;,
-      &#34;left-top&#34;: &#34;object-left-top&#34;,
-      right: &#34;object-right&#34;,
-      &#34;right-bottom&#34;: &#34;object-right-bottom&#34;,
-      &#34;right-top&#34;: &#34;object-right-top&#34;,
-      top: &#34;object-top&#34;,
+      bottom: <span class="s2">&#34;object-bottom&#34;</span>,
+      center: <span class="s2">&#34;object-center&#34;</span>,
+      left: <span class="s2">&#34;object-left&#34;</span>,
+      <span class="s2">&#34;left-bottom&#34;</span>: <span class="s2">&#34;object-left-bottom&#34;</span>,
+      <span class="s2">&#34;left-top&#34;</span>: <span class="s2">&#34;object-left-top&#34;</span>,
+      right: <span class="s2">&#34;object-right&#34;</span>,
+      <span class="s2">&#34;right-bottom&#34;</span>: <span class="s2">&#34;object-right-bottom&#34;</span>,
+      <span class="s2">&#34;right-top&#34;</span>: <span class="s2">&#34;object-right-top&#34;</span>,
+      top: <span class="s2">&#34;object-top&#34;</span>,
     },
     size: {
-      auto: &#34;&#34;,
-      default: &#34;&#34;,
-      full: &#34;h-full w-full&#34;,
-      xs: &#34;size-6&#34;,
-      sm: &#34;size-8&#34;,
-      md: &#34;size-12&#34;,
-      lg: &#34;size-16&#34;,
-      xl: &#34;size-20&#34;,
+      auto: <span class="s2">&#34;&#34;</span>,
+      <span class="k">default</span>: <span class="s2">&#34;&#34;</span>,
+      full: <span class="s2">&#34;h-full w-full&#34;</span>,
+      xs: <span class="s2">&#34;size-6&#34;</span>,
+      sm: <span class="s2">&#34;size-8&#34;</span>,
+      md: <span class="s2">&#34;size-12&#34;</span>,
+      lg: <span class="s2">&#34;size-16&#34;</span>,
+      xl: <span class="s2">&#34;size-20&#34;</span>,
     },
     variant: {
-      default: &#34;&#34;,
-      logo: &#34;object-contain&#34;,
+      <span class="k">default</span>: <span class="s2">&#34;&#34;</span>,
+      logo: <span class="s2">&#34;object-contain&#34;</span>,
     },
   },
-  defaultVariants: { aspect: &#34;auto&#34;, fit: &#34;cover&#34;, position: &#34;center&#34;, size: &#34;auto&#34;, variant: &#34;default&#34; },
+  defaultVariants: { aspect: <span class="s2">&#34;auto&#34;</span>, fit: <span class="s2">&#34;cover&#34;</span>, position: <span class="s2">&#34;center&#34;</span>, size: <span class="s2">&#34;auto&#34;</span>, variant: <span class="s2">&#34;default&#34;</span> },
 });
 
-export type ImageVariant = VariantKey&lt;typeof imageVariants, &#34;variant&#34;&gt;;
-export type ImageSize = VariantKey&lt;typeof imageVariants, &#34;size&#34;&gt;;
-export type ImageFit = VariantKey&lt;typeof imageVariants, &#34;fit&#34;&gt;;
-export type ImagePosition = VariantKey&lt;typeof imageVariants, &#34;position&#34;&gt;;
-export type ImageAspect = VariantKey&lt;typeof imageVariants, &#34;aspect&#34;&gt;;
+<span class="kr">export</span> <span class="kr">type</span> ImageVariant = VariantKey&lt;<span class="nt">typeof</span> <span class="na">imageVariants</span>, <span class="s2">&#34;variant&#34;</span>&gt;;
+<span class="kr">export</span> <span class="kr">type</span> ImageSize = VariantKey&lt;<span class="nt">typeof</span> <span class="na">imageVariants</span>, <span class="s2">&#34;size&#34;</span>&gt;;
+<span class="kr">export</span> <span class="kr">type</span> ImageFit = VariantKey&lt;<span class="nt">typeof</span> <span class="na">imageVariants</span>, <span class="s2">&#34;fit&#34;</span>&gt;;
+<span class="kr">export</span> <span class="kr">type</span> ImagePosition = VariantKey&lt;<span class="nt">typeof</span> <span class="na">imageVariants</span>, <span class="s2">&#34;position&#34;</span>&gt;;
+<span class="kr">export</span> <span class="kr">type</span> ImageAspect = VariantKey&lt;<span class="nt">typeof</span> <span class="na">imageVariants</span>, <span class="s2">&#34;aspect&#34;</span>&gt;;
 
-/**
- * Image renders an accessible img element.
- */
-export type ImageProps = Omit&lt;
-  ImgHTMLAttributes&lt;HTMLImageElement&gt;,
-  | &#34;className&#34; | &#34;children&#34; | &#34;variant&#34; | &#34;size&#34; | &#34;alt&#34; | &#34;fit&#34; | &#34;position&#34; | &#34;aspect&#34; | &#34;loading&#34;
-  | &#34;decoding&#34; | &#34;decorative&#34;
+<span class="cm">/**
+</span><span class="cm"> * Image renders an accessible img element.
+</span><span class="cm"> */</span>
+<span class="kr">export</span> <span class="kr">type</span> ImageProps = Omit&lt;
+  ImgHTMLAttributes&lt;<span class="nt">HTMLImageElement</span>&gt;,
+  | <span class="s2">&#34;className&#34;</span> | <span class="s2">&#34;children&#34;</span> | <span class="s2">&#34;variant&#34;</span> | <span class="s2">&#34;size&#34;</span> | <span class="s2">&#34;alt&#34;</span> | <span class="s2">&#34;fit&#34;</span> | <span class="s2">&#34;position&#34;</span> | <span class="s2">&#34;aspect&#34;</span> | <span class="s2">&#34;loading&#34;</span>
+  | <span class="s2">&#34;decoding&#34;</span> | <span class="s2">&#34;decorative&#34;</span>
 &gt; &amp; {
-  variant?: ImageVariant;
-  size?: ImageSize;
-  alt?: string;
-  fit?: ImageFit;
-  position?: ImagePosition;
-  aspect?: ImageAspect;
-  loading?: string;
-  decoding?: string;
-  decorative?: boolean;
-  className?: string;
+  variant?: <span class="kt">ImageVariant</span>;
+  size?: <span class="kt">ImageSize</span>;
+  alt?: <span class="kt">string</span>;
+  fit?: <span class="kt">ImageFit</span>;
+  position?: <span class="kt">ImagePosition</span>;
+  aspect?: <span class="kt">ImageAspect</span>;
+  loading?: <span class="kt">string</span>;
+  decoding?: <span class="kt">string</span>;
+  decorative?: <span class="kt">boolean</span>;
+  className?: <span class="kt">string</span>;
 };
 
-export const Image = forwardRef&lt;HTMLImageElement, ImageProps&gt;(function Image(
+<span class="kr">export</span> <span class="kr">const</span> Image = forwardRef&lt;<span class="nt">HTMLImageElement</span>, <span class="na">ImageProps</span>&gt;(<span class="kd">function</span> Image(
   { variant, size, alt, fit, position, aspect, loading, decoding, decorative, className, ...rest },
   ref
 ) {
-  const cls = cn(imageVariants({ aspect, fit, position, size, variant }), className);
-  return (
-    &lt;img
-      ref={ref}
-      alt={((decorative ? &#34;&#34; : alt)) ?? &#34;&#34;}
-      loading={oneOfOr(loading, &#34;lazy&#34;, &#34;eager&#34;)}
-      decoding={oneOfOr(decoding, &#34;async&#34;, &#34;sync&#34;, &#34;auto&#34;)}
-      className={cls || undefined}
-      aria-hidden={decorative ? &#34;true&#34; : undefined}
-      {...rest}
+  <span class="kr">const</span> cls = cn(imageVariants({ aspect, fit, position, size, variant }), className);
+  <span class="k">return</span> (
+    &lt;<span class="nt">img</span>
+      <span class="na">ref</span>={ref}
+      <span class="na">alt</span>={((decorative ? <span class="s2">&#34;&#34;</span> : alt)) ?? <span class="s2">&#34;&#34;</span>}
+      <span class="na">loading</span>={oneOfOr(loading, <span class="s2">&#34;lazy&#34;</span>, <span class="s2">&#34;eager&#34;</span>)}
+      <span class="na">decoding</span>={oneOfOr(decoding, <span class="s2">&#34;async&#34;</span>, <span class="s2">&#34;sync&#34;</span>, <span class="s2">&#34;auto&#34;</span>)}
+      <span class="na">className</span>={cls || <span class="kc">undefined</span>}
+      <span class="na">aria-hidden</span>={decorative ? <span class="s2">&#34;true&#34;</span> : <span class="kc">undefined</span>}
+      {<span class="na">...rest</span>}
     /&gt;
   );
 });
-Image.displayName = &#34;Image&#34;;
-</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/image/picture.tsx</span><button type="button" hidden data-copy="code-react-1" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-react-1" class="font-mono">// Code generated by xgen. DO NOT EDIT.
-// Source: xgen/specs/ui/image.json
-/**
- * Picture: one part of Image (one file per part, as in the Svelte package).
- */
+Image.displayName = <span class="s2">&#34;Image&#34;</span>;
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/image/picture.tsx</span><button type="button" hidden data-copy="code-react-1" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="hl max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-react-1" class="font-mono"><span class="c1">// Code generated by xgen. DO NOT EDIT.
+</span><span class="c1">// Source: xgen/specs/ui/image.json
+</span><span class="cm">/**
+</span><span class="cm"> * Picture: one part of Image (one file per part, as in the Svelte package).
+</span><span class="cm"> */</span>
 
-import { forwardRef, type ReactNode, type HTMLAttributes } from &#34;react&#34;;
-import { cn } from &#34;../../utils&#34;;
+<span class="kr">import</span> { forwardRef, <span class="kr">type</span> ReactNode, <span class="kr">type</span> HTMLAttributes } <span class="kr">from</span> <span class="s2">&#34;react&#34;</span>;
+<span class="kr">import</span> { cn } <span class="kr">from</span> <span class="s2">&#34;../../utils&#34;</span>;
 
-/**
- * Picture renders a responsive image wrapper.
- */
-export type PictureProps = Omit&lt;HTMLAttributes&lt;HTMLElement&gt;, &#34;className&#34; | &#34;children&#34;&gt; &amp; {
-  className?: string;
-  children?: ReactNode;
+<span class="cm">/**
+</span><span class="cm"> * Picture renders a responsive image wrapper.
+</span><span class="cm"> */</span>
+<span class="kr">export</span> <span class="kr">type</span> PictureProps = Omit&lt;<span class="nt">HTMLAttributes</span>&lt;<span class="nt">HTMLElement</span>&gt;, <span class="s2">&#34;className&#34;</span> <span class="err">|</span> <span class="s2">&#34;children&#34;</span>&gt; &amp; {
+  className?: <span class="kt">string</span>;
+  children?: <span class="kt">ReactNode</span>;
 };
 
-export const Picture = forwardRef&lt;HTMLElement, PictureProps&gt;(function Picture(
+<span class="kr">export</span> <span class="kr">const</span> Picture = forwardRef&lt;<span class="nt">HTMLElement</span>, <span class="na">PictureProps</span>&gt;(<span class="kd">function</span> Picture(
   { className, children, ...rest },
   ref
 ) {
-  const cls = cn(className);
-  return (
-    &lt;picture ref={ref} className={cls || undefined} {...rest}&gt;
+  <span class="kr">const</span> cls = cn(className);
+  <span class="k">return</span> (
+    &lt;<span class="nt">picture</span> <span class="na">ref</span>={ref} <span class="na">className</span>={cls || <span class="kc">undefined</span>} {<span class="na">...rest</span>}&gt;
       {children}
-    &lt;/picture&gt;
+    &lt;/<span class="nt">picture</span>&gt;
   );
 });
-Picture.displayName = &#34;Picture&#34;;
-</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/image/source.tsx</span><button type="button" hidden data-copy="code-react-2" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-react-2" class="font-mono">// Code generated by xgen. DO NOT EDIT.
-// Source: xgen/specs/ui/image.json
-/**
- * Source: one part of Image (one file per part, as in the Svelte package).
- */
+Picture.displayName = <span class="s2">&#34;Picture&#34;</span>;
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/image/source.tsx</span><button type="button" hidden data-copy="code-react-2" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="hl max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-react-2" class="font-mono"><span class="c1">// Code generated by xgen. DO NOT EDIT.
+</span><span class="c1">// Source: xgen/specs/ui/image.json
+</span><span class="cm">/**
+</span><span class="cm"> * Source: one part of Image (one file per part, as in the Svelte package).
+</span><span class="cm"> */</span>
 
-import { forwardRef, type ReactNode, type SourceHTMLAttributes } from &#34;react&#34;;
+<span class="kr">import</span> { forwardRef, <span class="kr">type</span> ReactNode, <span class="kr">type</span> SourceHTMLAttributes } <span class="kr">from</span> <span class="s2">&#34;react&#34;</span>;
 
-/**
- * Source renders a source candidate for picture, video, or audio.
- */
-export type SourceProps = Omit&lt;
-  SourceHTMLAttributes&lt;HTMLSourceElement&gt;,
-  | &#34;className&#34; | &#34;children&#34;
+<span class="cm">/**
+</span><span class="cm"> * Source renders a source candidate for picture, video, or audio.
+</span><span class="cm"> */</span>
+<span class="kr">export</span> <span class="kr">type</span> SourceProps = Omit&lt;
+  SourceHTMLAttributes&lt;<span class="nt">HTMLSourceElement</span>&gt;,
+  | <span class="s2">&#34;className&#34;</span> | <span class="s2">&#34;children&#34;</span>
 &gt; &amp; {
-  className?: string;
+  className?: <span class="kt">string</span>;
 };
 
-export const Source = forwardRef&lt;HTMLSourceElement, SourceProps&gt;(function Source(
+<span class="kr">export</span> <span class="kr">const</span> Source = forwardRef&lt;<span class="nt">HTMLSourceElement</span>, <span class="na">SourceProps</span>&gt;(<span class="kd">function</span> Source(
   { className, ...rest },
   ref
 ) {
-  return (
-    &lt;source ref={ref} {...rest} /&gt;
+  <span class="k">return</span> (
+    &lt;<span class="nt">source</span> <span class="na">ref</span>={ref} {<span class="na">...rest</span>} /&gt;
   );
 });
-Source.displayName = &#34;Source&#34;;
-</code></pre></div><p class="text-sm"><a class="underline" href="https://registry.buildy.tw/react/components/ui/image.json">React registry item (JSON)</a></p></section><section id="panel-vue" data-panel data-runtime="vue" data-label="Vue" aria-label="Vue" class="mb-8"><h3 class="mb-2 text-lg font-semibold">Vue</h3><p class="mb-2 text-sm text-muted-foreground">Point the CLI at this runtime once, then add the item:</p><div class="mb-2"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-vue-init" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit init --yes --framework vue --dir src --registry-url https://registry.buildy.tw/vue --strict-cdn</code><button type="button" hidden data-copy="panel-vue-init" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-vue-add" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit add image</code><button type="button" hidden data-copy="panel-vue-add" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/image/image.vue</span><button type="button" hidden data-copy="code-vue-0" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-vue-0" class="font-mono">&lt;!-- Code generated by xgen. DO NOT EDIT. --&gt;
-&lt;!-- Source: xgen/specs/ui/image.json --&gt;
-&lt;!--
+Source.displayName = <span class="s2">&#34;Source&#34;</span>;
+</code></pre></div><p class="text-sm"><a class="underline" href="https://registry.buildy.tw/react/components/ui/image.json">React registry item (JSON)</a></p></section><section id="panel-vue" class="rt-panel" data-runtime="vue" aria-label="Vue code"><p class="mb-2 text-sm text-muted-foreground">Point the CLI at this runtime once, then add the item:</p><div class="mb-2"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-vue-init" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit init --yes --framework vue --dir src --registry-url https://registry.buildy.tw/vue --strict-cdn</code><button type="button" hidden data-copy="panel-vue-init" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-vue-add" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit add image</code><button type="button" hidden data-copy="panel-vue-add" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/image/image.vue</span><button type="button" hidden data-copy="code-vue-0" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="hl max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-vue-0" class="font-mono"><span class="c">&lt;!--</span> Code generated by xgen. DO NOT EDIT. --&gt;
+<span class="c">&lt;!--</span> Source: xgen/specs/ui/image.json --&gt;
+<span class="c">&lt;!--</span>
   Image renders an accessible img element.
 --&gt;
-&lt;script lang=&#34;ts&#34;&gt;
-import { variants, type VariantKey } from &#34;../../utils&#34;;
+&lt;<span class="nt">script</span> <span class="na">lang</span>=<span class="s">&#34;ts&#34;</span>&gt;
+<span class="kr">import</span> { variants, type VariantKey } from <span class="s2">&#34;../../utils&#34;</span>;
 
-/** Image: the classes of each value of each prop (shadcn/cva style). */
-export const imageVariants = variants({
-  base: &#34;block max-w-full&#34;,
+<span class="cm">/** Image: the classes of each value of each prop (shadcn/cva style). */</span>
+<span class="kr">export</span> <span class="kr">const</span> imageVariants = variants({
+  base: <span class="s2">&#34;block max-w-full&#34;</span>,
   variants: {
     aspect: {
-      auto: &#34;aspect-auto&#34;,
-      square: &#34;aspect-square&#34;,
-      video: &#34;aspect-video&#34;,
+      auto: <span class="s2">&#34;aspect-auto&#34;</span>,
+      square: <span class="s2">&#34;aspect-square&#34;</span>,
+      video: <span class="s2">&#34;aspect-video&#34;</span>,
     },
     fit: {
-      contain: &#34;object-contain&#34;,
-      cover: &#34;object-cover&#34;,
-      fill: &#34;object-fill&#34;,
-      none: &#34;object-none&#34;,
-      &#34;scale-down&#34;: &#34;object-scale-down&#34;,
+      contain: <span class="s2">&#34;object-contain&#34;</span>,
+      cover: <span class="s2">&#34;object-cover&#34;</span>,
+      fill: <span class="s2">&#34;object-fill&#34;</span>,
+      none: <span class="s2">&#34;object-none&#34;</span>,
+      <span class="s2">&#34;scale-down&#34;</span>: <span class="s2">&#34;object-scale-down&#34;</span>,
     },
     position: {
-      bottom: &#34;object-bottom&#34;,
-      center: &#34;object-center&#34;,
-      left: &#34;object-left&#34;,
-      &#34;left-bottom&#34;: &#34;object-left-bottom&#34;,
-      &#34;left-top&#34;: &#34;object-left-top&#34;,
-      right: &#34;object-right&#34;,
-      &#34;right-bottom&#34;: &#34;object-right-bottom&#34;,
-      &#34;right-top&#34;: &#34;object-right-top&#34;,
-      top: &#34;object-top&#34;,
+      bottom: <span class="s2">&#34;object-bottom&#34;</span>,
+      center: <span class="s2">&#34;object-center&#34;</span>,
+      left: <span class="s2">&#34;object-left&#34;</span>,
+      <span class="s2">&#34;left-bottom&#34;</span>: <span class="s2">&#34;object-left-bottom&#34;</span>,
+      <span class="s2">&#34;left-top&#34;</span>: <span class="s2">&#34;object-left-top&#34;</span>,
+      right: <span class="s2">&#34;object-right&#34;</span>,
+      <span class="s2">&#34;right-bottom&#34;</span>: <span class="s2">&#34;object-right-bottom&#34;</span>,
+      <span class="s2">&#34;right-top&#34;</span>: <span class="s2">&#34;object-right-top&#34;</span>,
+      top: <span class="s2">&#34;object-top&#34;</span>,
     },
     size: {
-      auto: &#34;&#34;,
-      default: &#34;&#34;,
-      full: &#34;h-full w-full&#34;,
-      xs: &#34;size-6&#34;,
-      sm: &#34;size-8&#34;,
-      md: &#34;size-12&#34;,
-      lg: &#34;size-16&#34;,
-      xl: &#34;size-20&#34;,
+      auto: <span class="s2">&#34;&#34;</span>,
+      <span class="k">default</span>: <span class="s2">&#34;&#34;</span>,
+      full: <span class="s2">&#34;h-full w-full&#34;</span>,
+      xs: <span class="s2">&#34;size-6&#34;</span>,
+      sm: <span class="s2">&#34;size-8&#34;</span>,
+      md: <span class="s2">&#34;size-12&#34;</span>,
+      lg: <span class="s2">&#34;size-16&#34;</span>,
+      xl: <span class="s2">&#34;size-20&#34;</span>,
     },
     variant: {
-      default: &#34;&#34;,
-      logo: &#34;object-contain&#34;,
+      <span class="k">default</span>: <span class="s2">&#34;&#34;</span>,
+      logo: <span class="s2">&#34;object-contain&#34;</span>,
     },
   },
-  defaultVariants: { aspect: &#34;auto&#34;, fit: &#34;cover&#34;, position: &#34;center&#34;, size: &#34;auto&#34;, variant: &#34;default&#34; },
+  defaultVariants: { aspect: <span class="s2">&#34;auto&#34;</span>, fit: <span class="s2">&#34;cover&#34;</span>, position: <span class="s2">&#34;center&#34;</span>, size: <span class="s2">&#34;auto&#34;</span>, variant: <span class="s2">&#34;default&#34;</span> },
 });
 
-export type ImageVariant = VariantKey&lt;typeof imageVariants, &#34;variant&#34;&gt;;
-export type ImageSize = VariantKey&lt;typeof imageVariants, &#34;size&#34;&gt;;
-export type ImageFit = VariantKey&lt;typeof imageVariants, &#34;fit&#34;&gt;;
-export type ImagePosition = VariantKey&lt;typeof imageVariants, &#34;position&#34;&gt;;
-export type ImageAspect = VariantKey&lt;typeof imageVariants, &#34;aspect&#34;&gt;;
+<span class="kr">export</span> type ImageVariant = VariantKey&lt;<span class="nt">typeof</span> <span class="na">imageVariants</span><span class="err">,</span> <span class="err">&#34;</span><span class="na">variant</span><span class="err">&#34;</span>&gt;;
+<span class="kr">export</span> type ImageSize = VariantKey&lt;<span class="nt">typeof</span> <span class="na">imageVariants</span><span class="err">,</span> <span class="err">&#34;</span><span class="na">size</span><span class="err">&#34;</span>&gt;;
+<span class="kr">export</span> type ImageFit = VariantKey&lt;<span class="nt">typeof</span> <span class="na">imageVariants</span><span class="err">,</span> <span class="err">&#34;</span><span class="na">fit</span><span class="err">&#34;</span>&gt;;
+<span class="kr">export</span> type ImagePosition = VariantKey&lt;<span class="nt">typeof</span> <span class="na">imageVariants</span><span class="err">,</span> <span class="err">&#34;</span><span class="na">position</span><span class="err">&#34;</span>&gt;;
+<span class="kr">export</span> type ImageAspect = VariantKey&lt;<span class="nt">typeof</span> <span class="na">imageVariants</span><span class="err">,</span> <span class="err">&#34;</span><span class="na">aspect</span><span class="err">&#34;</span>&gt;;
 
-export type ImageProps = {
+<span class="kr">export</span> type ImageProps = {
   variant?: ImageVariant;
   size?: ImageSize;
   alt?: string;
@@ -376,18 +377,18 @@ export type ImageProps = {
   aspect?: ImageAspect;
   loading?: string;
   decoding?: string;
-  decorative?: boolean;
-  class?: string;
+  decorative?: <span class="kr">boolean</span>;
+  <span class="kr">class</span>?: string;
 };
-&lt;/script&gt;
+&lt;/<span class="nt">script</span>&gt;
 
-&lt;script setup lang=&#34;ts&#34;&gt;
-import { computed, useAttrs } from &#34;vue&#34;;
-import { cn } from &#34;../../utils&#34;;
-import { oneOfOr } from &#34;../../utils/expr&#34;;
+&lt;<span class="nt">script</span> <span class="na">setup</span> <span class="na">lang</span>=<span class="s">&#34;ts&#34;</span>&gt;
+<span class="kr">import</span> { computed, useAttrs } from <span class="s2">&#34;vue&#34;</span>;
+<span class="kr">import</span> { cn } from <span class="s2">&#34;../../utils&#34;</span>;
+<span class="kr">import</span> { oneOfOr } from <span class="s2">&#34;../../utils/expr&#34;</span>;
 
-defineOptions({ inheritAttrs: false });
-const {
+defineOptions({ inheritAttrs: <span class="kc">false</span> });
+<span class="kr">const</span> {
   variant,
   size,
   alt,
@@ -397,69 +398,69 @@ const {
   loading,
   decoding,
   decorative,
-  class: className,
-} = defineProps&lt;ImageProps&gt;();
-const attrs = useAttrs();
-const cls = computed(() =&gt; cn(imageVariants({ aspect, fit, position, size, variant }), className));
-&lt;/script&gt;
+  <span class="kr">class</span>: className,
+} = defineProps&lt;<span class="nt">ImageProps</span>&gt;();
+<span class="kr">const</span> attrs = useAttrs();
+<span class="kr">const</span> cls = computed(() =&gt; cn(imageVariants({ aspect, fit, position, size, variant }), className));
+&lt;/<span class="nt">script</span>&gt;
 
-&lt;template&gt;
-  &lt;img
-    :alt=&#34;((decorative ? &#39;&#39; : alt)) ?? &#39;&#39;&#34;
-    :loading=&#34;oneOfOr(loading, &#39;lazy&#39;, &#39;eager&#39;)&#34;
-    :decoding=&#34;oneOfOr(decoding, &#39;async&#39;, &#39;sync&#39;, &#39;auto&#39;)&#34;
-    :class=&#34;cls || undefined&#34;
-    :aria-hidden=&#34;decorative ? &#39;true&#39; : undefined&#34;
-    v-bind=&#34;attrs&#34;
+&lt;<span class="nt">template</span>&gt;
+  &lt;<span class="nt">img</span>
+    :<span class="na">alt</span>=<span class="s">&#34;((decorative ? &#39;&#39; : alt)) ?? &#39;&#39;&#34;</span>
+    :<span class="na">loading</span>=<span class="s">&#34;oneOfOr(loading, &#39;lazy&#39;, &#39;eager&#39;)&#34;</span>
+    :<span class="na">decoding</span>=<span class="s">&#34;oneOfOr(decoding, &#39;async&#39;, &#39;sync&#39;, &#39;auto&#39;)&#34;</span>
+    :<span class="na">class</span>=<span class="s">&#34;cls || undefined&#34;</span>
+    :<span class="na">aria</span><span class="nt">-hidden</span><span class="err">=&#34;</span><span class="na">decorative</span> <span class="err">?</span> <span class="err">&#39;</span><span class="na">true</span><span class="err">&#39;</span> : <span class="na">undefined</span><span class="err">&#34;</span>
+    <span class="nt">v-bind</span>=<span class="s">&#34;attrs&#34;</span>
   /&gt;
-&lt;/template&gt;
-</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/image/picture.vue</span><button type="button" hidden data-copy="code-vue-1" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-vue-1" class="font-mono">&lt;!-- Code generated by xgen. DO NOT EDIT. --&gt;
-&lt;!-- Source: xgen/specs/ui/image.json --&gt;
-&lt;!--
+&lt;/<span class="nt">template</span>&gt;
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/image/picture.vue</span><button type="button" hidden data-copy="code-vue-1" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="hl max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-vue-1" class="font-mono"><span class="c">&lt;!--</span> Code generated by xgen. DO NOT EDIT. --&gt;
+<span class="c">&lt;!--</span> Source: xgen/specs/ui/image.json --&gt;
+<span class="c">&lt;!--</span>
   Picture renders a responsive image wrapper.
 --&gt;
-&lt;script lang=&#34;ts&#34;&gt;
-export type PictureProps = {
-  class?: string;
+&lt;<span class="nt">script</span> <span class="na">lang</span>=<span class="s">&#34;ts&#34;</span>&gt;
+<span class="kr">export</span> type PictureProps = {
+  <span class="kr">class</span>?: string;
 };
-&lt;/script&gt;
+&lt;/<span class="nt">script</span>&gt;
 
-&lt;script setup lang=&#34;ts&#34;&gt;
-import { computed, useAttrs } from &#34;vue&#34;;
-import { cn } from &#34;../../utils&#34;;
+&lt;<span class="nt">script</span> <span class="na">setup</span> <span class="na">lang</span>=<span class="s">&#34;ts&#34;</span>&gt;
+<span class="kr">import</span> { computed, useAttrs } from <span class="s2">&#34;vue&#34;</span>;
+<span class="kr">import</span> { cn } from <span class="s2">&#34;../../utils&#34;</span>;
 
-defineOptions({ inheritAttrs: false });
-defineSlots&lt;{ default?(): unknown }&gt;();
-const { class: className } = defineProps&lt;PictureProps&gt;();
-const attrs = useAttrs();
-const cls = computed(() =&gt; cn(className));
-&lt;/script&gt;
+defineOptions({ inheritAttrs: <span class="kc">false</span> });
+defineSlots&lt;{ <span class="k">default</span>?(): unknown }&gt;();
+<span class="kr">const</span> { <span class="kr">class</span>: className } = defineProps&lt;<span class="nt">PictureProps</span>&gt;();
+<span class="kr">const</span> attrs = useAttrs();
+<span class="kr">const</span> cls = computed(() =&gt; cn(className));
+&lt;/<span class="nt">script</span>&gt;
 
-&lt;template&gt;
-  &lt;picture :class=&#34;cls || undefined&#34; v-bind=&#34;attrs&#34;&gt;
-    &lt;slot /&gt;
-  &lt;/picture&gt;
-&lt;/template&gt;
-</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/image/source.vue</span><button type="button" hidden data-copy="code-vue-2" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-vue-2" class="font-mono">&lt;!-- Code generated by xgen. DO NOT EDIT. --&gt;
-&lt;!-- Source: xgen/specs/ui/image.json --&gt;
-&lt;!--
-  Source renders a source candidate for picture, video, or audio.
+&lt;<span class="nt">template</span>&gt;
+  &lt;<span class="nt">picture</span> :<span class="na">class</span>=<span class="s">&#34;cls || undefined&#34;</span> <span class="nt">v-bind</span>=<span class="s">&#34;attrs&#34;</span>&gt;
+    &lt;<span class="nt">slot</span> /&gt;
+  &lt;/<span class="nt">picture</span>&gt;
+&lt;/<span class="nt">template</span>&gt;
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/image/source.vue</span><button type="button" hidden data-copy="code-vue-2" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="hl max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-vue-2" class="font-mono"><span class="c">&lt;!--</span> Code generated by xgen. DO NOT EDIT. --&gt;
+<span class="c">&lt;!--</span> Source: xgen/specs/ui/image.json --&gt;
+<span class="c">&lt;!--</span>
+  Source renders a source candidate <span class="k">for</span> picture, video, or audio.
 --&gt;
-&lt;script lang=&#34;ts&#34;&gt;
-export type SourceProps = {
-  class?: string;
+&lt;<span class="nt">script</span> <span class="na">lang</span>=<span class="s">&#34;ts&#34;</span>&gt;
+<span class="kr">export</span> type SourceProps = {
+  <span class="kr">class</span>?: string;
 };
-&lt;/script&gt;
+&lt;/<span class="nt">script</span>&gt;
 
-&lt;script setup lang=&#34;ts&#34;&gt;
-import { useAttrs } from &#34;vue&#34;;
+&lt;<span class="nt">script</span> <span class="na">setup</span> <span class="na">lang</span>=<span class="s">&#34;ts&#34;</span>&gt;
+<span class="kr">import</span> { useAttrs } from <span class="s2">&#34;vue&#34;</span>;
 
-defineOptions({ inheritAttrs: false });
-const { class: className } = defineProps&lt;SourceProps&gt;();
-const attrs = useAttrs();
-&lt;/script&gt;
+defineOptions({ inheritAttrs: <span class="kc">false</span> });
+<span class="kr">const</span> { <span class="kr">class</span>: className } = defineProps&lt;<span class="nt">SourceProps</span>&gt;();
+<span class="kr">const</span> attrs = useAttrs();
+&lt;/<span class="nt">script</span>&gt;
 
-&lt;template&gt;
-  &lt;source v-bind=&#34;attrs&#34; /&gt;
-&lt;/template&gt;
-</code></pre></div><p class="text-sm"><a class="underline" href="https://registry.buildy.tw/vue/components/ui/image.json">Vue registry item (JSON)</a></p></section></div></article></main></div><footer class="border-t border-border"><div class="mx-auto max-w-6xl px-4 py-8 text-sm text-muted-foreground">ui8kit, MIT licence. Static docs generated from markdown and the registry (<a class="underline" href="https://registry.buildy.tw/registry.json">registry.json</a>).</div></footer></body></html>
+&lt;<span class="nt">template</span>&gt;
+  &lt;<span class="nt">source</span> <span class="nt">v-bind</span>=<span class="s">&#34;attrs&#34;</span> /&gt;
+&lt;/<span class="nt">template</span>&gt;
+</code></pre></div><p class="text-sm"><a class="underline" href="https://registry.buildy.tw/vue/components/ui/image.json">Vue registry item (JSON)</a></p></section></div><h2 class="mb-2 text-xl font-semibold">Props</h2><p class="mb-4 max-w-3xl text-sm text-muted-foreground">Names and types come from the xgen specs of the source. Standard HTML attributes (id, role, tabIndex, aria-*) pass through to the root element; the class prop is className in React.</p><div class="mb-8"><h3 class="mb-2 font-mono text-base font-semibold">Image</h3><p class="mb-2 max-w-3xl whitespace-pre-line text-sm text-muted-foreground">Image renders an accessible img element.</p><div class="overflow-x-auto" tabindex="0" role="region" aria-label="Props of Image"><table class="w-full min-w-[40rem] text-left text-sm"><caption class="sr-only">Props of Image</caption> <thead><tr class="border-b border-border"><th scope="col" class="py-2 pr-4 font-medium">Prop</th><th scope="col" class="py-2 pr-4 font-medium">Type</th><th scope="col" class="py-2 pr-4 font-medium">Default</th><th scope="col" class="py-2 font-medium">Description</th></tr></thead> <tbody><tr class="border-b border-border align-top"><th scope="row" class="py-2 pr-4 font-mono text-xs font-medium">variant </th><td class="py-2 pr-4 font-mono text-xs">&#34;default&#34; | &#34;logo&#34;</td><td class="py-2 pr-4 font-mono text-xs">&#34;default&#34;</td><td class="py-2 text-muted-foreground">sets appearance preset</td></tr><tr class="border-b border-border align-top"><th scope="row" class="py-2 pr-4 font-mono text-xs font-medium">size </th><td class="py-2 pr-4 font-mono text-xs">&#34;auto&#34; | &#34;default&#34; | &#34;full&#34; | &#34;xs&#34; | &#34;sm&#34; | &#34;md&#34; | &#34;lg&#34; | &#34;xl&#34;</td><td class="py-2 pr-4 font-mono text-xs">&#34;auto&#34;</td><td class="py-2 text-muted-foreground">sets density preset</td></tr><tr class="border-b border-border align-top"><th scope="row" class="py-2 pr-4 font-mono text-xs font-medium">class </th><td class="py-2 pr-4 font-mono text-xs">string</td><td class="py-2 pr-4 font-mono text-xs"><span class="text-muted-foreground">-</span></td><td class="py-2 text-muted-foreground">adds Tailwind utilities</td></tr><tr class="border-b border-border align-top"><th scope="row" class="py-2 pr-4 font-mono text-xs font-medium">alt </th><td class="py-2 pr-4 font-mono text-xs">string</td><td class="py-2 pr-4 font-mono text-xs"><span class="text-muted-foreground">-</span></td><td class="py-2 text-muted-foreground">alternative text; ignored when Decorative</td></tr><tr class="border-b border-border align-top"><th scope="row" class="py-2 pr-4 font-mono text-xs font-medium">fit </th><td class="py-2 pr-4 font-mono text-xs">&#34;contain&#34; | &#34;cover&#34; | &#34;fill&#34; | &#34;none&#34; | &#34;scale-down&#34;</td><td class="py-2 pr-4 font-mono text-xs">&#34;cover&#34;</td><td class="py-2 text-muted-foreground">object-fit preset</td></tr><tr class="border-b border-border align-top"><th scope="row" class="py-2 pr-4 font-mono text-xs font-medium">position </th><td class="py-2 pr-4 font-mono text-xs">&#34;bottom&#34; | &#34;center&#34; | &#34;left&#34; | &#34;left-bottom&#34; | &#34;left-top&#34; | &#34;right&#34; | &#34;right-bottom&#34; | &#34;right-top&#34; | &#34;top&#34;</td><td class="py-2 pr-4 font-mono text-xs">&#34;center&#34;</td><td class="py-2 text-muted-foreground">object-position preset</td></tr><tr class="border-b border-border align-top"><th scope="row" class="py-2 pr-4 font-mono text-xs font-medium">aspect </th><td class="py-2 pr-4 font-mono text-xs">&#34;auto&#34; | &#34;square&#34; | &#34;video&#34;</td><td class="py-2 pr-4 font-mono text-xs">&#34;auto&#34;</td><td class="py-2 text-muted-foreground">aspect-ratio preset</td></tr><tr class="border-b border-border align-top"><th scope="row" class="py-2 pr-4 font-mono text-xs font-medium">loading </th><td class="py-2 pr-4 font-mono text-xs">string</td><td class="py-2 pr-4 font-mono text-xs"><span class="text-muted-foreground">-</span></td><td class="py-2 text-muted-foreground">eager or lazy (default lazy)</td></tr><tr class="border-b border-border align-top"><th scope="row" class="py-2 pr-4 font-mono text-xs font-medium">decoding </th><td class="py-2 pr-4 font-mono text-xs">string</td><td class="py-2 pr-4 font-mono text-xs"><span class="text-muted-foreground">-</span></td><td class="py-2 text-muted-foreground">sync, auto, or async (default async)</td></tr><tr class="border-b border-border align-top"><th scope="row" class="py-2 pr-4 font-mono text-xs font-medium">decorative </th><td class="py-2 pr-4 font-mono text-xs">boolean</td><td class="py-2 pr-4 font-mono text-xs"><span class="text-muted-foreground">-</span></td><td class="py-2 text-muted-foreground">marks the image as purely presentational</td></tr></tbody></table></div></div><div class="mb-8"><h3 class="mb-2 font-mono text-base font-semibold">Picture</h3><p class="mb-2 max-w-3xl whitespace-pre-line text-sm text-muted-foreground">Picture renders a responsive image wrapper.</p><div class="overflow-x-auto" tabindex="0" role="region" aria-label="Props of Picture"><table class="w-full min-w-[40rem] text-left text-sm"><caption class="sr-only">Props of Picture</caption> <thead><tr class="border-b border-border"><th scope="col" class="py-2 pr-4 font-medium">Prop</th><th scope="col" class="py-2 pr-4 font-medium">Type</th><th scope="col" class="py-2 pr-4 font-medium">Default</th><th scope="col" class="py-2 font-medium">Description</th></tr></thead> <tbody><tr class="border-b border-border align-top"><th scope="row" class="py-2 pr-4 font-mono text-xs font-medium">class </th><td class="py-2 pr-4 font-mono text-xs">string</td><td class="py-2 pr-4 font-mono text-xs"><span class="text-muted-foreground">-</span></td><td class="py-2 text-muted-foreground">adds Tailwind utilities</td></tr><tr class="border-b border-border align-top"><th scope="row" class="py-2 pr-4 font-mono text-xs font-medium">children </th><td class="py-2 pr-4 font-mono text-xs">children</td><td class="py-2 pr-4 font-mono text-xs"><span class="text-muted-foreground">-</span></td><td class="py-2 text-muted-foreground"></td></tr></tbody></table></div></div><div class="mb-8"><h3 class="mb-2 font-mono text-base font-semibold">Source</h3><p class="mb-2 max-w-3xl whitespace-pre-line text-sm text-muted-foreground">Source renders a source candidate for picture, video, or audio.</p><p class="text-sm text-muted-foreground">No props.</p></div><h2 class="mb-2 text-xl font-semibold">Used in</h2><ul class="flex flex-wrap gap-x-4 gap-y-1 text-sm"><li><a class="underline" href="/components/avatar/">avatar</a></li><li><a class="underline" href="/components/media-frame/">media-frame</a></li></ul></article></main></div><footer class="border-t border-border"><div class="mx-auto max-w-6xl px-4 py-8 text-sm text-muted-foreground">ui8kit, MIT licence. Static docs generated from markdown and the registry (<a class="underline" href="https://registry.buildy.tw/registry.json">registry.json</a>).</div></footer></body></html>

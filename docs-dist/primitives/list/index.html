@@ -1,220 +1,221 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>List (primitive) | ui8kit</title><meta name="description" content="List primitive"><link rel="canonical" href="https://ui.buildy.tw/primitives/list/"><link rel="stylesheet" href="/assets/site.css"><script src="/assets/app.js" defer></script></head><body class="min-h-screen bg-background text-foreground font-sans"><a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:left-2 focus:top-2 focus:bg-background focus:px-4 focus:py-2 focus:z-50">Skip to content</a><header class="border-b border-border"><div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-4 py-4"><a href="/" class="text-lg font-semibold">ui8kit</a><nav aria-label="Main" class="flex items-center gap-4 text-sm"><a href="/docs/" class="hover:underline">Docs</a> <a href="/docs/categories/blocks-marketing/" class="hover:underline">Blocks</a> <a href="/docs/categories/primitives/" class="hover:underline">Primitives</a> <a href="/docs/cli/" class="hover:underline">CLI</a></nav><form id="search" role="search" class="relative w-full sm:w-72" data-index="/search-index.json"><label for="search-input" class="sr-only">Search components and blocks</label> <input id="search-input" type="search" autocomplete="off" placeholder="Search, press /" class="h-10 w-full rounded border border-input bg-card px-4 text-sm"><ul id="search-results" hidden class="absolute left-0 right-0 top-12 z-40 rounded border border-border bg-popover text-popover-foreground shadow-md" aria-live="polite"></ul></form></div></header><div class="mx-auto flex max-w-6xl flex-col gap-8 px-4 py-8 md:flex-row"><nav aria-label="Docs" class="md:w-64 md:shrink-0"><h2 class="mb-2 text-sm font-semibold">Guides</h2><ul class="mb-6 flex flex-col gap-1"><li><a href="/docs/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Overview</a></li><li><a href="/docs/getting-started/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Getting started</a></li><li><a href="/docs/installation/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Installation</a></li><li><a href="/docs/cli/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">CLI</a></li><li><a href="/docs/theming-skins/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Theming and skins</a></li><li><a href="/docs/grid-8px/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">The 8px grid</a></li></ul><h2 class="mb-2 text-sm font-semibold">Categories</h2><ul class="mb-6 flex flex-col gap-1"><li><a href="/docs/categories/primitives/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Primitives</a></li><li><a href="/docs/categories/components/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Components</a></li><li><a href="/docs/categories/blocks-marketing/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: marketing</a></li><li><a href="/docs/categories/blocks-commerce/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: commerce</a></li><li><a href="/docs/categories/blocks-dashboard/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: dashboard</a></li><li><a href="/docs/categories/blocks-content/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: content</a></li><li><a href="/docs/categories/blocks-account/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: account</a></li><li><a href="/docs/categories/blocks-promo/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: promo</a></li><li><a href="/docs/categories/blocks-support/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: support</a></li><li><a href="/docs/categories/blocks-onboarding/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: onboarding</a></li><li><a href="/docs/categories/blocks-general/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: general</a></li></ul></nav><main id="main" class="min-w-0 flex-1"><article><p class="text-sm text-muted-foreground"><a class="underline" href="/docs/categories/primitives/">primitive / primitives</a></p><h1 class="mb-2 text-3xl font-semibold tracking-tight">List</h1><p class="mb-6 max-w-3xl text-muted-foreground">List primitive</p><h2 class="mb-2 text-xl font-semibold">Install</h2><div class="mb-6 max-w-xl"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="install-list" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit add list</code><button type="button" hidden data-copy="install-list" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><p class="mb-6 text-sm text-muted-foreground">Pulls in:  <a class="underline" href="/lib/utils/">utils</a></p><h2 class="mb-2 text-xl font-semibold">Code</h2><div data-tabs><section id="panel-svelte" data-panel data-runtime="svelte" data-label="Svelte" aria-label="Svelte" class="mb-8"><h3 class="mb-2 text-lg font-semibold">Svelte</h3><p class="mb-2 text-sm text-muted-foreground">Point the CLI at this runtime once, then add the item:</p><div class="mb-2"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-svelte-init" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit init --yes --framework svelte --dir src --registry-url https://registry.buildy.tw/svelte --strict-cdn</code><button type="button" hidden data-copy="panel-svelte-init" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-svelte-add" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit add list</code><button type="button" hidden data-copy="panel-svelte-add" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/list/list-item.svelte</span><button type="button" hidden data-copy="code-svelte-0" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-svelte-0" class="font-mono">&lt;!-- Code generated by xgen. DO NOT EDIT. --&gt;
-&lt;!-- Source: xgen/specs/ui/list.json --&gt;
-&lt;!--
-  ListItem renders one li with optional value attribute.
---&gt;
-&lt;script lang=&#34;ts&#34; module&gt;
-  import type { Snippet } from &#34;svelte&#34;;
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>List (primitive) | ui8kit</title><meta name="description" content="List primitive"><link rel="canonical" href="https://ui.buildy.tw/primitives/list/"><link rel="stylesheet" href="/assets/site.css"><script src="/assets/app.js" defer></script></head><body class="min-h-screen bg-background text-foreground font-sans"><a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:left-2 focus:top-2 focus:bg-background focus:px-4 focus:py-2 focus:z-50">Skip to content</a><header class="border-b border-border"><div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-4 py-4"><a href="/" class="text-lg font-semibold">ui8kit</a><nav aria-label="Main" class="flex items-center gap-4 text-sm"><a href="/docs/" class="hover:underline">Docs</a> <a href="/docs/categories/blocks-marketing/" class="hover:underline">Blocks</a> <a href="/docs/categories/primitives/" class="hover:underline">Primitives</a> <a href="/docs/cli/" class="hover:underline">CLI</a></nav><form id="search" role="search" class="relative w-full sm:w-72" data-index="/search-index.json"><label for="search-input" class="sr-only">Search components and blocks</label> <input id="search-input" type="search" autocomplete="off" placeholder="Search, press /" class="h-10 w-full rounded border border-input bg-card px-4 text-sm"><ul id="search-results" hidden class="absolute left-0 right-0 top-12 z-40 rounded border border-border bg-popover text-popover-foreground shadow-md" aria-live="polite"></ul></form></div></header><div class="mx-auto flex max-w-6xl flex-col gap-8 px-4 py-8 md:flex-row"><nav aria-label="Docs" class="md:w-64 md:shrink-0"><h2 class="mb-2 text-sm font-semibold">Guides</h2><ul class="mb-6 flex flex-col gap-1"><li><a href="/docs/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Overview</a></li><li><a href="/docs/getting-started/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Getting started</a></li><li><a href="/docs/installation/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Installation</a></li><li><a href="/docs/cli/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">CLI</a></li><li><a href="/docs/theming-skins/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Theming and skins</a></li><li><a href="/docs/grid-8px/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">The 8px grid</a></li></ul><h2 class="mb-2 text-sm font-semibold">Categories</h2><ul class="mb-6 flex flex-col gap-1"><li><a href="/docs/categories/primitives/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Primitives</a></li><li><a href="/docs/categories/components/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Components</a></li><li><a href="/docs/categories/blocks-marketing/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: marketing</a></li><li><a href="/docs/categories/blocks-commerce/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: commerce</a></li><li><a href="/docs/categories/blocks-dashboard/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: dashboard</a></li><li><a href="/docs/categories/blocks-content/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: content</a></li><li><a href="/docs/categories/blocks-account/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: account</a></li><li><a href="/docs/categories/blocks-promo/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: promo</a></li><li><a href="/docs/categories/blocks-support/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: support</a></li><li><a href="/docs/categories/blocks-onboarding/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: onboarding</a></li><li><a href="/docs/categories/blocks-general/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: general</a></li></ul></nav><main id="main" class="min-w-0 flex-1"><article><p class="text-sm text-muted-foreground"><a class="underline" href="/docs/categories/primitives/">primitive / primitives</a></p><h1 class="mb-2 text-3xl font-semibold tracking-tight">List</h1><p class="mb-6 max-w-3xl text-muted-foreground">List primitive</p><h2 class="mb-2 text-xl font-semibold">Install</h2><div class="mb-6 max-w-xl"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="install-list" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit add list</code><button type="button" hidden data-copy="install-list" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><p class="mb-6 text-sm text-muted-foreground">Pulls in:  <a class="underline" href="/lib/utils/">utils</a></p><h2 class="mb-2 text-xl font-semibold">Preview</h2><div class="preview mb-8 rounded border border-border bg-background p-6" role="group" tabindex="0" aria-label="List preview"><ul class="m-0 flex list-none flex-col p-0 gap-2" data-testid="items"><li><a class="underline-offset-4 text-foreground hover:underline flex items-center gap-4 rounded px-4 text-sm py-2 bg-muted font-semibold" href="#" aria-current="page" data-testid="item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block shrink-0" aria-hidden="true" data-slot="icon" data-lucide="layout-dashboard"><rect width="7" height="9" x="3" y="3" rx="1"></rect><rect width="7" height="5" x="14" y="3" rx="1"></rect><rect width="7" height="9" x="14" y="12" rx="1"></rect><rect width="7" height="5" x="3" y="16" rx="1"></rect></svg><span class="sr-only">Overview</span></a></li><li><a class="underline-offset-4 font-semibold text-foreground hover:underline flex items-center gap-4 rounded px-4 text-sm py-2" href="#" data-testid="item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block shrink-0" aria-hidden="true" data-slot="icon" data-lucide="shopping-bag"><path d="M16 10a4 4 0 0 1-8 0"></path><path d="M3.103 6.034h17.794"></path><path d="M3.4 5.467a2 2 0 0 0-.4 1.2V20a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6.667a2 2 0 0 0-.4-1.2l-2-2.667A2 2 0 0 0 17 2H7a2 2 0 0 0-1.6.8z"></path></svg><span class="sr-only">Orders</span></a></li><li><a class="underline-offset-4 font-semibold text-foreground hover:underline flex items-center gap-4 rounded px-4 text-sm py-2" href="#" data-testid="item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block shrink-0" aria-hidden="true" data-slot="icon" data-lucide="users"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><path d="M16 3.128a4 4 0 0 1 0 7.744"></path><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><circle cx="9" cy="7" r="4"></circle></svg><span class="sr-only">Customers</span></a></li><li><a class="underline-offset-4 font-semibold text-foreground hover:underline flex items-center gap-4 rounded px-4 text-sm py-2" href="#" data-testid="item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block shrink-0" aria-hidden="true" data-slot="icon" data-lucide="file-text"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"></path><path d="M14 2v5a1 1 0 0 0 1 1h5"></path><path d="M10 9H8"></path><path d="M16 13H8"></path><path d="M16 17H8"></path></svg><span class="sr-only">Reports</span></a></li><li><a class="underline-offset-4 font-semibold text-foreground hover:underline flex items-center gap-4 rounded px-4 text-sm py-2" href="#" data-testid="item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block shrink-0" aria-hidden="true" data-slot="icon" data-lucide="settings"><path d="M9.671 4.136a2.34 2.34 0 0 1 4.659 0 2.34 2.34 0 0 0 3.319 1.915 2.34 2.34 0 0 1 2.33 4.033 2.34 2.34 0 0 0 0 3.831 2.34 2.34 0 0 1-2.33 4.033 2.34 2.34 0 0 0-3.319 1.915 2.34 2.34 0 0 1-4.659 0 2.34 2.34 0 0 0-3.32-1.915 2.34 2.34 0 0 1-2.33-4.033 2.34 2.34 0 0 0 0-3.831A2.34 2.34 0 0 1 6.35 6.051a2.34 2.34 0 0 0 3.319-1.915"></path><circle cx="12" cy="12" r="3"></circle></svg><span class="sr-only">Settings</span></a></li></ul>
+</div><h2 class="mb-2 text-xl font-semibold">Code</h2><div class="rt mb-8"><div class="rt-bar" role="radiogroup" aria-label="Runtime"><input type="radio" name="rt" id="rt-svelte" value="svelte" class="sr-only" checked> <label for="rt-svelte">Svelte</label><input type="radio" name="rt" id="rt-react" value="react" class="sr-only"> <label for="rt-react">React</label><input type="radio" name="rt" id="rt-vue" value="vue" class="sr-only"> <label for="rt-vue">Vue</label></div><section id="panel-svelte" class="rt-panel" data-runtime="svelte" aria-label="Svelte code"><p class="mb-2 text-sm text-muted-foreground">Point the CLI at this runtime once, then add the item:</p><div class="mb-2"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-svelte-init" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit init --yes --framework svelte --dir src --registry-url https://registry.buildy.tw/svelte --strict-cdn</code><button type="button" hidden data-copy="panel-svelte-init" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-svelte-add" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit add list</code><button type="button" hidden data-copy="panel-svelte-add" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/list/list-item.svelte</span><button type="button" hidden data-copy="code-svelte-0" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="hl max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-svelte-0" class="font-mono"><span class="c">&lt;!-- Code generated by xgen. DO NOT EDIT. --&gt;</span>
+<span class="c">&lt;!-- Source: xgen/specs/ui/list.json --&gt;</span>
+<span class="c">&lt;!--
+</span><span class="c">  ListItem renders one li with optional value attribute.
+</span><span class="c">--&gt;</span>
+&lt;<span class="nt">script</span> <span class="na">lang</span>=<span class="s">&#34;ts&#34;</span> <span class="na">module</span>&gt;
+  <span class="kr">import</span> <span class="kr">type</span> { Snippet } <span class="kr">from</span> <span class="s2">&#34;svelte&#34;</span>;
 
-  export type ListItemProps = {
-    tag?: string;
-    value?: number;
-    class?: string;
-    children?: Snippet;
-    [key: string]: unknown;
+  <span class="kr">export</span> <span class="kr">type</span> ListItemProps = {
+    tag?: <span class="kt">string</span>;
+    value?: <span class="kt">number</span>;
+    <span class="kr">class</span>?: <span class="kt">string</span>;
+    children?: <span class="kt">Snippet</span>;
+    [key: <span class="kt">string</span>]: <span class="kt">unknown</span>;
   };
-&lt;/script&gt;
+&lt;/<span class="nt">script</span>&gt;
 
-&lt;script lang=&#34;ts&#34;&gt;
-  import { cn } from &#34;../../utils&#34;;
-  import { eqStr, isSetNum } from &#34;../../utils/expr&#34;;
-  import { resolveTag, TagGroup } from &#34;../../utils/tags&#34;;
+&lt;<span class="nt">script</span> <span class="na">lang</span>=<span class="s">&#34;ts&#34;</span>&gt;
+  <span class="kr">import</span> { cn } <span class="kr">from</span> <span class="s2">&#34;../../utils&#34;</span>;
+  <span class="kr">import</span> { eqStr, isSetNum } <span class="kr">from</span> <span class="s2">&#34;../../utils/expr&#34;</span>;
+  <span class="kr">import</span> { resolveTag, TagGroup } <span class="kr">from</span> <span class="s2">&#34;../../utils/tags&#34;</span>;
 
-  let {
+  <span class="kd">let</span> {
     tag,
     value,
-    class: className,
+    <span class="kr">class</span>: className,
     children,
     ...rest
   }: ListItemProps = $props();
 
-  const cls = $derived(cn(className));
-  const resolvedTagValue = $derived(resolveTag(tag, &#34;li&#34;, TagGroup.ListItem));
-&lt;/script&gt;
+  <span class="kr">const</span> cls = $derived(cn(className));
+  <span class="kr">const</span> resolvedTagValue = $derived(resolveTag(tag, <span class="s2">&#34;li&#34;</span>, TagGroup.ListItem));
+&lt;/<span class="nt">script</span>&gt;
 
-&lt;svelte:element
-  this={resolvedTagValue}
-  {...(cls ? { class: cls } : {})}
-  {...({ &#34;value&#34;: (isSetNum(value) &amp;&amp; eqStr(resolvedTagValue, &#34;li&#34;)) ? String(value ?? 0) : undefined } as Record&lt;string, unknown&gt;)}
+&lt;<span class="nt">svelte:element</span>
+  <span class="na">this</span>={resolvedTagValue}
+  {...(cls ? { <span class="kr">class</span>: cls } : {})}
+  {...({ <span class="s2">&#34;value&#34;</span>: (isSetNum(value) &amp;&amp; eqStr(resolvedTagValue, <span class="s2">&#34;li&#34;</span>)) ? <span class="nb">String</span>(value ?? <span class="mi">0</span>) : <span class="kc">undefined</span> } <span class="kr">as</span> Record&lt;<span class="nt">string</span>, <span class="na">unknown</span>&gt;)}
   {...rest}
-&gt;
-  {@render children?.()}
-&lt;/svelte:element&gt;
-</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/list/list.svelte</span><button type="button" hidden data-copy="code-svelte-1" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-svelte-1" class="font-mono">&lt;!-- Code generated by xgen. DO NOT EDIT. --&gt;
-&lt;!-- Source: xgen/specs/ui/list.json --&gt;
-&lt;!--
-  List renders a list container (ul, ol, dl, or menu).
---&gt;
-&lt;script lang=&#34;ts&#34; module&gt;
-  import type { Snippet } from &#34;svelte&#34;;
+<span class="err">&gt;</span>
+  {<span class="kd">@render</span> children?.()}
+&lt;/<span class="nt">svelte:element</span>&gt;
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/list/list.svelte</span><button type="button" hidden data-copy="code-svelte-1" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="hl max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-svelte-1" class="font-mono"><span class="c">&lt;!-- Code generated by xgen. DO NOT EDIT. --&gt;</span>
+<span class="c">&lt;!-- Source: xgen/specs/ui/list.json --&gt;</span>
+<span class="c">&lt;!--
+</span><span class="c">  List renders a list container (ul, ol, dl, or menu).
+</span><span class="c">--&gt;</span>
+&lt;<span class="nt">script</span> <span class="na">lang</span>=<span class="s">&#34;ts&#34;</span> <span class="na">module</span>&gt;
+  <span class="kr">import</span> <span class="kr">type</span> { Snippet } <span class="kr">from</span> <span class="s2">&#34;svelte&#34;</span>;
 
-  export type ListProps = {
-    tag?: string;
-    class?: string;
-    children?: Snippet;
-    [key: string]: unknown;
+  <span class="kr">export</span> <span class="kr">type</span> ListProps = {
+    tag?: <span class="kt">string</span>;
+    <span class="kr">class</span>?: <span class="kt">string</span>;
+    children?: <span class="kt">Snippet</span>;
+    [key: <span class="kt">string</span>]: <span class="kt">unknown</span>;
   };
-&lt;/script&gt;
+&lt;/<span class="nt">script</span>&gt;
 
-&lt;script lang=&#34;ts&#34;&gt;
-  import { cn } from &#34;../../utils&#34;;
-  import { resolveTag, TagGroup } from &#34;../../utils/tags&#34;;
+&lt;<span class="nt">script</span> <span class="na">lang</span>=<span class="s">&#34;ts&#34;</span>&gt;
+  <span class="kr">import</span> { cn } <span class="kr">from</span> <span class="s2">&#34;../../utils&#34;</span>;
+  <span class="kr">import</span> { resolveTag, TagGroup } <span class="kr">from</span> <span class="s2">&#34;../../utils/tags&#34;</span>;
 
-  let {
+  <span class="kd">let</span> {
     tag,
-    class: className,
+    <span class="kr">class</span>: className,
     children,
     ...rest
   }: ListProps = $props();
 
-  const cls = $derived(cn(className));
-  const resolvedTagValue = $derived(resolveTag(tag, &#34;ul&#34;, TagGroup.List));
-&lt;/script&gt;
+  <span class="kr">const</span> cls = $derived(cn(className));
+  <span class="kr">const</span> resolvedTagValue = $derived(resolveTag(tag, <span class="s2">&#34;ul&#34;</span>, TagGroup.List));
+&lt;/<span class="nt">script</span>&gt;
 
-&lt;svelte:element this={resolvedTagValue} {...(cls ? { class: cls } : {})} {...rest}&gt;
-  {@render children?.()}
-&lt;/svelte:element&gt;
-</code></pre></div><p class="text-sm"><a class="underline" href="https://registry.buildy.tw/svelte/components/ui/list.json">Svelte registry item (JSON)</a></p></section><section id="panel-react" data-panel data-runtime="react" data-label="React" aria-label="React" class="mb-8"><h3 class="mb-2 text-lg font-semibold">React</h3><p class="mb-2 text-sm text-muted-foreground">Point the CLI at this runtime once, then add the item:</p><div class="mb-2"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-react-init" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit init --yes --framework react --dir src --registry-url https://registry.buildy.tw/react --strict-cdn</code><button type="button" hidden data-copy="panel-react-init" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-react-add" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit add list</code><button type="button" hidden data-copy="panel-react-add" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/list/list-item.tsx</span><button type="button" hidden data-copy="code-react-0" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-react-0" class="font-mono">// Code generated by xgen. DO NOT EDIT.
-// Source: xgen/specs/ui/list.json
-/**
- * ListItem: one part of List (one file per part, as in the Svelte package).
- */
+&lt;<span class="nt">svelte:element</span> <span class="na">this</span>={resolvedTagValue} {...(cls ? { <span class="kr">class</span>: cls } : {})} {...rest}<span class="err">&gt;</span>
+  {<span class="kd">@render</span> children?.()}
+&lt;/<span class="nt">svelte:element</span>&gt;
+</code></pre></div><p class="text-sm"><a class="underline" href="https://registry.buildy.tw/svelte/components/ui/list.json">Svelte registry item (JSON)</a></p></section><section id="panel-react" class="rt-panel" data-runtime="react" aria-label="React code"><p class="mb-2 text-sm text-muted-foreground">Point the CLI at this runtime once, then add the item:</p><div class="mb-2"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-react-init" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit init --yes --framework react --dir src --registry-url https://registry.buildy.tw/react --strict-cdn</code><button type="button" hidden data-copy="panel-react-init" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-react-add" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit add list</code><button type="button" hidden data-copy="panel-react-add" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/list/list-item.tsx</span><button type="button" hidden data-copy="code-react-0" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="hl max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-react-0" class="font-mono"><span class="c1">// Code generated by xgen. DO NOT EDIT.
+</span><span class="c1">// Source: xgen/specs/ui/list.json
+</span><span class="cm">/**
+</span><span class="cm"> * ListItem: one part of List (one file per part, as in the Svelte package).
+</span><span class="cm"> */</span>
 
-import { forwardRef, type ReactNode, type HTMLAttributes, type ElementType, type Ref } from &#34;react&#34;;
-import { cn } from &#34;../../utils&#34;;
-import { eqStr, isSetNum } from &#34;../../utils/expr&#34;;
-import { resolveTag, TagGroup } from &#34;../../utils/tags&#34;;
+<span class="kr">import</span> { forwardRef, <span class="kr">type</span> ReactNode, <span class="kr">type</span> HTMLAttributes, <span class="kr">type</span> ElementType, <span class="kr">type</span> Ref } <span class="kr">from</span> <span class="s2">&#34;react&#34;</span>;
+<span class="kr">import</span> { cn } <span class="kr">from</span> <span class="s2">&#34;../../utils&#34;</span>;
+<span class="kr">import</span> { eqStr, isSetNum } <span class="kr">from</span> <span class="s2">&#34;../../utils/expr&#34;</span>;
+<span class="kr">import</span> { resolveTag, TagGroup } <span class="kr">from</span> <span class="s2">&#34;../../utils/tags&#34;</span>;
 
-/**
- * ListItem renders one li with optional value attribute.
- */
-export type ListItemProps = Omit&lt;
-  HTMLAttributes&lt;HTMLElement&gt;,
-  | &#34;className&#34; | &#34;children&#34; | &#34;tag&#34; | &#34;value&#34;
+<span class="cm">/**
+</span><span class="cm"> * ListItem renders one li with optional value attribute.
+</span><span class="cm"> */</span>
+<span class="kr">export</span> <span class="kr">type</span> ListItemProps = Omit&lt;
+  HTMLAttributes&lt;<span class="nt">HTMLElement</span>&gt;,
+  | <span class="s2">&#34;className&#34;</span> | <span class="s2">&#34;children&#34;</span> | <span class="s2">&#34;tag&#34;</span> | <span class="s2">&#34;value&#34;</span>
 &gt; &amp; {
-  tag?: string;
-  value?: number;
-  className?: string;
-  children?: ReactNode;
+  tag?: <span class="kt">string</span>;
+  value?: <span class="kt">number</span>;
+  className?: <span class="kt">string</span>;
+  children?: <span class="kt">ReactNode</span>;
 };
 
-export const ListItem = forwardRef&lt;HTMLElement, ListItemProps&gt;(function ListItem(
+<span class="kr">export</span> <span class="kr">const</span> ListItem = forwardRef&lt;<span class="nt">HTMLElement</span>, <span class="na">ListItemProps</span>&gt;(<span class="kd">function</span> ListItem(
   { tag, value, className, children, ...rest },
   ref
 ) {
-  const cls = cn(className);
-  const resolvedTagValue = resolveTag(tag, &#34;li&#34;, TagGroup.ListItem);
-  const Tag = resolvedTagValue as ElementType;
-  return (
-    &lt;Tag
-      ref={ref as Ref&lt;HTMLElement&gt;}
-      className={cls || undefined}
-      value={(isSetNum(value) &amp;&amp; eqStr(resolvedTagValue, &#34;li&#34;)) ? String(value ?? 0) : undefined}
-      {...rest}
+  <span class="kr">const</span> cls = cn(className);
+  <span class="kr">const</span> resolvedTagValue = resolveTag(tag, <span class="s2">&#34;li&#34;</span>, TagGroup.ListItem);
+  <span class="kr">const</span> Tag = resolvedTagValue <span class="kr">as</span> ElementType;
+  <span class="k">return</span> (
+    &lt;<span class="nt">Tag</span>
+      <span class="na">ref</span>={ref <span class="kr">as</span> Ref&lt;<span class="nt">HTMLElement</span>&gt;}
+      <span class="na">className</span>={cls || <span class="kc">undefined</span>}
+      <span class="na">value</span>={(isSetNum(value) &amp;&amp; eqStr(resolvedTagValue, <span class="s2">&#34;li&#34;</span>)) ? <span class="nb">String</span>(value ?? <span class="mi">0</span>) : <span class="kc">undefined</span>}
+      {<span class="na">...rest</span>}
     &gt;
       {children}
-    &lt;/Tag&gt;
+    &lt;/<span class="nt">Tag</span>&gt;
   );
 });
-ListItem.displayName = &#34;ListItem&#34;;
-</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/list/list.tsx</span><button type="button" hidden data-copy="code-react-1" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-react-1" class="font-mono">// Code generated by xgen. DO NOT EDIT.
-// Source: xgen/specs/ui/list.json
-/**
- * List renders semantic ul, ol, dl, or menu lists with ListItem children.
- */
+ListItem.displayName = <span class="s2">&#34;ListItem&#34;</span>;
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/list/list.tsx</span><button type="button" hidden data-copy="code-react-1" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="hl max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-react-1" class="font-mono"><span class="c1">// Code generated by xgen. DO NOT EDIT.
+</span><span class="c1">// Source: xgen/specs/ui/list.json
+</span><span class="cm">/**
+</span><span class="cm"> * List renders semantic ul, ol, dl, or menu lists with ListItem children.
+</span><span class="cm"> */</span>
 
-import { forwardRef, type ReactNode, type HTMLAttributes, type ElementType, type Ref } from &#34;react&#34;;
-import { cn } from &#34;../../utils&#34;;
-import { resolveTag, TagGroup } from &#34;../../utils/tags&#34;;
+<span class="kr">import</span> { forwardRef, <span class="kr">type</span> ReactNode, <span class="kr">type</span> HTMLAttributes, <span class="kr">type</span> ElementType, <span class="kr">type</span> Ref } <span class="kr">from</span> <span class="s2">&#34;react&#34;</span>;
+<span class="kr">import</span> { cn } <span class="kr">from</span> <span class="s2">&#34;../../utils&#34;</span>;
+<span class="kr">import</span> { resolveTag, TagGroup } <span class="kr">from</span> <span class="s2">&#34;../../utils/tags&#34;</span>;
 
-/**
- * List renders a list container (ul, ol, dl, or menu).
- */
-export type ListProps = Omit&lt;HTMLAttributes&lt;HTMLElement&gt;, &#34;className&#34; | &#34;children&#34; | &#34;tag&#34;&gt; &amp; {
-  tag?: string;
-  className?: string;
-  children?: ReactNode;
+<span class="cm">/**
+</span><span class="cm"> * List renders a list container (ul, ol, dl, or menu).
+</span><span class="cm"> */</span>
+<span class="kr">export</span> <span class="kr">type</span> ListProps = Omit&lt;<span class="nt">HTMLAttributes</span>&lt;<span class="nt">HTMLElement</span>&gt;, <span class="s2">&#34;className&#34;</span> <span class="err">|</span> <span class="s2">&#34;children&#34;</span> <span class="err">|</span> <span class="s2">&#34;tag&#34;</span>&gt; &amp; {
+  tag?: <span class="kt">string</span>;
+  className?: <span class="kt">string</span>;
+  children?: <span class="kt">ReactNode</span>;
 };
 
-export const List = forwardRef&lt;HTMLElement, ListProps&gt;(function List(
+<span class="kr">export</span> <span class="kr">const</span> List = forwardRef&lt;<span class="nt">HTMLElement</span>, <span class="na">ListProps</span>&gt;(<span class="kd">function</span> List(
   { tag, className, children, ...rest },
   ref
 ) {
-  const cls = cn(className);
-  const resolvedTagValue = resolveTag(tag, &#34;ul&#34;, TagGroup.List);
-  const Tag = resolvedTagValue as ElementType;
-  return (
-    &lt;Tag ref={ref as Ref&lt;HTMLElement&gt;} className={cls || undefined} {...rest}&gt;
+  <span class="kr">const</span> cls = cn(className);
+  <span class="kr">const</span> resolvedTagValue = resolveTag(tag, <span class="s2">&#34;ul&#34;</span>, TagGroup.List);
+  <span class="kr">const</span> Tag = resolvedTagValue <span class="kr">as</span> ElementType;
+  <span class="k">return</span> (
+    &lt;<span class="nt">Tag</span> <span class="na">ref</span>={ref <span class="kr">as</span> Ref&lt;<span class="nt">HTMLElement</span>&gt;} <span class="na">className</span>={cls || <span class="kc">undefined</span>} {<span class="na">...rest</span>}&gt;
       {children}
-    &lt;/Tag&gt;
+    &lt;/<span class="nt">Tag</span>&gt;
   );
 });
-List.displayName = &#34;List&#34;;
-</code></pre></div><p class="text-sm"><a class="underline" href="https://registry.buildy.tw/react/components/ui/list.json">React registry item (JSON)</a></p></section><section id="panel-vue" data-panel data-runtime="vue" data-label="Vue" aria-label="Vue" class="mb-8"><h3 class="mb-2 text-lg font-semibold">Vue</h3><p class="mb-2 text-sm text-muted-foreground">Point the CLI at this runtime once, then add the item:</p><div class="mb-2"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-vue-init" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit init --yes --framework vue --dir src --registry-url https://registry.buildy.tw/vue --strict-cdn</code><button type="button" hidden data-copy="panel-vue-init" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-vue-add" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit add list</code><button type="button" hidden data-copy="panel-vue-add" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/list/list-item.vue</span><button type="button" hidden data-copy="code-vue-0" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-vue-0" class="font-mono">&lt;!-- Code generated by xgen. DO NOT EDIT. --&gt;
-&lt;!-- Source: xgen/specs/ui/list.json --&gt;
-&lt;!--
-  ListItem renders one li with optional value attribute.
+List.displayName = <span class="s2">&#34;List&#34;</span>;
+</code></pre></div><p class="text-sm"><a class="underline" href="https://registry.buildy.tw/react/components/ui/list.json">React registry item (JSON)</a></p></section><section id="panel-vue" class="rt-panel" data-runtime="vue" aria-label="Vue code"><p class="mb-2 text-sm text-muted-foreground">Point the CLI at this runtime once, then add the item:</p><div class="mb-2"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-vue-init" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit init --yes --framework vue --dir src --registry-url https://registry.buildy.tw/vue --strict-cdn</code><button type="button" hidden data-copy="panel-vue-init" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-vue-add" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit add list</code><button type="button" hidden data-copy="panel-vue-add" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/list/list-item.vue</span><button type="button" hidden data-copy="code-vue-0" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="hl max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-vue-0" class="font-mono"><span class="c">&lt;!--</span> Code generated by xgen. DO NOT EDIT. --&gt;
+<span class="c">&lt;!--</span> Source: xgen/specs/ui/list.json --&gt;
+<span class="c">&lt;!--</span>
+  ListItem renders one li <span class="kd">with</span> optional value attribute.
 --&gt;
-&lt;script lang=&#34;ts&#34;&gt;
-export type ListItemProps = {
+&lt;<span class="nt">script</span> <span class="na">lang</span>=<span class="s">&#34;ts&#34;</span>&gt;
+<span class="kr">export</span> type ListItemProps = {
   tag?: string;
   value?: number;
-  class?: string;
+  <span class="kr">class</span>?: string;
 };
-&lt;/script&gt;
+&lt;/<span class="nt">script</span>&gt;
 
-&lt;script setup lang=&#34;ts&#34;&gt;
-import { computed, useAttrs } from &#34;vue&#34;;
-import { cn } from &#34;../../utils&#34;;
-import { eqStr, isSetNum } from &#34;../../utils/expr&#34;;
-import { resolveTag, TagGroup } from &#34;../../utils/tags&#34;;
+&lt;<span class="nt">script</span> <span class="na">setup</span> <span class="na">lang</span>=<span class="s">&#34;ts&#34;</span>&gt;
+<span class="kr">import</span> { computed, useAttrs } from <span class="s2">&#34;vue&#34;</span>;
+<span class="kr">import</span> { cn } from <span class="s2">&#34;../../utils&#34;</span>;
+<span class="kr">import</span> { eqStr, isSetNum } from <span class="s2">&#34;../../utils/expr&#34;</span>;
+<span class="kr">import</span> { resolveTag, TagGroup } from <span class="s2">&#34;../../utils/tags&#34;</span>;
 
-defineOptions({ inheritAttrs: false });
-defineSlots&lt;{ default?(): unknown }&gt;();
-const { tag, value, class: className } = defineProps&lt;ListItemProps&gt;();
-const attrs = useAttrs();
-const cls = computed(() =&gt; cn(className));
-const resolvedTagValue = computed(() =&gt; resolveTag(tag, &#34;li&#34;, TagGroup.ListItem));
-&lt;/script&gt;
+defineOptions({ inheritAttrs: <span class="kc">false</span> });
+defineSlots&lt;{ <span class="k">default</span>?(): unknown }&gt;();
+<span class="kr">const</span> { tag, value, <span class="kr">class</span>: className } = defineProps&lt;<span class="nt">ListItemProps</span>&gt;();
+<span class="kr">const</span> attrs = useAttrs();
+<span class="kr">const</span> cls = computed(() =&gt; cn(className));
+<span class="kr">const</span> resolvedTagValue = computed(() =&gt; resolveTag(tag, <span class="s2">&#34;li&#34;</span>, TagGroup.ListItem));
+&lt;/<span class="nt">script</span>&gt;
 
-&lt;template&gt;
-  &lt;component
-    :is=&#34;resolvedTagValue&#34;
-    :class=&#34;cls || undefined&#34;
-    :value=&#34;(isSetNum(value) &amp;&amp; eqStr(resolvedTagValue, &#39;li&#39;)) ? String(value ?? 0) : undefined&#34;
-    v-bind=&#34;attrs&#34;
+&lt;<span class="nt">template</span>&gt;
+  &lt;<span class="nt">component</span>
+    <span class="nt">:is</span>=<span class="s">&#34;resolvedTagValue&#34;</span>
+    :<span class="na">class</span>=<span class="s">&#34;cls || undefined&#34;</span>
+    :<span class="na">value</span>=<span class="s">&#34;(isSetNum(value) &amp;&amp; eqStr(resolvedTagValue, &#39;li&#39;)) ? String(value ?? 0) : undefined&#34;</span>
+    <span class="nt">v-bind</span>=<span class="s">&#34;attrs&#34;</span>
   &gt;
-    &lt;slot /&gt;
-  &lt;/component&gt;
-&lt;/template&gt;
-</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/list/list.vue</span><button type="button" hidden data-copy="code-vue-1" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-vue-1" class="font-mono">&lt;!-- Code generated by xgen. DO NOT EDIT. --&gt;
-&lt;!-- Source: xgen/specs/ui/list.json --&gt;
-&lt;!--
+    &lt;<span class="nt">slot</span> /&gt;
+  &lt;/<span class="nt">component</span>&gt;
+&lt;/<span class="nt">template</span>&gt;
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/list/list.vue</span><button type="button" hidden data-copy="code-vue-1" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="hl max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-vue-1" class="font-mono"><span class="c">&lt;!--</span> Code generated by xgen. DO NOT EDIT. --&gt;
+<span class="c">&lt;!--</span> Source: xgen/specs/ui/list.json --&gt;
+<span class="c">&lt;!--</span>
   List renders a list container (ul, ol, dl, or menu).
 --&gt;
-&lt;script lang=&#34;ts&#34;&gt;
-export type ListProps = {
+&lt;<span class="nt">script</span> <span class="na">lang</span>=<span class="s">&#34;ts&#34;</span>&gt;
+<span class="kr">export</span> type ListProps = {
   tag?: string;
-  class?: string;
+  <span class="kr">class</span>?: string;
 };
-&lt;/script&gt;
+&lt;/<span class="nt">script</span>&gt;
 
-&lt;script setup lang=&#34;ts&#34;&gt;
-import { computed, useAttrs } from &#34;vue&#34;;
-import { cn } from &#34;../../utils&#34;;
-import { resolveTag, TagGroup } from &#34;../../utils/tags&#34;;
+&lt;<span class="nt">script</span> <span class="na">setup</span> <span class="na">lang</span>=<span class="s">&#34;ts&#34;</span>&gt;
+<span class="kr">import</span> { computed, useAttrs } from <span class="s2">&#34;vue&#34;</span>;
+<span class="kr">import</span> { cn } from <span class="s2">&#34;../../utils&#34;</span>;
+<span class="kr">import</span> { resolveTag, TagGroup } from <span class="s2">&#34;../../utils/tags&#34;</span>;
 
-defineOptions({ inheritAttrs: false });
-defineSlots&lt;{ default?(): unknown }&gt;();
-const { tag, class: className } = defineProps&lt;ListProps&gt;();
-const attrs = useAttrs();
-const cls = computed(() =&gt; cn(className));
-const resolvedTagValue = computed(() =&gt; resolveTag(tag, &#34;ul&#34;, TagGroup.List));
-&lt;/script&gt;
+defineOptions({ inheritAttrs: <span class="kc">false</span> });
+defineSlots&lt;{ <span class="k">default</span>?(): unknown }&gt;();
+<span class="kr">const</span> { tag, <span class="kr">class</span>: className } = defineProps&lt;<span class="nt">ListProps</span>&gt;();
+<span class="kr">const</span> attrs = useAttrs();
+<span class="kr">const</span> cls = computed(() =&gt; cn(className));
+<span class="kr">const</span> resolvedTagValue = computed(() =&gt; resolveTag(tag, <span class="s2">&#34;ul&#34;</span>, TagGroup.List));
+&lt;/<span class="nt">script</span>&gt;
 
-&lt;template&gt;
-  &lt;component :is=&#34;resolvedTagValue&#34; :class=&#34;cls || undefined&#34; v-bind=&#34;attrs&#34;&gt;
-    &lt;slot /&gt;
-  &lt;/component&gt;
-&lt;/template&gt;
-</code></pre></div><p class="text-sm"><a class="underline" href="https://registry.buildy.tw/vue/components/ui/list.json">Vue registry item (JSON)</a></p></section></div></article></main></div><footer class="border-t border-border"><div class="mx-auto max-w-6xl px-4 py-8 text-sm text-muted-foreground">ui8kit, MIT licence. Static docs generated from markdown and the registry (<a class="underline" href="https://registry.buildy.tw/registry.json">registry.json</a>).</div></footer></body></html>
+&lt;<span class="nt">template</span>&gt;
+  &lt;<span class="nt">component</span> <span class="nt">:is</span>=<span class="s">&#34;resolvedTagValue&#34;</span> :<span class="na">class</span>=<span class="s">&#34;cls || undefined&#34;</span> <span class="nt">v-bind</span>=<span class="s">&#34;attrs&#34;</span>&gt;
+    &lt;<span class="nt">slot</span> /&gt;
+  &lt;/<span class="nt">component</span>&gt;
+&lt;/<span class="nt">template</span>&gt;
+</code></pre></div><p class="text-sm"><a class="underline" href="https://registry.buildy.tw/vue/components/ui/list.json">Vue registry item (JSON)</a></p></section></div><h2 class="mb-2 text-xl font-semibold">Props</h2><p class="mb-4 max-w-3xl text-sm text-muted-foreground">Names and types come from the xgen specs of the source. Standard HTML attributes (id, role, tabIndex, aria-*) pass through to the root element; the class prop is className in React.</p><div class="mb-8"><h3 class="mb-2 font-mono text-base font-semibold">List</h3><p class="mb-2 max-w-3xl whitespace-pre-line text-sm text-muted-foreground">List renders a list container (ul, ol, dl, or menu).</p><div class="overflow-x-auto" tabindex="0" role="region" aria-label="Props of List"><table class="w-full min-w-[40rem] text-left text-sm"><caption class="sr-only">Props of List</caption> <thead><tr class="border-b border-border"><th scope="col" class="py-2 pr-4 font-medium">Prop</th><th scope="col" class="py-2 pr-4 font-medium">Type</th><th scope="col" class="py-2 pr-4 font-medium">Default</th><th scope="col" class="py-2 font-medium">Description</th></tr></thead> <tbody><tr class="border-b border-border align-top"><th scope="row" class="py-2 pr-4 font-mono text-xs font-medium">class </th><td class="py-2 pr-4 font-mono text-xs">string</td><td class="py-2 pr-4 font-mono text-xs"><span class="text-muted-foreground">-</span></td><td class="py-2 text-muted-foreground">adds Tailwind utilities</td></tr><tr class="border-b border-border align-top"><th scope="row" class="py-2 pr-4 font-mono text-xs font-medium">tag </th><td class="py-2 pr-4 font-mono text-xs">string</td><td class="py-2 pr-4 font-mono text-xs"><span class="text-muted-foreground">-</span></td><td class="py-2 text-muted-foreground">ul, ol, dl, or menu</td></tr><tr class="border-b border-border align-top"><th scope="row" class="py-2 pr-4 font-mono text-xs font-medium">children </th><td class="py-2 pr-4 font-mono text-xs">children</td><td class="py-2 pr-4 font-mono text-xs"><span class="text-muted-foreground">-</span></td><td class="py-2 text-muted-foreground"></td></tr></tbody></table></div></div><div class="mb-8"><h3 class="mb-2 font-mono text-base font-semibold">ListItem</h3><p class="mb-2 max-w-3xl whitespace-pre-line text-sm text-muted-foreground">ListItem renders one li with optional value attribute.</p><div class="overflow-x-auto" tabindex="0" role="region" aria-label="Props of ListItem"><table class="w-full min-w-[40rem] text-left text-sm"><caption class="sr-only">Props of ListItem</caption> <thead><tr class="border-b border-border"><th scope="col" class="py-2 pr-4 font-medium">Prop</th><th scope="col" class="py-2 pr-4 font-medium">Type</th><th scope="col" class="py-2 pr-4 font-medium">Default</th><th scope="col" class="py-2 font-medium">Description</th></tr></thead> <tbody><tr class="border-b border-border align-top"><th scope="row" class="py-2 pr-4 font-mono text-xs font-medium">class </th><td class="py-2 pr-4 font-mono text-xs">string</td><td class="py-2 pr-4 font-mono text-xs"><span class="text-muted-foreground">-</span></td><td class="py-2 text-muted-foreground">adds Tailwind utilities</td></tr><tr class="border-b border-border align-top"><th scope="row" class="py-2 pr-4 font-mono text-xs font-medium">tag </th><td class="py-2 pr-4 font-mono text-xs">string</td><td class="py-2 pr-4 font-mono text-xs"><span class="text-muted-foreground">-</span></td><td class="py-2 text-muted-foreground">li, dt, or dd; defaults to li</td></tr><tr class="border-b border-border align-top"><th scope="row" class="py-2 pr-4 font-mono text-xs font-medium">value </th><td class="py-2 pr-4 font-mono text-xs">int</td><td class="py-2 pr-4 font-mono text-xs"><span class="text-muted-foreground">-</span></td><td class="py-2 text-muted-foreground">optional li value for ordered contexts</td></tr><tr class="border-b border-border align-top"><th scope="row" class="py-2 pr-4 font-mono text-xs font-medium">children </th><td class="py-2 pr-4 font-mono text-xs">children</td><td class="py-2 pr-4 font-mono text-xs"><span class="text-muted-foreground">-</span></td><td class="py-2 text-muted-foreground"></td></tr></tbody></table></div></div><h2 class="mb-2 text-xl font-semibold">Used in</h2><ul class="flex flex-wrap gap-x-4 gap-y-1 text-sm"><li><a class="underline" href="/blocks/about-me/">about-me</a></li><li><a class="underline" href="/blocks/activity-feed/">activity-feed</a></li><li><a class="underline" href="/blocks/app-shell/">app-shell</a></li><li><a class="underline" href="/blocks/article-body/">article-body</a></li><li><a class="underline" href="/blocks/before-after/">before-after</a></li><li><a class="underline" href="/blocks/bottom-nav/">bottom-nav</a></li><li><a class="underline" href="/components/cart-summary-card/">cart-summary-card</a></li><li><a class="underline" href="/blocks/category-nav/">category-nav</a></li><li><a class="underline" href="/blocks/checklist/">checklist</a></li><li><a class="underline" href="/components/code-window/">code-window</a></li><li><a class="underline" href="/components/cta-proof-items/">cta-proof-items</a></li><li><a class="underline" href="/components/drawer-lines/">drawer-lines</a></li><li><a class="underline" href="/components/faq-finder/">faq-finder</a></li><li><a class="underline" href="/components/faq-help/">faq-help</a></li><li><a class="underline" href="/components/footer-card/">footer-card</a></li><li><a class="underline" href="/components/footer-columns/">footer-columns</a></li><li><a class="underline" href="/components/footer-group-cards/">footer-group-cards</a></li><li><a class="underline" href="/components/footer-link-columns/">footer-link-columns</a></li><li><a class="underline" href="/blocks/job-board/">job-board</a></li><li><a class="underline" href="/blocks/kanban-board/">kanban-board</a></li><li><a class="underline" href="/blocks/mega-menu/">mega-menu</a></li><li><a class="underline" href="/blocks/milestone-timeline/">milestone-timeline</a></li><li><a class="underline" href="/blocks/order-summary/">order-summary</a></li><li><a class="underline" href="/components/page-crumbs/">page-crumbs</a></li><li><a class="underline" href="/blocks/pricing-card/">pricing-card</a></li><li><a class="underline" href="/blocks/product-detail/">product-detail</a></li><li><a class="underline" href="/blocks/product-info/">product-info</a></li><li><a class="underline" href="/components/shell-footer/">shell-footer</a></li><li><a class="underline" href="/components/shell-sidebar/">shell-sidebar</a></li><li><a class="underline" href="/components/shell-topbar/">shell-topbar</a></li><li><a class="underline" href="/blocks/sidebar-nav/">sidebar-nav</a></li><li><a class="underline" href="/blocks/signup-wizard/">signup-wizard</a></li><li><a class="underline" href="/blocks/slot-board/">slot-board</a></li><li><a class="underline" href="/blocks/stepper/">stepper</a></li><li><a class="underline" href="/blocks/steps-list/">steps-list</a></li><li><a class="underline" href="/blocks/store-locations/">store-locations</a></li><li><a class="underline" href="/components/timeline/">timeline</a></li><li><a class="underline" href="/blocks/usp-strip/">usp-strip</a></li><li><a class="underline" href="/blocks/video-modal/">video-modal</a></li><li><a class="underline" href="/blocks/zone-table/">zone-table</a></li></ul></article></main></div><footer class="border-t border-border"><div class="mx-auto max-w-6xl px-4 py-8 text-sm text-muted-foreground">ui8kit, MIT licence. Static docs generated from markdown and the registry (<a class="underline" href="https://registry.buildy.tw/registry.json">registry.json</a>).</div></footer></body></html>

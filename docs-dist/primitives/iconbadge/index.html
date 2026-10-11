@@ -1,180 +1,181 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Iconbadge (primitive) | ui8kit</title><meta name="description" content="Iconbadge primitive"><link rel="canonical" href="https://ui.buildy.tw/primitives/iconbadge/"><link rel="stylesheet" href="/assets/site.css"><script src="/assets/app.js" defer></script></head><body class="min-h-screen bg-background text-foreground font-sans"><a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:left-2 focus:top-2 focus:bg-background focus:px-4 focus:py-2 focus:z-50">Skip to content</a><header class="border-b border-border"><div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-4 py-4"><a href="/" class="text-lg font-semibold">ui8kit</a><nav aria-label="Main" class="flex items-center gap-4 text-sm"><a href="/docs/" class="hover:underline">Docs</a> <a href="/docs/categories/blocks-marketing/" class="hover:underline">Blocks</a> <a href="/docs/categories/primitives/" class="hover:underline">Primitives</a> <a href="/docs/cli/" class="hover:underline">CLI</a></nav><form id="search" role="search" class="relative w-full sm:w-72" data-index="/search-index.json"><label for="search-input" class="sr-only">Search components and blocks</label> <input id="search-input" type="search" autocomplete="off" placeholder="Search, press /" class="h-10 w-full rounded border border-input bg-card px-4 text-sm"><ul id="search-results" hidden class="absolute left-0 right-0 top-12 z-40 rounded border border-border bg-popover text-popover-foreground shadow-md" aria-live="polite"></ul></form></div></header><div class="mx-auto flex max-w-6xl flex-col gap-8 px-4 py-8 md:flex-row"><nav aria-label="Docs" class="md:w-64 md:shrink-0"><h2 class="mb-2 text-sm font-semibold">Guides</h2><ul class="mb-6 flex flex-col gap-1"><li><a href="/docs/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Overview</a></li><li><a href="/docs/getting-started/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Getting started</a></li><li><a href="/docs/installation/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Installation</a></li><li><a href="/docs/cli/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">CLI</a></li><li><a href="/docs/theming-skins/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Theming and skins</a></li><li><a href="/docs/grid-8px/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">The 8px grid</a></li></ul><h2 class="mb-2 text-sm font-semibold">Categories</h2><ul class="mb-6 flex flex-col gap-1"><li><a href="/docs/categories/primitives/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Primitives</a></li><li><a href="/docs/categories/components/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Components</a></li><li><a href="/docs/categories/blocks-marketing/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: marketing</a></li><li><a href="/docs/categories/blocks-commerce/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: commerce</a></li><li><a href="/docs/categories/blocks-dashboard/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: dashboard</a></li><li><a href="/docs/categories/blocks-content/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: content</a></li><li><a href="/docs/categories/blocks-account/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: account</a></li><li><a href="/docs/categories/blocks-promo/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: promo</a></li><li><a href="/docs/categories/blocks-support/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: support</a></li><li><a href="/docs/categories/blocks-onboarding/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: onboarding</a></li><li><a href="/docs/categories/blocks-general/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: general</a></li></ul></nav><main id="main" class="min-w-0 flex-1"><article><p class="text-sm text-muted-foreground"><a class="underline" href="/docs/categories/primitives/">primitive / primitives</a></p><h1 class="mb-2 text-3xl font-semibold tracking-tight">Iconbadge</h1><p class="mb-6 max-w-3xl text-muted-foreground">Iconbadge primitive</p><h2 class="mb-2 text-xl font-semibold">Install</h2><div class="mb-6 max-w-xl"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="install-iconbadge" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit add iconbadge</code><button type="button" hidden data-copy="install-iconbadge" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><p class="mb-6 text-sm text-muted-foreground">Pulls in:  <a class="underline" href="/lib/utils/">utils</a></p><h2 class="mb-2 text-xl font-semibold">Code</h2><div data-tabs><section id="panel-svelte" data-panel data-runtime="svelte" data-label="Svelte" aria-label="Svelte" class="mb-8"><h3 class="mb-2 text-lg font-semibold">Svelte</h3><p class="mb-2 text-sm text-muted-foreground">Point the CLI at this runtime once, then add the item:</p><div class="mb-2"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-svelte-init" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit init --yes --framework svelte --dir src --registry-url https://registry.buildy.tw/svelte --strict-cdn</code><button type="button" hidden data-copy="panel-svelte-init" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-svelte-add" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit add iconbadge</code><button type="button" hidden data-copy="panel-svelte-add" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/iconbadge/icon-badge.svelte</span><button type="button" hidden data-copy="code-svelte-0" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-svelte-0" class="font-mono">&lt;!-- Code generated by xgen. DO NOT EDIT. --&gt;
-&lt;!-- Source: xgen/specs/ui/iconbadge.json --&gt;
-&lt;!--
-  IconBadge renders children as the badge content.
---&gt;
-&lt;script lang=&#34;ts&#34; module&gt;
-  import type { Snippet } from &#34;svelte&#34;;
-  import { variants, type VariantKey } from &#34;../../utils&#34;;
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Iconbadge (primitive) | ui8kit</title><meta name="description" content="Iconbadge primitive"><link rel="canonical" href="https://ui.buildy.tw/primitives/iconbadge/"><link rel="stylesheet" href="/assets/site.css"><script src="/assets/app.js" defer></script></head><body class="min-h-screen bg-background text-foreground font-sans"><a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:left-2 focus:top-2 focus:bg-background focus:px-4 focus:py-2 focus:z-50">Skip to content</a><header class="border-b border-border"><div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-4 py-4"><a href="/" class="text-lg font-semibold">ui8kit</a><nav aria-label="Main" class="flex items-center gap-4 text-sm"><a href="/docs/" class="hover:underline">Docs</a> <a href="/docs/categories/blocks-marketing/" class="hover:underline">Blocks</a> <a href="/docs/categories/primitives/" class="hover:underline">Primitives</a> <a href="/docs/cli/" class="hover:underline">CLI</a></nav><form id="search" role="search" class="relative w-full sm:w-72" data-index="/search-index.json"><label for="search-input" class="sr-only">Search components and blocks</label> <input id="search-input" type="search" autocomplete="off" placeholder="Search, press /" class="h-10 w-full rounded border border-input bg-card px-4 text-sm"><ul id="search-results" hidden class="absolute left-0 right-0 top-12 z-40 rounded border border-border bg-popover text-popover-foreground shadow-md" aria-live="polite"></ul></form></div></header><div class="mx-auto flex max-w-6xl flex-col gap-8 px-4 py-8 md:flex-row"><nav aria-label="Docs" class="md:w-64 md:shrink-0"><h2 class="mb-2 text-sm font-semibold">Guides</h2><ul class="mb-6 flex flex-col gap-1"><li><a href="/docs/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Overview</a></li><li><a href="/docs/getting-started/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Getting started</a></li><li><a href="/docs/installation/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Installation</a></li><li><a href="/docs/cli/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">CLI</a></li><li><a href="/docs/theming-skins/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Theming and skins</a></li><li><a href="/docs/grid-8px/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">The 8px grid</a></li></ul><h2 class="mb-2 text-sm font-semibold">Categories</h2><ul class="mb-6 flex flex-col gap-1"><li><a href="/docs/categories/primitives/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Primitives</a></li><li><a href="/docs/categories/components/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Components</a></li><li><a href="/docs/categories/blocks-marketing/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: marketing</a></li><li><a href="/docs/categories/blocks-commerce/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: commerce</a></li><li><a href="/docs/categories/blocks-dashboard/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: dashboard</a></li><li><a href="/docs/categories/blocks-content/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: content</a></li><li><a href="/docs/categories/blocks-account/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: account</a></li><li><a href="/docs/categories/blocks-promo/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: promo</a></li><li><a href="/docs/categories/blocks-support/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: support</a></li><li><a href="/docs/categories/blocks-onboarding/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: onboarding</a></li><li><a href="/docs/categories/blocks-general/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: general</a></li></ul></nav><main id="main" class="min-w-0 flex-1"><article><p class="text-sm text-muted-foreground"><a class="underline" href="/docs/categories/primitives/">primitive / primitives</a></p><h1 class="mb-2 text-3xl font-semibold tracking-tight">Iconbadge</h1><p class="mb-6 max-w-3xl text-muted-foreground">Iconbadge primitive</p><h2 class="mb-2 text-xl font-semibold">Install</h2><div class="mb-6 max-w-xl"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="install-iconbadge" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit add iconbadge</code><button type="button" hidden data-copy="install-iconbadge" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><p class="mb-6 text-sm text-muted-foreground">Pulls in:  <a class="underline" href="/lib/utils/">utils</a></p><h2 class="mb-2 text-xl font-semibold">Preview</h2><div class="preview mb-8 rounded border border-border bg-background p-6" role="group" tabindex="0" aria-label="Iconbadge preview"><div class="flex flex-wrap items-end gap-6"><figure class="flex flex-col items-start gap-2"><figcaption class="text-xs text-muted-foreground">variant: default</figcaption><span class="inline-flex shrink-0 items-center justify-center font-bold rounded bg-muted text-muted-foreground size-10 text-xs">Label</span></figure><figure class="flex flex-col items-start gap-2"><figcaption class="text-xs text-muted-foreground">variant: primary</figcaption><span class="inline-flex shrink-0 items-center justify-center font-bold rounded bg-primary text-primary-foreground size-10 text-xs">Label</span></figure><figure class="flex flex-col items-start gap-2"><figcaption class="text-xs text-muted-foreground">variant: accent</figcaption><span class="inline-flex shrink-0 items-center justify-center font-bold rounded bg-accent text-accent-foreground size-10 text-xs">Label</span></figure><figure class="flex flex-col items-start gap-2"><figcaption class="text-xs text-muted-foreground">variant: secondary</figcaption><span class="inline-flex shrink-0 items-center justify-center font-bold rounded bg-secondary text-secondary-foreground size-10 text-xs">Label</span></figure><figure class="flex flex-col items-start gap-2"><figcaption class="text-xs text-muted-foreground">variant: outline</figcaption><span class="inline-flex shrink-0 items-center justify-center font-bold rounded text-foreground inset-ring inset-ring-border size-10 text-xs">Label</span></figure><figure class="flex flex-col items-start gap-2"><figcaption class="text-xs text-muted-foreground">variant: destructive</figcaption><span class="inline-flex shrink-0 items-center justify-center font-bold rounded bg-destructive text-white dark:bg-destructive/60 size-10 text-xs">Label</span></figure><figure class="flex flex-col items-start gap-2"><figcaption class="text-xs text-muted-foreground">size: xs</figcaption><span class="inline-flex shrink-0 items-center justify-center font-bold rounded bg-muted text-muted-foreground size-6 text-xs">Label</span></figure><figure class="flex flex-col items-start gap-2"><figcaption class="text-xs text-muted-foreground">size: sm</figcaption><span class="inline-flex shrink-0 items-center justify-center font-bold rounded bg-muted text-muted-foreground size-8 text-xs">Label</span></figure><figure class="flex flex-col items-start gap-2"><figcaption class="text-xs text-muted-foreground">size: default</figcaption><span class="inline-flex shrink-0 items-center justify-center font-bold rounded bg-muted text-muted-foreground size-10 text-xs">Label</span></figure><figure class="flex flex-col items-start gap-2"><figcaption class="text-xs text-muted-foreground">size: lg</figcaption><span class="inline-flex shrink-0 items-center justify-center font-bold rounded bg-muted text-muted-foreground size-12 text-sm">Label</span></figure><figure class="flex flex-col items-start gap-2"><figcaption class="text-xs text-muted-foreground">size: xl</figcaption><span class="inline-flex shrink-0 items-center justify-center font-bold rounded bg-muted text-muted-foreground size-20 text-base">Label</span></figure></div>
+</div><h2 class="mb-2 text-xl font-semibold">Code</h2><div class="rt mb-8"><div class="rt-bar" role="radiogroup" aria-label="Runtime"><input type="radio" name="rt" id="rt-svelte" value="svelte" class="sr-only" checked> <label for="rt-svelte">Svelte</label><input type="radio" name="rt" id="rt-react" value="react" class="sr-only"> <label for="rt-react">React</label><input type="radio" name="rt" id="rt-vue" value="vue" class="sr-only"> <label for="rt-vue">Vue</label></div><section id="panel-svelte" class="rt-panel" data-runtime="svelte" aria-label="Svelte code"><p class="mb-2 text-sm text-muted-foreground">Point the CLI at this runtime once, then add the item:</p><div class="mb-2"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-svelte-init" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit init --yes --framework svelte --dir src --registry-url https://registry.buildy.tw/svelte --strict-cdn</code><button type="button" hidden data-copy="panel-svelte-init" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-svelte-add" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit add iconbadge</code><button type="button" hidden data-copy="panel-svelte-add" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/iconbadge/icon-badge.svelte</span><button type="button" hidden data-copy="code-svelte-0" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="hl max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-svelte-0" class="font-mono"><span class="c">&lt;!-- Code generated by xgen. DO NOT EDIT. --&gt;</span>
+<span class="c">&lt;!-- Source: xgen/specs/ui/iconbadge.json --&gt;</span>
+<span class="c">&lt;!--
+</span><span class="c">  IconBadge renders children as the badge content.
+</span><span class="c">--&gt;</span>
+&lt;<span class="nt">script</span> <span class="na">lang</span>=<span class="s">&#34;ts&#34;</span> <span class="na">module</span>&gt;
+  <span class="kr">import</span> <span class="kr">type</span> { Snippet } <span class="kr">from</span> <span class="s2">&#34;svelte&#34;</span>;
+  <span class="kr">import</span> { variants, <span class="kr">type</span> VariantKey } <span class="kr">from</span> <span class="s2">&#34;../../utils&#34;</span>;
 
-  /** IconBadge: the classes of each value of each prop (shadcn/cva style). */
-  export const iconbadgeVariants = variants({
-    base: &#34;inline-flex shrink-0 items-center justify-center font-bold rounded&#34;,
+  <span class="cm">/** IconBadge: the classes of each value of each prop (shadcn/cva style). */</span>
+  <span class="kr">export</span> <span class="kr">const</span> iconbadgeVariants = variants({
+    base: <span class="s2">&#34;inline-flex shrink-0 items-center justify-center font-bold rounded&#34;</span>,
     variants: {
       variant: {
-        default: &#34;bg-muted text-muted-foreground&#34;,
-        primary: &#34;bg-primary text-primary-foreground&#34;,
-        accent: &#34;bg-accent text-accent-foreground&#34;,
-        secondary: &#34;bg-secondary text-secondary-foreground&#34;,
-        outline: &#34;text-foreground inset-ring inset-ring-border&#34;,
-        destructive: &#34;bg-destructive text-white dark:bg-destructive/60&#34;,
+        <span class="k">default</span>: <span class="s2">&#34;bg-muted text-muted-foreground&#34;</span>,
+        primary: <span class="s2">&#34;bg-primary text-primary-foreground&#34;</span>,
+        accent: <span class="s2">&#34;bg-accent text-accent-foreground&#34;</span>,
+        secondary: <span class="s2">&#34;bg-secondary text-secondary-foreground&#34;</span>,
+        outline: <span class="s2">&#34;text-foreground inset-ring inset-ring-border&#34;</span>,
+        destructive: <span class="s2">&#34;bg-destructive text-white dark:bg-destructive/60&#34;</span>,
       },
       size: {
-        xs: &#34;size-6 text-xs&#34;,
-        sm: &#34;size-8 text-xs&#34;,
-        default: &#34;size-10 text-xs&#34;,
-        lg: &#34;size-12 text-sm&#34;,
-        xl: &#34;size-20 text-base&#34;,
+        xs: <span class="s2">&#34;size-6 text-xs&#34;</span>,
+        sm: <span class="s2">&#34;size-8 text-xs&#34;</span>,
+        <span class="k">default</span>: <span class="s2">&#34;size-10 text-xs&#34;</span>,
+        lg: <span class="s2">&#34;size-12 text-sm&#34;</span>,
+        xl: <span class="s2">&#34;size-20 text-base&#34;</span>,
       },
     },
-    defaultVariants: { variant: &#34;default&#34;, size: &#34;default&#34; },
+    defaultVariants: { variant: <span class="s2">&#34;default&#34;</span>, size: <span class="s2">&#34;default&#34;</span> },
   });
 
-  export type IconBadgeVariant = VariantKey&lt;typeof iconbadgeVariants, &#34;variant&#34;&gt;;
-  export type IconBadgeSize = VariantKey&lt;typeof iconbadgeVariants, &#34;size&#34;&gt;;
+  <span class="kr">export</span> <span class="kr">type</span> IconBadgeVariant = VariantKey&lt;<span class="nt">typeof</span> <span class="na">iconbadgeVariants</span>, <span class="s2">&#34;variant&#34;</span>&gt;;
+  <span class="kr">export</span> <span class="kr">type</span> IconBadgeSize = VariantKey&lt;<span class="nt">typeof</span> <span class="na">iconbadgeVariants</span>, <span class="s2">&#34;size&#34;</span>&gt;;
 
-  export type IconBadgeProps = {
-    variant?: IconBadgeVariant;
-    size?: IconBadgeSize;
-    class?: string;
-    children?: Snippet;
-    [key: string]: unknown;
+  <span class="kr">export</span> <span class="kr">type</span> IconBadgeProps = {
+    variant?: <span class="kt">IconBadgeVariant</span>;
+    size?: <span class="kt">IconBadgeSize</span>;
+    <span class="kr">class</span>?: <span class="kt">string</span>;
+    children?: <span class="kt">Snippet</span>;
+    [key: <span class="kt">string</span>]: <span class="kt">unknown</span>;
   };
-&lt;/script&gt;
+&lt;/<span class="nt">script</span>&gt;
 
-&lt;script lang=&#34;ts&#34;&gt;
-  import { cn } from &#34;../../utils&#34;;
+&lt;<span class="nt">script</span> <span class="na">lang</span>=<span class="s">&#34;ts&#34;</span>&gt;
+  <span class="kr">import</span> { cn } <span class="kr">from</span> <span class="s2">&#34;../../utils&#34;</span>;
 
-  let {
+  <span class="kd">let</span> {
     variant,
     size,
-    class: className,
+    <span class="kr">class</span>: className,
     children,
     ...rest
   }: IconBadgeProps = $props();
 
-  const cls = $derived(cn(iconbadgeVariants({ variant, size }), className));
-&lt;/script&gt;
+  <span class="kr">const</span> cls = $derived(cn(iconbadgeVariants({ variant, size }), className));
+&lt;/<span class="nt">script</span>&gt;
 
-&lt;span {...(cls ? { class: cls } : {})} {...rest}&gt;
-  {@render children?.()}
-&lt;/span&gt;
-</code></pre></div><p class="text-sm"><a class="underline" href="https://registry.buildy.tw/svelte/components/ui/iconbadge.json">Svelte registry item (JSON)</a></p></section><section id="panel-react" data-panel data-runtime="react" data-label="React" aria-label="React" class="mb-8"><h3 class="mb-2 text-lg font-semibold">React</h3><p class="mb-2 text-sm text-muted-foreground">Point the CLI at this runtime once, then add the item:</p><div class="mb-2"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-react-init" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit init --yes --framework react --dir src --registry-url https://registry.buildy.tw/react --strict-cdn</code><button type="button" hidden data-copy="panel-react-init" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-react-add" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit add iconbadge</code><button type="button" hidden data-copy="panel-react-add" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/iconbadge/iconbadge.tsx</span><button type="button" hidden data-copy="code-react-0" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-react-0" class="font-mono">// Code generated by xgen. DO NOT EDIT.
-// Source: xgen/specs/ui/iconbadge.json
-/**
- * IconBadge renders a small icon surface for nav rows, cards, and status blocks.
- * Pass the letter, glyph, or Icon node as children.
- */
+&lt;<span class="nt">span</span> {...(cls ? { <span class="kr">class</span>: cls } : {})} {...rest}&gt;
+  {<span class="kd">@render</span> children?.()}
+&lt;/<span class="nt">span</span>&gt;
+</code></pre></div><p class="text-sm"><a class="underline" href="https://registry.buildy.tw/svelte/components/ui/iconbadge.json">Svelte registry item (JSON)</a></p></section><section id="panel-react" class="rt-panel" data-runtime="react" aria-label="React code"><p class="mb-2 text-sm text-muted-foreground">Point the CLI at this runtime once, then add the item:</p><div class="mb-2"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-react-init" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit init --yes --framework react --dir src --registry-url https://registry.buildy.tw/react --strict-cdn</code><button type="button" hidden data-copy="panel-react-init" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-react-add" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit add iconbadge</code><button type="button" hidden data-copy="panel-react-add" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/iconbadge/iconbadge.tsx</span><button type="button" hidden data-copy="code-react-0" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="hl max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-react-0" class="font-mono"><span class="c1">// Code generated by xgen. DO NOT EDIT.
+</span><span class="c1">// Source: xgen/specs/ui/iconbadge.json
+</span><span class="cm">/**
+</span><span class="cm"> * IconBadge renders a small icon surface for nav rows, cards, and status blocks.
+</span><span class="cm"> * Pass the letter, glyph, or Icon node as children.
+</span><span class="cm"> */</span>
 
-import { forwardRef, type ReactNode, type HTMLAttributes } from &#34;react&#34;;
-import { cn, variants, type VariantKey } from &#34;../../utils&#34;;
+<span class="kr">import</span> { forwardRef, <span class="kr">type</span> ReactNode, <span class="kr">type</span> HTMLAttributes } <span class="kr">from</span> <span class="s2">&#34;react&#34;</span>;
+<span class="kr">import</span> { cn, variants, <span class="kr">type</span> VariantKey } <span class="kr">from</span> <span class="s2">&#34;../../utils&#34;</span>;
 
-/** IconBadge: the classes of each value of each prop (shadcn/cva style). */
-export const iconbadgeVariants = variants({
-  base: &#34;inline-flex shrink-0 items-center justify-center font-bold rounded&#34;,
+<span class="cm">/** IconBadge: the classes of each value of each prop (shadcn/cva style). */</span>
+<span class="kr">export</span> <span class="kr">const</span> iconbadgeVariants = variants({
+  base: <span class="s2">&#34;inline-flex shrink-0 items-center justify-center font-bold rounded&#34;</span>,
   variants: {
     variant: {
-      default: &#34;bg-muted text-muted-foreground&#34;,
-      primary: &#34;bg-primary text-primary-foreground&#34;,
-      accent: &#34;bg-accent text-accent-foreground&#34;,
-      secondary: &#34;bg-secondary text-secondary-foreground&#34;,
-      outline: &#34;text-foreground inset-ring inset-ring-border&#34;,
-      destructive: &#34;bg-destructive text-white dark:bg-destructive/60&#34;,
+      <span class="k">default</span>: <span class="s2">&#34;bg-muted text-muted-foreground&#34;</span>,
+      primary: <span class="s2">&#34;bg-primary text-primary-foreground&#34;</span>,
+      accent: <span class="s2">&#34;bg-accent text-accent-foreground&#34;</span>,
+      secondary: <span class="s2">&#34;bg-secondary text-secondary-foreground&#34;</span>,
+      outline: <span class="s2">&#34;text-foreground inset-ring inset-ring-border&#34;</span>,
+      destructive: <span class="s2">&#34;bg-destructive text-white dark:bg-destructive/60&#34;</span>,
     },
     size: {
-      xs: &#34;size-6 text-xs&#34;,
-      sm: &#34;size-8 text-xs&#34;,
-      default: &#34;size-10 text-xs&#34;,
-      lg: &#34;size-12 text-sm&#34;,
-      xl: &#34;size-20 text-base&#34;,
+      xs: <span class="s2">&#34;size-6 text-xs&#34;</span>,
+      sm: <span class="s2">&#34;size-8 text-xs&#34;</span>,
+      <span class="k">default</span>: <span class="s2">&#34;size-10 text-xs&#34;</span>,
+      lg: <span class="s2">&#34;size-12 text-sm&#34;</span>,
+      xl: <span class="s2">&#34;size-20 text-base&#34;</span>,
     },
   },
-  defaultVariants: { variant: &#34;default&#34;, size: &#34;default&#34; },
+  defaultVariants: { variant: <span class="s2">&#34;default&#34;</span>, size: <span class="s2">&#34;default&#34;</span> },
 });
 
-export type IconBadgeVariant = VariantKey&lt;typeof iconbadgeVariants, &#34;variant&#34;&gt;;
-export type IconBadgeSize = VariantKey&lt;typeof iconbadgeVariants, &#34;size&#34;&gt;;
+<span class="kr">export</span> <span class="kr">type</span> IconBadgeVariant = VariantKey&lt;<span class="nt">typeof</span> <span class="na">iconbadgeVariants</span>, <span class="s2">&#34;variant&#34;</span>&gt;;
+<span class="kr">export</span> <span class="kr">type</span> IconBadgeSize = VariantKey&lt;<span class="nt">typeof</span> <span class="na">iconbadgeVariants</span>, <span class="s2">&#34;size&#34;</span>&gt;;
 
-/**
- * IconBadge renders children as the badge content.
- */
-export type IconBadgeProps = Omit&lt;
-  HTMLAttributes&lt;HTMLSpanElement&gt;,
-  | &#34;className&#34; | &#34;children&#34; | &#34;variant&#34; | &#34;size&#34;
+<span class="cm">/**
+</span><span class="cm"> * IconBadge renders children as the badge content.
+</span><span class="cm"> */</span>
+<span class="kr">export</span> <span class="kr">type</span> IconBadgeProps = Omit&lt;
+  HTMLAttributes&lt;<span class="nt">HTMLSpanElement</span>&gt;,
+  | <span class="s2">&#34;className&#34;</span> | <span class="s2">&#34;children&#34;</span> | <span class="s2">&#34;variant&#34;</span> | <span class="s2">&#34;size&#34;</span>
 &gt; &amp; {
-  variant?: IconBadgeVariant;
-  size?: IconBadgeSize;
-  className?: string;
-  children?: ReactNode;
+  variant?: <span class="kt">IconBadgeVariant</span>;
+  size?: <span class="kt">IconBadgeSize</span>;
+  className?: <span class="kt">string</span>;
+  children?: <span class="kt">ReactNode</span>;
 };
 
-export const IconBadge = forwardRef&lt;HTMLSpanElement, IconBadgeProps&gt;(function IconBadge(
+<span class="kr">export</span> <span class="kr">const</span> IconBadge = forwardRef&lt;<span class="nt">HTMLSpanElement</span>, <span class="na">IconBadgeProps</span>&gt;(<span class="kd">function</span> IconBadge(
   { variant, size, className, children, ...rest },
   ref
 ) {
-  const cls = cn(iconbadgeVariants({ variant, size }), className);
-  return (
-    &lt;span ref={ref} className={cls || undefined} {...rest}&gt;
+  <span class="kr">const</span> cls = cn(iconbadgeVariants({ variant, size }), className);
+  <span class="k">return</span> (
+    &lt;<span class="nt">span</span> <span class="na">ref</span>={ref} <span class="na">className</span>={cls || <span class="kc">undefined</span>} {<span class="na">...rest</span>}&gt;
       {children}
-    &lt;/span&gt;
+    &lt;/<span class="nt">span</span>&gt;
   );
 });
-IconBadge.displayName = &#34;IconBadge&#34;;
-</code></pre></div><p class="text-sm"><a class="underline" href="https://registry.buildy.tw/react/components/ui/iconbadge.json">React registry item (JSON)</a></p></section><section id="panel-vue" data-panel data-runtime="vue" data-label="Vue" aria-label="Vue" class="mb-8"><h3 class="mb-2 text-lg font-semibold">Vue</h3><p class="mb-2 text-sm text-muted-foreground">Point the CLI at this runtime once, then add the item:</p><div class="mb-2"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-vue-init" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit init --yes --framework vue --dir src --registry-url https://registry.buildy.tw/vue --strict-cdn</code><button type="button" hidden data-copy="panel-vue-init" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-vue-add" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit add iconbadge</code><button type="button" hidden data-copy="panel-vue-add" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/iconbadge/icon-badge.vue</span><button type="button" hidden data-copy="code-vue-0" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-vue-0" class="font-mono">&lt;!-- Code generated by xgen. DO NOT EDIT. --&gt;
-&lt;!-- Source: xgen/specs/ui/iconbadge.json --&gt;
-&lt;!--
+IconBadge.displayName = <span class="s2">&#34;IconBadge&#34;</span>;
+</code></pre></div><p class="text-sm"><a class="underline" href="https://registry.buildy.tw/react/components/ui/iconbadge.json">React registry item (JSON)</a></p></section><section id="panel-vue" class="rt-panel" data-runtime="vue" aria-label="Vue code"><p class="mb-2 text-sm text-muted-foreground">Point the CLI at this runtime once, then add the item:</p><div class="mb-2"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-vue-init" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit init --yes --framework vue --dir src --registry-url https://registry.buildy.tw/vue --strict-cdn</code><button type="button" hidden data-copy="panel-vue-init" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-vue-add" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit add iconbadge</code><button type="button" hidden data-copy="panel-vue-add" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/iconbadge/icon-badge.vue</span><button type="button" hidden data-copy="code-vue-0" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="hl max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-vue-0" class="font-mono"><span class="c">&lt;!--</span> Code generated by xgen. DO NOT EDIT. --&gt;
+<span class="c">&lt;!--</span> Source: xgen/specs/ui/iconbadge.json --&gt;
+<span class="c">&lt;!--</span>
   IconBadge renders children as the badge content.
 --&gt;
-&lt;script lang=&#34;ts&#34;&gt;
-import { variants, type VariantKey } from &#34;../../utils&#34;;
+&lt;<span class="nt">script</span> <span class="na">lang</span>=<span class="s">&#34;ts&#34;</span>&gt;
+<span class="kr">import</span> { variants, type VariantKey } from <span class="s2">&#34;../../utils&#34;</span>;
 
-/** IconBadge: the classes of each value of each prop (shadcn/cva style). */
-export const iconbadgeVariants = variants({
-  base: &#34;inline-flex shrink-0 items-center justify-center font-bold rounded&#34;,
+<span class="cm">/** IconBadge: the classes of each value of each prop (shadcn/cva style). */</span>
+<span class="kr">export</span> <span class="kr">const</span> iconbadgeVariants = variants({
+  base: <span class="s2">&#34;inline-flex shrink-0 items-center justify-center font-bold rounded&#34;</span>,
   variants: {
     variant: {
-      default: &#34;bg-muted text-muted-foreground&#34;,
-      primary: &#34;bg-primary text-primary-foreground&#34;,
-      accent: &#34;bg-accent text-accent-foreground&#34;,
-      secondary: &#34;bg-secondary text-secondary-foreground&#34;,
-      outline: &#34;text-foreground inset-ring inset-ring-border&#34;,
-      destructive: &#34;bg-destructive text-white dark:bg-destructive/60&#34;,
+      <span class="k">default</span>: <span class="s2">&#34;bg-muted text-muted-foreground&#34;</span>,
+      primary: <span class="s2">&#34;bg-primary text-primary-foreground&#34;</span>,
+      accent: <span class="s2">&#34;bg-accent text-accent-foreground&#34;</span>,
+      secondary: <span class="s2">&#34;bg-secondary text-secondary-foreground&#34;</span>,
+      outline: <span class="s2">&#34;text-foreground inset-ring inset-ring-border&#34;</span>,
+      destructive: <span class="s2">&#34;bg-destructive text-white dark:bg-destructive/60&#34;</span>,
     },
     size: {
-      xs: &#34;size-6 text-xs&#34;,
-      sm: &#34;size-8 text-xs&#34;,
-      default: &#34;size-10 text-xs&#34;,
-      lg: &#34;size-12 text-sm&#34;,
-      xl: &#34;size-20 text-base&#34;,
+      xs: <span class="s2">&#34;size-6 text-xs&#34;</span>,
+      sm: <span class="s2">&#34;size-8 text-xs&#34;</span>,
+      <span class="k">default</span>: <span class="s2">&#34;size-10 text-xs&#34;</span>,
+      lg: <span class="s2">&#34;size-12 text-sm&#34;</span>,
+      xl: <span class="s2">&#34;size-20 text-base&#34;</span>,
     },
   },
-  defaultVariants: { variant: &#34;default&#34;, size: &#34;default&#34; },
+  defaultVariants: { variant: <span class="s2">&#34;default&#34;</span>, size: <span class="s2">&#34;default&#34;</span> },
 });
 
-export type IconBadgeVariant = VariantKey&lt;typeof iconbadgeVariants, &#34;variant&#34;&gt;;
-export type IconBadgeSize = VariantKey&lt;typeof iconbadgeVariants, &#34;size&#34;&gt;;
+<span class="kr">export</span> type IconBadgeVariant = VariantKey&lt;<span class="nt">typeof</span> <span class="na">iconbadgeVariants</span><span class="err">,</span> <span class="err">&#34;</span><span class="na">variant</span><span class="err">&#34;</span>&gt;;
+<span class="kr">export</span> type IconBadgeSize = VariantKey&lt;<span class="nt">typeof</span> <span class="na">iconbadgeVariants</span><span class="err">,</span> <span class="err">&#34;</span><span class="na">size</span><span class="err">&#34;</span>&gt;;
 
-export type IconBadgeProps = {
+<span class="kr">export</span> type IconBadgeProps = {
   variant?: IconBadgeVariant;
   size?: IconBadgeSize;
-  class?: string;
+  <span class="kr">class</span>?: string;
 };
-&lt;/script&gt;
+&lt;/<span class="nt">script</span>&gt;
 
-&lt;script setup lang=&#34;ts&#34;&gt;
-import { computed, useAttrs } from &#34;vue&#34;;
-import { cn } from &#34;../../utils&#34;;
+&lt;<span class="nt">script</span> <span class="na">setup</span> <span class="na">lang</span>=<span class="s">&#34;ts&#34;</span>&gt;
+<span class="kr">import</span> { computed, useAttrs } from <span class="s2">&#34;vue&#34;</span>;
+<span class="kr">import</span> { cn } from <span class="s2">&#34;../../utils&#34;</span>;
 
-defineOptions({ inheritAttrs: false });
-defineSlots&lt;{ default?(): unknown }&gt;();
-const { variant, size, class: className } = defineProps&lt;IconBadgeProps&gt;();
-const attrs = useAttrs();
-const cls = computed(() =&gt; cn(iconbadgeVariants({ variant, size }), className));
-&lt;/script&gt;
+defineOptions({ inheritAttrs: <span class="kc">false</span> });
+defineSlots&lt;{ <span class="k">default</span>?(): unknown }&gt;();
+<span class="kr">const</span> { variant, size, <span class="kr">class</span>: className } = defineProps&lt;<span class="nt">IconBadgeProps</span>&gt;();
+<span class="kr">const</span> attrs = useAttrs();
+<span class="kr">const</span> cls = computed(() =&gt; cn(iconbadgeVariants({ variant, size }), className));
+&lt;/<span class="nt">script</span>&gt;
 
-&lt;template&gt;
-  &lt;span :class=&#34;cls || undefined&#34; v-bind=&#34;attrs&#34;&gt;
-    &lt;slot /&gt;
-  &lt;/span&gt;
-&lt;/template&gt;
-</code></pre></div><p class="text-sm"><a class="underline" href="https://registry.buildy.tw/vue/components/ui/iconbadge.json">Vue registry item (JSON)</a></p></section></div></article></main></div><footer class="border-t border-border"><div class="mx-auto max-w-6xl px-4 py-8 text-sm text-muted-foreground">ui8kit, MIT licence. Static docs generated from markdown and the registry (<a class="underline" href="https://registry.buildy.tw/registry.json">registry.json</a>).</div></footer></body></html>
+&lt;<span class="nt">template</span>&gt;
+  &lt;<span class="nt">span</span> :<span class="na">class</span>=<span class="s">&#34;cls || undefined&#34;</span> <span class="nt">v-bind</span>=<span class="s">&#34;attrs&#34;</span>&gt;
+    &lt;<span class="nt">slot</span> /&gt;
+  &lt;/<span class="nt">span</span>&gt;
+&lt;/<span class="nt">template</span>&gt;
+</code></pre></div><p class="text-sm"><a class="underline" href="https://registry.buildy.tw/vue/components/ui/iconbadge.json">Vue registry item (JSON)</a></p></section></div><h2 class="mb-2 text-xl font-semibold">Props</h2><p class="mb-4 max-w-3xl text-sm text-muted-foreground">Names and types come from the xgen specs of the source. Standard HTML attributes (id, role, tabIndex, aria-*) pass through to the root element; the class prop is className in React.</p><div class="mb-8"><p class="mb-2 max-w-3xl whitespace-pre-line text-sm text-muted-foreground">IconBadge renders children as the badge content.</p><div class="overflow-x-auto" tabindex="0" role="region" aria-label="Props of IconBadge"><table class="w-full min-w-[40rem] text-left text-sm"><caption class="sr-only">Props of IconBadge</caption> <thead><tr class="border-b border-border"><th scope="col" class="py-2 pr-4 font-medium">Prop</th><th scope="col" class="py-2 pr-4 font-medium">Type</th><th scope="col" class="py-2 pr-4 font-medium">Default</th><th scope="col" class="py-2 font-medium">Description</th></tr></thead> <tbody><tr class="border-b border-border align-top"><th scope="row" class="py-2 pr-4 font-mono text-xs font-medium">variant </th><td class="py-2 pr-4 font-mono text-xs">&#34;default&#34; | &#34;primary&#34; | &#34;accent&#34; | &#34;secondary&#34; | &#34;outline&#34; | &#34;destructive&#34;</td><td class="py-2 pr-4 font-mono text-xs">&#34;default&#34;</td><td class="py-2 text-muted-foreground">sets appearance preset</td></tr><tr class="border-b border-border align-top"><th scope="row" class="py-2 pr-4 font-mono text-xs font-medium">size </th><td class="py-2 pr-4 font-mono text-xs">&#34;xs&#34; | &#34;sm&#34; | &#34;default&#34; | &#34;lg&#34; | &#34;xl&#34;</td><td class="py-2 pr-4 font-mono text-xs">&#34;default&#34;</td><td class="py-2 text-muted-foreground">sets density preset</td></tr><tr class="border-b border-border align-top"><th scope="row" class="py-2 pr-4 font-mono text-xs font-medium">class </th><td class="py-2 pr-4 font-mono text-xs">string</td><td class="py-2 pr-4 font-mono text-xs"><span class="text-muted-foreground">-</span></td><td class="py-2 text-muted-foreground">adds Tailwind utilities</td></tr><tr class="border-b border-border align-top"><th scope="row" class="py-2 pr-4 font-mono text-xs font-medium">children </th><td class="py-2 pr-4 font-mono text-xs">children</td><td class="py-2 pr-4 font-mono text-xs"><span class="text-muted-foreground">-</span></td><td class="py-2 text-muted-foreground"></td></tr></tbody></table></div></div><h2 class="mb-2 text-xl font-semibold">Used in</h2><ul class="flex flex-wrap gap-x-4 gap-y-1 text-sm"><li><a class="underline" href="/blocks/checklist/">checklist</a></li><li><a class="underline" href="/components/empty-state/">empty-state</a></li><li><a class="underline" href="/components/feature-cards/">feature-cards</a></li><li><a class="underline" href="/components/stat-tile/">stat-tile</a></li><li><a class="underline" href="/blocks/stepper/">stepper</a></li><li><a class="underline" href="/blocks/steps-list/">steps-list</a></li><li><a class="underline" href="/blocks/template-grid/">template-grid</a></li></ul></article></main></div><footer class="border-t border-border"><div class="mx-auto max-w-6xl px-4 py-8 text-sm text-muted-foreground">ui8kit, MIT licence. Static docs generated from markdown and the registry (<a class="underline" href="https://registry.buildy.tw/registry.json">registry.json</a>).</div></footer></body></html>
