@@ -8,6 +8,7 @@ type Meta struct {
 	Description string
 	Path        string // root-absolute URL path, e.g. /blocks/hero-split/
 	SiteURL     string
+	RegistryURL string // absolute registry base, e.g. https://registry.buildy.tw
 	Nav         []NavGroup
 }
 
@@ -81,16 +82,16 @@ type Related struct {
 }
 
 type ItemData struct {
-	Name        string
-	Title       string
-	Kind        string
-	Category    string
+	Name         string
+	Title        string
+	Kind         string
+	Category     string
 	CategoryHref string
-	Group       string
-	Description string
-	Install     string
-	Panels      []RuntimePanel
-	Requires    []Related
+	Group        string
+	Description  string
+	Install      string
+	Panels       []RuntimePanel
+	Requires     []Related
 }
 
 type ListData struct {

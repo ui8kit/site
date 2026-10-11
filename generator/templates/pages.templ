@@ -61,7 +61,7 @@ templ Home(d HomeData) {
 							<td class="py-2 pr-4">{ fmt.Sprint(c.Primitives) }</td>
 							<td class="py-2 pr-4">{ fmt.Sprint(c.Components) }</td>
 							<td class="py-2 pr-4">{ fmt.Sprint(c.Blocks) }</td>
-							<td class="py-2"><a class="underline" href={ templ.SafeURL("/r/" + c.Runtime + "/index.json") }>{ "/r/" + c.Runtime }</a></td>
+							<td class="py-2"><a class="underline" href={ templ.SafeURL(d.RegistryBase + "/" + c.Runtime + "/index.json") }>{ d.RegistryBase + "/" + c.Runtime }</a></td>
 						</tr>
 					}
 				</tbody>

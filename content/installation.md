@@ -7,9 +7,9 @@ order: 2
 
 | Runtime | `registryUrl` |
 |---|---|
-| Svelte 5 | `https://ui8kit-site.vercel.app/r/svelte` |
-| React 19 | `https://ui8kit-site.vercel.app/r/react` |
-| Vue 3 | `https://ui8kit-site.vercel.app/r/vue` |
+| Svelte 5 | `{{REGISTRY_URL}}/svelte` |
+| React 19 | `{{REGISTRY_URL}}/react` |
+| Vue 3 | `{{REGISTRY_URL}}/vue` |
 
 The URL is the **base** the CLI appends `index.json` and `components/ui/<name>.json` to. Use `--strict-cdn` so the CLI never falls back to the public CDN.
 
@@ -25,13 +25,12 @@ Files are written under your `dir` (for example `src`) with the same layout as t
 | `registry:component` | `components/` |
 | `registry:block` | `blocks/` |
 
-## Use `--framework none`, not `--runtime`
+## Pick the framework, not a file filter
 
-The registry is already split per runtime, so no file filter is needed. The CLI's `--runtime` filter keeps only `*.svelte`, `*.tsx` or `*.vue` and drops the
-`*.types.ts` files that blocks import, so avoid `--runtime` (and a `runtime` key in `ui8kit.config.json`) with these registries.
+Pass `--framework svelte`, `react` or `vue` together with the matching registry URL. The registry is already split per runtime, and with ui8kit 2.0.2 the CLI
+installs the `*.types.ts` files that blocks import, so `add --all` leaves no unresolved relative import.
 
-## Known CLI gaps (ui8kit 2.0.1)
-
-- `registry:utils` is not pulled through `registryDependencies`; it comes from `init` (do not pass `--skip-core`). `add` prints a harmless "utils not found" warning.
-- `paths` in the config is ignored when a file sets `target`.
-- Type-only imports create dependency cycles between a few blocks; the CLI warns and installs them anyway.
+```bash
+npx ui8kit init --yes --framework react --dir src --registry-url {{REGISTRY_URL}}/react --strict-cdn
+npx ui8kit add button card hero-split
+```

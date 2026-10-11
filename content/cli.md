@@ -19,9 +19,10 @@ The CLI is `ui8kit` on npm (contract 2.0.0). Source: [github.com/ui8kit/cli](htt
 ```json
 {
   "contractVersion": "2.0.0",
-  "framework": "none",
+  "framework": "react",
+  "runtime": "react",
   "dir": "src",
-  "registryUrl": "https://ui8kit-site.vercel.app/r/react",
+  "registryUrl": "{{REGISTRY_URL}}/react",
   "strictCdn": true,
   "importStyle": "alias"
 }

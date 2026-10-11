@@ -8,11 +8,11 @@ Each item exists for **Svelte, React and Vue**; this site only shows the code an
 
 ## 1. Point the CLI at a runtime
 
-Every runtime has its own registry root: `/r/svelte`, `/r/react`, `/r/vue`.
+Every runtime has its own registry root: `{{REGISTRY_URL}}/svelte`, `{{REGISTRY_URL}}/react`, `{{REGISTRY_URL}}/vue`.
 
 ```bash
-npx ui8kit@2 init --yes --framework none --dir src \
-  --registry-url https://ui8kit-site.vercel.app/r/svelte --strict-cdn
+npx ui8kit init --yes --framework svelte --dir src \
+  --registry-url {{REGISTRY_URL}}/svelte --strict-cdn
 ```
 
 `init` writes `ui8kit.config.json` and installs the shared helpers (`utils/`, `presets/`).

@@ -3,7 +3,7 @@
 //	go run . --registry ../r --content ../content --out ../dist
 //
 // Inputs: content/*.md (front matter + markdown) and the registry r/ (registry.json + one JSON per item and runtime).
-// Output: dist/ (HTML, assets, search-index.json, sitemap.xml and a copy of r/ so that /r/<runtime> works as registryUrl).
+// Output: dist/ (HTML, assets, search-index.json, sitemap.xml and and optionally a copy of r/ with --include-registry).
 package main
 
 import (
@@ -41,12 +41,12 @@ type registry struct {
 }
 
 type item struct {
-	Name        string               `json:"name"`
-	Title       string               `json:"title"`
-	Kind        string               `json:"kind"`
-	Category    string               `json:"category"`
-	Group       string               `json:"group"`
-	Description string               `json:"description"`
+	Name        string                `json:"name"`
+	Title       string                `json:"title"`
+	Kind        string                `json:"kind"`
+	Category    string                `json:"category"`
+	Group       string                `json:"group"`
+	Description string                `json:"description"`
 	Runtimes    map[string]runtimeRef `json:"runtimes"`
 }
 
@@ -70,7 +70,15 @@ type doc struct {
 
 var runtimeLabels = map[string]string{"svelte": "Svelte", "react": "React", "vue": "Vue"}
 
-var cfg struct{ registry, content, out, siteURL string }
+var cfg struct {
+	registry, content, out, siteURL, registryURL string
+	includeRegistry                              bool
+}
+
+const (
+	defaultSiteURL     = "https://ui.buildy.tw"
+	defaultRegistryURL = "https://registry.buildy.tw"
+)
 
 type page struct {
 	path  string // root-absolute, trailing slash
@@ -89,9 +97,12 @@ func main() {
 	flag.StringVar(&cfg.registry, "registry", "../r", "registry directory (r/)")
 	flag.StringVar(&cfg.content, "content", "../content", "markdown content directory")
 	flag.StringVar(&cfg.out, "out", "../dist", "output directory")
-	flag.StringVar(&cfg.siteURL, "site-url", envOr("SITE_URL", "https://ui8kit-site.vercel.app"), "absolute site URL (canonical links, sitemap, registry URL in commands)")
+	flag.StringVar(&cfg.siteURL, "site-url", envOr("SITE_URL", defaultSiteURL), "absolute site URL (canonical links, sitemap, robots)")
+	flag.StringVar(&cfg.registryURL, "registry-url", envOr("REGISTRY_URL", defaultRegistryURL), "absolute registry base URL (install commands, JSON links); <registry-url>/<runtime> is the CLI registryUrl")
+	flag.BoolVar(&cfg.includeRegistry, "include-registry", os.Getenv("INCLUDE_REGISTRY") == "1", "also copy r/ into <out>/r (default off: the registry is served from its own domain; env INCLUDE_REGISTRY=1)")
 	flag.Parse()
 	cfg.siteURL = strings.TrimRight(cfg.siteURL, "/")
+	cfg.registryURL = strings.TrimRight(cfg.registryURL, "/")
 
 	var reg registry
 	readJSON(filepath.Join(cfg.registry, "registry.json"), &reg)
@@ -106,7 +117,9 @@ func main() {
 		must(err)
 		write("assets/"+f, b)
 	}
-	must(copyDir(cfg.registry, filepath.Join(cfg.out, "r")))
+	if cfg.includeRegistry {
+		must(copyDir(cfg.registry, filepath.Join(cfg.out, "r")))
+	}
 
 	itemURL := map[string]string{}
 	for _, it := range reg.Items {
@@ -114,7 +127,7 @@ func main() {
 	}
 
 	// home
-	home := templates.HomeData{Version: reg.Version, Commit: short(reg.SourceCommit)}
+	home := templates.HomeData{Version: reg.Version, Commit: short(reg.SourceCommit), RegistryBase: cfg.registryURL}
 	for _, rt := range reg.Runtimes {
 		c := templates.Counts{Runtime: rt}
 		for _, it := range reg.Items {
@@ -147,7 +160,7 @@ func main() {
 			home.Primitives = append(home.Primitives, card(it))
 		}
 	}
-	render("/", templates.Meta{Title: "ui8kit: blocks and primitives for Svelte, React and Vue", Description: "Static docs and registry of ui8kit: copy the code or install it with npx ui8kit add.", Path: "/", SiteURL: cfg.siteURL}, templates.Home(home), nil)
+	render("/", templates.Meta{Title: "ui8kit: blocks and primitives for Svelte, React and Vue", Description: "Static docs and registry of ui8kit: copy the code or install it with npx ui8kit add.", Path: "/", SiteURL: cfg.siteURL, RegistryURL: cfg.registryURL}, templates.Home(home), nil)
 
 	// docs index + markdown pages
 	idx := templates.DocsIndexData{}
@@ -159,7 +172,7 @@ func main() {
 			idx.Guides = append(idx.Guides, c)
 		}
 	}
-	render("/docs/", templates.Meta{Title: "Documentation | ui8kit", Description: "Guides and category pages of the ui8kit registry.", Path: "/docs/", SiteURL: cfg.siteURL, Nav: nav}, templates.DocsIndex(idx), nil)
+	render("/docs/", templates.Meta{Title: "Documentation | ui8kit", Description: "Guides and category pages of the ui8kit registry.", Path: "/docs/", SiteURL: cfg.siteURL, RegistryURL: cfg.registryURL, Nav: nav}, templates.DocsIndex(idx), nil)
 	for _, d := range docs {
 		data := templates.DocData{Title: d.Title, HTML: d.HTML}
 		if d.Filter != "" {
@@ -170,7 +183,7 @@ func main() {
 			}
 		}
 		p := docURL(d)
-		render(p, templates.Meta{Title: d.Title + " | ui8kit", Description: d.Desc, Path: p, SiteURL: cfg.siteURL, Nav: nav}, templates.Doc(data), nil)
+		render(p, templates.Meta{Title: d.Title + " | ui8kit", Description: d.Desc, Path: p, SiteURL: cfg.siteURL, RegistryURL: cfg.registryURL, Nav: nav}, templates.Doc(data), nil)
 	}
 
 	// item pages
@@ -190,8 +203,8 @@ func main() {
 			var f itemFile
 			readJSON(filepath.Join(cfg.registry, filepath.FromSlash(ref.Path)), &f)
 			p := templates.RuntimePanel{
-				ID: "panel-" + rt, Runtime: rt, Label: runtimeLabels[rt], JSONHref: "/r/" + ref.Path, Deps: ref.Dependencies,
-				InstallInit: fmt.Sprintf("npx ui8kit init --yes --framework none --dir src --registry-url %s/r/%s --strict-cdn", cfg.siteURL, rt),
+				ID: "panel-" + rt, Runtime: rt, Label: runtimeLabels[rt], JSONHref: cfg.registryURL + "/" + ref.Path, Deps: ref.Dependencies,
+				InstallInit: fmt.Sprintf("npx ui8kit init --yes --framework %s --dir src --registry-url %s/%s --strict-cdn", rt, cfg.registryURL, rt),
 				InstallAdd:  "npx ui8kit add " + it.Name,
 			}
 			for i, fl := range f.Files {
@@ -207,7 +220,7 @@ func main() {
 		}
 		sort.Slice(d.Requires, func(i, j int) bool { return d.Requires[i].Name < d.Requires[j].Name })
 		u := itemURL[it.Name]
-		render(u, templates.Meta{Title: it.Title + " (" + it.Kind + ") | ui8kit", Description: it.Description, Path: u, SiteURL: cfg.siteURL, Nav: nav}, templates.Item(d), nil)
+		render(u, templates.Meta{Title: it.Title + " (" + it.Kind + ") | ui8kit", Description: it.Description, Path: u, SiteURL: cfg.siteURL, RegistryURL: cfg.registryURL, Nav: nav}, templates.Item(d), nil)
 		search = append(search, map[string]string{"t": it.Title, "n": it.Name, "k": it.Kind, "c": it.Category, "d": it.Description, "u": u})
 	}
 	for _, d := range docs {
@@ -218,7 +231,7 @@ func main() {
 	write("search-index.json", sb)
 
 	// 404, robots, sitemap
-	renderFile("404.html", templates.Meta{Title: "Not found | ui8kit", Description: "Page not found.", Path: "/404.html", SiteURL: cfg.siteURL, Nav: nav},
+	renderFile("404.html", templates.Meta{Title: "Not found | ui8kit", Description: "Page not found.", Path: "/404.html", SiteURL: cfg.siteURL, RegistryURL: cfg.registryURL, Nav: nav},
 		templates.Doc(templates.DocData{Title: "Page not found", HTML: `<p>This page does not exist. Try the <a href="/docs/">documentation</a> or the search.</p>`}))
 	write("robots.txt", []byte("User-agent: *\nAllow: /\nSitemap: "+cfg.siteURL+"/sitemap.xml\n"))
 	sort.Slice(pages, func(i, j int) bool { return pages[i].path < pages[j].path })
@@ -373,7 +386,8 @@ func loadDocs() []doc {
 		if d.Section == "" {
 			d.Section = "guides"
 		}
-		d.HTML = preRe.ReplaceAllString(buf.String(), `<pre tabindex="0">`)
+		d.HTML = strings.ReplaceAll(buf.String(), "{{REGISTRY_URL}}", cfg.registryURL)
+		d.HTML = preRe.ReplaceAllString(d.HTML, `<pre tabindex="0">`)
 		docs = append(docs, d)
 	}
 	sort.SliceStable(docs, func(i, j int) bool {

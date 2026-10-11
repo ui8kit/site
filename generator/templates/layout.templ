@@ -55,7 +55,7 @@ templ Layout(m Meta) {
 			</div>
 			<footer class="border-t border-border">
 				<div class="mx-auto max-w-6xl px-4 py-8 text-sm text-muted-foreground">
-					ui8kit, MIT licence. Static docs generated from markdown and the registry (<a class="underline" href="/r/registry.json">r/registry.json</a>).
+					ui8kit, MIT licence. Static docs generated from markdown and the registry (<a class="underline" href={ templ.SafeURL(m.RegistryURL + "/registry.json") }>registry.json</a>).
 				</div>
 			</footer>
 		</body>
