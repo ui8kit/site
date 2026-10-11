@@ -1,0 +1,102 @@
+// Package templates holds the page templates (templ) and the view models they render.
+// The same templates can later be served by an SSR handler: they only depend on these structs.
+package templates
+
+// Meta is what every page needs in <head> and the shell.
+type Meta struct {
+	Title       string
+	Description string
+	Path        string // root-absolute URL path, e.g. /blocks/hero-split/
+	SiteURL     string
+	Nav         []NavGroup
+}
+
+type NavGroup struct {
+	Title string
+	Links []NavLink
+}
+
+type NavLink struct {
+	Title string
+	Href  string
+}
+
+type Counts struct {
+	Runtime    string
+	Primitives int
+	Components int
+	Blocks     int
+	Total      int
+}
+
+type Card struct {
+	Title       string
+	Href        string
+	Description string
+	Tag         string
+}
+
+type HomeData struct {
+	Version      string
+	Commit       string
+	Counts       []Counts
+	Blocks       []Card
+	Primitives   []Card
+	RegistryBase string
+}
+
+type DocData struct {
+	Title string
+	HTML  string // rendered markdown (trusted: content/ is in this repo)
+	Items []Card // optional list of items of a category page
+	Prev  *NavLink
+	Next  *NavLink
+}
+
+type DocsIndexData struct {
+	Guides     []Card
+	Categories []Card
+}
+
+type CodeFile struct {
+	ID      string
+	Name    string // install target
+	Content string
+}
+
+type RuntimePanel struct {
+	ID          string
+	Runtime     string
+	Label       string
+	Files       []CodeFile
+	JSONHref    string
+	InstallInit string
+	InstallAdd  string
+	Deps        []string // npm
+}
+
+type Related struct {
+	Name string
+	Href string
+}
+
+type ItemData struct {
+	Name        string
+	Title       string
+	Kind        string
+	Category    string
+	CategoryHref string
+	Group       string
+	Description string
+	Install     string
+	Panels      []RuntimePanel
+	Requires    []Related
+}
+
+type ListData struct {
+	Title string
+	Intro string
+	Items []Card
+}
+
+func (c Card) HasTag() bool { return c.Tag != "" }

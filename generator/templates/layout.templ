@@ -1,0 +1,63 @@
+package templates
+
+templ Layout(m Meta) {
+	<!doctype html>
+	<html lang="en">
+		<head>
+			<meta charset="utf-8"/>
+			<meta name="viewport" content="width=device-width, initial-scale=1"/>
+			<title>{ m.Title }</title>
+			<meta name="description" content={ m.Description }/>
+			<link rel="canonical" href={ m.SiteURL + m.Path }/>
+			<link rel="stylesheet" href="/assets/site.css"/>
+			<script src="/assets/app.js" defer></script>
+		</head>
+		<body class="min-h-screen bg-background text-foreground font-sans">
+			<a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:left-2 focus:top-2 focus:bg-background focus:px-4 focus:py-2 focus:z-50">Skip to content</a>
+			<header class="border-b border-border">
+				<div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-4 py-4">
+					<a href="/" class="text-lg font-semibold">ui8kit</a>
+					<nav aria-label="Main" class="flex items-center gap-4 text-sm">
+						<a href="/docs/" class="hover:underline">Docs</a>
+						<a href="/docs/categories/blocks-marketing/" class="hover:underline">Blocks</a>
+						<a href="/docs/categories/primitives/" class="hover:underline">Primitives</a>
+						<a href="/docs/cli/" class="hover:underline">CLI</a>
+					</nav>
+					<form id="search" role="search" class="relative w-full sm:w-72" data-index="/search-index.json">
+						<label for="search-input" class="sr-only">Search components and blocks</label>
+						<input id="search-input" type="search" autocomplete="off" placeholder="Search, press /" class="h-10 w-full rounded border border-input bg-card px-4 text-sm"/>
+						<ul id="search-results" hidden class="absolute left-0 right-0 top-12 z-40 rounded border border-border bg-popover text-popover-foreground shadow-md" aria-live="polite"></ul>
+					</form>
+				</div>
+			</header>
+			<div class="mx-auto flex max-w-6xl flex-col gap-8 px-4 py-8 md:flex-row">
+				if len(m.Nav) > 0 {
+					<nav aria-label="Docs" class="md:w-64 md:shrink-0">
+						for _, g := range m.Nav {
+							<h2 class="mb-2 text-sm font-semibold">{ g.Title }</h2>
+							<ul class="mb-6 flex flex-col gap-1">
+								for _, l := range g.Links {
+									<li>
+										if l.Href == m.Path {
+											<a href={ templ.SafeURL(l.Href) } aria-current="page" class="block rounded bg-accent px-2 py-1 text-sm font-medium text-accent-foreground">{ l.Title }</a>
+										} else {
+											<a href={ templ.SafeURL(l.Href) } class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">{ l.Title }</a>
+										}
+									</li>
+								}
+							</ul>
+						}
+					</nav>
+				}
+				<main id="main" class="min-w-0 flex-1">
+					{ children... }
+				</main>
+			</div>
+			<footer class="border-t border-border">
+				<div class="mx-auto max-w-6xl px-4 py-8 text-sm text-muted-foreground">
+					ui8kit, MIT licence. Static docs generated from markdown and the registry (<a class="underline" href="/r/registry.json">r/registry.json</a>).
+				</div>
+			</footer>
+		</body>
+	</html>
+}

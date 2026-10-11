@@ -1,0 +1,6 @@
+/* Entry of the site stylesheet. theme.css and kit.css are copied verbatim from the ui8kit monorepo
+   (xgen/runtimes/core/assets/styles, shadcn neutral theme, one corner token). See assets/NOTICE.md. */
+@import "./styles/theme.css";
+@import "./styles/kit.css";
+@source "../templates";
+@source "./app.js";
