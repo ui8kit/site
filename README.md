@@ -32,7 +32,7 @@ npx ui8kit init --yes --framework svelte --dir src --registry-url https://regist
 npx ui8kit add hero-split
 ```
 
-## Deploy (two Vercel projects on this repo)
+## Deploy (three Vercel projects on this repo)
 
 | | Registry | Docs |
 |---|---|---|
@@ -45,6 +45,9 @@ npx ui8kit add hero-split
 
 The docs project serves the committed `docs-dist/` (Vercel's build image has no Go toolchain, so nothing is built there).
 After changing `content/`, `generator/` or `r/`, run `bun run docs:build` (`scripts/build-docs.sh`) and commit `docs-dist/`.
+Third project, the landing page of the root domain: Root Directory `web`, Framework Other, no Build / Install, Output `.`, config `web/vercel.json`, domain `buildy.tw`.
+Plain static files (`web/index.html`, `web/style.css`), no build, not part of `docs-dist/`. Check with `node scripts/check-web.mjs`.
+The registry project redirects only its root path `/` to `https://ui.buildy.tw/` (301, `r/vercel.json`).
 Registry URLs: `https://registry.buildy.tw/<svelte|react|vue>` (no `/r/` prefix, the root directory is `r/`).
 
 ## Gates

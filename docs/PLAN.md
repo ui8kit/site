@@ -47,7 +47,7 @@ filter drops `*.types.ts`. See `content/installation.md` for the gaps.
 - **This repo, `ci.yml`**: validate `r/`, templ + Tailwind outputs up to date, `go vet`, generate, site checks, axe, CLI smoke. No secrets.
 - **`registry-rebuild` job** (manual): checks out the private repo (needs `vars.UI8KIT_SRC_REPO` + `secrets.UI8KIT_SRC_TOKEN`) and uploads a new `r/`. Locally: `bun run registry:build`.
 - **`release.yml`** (manual): packs `r/` as release asset and `@ui8kit/registry` npm package; publishing is off by default.
-- **Vercel**: two projects on this repo. Registry: Root Directory `r`, `r/vercel.json`, domain registry.buildy.tw. Docs: repo root, `vercel.json`, output `docs-dist/` (committed; no Go on Vercel), domain ui.buildy.tw. `ignoreCommand` skips deploys that touch only the other project's paths.
+- **Vercel**: three projects on this repo. Landing: Root Directory `web`, `web/vercel.json`, static, output `.`, domain buildy.tw (checked by `scripts/check-web.mjs`). Registry: Root Directory `r`, `r/vercel.json`, domain registry.buildy.tw (root `/` redirects 301 to ui.buildy.tw). Docs: repo root, `vercel.json`, output `docs-dist/` (committed; no Go on Vercel), domain ui.buildy.tw. `ignoreCommand` skips deploys that touch only the other project's paths.
 
 ## Next steps
 

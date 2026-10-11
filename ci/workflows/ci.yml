@@ -29,6 +29,8 @@ jobs:
         run: bash scripts/build-docs.sh && git diff --exit-code -- docs-dist
       - name: Site checks (landmarks, links, no external requests)
         run: node scripts/check-site.mjs dist
+      - name: Landing page checks (web/)
+        run: node scripts/check-web.mjs web
       - name: axe (WCAG A/AA) on sample pages
         run: node scripts/a11y.mjs dist /,/docs/,/blocks/hero-split/,/primitives/button/
         env: { CHROME_PATH: /usr/bin/google-chrome }
