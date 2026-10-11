@@ -6,7 +6,7 @@
   "outputDirectory": ".",
   "cleanUrls": false,
   "trailingSlash": false,
-  "redirects": [],
+  "redirects": [{ "source": "/", "destination": "https://ui.buildy.tw/", "statusCode": 301 }],
   "headers": [
     {
       "source": "/(.*)",
