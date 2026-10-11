@@ -1,0 +1,1501 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Utils (utils) | ui8kit</title><meta name="description" content="Escape and pointer-down outside the node call onDismiss. Returns the cleanup."><link rel="canonical" href="https://ui.buildy.tw/lib/utils/"><link rel="stylesheet" href="/assets/site.css"><script src="/assets/app.js" defer></script></head><body class="min-h-screen bg-background text-foreground font-sans"><a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:left-2 focus:top-2 focus:bg-background focus:px-4 focus:py-2 focus:z-50">Skip to content</a><header class="border-b border-border"><div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-4 py-4"><a href="/" class="text-lg font-semibold">ui8kit</a><nav aria-label="Main" class="flex items-center gap-4 text-sm"><a href="/docs/" class="hover:underline">Docs</a> <a href="/docs/categories/blocks-marketing/" class="hover:underline">Blocks</a> <a href="/docs/categories/primitives/" class="hover:underline">Primitives</a> <a href="/docs/cli/" class="hover:underline">CLI</a></nav><form id="search" role="search" class="relative w-full sm:w-72" data-index="/search-index.json"><label for="search-input" class="sr-only">Search components and blocks</label> <input id="search-input" type="search" autocomplete="off" placeholder="Search, press /" class="h-10 w-full rounded border border-input bg-card px-4 text-sm"><ul id="search-results" hidden class="absolute left-0 right-0 top-12 z-40 rounded border border-border bg-popover text-popover-foreground shadow-md" aria-live="polite"></ul></form></div></header><div class="mx-auto flex max-w-6xl flex-col gap-8 px-4 py-8 md:flex-row"><nav aria-label="Docs" class="md:w-64 md:shrink-0"><h2 class="mb-2 text-sm font-semibold">Guides</h2><ul class="mb-6 flex flex-col gap-1"><li><a href="/docs/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Overview</a></li><li><a href="/docs/getting-started/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Getting started</a></li><li><a href="/docs/installation/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Installation</a></li><li><a href="/docs/cli/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">CLI</a></li><li><a href="/docs/theming-skins/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Theming and skins</a></li><li><a href="/docs/grid-8px/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">The 8px grid</a></li></ul><h2 class="mb-2 text-sm font-semibold">Categories</h2><ul class="mb-6 flex flex-col gap-1"><li><a href="/docs/categories/primitives/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Primitives</a></li><li><a href="/docs/categories/components/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Components</a></li><li><a href="/docs/categories/blocks-marketing/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: marketing</a></li><li><a href="/docs/categories/blocks-commerce/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: commerce</a></li><li><a href="/docs/categories/blocks-dashboard/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: dashboard</a></li><li><a href="/docs/categories/blocks-content/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: content</a></li><li><a href="/docs/categories/blocks-account/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: account</a></li><li><a href="/docs/categories/blocks-promo/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: promo</a></li><li><a href="/docs/categories/blocks-support/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: support</a></li><li><a href="/docs/categories/blocks-onboarding/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: onboarding</a></li><li><a href="/docs/categories/blocks-general/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: general</a></li></ul></nav><main id="main" class="min-w-0 flex-1"><article><p class="text-sm text-muted-foreground"><a class="underline" href="/docs/">utils / utils</a></p><h1 class="mb-2 text-3xl font-semibold tracking-tight">Utils</h1><p class="mb-6 max-w-3xl text-muted-foreground">Escape and pointer-down outside the node call onDismiss. Returns the cleanup.</p><h2 class="mb-2 text-xl font-semibold">Install</h2><div class="mb-6 max-w-xl"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="install-utils" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit add utils</code><button type="button" hidden data-copy="install-utils" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><h2 class="mb-2 text-xl font-semibold">Code</h2><div data-tabs><section id="panel-svelte" data-panel data-runtime="svelte" data-label="Svelte" aria-label="Svelte" class="mb-8"><h3 class="mb-2 text-lg font-semibold">Svelte</h3><p class="mb-2 text-sm text-muted-foreground">Point the CLI at this runtime once, then add the item:</p><div class="mb-2"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-svelte-init" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit init --yes --framework svelte --dir src --registry-url https://registry.buildy.tw/svelte --strict-cdn</code><button type="button" hidden data-copy="panel-svelte-init" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-svelte-add" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit add utils</code><button type="button" hidden data-copy="panel-svelte-add" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">utils/a11y/dismiss.ts</span><button type="button" hidden data-copy="code-svelte-0" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-svelte-0" class="font-mono">// Code generated by xgen. DO NOT EDIT.
+// Source: xgen/runtimes/core/assets/ts/a11y/dismiss.ts
+// Framework-free: the function takes the node and returns the cleanup. Svelte: call it from an action or an effect; React: call it in an effect.
+export type DismissReason = &#34;escape&#34; | &#34;outside&#34;;
+const stack: object[] = [];   // topmost dismissable layer handles Escape first (menu inside off-canvas sidebar, …)
+
+/** Escape and pointer-down outside the node call onDismiss. Returns the cleanup. */
+export function dismissable(node: HTMLElement, opts: () =&gt; { onDismiss: (reason: DismissReason) =&gt; void; ignore?: () =&gt; (Element | null | undefined)[]; outside?: boolean }): () =&gt; void {
+  {
+    const layer = {};
+    stack.push(layer);
+    const { onDismiss, ignore = () =&gt; [], outside = true } = opts();
+    const onKey = (e: KeyboardEvent) =&gt; {
+      if (e.key !== &#34;Escape&#34; || e.defaultPrevented || stack[stack.length - 1] !== layer) return;
+      e.preventDefault(); e.stopPropagation();
+      onDismiss(&#34;escape&#34;);
+    };
+    const onDown = (e: PointerEvent) =&gt; {
+      if (!outside || stack[stack.length - 1] !== layer) return;
+      const t = e.target as Node | null;
+      if (!t || node.contains(t) || ignore().some((el) =&gt; el?.contains(t))) return;
+      onDismiss(&#34;outside&#34;);
+    };
+    document.addEventListener(&#34;keydown&#34;, onKey, true);
+    document.addEventListener(&#34;pointerdown&#34;, onDown, true);
+    return () =&gt; {
+      document.removeEventListener(&#34;keydown&#34;, onKey, true);
+      document.removeEventListener(&#34;pointerdown&#34;, onDown, true);
+      const i = stack.indexOf(layer); if (i &gt;= 0) stack.splice(i, 1);
+    };
+  }
+}
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">utils/a11y/focus-trap.ts</span><button type="button" hidden data-copy="code-svelte-1" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-svelte-1" class="font-mono">// Code generated by xgen. DO NOT EDIT.
+// Source: xgen/runtimes/core/assets/ts/a11y/focus-trap.ts
+// Framework-free: the function takes the node and returns the cleanup. Svelte: call it from an action or an effect; React: call it in an effect.
+import { focusables } from &#34;./focusable&#34;;
+
+/** Tab/Shift+Tab cycle inside `node`; on cleanup focus returns to the element focused before. */
+export function trapFocus(node: HTMLElement): () =&gt; void {
+  const previous = document.activeElement as HTMLElement | null;
+  if (!node.contains(previous)) queueMicrotask(() =&gt; focusables(node)[0]?.focus());
+  const onKey = (e: KeyboardEvent) =&gt; {
+    if (e.key !== &#34;Tab&#34;) return;
+    const items = focusables(node);
+    if (!items.length) { e.preventDefault(); return; }
+    const first = items[0], last = items[items.length - 1], cur = document.activeElement;
+    if (e.shiftKey &amp;&amp; (cur === first || !node.contains(cur))) { e.preventDefault(); last.focus(); }
+    else if (!e.shiftKey &amp;&amp; (cur === last || !node.contains(cur))) { e.preventDefault(); first.focus(); }
+  };
+  node.addEventListener(&#34;keydown&#34;, onKey);
+  return () =&gt; { node.removeEventListener(&#34;keydown&#34;, onKey); /* after the page is no longer inert */ requestAnimationFrame(() =&gt; { if (previous?.isConnected) previous.focus(); }); };
+}
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">utils/a11y/focusable.ts</span><button type="button" hidden data-copy="code-svelte-2" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-svelte-2" class="font-mono">// Code generated by xgen. DO NOT EDIT.
+// Source: xgen/runtimes/core/assets/ts/a11y/focusable.ts
+// Small headless helpers shared by the interactive primitives (menus, dialogs, tabs, off-canvas sidebar).
+export const FOCUSABLE = &#39;a[href],button:not([disabled]),input:not([disabled]):not([type=&#34;hidden&#34;]),select:not([disabled]),textarea:not([disabled]),[tabindex]:not([tabindex=&#34;-1&#34;])&#39;;
+
+/** visible, tabbable descendants of `root` in DOM order */
+export function focusables(root: HTMLElement): HTMLElement[] {
+  return [...root.querySelectorAll&lt;HTMLElement&gt;(FOCUSABLE)].filter((el) =&gt; !el.closest(&#34;[inert]&#34;) &amp;&amp; el.getClientRects().length &gt; 0 &amp;&amp; getComputedStyle(el).visibility !== &#34;hidden&#34;);
+}
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">utils/a11y/index.ts</span><button type="button" hidden data-copy="code-svelte-3" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-svelte-3" class="font-mono">// Code generated by xgen. DO NOT EDIT.
+// Source: xgen/runtimes/core/assets/ts/a11y/index.ts
+export { FOCUSABLE, focusables } from &#34;./focusable&#34;;
+export { moveFocus, typeahead, type RovingOptions } from &#34;./roving&#34;;
+export { lockScroll } from &#34;./scroll-lock&#34;;
+export { dismissable, type DismissReason } from &#34;./dismiss&#34;;
+export { trapFocus } from &#34;./focus-trap&#34;;
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">utils/a11y/roving.ts</span><button type="button" hidden data-copy="code-svelte-4" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-svelte-4" class="font-mono">// Code generated by xgen. DO NOT EDIT.
+// Source: xgen/runtimes/core/assets/ts/a11y/roving.ts
+// Arrow-key navigation over a list of focusable items (menus, listboxes, tab lists, trees).
+export type RovingOptions = { orientation?: &#34;vertical&#34; | &#34;horizontal&#34; | &#34;both&#34;; loop?: boolean; activate?: boolean };
+
+/** Handles ArrowUp/Down/Left/Right, Home, End. Returns true when the key was consumed. */
+export function moveFocus(e: KeyboardEvent, items: HTMLElement[], { orientation = &#34;vertical&#34;, loop = true, activate = false }: RovingOptions = {}): boolean {
+  if (!items.length || e.altKey || e.ctrlKey || e.metaKey) return false;
+  const prev = orientation !== &#34;horizontal&#34; ? [&#34;ArrowUp&#34;] : [];
+  const next = orientation !== &#34;horizontal&#34; ? [&#34;ArrowDown&#34;] : [];
+  if (orientation !== &#34;vertical&#34;) { prev.push(&#34;ArrowLeft&#34;); next.push(&#34;ArrowRight&#34;); }
+  const cur = items.indexOf(document.activeElement as HTMLElement);
+  let idx = -1;
+  if (next.includes(e.key)) idx = cur &lt; 0 ? 0 : cur + 1;
+  else if (prev.includes(e.key)) idx = cur &lt; 0 ? items.length - 1 : cur - 1;
+  else if (e.key === &#34;Home&#34;) idx = 0;
+  else if (e.key === &#34;End&#34;) idx = items.length - 1;
+  else return false;
+  if (idx &gt;= items.length) idx = loop ? 0 : items.length - 1;
+  if (idx &lt; 0) idx = loop ? items.length - 1 : 0;
+  e.preventDefault();
+  const el = items[idx];
+  el.focus();
+  if (activate) el.click();
+  return true;
+}
+
+/** type-ahead: focus the next item whose text starts with the typed characters (reset after 600 ms) */
+export function typeahead() {
+  let buf = &#34;&#34;, t: ReturnType&lt;typeof setTimeout&gt; | undefined;
+  return (e: KeyboardEvent, items: HTMLElement[]): boolean =&gt; {
+    if (e.key.length !== 1 || e.ctrlKey || e.metaKey || e.altKey || e.key === &#34; &#34;) return false;
+    buf += e.key.toLowerCase();
+    clearTimeout(t); t = setTimeout(() =&gt; (buf = &#34;&#34;), 600);
+    const start = Math.max(0, items.indexOf(document.activeElement as HTMLElement) + (buf.length === 1 ? 1 : 0));
+    const ordered = [...items.slice(start), ...items.slice(0, start)];
+    const hit = ordered.find((el) =&gt; (el.textContent ?? &#34;&#34;).trim().toLowerCase().startsWith(buf));
+    if (hit) { hit.focus(); e.preventDefault(); return true; }
+    return false;
+  };
+}
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">utils/a11y/scroll-lock.ts</span><button type="button" hidden data-copy="code-svelte-5" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-svelte-5" class="font-mono">// Code generated by xgen. DO NOT EDIT.
+// Source: xgen/runtimes/core/assets/ts/a11y/scroll-lock.ts
+// Reference-counted page scroll lock (off-canvas sidebar, modal dialog). Compensates the scrollbar width on desktop.
+let count = 0;
+let saved = { overflow: &#34;&#34;, paddingRight: &#34;&#34; };
+
+export function lockScroll(): () =&gt; void {
+  const root = document.documentElement;
+  if (count++ === 0) {
+    const sw = window.innerWidth - root.clientWidth;
+    saved = { overflow: root.style.overflow, paddingRight: root.style.paddingRight };
+    root.style.overflow = &#34;hidden&#34;;
+    if (sw &gt; 0) root.style.paddingRight = `${sw}px`;
+    root.setAttribute(&#34;data-scroll-locked&#34;, &#34;&#34;);
+  }
+  let released = false;
+  return () =&gt; {
+    if (released) return; released = true;
+    if (--count === 0) {
+      root.style.overflow = saved.overflow; root.style.paddingRight = saved.paddingRight;
+      root.removeAttribute(&#34;data-scroll-locked&#34;);
+    }
+  };
+}
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">utils/cn.ts</span><button type="button" hidden data-copy="code-svelte-6" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-svelte-6" class="font-mono">// Code generated by xgen. DO NOT EDIT.
+// Source: xgen/runtimes/core/assets/ts/cn.ts
+import { clsx, type ClassValue } from &#34;clsx&#34;;
+import { twMerge } from &#34;tailwind-merge&#34;;
+
+/** Merge class values. Caller-supplied classes win over recipe classes. */
+export function cn(...inputs: ClassValue[]): string {
+  return twMerge(clsx(inputs));
+}
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">utils/env.ts</span><button type="button" hidden data-copy="code-svelte-7" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-svelte-7" class="font-mono">// Code generated by xgen. DO NOT EDIT.
+// Source: xgen/runtimes/core/assets/ts/env.ts
+export function isDevEnv(): boolean {
+  try {
+    const env = (import.meta as unknown as { env?: { DEV?: boolean } }).env;
+    if (env &amp;&amp; typeof env.DEV === &#34;boolean&#34;) return env.DEV;
+  } catch {
+    // import.meta may be unavailable in some contexts
+  }
+  return false;
+}
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">utils/expr.ts</span><button type="button" hidden data-copy="code-svelte-8" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-svelte-8" class="font-mono">// Code generated by xgen. DO NOT EDIT.
+// Source: xgen/runtimes/core/assets/ts/expr.ts
+/**
+ * Tiny attribute-logic helpers used by generated components. One
+ * implementation per runtime family keeps every default-resolution decision
+ * table byte-identical across React, Svelte, and Vue (mirrors `expr.go`).
+ */
+
+export const trimStr = (v: string | number | null | undefined): string =&gt;
+  v === null || v === undefined ? &#34;&#34; : String(v).trim();
+
+export const isSetStr = (v: string | null | undefined): boolean =&gt; trimStr(v) !== &#34;&#34;;
+
+export const isSetNum = (v: number | null | undefined): boolean =&gt; (v ?? 0) &gt; 0;
+
+/**
+ * `trim(v) === &#34;&#34; ? fallback : trim(v)` — DefaultInputType-style defaults.
+ * Generic so enum-typed props keep their literal union through the default.
+ */
+export const defaultIfEmpty = &lt;T extends string&gt;(v: T | null | undefined, fallback: T): T =&gt; {
+  const t = trimStr(v) as T;
+  return t === &#34;&#34; ? fallback : t;
+};
+
+/** Whitelist: returns `trim(v)` when in `allowed`, otherwise `fallback`. */
+export const oneOfOr = &lt;T extends string&gt;(
+  v: string | null | undefined,
+  fallback: T,
+  ...allowed: T[]
+): T =&gt; {
+  const t = trimStr(v) as T;
+  return allowed.includes(t) ? t : fallback;
+};
+
+export const oneOfOrLower = &lt;T extends string&gt;(
+  v: string | null | undefined,
+  fallback: T,
+  ...allowed: T[]
+): T =&gt; {
+  const t = trimStr(v).toLowerCase() as T;
+  return allowed.includes(t) ? t : fallback;
+};
+
+/** Decision table: `mapping[trim(v)] ?? fallback`. */
+export const mapOr = &lt;T extends string&gt;(
+  v: string | null | undefined,
+  mapping: Record&lt;string, T&gt;,
+  fallback: T
+): T =&gt; mapping[trimStr(v)] ?? fallback;
+
+export const mapOrLower = &lt;T extends string&gt;(
+  v: string | null | undefined,
+  mapping: Record&lt;string, T&gt;,
+  fallback: T
+): T =&gt; mapping[trimStr(v).toLowerCase()] ?? fallback;
+
+/** Integer decision table: `mapping[v] ?? fallback`. */
+export const intMapOr = &lt;T extends string&gt;(
+  v: number | null | undefined,
+  mapping: Record&lt;number, T&gt;,
+  fallback: T
+): T =&gt; mapping[v ?? 0] ?? fallback;
+
+/** Null-safe string equality (both sides normalized to &#34;&#34;). */
+export const eqStr = (a: string | null | undefined, b: string | null | undefined): boolean =&gt;
+  (a ?? &#34;&#34;) === (b ?? &#34;&#34;);
+
+/** ARIA state stringification: always &#34;true&#34;/&#34;false&#34;, never omitted. */
+export const boolStr = (v: boolean | null | undefined): &#34;true&#34; | &#34;false&#34; =&gt;
+  v ? &#34;true&#34; : &#34;false&#34;;
+
+/** Concatenation of trimmed parts (icon `Prefix + Name`). */
+export const concatTrim = (...parts: (string | null | undefined)[]): string =&gt;
+  parts.map(trimStr).join(&#34;&#34;);
+
+/** Omit-if-empty attribute value: `&#34;&#34;` → `undefined` so the attr is dropped. */
+export const orUndef = (v: string | null | undefined): string | undefined =&gt; {
+  const t = trimStr(v);
+  return t === &#34;&#34; ? undefined : String(v);
+};
+
+export type HeadingLevel = 1 | 2 | 3 | 4 | 5 | 6;
+
+/** h1–h6 from a heading level; 0/undefined/out-of-range default to h2. */
+export const titleTag = (order: HeadingLevel | number | null | undefined): string =&gt; {
+  switch (order) {
+    case 1:
+      return &#34;h1&#34;;
+    case 3:
+      return &#34;h3&#34;;
+    case 4:
+      return &#34;h4&#34;;
+    case 5:
+      return &#34;h5&#34;;
+    case 6:
+      return &#34;h6&#34;;
+    default:
+      return &#34;h2&#34;;
+  }
+};
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">utils/format.ts</span><button type="button" hidden data-copy="code-svelte-9" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-svelte-9" class="font-mono">// Code generated by xgen. DO NOT EDIT.
+// Source: xgen/runtimes/core/assets/ts/format.ts
+// Text and number formatting shared by every generated organism and screen. Pure functions, no runtime dependency.
+
+/** fills {0}, {1}... of a content template */
+export function tpl(template: string | undefined, ...values: Array&lt;string | number | undefined&gt;): string {
+  return (template ?? &#34;&#34;).replace(/\{(\d+)\}/g, (_m, i: string) =&gt; String(values[Number(i)] ?? &#34;&#34;));
+}
+
+const nf = new Intl.NumberFormat(&#34;en-US&#34;);
+export function fmtNumber(n: number): string {
+  return nf.format(n);
+}
+
+const moneyCache = new Map&lt;string, Intl.NumberFormat&gt;();
+export function fmtMoney(amount: number, currency: string): string {
+  let f = moneyCache.get(currency);
+  if (!f) {
+    f = new Intl.NumberFormat(&#34;en-US&#34;, { style: &#34;currency&#34;, currency, maximumFractionDigits: 0 });
+    moneyCache.set(currency, f);
+  }
+  return f.format(amount);
+}
+
+/** a content word by key (the status of a record -&gt; its label); the key itself when the dictionary has no entry */
+export function at(dict: Record&lt;string, string&gt; | undefined, key: string): string {
+  return dict?.[key] ?? key;
+}
+
+/** the page numbers a pager shows: the first, the last and the neighbours of the current page; null is a gap */
+export function pageWindow(page: number, pages: number): (number | null)[] {
+  const keep = new Set([1, pages, page - 1, page, page + 1].filter((n) =&gt; n &gt;= 1 &amp;&amp; n &lt;= pages));
+  const out: (number | null)[] = [];
+  let prev = 0;
+  for (const n of [...keep].sort((a, b) =&gt; a - b)) {
+    if (n - prev &gt; 1) out.push(null);
+    out.push(n);
+    prev = n;
+  }
+  return out;
+}
+
+/** a responsive column variant of Grid capped by the number of items, so no column stays empty: (&#34;1-4&#34;, 3) -&gt; &#34;1-3&#34;, (&#34;2-6&#34;, 4) -&gt; &#34;2-4&#34; */
+export function fitCols(cols: string, n: number): string {
+  const m = /^(\d+)-(\d+)$/.exec(cols);
+  if (!m) return cols;
+  const lo = Number(m[1]), hi = Number(m[2]);
+  if (n &gt;= hi) return cols;
+  const top = Math.max(lo, n);
+  const known = [&#34;1-2&#34;, &#34;1-3&#34;, &#34;1-4&#34;, &#34;2-3&#34;, &#34;2-4&#34;, &#34;2-6&#34;, &#34;3-6&#34;];
+  for (let h = top; h &gt; lo; h--) if (known.includes(`${lo}-${h}`)) return `${lo}-${h}`;
+  return String(Math.min(lo, Math.max(n, 1)));
+}
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">utils/index.ts</span><button type="button" hidden data-copy="code-svelte-10" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-svelte-10" class="font-mono">// Code generated by xgen. DO NOT EDIT.
+// Source: xgen/runtimes/core/assets/ts/index.ts
+export { cn } from &#34;./cn&#34;;
+export { isDevEnv } from &#34;./env&#34;;
+export { variants, type VariantFn, type VariantKey, type VariantSelection, type VariantTable } from &#34;./variants&#34;;
+export { TagGroup, isAllowedTag, resolveTag } from &#34;./tags&#34;;
+export * from &#34;./expr&#34;;
+export { tpl, fmtNumber, fmtMoney, at, pageWindow, fitCols } from &#34;./format&#34;;
+export * from &#34;./a11y&#34;;
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">utils/tags.ts</span><button type="button" hidden data-copy="code-svelte-11" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-svelte-11" class="font-mono">// Code generated by xgen. DO NOT EDIT.
+// Source: xgen/runtimes/core/assets/ts/tags.ts
+// Code generated by tagsgen. DO NOT EDIT.
+
+import { isDevEnv } from &#34;./env&#34;;
+
+export const TagGroup = {
+  Layout: &#34;Layout&#34;,
+  BoxAllowed: &#34;BoxAllowed&#34;,
+  BlockText: &#34;BlockText&#34;,
+  Inline: &#34;Inline&#34;,
+  Heading: &#34;Heading&#34;,
+  List: &#34;List&#34;,
+  ListItem: &#34;ListItem&#34;,
+  Form: &#34;Form&#34;,
+  FormControl: &#34;FormControl&#34;,
+  FormLabel: &#34;FormLabel&#34;,
+  Table: &#34;Table&#34;,
+  TableSection: &#34;TableSection&#34;,
+  TableRow: &#34;TableRow&#34;,
+  TableCell: &#34;TableCell&#34;,
+  TableColumn: &#34;TableColumn&#34;,
+  Media: &#34;Media&#34;,
+  Disclosure: &#34;Disclosure&#34;,
+  Container: &#34;Container&#34;,
+  Stack: &#34;Stack&#34;,
+  Group: &#34;Group&#34;,
+  Text: &#34;Text&#34;,
+} as const;
+
+export type TagGroup = (typeof TagGroup)[keyof typeof TagGroup];
+
+const layoutTags = new Set([&#34;div&#34;, &#34;section&#34;, &#34;article&#34;, &#34;aside&#34;, &#34;header&#34;, &#34;footer&#34;, &#34;main&#34;, &#34;nav&#34;, &#34;figure&#34;, &#34;search&#34;, &#34;hgroup&#34;]);
+const boxAllowedTags = new Set([&#34;div&#34;]);
+const blockTextTags = new Set([&#34;p&#34;, &#34;blockquote&#34;, &#34;figcaption&#34;, &#34;address&#34;, &#34;pre&#34;]);
+const inlineTags = new Set([&#34;span&#34;, &#34;em&#34;, &#34;strong&#34;, &#34;small&#34;, &#34;abbr&#34;, &#34;cite&#34;, &#34;code&#34;, &#34;kbd&#34;, &#34;mark&#34;, &#34;time&#34;, &#34;data&#34;, &#34;var&#34;, &#34;samp&#34;, &#34;sub&#34;, &#34;sup&#34;, &#34;b&#34;, &#34;i&#34;, &#34;u&#34;, &#34;s&#34;, &#34;q&#34;, &#34;dfn&#34;, &#34;bdo&#34;, &#34;bdi&#34;, &#34;ins&#34;, &#34;del&#34;]);
+const headingTags = new Set([&#34;h1&#34;, &#34;h2&#34;, &#34;h3&#34;, &#34;h4&#34;, &#34;h5&#34;, &#34;h6&#34;]);
+const listTags = new Set([&#34;ul&#34;, &#34;ol&#34;, &#34;dl&#34;, &#34;menu&#34;]);
+const listItemTags = new Set([&#34;li&#34;, &#34;dt&#34;, &#34;dd&#34;]);
+const formTags = new Set([&#34;form&#34;, &#34;fieldset&#34;]);
+const formControlTags = new Set([&#34;input&#34;, &#34;textarea&#34;, &#34;select&#34;, &#34;button&#34;, &#34;option&#34;, &#34;optgroup&#34;, &#34;datalist&#34;, &#34;output&#34;, &#34;meter&#34;, &#34;progress&#34;]);
+const formLabelTags = new Set([&#34;label&#34;, &#34;legend&#34;]);
+const tableTags = new Set([&#34;table&#34;]);
+const tableSectionTags = new Set([&#34;thead&#34;, &#34;tbody&#34;, &#34;tfoot&#34;]);
+const tableRowTags = new Set([&#34;tr&#34;]);
+const tableCellTags = new Set([&#34;th&#34;, &#34;td&#34;]);
+const tableColumnTags = new Set([&#34;colgroup&#34;, &#34;col&#34;]);
+const mediaTags = new Set([&#34;img&#34;, &#34;picture&#34;, &#34;source&#34;]);
+const disclosureTags = new Set([&#34;details&#34;, &#34;summary&#34;]);
+const containerTags = new Set([&#34;div&#34;, &#34;main&#34;, &#34;section&#34;]);
+const stackTags = new Set([&#34;div&#34;, &#34;ul&#34;, &#34;ol&#34;]);
+const groupTags = new Set([&#34;div&#34;, &#34;fieldset&#34;, &#34;dl&#34;]);
+
+function oneOf(tag: string, options: Set&lt;string&gt;): boolean {
+  return options.has(tag);
+}
+
+const warnedTagFallbacks = new Set&lt;string&gt;();
+
+function warnTagFallback(tag: string, fallback: string, group: TagGroup): void {
+  if (!isDevEnv()) return;
+  const key = `${group}:${tag}:${fallback}`;
+  if (warnedTagFallbacks.has(key)) return;
+  warnedTagFallbacks.add(key);
+  console.warn(`[resolveTag] disallowed tag &#34;${tag}&#34; for group &#34;${group}&#34;, fallback &#34;${fallback}&#34; used.`);
+}
+
+export function isAllowedTag(tag: string, group: TagGroup): boolean {
+  const t = tag.trim().toLowerCase();
+  switch (group) {
+    case TagGroup.Layout:
+      return oneOf(t, layoutTags);
+    case TagGroup.BoxAllowed:
+      return oneOf(t, boxAllowedTags);
+    case TagGroup.BlockText:
+      return oneOf(t, blockTextTags);
+    case TagGroup.Inline:
+      return oneOf(t, inlineTags);
+    case TagGroup.Heading:
+      return oneOf(t, headingTags);
+    case TagGroup.List:
+      return oneOf(t, listTags);
+    case TagGroup.ListItem:
+      return oneOf(t, listItemTags);
+    case TagGroup.Form:
+      return oneOf(t, formTags);
+    case TagGroup.FormControl:
+      return oneOf(t, formControlTags);
+    case TagGroup.FormLabel:
+      return oneOf(t, formLabelTags);
+    case TagGroup.Table:
+      return oneOf(t, tableTags);
+    case TagGroup.TableSection:
+      return oneOf(t, tableSectionTags);
+    case TagGroup.TableRow:
+      return oneOf(t, tableRowTags);
+    case TagGroup.TableCell:
+      return oneOf(t, tableCellTags);
+    case TagGroup.TableColumn:
+      return oneOf(t, tableColumnTags);
+    case TagGroup.Media:
+      return oneOf(t, mediaTags);
+    case TagGroup.Disclosure:
+      return oneOf(t, disclosureTags);
+    case TagGroup.Container:
+      return oneOf(t, containerTags);
+    case TagGroup.Stack:
+      return oneOf(t, stackTags);
+    case TagGroup.Group:
+      return oneOf(t, groupTags);
+    case TagGroup.Text:
+      return blockTextTags.has(t) || inlineTags.has(t);
+    default:
+      return false;
+  }
+}
+
+export function resolveTag(tag: string | undefined, fallback: string, group: TagGroup): string {
+  const t = tag?.trim().toLowerCase() ?? &#34;&#34;;
+  if (!t) return fallback;
+  if (isAllowedTag(t, group)) return t;
+  warnTagFallback(t, fallback, group);
+  return fallback;
+}
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">utils/variants.ts</span><button type="button" hidden data-copy="code-svelte-12" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-svelte-12" class="font-mono">// Code generated by xgen. DO NOT EDIT.
+// Source: xgen/runtimes/core/assets/ts/variants.ts
+import { cn } from &#34;./cn&#34;;
+import { isDevEnv } from &#34;./env&#34;;
+
+/**
+ * A shadcn/cva-style variant table, without the dependency (same idea as `cva` from class-variance-authority).
+ *
+ *   const badgeVariants = variants({
+ *     base: &#34;inline-flex items-center&#34;,
+ *     variants: { size: { sm: &#34;h-5 px-2&#34;, lg: &#34;h-8 px-3&#34; } },
+ *     defaultVariants: { size: &#34;sm&#34; },
+ *     compoundVariants: [{ size: &#34;lg&#34;, shape: &#34;rounded&#34;, class: &#34;rounded-lg&#34; }],
+ *   });
+ *   badgeVariants({ size: &#34;lg&#34; }); // &#34;inline-flex items-center h-8 px-3&#34;
+ *
+ * Classes come in this order: base, each variant in table order, then the matching compound variants.
+ * tailwind-merge (`cn`) resolves conflicts, the later class wins. A compound value may list alternatives: &#34;32|lg&#34;.
+ */
+export type VariantTable = {
+  base?: string;
+  variants: Record&lt;string, Record&lt;string, string&gt;&gt;;
+  defaultVariants: Record&lt;string, string&gt;;
+  compoundVariants?: Array&lt;{ class: string } &amp; Record&lt;string, string&gt;&gt;;
+};
+
+/** the props a table accepts: one optional value per variant */
+export type VariantSelection&lt;T extends VariantTable&gt; = {
+  [K in keyof T[&#34;variants&#34;]]?: (keyof T[&#34;variants&#34;][K] &amp; string) | undefined;
+};
+
+/** a variant function: call it with the selected values, read `.table` for the types */
+export type VariantFn&lt;T extends VariantTable&gt; = ((selection?: VariantSelection&lt;T&gt;) =&gt; string) &amp; { table: T };
+
+/** the values of one variant of a table: `VariantKey&lt;typeof badgeVariants, &#34;size&#34;&gt;` is `&#34;sm&#34; | &#34;lg&#34;` */
+export type VariantKey&lt;F extends { table: VariantTable }, K extends keyof F[&#34;table&#34;][&#34;variants&#34;]&gt; = Exclude&lt;
+  keyof F[&#34;table&#34;][&#34;variants&#34;][K] &amp; string,
+  &#34;&#34;
+&gt;;
+
+export function variants&lt;T extends VariantTable&gt;(table: T): VariantFn&lt;T&gt; {
+  const pick = (selection: Record&lt;string, string | undefined&gt;, key: string): string =&gt;
+    (selection[key] ?? &#34;&#34;).trim() || (table.defaultVariants[key] ?? &#34;&#34;).trim();
+  const fn = (selection: VariantSelection&lt;T&gt; = {}): string =&gt; {
+    const sel = selection as Record&lt;string, string | undefined&gt;;
+    const parts: string[] = [table.base ?? &#34;&#34;];
+    for (const [key, choices] of Object.entries(table.variants)) {
+      const choice = pick(sel, key);
+      const cls = choices[choice];
+      // a typo in development is an error; in production the unknown value is dropped
+      if (cls === undefined &amp;&amp; isDevEnv()) throw new Error(`[variants] unknown value &#34;${choice}&#34; for &#34;${key}&#34;`);
+      parts.push(cls ?? &#34;&#34;);
+    }
+    for (const compound of table.compoundVariants ?? []) {
+      const matches = Object.entries(compound).every(([k, want]) =&gt; k === &#34;class&#34; || want.split(&#34;|&#34;).includes(pick(sel, k)));
+      if (matches) parts.push(compound.class);
+    }
+    return cn(...parts.map((p) =&gt; p.trim()).filter(Boolean));
+  };
+  return Object.assign(fn, { table });
+}
+</code></pre></div><p class="text-sm"><a class="underline" href="https://registry.buildy.tw/svelte/utils/utils.json">Svelte registry item (JSON)</a></p></section><section id="panel-react" data-panel data-runtime="react" data-label="React" aria-label="React" class="mb-8"><h3 class="mb-2 text-lg font-semibold">React</h3><p class="mb-2 text-sm text-muted-foreground">Point the CLI at this runtime once, then add the item:</p><div class="mb-2"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-react-init" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit init --yes --framework react --dir src --registry-url https://registry.buildy.tw/react --strict-cdn</code><button type="button" hidden data-copy="panel-react-init" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-react-add" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit add utils</code><button type="button" hidden data-copy="panel-react-add" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">utils/a11y/dismiss.ts</span><button type="button" hidden data-copy="code-react-0" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-react-0" class="font-mono">// Code generated by xgen. DO NOT EDIT.
+// Source: xgen/runtimes/core/assets/ts/a11y/dismiss.ts
+// Framework-free: the function takes the node and returns the cleanup. Svelte: call it from an action or an effect; React: call it in an effect.
+export type DismissReason = &#34;escape&#34; | &#34;outside&#34;;
+const stack: object[] = [];   // topmost dismissable layer handles Escape first (menu inside off-canvas sidebar, …)
+
+/** Escape and pointer-down outside the node call onDismiss. Returns the cleanup. */
+export function dismissable(node: HTMLElement, opts: () =&gt; { onDismiss: (reason: DismissReason) =&gt; void; ignore?: () =&gt; (Element | null | undefined)[]; outside?: boolean }): () =&gt; void {
+  {
+    const layer = {};
+    stack.push(layer);
+    const { onDismiss, ignore = () =&gt; [], outside = true } = opts();
+    const onKey = (e: KeyboardEvent) =&gt; {
+      if (e.key !== &#34;Escape&#34; || e.defaultPrevented || stack[stack.length - 1] !== layer) return;
+      e.preventDefault(); e.stopPropagation();
+      onDismiss(&#34;escape&#34;);
+    };
+    const onDown = (e: PointerEvent) =&gt; {
+      if (!outside || stack[stack.length - 1] !== layer) return;
+      const t = e.target as Node | null;
+      if (!t || node.contains(t) || ignore().some((el) =&gt; el?.contains(t))) return;
+      onDismiss(&#34;outside&#34;);
+    };
+    document.addEventListener(&#34;keydown&#34;, onKey, true);
+    document.addEventListener(&#34;pointerdown&#34;, onDown, true);
+    return () =&gt; {
+      document.removeEventListener(&#34;keydown&#34;, onKey, true);
+      document.removeEventListener(&#34;pointerdown&#34;, onDown, true);
+      const i = stack.indexOf(layer); if (i &gt;= 0) stack.splice(i, 1);
+    };
+  }
+}
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">utils/a11y/focus-trap.ts</span><button type="button" hidden data-copy="code-react-1" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-react-1" class="font-mono">// Code generated by xgen. DO NOT EDIT.
+// Source: xgen/runtimes/core/assets/ts/a11y/focus-trap.ts
+// Framework-free: the function takes the node and returns the cleanup. Svelte: call it from an action or an effect; React: call it in an effect.
+import { focusables } from &#34;./focusable&#34;;
+
+/** Tab/Shift+Tab cycle inside `node`; on cleanup focus returns to the element focused before. */
+export function trapFocus(node: HTMLElement): () =&gt; void {
+  const previous = document.activeElement as HTMLElement | null;
+  if (!node.contains(previous)) queueMicrotask(() =&gt; focusables(node)[0]?.focus());
+  const onKey = (e: KeyboardEvent) =&gt; {
+    if (e.key !== &#34;Tab&#34;) return;
+    const items = focusables(node);
+    if (!items.length) { e.preventDefault(); return; }
+    const first = items[0], last = items[items.length - 1], cur = document.activeElement;
+    if (e.shiftKey &amp;&amp; (cur === first || !node.contains(cur))) { e.preventDefault(); last.focus(); }
+    else if (!e.shiftKey &amp;&amp; (cur === last || !node.contains(cur))) { e.preventDefault(); first.focus(); }
+  };
+  node.addEventListener(&#34;keydown&#34;, onKey);
+  return () =&gt; { node.removeEventListener(&#34;keydown&#34;, onKey); /* after the page is no longer inert */ requestAnimationFrame(() =&gt; { if (previous?.isConnected) previous.focus(); }); };
+}
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">utils/a11y/focusable.ts</span><button type="button" hidden data-copy="code-react-2" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-react-2" class="font-mono">// Code generated by xgen. DO NOT EDIT.
+// Source: xgen/runtimes/core/assets/ts/a11y/focusable.ts
+// Small headless helpers shared by the interactive primitives (menus, dialogs, tabs, off-canvas sidebar).
+export const FOCUSABLE = &#39;a[href],button:not([disabled]),input:not([disabled]):not([type=&#34;hidden&#34;]),select:not([disabled]),textarea:not([disabled]),[tabindex]:not([tabindex=&#34;-1&#34;])&#39;;
+
+/** visible, tabbable descendants of `root` in DOM order */
+export function focusables(root: HTMLElement): HTMLElement[] {
+  return [...root.querySelectorAll&lt;HTMLElement&gt;(FOCUSABLE)].filter((el) =&gt; !el.closest(&#34;[inert]&#34;) &amp;&amp; el.getClientRects().length &gt; 0 &amp;&amp; getComputedStyle(el).visibility !== &#34;hidden&#34;);
+}
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">utils/a11y/index.ts</span><button type="button" hidden data-copy="code-react-3" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-react-3" class="font-mono">// Code generated by xgen. DO NOT EDIT.
+// Source: xgen/runtimes/core/assets/ts/a11y/index.ts
+export { FOCUSABLE, focusables } from &#34;./focusable&#34;;
+export { moveFocus, typeahead, type RovingOptions } from &#34;./roving&#34;;
+export { lockScroll } from &#34;./scroll-lock&#34;;
+export { dismissable, type DismissReason } from &#34;./dismiss&#34;;
+export { trapFocus } from &#34;./focus-trap&#34;;
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">utils/a11y/roving.ts</span><button type="button" hidden data-copy="code-react-4" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-react-4" class="font-mono">// Code generated by xgen. DO NOT EDIT.
+// Source: xgen/runtimes/core/assets/ts/a11y/roving.ts
+// Arrow-key navigation over a list of focusable items (menus, listboxes, tab lists, trees).
+export type RovingOptions = { orientation?: &#34;vertical&#34; | &#34;horizontal&#34; | &#34;both&#34;; loop?: boolean; activate?: boolean };
+
+/** Handles ArrowUp/Down/Left/Right, Home, End. Returns true when the key was consumed. */
+export function moveFocus(e: KeyboardEvent, items: HTMLElement[], { orientation = &#34;vertical&#34;, loop = true, activate = false }: RovingOptions = {}): boolean {
+  if (!items.length || e.altKey || e.ctrlKey || e.metaKey) return false;
+  const prev = orientation !== &#34;horizontal&#34; ? [&#34;ArrowUp&#34;] : [];
+  const next = orientation !== &#34;horizontal&#34; ? [&#34;ArrowDown&#34;] : [];
+  if (orientation !== &#34;vertical&#34;) { prev.push(&#34;ArrowLeft&#34;); next.push(&#34;ArrowRight&#34;); }
+  const cur = items.indexOf(document.activeElement as HTMLElement);
+  let idx = -1;
+  if (next.includes(e.key)) idx = cur &lt; 0 ? 0 : cur + 1;
+  else if (prev.includes(e.key)) idx = cur &lt; 0 ? items.length - 1 : cur - 1;
+  else if (e.key === &#34;Home&#34;) idx = 0;
+  else if (e.key === &#34;End&#34;) idx = items.length - 1;
+  else return false;
+  if (idx &gt;= items.length) idx = loop ? 0 : items.length - 1;
+  if (idx &lt; 0) idx = loop ? items.length - 1 : 0;
+  e.preventDefault();
+  const el = items[idx];
+  el.focus();
+  if (activate) el.click();
+  return true;
+}
+
+/** type-ahead: focus the next item whose text starts with the typed characters (reset after 600 ms) */
+export function typeahead() {
+  let buf = &#34;&#34;, t: ReturnType&lt;typeof setTimeout&gt; | undefined;
+  return (e: KeyboardEvent, items: HTMLElement[]): boolean =&gt; {
+    if (e.key.length !== 1 || e.ctrlKey || e.metaKey || e.altKey || e.key === &#34; &#34;) return false;
+    buf += e.key.toLowerCase();
+    clearTimeout(t); t = setTimeout(() =&gt; (buf = &#34;&#34;), 600);
+    const start = Math.max(0, items.indexOf(document.activeElement as HTMLElement) + (buf.length === 1 ? 1 : 0));
+    const ordered = [...items.slice(start), ...items.slice(0, start)];
+    const hit = ordered.find((el) =&gt; (el.textContent ?? &#34;&#34;).trim().toLowerCase().startsWith(buf));
+    if (hit) { hit.focus(); e.preventDefault(); return true; }
+    return false;
+  };
+}
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">utils/a11y/scroll-lock.ts</span><button type="button" hidden data-copy="code-react-5" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-react-5" class="font-mono">// Code generated by xgen. DO NOT EDIT.
+// Source: xgen/runtimes/core/assets/ts/a11y/scroll-lock.ts
+// Reference-counted page scroll lock (off-canvas sidebar, modal dialog). Compensates the scrollbar width on desktop.
+let count = 0;
+let saved = { overflow: &#34;&#34;, paddingRight: &#34;&#34; };
+
+export function lockScroll(): () =&gt; void {
+  const root = document.documentElement;
+  if (count++ === 0) {
+    const sw = window.innerWidth - root.clientWidth;
+    saved = { overflow: root.style.overflow, paddingRight: root.style.paddingRight };
+    root.style.overflow = &#34;hidden&#34;;
+    if (sw &gt; 0) root.style.paddingRight = `${sw}px`;
+    root.setAttribute(&#34;data-scroll-locked&#34;, &#34;&#34;);
+  }
+  let released = false;
+  return () =&gt; {
+    if (released) return; released = true;
+    if (--count === 0) {
+      root.style.overflow = saved.overflow; root.style.paddingRight = saved.paddingRight;
+      root.removeAttribute(&#34;data-scroll-locked&#34;);
+    }
+  };
+}
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">utils/cn.ts</span><button type="button" hidden data-copy="code-react-6" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-react-6" class="font-mono">// Code generated by xgen. DO NOT EDIT.
+// Source: xgen/runtimes/core/assets/ts/cn.ts
+import { clsx, type ClassValue } from &#34;clsx&#34;;
+import { twMerge } from &#34;tailwind-merge&#34;;
+
+/** Merge class values. Caller-supplied classes win over recipe classes. */
+export function cn(...inputs: ClassValue[]): string {
+  return twMerge(clsx(inputs));
+}
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">utils/env.ts</span><button type="button" hidden data-copy="code-react-7" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-react-7" class="font-mono">// Code generated by xgen. DO NOT EDIT.
+// Source: xgen/runtimes/core/assets/ts/env.ts
+export function isDevEnv(): boolean {
+  try {
+    const env = (import.meta as unknown as { env?: { DEV?: boolean } }).env;
+    if (env &amp;&amp; typeof env.DEV === &#34;boolean&#34;) return env.DEV;
+  } catch {
+    // import.meta may be unavailable in some contexts
+  }
+  return false;
+}
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">utils/expr.ts</span><button type="button" hidden data-copy="code-react-8" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-react-8" class="font-mono">// Code generated by xgen. DO NOT EDIT.
+// Source: xgen/runtimes/core/assets/ts/expr.ts
+/**
+ * Tiny attribute-logic helpers used by generated components. One
+ * implementation per runtime family keeps every default-resolution decision
+ * table byte-identical across React, Svelte, and Vue (mirrors `expr.go`).
+ */
+
+export const trimStr = (v: string | number | null | undefined): string =&gt;
+  v === null || v === undefined ? &#34;&#34; : String(v).trim();
+
+export const isSetStr = (v: string | null | undefined): boolean =&gt; trimStr(v) !== &#34;&#34;;
+
+export const isSetNum = (v: number | null | undefined): boolean =&gt; (v ?? 0) &gt; 0;
+
+/**
+ * `trim(v) === &#34;&#34; ? fallback : trim(v)` — DefaultInputType-style defaults.
+ * Generic so enum-typed props keep their literal union through the default.
+ */
+export const defaultIfEmpty = &lt;T extends string&gt;(v: T | null | undefined, fallback: T): T =&gt; {
+  const t = trimStr(v) as T;
+  return t === &#34;&#34; ? fallback : t;
+};
+
+/** Whitelist: returns `trim(v)` when in `allowed`, otherwise `fallback`. */
+export const oneOfOr = &lt;T extends string&gt;(
+  v: string | null | undefined,
+  fallback: T,
+  ...allowed: T[]
+): T =&gt; {
+  const t = trimStr(v) as T;
+  return allowed.includes(t) ? t : fallback;
+};
+
+export const oneOfOrLower = &lt;T extends string&gt;(
+  v: string | null | undefined,
+  fallback: T,
+  ...allowed: T[]
+): T =&gt; {
+  const t = trimStr(v).toLowerCase() as T;
+  return allowed.includes(t) ? t : fallback;
+};
+
+/** Decision table: `mapping[trim(v)] ?? fallback`. */
+export const mapOr = &lt;T extends string&gt;(
+  v: string | null | undefined,
+  mapping: Record&lt;string, T&gt;,
+  fallback: T
+): T =&gt; mapping[trimStr(v)] ?? fallback;
+
+export const mapOrLower = &lt;T extends string&gt;(
+  v: string | null | undefined,
+  mapping: Record&lt;string, T&gt;,
+  fallback: T
+): T =&gt; mapping[trimStr(v).toLowerCase()] ?? fallback;
+
+/** Integer decision table: `mapping[v] ?? fallback`. */
+export const intMapOr = &lt;T extends string&gt;(
+  v: number | null | undefined,
+  mapping: Record&lt;number, T&gt;,
+  fallback: T
+): T =&gt; mapping[v ?? 0] ?? fallback;
+
+/** Null-safe string equality (both sides normalized to &#34;&#34;). */
+export const eqStr = (a: string | null | undefined, b: string | null | undefined): boolean =&gt;
+  (a ?? &#34;&#34;) === (b ?? &#34;&#34;);
+
+/** ARIA state stringification: always &#34;true&#34;/&#34;false&#34;, never omitted. */
+export const boolStr = (v: boolean | null | undefined): &#34;true&#34; | &#34;false&#34; =&gt;
+  v ? &#34;true&#34; : &#34;false&#34;;
+
+/** Concatenation of trimmed parts (icon `Prefix + Name`). */
+export const concatTrim = (...parts: (string | null | undefined)[]): string =&gt;
+  parts.map(trimStr).join(&#34;&#34;);
+
+/** Omit-if-empty attribute value: `&#34;&#34;` → `undefined` so the attr is dropped. */
+export const orUndef = (v: string | null | undefined): string | undefined =&gt; {
+  const t = trimStr(v);
+  return t === &#34;&#34; ? undefined : String(v);
+};
+
+export type HeadingLevel = 1 | 2 | 3 | 4 | 5 | 6;
+
+/** h1–h6 from a heading level; 0/undefined/out-of-range default to h2. */
+export const titleTag = (order: HeadingLevel | number | null | undefined): string =&gt; {
+  switch (order) {
+    case 1:
+      return &#34;h1&#34;;
+    case 3:
+      return &#34;h3&#34;;
+    case 4:
+      return &#34;h4&#34;;
+    case 5:
+      return &#34;h5&#34;;
+    case 6:
+      return &#34;h6&#34;;
+    default:
+      return &#34;h2&#34;;
+  }
+};
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">utils/format.ts</span><button type="button" hidden data-copy="code-react-9" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-react-9" class="font-mono">// Code generated by xgen. DO NOT EDIT.
+// Source: xgen/runtimes/core/assets/ts/format.ts
+// Text and number formatting shared by every generated organism and screen. Pure functions, no runtime dependency.
+
+/** fills {0}, {1}... of a content template */
+export function tpl(template: string | undefined, ...values: Array&lt;string | number | undefined&gt;): string {
+  return (template ?? &#34;&#34;).replace(/\{(\d+)\}/g, (_m, i: string) =&gt; String(values[Number(i)] ?? &#34;&#34;));
+}
+
+const nf = new Intl.NumberFormat(&#34;en-US&#34;);
+export function fmtNumber(n: number): string {
+  return nf.format(n);
+}
+
+const moneyCache = new Map&lt;string, Intl.NumberFormat&gt;();
+export function fmtMoney(amount: number, currency: string): string {
+  let f = moneyCache.get(currency);
+  if (!f) {
+    f = new Intl.NumberFormat(&#34;en-US&#34;, { style: &#34;currency&#34;, currency, maximumFractionDigits: 0 });
+    moneyCache.set(currency, f);
+  }
+  return f.format(amount);
+}
+
+/** a content word by key (the status of a record -&gt; its label); the key itself when the dictionary has no entry */
+export function at(dict: Record&lt;string, string&gt; | undefined, key: string): string {
+  return dict?.[key] ?? key;
+}
+
+/** the page numbers a pager shows: the first, the last and the neighbours of the current page; null is a gap */
+export function pageWindow(page: number, pages: number): (number | null)[] {
+  const keep = new Set([1, pages, page - 1, page, page + 1].filter((n) =&gt; n &gt;= 1 &amp;&amp; n &lt;= pages));
+  const out: (number | null)[] = [];
+  let prev = 0;
+  for (const n of [...keep].sort((a, b) =&gt; a - b)) {
+    if (n - prev &gt; 1) out.push(null);
+    out.push(n);
+    prev = n;
+  }
+  return out;
+}
+
+/** a responsive column variant of Grid capped by the number of items, so no column stays empty: (&#34;1-4&#34;, 3) -&gt; &#34;1-3&#34;, (&#34;2-6&#34;, 4) -&gt; &#34;2-4&#34; */
+export function fitCols(cols: string, n: number): string {
+  const m = /^(\d+)-(\d+)$/.exec(cols);
+  if (!m) return cols;
+  const lo = Number(m[1]), hi = Number(m[2]);
+  if (n &gt;= hi) return cols;
+  const top = Math.max(lo, n);
+  const known = [&#34;1-2&#34;, &#34;1-3&#34;, &#34;1-4&#34;, &#34;2-3&#34;, &#34;2-4&#34;, &#34;2-6&#34;, &#34;3-6&#34;];
+  for (let h = top; h &gt; lo; h--) if (known.includes(`${lo}-${h}`)) return `${lo}-${h}`;
+  return String(Math.min(lo, Math.max(n, 1)));
+}
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">utils/index.ts</span><button type="button" hidden data-copy="code-react-10" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-react-10" class="font-mono">// Code generated by xgen. DO NOT EDIT.
+// Source: xgen/runtimes/core/assets/ts/index.ts
+export { cn } from &#34;./cn&#34;;
+export { isDevEnv } from &#34;./env&#34;;
+export { variants, type VariantFn, type VariantKey, type VariantSelection, type VariantTable } from &#34;./variants&#34;;
+export { TagGroup, isAllowedTag, resolveTag } from &#34;./tags&#34;;
+export * from &#34;./expr&#34;;
+export { tpl, fmtNumber, fmtMoney, at, pageWindow, fitCols } from &#34;./format&#34;;
+export * from &#34;./a11y&#34;;
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">utils/tags.ts</span><button type="button" hidden data-copy="code-react-11" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-react-11" class="font-mono">// Code generated by xgen. DO NOT EDIT.
+// Source: xgen/runtimes/core/assets/ts/tags.ts
+// Code generated by tagsgen. DO NOT EDIT.
+
+import { isDevEnv } from &#34;./env&#34;;
+
+export const TagGroup = {
+  Layout: &#34;Layout&#34;,
+  BoxAllowed: &#34;BoxAllowed&#34;,
+  BlockText: &#34;BlockText&#34;,
+  Inline: &#34;Inline&#34;,
+  Heading: &#34;Heading&#34;,
+  List: &#34;List&#34;,
+  ListItem: &#34;ListItem&#34;,
+  Form: &#34;Form&#34;,
+  FormControl: &#34;FormControl&#34;,
+  FormLabel: &#34;FormLabel&#34;,
+  Table: &#34;Table&#34;,
+  TableSection: &#34;TableSection&#34;,
+  TableRow: &#34;TableRow&#34;,
+  TableCell: &#34;TableCell&#34;,
+  TableColumn: &#34;TableColumn&#34;,
+  Media: &#34;Media&#34;,
+  Disclosure: &#34;Disclosure&#34;,
+  Container: &#34;Container&#34;,
+  Stack: &#34;Stack&#34;,
+  Group: &#34;Group&#34;,
+  Text: &#34;Text&#34;,
+} as const;
+
+export type TagGroup = (typeof TagGroup)[keyof typeof TagGroup];
+
+const layoutTags = new Set([&#34;div&#34;, &#34;section&#34;, &#34;article&#34;, &#34;aside&#34;, &#34;header&#34;, &#34;footer&#34;, &#34;main&#34;, &#34;nav&#34;, &#34;figure&#34;, &#34;search&#34;, &#34;hgroup&#34;]);
+const boxAllowedTags = new Set([&#34;div&#34;]);
+const blockTextTags = new Set([&#34;p&#34;, &#34;blockquote&#34;, &#34;figcaption&#34;, &#34;address&#34;, &#34;pre&#34;]);
+const inlineTags = new Set([&#34;span&#34;, &#34;em&#34;, &#34;strong&#34;, &#34;small&#34;, &#34;abbr&#34;, &#34;cite&#34;, &#34;code&#34;, &#34;kbd&#34;, &#34;mark&#34;, &#34;time&#34;, &#34;data&#34;, &#34;var&#34;, &#34;samp&#34;, &#34;sub&#34;, &#34;sup&#34;, &#34;b&#34;, &#34;i&#34;, &#34;u&#34;, &#34;s&#34;, &#34;q&#34;, &#34;dfn&#34;, &#34;bdo&#34;, &#34;bdi&#34;, &#34;ins&#34;, &#34;del&#34;]);
+const headingTags = new Set([&#34;h1&#34;, &#34;h2&#34;, &#34;h3&#34;, &#34;h4&#34;, &#34;h5&#34;, &#34;h6&#34;]);
+const listTags = new Set([&#34;ul&#34;, &#34;ol&#34;, &#34;dl&#34;, &#34;menu&#34;]);
+const listItemTags = new Set([&#34;li&#34;, &#34;dt&#34;, &#34;dd&#34;]);
+const formTags = new Set([&#34;form&#34;, &#34;fieldset&#34;]);
+const formControlTags = new Set([&#34;input&#34;, &#34;textarea&#34;, &#34;select&#34;, &#34;button&#34;, &#34;option&#34;, &#34;optgroup&#34;, &#34;datalist&#34;, &#34;output&#34;, &#34;meter&#34;, &#34;progress&#34;]);
+const formLabelTags = new Set([&#34;label&#34;, &#34;legend&#34;]);
+const tableTags = new Set([&#34;table&#34;]);
+const tableSectionTags = new Set([&#34;thead&#34;, &#34;tbody&#34;, &#34;tfoot&#34;]);
+const tableRowTags = new Set([&#34;tr&#34;]);
+const tableCellTags = new Set([&#34;th&#34;, &#34;td&#34;]);
+const tableColumnTags = new Set([&#34;colgroup&#34;, &#34;col&#34;]);
+const mediaTags = new Set([&#34;img&#34;, &#34;picture&#34;, &#34;source&#34;]);
+const disclosureTags = new Set([&#34;details&#34;, &#34;summary&#34;]);
+const containerTags = new Set([&#34;div&#34;, &#34;main&#34;, &#34;section&#34;]);
+const stackTags = new Set([&#34;div&#34;, &#34;ul&#34;, &#34;ol&#34;]);
+const groupTags = new Set([&#34;div&#34;, &#34;fieldset&#34;, &#34;dl&#34;]);
+
+function oneOf(tag: string, options: Set&lt;string&gt;): boolean {
+  return options.has(tag);
+}
+
+const warnedTagFallbacks = new Set&lt;string&gt;();
+
+function warnTagFallback(tag: string, fallback: string, group: TagGroup): void {
+  if (!isDevEnv()) return;
+  const key = `${group}:${tag}:${fallback}`;
+  if (warnedTagFallbacks.has(key)) return;
+  warnedTagFallbacks.add(key);
+  console.warn(`[resolveTag] disallowed tag &#34;${tag}&#34; for group &#34;${group}&#34;, fallback &#34;${fallback}&#34; used.`);
+}
+
+export function isAllowedTag(tag: string, group: TagGroup): boolean {
+  const t = tag.trim().toLowerCase();
+  switch (group) {
+    case TagGroup.Layout:
+      return oneOf(t, layoutTags);
+    case TagGroup.BoxAllowed:
+      return oneOf(t, boxAllowedTags);
+    case TagGroup.BlockText:
+      return oneOf(t, blockTextTags);
+    case TagGroup.Inline:
+      return oneOf(t, inlineTags);
+    case TagGroup.Heading:
+      return oneOf(t, headingTags);
+    case TagGroup.List:
+      return oneOf(t, listTags);
+    case TagGroup.ListItem:
+      return oneOf(t, listItemTags);
+    case TagGroup.Form:
+      return oneOf(t, formTags);
+    case TagGroup.FormControl:
+      return oneOf(t, formControlTags);
+    case TagGroup.FormLabel:
+      return oneOf(t, formLabelTags);
+    case TagGroup.Table:
+      return oneOf(t, tableTags);
+    case TagGroup.TableSection:
+      return oneOf(t, tableSectionTags);
+    case TagGroup.TableRow:
+      return oneOf(t, tableRowTags);
+    case TagGroup.TableCell:
+      return oneOf(t, tableCellTags);
+    case TagGroup.TableColumn:
+      return oneOf(t, tableColumnTags);
+    case TagGroup.Media:
+      return oneOf(t, mediaTags);
+    case TagGroup.Disclosure:
+      return oneOf(t, disclosureTags);
+    case TagGroup.Container:
+      return oneOf(t, containerTags);
+    case TagGroup.Stack:
+      return oneOf(t, stackTags);
+    case TagGroup.Group:
+      return oneOf(t, groupTags);
+    case TagGroup.Text:
+      return blockTextTags.has(t) || inlineTags.has(t);
+    default:
+      return false;
+  }
+}
+
+export function resolveTag(tag: string | undefined, fallback: string, group: TagGroup): string {
+  const t = tag?.trim().toLowerCase() ?? &#34;&#34;;
+  if (!t) return fallback;
+  if (isAllowedTag(t, group)) return t;
+  warnTagFallback(t, fallback, group);
+  return fallback;
+}
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">utils/variants.ts</span><button type="button" hidden data-copy="code-react-12" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-react-12" class="font-mono">// Code generated by xgen. DO NOT EDIT.
+// Source: xgen/runtimes/core/assets/ts/variants.ts
+import { cn } from &#34;./cn&#34;;
+import { isDevEnv } from &#34;./env&#34;;
+
+/**
+ * A shadcn/cva-style variant table, without the dependency (same idea as `cva` from class-variance-authority).
+ *
+ *   const badgeVariants = variants({
+ *     base: &#34;inline-flex items-center&#34;,
+ *     variants: { size: { sm: &#34;h-5 px-2&#34;, lg: &#34;h-8 px-3&#34; } },
+ *     defaultVariants: { size: &#34;sm&#34; },
+ *     compoundVariants: [{ size: &#34;lg&#34;, shape: &#34;rounded&#34;, class: &#34;rounded-lg&#34; }],
+ *   });
+ *   badgeVariants({ size: &#34;lg&#34; }); // &#34;inline-flex items-center h-8 px-3&#34;
+ *
+ * Classes come in this order: base, each variant in table order, then the matching compound variants.
+ * tailwind-merge (`cn`) resolves conflicts, the later class wins. A compound value may list alternatives: &#34;32|lg&#34;.
+ */
+export type VariantTable = {
+  base?: string;
+  variants: Record&lt;string, Record&lt;string, string&gt;&gt;;
+  defaultVariants: Record&lt;string, string&gt;;
+  compoundVariants?: Array&lt;{ class: string } &amp; Record&lt;string, string&gt;&gt;;
+};
+
+/** the props a table accepts: one optional value per variant */
+export type VariantSelection&lt;T extends VariantTable&gt; = {
+  [K in keyof T[&#34;variants&#34;]]?: (keyof T[&#34;variants&#34;][K] &amp; string) | undefined;
+};
+
+/** a variant function: call it with the selected values, read `.table` for the types */
+export type VariantFn&lt;T extends VariantTable&gt; = ((selection?: VariantSelection&lt;T&gt;) =&gt; string) &amp; { table: T };
+
+/** the values of one variant of a table: `VariantKey&lt;typeof badgeVariants, &#34;size&#34;&gt;` is `&#34;sm&#34; | &#34;lg&#34;` */
+export type VariantKey&lt;F extends { table: VariantTable }, K extends keyof F[&#34;table&#34;][&#34;variants&#34;]&gt; = Exclude&lt;
+  keyof F[&#34;table&#34;][&#34;variants&#34;][K] &amp; string,
+  &#34;&#34;
+&gt;;
+
+export function variants&lt;T extends VariantTable&gt;(table: T): VariantFn&lt;T&gt; {
+  const pick = (selection: Record&lt;string, string | undefined&gt;, key: string): string =&gt;
+    (selection[key] ?? &#34;&#34;).trim() || (table.defaultVariants[key] ?? &#34;&#34;).trim();
+  const fn = (selection: VariantSelection&lt;T&gt; = {}): string =&gt; {
+    const sel = selection as Record&lt;string, string | undefined&gt;;
+    const parts: string[] = [table.base ?? &#34;&#34;];
+    for (const [key, choices] of Object.entries(table.variants)) {
+      const choice = pick(sel, key);
+      const cls = choices[choice];
+      // a typo in development is an error; in production the unknown value is dropped
+      if (cls === undefined &amp;&amp; isDevEnv()) throw new Error(`[variants] unknown value &#34;${choice}&#34; for &#34;${key}&#34;`);
+      parts.push(cls ?? &#34;&#34;);
+    }
+    for (const compound of table.compoundVariants ?? []) {
+      const matches = Object.entries(compound).every(([k, want]) =&gt; k === &#34;class&#34; || want.split(&#34;|&#34;).includes(pick(sel, k)));
+      if (matches) parts.push(compound.class);
+    }
+    return cn(...parts.map((p) =&gt; p.trim()).filter(Boolean));
+  };
+  return Object.assign(fn, { table });
+}
+</code></pre></div><p class="text-sm"><a class="underline" href="https://registry.buildy.tw/react/utils/utils.json">React registry item (JSON)</a></p></section><section id="panel-vue" data-panel data-runtime="vue" data-label="Vue" aria-label="Vue" class="mb-8"><h3 class="mb-2 text-lg font-semibold">Vue</h3><p class="mb-2 text-sm text-muted-foreground">Point the CLI at this runtime once, then add the item:</p><div class="mb-2"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-vue-init" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit init --yes --framework vue --dir src --registry-url https://registry.buildy.tw/vue --strict-cdn</code><button type="button" hidden data-copy="panel-vue-init" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-vue-add" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit add utils</code><button type="button" hidden data-copy="panel-vue-add" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">utils/a11y/dismiss.ts</span><button type="button" hidden data-copy="code-vue-0" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-vue-0" class="font-mono">// Code generated by xgen. DO NOT EDIT.
+// Source: xgen/runtimes/core/assets/ts/a11y/dismiss.ts
+// Framework-free: the function takes the node and returns the cleanup. Svelte: call it from an action or an effect; React: call it in an effect.
+export type DismissReason = &#34;escape&#34; | &#34;outside&#34;;
+const stack: object[] = [];   // topmost dismissable layer handles Escape first (menu inside off-canvas sidebar, …)
+
+/** Escape and pointer-down outside the node call onDismiss. Returns the cleanup. */
+export function dismissable(node: HTMLElement, opts: () =&gt; { onDismiss: (reason: DismissReason) =&gt; void; ignore?: () =&gt; (Element | null | undefined)[]; outside?: boolean }): () =&gt; void {
+  {
+    const layer = {};
+    stack.push(layer);
+    const { onDismiss, ignore = () =&gt; [], outside = true } = opts();
+    const onKey = (e: KeyboardEvent) =&gt; {
+      if (e.key !== &#34;Escape&#34; || e.defaultPrevented || stack[stack.length - 1] !== layer) return;
+      e.preventDefault(); e.stopPropagation();
+      onDismiss(&#34;escape&#34;);
+    };
+    const onDown = (e: PointerEvent) =&gt; {
+      if (!outside || stack[stack.length - 1] !== layer) return;
+      const t = e.target as Node | null;
+      if (!t || node.contains(t) || ignore().some((el) =&gt; el?.contains(t))) return;
+      onDismiss(&#34;outside&#34;);
+    };
+    document.addEventListener(&#34;keydown&#34;, onKey, true);
+    document.addEventListener(&#34;pointerdown&#34;, onDown, true);
+    return () =&gt; {
+      document.removeEventListener(&#34;keydown&#34;, onKey, true);
+      document.removeEventListener(&#34;pointerdown&#34;, onDown, true);
+      const i = stack.indexOf(layer); if (i &gt;= 0) stack.splice(i, 1);
+    };
+  }
+}
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">utils/a11y/focus-trap.ts</span><button type="button" hidden data-copy="code-vue-1" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-vue-1" class="font-mono">// Code generated by xgen. DO NOT EDIT.
+// Source: xgen/runtimes/core/assets/ts/a11y/focus-trap.ts
+// Framework-free: the function takes the node and returns the cleanup. Svelte: call it from an action or an effect; React: call it in an effect.
+import { focusables } from &#34;./focusable&#34;;
+
+/** Tab/Shift+Tab cycle inside `node`; on cleanup focus returns to the element focused before. */
+export function trapFocus(node: HTMLElement): () =&gt; void {
+  const previous = document.activeElement as HTMLElement | null;
+  if (!node.contains(previous)) queueMicrotask(() =&gt; focusables(node)[0]?.focus());
+  const onKey = (e: KeyboardEvent) =&gt; {
+    if (e.key !== &#34;Tab&#34;) return;
+    const items = focusables(node);
+    if (!items.length) { e.preventDefault(); return; }
+    const first = items[0], last = items[items.length - 1], cur = document.activeElement;
+    if (e.shiftKey &amp;&amp; (cur === first || !node.contains(cur))) { e.preventDefault(); last.focus(); }
+    else if (!e.shiftKey &amp;&amp; (cur === last || !node.contains(cur))) { e.preventDefault(); first.focus(); }
+  };
+  node.addEventListener(&#34;keydown&#34;, onKey);
+  return () =&gt; { node.removeEventListener(&#34;keydown&#34;, onKey); /* after the page is no longer inert */ requestAnimationFrame(() =&gt; { if (previous?.isConnected) previous.focus(); }); };
+}
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">utils/a11y/focusable.ts</span><button type="button" hidden data-copy="code-vue-2" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-vue-2" class="font-mono">// Code generated by xgen. DO NOT EDIT.
+// Source: xgen/runtimes/core/assets/ts/a11y/focusable.ts
+// Small headless helpers shared by the interactive primitives (menus, dialogs, tabs, off-canvas sidebar).
+export const FOCUSABLE = &#39;a[href],button:not([disabled]),input:not([disabled]):not([type=&#34;hidden&#34;]),select:not([disabled]),textarea:not([disabled]),[tabindex]:not([tabindex=&#34;-1&#34;])&#39;;
+
+/** visible, tabbable descendants of `root` in DOM order */
+export function focusables(root: HTMLElement): HTMLElement[] {
+  return [...root.querySelectorAll&lt;HTMLElement&gt;(FOCUSABLE)].filter((el) =&gt; !el.closest(&#34;[inert]&#34;) &amp;&amp; el.getClientRects().length &gt; 0 &amp;&amp; getComputedStyle(el).visibility !== &#34;hidden&#34;);
+}
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">utils/a11y/index.ts</span><button type="button" hidden data-copy="code-vue-3" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-vue-3" class="font-mono">// Code generated by xgen. DO NOT EDIT.
+// Source: xgen/runtimes/core/assets/ts/a11y/index.ts
+export { FOCUSABLE, focusables } from &#34;./focusable&#34;;
+export { moveFocus, typeahead, type RovingOptions } from &#34;./roving&#34;;
+export { lockScroll } from &#34;./scroll-lock&#34;;
+export { dismissable, type DismissReason } from &#34;./dismiss&#34;;
+export { trapFocus } from &#34;./focus-trap&#34;;
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">utils/a11y/roving.ts</span><button type="button" hidden data-copy="code-vue-4" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-vue-4" class="font-mono">// Code generated by xgen. DO NOT EDIT.
+// Source: xgen/runtimes/core/assets/ts/a11y/roving.ts
+// Arrow-key navigation over a list of focusable items (menus, listboxes, tab lists, trees).
+export type RovingOptions = { orientation?: &#34;vertical&#34; | &#34;horizontal&#34; | &#34;both&#34;; loop?: boolean; activate?: boolean };
+
+/** Handles ArrowUp/Down/Left/Right, Home, End. Returns true when the key was consumed. */
+export function moveFocus(e: KeyboardEvent, items: HTMLElement[], { orientation = &#34;vertical&#34;, loop = true, activate = false }: RovingOptions = {}): boolean {
+  if (!items.length || e.altKey || e.ctrlKey || e.metaKey) return false;
+  const prev = orientation !== &#34;horizontal&#34; ? [&#34;ArrowUp&#34;] : [];
+  const next = orientation !== &#34;horizontal&#34; ? [&#34;ArrowDown&#34;] : [];
+  if (orientation !== &#34;vertical&#34;) { prev.push(&#34;ArrowLeft&#34;); next.push(&#34;ArrowRight&#34;); }
+  const cur = items.indexOf(document.activeElement as HTMLElement);
+  let idx = -1;
+  if (next.includes(e.key)) idx = cur &lt; 0 ? 0 : cur + 1;
+  else if (prev.includes(e.key)) idx = cur &lt; 0 ? items.length - 1 : cur - 1;
+  else if (e.key === &#34;Home&#34;) idx = 0;
+  else if (e.key === &#34;End&#34;) idx = items.length - 1;
+  else return false;
+  if (idx &gt;= items.length) idx = loop ? 0 : items.length - 1;
+  if (idx &lt; 0) idx = loop ? items.length - 1 : 0;
+  e.preventDefault();
+  const el = items[idx];
+  el.focus();
+  if (activate) el.click();
+  return true;
+}
+
+/** type-ahead: focus the next item whose text starts with the typed characters (reset after 600 ms) */
+export function typeahead() {
+  let buf = &#34;&#34;, t: ReturnType&lt;typeof setTimeout&gt; | undefined;
+  return (e: KeyboardEvent, items: HTMLElement[]): boolean =&gt; {
+    if (e.key.length !== 1 || e.ctrlKey || e.metaKey || e.altKey || e.key === &#34; &#34;) return false;
+    buf += e.key.toLowerCase();
+    clearTimeout(t); t = setTimeout(() =&gt; (buf = &#34;&#34;), 600);
+    const start = Math.max(0, items.indexOf(document.activeElement as HTMLElement) + (buf.length === 1 ? 1 : 0));
+    const ordered = [...items.slice(start), ...items.slice(0, start)];
+    const hit = ordered.find((el) =&gt; (el.textContent ?? &#34;&#34;).trim().toLowerCase().startsWith(buf));
+    if (hit) { hit.focus(); e.preventDefault(); return true; }
+    return false;
+  };
+}
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">utils/a11y/scroll-lock.ts</span><button type="button" hidden data-copy="code-vue-5" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-vue-5" class="font-mono">// Code generated by xgen. DO NOT EDIT.
+// Source: xgen/runtimes/core/assets/ts/a11y/scroll-lock.ts
+// Reference-counted page scroll lock (off-canvas sidebar, modal dialog). Compensates the scrollbar width on desktop.
+let count = 0;
+let saved = { overflow: &#34;&#34;, paddingRight: &#34;&#34; };
+
+export function lockScroll(): () =&gt; void {
+  const root = document.documentElement;
+  if (count++ === 0) {
+    const sw = window.innerWidth - root.clientWidth;
+    saved = { overflow: root.style.overflow, paddingRight: root.style.paddingRight };
+    root.style.overflow = &#34;hidden&#34;;
+    if (sw &gt; 0) root.style.paddingRight = `${sw}px`;
+    root.setAttribute(&#34;data-scroll-locked&#34;, &#34;&#34;);
+  }
+  let released = false;
+  return () =&gt; {
+    if (released) return; released = true;
+    if (--count === 0) {
+      root.style.overflow = saved.overflow; root.style.paddingRight = saved.paddingRight;
+      root.removeAttribute(&#34;data-scroll-locked&#34;);
+    }
+  };
+}
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">utils/cn.ts</span><button type="button" hidden data-copy="code-vue-6" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-vue-6" class="font-mono">// Code generated by xgen. DO NOT EDIT.
+// Source: xgen/runtimes/core/assets/ts/cn.ts
+import { clsx, type ClassValue } from &#34;clsx&#34;;
+import { twMerge } from &#34;tailwind-merge&#34;;
+
+/** Merge class values. Caller-supplied classes win over recipe classes. */
+export function cn(...inputs: ClassValue[]): string {
+  return twMerge(clsx(inputs));
+}
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">utils/env.ts</span><button type="button" hidden data-copy="code-vue-7" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-vue-7" class="font-mono">// Code generated by xgen. DO NOT EDIT.
+// Source: xgen/runtimes/core/assets/ts/env.ts
+export function isDevEnv(): boolean {
+  try {
+    const env = (import.meta as unknown as { env?: { DEV?: boolean } }).env;
+    if (env &amp;&amp; typeof env.DEV === &#34;boolean&#34;) return env.DEV;
+  } catch {
+    // import.meta may be unavailable in some contexts
+  }
+  return false;
+}
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">utils/expr.ts</span><button type="button" hidden data-copy="code-vue-8" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-vue-8" class="font-mono">// Code generated by xgen. DO NOT EDIT.
+// Source: xgen/runtimes/core/assets/ts/expr.ts
+/**
+ * Tiny attribute-logic helpers used by generated components. One
+ * implementation per runtime family keeps every default-resolution decision
+ * table byte-identical across React, Svelte, and Vue (mirrors `expr.go`).
+ */
+
+export const trimStr = (v: string | number | null | undefined): string =&gt;
+  v === null || v === undefined ? &#34;&#34; : String(v).trim();
+
+export const isSetStr = (v: string | null | undefined): boolean =&gt; trimStr(v) !== &#34;&#34;;
+
+export const isSetNum = (v: number | null | undefined): boolean =&gt; (v ?? 0) &gt; 0;
+
+/**
+ * `trim(v) === &#34;&#34; ? fallback : trim(v)` — DefaultInputType-style defaults.
+ * Generic so enum-typed props keep their literal union through the default.
+ */
+export const defaultIfEmpty = &lt;T extends string&gt;(v: T | null | undefined, fallback: T): T =&gt; {
+  const t = trimStr(v) as T;
+  return t === &#34;&#34; ? fallback : t;
+};
+
+/** Whitelist: returns `trim(v)` when in `allowed`, otherwise `fallback`. */
+export const oneOfOr = &lt;T extends string&gt;(
+  v: string | null | undefined,
+  fallback: T,
+  ...allowed: T[]
+): T =&gt; {
+  const t = trimStr(v) as T;
+  return allowed.includes(t) ? t : fallback;
+};
+
+export const oneOfOrLower = &lt;T extends string&gt;(
+  v: string | null | undefined,
+  fallback: T,
+  ...allowed: T[]
+): T =&gt; {
+  const t = trimStr(v).toLowerCase() as T;
+  return allowed.includes(t) ? t : fallback;
+};
+
+/** Decision table: `mapping[trim(v)] ?? fallback`. */
+export const mapOr = &lt;T extends string&gt;(
+  v: string | null | undefined,
+  mapping: Record&lt;string, T&gt;,
+  fallback: T
+): T =&gt; mapping[trimStr(v)] ?? fallback;
+
+export const mapOrLower = &lt;T extends string&gt;(
+  v: string | null | undefined,
+  mapping: Record&lt;string, T&gt;,
+  fallback: T
+): T =&gt; mapping[trimStr(v).toLowerCase()] ?? fallback;
+
+/** Integer decision table: `mapping[v] ?? fallback`. */
+export const intMapOr = &lt;T extends string&gt;(
+  v: number | null | undefined,
+  mapping: Record&lt;number, T&gt;,
+  fallback: T
+): T =&gt; mapping[v ?? 0] ?? fallback;
+
+/** Null-safe string equality (both sides normalized to &#34;&#34;). */
+export const eqStr = (a: string | null | undefined, b: string | null | undefined): boolean =&gt;
+  (a ?? &#34;&#34;) === (b ?? &#34;&#34;);
+
+/** ARIA state stringification: always &#34;true&#34;/&#34;false&#34;, never omitted. */
+export const boolStr = (v: boolean | null | undefined): &#34;true&#34; | &#34;false&#34; =&gt;
+  v ? &#34;true&#34; : &#34;false&#34;;
+
+/** Concatenation of trimmed parts (icon `Prefix + Name`). */
+export const concatTrim = (...parts: (string | null | undefined)[]): string =&gt;
+  parts.map(trimStr).join(&#34;&#34;);
+
+/** Omit-if-empty attribute value: `&#34;&#34;` → `undefined` so the attr is dropped. */
+export const orUndef = (v: string | null | undefined): string | undefined =&gt; {
+  const t = trimStr(v);
+  return t === &#34;&#34; ? undefined : String(v);
+};
+
+export type HeadingLevel = 1 | 2 | 3 | 4 | 5 | 6;
+
+/** h1–h6 from a heading level; 0/undefined/out-of-range default to h2. */
+export const titleTag = (order: HeadingLevel | number | null | undefined): string =&gt; {
+  switch (order) {
+    case 1:
+      return &#34;h1&#34;;
+    case 3:
+      return &#34;h3&#34;;
+    case 4:
+      return &#34;h4&#34;;
+    case 5:
+      return &#34;h5&#34;;
+    case 6:
+      return &#34;h6&#34;;
+    default:
+      return &#34;h2&#34;;
+  }
+};
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">utils/format.ts</span><button type="button" hidden data-copy="code-vue-9" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-vue-9" class="font-mono">// Code generated by xgen. DO NOT EDIT.
+// Source: xgen/runtimes/core/assets/ts/format.ts
+// Text and number formatting shared by every generated organism and screen. Pure functions, no runtime dependency.
+
+/** fills {0}, {1}... of a content template */
+export function tpl(template: string | undefined, ...values: Array&lt;string | number | undefined&gt;): string {
+  return (template ?? &#34;&#34;).replace(/\{(\d+)\}/g, (_m, i: string) =&gt; String(values[Number(i)] ?? &#34;&#34;));
+}
+
+const nf = new Intl.NumberFormat(&#34;en-US&#34;);
+export function fmtNumber(n: number): string {
+  return nf.format(n);
+}
+
+const moneyCache = new Map&lt;string, Intl.NumberFormat&gt;();
+export function fmtMoney(amount: number, currency: string): string {
+  let f = moneyCache.get(currency);
+  if (!f) {
+    f = new Intl.NumberFormat(&#34;en-US&#34;, { style: &#34;currency&#34;, currency, maximumFractionDigits: 0 });
+    moneyCache.set(currency, f);
+  }
+  return f.format(amount);
+}
+
+/** a content word by key (the status of a record -&gt; its label); the key itself when the dictionary has no entry */
+export function at(dict: Record&lt;string, string&gt; | undefined, key: string): string {
+  return dict?.[key] ?? key;
+}
+
+/** the page numbers a pager shows: the first, the last and the neighbours of the current page; null is a gap */
+export function pageWindow(page: number, pages: number): (number | null)[] {
+  const keep = new Set([1, pages, page - 1, page, page + 1].filter((n) =&gt; n &gt;= 1 &amp;&amp; n &lt;= pages));
+  const out: (number | null)[] = [];
+  let prev = 0;
+  for (const n of [...keep].sort((a, b) =&gt; a - b)) {
+    if (n - prev &gt; 1) out.push(null);
+    out.push(n);
+    prev = n;
+  }
+  return out;
+}
+
+/** a responsive column variant of Grid capped by the number of items, so no column stays empty: (&#34;1-4&#34;, 3) -&gt; &#34;1-3&#34;, (&#34;2-6&#34;, 4) -&gt; &#34;2-4&#34; */
+export function fitCols(cols: string, n: number): string {
+  const m = /^(\d+)-(\d+)$/.exec(cols);
+  if (!m) return cols;
+  const lo = Number(m[1]), hi = Number(m[2]);
+  if (n &gt;= hi) return cols;
+  const top = Math.max(lo, n);
+  const known = [&#34;1-2&#34;, &#34;1-3&#34;, &#34;1-4&#34;, &#34;2-3&#34;, &#34;2-4&#34;, &#34;2-6&#34;, &#34;3-6&#34;];
+  for (let h = top; h &gt; lo; h--) if (known.includes(`${lo}-${h}`)) return `${lo}-${h}`;
+  return String(Math.min(lo, Math.max(n, 1)));
+}
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">utils/index.ts</span><button type="button" hidden data-copy="code-vue-10" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-vue-10" class="font-mono">// Code generated by xgen. DO NOT EDIT.
+// Source: xgen/runtimes/core/assets/ts/index.ts
+export { cn } from &#34;./cn&#34;;
+export { isDevEnv } from &#34;./env&#34;;
+export { variants, type VariantFn, type VariantKey, type VariantSelection, type VariantTable } from &#34;./variants&#34;;
+export { TagGroup, isAllowedTag, resolveTag } from &#34;./tags&#34;;
+export * from &#34;./expr&#34;;
+export { tpl, fmtNumber, fmtMoney, at, pageWindow, fitCols } from &#34;./format&#34;;
+export * from &#34;./a11y&#34;;
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">utils/tags.ts</span><button type="button" hidden data-copy="code-vue-11" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-vue-11" class="font-mono">// Code generated by xgen. DO NOT EDIT.
+// Source: xgen/runtimes/core/assets/ts/tags.ts
+// Code generated by tagsgen. DO NOT EDIT.
+
+import { isDevEnv } from &#34;./env&#34;;
+
+export const TagGroup = {
+  Layout: &#34;Layout&#34;,
+  BoxAllowed: &#34;BoxAllowed&#34;,
+  BlockText: &#34;BlockText&#34;,
+  Inline: &#34;Inline&#34;,
+  Heading: &#34;Heading&#34;,
+  List: &#34;List&#34;,
+  ListItem: &#34;ListItem&#34;,
+  Form: &#34;Form&#34;,
+  FormControl: &#34;FormControl&#34;,
+  FormLabel: &#34;FormLabel&#34;,
+  Table: &#34;Table&#34;,
+  TableSection: &#34;TableSection&#34;,
+  TableRow: &#34;TableRow&#34;,
+  TableCell: &#34;TableCell&#34;,
+  TableColumn: &#34;TableColumn&#34;,
+  Media: &#34;Media&#34;,
+  Disclosure: &#34;Disclosure&#34;,
+  Container: &#34;Container&#34;,
+  Stack: &#34;Stack&#34;,
+  Group: &#34;Group&#34;,
+  Text: &#34;Text&#34;,
+} as const;
+
+export type TagGroup = (typeof TagGroup)[keyof typeof TagGroup];
+
+const layoutTags = new Set([&#34;div&#34;, &#34;section&#34;, &#34;article&#34;, &#34;aside&#34;, &#34;header&#34;, &#34;footer&#34;, &#34;main&#34;, &#34;nav&#34;, &#34;figure&#34;, &#34;search&#34;, &#34;hgroup&#34;]);
+const boxAllowedTags = new Set([&#34;div&#34;]);
+const blockTextTags = new Set([&#34;p&#34;, &#34;blockquote&#34;, &#34;figcaption&#34;, &#34;address&#34;, &#34;pre&#34;]);
+const inlineTags = new Set([&#34;span&#34;, &#34;em&#34;, &#34;strong&#34;, &#34;small&#34;, &#34;abbr&#34;, &#34;cite&#34;, &#34;code&#34;, &#34;kbd&#34;, &#34;mark&#34;, &#34;time&#34;, &#34;data&#34;, &#34;var&#34;, &#34;samp&#34;, &#34;sub&#34;, &#34;sup&#34;, &#34;b&#34;, &#34;i&#34;, &#34;u&#34;, &#34;s&#34;, &#34;q&#34;, &#34;dfn&#34;, &#34;bdo&#34;, &#34;bdi&#34;, &#34;ins&#34;, &#34;del&#34;]);
+const headingTags = new Set([&#34;h1&#34;, &#34;h2&#34;, &#34;h3&#34;, &#34;h4&#34;, &#34;h5&#34;, &#34;h6&#34;]);
+const listTags = new Set([&#34;ul&#34;, &#34;ol&#34;, &#34;dl&#34;, &#34;menu&#34;]);
+const listItemTags = new Set([&#34;li&#34;, &#34;dt&#34;, &#34;dd&#34;]);
+const formTags = new Set([&#34;form&#34;, &#34;fieldset&#34;]);
+const formControlTags = new Set([&#34;input&#34;, &#34;textarea&#34;, &#34;select&#34;, &#34;button&#34;, &#34;option&#34;, &#34;optgroup&#34;, &#34;datalist&#34;, &#34;output&#34;, &#34;meter&#34;, &#34;progress&#34;]);
+const formLabelTags = new Set([&#34;label&#34;, &#34;legend&#34;]);
+const tableTags = new Set([&#34;table&#34;]);
+const tableSectionTags = new Set([&#34;thead&#34;, &#34;tbody&#34;, &#34;tfoot&#34;]);
+const tableRowTags = new Set([&#34;tr&#34;]);
+const tableCellTags = new Set([&#34;th&#34;, &#34;td&#34;]);
+const tableColumnTags = new Set([&#34;colgroup&#34;, &#34;col&#34;]);
+const mediaTags = new Set([&#34;img&#34;, &#34;picture&#34;, &#34;source&#34;]);
+const disclosureTags = new Set([&#34;details&#34;, &#34;summary&#34;]);
+const containerTags = new Set([&#34;div&#34;, &#34;main&#34;, &#34;section&#34;]);
+const stackTags = new Set([&#34;div&#34;, &#34;ul&#34;, &#34;ol&#34;]);
+const groupTags = new Set([&#34;div&#34;, &#34;fieldset&#34;, &#34;dl&#34;]);
+
+function oneOf(tag: string, options: Set&lt;string&gt;): boolean {
+  return options.has(tag);
+}
+
+const warnedTagFallbacks = new Set&lt;string&gt;();
+
+function warnTagFallback(tag: string, fallback: string, group: TagGroup): void {
+  if (!isDevEnv()) return;
+  const key = `${group}:${tag}:${fallback}`;
+  if (warnedTagFallbacks.has(key)) return;
+  warnedTagFallbacks.add(key);
+  console.warn(`[resolveTag] disallowed tag &#34;${tag}&#34; for group &#34;${group}&#34;, fallback &#34;${fallback}&#34; used.`);
+}
+
+export function isAllowedTag(tag: string, group: TagGroup): boolean {
+  const t = tag.trim().toLowerCase();
+  switch (group) {
+    case TagGroup.Layout:
+      return oneOf(t, layoutTags);
+    case TagGroup.BoxAllowed:
+      return oneOf(t, boxAllowedTags);
+    case TagGroup.BlockText:
+      return oneOf(t, blockTextTags);
+    case TagGroup.Inline:
+      return oneOf(t, inlineTags);
+    case TagGroup.Heading:
+      return oneOf(t, headingTags);
+    case TagGroup.List:
+      return oneOf(t, listTags);
+    case TagGroup.ListItem:
+      return oneOf(t, listItemTags);
+    case TagGroup.Form:
+      return oneOf(t, formTags);
+    case TagGroup.FormControl:
+      return oneOf(t, formControlTags);
+    case TagGroup.FormLabel:
+      return oneOf(t, formLabelTags);
+    case TagGroup.Table:
+      return oneOf(t, tableTags);
+    case TagGroup.TableSection:
+      return oneOf(t, tableSectionTags);
+    case TagGroup.TableRow:
+      return oneOf(t, tableRowTags);
+    case TagGroup.TableCell:
+      return oneOf(t, tableCellTags);
+    case TagGroup.TableColumn:
+      return oneOf(t, tableColumnTags);
+    case TagGroup.Media:
+      return oneOf(t, mediaTags);
+    case TagGroup.Disclosure:
+      return oneOf(t, disclosureTags);
+    case TagGroup.Container:
+      return oneOf(t, containerTags);
+    case TagGroup.Stack:
+      return oneOf(t, stackTags);
+    case TagGroup.Group:
+      return oneOf(t, groupTags);
+    case TagGroup.Text:
+      return blockTextTags.has(t) || inlineTags.has(t);
+    default:
+      return false;
+  }
+}
+
+export function resolveTag(tag: string | undefined, fallback: string, group: TagGroup): string {
+  const t = tag?.trim().toLowerCase() ?? &#34;&#34;;
+  if (!t) return fallback;
+  if (isAllowedTag(t, group)) return t;
+  warnTagFallback(t, fallback, group);
+  return fallback;
+}
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">utils/variants.ts</span><button type="button" hidden data-copy="code-vue-12" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-vue-12" class="font-mono">// Code generated by xgen. DO NOT EDIT.
+// Source: xgen/runtimes/core/assets/ts/variants.ts
+import { cn } from &#34;./cn&#34;;
+import { isDevEnv } from &#34;./env&#34;;
+
+/**
+ * A shadcn/cva-style variant table, without the dependency (same idea as `cva` from class-variance-authority).
+ *
+ *   const badgeVariants = variants({
+ *     base: &#34;inline-flex items-center&#34;,
+ *     variants: { size: { sm: &#34;h-5 px-2&#34;, lg: &#34;h-8 px-3&#34; } },
+ *     defaultVariants: { size: &#34;sm&#34; },
+ *     compoundVariants: [{ size: &#34;lg&#34;, shape: &#34;rounded&#34;, class: &#34;rounded-lg&#34; }],
+ *   });
+ *   badgeVariants({ size: &#34;lg&#34; }); // &#34;inline-flex items-center h-8 px-3&#34;
+ *
+ * Classes come in this order: base, each variant in table order, then the matching compound variants.
+ * tailwind-merge (`cn`) resolves conflicts, the later class wins. A compound value may list alternatives: &#34;32|lg&#34;.
+ */
+export type VariantTable = {
+  base?: string;
+  variants: Record&lt;string, Record&lt;string, string&gt;&gt;;
+  defaultVariants: Record&lt;string, string&gt;;
+  compoundVariants?: Array&lt;{ class: string } &amp; Record&lt;string, string&gt;&gt;;
+};
+
+/** the props a table accepts: one optional value per variant */
+export type VariantSelection&lt;T extends VariantTable&gt; = {
+  [K in keyof T[&#34;variants&#34;]]?: (keyof T[&#34;variants&#34;][K] &amp; string) | undefined;
+};
+
+/** a variant function: call it with the selected values, read `.table` for the types */
+export type VariantFn&lt;T extends VariantTable&gt; = ((selection?: VariantSelection&lt;T&gt;) =&gt; string) &amp; { table: T };
+
+/** the values of one variant of a table: `VariantKey&lt;typeof badgeVariants, &#34;size&#34;&gt;` is `&#34;sm&#34; | &#34;lg&#34;` */
+export type VariantKey&lt;F extends { table: VariantTable }, K extends keyof F[&#34;table&#34;][&#34;variants&#34;]&gt; = Exclude&lt;
+  keyof F[&#34;table&#34;][&#34;variants&#34;][K] &amp; string,
+  &#34;&#34;
+&gt;;
+
+export function variants&lt;T extends VariantTable&gt;(table: T): VariantFn&lt;T&gt; {
+  const pick = (selection: Record&lt;string, string | undefined&gt;, key: string): string =&gt;
+    (selection[key] ?? &#34;&#34;).trim() || (table.defaultVariants[key] ?? &#34;&#34;).trim();
+  const fn = (selection: VariantSelection&lt;T&gt; = {}): string =&gt; {
+    const sel = selection as Record&lt;string, string | undefined&gt;;
+    const parts: string[] = [table.base ?? &#34;&#34;];
+    for (const [key, choices] of Object.entries(table.variants)) {
+      const choice = pick(sel, key);
+      const cls = choices[choice];
+      // a typo in development is an error; in production the unknown value is dropped
+      if (cls === undefined &amp;&amp; isDevEnv()) throw new Error(`[variants] unknown value &#34;${choice}&#34; for &#34;${key}&#34;`);
+      parts.push(cls ?? &#34;&#34;);
+    }
+    for (const compound of table.compoundVariants ?? []) {
+      const matches = Object.entries(compound).every(([k, want]) =&gt; k === &#34;class&#34; || want.split(&#34;|&#34;).includes(pick(sel, k)));
+      if (matches) parts.push(compound.class);
+    }
+    return cn(...parts.map((p) =&gt; p.trim()).filter(Boolean));
+  };
+  return Object.assign(fn, { table });
+}
+</code></pre></div><p class="text-sm"><a class="underline" href="https://registry.buildy.tw/vue/utils/utils.json">Vue registry item (JSON)</a></p></section></div></article></main></div><footer class="border-t border-border"><div class="mx-auto max-w-6xl px-4 py-8 text-sm text-muted-foreground">ui8kit, MIT licence. Static docs generated from markdown and the registry (<a class="underline" href="https://registry.buildy.tw/registry.json">registry.json</a>).</div></footer></body></html>

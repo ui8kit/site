@@ -1,0 +1,226 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Auth Form (component) | ui8kit</title><meta name="description" content="Auth Form component"><link rel="canonical" href="https://ui.buildy.tw/components/auth-form/"><link rel="stylesheet" href="/assets/site.css"><script src="/assets/app.js" defer></script></head><body class="min-h-screen bg-background text-foreground font-sans"><a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:left-2 focus:top-2 focus:bg-background focus:px-4 focus:py-2 focus:z-50">Skip to content</a><header class="border-b border-border"><div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-4 py-4"><a href="/" class="text-lg font-semibold">ui8kit</a><nav aria-label="Main" class="flex items-center gap-4 text-sm"><a href="/docs/" class="hover:underline">Docs</a> <a href="/docs/categories/blocks-marketing/" class="hover:underline">Blocks</a> <a href="/docs/categories/primitives/" class="hover:underline">Primitives</a> <a href="/docs/cli/" class="hover:underline">CLI</a></nav><form id="search" role="search" class="relative w-full sm:w-72" data-index="/search-index.json"><label for="search-input" class="sr-only">Search components and blocks</label> <input id="search-input" type="search" autocomplete="off" placeholder="Search, press /" class="h-10 w-full rounded border border-input bg-card px-4 text-sm"><ul id="search-results" hidden class="absolute left-0 right-0 top-12 z-40 rounded border border-border bg-popover text-popover-foreground shadow-md" aria-live="polite"></ul></form></div></header><div class="mx-auto flex max-w-6xl flex-col gap-8 px-4 py-8 md:flex-row"><nav aria-label="Docs" class="md:w-64 md:shrink-0"><h2 class="mb-2 text-sm font-semibold">Guides</h2><ul class="mb-6 flex flex-col gap-1"><li><a href="/docs/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Overview</a></li><li><a href="/docs/getting-started/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Getting started</a></li><li><a href="/docs/installation/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Installation</a></li><li><a href="/docs/cli/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">CLI</a></li><li><a href="/docs/theming-skins/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Theming and skins</a></li><li><a href="/docs/grid-8px/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">The 8px grid</a></li></ul><h2 class="mb-2 text-sm font-semibold">Categories</h2><ul class="mb-6 flex flex-col gap-1"><li><a href="/docs/categories/primitives/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Primitives</a></li><li><a href="/docs/categories/components/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Components</a></li><li><a href="/docs/categories/blocks-marketing/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: marketing</a></li><li><a href="/docs/categories/blocks-commerce/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: commerce</a></li><li><a href="/docs/categories/blocks-dashboard/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: dashboard</a></li><li><a href="/docs/categories/blocks-content/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: content</a></li><li><a href="/docs/categories/blocks-account/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: account</a></li><li><a href="/docs/categories/blocks-promo/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: promo</a></li><li><a href="/docs/categories/blocks-support/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: support</a></li><li><a href="/docs/categories/blocks-onboarding/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: onboarding</a></li><li><a href="/docs/categories/blocks-general/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: general</a></li></ul></nav><main id="main" class="min-w-0 flex-1"><article><p class="text-sm text-muted-foreground"><a class="underline" href="/docs/categories/components/">component / components</a></p><h1 class="mb-2 text-3xl font-semibold tracking-tight">Auth Form</h1><p class="mb-6 max-w-3xl text-muted-foreground">Auth Form component</p><h2 class="mb-2 text-xl font-semibold">Install</h2><div class="mb-6 max-w-xl"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="install-auth-form" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit add auth-form</code><button type="button" hidden data-copy="install-auth-form" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><p class="mb-6 text-sm text-muted-foreground">Pulls in:  <a class="underline" href="/blocks/auth-card/">auth-card</a><span>, </span> <a class="underline" href="/primitives/button/">button</a><span>, </span> <a class="underline" href="/primitives/checkbox/">checkbox</a><span>, </span> <a class="underline" href="/components/field/">field</a><span>, </span> <a class="underline" href="/primitives/form/">form</a><span>, </span> <a class="underline" href="/primitives/group/">group</a><span>, </span> <a class="underline" href="/primitives/input/">input</a><span>, </span> <a class="underline" href="/primitives/label/">label</a><span>, </span> <a class="underline" href="/primitives/link/">link</a><span>, </span> <a class="underline" href="/lib/utils/">utils</a></p><h2 class="mb-2 text-xl font-semibold">Code</h2><div data-tabs><section id="panel-svelte" data-panel data-runtime="svelte" data-label="Svelte" aria-label="Svelte" class="mb-8"><h3 class="mb-2 text-lg font-semibold">Svelte</h3><p class="mb-2 text-sm text-muted-foreground">Point the CLI at this runtime once, then add the item:</p><div class="mb-2"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-svelte-init" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit init --yes --framework svelte --dir src --registry-url https://registry.buildy.tw/svelte --strict-cdn</code><button type="button" hidden data-copy="panel-svelte-init" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-svelte-add" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit add auth-form</code><button type="button" hidden data-copy="panel-svelte-add" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">components/auth-form.svelte</span><button type="button" hidden data-copy="code-svelte-0" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-svelte-0" class="font-mono">&lt;!-- Code generated by xgen. DO NOT EDIT. --&gt;
+&lt;!-- Source: xgen/screens/src/authoring/components/auth.ts --&gt;
+&lt;!--
+  The form of AuthCard: the fields of the mode (sign-in, sign-up, reset, magic link), remember me and the forgot
+  link, the terms, the submit button.
+--&gt;
+&lt;script lang=&#34;ts&#34; module&gt;
+  import type { Snippet } from &#34;svelte&#34;;
+  import type { AuthLabels } from &#34;../blocks/auth-card.types&#34;;
+
+  export type AuthFormProps = {
+    id: string;
+    mode?: &#34;signin&#34; | &#34;signup&#34; | &#34;reset&#34; | &#34;magic&#34;;
+    labels: AuthLabels;
+    submit: string;
+  };
+&lt;/script&gt;
+
+&lt;script lang=&#34;ts&#34;&gt;
+  import Button from &#34;../primitives/button/button.svelte&#34;;
+  import Checkbox from &#34;../primitives/checkbox/checkbox.svelte&#34;;
+  import Form from &#34;../primitives/form/form.svelte&#34;;
+  import Group from &#34;../primitives/group/group.svelte&#34;;
+  import Input from &#34;../primitives/input/input.svelte&#34;;
+  import Label from &#34;../primitives/label/label.svelte&#34;;
+  import Link from &#34;../primitives/link/link.svelte&#34;;
+  import Field from &#34;../components/field.svelte&#34;;
+  import { cn, tpl } from &#34;../utils&#34;;
+
+  let { id, mode = &#34;signin&#34;, labels, submit }: AuthFormProps = $props();
+&lt;/script&gt;
+
+&lt;Form class=&#34;gap-4&#34; data-testid=&#34;auth-form&#34;&gt;
+  {#if ((mode as string) === &#34;signup&#34;)}
+    &lt;Field label={labels.name} htmlFor={tpl(&#34;{0}-name&#34;, id)}&gt;
+      &lt;Input type=&#34;text&#34; name=&#34;name&#34; autocomplete=&#34;name&#34; id={tpl(&#34;{0}-name&#34;, id)} data-testid=&#34;field&#34; /&gt;
+    &lt;/Field&gt;
+  {/if}
+  &lt;Field label={labels.email} htmlFor={tpl(&#34;{0}-email&#34;, id)}&gt;
+    &lt;Input type=&#34;email&#34; name=&#34;email&#34; autocomplete=&#34;email&#34; id={tpl(&#34;{0}-email&#34;, id)} data-testid=&#34;field&#34; /&gt;
+  &lt;/Field&gt;
+  {#if (((mode as string) !== &#34;reset&#34;) &amp;&amp; ((mode as string) !== &#34;magic&#34;))}
+    &lt;Field label={labels.password} htmlFor={tpl(&#34;{0}-password&#34;, id)}&gt;
+      &lt;Input
+        type=&#34;password&#34;
+        name=&#34;password&#34;
+        autocomplete={(((mode as string) === &#34;signup&#34;) ? &#34;new-password&#34; : &#34;current-password&#34;)}
+        id={tpl(&#34;{0}-password&#34;, id)}
+        data-testid=&#34;field&#34;
+      /&gt;
+    &lt;/Field&gt;
+  {/if}
+  {#if ((mode as string) === &#34;signin&#34;)}
+    &lt;Group justify=&#34;between&#34; align=&#34;center&#34; class=&#34;flex-wrap gap-2&#34;&gt;
+      &lt;Group gap=&#34;2&#34; align=&#34;center&#34; class={cn(&#34;w-fit&#34;, &#34;&#34;)}&gt;
+        &lt;Checkbox name=&#34;remember&#34; id={tpl(&#34;{0}-remember&#34;, id)} /&gt;
+        &lt;Label for={tpl(&#34;{0}-remember&#34;, id)} class=&#34;text-sm&#34;&gt;
+          {labels.remember}
+        &lt;/Label&gt;
+      &lt;/Group&gt;
+      &lt;Link href=&#34;#/&#34; variant=&#34;default&#34; class=&#34;text-sm&#34;&gt;
+        {labels.forgot}
+      &lt;/Link&gt;
+    &lt;/Group&gt;
+  {/if}
+  {#if ((mode as string) === &#34;signup&#34;)}
+    &lt;Group gap=&#34;2&#34; align=&#34;center&#34; class={cn(&#34;w-fit&#34;, &#34;&#34;)}&gt;
+      &lt;Checkbox name=&#34;terms&#34; id={tpl(&#34;{0}-terms&#34;, id)} /&gt;
+      &lt;Label for={tpl(&#34;{0}-terms&#34;, id)} class=&#34;text-sm&#34;&gt;
+        {labels.terms}
+      &lt;/Label&gt;
+    &lt;/Group&gt;
+  {/if}
+  &lt;Button variant=&#34;default&#34; size=&#34;default&#34; type=&#34;button&#34; class=&#34;w-full&#34; data-testid=&#34;submit&#34;&gt;
+    {submit}
+  &lt;/Button&gt;
+&lt;/Form&gt;
+</code></pre></div><p class="text-sm"><a class="underline" href="https://registry.buildy.tw/svelte/components/auth-form.json">Svelte registry item (JSON)</a></p></section><section id="panel-react" data-panel data-runtime="react" data-label="React" aria-label="React" class="mb-8"><h3 class="mb-2 text-lg font-semibold">React</h3><p class="mb-2 text-sm text-muted-foreground">Point the CLI at this runtime once, then add the item:</p><div class="mb-2"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-react-init" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit init --yes --framework react --dir src --registry-url https://registry.buildy.tw/react --strict-cdn</code><button type="button" hidden data-copy="panel-react-init" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-react-add" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit add auth-form</code><button type="button" hidden data-copy="panel-react-add" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">components/auth-form.tsx</span><button type="button" hidden data-copy="code-react-0" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-react-0" class="font-mono">// Code generated by xgen. DO NOT EDIT.
+// Source: xgen/screens/src/authoring/components/auth.ts
+/**
+ * The form of AuthCard: the fields of the mode (sign-in, sign-up, reset, magic link), remember me and the forgot
+ * link, the terms, the submit button.
+ */
+import { type ReactNode } from &#34;react&#34;;
+import { Button } from &#34;../primitives/button/button&#34;;
+import { Checkbox } from &#34;../primitives/checkbox/checkbox&#34;;
+import { Form } from &#34;../primitives/form/form&#34;;
+import { Group } from &#34;../primitives/group/group&#34;;
+import { Input } from &#34;../primitives/input/input&#34;;
+import { Label } from &#34;../primitives/label/label&#34;;
+import { Link } from &#34;../primitives/link/link&#34;;
+import { Field } from &#34;../components/field&#34;;
+import { cn, tpl } from &#34;../utils&#34;;
+import type { AuthLabels } from &#34;../blocks/auth-card.types&#34;;
+
+export type AuthFormProps = {
+  id: string;
+  mode?: &#34;signin&#34; | &#34;signup&#34; | &#34;reset&#34; | &#34;magic&#34;;
+  labels: AuthLabels;
+  submit: string;
+};
+
+export function AuthForm({ id, mode = &#34;signin&#34;, labels, submit }: AuthFormProps) {
+  return (
+    &lt;Form className=&#34;gap-4&#34; data-testid=&#34;auth-form&#34;&gt;
+      {((mode as string) === &#34;signup&#34;) ? (
+        &lt;Field label={labels.name} htmlFor={tpl(&#34;{0}-name&#34;, id)}&gt;
+          &lt;Input type=&#34;text&#34; name=&#34;name&#34; autoComplete=&#34;name&#34; id={tpl(&#34;{0}-name&#34;, id)} data-testid=&#34;field&#34; /&gt;
+        &lt;/Field&gt;
+      ) : null}
+      &lt;Field label={labels.email} htmlFor={tpl(&#34;{0}-email&#34;, id)}&gt;
+        &lt;Input type=&#34;email&#34; name=&#34;email&#34; autoComplete=&#34;email&#34; id={tpl(&#34;{0}-email&#34;, id)} data-testid=&#34;field&#34; /&gt;
+      &lt;/Field&gt;
+      {(((mode as string) !== &#34;reset&#34;) &amp;&amp; ((mode as string) !== &#34;magic&#34;)) ? (
+        &lt;Field label={labels.password} htmlFor={tpl(&#34;{0}-password&#34;, id)}&gt;
+          &lt;Input
+            type=&#34;password&#34;
+            name=&#34;password&#34;
+            autoComplete={(((mode as string) === &#34;signup&#34;) ? &#34;new-password&#34; : &#34;current-password&#34;)}
+            id={tpl(&#34;{0}-password&#34;, id)}
+            data-testid=&#34;field&#34;
+          /&gt;
+        &lt;/Field&gt;
+      ) : null}
+      {((mode as string) === &#34;signin&#34;) ? (
+        &lt;Group justify=&#34;between&#34; align=&#34;center&#34; className=&#34;flex-wrap gap-2&#34;&gt;
+          &lt;Group gap=&#34;2&#34; align=&#34;center&#34; className={cn(&#34;w-fit&#34;, &#34;&#34;)}&gt;
+            &lt;Checkbox name=&#34;remember&#34; id={tpl(&#34;{0}-remember&#34;, id)} /&gt;
+            &lt;Label htmlFor={tpl(&#34;{0}-remember&#34;, id)} className=&#34;text-sm&#34;&gt;
+              {labels.remember}
+            &lt;/Label&gt;
+          &lt;/Group&gt;
+          &lt;Link href=&#34;#/&#34; variant=&#34;default&#34; className=&#34;text-sm&#34;&gt;
+            {labels.forgot}
+          &lt;/Link&gt;
+        &lt;/Group&gt;
+      ) : null}
+      {((mode as string) === &#34;signup&#34;) ? (
+        &lt;Group gap=&#34;2&#34; align=&#34;center&#34; className={cn(&#34;w-fit&#34;, &#34;&#34;)}&gt;
+          &lt;Checkbox name=&#34;terms&#34; id={tpl(&#34;{0}-terms&#34;, id)} /&gt;
+          &lt;Label htmlFor={tpl(&#34;{0}-terms&#34;, id)} className=&#34;text-sm&#34;&gt;
+            {labels.terms}
+          &lt;/Label&gt;
+        &lt;/Group&gt;
+      ) : null}
+      &lt;Button variant=&#34;default&#34; size=&#34;default&#34; type=&#34;button&#34; className=&#34;w-full&#34; data-testid=&#34;submit&#34;&gt;
+        {submit}
+      &lt;/Button&gt;
+    &lt;/Form&gt;
+  );
+}
+</code></pre></div><p class="text-sm"><a class="underline" href="https://registry.buildy.tw/react/components/auth-form.json">React registry item (JSON)</a></p></section><section id="panel-vue" data-panel data-runtime="vue" data-label="Vue" aria-label="Vue" class="mb-8"><h3 class="mb-2 text-lg font-semibold">Vue</h3><p class="mb-2 text-sm text-muted-foreground">Point the CLI at this runtime once, then add the item:</p><div class="mb-2"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-vue-init" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit init --yes --framework vue --dir src --registry-url https://registry.buildy.tw/vue --strict-cdn</code><button type="button" hidden data-copy="panel-vue-init" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-vue-add" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit add auth-form</code><button type="button" hidden data-copy="panel-vue-add" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">components/auth-form.vue</span><button type="button" hidden data-copy="code-vue-0" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-vue-0" class="font-mono">&lt;!-- Code generated by xgen. DO NOT EDIT. --&gt;
+&lt;!-- Source: xgen/screens/src/authoring/components/auth.ts --&gt;
+&lt;!--
+  The form of AuthCard: the fields of the mode (sign-in, sign-up, reset, magic link), remember me and the forgot
+  link, the terms, the submit button.
+--&gt;
+&lt;script lang=&#34;ts&#34;&gt;
+import type { AuthLabels } from &#34;../blocks/auth-card.types&#34;;
+
+export type AuthFormProps = {
+  id: string;
+  mode?: &#34;signin&#34; | &#34;signup&#34; | &#34;reset&#34; | &#34;magic&#34;;
+  labels: AuthLabels;
+  submit: string;
+};
+&lt;/script&gt;
+
+&lt;script setup lang=&#34;ts&#34;&gt;
+import Button from &#34;../primitives/button/button.vue&#34;;
+import Checkbox from &#34;../primitives/checkbox/checkbox.vue&#34;;
+import Form from &#34;../primitives/form/form.vue&#34;;
+import Group from &#34;../primitives/group/group.vue&#34;;
+import Input from &#34;../primitives/input/input.vue&#34;;
+import Label from &#34;../primitives/label/label.vue&#34;;
+import Link from &#34;../primitives/link/link.vue&#34;;
+import Field from &#34;../components/field.vue&#34;;
+import { cn, tpl } from &#34;../utils&#34;;
+
+const { id, mode = &#34;signin&#34;, labels, submit } = defineProps&lt;AuthFormProps&gt;();
+&lt;/script&gt;
+
+&lt;template&gt;
+  &lt;Form class=&#34;gap-4&#34; data-testid=&#34;auth-form&#34;&gt;
+    &lt;Field v-if=&#34;((mode as string) === &#39;signup&#39;)&#34; :label=&#34;labels.name&#34; :htmlFor=&#34;tpl(&#39;{0}-name&#39;, id)&#34;&gt;
+      &lt;Input type=&#34;text&#34; name=&#34;name&#34; autocomplete=&#34;name&#34; :id=&#34;tpl(&#39;{0}-name&#39;, id)&#34; data-testid=&#34;field&#34; /&gt;
+    &lt;/Field&gt;
+    &lt;Field :label=&#34;labels.email&#34; :htmlFor=&#34;tpl(&#39;{0}-email&#39;, id)&#34;&gt;
+      &lt;Input type=&#34;email&#34; name=&#34;email&#34; autocomplete=&#34;email&#34; :id=&#34;tpl(&#39;{0}-email&#39;, id)&#34; data-testid=&#34;field&#34; /&gt;
+    &lt;/Field&gt;
+    &lt;Field
+      v-if=&#34;(((mode as string) !== &#39;reset&#39;) &amp;&amp; ((mode as string) !== &#39;magic&#39;))&#34;
+      :label=&#34;labels.password&#34;
+      :htmlFor=&#34;tpl(&#39;{0}-password&#39;, id)&#34;
+    &gt;
+      &lt;Input
+        type=&#34;password&#34;
+        name=&#34;password&#34;
+        :autocomplete=&#34;(((mode as string) === &#39;signup&#39;) ? &#39;new-password&#39; : &#39;current-password&#39;)&#34;
+        :id=&#34;tpl(&#39;{0}-password&#39;, id)&#34;
+        data-testid=&#34;field&#34;
+      /&gt;
+    &lt;/Field&gt;
+    &lt;Group v-if=&#34;((mode as string) === &#39;signin&#39;)&#34; justify=&#34;between&#34; align=&#34;center&#34; class=&#34;flex-wrap gap-2&#34;&gt;
+      &lt;Group gap=&#34;2&#34; align=&#34;center&#34; :class=&#34;cn(&#39;w-fit&#39;, &#39;&#39;)&#34;&gt;
+        &lt;Checkbox name=&#34;remember&#34; :id=&#34;tpl(&#39;{0}-remember&#39;, id)&#34; /&gt;
+        &lt;Label :for=&#34;tpl(&#39;{0}-remember&#39;, id)&#34; class=&#34;text-sm&#34;&gt;
+          {{ labels.remember }}
+        &lt;/Label&gt;
+      &lt;/Group&gt;
+      &lt;Link href=&#34;#/&#34; variant=&#34;default&#34; class=&#34;text-sm&#34;&gt;
+        {{ labels.forgot }}
+      &lt;/Link&gt;
+    &lt;/Group&gt;
+    &lt;Group v-if=&#34;((mode as string) === &#39;signup&#39;)&#34; gap=&#34;2&#34; align=&#34;center&#34; :class=&#34;cn(&#39;w-fit&#39;, &#39;&#39;)&#34;&gt;
+      &lt;Checkbox name=&#34;terms&#34; :id=&#34;tpl(&#39;{0}-terms&#39;, id)&#34; /&gt;
+      &lt;Label :for=&#34;tpl(&#39;{0}-terms&#39;, id)&#34; class=&#34;text-sm&#34;&gt;
+        {{ labels.terms }}
+      &lt;/Label&gt;
+    &lt;/Group&gt;
+    &lt;Button variant=&#34;default&#34; size=&#34;default&#34; type=&#34;button&#34; class=&#34;w-full&#34; data-testid=&#34;submit&#34;&gt;
+      {{ submit }}
+    &lt;/Button&gt;
+  &lt;/Form&gt;
+&lt;/template&gt;
+</code></pre></div><p class="text-sm"><a class="underline" href="https://registry.buildy.tw/vue/components/auth-form.json">Vue registry item (JSON)</a></p></section></div></article></main></div><footer class="border-t border-border"><div class="mx-auto max-w-6xl px-4 py-8 text-sm text-muted-foreground">ui8kit, MIT licence. Static docs generated from markdown and the registry (<a class="underline" href="https://registry.buildy.tw/registry.json">registry.json</a>).</div></footer></body></html>

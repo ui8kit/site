@@ -11,6 +11,7 @@
     "registry:build": "bun run --cwd registry build",
     "registry:validate": "bun run --cwd registry validate",
     "site:generate": "cd generator && go run . --registry ../r --content ../content --out ../dist",
+    "docs:build": "bash scripts/build-docs.sh",
     "site:build": "bun run registry:build && bun run registry:validate && bun run site:generate",
     "site:css": "tailwindcss -i generator/assets/site.src.css -o generator/assets/site.css --minify",
     "site:templ": "cd generator && templ generate"

@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ui.buildy.tw/sitemap.xml

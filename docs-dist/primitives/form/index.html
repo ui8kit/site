@@ -1,0 +1,1348 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Form (primitive) | ui8kit</title><meta name="description" content="Form primitive"><link rel="canonical" href="https://ui.buildy.tw/primitives/form/"><link rel="stylesheet" href="/assets/site.css"><script src="/assets/app.js" defer></script></head><body class="min-h-screen bg-background text-foreground font-sans"><a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:left-2 focus:top-2 focus:bg-background focus:px-4 focus:py-2 focus:z-50">Skip to content</a><header class="border-b border-border"><div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-4 py-4"><a href="/" class="text-lg font-semibold">ui8kit</a><nav aria-label="Main" class="flex items-center gap-4 text-sm"><a href="/docs/" class="hover:underline">Docs</a> <a href="/docs/categories/blocks-marketing/" class="hover:underline">Blocks</a> <a href="/docs/categories/primitives/" class="hover:underline">Primitives</a> <a href="/docs/cli/" class="hover:underline">CLI</a></nav><form id="search" role="search" class="relative w-full sm:w-72" data-index="/search-index.json"><label for="search-input" class="sr-only">Search components and blocks</label> <input id="search-input" type="search" autocomplete="off" placeholder="Search, press /" class="h-10 w-full rounded border border-input bg-card px-4 text-sm"><ul id="search-results" hidden class="absolute left-0 right-0 top-12 z-40 rounded border border-border bg-popover text-popover-foreground shadow-md" aria-live="polite"></ul></form></div></header><div class="mx-auto flex max-w-6xl flex-col gap-8 px-4 py-8 md:flex-row"><nav aria-label="Docs" class="md:w-64 md:shrink-0"><h2 class="mb-2 text-sm font-semibold">Guides</h2><ul class="mb-6 flex flex-col gap-1"><li><a href="/docs/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Overview</a></li><li><a href="/docs/getting-started/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Getting started</a></li><li><a href="/docs/installation/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Installation</a></li><li><a href="/docs/cli/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">CLI</a></li><li><a href="/docs/theming-skins/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Theming and skins</a></li><li><a href="/docs/grid-8px/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">The 8px grid</a></li></ul><h2 class="mb-2 text-sm font-semibold">Categories</h2><ul class="mb-6 flex flex-col gap-1"><li><a href="/docs/categories/primitives/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Primitives</a></li><li><a href="/docs/categories/components/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Components</a></li><li><a href="/docs/categories/blocks-marketing/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: marketing</a></li><li><a href="/docs/categories/blocks-commerce/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: commerce</a></li><li><a href="/docs/categories/blocks-dashboard/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: dashboard</a></li><li><a href="/docs/categories/blocks-content/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: content</a></li><li><a href="/docs/categories/blocks-account/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: account</a></li><li><a href="/docs/categories/blocks-promo/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: promo</a></li><li><a href="/docs/categories/blocks-support/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: support</a></li><li><a href="/docs/categories/blocks-onboarding/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: onboarding</a></li><li><a href="/docs/categories/blocks-general/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: general</a></li></ul></nav><main id="main" class="min-w-0 flex-1"><article><p class="text-sm text-muted-foreground"><a class="underline" href="/docs/categories/primitives/">primitive / primitives</a></p><h1 class="mb-2 text-3xl font-semibold tracking-tight">Form</h1><p class="mb-6 max-w-3xl text-muted-foreground">Form primitive</p><h2 class="mb-2 text-xl font-semibold">Install</h2><div class="mb-6 max-w-xl"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="install-form" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit add form</code><button type="button" hidden data-copy="install-form" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><p class="mb-6 text-sm text-muted-foreground">Pulls in:  <a class="underline" href="/lib/utils/">utils</a></p><h2 class="mb-2 text-xl font-semibold">Code</h2><div data-tabs><section id="panel-svelte" data-panel data-runtime="svelte" data-label="Svelte" aria-label="Svelte" class="mb-8"><h3 class="mb-2 text-lg font-semibold">Svelte</h3><p class="mb-2 text-sm text-muted-foreground">Point the CLI at this runtime once, then add the item:</p><div class="mb-2"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-svelte-init" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit init --yes --framework svelte --dir src --registry-url https://registry.buildy.tw/svelte --strict-cdn</code><button type="button" hidden data-copy="panel-svelte-init" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-svelte-add" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit add form</code><button type="button" hidden data-copy="panel-svelte-add" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/form/data-list.svelte</span><button type="button" hidden data-copy="code-svelte-0" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-svelte-0" class="font-mono">&lt;!-- Code generated by xgen. DO NOT EDIT. --&gt;
+&lt;!-- Source: xgen/specs/ui/controls.json --&gt;
+&lt;!--
+  DataList renders a native datalist.
+--&gt;
+&lt;script lang=&#34;ts&#34; module&gt;
+  import type { Snippet } from &#34;svelte&#34;;
+
+  export type DataListProps = {
+    class?: string;
+    children?: Snippet;
+    [key: string]: unknown;
+  };
+&lt;/script&gt;
+
+&lt;script lang=&#34;ts&#34;&gt;
+  import { cn } from &#34;../../utils&#34;;
+
+  let {
+    class: className,
+    children,
+    ...rest
+  }: DataListProps = $props();
+
+  const cls = $derived(cn(className));
+&lt;/script&gt;
+
+&lt;datalist {...(cls ? { class: cls } : {})} {...rest}&gt;
+  {@render children?.()}
+&lt;/datalist&gt;
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/form/data-option.svelte</span><button type="button" hidden data-copy="code-svelte-1" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-svelte-1" class="font-mono">&lt;!-- Code generated by xgen. DO NOT EDIT. --&gt;
+&lt;!-- Source: xgen/specs/ui/controls.json --&gt;
+&lt;!--
+  DataOption renders an option inside a datalist.
+--&gt;
+&lt;script lang=&#34;ts&#34; module&gt;
+
+  export type DataOptionProps = {
+    class?: string;
+    [key: string]: unknown;
+  };
+&lt;/script&gt;
+
+&lt;script lang=&#34;ts&#34;&gt;
+  let {
+    class: className,
+    ...rest
+  }: DataOptionProps = $props();
+&lt;/script&gt;
+
+&lt;option {...rest}&gt;&lt;/option&gt;
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/form/fieldset.svelte</span><button type="button" hidden data-copy="code-svelte-2" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-svelte-2" class="font-mono">&lt;!-- Code generated by xgen. DO NOT EDIT. --&gt;
+&lt;!-- Source: xgen/specs/ui/controls.json --&gt;
+&lt;!--
+  Fieldset renders a native fieldset.
+--&gt;
+&lt;script lang=&#34;ts&#34; module&gt;
+  import type { Snippet } from &#34;svelte&#34;;
+  import { variants, type VariantKey } from &#34;../../utils&#34;;
+
+  /** Fieldset: the classes of each value of each prop (shadcn/cva style). */
+  export const fieldsetVariants = variants({
+    base: &#34;grid&#34;,
+    variants: {
+      size: {
+        default: &#34;gap-2&#34;,
+        lg: &#34;gap-4&#34;,
+        sm: &#34;gap-2&#34;,
+      },
+      variant: {
+        card: &#34;rounded p-4 inset-ring inset-ring-border&#34;,
+        default: &#34;&#34;,
+        inline: &#34;flex flex-wrap items-start gap-4&#34;,
+      },
+    },
+    defaultVariants: { size: &#34;default&#34;, variant: &#34;default&#34; },
+  });
+
+  export type FieldsetVariant = VariantKey&lt;typeof fieldsetVariants, &#34;variant&#34;&gt;;
+  export type FieldsetSize = VariantKey&lt;typeof fieldsetVariants, &#34;size&#34;&gt;;
+
+  export type FieldsetProps = {
+    variant?: FieldsetVariant;
+    size?: FieldsetSize;
+    disabled?: boolean;
+    class?: string;
+    children?: Snippet;
+    [key: string]: unknown;
+  };
+&lt;/script&gt;
+
+&lt;script lang=&#34;ts&#34;&gt;
+  import { cn } from &#34;../../utils&#34;;
+
+  let {
+    variant,
+    size,
+    disabled,
+    class: className,
+    children,
+    ...rest
+  }: FieldsetProps = $props();
+
+  const cls = $derived(cn(fieldsetVariants({ size, variant }), className));
+&lt;/script&gt;
+
+&lt;fieldset {...(cls ? { class: cls } : {})} disabled={disabled || undefined} {...rest}&gt;
+  {@render children?.()}
+&lt;/fieldset&gt;
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/form/form-description.svelte</span><button type="button" hidden data-copy="code-svelte-3" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-svelte-3" class="font-mono">&lt;!-- Code generated by xgen. DO NOT EDIT. --&gt;
+&lt;!-- Source: xgen/specs/ui/controls.json --&gt;
+&lt;!--
+  FormDescription renders muted helper copy below a control.
+--&gt;
+&lt;script lang=&#34;ts&#34; module&gt;
+  import type { Snippet } from &#34;svelte&#34;;
+  import { variants } from &#34;../../utils&#34;;
+
+  /** FormDescription: the classes of each value of each prop (shadcn/cva style). */
+  export const formDescriptionVariants = variants({
+    base: &#34;text-xs font-semibold text-muted-foreground&#34;,
+    variants: {},
+    defaultVariants: {},
+  });
+
+  export type FormDescriptionProps = {
+    class?: string;
+    children?: Snippet;
+    [key: string]: unknown;
+  };
+&lt;/script&gt;
+
+&lt;script lang=&#34;ts&#34;&gt;
+  import { cn } from &#34;../../utils&#34;;
+
+  let {
+    class: className,
+    children,
+    ...rest
+  }: FormDescriptionProps = $props();
+
+  const cls = $derived(cn(formDescriptionVariants(), className));
+&lt;/script&gt;
+
+&lt;p {...(cls ? { class: cls } : {})} {...rest}&gt;
+  {@render children?.()}
+&lt;/p&gt;
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/form/form-item.svelte</span><button type="button" hidden data-copy="code-svelte-4" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-svelte-4" class="font-mono">&lt;!-- Code generated by xgen. DO NOT EDIT. --&gt;
+&lt;!-- Source: xgen/specs/ui/controls.json --&gt;
+&lt;!--
+  FormItem groups a single field with spacing for label and control.
+--&gt;
+&lt;script lang=&#34;ts&#34; module&gt;
+  import type { Snippet } from &#34;svelte&#34;;
+  import { variants } from &#34;../../utils&#34;;
+
+  /** FormItem: the classes of each value of each prop (shadcn/cva style). */
+  export const formItemVariants = variants({
+    base: &#34;flex flex-col gap-2&#34;,
+    variants: {},
+    defaultVariants: {},
+  });
+
+  export type FormItemProps = {
+    class?: string;
+    children?: Snippet;
+    [key: string]: unknown;
+  };
+&lt;/script&gt;
+
+&lt;script lang=&#34;ts&#34;&gt;
+  import { cn } from &#34;../../utils&#34;;
+
+  let {
+    class: className,
+    children,
+    ...rest
+  }: FormItemProps = $props();
+
+  const cls = $derived(cn(formItemVariants(), className));
+&lt;/script&gt;
+
+&lt;div {...(cls ? { class: cls } : {})} {...rest}&gt;
+  {@render children?.()}
+&lt;/div&gt;
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/form/form-message.svelte</span><button type="button" hidden data-copy="code-svelte-5" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-svelte-5" class="font-mono">&lt;!-- Code generated by xgen. DO NOT EDIT. --&gt;
+&lt;!-- Source: xgen/specs/ui/controls.json --&gt;
+&lt;!--
+  FormMessage renders destructive validation feedback.
+--&gt;
+&lt;script lang=&#34;ts&#34; module&gt;
+  import type { Snippet } from &#34;svelte&#34;;
+  import { variants } from &#34;../../utils&#34;;
+
+  /** FormMessage: the classes of each value of each prop (shadcn/cva style). */
+  export const formMessageVariants = variants({
+    base: &#34;text-xs font-semibold text-destructive&#34;,
+    variants: {},
+    defaultVariants: {},
+  });
+
+  export type FormMessageProps = {
+    class?: string;
+    children?: Snippet;
+    [key: string]: unknown;
+  };
+&lt;/script&gt;
+
+&lt;script lang=&#34;ts&#34;&gt;
+  import { cn } from &#34;../../utils&#34;;
+
+  let {
+    class: className,
+    children,
+    ...rest
+  }: FormMessageProps = $props();
+
+  const cls = $derived(cn(formMessageVariants(), className));
+&lt;/script&gt;
+
+&lt;p {...(cls ? { class: cls } : {})} role=&#34;alert&#34; {...rest}&gt;
+  {@render children?.()}
+&lt;/p&gt;
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/form/form.svelte</span><button type="button" hidden data-copy="code-svelte-6" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-svelte-6" class="font-mono">&lt;!-- Code generated by xgen. DO NOT EDIT. --&gt;
+&lt;!-- Source: xgen/specs/ui/controls.json --&gt;
+&lt;!--
+  Form renders a vertical grid form container.
+--&gt;
+&lt;script lang=&#34;ts&#34; module&gt;
+  import type { Snippet } from &#34;svelte&#34;;
+  import { variants } from &#34;../../utils&#34;;
+
+  /** Form: the classes of each value of each prop (shadcn/cva style). */
+  export const formVariants = variants({
+    base: &#34;grid gap-4&#34;,
+    variants: {},
+    defaultVariants: {},
+  });
+
+  export type FormProps = {
+    novalidate?: boolean;
+    class?: string;
+    children?: Snippet;
+    [key: string]: unknown;
+  };
+&lt;/script&gt;
+
+&lt;script lang=&#34;ts&#34;&gt;
+  import { cn } from &#34;../../utils&#34;;
+
+  let {
+    novalidate: noValidate,
+    class: className,
+    children,
+    ...rest
+  }: FormProps = $props();
+
+  const cls = $derived(cn(formVariants(), className));
+&lt;/script&gt;
+
+&lt;form {...(cls ? { class: cls } : {})} novalidate={noValidate || undefined} {...rest}&gt;
+  {@render children?.()}
+&lt;/form&gt;
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/form/legend.svelte</span><button type="button" hidden data-copy="code-svelte-7" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-svelte-7" class="font-mono">&lt;!-- Code generated by xgen. DO NOT EDIT. --&gt;
+&lt;!-- Source: xgen/specs/ui/controls.json --&gt;
+&lt;!--
+  Legend renders a native legend.
+--&gt;
+&lt;script lang=&#34;ts&#34; module&gt;
+  import type { Snippet } from &#34;svelte&#34;;
+  import { variants, type VariantKey } from &#34;../../utils&#34;;
+
+  /** Legend: the classes of each value of each prop (shadcn/cva style). */
+  export const legendVariants = variants({
+    base: &#34;font-bold&#34;,
+    variants: {
+      size: {
+        sm: &#34;text-xs&#34;,
+        default: &#34;text-sm&#34;,
+        lg: &#34;text-base&#34;,
+      },
+      variant: {
+        default: &#34;&#34;,
+        muted: &#34;text-muted-foreground&#34;,
+      },
+    },
+    defaultVariants: { size: &#34;default&#34;, variant: &#34;default&#34; },
+  });
+
+  export type LegendVariant = VariantKey&lt;typeof legendVariants, &#34;variant&#34;&gt;;
+  export type LegendSize = VariantKey&lt;typeof legendVariants, &#34;size&#34;&gt;;
+
+  export type LegendProps = {
+    variant?: LegendVariant;
+    size?: LegendSize;
+    class?: string;
+    children?: Snippet;
+    [key: string]: unknown;
+  };
+&lt;/script&gt;
+
+&lt;script lang=&#34;ts&#34;&gt;
+  import { cn } from &#34;../../utils&#34;;
+
+  let {
+    variant,
+    size,
+    class: className,
+    children,
+    ...rest
+  }: LegendProps = $props();
+
+  const cls = $derived(cn(legendVariants({ size, variant }), className));
+&lt;/script&gt;
+
+&lt;legend {...(cls ? { class: cls } : {})} {...rest}&gt;
+  {@render children?.()}
+&lt;/legend&gt;
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/form/meter.svelte</span><button type="button" hidden data-copy="code-svelte-8" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-svelte-8" class="font-mono">&lt;!-- Code generated by xgen. DO NOT EDIT. --&gt;
+&lt;!-- Source: xgen/specs/ui/controls.json --&gt;
+&lt;!--
+  Meter renders a native meter.
+--&gt;
+&lt;script lang=&#34;ts&#34; module&gt;
+  import type { Snippet } from &#34;svelte&#34;;
+  import { variants, type VariantKey } from &#34;../../utils&#34;;
+
+  /** Meter: the classes of each value of each prop (shadcn/cva style). */
+  export const meterVariants = variants({
+    base: &#34;w-full appearance-none overflow-hidden bg-muted progress-bar rounded&#34;,
+    variants: {
+      size: {
+        sm: &#34;h-1&#34;,
+        default: &#34;h-2&#34;,
+        lg: &#34;h-3&#34;,
+      },
+      variant: {
+        default: &#34;[--bar:var(--color-primary)]&#34;,
+        muted: &#34;[--bar:var(--color-muted-foreground)]&#34;,
+      },
+    },
+    defaultVariants: { size: &#34;default&#34;, variant: &#34;default&#34; },
+  });
+
+  export type MeterVariant = VariantKey&lt;typeof meterVariants, &#34;variant&#34;&gt;;
+  export type MeterSize = VariantKey&lt;typeof meterVariants, &#34;size&#34;&gt;;
+
+  export type MeterProps = {
+    variant?: MeterVariant;
+    size?: MeterSize;
+    class?: string;
+    children?: Snippet;
+    [key: string]: unknown;
+  };
+&lt;/script&gt;
+
+&lt;script lang=&#34;ts&#34;&gt;
+  import { cn } from &#34;../../utils&#34;;
+
+  let {
+    variant,
+    size,
+    class: className,
+    children,
+    ...rest
+  }: MeterProps = $props();
+
+  const cls = $derived(cn(meterVariants({ size, variant }), className));
+&lt;/script&gt;
+
+&lt;meter {...(cls ? { class: cls } : {})} {...rest}&gt;
+  {@render children?.()}
+&lt;/meter&gt;
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/form/output.svelte</span><button type="button" hidden data-copy="code-svelte-9" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-svelte-9" class="font-mono">&lt;!-- Code generated by xgen. DO NOT EDIT. --&gt;
+&lt;!-- Source: xgen/specs/ui/controls.json --&gt;
+&lt;!--
+  Output renders a native output element.
+--&gt;
+&lt;script lang=&#34;ts&#34; module&gt;
+  import type { Snippet } from &#34;svelte&#34;;
+
+  export type OutputProps = {
+    value?: string;
+    class?: string;
+    children?: Snippet;
+    [key: string]: unknown;
+  };
+&lt;/script&gt;
+
+&lt;script lang=&#34;ts&#34;&gt;
+  import { cn } from &#34;../../utils&#34;;
+
+  let {
+    value,
+    class: className,
+    children,
+    ...rest
+  }: OutputProps = $props();
+
+  const cls = $derived(cn(className));
+&lt;/script&gt;
+
+&lt;output {...(cls ? { class: cls } : {})} {...rest}&gt;{value}{@render children?.()}&lt;/output&gt;
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/form/progress.svelte</span><button type="button" hidden data-copy="code-svelte-10" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-svelte-10" class="font-mono">&lt;!-- Code generated by xgen. DO NOT EDIT. --&gt;
+&lt;!-- Source: xgen/specs/ui/controls.json --&gt;
+&lt;!--
+  Progress renders a native progress element.
+--&gt;
+&lt;script lang=&#34;ts&#34; module&gt;
+  import type { Snippet } from &#34;svelte&#34;;
+  import { variants, type VariantKey } from &#34;../../utils&#34;;
+
+  /** Progress: the classes of each value of each prop (shadcn/cva style). */
+  export const progressVariants = variants({
+    base: &#34;w-full appearance-none overflow-hidden bg-muted progress-bar rounded&#34;,
+    variants: {
+      size: {
+        sm: &#34;h-1&#34;,
+        default: &#34;h-2&#34;,
+        lg: &#34;h-3&#34;,
+      },
+      variant: {
+        default: &#34;[--bar:var(--color-primary)]&#34;,
+        muted: &#34;[--bar:var(--color-muted-foreground)]&#34;,
+      },
+    },
+    defaultVariants: { size: &#34;default&#34;, variant: &#34;default&#34; },
+  });
+
+  export type ProgressVariant = VariantKey&lt;typeof progressVariants, &#34;variant&#34;&gt;;
+  export type ProgressSize = VariantKey&lt;typeof progressVariants, &#34;size&#34;&gt;;
+
+  export type ProgressProps = {
+    variant?: ProgressVariant;
+    size?: ProgressSize;
+    class?: string;
+    children?: Snippet;
+    [key: string]: unknown;
+  };
+&lt;/script&gt;
+
+&lt;script lang=&#34;ts&#34;&gt;
+  import { cn } from &#34;../../utils&#34;;
+
+  let {
+    variant,
+    size,
+    class: className,
+    children,
+    ...rest
+  }: ProgressProps = $props();
+
+  const cls = $derived(cn(progressVariants({ size, variant }), className));
+&lt;/script&gt;
+
+&lt;progress {...(cls ? { class: cls } : {})} {...rest}&gt;
+  {@render children?.()}
+&lt;/progress&gt;
+</code></pre></div><p class="text-sm"><a class="underline" href="https://registry.buildy.tw/svelte/components/ui/form.json">Svelte registry item (JSON)</a></p></section><section id="panel-react" data-panel data-runtime="react" data-label="React" aria-label="React" class="mb-8"><h3 class="mb-2 text-lg font-semibold">React</h3><p class="mb-2 text-sm text-muted-foreground">Point the CLI at this runtime once, then add the item:</p><div class="mb-2"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-react-init" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit init --yes --framework react --dir src --registry-url https://registry.buildy.tw/react --strict-cdn</code><button type="button" hidden data-copy="panel-react-init" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-react-add" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit add form</code><button type="button" hidden data-copy="panel-react-add" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/form/data-list.tsx</span><button type="button" hidden data-copy="code-react-0" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-react-0" class="font-mono">// Code generated by xgen. DO NOT EDIT.
+// Source: xgen/specs/ui/controls.json
+/**
+ * DataList: one part of Fieldset (one file per part, as in the Svelte package).
+ */
+
+import { forwardRef, type ReactNode, type HTMLAttributes } from &#34;react&#34;;
+import { cn } from &#34;../../utils&#34;;
+
+/**
+ * DataList renders a native datalist.
+ */
+export type DataListProps = Omit&lt;HTMLAttributes&lt;HTMLDataListElement&gt;, &#34;className&#34; | &#34;children&#34;&gt; &amp; {
+  className?: string;
+  children?: ReactNode;
+};
+
+export const DataList = forwardRef&lt;HTMLDataListElement, DataListProps&gt;(function DataList(
+  { className, children, ...rest },
+  ref
+) {
+  const cls = cn(className);
+  return (
+    &lt;datalist ref={ref} className={cls || undefined} {...rest}&gt;
+      {children}
+    &lt;/datalist&gt;
+  );
+});
+DataList.displayName = &#34;DataList&#34;;
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/form/data-option.tsx</span><button type="button" hidden data-copy="code-react-1" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-react-1" class="font-mono">// Code generated by xgen. DO NOT EDIT.
+// Source: xgen/specs/ui/controls.json
+/**
+ * DataOption: one part of Fieldset (one file per part, as in the Svelte package).
+ */
+
+import { forwardRef, type ReactNode, type OptionHTMLAttributes } from &#34;react&#34;;
+
+/**
+ * DataOption renders an option inside a datalist.
+ */
+export type DataOptionProps = Omit&lt;
+  OptionHTMLAttributes&lt;HTMLOptionElement&gt;,
+  | &#34;className&#34; | &#34;children&#34;
+&gt; &amp; {
+  className?: string;
+};
+
+export const DataOption = forwardRef&lt;HTMLOptionElement, DataOptionProps&gt;(function DataOption(
+  { className, ...rest },
+  ref
+) {
+  return (
+    &lt;option ref={ref} {...rest} /&gt;
+  );
+});
+DataOption.displayName = &#34;DataOption&#34;;
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/form/fieldset.tsx</span><button type="button" hidden data-copy="code-react-2" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-react-2" class="font-mono">// Code generated by xgen. DO NOT EDIT.
+// Source: xgen/specs/ui/controls.json
+/**
+ * Form controls covers fieldset, legend, datalist, output, meter, and progress.
+ */
+
+import { forwardRef, type ReactNode, type FieldsetHTMLAttributes } from &#34;react&#34;;
+import { cn, variants, type VariantKey } from &#34;../../utils&#34;;
+
+/** Fieldset: the classes of each value of each prop (shadcn/cva style). */
+export const fieldsetVariants = variants({
+  base: &#34;grid&#34;,
+  variants: {
+    size: {
+      default: &#34;gap-2&#34;,
+      lg: &#34;gap-4&#34;,
+      sm: &#34;gap-2&#34;,
+    },
+    variant: {
+      card: &#34;rounded p-4 inset-ring inset-ring-border&#34;,
+      default: &#34;&#34;,
+      inline: &#34;flex flex-wrap items-start gap-4&#34;,
+    },
+  },
+  defaultVariants: { size: &#34;default&#34;, variant: &#34;default&#34; },
+});
+
+export type FieldsetVariant = VariantKey&lt;typeof fieldsetVariants, &#34;variant&#34;&gt;;
+export type FieldsetSize = VariantKey&lt;typeof fieldsetVariants, &#34;size&#34;&gt;;
+
+/**
+ * Fieldset renders a native fieldset.
+ */
+export type FieldsetProps = Omit&lt;
+  FieldsetHTMLAttributes&lt;HTMLFieldSetElement&gt;,
+  | &#34;className&#34; | &#34;children&#34; | &#34;variant&#34; | &#34;size&#34; | &#34;disabled&#34;
+&gt; &amp; {
+  variant?: FieldsetVariant;
+  size?: FieldsetSize;
+  disabled?: boolean;
+  className?: string;
+  children?: ReactNode;
+};
+
+export const Fieldset = forwardRef&lt;HTMLFieldSetElement, FieldsetProps&gt;(function Fieldset(
+  { variant, size, disabled, className, children, ...rest },
+  ref
+) {
+  const cls = cn(fieldsetVariants({ size, variant }), className);
+  return (
+    &lt;fieldset ref={ref} className={cls || undefined} disabled={disabled || undefined} {...rest}&gt;
+      {children}
+    &lt;/fieldset&gt;
+  );
+});
+Fieldset.displayName = &#34;Fieldset&#34;;
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/form/form-description.tsx</span><button type="button" hidden data-copy="code-react-3" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-react-3" class="font-mono">// Code generated by xgen. DO NOT EDIT.
+// Source: xgen/specs/ui/controls.json
+/**
+ * FormDescription: one part of Form (one file per part, as in the Svelte package).
+ */
+
+import { forwardRef, type ReactNode, type HTMLAttributes } from &#34;react&#34;;
+import { cn, variants } from &#34;../../utils&#34;;
+
+/** FormDescription: the classes of each value of each prop (shadcn/cva style). */
+export const formDescriptionVariants = variants({
+  base: &#34;text-xs font-semibold text-muted-foreground&#34;,
+  variants: {},
+  defaultVariants: {},
+});
+
+/**
+ * FormDescription renders muted helper copy below a control.
+ */
+export type FormDescriptionProps = Omit&lt;
+  HTMLAttributes&lt;HTMLParagraphElement&gt;,
+  | &#34;className&#34; | &#34;children&#34;
+&gt; &amp; {
+  className?: string;
+  children?: ReactNode;
+};
+
+export const FormDescription = forwardRef&lt;HTMLParagraphElement, FormDescriptionProps&gt;(function FormDescription(
+  { className, children, ...rest },
+  ref
+) {
+  const cls = cn(formDescriptionVariants(), className);
+  return (
+    &lt;p ref={ref} className={cls || undefined} {...rest}&gt;
+      {children}
+    &lt;/p&gt;
+  );
+});
+FormDescription.displayName = &#34;FormDescription&#34;;
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/form/form-item.tsx</span><button type="button" hidden data-copy="code-react-4" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-react-4" class="font-mono">// Code generated by xgen. DO NOT EDIT.
+// Source: xgen/specs/ui/controls.json
+/**
+ * FormItem: one part of Form (one file per part, as in the Svelte package).
+ */
+
+import { forwardRef, type ReactNode, type HTMLAttributes } from &#34;react&#34;;
+import { cn, variants } from &#34;../../utils&#34;;
+
+/** FormItem: the classes of each value of each prop (shadcn/cva style). */
+export const formItemVariants = variants({
+  base: &#34;flex flex-col gap-2&#34;,
+  variants: {},
+  defaultVariants: {},
+});
+
+/**
+ * FormItem groups a single field with spacing for label and control.
+ */
+export type FormItemProps = Omit&lt;HTMLAttributes&lt;HTMLDivElement&gt;, &#34;className&#34; | &#34;children&#34;&gt; &amp; {
+  className?: string;
+  children?: ReactNode;
+};
+
+export const FormItem = forwardRef&lt;HTMLDivElement, FormItemProps&gt;(function FormItem(
+  { className, children, ...rest },
+  ref
+) {
+  const cls = cn(formItemVariants(), className);
+  return (
+    &lt;div ref={ref} className={cls || undefined} {...rest}&gt;
+      {children}
+    &lt;/div&gt;
+  );
+});
+FormItem.displayName = &#34;FormItem&#34;;
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/form/form-message.tsx</span><button type="button" hidden data-copy="code-react-5" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-react-5" class="font-mono">// Code generated by xgen. DO NOT EDIT.
+// Source: xgen/specs/ui/controls.json
+/**
+ * FormMessage: one part of Form (one file per part, as in the Svelte package).
+ */
+
+import { forwardRef, type ReactNode, type HTMLAttributes } from &#34;react&#34;;
+import { cn, variants } from &#34;../../utils&#34;;
+
+/** FormMessage: the classes of each value of each prop (shadcn/cva style). */
+export const formMessageVariants = variants({
+  base: &#34;text-xs font-semibold text-destructive&#34;,
+  variants: {},
+  defaultVariants: {},
+});
+
+/**
+ * FormMessage renders destructive validation feedback.
+ */
+export type FormMessageProps = Omit&lt;
+  HTMLAttributes&lt;HTMLParagraphElement&gt;,
+  | &#34;className&#34; | &#34;children&#34;
+&gt; &amp; {
+  className?: string;
+  children?: ReactNode;
+};
+
+export const FormMessage = forwardRef&lt;HTMLParagraphElement, FormMessageProps&gt;(function FormMessage(
+  { className, children, ...rest },
+  ref
+) {
+  const cls = cn(formMessageVariants(), className);
+  return (
+    &lt;p ref={ref} className={cls || undefined} role=&#34;alert&#34; {...rest}&gt;
+      {children}
+    &lt;/p&gt;
+  );
+});
+FormMessage.displayName = &#34;FormMessage&#34;;
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/form/form.tsx</span><button type="button" hidden data-copy="code-react-6" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-react-6" class="font-mono">// Code generated by xgen. DO NOT EDIT.
+// Source: xgen/specs/ui/controls.json
+/**
+ * Form primitives: form wrapper, field item, description, and validation message.
+ * Composes with Label, Input, and other controls.
+ */
+
+import { forwardRef, type ReactNode, type FormHTMLAttributes } from &#34;react&#34;;
+import { cn, variants } from &#34;../../utils&#34;;
+
+/** Form: the classes of each value of each prop (shadcn/cva style). */
+export const formVariants = variants({
+  base: &#34;grid gap-4&#34;,
+  variants: {},
+  defaultVariants: {},
+});
+
+/**
+ * Form renders a vertical grid form container.
+ */
+export type FormProps = Omit&lt;
+  FormHTMLAttributes&lt;HTMLFormElement&gt;,
+  | &#34;className&#34; | &#34;children&#34; | &#34;noValidate&#34;
+&gt; &amp; {
+  noValidate?: boolean;
+  className?: string;
+  children?: ReactNode;
+};
+
+export const Form = forwardRef&lt;HTMLFormElement, FormProps&gt;(function Form(
+  { noValidate, className, children, ...rest },
+  ref
+) {
+  const cls = cn(formVariants(), className);
+  return (
+    &lt;form ref={ref} className={cls || undefined} noValidate={noValidate || undefined} {...rest}&gt;
+      {children}
+    &lt;/form&gt;
+  );
+});
+Form.displayName = &#34;Form&#34;;
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/form/legend.tsx</span><button type="button" hidden data-copy="code-react-7" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-react-7" class="font-mono">// Code generated by xgen. DO NOT EDIT.
+// Source: xgen/specs/ui/controls.json
+/**
+ * Legend: one part of Fieldset (one file per part, as in the Svelte package).
+ */
+
+import { forwardRef, type ReactNode, type HTMLAttributes } from &#34;react&#34;;
+import { cn, variants, type VariantKey } from &#34;../../utils&#34;;
+
+/** Legend: the classes of each value of each prop (shadcn/cva style). */
+export const legendVariants = variants({
+  base: &#34;font-bold&#34;,
+  variants: {
+    size: {
+      sm: &#34;text-xs&#34;,
+      default: &#34;text-sm&#34;,
+      lg: &#34;text-base&#34;,
+    },
+    variant: {
+      default: &#34;&#34;,
+      muted: &#34;text-muted-foreground&#34;,
+    },
+  },
+  defaultVariants: { size: &#34;default&#34;, variant: &#34;default&#34; },
+});
+
+export type LegendVariant = VariantKey&lt;typeof legendVariants, &#34;variant&#34;&gt;;
+export type LegendSize = VariantKey&lt;typeof legendVariants, &#34;size&#34;&gt;;
+
+/**
+ * Legend renders a native legend.
+ */
+export type LegendProps = Omit&lt;
+  HTMLAttributes&lt;HTMLLegendElement&gt;,
+  | &#34;className&#34; | &#34;children&#34; | &#34;variant&#34; | &#34;size&#34;
+&gt; &amp; {
+  variant?: LegendVariant;
+  size?: LegendSize;
+  className?: string;
+  children?: ReactNode;
+};
+
+export const Legend = forwardRef&lt;HTMLLegendElement, LegendProps&gt;(function Legend(
+  { variant, size, className, children, ...rest },
+  ref
+) {
+  const cls = cn(legendVariants({ size, variant }), className);
+  return (
+    &lt;legend ref={ref} className={cls || undefined} {...rest}&gt;
+      {children}
+    &lt;/legend&gt;
+  );
+});
+Legend.displayName = &#34;Legend&#34;;
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/form/meter.tsx</span><button type="button" hidden data-copy="code-react-8" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-react-8" class="font-mono">// Code generated by xgen. DO NOT EDIT.
+// Source: xgen/specs/ui/controls.json
+/**
+ * Meter: one part of Fieldset (one file per part, as in the Svelte package).
+ */
+
+import { forwardRef, type ReactNode, type MeterHTMLAttributes } from &#34;react&#34;;
+import { cn, variants, type VariantKey } from &#34;../../utils&#34;;
+
+/** Meter: the classes of each value of each prop (shadcn/cva style). */
+export const meterVariants = variants({
+  base: &#34;w-full appearance-none overflow-hidden bg-muted progress-bar rounded&#34;,
+  variants: {
+    size: {
+      sm: &#34;h-1&#34;,
+      default: &#34;h-2&#34;,
+      lg: &#34;h-3&#34;,
+    },
+    variant: {
+      default: &#34;[--bar:var(--color-primary)]&#34;,
+      muted: &#34;[--bar:var(--color-muted-foreground)]&#34;,
+    },
+  },
+  defaultVariants: { size: &#34;default&#34;, variant: &#34;default&#34; },
+});
+
+export type MeterVariant = VariantKey&lt;typeof meterVariants, &#34;variant&#34;&gt;;
+export type MeterSize = VariantKey&lt;typeof meterVariants, &#34;size&#34;&gt;;
+
+/**
+ * Meter renders a native meter.
+ */
+export type MeterProps = Omit&lt;
+  MeterHTMLAttributes&lt;HTMLMeterElement&gt;,
+  | &#34;className&#34; | &#34;children&#34; | &#34;variant&#34; | &#34;size&#34;
+&gt; &amp; {
+  variant?: MeterVariant;
+  size?: MeterSize;
+  className?: string;
+  children?: ReactNode;
+};
+
+export const Meter = forwardRef&lt;HTMLMeterElement, MeterProps&gt;(function Meter(
+  { variant, size, className, children, ...rest },
+  ref
+) {
+  const cls = cn(meterVariants({ size, variant }), className);
+  return (
+    &lt;meter ref={ref} className={cls || undefined} {...rest}&gt;
+      {children}
+    &lt;/meter&gt;
+  );
+});
+Meter.displayName = &#34;Meter&#34;;
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/form/output.tsx</span><button type="button" hidden data-copy="code-react-9" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-react-9" class="font-mono">// Code generated by xgen. DO NOT EDIT.
+// Source: xgen/specs/ui/controls.json
+/**
+ * Output: one part of Fieldset (one file per part, as in the Svelte package).
+ */
+
+import { forwardRef, type ReactNode, type OutputHTMLAttributes } from &#34;react&#34;;
+import { cn } from &#34;../../utils&#34;;
+
+/**
+ * Output renders a native output element.
+ */
+export type OutputProps = Omit&lt;
+  OutputHTMLAttributes&lt;HTMLOutputElement&gt;,
+  | &#34;className&#34; | &#34;children&#34; | &#34;value&#34;
+&gt; &amp; {
+  value?: string;
+  className?: string;
+  children?: ReactNode;
+};
+
+export const Output = forwardRef&lt;HTMLOutputElement, OutputProps&gt;(function Output(
+  { value, className, children, ...rest },
+  ref
+) {
+  const cls = cn(className);
+  return (
+    &lt;output ref={ref} className={cls || undefined} {...rest}&gt;
+      {value}
+      {children}
+    &lt;/output&gt;
+  );
+});
+Output.displayName = &#34;Output&#34;;
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/form/progress.tsx</span><button type="button" hidden data-copy="code-react-10" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-react-10" class="font-mono">// Code generated by xgen. DO NOT EDIT.
+// Source: xgen/specs/ui/controls.json
+/**
+ * Progress: one part of Fieldset (one file per part, as in the Svelte package).
+ */
+
+import { forwardRef, type ReactNode, type ProgressHTMLAttributes } from &#34;react&#34;;
+import { cn, variants, type VariantKey } from &#34;../../utils&#34;;
+
+/** Progress: the classes of each value of each prop (shadcn/cva style). */
+export const progressVariants = variants({
+  base: &#34;w-full appearance-none overflow-hidden bg-muted progress-bar rounded&#34;,
+  variants: {
+    size: {
+      sm: &#34;h-1&#34;,
+      default: &#34;h-2&#34;,
+      lg: &#34;h-3&#34;,
+    },
+    variant: {
+      default: &#34;[--bar:var(--color-primary)]&#34;,
+      muted: &#34;[--bar:var(--color-muted-foreground)]&#34;,
+    },
+  },
+  defaultVariants: { size: &#34;default&#34;, variant: &#34;default&#34; },
+});
+
+export type ProgressVariant = VariantKey&lt;typeof progressVariants, &#34;variant&#34;&gt;;
+export type ProgressSize = VariantKey&lt;typeof progressVariants, &#34;size&#34;&gt;;
+
+/**
+ * Progress renders a native progress element.
+ */
+export type ProgressProps = Omit&lt;
+  ProgressHTMLAttributes&lt;HTMLProgressElement&gt;,
+  | &#34;className&#34; | &#34;children&#34; | &#34;variant&#34; | &#34;size&#34;
+&gt; &amp; {
+  variant?: ProgressVariant;
+  size?: ProgressSize;
+  className?: string;
+  children?: ReactNode;
+};
+
+export const Progress = forwardRef&lt;HTMLProgressElement, ProgressProps&gt;(function Progress(
+  { variant, size, className, children, ...rest },
+  ref
+) {
+  const cls = cn(progressVariants({ size, variant }), className);
+  return (
+    &lt;progress ref={ref} className={cls || undefined} {...rest}&gt;
+      {children}
+    &lt;/progress&gt;
+  );
+});
+Progress.displayName = &#34;Progress&#34;;
+</code></pre></div><p class="text-sm"><a class="underline" href="https://registry.buildy.tw/react/components/ui/form.json">React registry item (JSON)</a></p></section><section id="panel-vue" data-panel data-runtime="vue" data-label="Vue" aria-label="Vue" class="mb-8"><h3 class="mb-2 text-lg font-semibold">Vue</h3><p class="mb-2 text-sm text-muted-foreground">Point the CLI at this runtime once, then add the item:</p><div class="mb-2"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-vue-init" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit init --yes --framework vue --dir src --registry-url https://registry.buildy.tw/vue --strict-cdn</code><button type="button" hidden data-copy="panel-vue-init" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-vue-add" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit add form</code><button type="button" hidden data-copy="panel-vue-add" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/form/data-list.vue</span><button type="button" hidden data-copy="code-vue-0" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-vue-0" class="font-mono">&lt;!-- Code generated by xgen. DO NOT EDIT. --&gt;
+&lt;!-- Source: xgen/specs/ui/controls.json --&gt;
+&lt;!--
+  DataList renders a native datalist.
+--&gt;
+&lt;script lang=&#34;ts&#34;&gt;
+export type DataListProps = {
+  class?: string;
+};
+&lt;/script&gt;
+
+&lt;script setup lang=&#34;ts&#34;&gt;
+import { computed, useAttrs } from &#34;vue&#34;;
+import { cn } from &#34;../../utils&#34;;
+
+defineOptions({ inheritAttrs: false });
+defineSlots&lt;{ default?(): unknown }&gt;();
+const { class: className } = defineProps&lt;DataListProps&gt;();
+const attrs = useAttrs();
+const cls = computed(() =&gt; cn(className));
+&lt;/script&gt;
+
+&lt;template&gt;
+  &lt;datalist :class=&#34;cls || undefined&#34; v-bind=&#34;attrs&#34;&gt;
+    &lt;slot /&gt;
+  &lt;/datalist&gt;
+&lt;/template&gt;
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/form/data-option.vue</span><button type="button" hidden data-copy="code-vue-1" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-vue-1" class="font-mono">&lt;!-- Code generated by xgen. DO NOT EDIT. --&gt;
+&lt;!-- Source: xgen/specs/ui/controls.json --&gt;
+&lt;!--
+  DataOption renders an option inside a datalist.
+--&gt;
+&lt;script lang=&#34;ts&#34;&gt;
+export type DataOptionProps = {
+  class?: string;
+};
+&lt;/script&gt;
+
+&lt;script setup lang=&#34;ts&#34;&gt;
+import { useAttrs } from &#34;vue&#34;;
+
+defineOptions({ inheritAttrs: false });
+const { class: className } = defineProps&lt;DataOptionProps&gt;();
+const attrs = useAttrs();
+&lt;/script&gt;
+
+&lt;template&gt;
+  &lt;option v-bind=&#34;attrs&#34;&gt;&lt;/option&gt;
+&lt;/template&gt;
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/form/fieldset.vue</span><button type="button" hidden data-copy="code-vue-2" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-vue-2" class="font-mono">&lt;!-- Code generated by xgen. DO NOT EDIT. --&gt;
+&lt;!-- Source: xgen/specs/ui/controls.json --&gt;
+&lt;!--
+  Fieldset renders a native fieldset.
+--&gt;
+&lt;script lang=&#34;ts&#34;&gt;
+import { variants, type VariantKey } from &#34;../../utils&#34;;
+
+/** Fieldset: the classes of each value of each prop (shadcn/cva style). */
+export const fieldsetVariants = variants({
+  base: &#34;grid&#34;,
+  variants: {
+    size: {
+      default: &#34;gap-2&#34;,
+      lg: &#34;gap-4&#34;,
+      sm: &#34;gap-2&#34;,
+    },
+    variant: {
+      card: &#34;rounded p-4 inset-ring inset-ring-border&#34;,
+      default: &#34;&#34;,
+      inline: &#34;flex flex-wrap items-start gap-4&#34;,
+    },
+  },
+  defaultVariants: { size: &#34;default&#34;, variant: &#34;default&#34; },
+});
+
+export type FieldsetVariant = VariantKey&lt;typeof fieldsetVariants, &#34;variant&#34;&gt;;
+export type FieldsetSize = VariantKey&lt;typeof fieldsetVariants, &#34;size&#34;&gt;;
+
+export type FieldsetProps = {
+  variant?: FieldsetVariant;
+  size?: FieldsetSize;
+  disabled?: boolean;
+  class?: string;
+};
+&lt;/script&gt;
+
+&lt;script setup lang=&#34;ts&#34;&gt;
+import { computed, useAttrs } from &#34;vue&#34;;
+import { cn } from &#34;../../utils&#34;;
+
+defineOptions({ inheritAttrs: false });
+defineSlots&lt;{ default?(): unknown }&gt;();
+const { variant, size, disabled, class: className } = defineProps&lt;FieldsetProps&gt;();
+const attrs = useAttrs();
+const cls = computed(() =&gt; cn(fieldsetVariants({ size, variant }), className));
+&lt;/script&gt;
+
+&lt;template&gt;
+  &lt;fieldset :class=&#34;cls || undefined&#34; :disabled=&#34;disabled || undefined&#34; v-bind=&#34;attrs&#34;&gt;
+    &lt;slot /&gt;
+  &lt;/fieldset&gt;
+&lt;/template&gt;
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/form/form-description.vue</span><button type="button" hidden data-copy="code-vue-3" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-vue-3" class="font-mono">&lt;!-- Code generated by xgen. DO NOT EDIT. --&gt;
+&lt;!-- Source: xgen/specs/ui/controls.json --&gt;
+&lt;!--
+  FormDescription renders muted helper copy below a control.
+--&gt;
+&lt;script lang=&#34;ts&#34;&gt;
+import { variants } from &#34;../../utils&#34;;
+
+/** FormDescription: the classes of each value of each prop (shadcn/cva style). */
+export const formDescriptionVariants = variants({
+  base: &#34;text-xs font-semibold text-muted-foreground&#34;,
+  variants: {},
+  defaultVariants: {},
+});
+
+export type FormDescriptionProps = {
+  class?: string;
+};
+&lt;/script&gt;
+
+&lt;script setup lang=&#34;ts&#34;&gt;
+import { computed, useAttrs } from &#34;vue&#34;;
+import { cn } from &#34;../../utils&#34;;
+
+defineOptions({ inheritAttrs: false });
+defineSlots&lt;{ default?(): unknown }&gt;();
+const { class: className } = defineProps&lt;FormDescriptionProps&gt;();
+const attrs = useAttrs();
+const cls = computed(() =&gt; cn(formDescriptionVariants(), className));
+&lt;/script&gt;
+
+&lt;template&gt;
+  &lt;p :class=&#34;cls || undefined&#34; v-bind=&#34;attrs&#34;&gt;
+    &lt;slot /&gt;
+  &lt;/p&gt;
+&lt;/template&gt;
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/form/form-item.vue</span><button type="button" hidden data-copy="code-vue-4" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-vue-4" class="font-mono">&lt;!-- Code generated by xgen. DO NOT EDIT. --&gt;
+&lt;!-- Source: xgen/specs/ui/controls.json --&gt;
+&lt;!--
+  FormItem groups a single field with spacing for label and control.
+--&gt;
+&lt;script lang=&#34;ts&#34;&gt;
+import { variants } from &#34;../../utils&#34;;
+
+/** FormItem: the classes of each value of each prop (shadcn/cva style). */
+export const formItemVariants = variants({
+  base: &#34;flex flex-col gap-2&#34;,
+  variants: {},
+  defaultVariants: {},
+});
+
+export type FormItemProps = {
+  class?: string;
+};
+&lt;/script&gt;
+
+&lt;script setup lang=&#34;ts&#34;&gt;
+import { computed, useAttrs } from &#34;vue&#34;;
+import { cn } from &#34;../../utils&#34;;
+
+defineOptions({ inheritAttrs: false });
+defineSlots&lt;{ default?(): unknown }&gt;();
+const { class: className } = defineProps&lt;FormItemProps&gt;();
+const attrs = useAttrs();
+const cls = computed(() =&gt; cn(formItemVariants(), className));
+&lt;/script&gt;
+
+&lt;template&gt;
+  &lt;div :class=&#34;cls || undefined&#34; v-bind=&#34;attrs&#34;&gt;
+    &lt;slot /&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/form/form-message.vue</span><button type="button" hidden data-copy="code-vue-5" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-vue-5" class="font-mono">&lt;!-- Code generated by xgen. DO NOT EDIT. --&gt;
+&lt;!-- Source: xgen/specs/ui/controls.json --&gt;
+&lt;!--
+  FormMessage renders destructive validation feedback.
+--&gt;
+&lt;script lang=&#34;ts&#34;&gt;
+import { variants } from &#34;../../utils&#34;;
+
+/** FormMessage: the classes of each value of each prop (shadcn/cva style). */
+export const formMessageVariants = variants({
+  base: &#34;text-xs font-semibold text-destructive&#34;,
+  variants: {},
+  defaultVariants: {},
+});
+
+export type FormMessageProps = {
+  class?: string;
+};
+&lt;/script&gt;
+
+&lt;script setup lang=&#34;ts&#34;&gt;
+import { computed, useAttrs } from &#34;vue&#34;;
+import { cn } from &#34;../../utils&#34;;
+
+defineOptions({ inheritAttrs: false });
+defineSlots&lt;{ default?(): unknown }&gt;();
+const { class: className } = defineProps&lt;FormMessageProps&gt;();
+const attrs = useAttrs();
+const cls = computed(() =&gt; cn(formMessageVariants(), className));
+&lt;/script&gt;
+
+&lt;template&gt;
+  &lt;p :class=&#34;cls || undefined&#34; role=&#34;alert&#34; v-bind=&#34;attrs&#34;&gt;
+    &lt;slot /&gt;
+  &lt;/p&gt;
+&lt;/template&gt;
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/form/form.vue</span><button type="button" hidden data-copy="code-vue-6" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-vue-6" class="font-mono">&lt;!-- Code generated by xgen. DO NOT EDIT. --&gt;
+&lt;!-- Source: xgen/specs/ui/controls.json --&gt;
+&lt;!--
+  Form renders a vertical grid form container.
+--&gt;
+&lt;script lang=&#34;ts&#34;&gt;
+import { variants } from &#34;../../utils&#34;;
+
+/** Form: the classes of each value of each prop (shadcn/cva style). */
+export const formVariants = variants({
+  base: &#34;grid gap-4&#34;,
+  variants: {},
+  defaultVariants: {},
+});
+
+export type FormProps = {
+  novalidate?: boolean;
+  class?: string;
+};
+&lt;/script&gt;
+
+&lt;script setup lang=&#34;ts&#34;&gt;
+import { computed, useAttrs } from &#34;vue&#34;;
+import { cn } from &#34;../../utils&#34;;
+
+defineOptions({ inheritAttrs: false });
+defineSlots&lt;{ default?(): unknown }&gt;();
+const { novalidate: noValidate, class: className } = defineProps&lt;FormProps&gt;();
+const attrs = useAttrs();
+const cls = computed(() =&gt; cn(formVariants(), className));
+&lt;/script&gt;
+
+&lt;template&gt;
+  &lt;form :class=&#34;cls || undefined&#34; :novalidate=&#34;noValidate || undefined&#34; v-bind=&#34;attrs&#34;&gt;
+    &lt;slot /&gt;
+  &lt;/form&gt;
+&lt;/template&gt;
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/form/legend.vue</span><button type="button" hidden data-copy="code-vue-7" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-vue-7" class="font-mono">&lt;!-- Code generated by xgen. DO NOT EDIT. --&gt;
+&lt;!-- Source: xgen/specs/ui/controls.json --&gt;
+&lt;!--
+  Legend renders a native legend.
+--&gt;
+&lt;script lang=&#34;ts&#34;&gt;
+import { variants, type VariantKey } from &#34;../../utils&#34;;
+
+/** Legend: the classes of each value of each prop (shadcn/cva style). */
+export const legendVariants = variants({
+  base: &#34;font-bold&#34;,
+  variants: {
+    size: {
+      sm: &#34;text-xs&#34;,
+      default: &#34;text-sm&#34;,
+      lg: &#34;text-base&#34;,
+    },
+    variant: {
+      default: &#34;&#34;,
+      muted: &#34;text-muted-foreground&#34;,
+    },
+  },
+  defaultVariants: { size: &#34;default&#34;, variant: &#34;default&#34; },
+});
+
+export type LegendVariant = VariantKey&lt;typeof legendVariants, &#34;variant&#34;&gt;;
+export type LegendSize = VariantKey&lt;typeof legendVariants, &#34;size&#34;&gt;;
+
+export type LegendProps = {
+  variant?: LegendVariant;
+  size?: LegendSize;
+  class?: string;
+};
+&lt;/script&gt;
+
+&lt;script setup lang=&#34;ts&#34;&gt;
+import { computed, useAttrs } from &#34;vue&#34;;
+import { cn } from &#34;../../utils&#34;;
+
+defineOptions({ inheritAttrs: false });
+defineSlots&lt;{ default?(): unknown }&gt;();
+const { variant, size, class: className } = defineProps&lt;LegendProps&gt;();
+const attrs = useAttrs();
+const cls = computed(() =&gt; cn(legendVariants({ size, variant }), className));
+&lt;/script&gt;
+
+&lt;template&gt;
+  &lt;legend :class=&#34;cls || undefined&#34; v-bind=&#34;attrs&#34;&gt;
+    &lt;slot /&gt;
+  &lt;/legend&gt;
+&lt;/template&gt;
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/form/meter.vue</span><button type="button" hidden data-copy="code-vue-8" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-vue-8" class="font-mono">&lt;!-- Code generated by xgen. DO NOT EDIT. --&gt;
+&lt;!-- Source: xgen/specs/ui/controls.json --&gt;
+&lt;!--
+  Meter renders a native meter.
+--&gt;
+&lt;script lang=&#34;ts&#34;&gt;
+import { variants, type VariantKey } from &#34;../../utils&#34;;
+
+/** Meter: the classes of each value of each prop (shadcn/cva style). */
+export const meterVariants = variants({
+  base: &#34;w-full appearance-none overflow-hidden bg-muted progress-bar rounded&#34;,
+  variants: {
+    size: {
+      sm: &#34;h-1&#34;,
+      default: &#34;h-2&#34;,
+      lg: &#34;h-3&#34;,
+    },
+    variant: {
+      default: &#34;[--bar:var(--color-primary)]&#34;,
+      muted: &#34;[--bar:var(--color-muted-foreground)]&#34;,
+    },
+  },
+  defaultVariants: { size: &#34;default&#34;, variant: &#34;default&#34; },
+});
+
+export type MeterVariant = VariantKey&lt;typeof meterVariants, &#34;variant&#34;&gt;;
+export type MeterSize = VariantKey&lt;typeof meterVariants, &#34;size&#34;&gt;;
+
+export type MeterProps = {
+  variant?: MeterVariant;
+  size?: MeterSize;
+  class?: string;
+};
+&lt;/script&gt;
+
+&lt;script setup lang=&#34;ts&#34;&gt;
+import { computed, useAttrs } from &#34;vue&#34;;
+import { cn } from &#34;../../utils&#34;;
+
+defineOptions({ inheritAttrs: false });
+defineSlots&lt;{ default?(): unknown }&gt;();
+const { variant, size, class: className } = defineProps&lt;MeterProps&gt;();
+const attrs = useAttrs();
+const cls = computed(() =&gt; cn(meterVariants({ size, variant }), className));
+&lt;/script&gt;
+
+&lt;template&gt;
+  &lt;meter :class=&#34;cls || undefined&#34; v-bind=&#34;attrs&#34;&gt;
+    &lt;slot /&gt;
+  &lt;/meter&gt;
+&lt;/template&gt;
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/form/output.vue</span><button type="button" hidden data-copy="code-vue-9" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-vue-9" class="font-mono">&lt;!-- Code generated by xgen. DO NOT EDIT. --&gt;
+&lt;!-- Source: xgen/specs/ui/controls.json --&gt;
+&lt;!--
+  Output renders a native output element.
+--&gt;
+&lt;script lang=&#34;ts&#34;&gt;
+export type OutputProps = {
+  value?: string;
+  class?: string;
+};
+&lt;/script&gt;
+
+&lt;script setup lang=&#34;ts&#34;&gt;
+import { computed, useAttrs } from &#34;vue&#34;;
+import { cn } from &#34;../../utils&#34;;
+
+defineOptions({ inheritAttrs: false });
+defineSlots&lt;{ default?(): unknown }&gt;();
+const { value, class: className } = defineProps&lt;OutputProps&gt;();
+const attrs = useAttrs();
+const cls = computed(() =&gt; cn(className));
+&lt;/script&gt;
+
+&lt;template&gt;
+  &lt;output :class=&#34;cls || undefined&#34; v-bind=&#34;attrs&#34;&gt;{{ value }}&lt;slot /&gt;&lt;/output&gt;
+&lt;/template&gt;
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/form/progress.vue</span><button type="button" hidden data-copy="code-vue-10" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-vue-10" class="font-mono">&lt;!-- Code generated by xgen. DO NOT EDIT. --&gt;
+&lt;!-- Source: xgen/specs/ui/controls.json --&gt;
+&lt;!--
+  Progress renders a native progress element.
+--&gt;
+&lt;script lang=&#34;ts&#34;&gt;
+import { variants, type VariantKey } from &#34;../../utils&#34;;
+
+/** Progress: the classes of each value of each prop (shadcn/cva style). */
+export const progressVariants = variants({
+  base: &#34;w-full appearance-none overflow-hidden bg-muted progress-bar rounded&#34;,
+  variants: {
+    size: {
+      sm: &#34;h-1&#34;,
+      default: &#34;h-2&#34;,
+      lg: &#34;h-3&#34;,
+    },
+    variant: {
+      default: &#34;[--bar:var(--color-primary)]&#34;,
+      muted: &#34;[--bar:var(--color-muted-foreground)]&#34;,
+    },
+  },
+  defaultVariants: { size: &#34;default&#34;, variant: &#34;default&#34; },
+});
+
+export type ProgressVariant = VariantKey&lt;typeof progressVariants, &#34;variant&#34;&gt;;
+export type ProgressSize = VariantKey&lt;typeof progressVariants, &#34;size&#34;&gt;;
+
+export type ProgressProps = {
+  variant?: ProgressVariant;
+  size?: ProgressSize;
+  class?: string;
+};
+&lt;/script&gt;
+
+&lt;script setup lang=&#34;ts&#34;&gt;
+import { computed, useAttrs } from &#34;vue&#34;;
+import { cn } from &#34;../../utils&#34;;
+
+defineOptions({ inheritAttrs: false });
+defineSlots&lt;{ default?(): unknown }&gt;();
+const { variant, size, class: className } = defineProps&lt;ProgressProps&gt;();
+const attrs = useAttrs();
+const cls = computed(() =&gt; cn(progressVariants({ size, variant }), className));
+&lt;/script&gt;
+
+&lt;template&gt;
+  &lt;progress :class=&#34;cls || undefined&#34; v-bind=&#34;attrs&#34;&gt;
+    &lt;slot /&gt;
+  &lt;/progress&gt;
+&lt;/template&gt;
+</code></pre></div><p class="text-sm"><a class="underline" href="https://registry.buildy.tw/vue/components/ui/form.json">Vue registry item (JSON)</a></p></section></div></article></main></div><footer class="border-t border-border"><div class="mx-auto max-w-6xl px-4 py-8 text-sm text-muted-foreground">ui8kit, MIT licence. Static docs generated from markdown and the registry (<a class="underline" href="https://registry.buildy.tw/registry.json">registry.json</a>).</div></footer></body></html>

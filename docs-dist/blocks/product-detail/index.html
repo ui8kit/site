@@ -1,0 +1,476 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Product Detail (block) | ui8kit</title><meta name="description" content="The gallery and the buy box of one product."><link rel="canonical" href="https://ui.buildy.tw/blocks/product-detail/"><link rel="stylesheet" href="/assets/site.css"><script src="/assets/app.js" defer></script></head><body class="min-h-screen bg-background text-foreground font-sans"><a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:left-2 focus:top-2 focus:bg-background focus:px-4 focus:py-2 focus:z-50">Skip to content</a><header class="border-b border-border"><div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-4 py-4"><a href="/" class="text-lg font-semibold">ui8kit</a><nav aria-label="Main" class="flex items-center gap-4 text-sm"><a href="/docs/" class="hover:underline">Docs</a> <a href="/docs/categories/blocks-marketing/" class="hover:underline">Blocks</a> <a href="/docs/categories/primitives/" class="hover:underline">Primitives</a> <a href="/docs/cli/" class="hover:underline">CLI</a></nav><form id="search" role="search" class="relative w-full sm:w-72" data-index="/search-index.json"><label for="search-input" class="sr-only">Search components and blocks</label> <input id="search-input" type="search" autocomplete="off" placeholder="Search, press /" class="h-10 w-full rounded border border-input bg-card px-4 text-sm"><ul id="search-results" hidden class="absolute left-0 right-0 top-12 z-40 rounded border border-border bg-popover text-popover-foreground shadow-md" aria-live="polite"></ul></form></div></header><div class="mx-auto flex max-w-6xl flex-col gap-8 px-4 py-8 md:flex-row"><nav aria-label="Docs" class="md:w-64 md:shrink-0"><h2 class="mb-2 text-sm font-semibold">Guides</h2><ul class="mb-6 flex flex-col gap-1"><li><a href="/docs/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Overview</a></li><li><a href="/docs/getting-started/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Getting started</a></li><li><a href="/docs/installation/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Installation</a></li><li><a href="/docs/cli/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">CLI</a></li><li><a href="/docs/theming-skins/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Theming and skins</a></li><li><a href="/docs/grid-8px/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">The 8px grid</a></li></ul><h2 class="mb-2 text-sm font-semibold">Categories</h2><ul class="mb-6 flex flex-col gap-1"><li><a href="/docs/categories/primitives/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Primitives</a></li><li><a href="/docs/categories/components/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Components</a></li><li><a href="/docs/categories/blocks-marketing/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: marketing</a></li><li><a href="/docs/categories/blocks-commerce/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: commerce</a></li><li><a href="/docs/categories/blocks-dashboard/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: dashboard</a></li><li><a href="/docs/categories/blocks-content/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: content</a></li><li><a href="/docs/categories/blocks-account/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: account</a></li><li><a href="/docs/categories/blocks-promo/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: promo</a></li><li><a href="/docs/categories/blocks-support/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: support</a></li><li><a href="/docs/categories/blocks-onboarding/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: onboarding</a></li><li><a href="/docs/categories/blocks-general/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: general</a></li></ul></nav><main id="main" class="min-w-0 flex-1"><article><p class="text-sm text-muted-foreground"><a class="underline" href="/docs/categories/blocks-commerce/">block / commerce</a></p><h1 class="mb-2 text-3xl font-semibold tracking-tight">Product Detail</h1><p class="mb-6 max-w-3xl text-muted-foreground">The gallery and the buy box of one product.</p><h2 class="mb-2 text-xl font-semibold">Install</h2><div class="mb-6 max-w-xl"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="install-product-detail" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit add product-detail</code><button type="button" hidden data-copy="install-product-detail" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><p class="mb-6 text-sm text-muted-foreground">Pulls in:  <a class="underline" href="/primitives/badge/">badge</a><span>, </span> <a class="underline" href="/primitives/button/">button</a><span>, </span> <a class="underline" href="/primitives/grid/">grid</a><span>, </span> <a class="underline" href="/primitives/group/">group</a><span>, </span> <a class="underline" href="/primitives/inline/">inline</a><span>, </span> <a class="underline" href="/primitives/list/">list</a><span>, </span> <a class="underline" href="/primitives/lucide-icon/">lucide-icon</a><span>, </span> <a class="underline" href="/components/media-frame/">media-frame</a><span>, </span> <a class="underline" href="/components/number-field/">number-field</a><span>, </span> <a class="underline" href="/blocks/product-card/">product-card</a><span>, </span> <a class="underline" href="/components/rating/">rating</a><span>, </span> <a class="underline" href="/components/section-frame/">section-frame</a><span>, </span> <a class="underline" href="/primitives/stack/">stack</a><span>, </span> <a class="underline" href="/primitives/text/">text</a><span>, </span> <a class="underline" href="/lib/utils/">utils</a></p><h2 class="mb-2 text-xl font-semibold">Code</h2><div data-tabs><section id="panel-svelte" data-panel data-runtime="svelte" data-label="Svelte" aria-label="Svelte" class="mb-8"><h3 class="mb-2 text-lg font-semibold">Svelte</h3><p class="mb-2 text-sm text-muted-foreground">Point the CLI at this runtime once, then add the item:</p><div class="mb-2"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-svelte-init" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit init --yes --framework svelte --dir src --registry-url https://registry.buildy.tw/svelte --strict-cdn</code><button type="button" hidden data-copy="panel-svelte-init" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-svelte-add" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit add product-detail</code><button type="button" hidden data-copy="panel-svelte-add" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">blocks/product-detail.svelte</span><button type="button" hidden data-copy="code-svelte-0" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-svelte-0" class="font-mono">&lt;!-- Code generated by xgen. DO NOT EDIT. --&gt;
+&lt;!-- Source: xgen/screens/src/authoring/blocks/commerce.ts --&gt;
+&lt;!--
+  A product page: a gallery (the main picture and optional thumbnails) beside the buy box (badge, rating, price,
+  stock, quantity, add button, shipping and returns notes). Axes: layout (split, stacked), media side, thumbs
+  (none, below), buy (full, compact), tone, density.
+--&gt;
+&lt;script lang=&#34;ts&#34; module&gt;
+  import type { Snippet } from &#34;svelte&#34;;
+  import type { ProductDetailLabels } from &#34;./product-detail.types&#34;;
+  import type { Product } from &#34;./product-card.types&#34;;
+
+  export type ProductDetailProps = {
+    id: string;
+    product: Product;
+    labels: ProductDetailLabels;
+    badges: Record&lt;string, string&gt;;
+    level?: 1 | 2;
+    layout?: &#34;split&#34; | &#34;stacked&#34;;
+    mediaSide?: &#34;start&#34; | &#34;end&#34;;
+    thumbs?: &#34;none&#34; | &#34;below&#34;;
+    buy?: &#34;full&#34; | &#34;compact&#34;;
+    tone?: &#34;default&#34; | &#34;muted&#34;;
+    density?: &#34;default&#34; | &#34;roomy&#34;;
+    onadd?: (id: string) =&gt; void;
+  };
+&lt;/script&gt;
+
+&lt;script lang=&#34;ts&#34;&gt;
+  import Badge from &#34;../primitives/badge/badge.svelte&#34;;
+  import Button from &#34;../primitives/button/button.svelte&#34;;
+  import Grid from &#34;../primitives/grid/grid.svelte&#34;;
+  import Group from &#34;../primitives/group/group.svelte&#34;;
+  import Inline from &#34;../primitives/inline/inline.svelte&#34;;
+  import List from &#34;../primitives/list/list.svelte&#34;;
+  import ListItem from &#34;../primitives/list/list-item.svelte&#34;;
+  import LucideIcon from &#34;../primitives/lucide-icon/lucide-icon.svelte&#34;;
+  import Stack from &#34;../primitives/stack/stack.svelte&#34;;
+  import Text from &#34;../primitives/text/text.svelte&#34;;
+  import MediaFrame from &#34;../components/media-frame.svelte&#34;;
+  import NumberField from &#34;../components/number-field.svelte&#34;;
+  import Rating from &#34;../components/rating.svelte&#34;;
+  import SectionFrame from &#34;../components/section-frame.svelte&#34;;
+  import { at, fmtMoney, tpl } from &#34;../utils&#34;;
+
+  let {
+    id,
+    product,
+    labels,
+    badges,
+    level = 1,
+    layout = &#34;split&#34;,
+    mediaSide = &#34;start&#34;,
+    thumbs = &#34;below&#34;,
+    buy = &#34;full&#34;,
+    tone = &#34;default&#34;,
+    density = &#34;default&#34;,
+    onadd,
+  }: ProductDetailProps = $props();
+&lt;/script&gt;
+
+&lt;SectionFrame
+  id={id}
+  title={product.name}
+  lead={product.summary}
+  heading={{ level }}
+  layout={(((layout as string) === &#34;split&#34;) ? &#34;split&#34; : &#34;stack&#34;)}
+  media={{ show: true, side: mediaSide, align: &#34;start&#34; }}
+  tone={tone}
+  density={density}
+&gt;
+  &lt;Stack gap=&#34;4&#34; align=&#34;stretch&#34; data-testid=&#34;buy-box&#34;&gt;
+    &lt;Group gap=&#34;4&#34; align=&#34;center&#34; class=&#34;flex-wrap&#34;&gt;
+      &lt;Text size=&#34;4xl&#34; weight=&#34;bold&#34;&gt;
+        {fmtMoney(product.price, product.currency)}
+      &lt;/Text&gt;
+      {#if product.badge}
+        &lt;Badge variant=&#34;default&#34; size=&#34;default&#34;&gt;
+          {at(badges, product.badge)}
+        &lt;/Badge&gt;
+      {/if}
+    &lt;/Group&gt;
+    &lt;Group gap=&#34;2&#34;&gt;
+      &lt;Rating value={product.rating} label={tpl(labels.ratingLabel, product.rating)} size={16} /&gt;
+      &lt;Text size=&#34;sm&#34; class=&#34;text-muted-foreground&#34;&gt;
+        {tpl(labels.reviews, product.reviews)}
+      &lt;/Text&gt;
+    &lt;/Group&gt;
+    &lt;Text
+      size=&#34;sm&#34;
+      weight=&#34;medium&#34;
+      class={(product.inStock ? &#34;text-foreground&#34; : &#34;text-destructive&#34;)}
+      data-testid=&#34;stock&#34;
+    &gt;
+      {(product.inStock ? labels.inStock : labels.soldOut)}
+    &lt;/Text&gt;
+    &lt;Group gap=&#34;4&#34; class=&#34;flex-wrap&#34;&gt;
+      {#if ((buy as string) === &#34;full&#34;)}
+        &lt;NumberField
+          value=&#34;1&#34;
+          name=&#34;qty&#34;
+          min=&#34;1&#34;
+          label={labels.qty}
+          decrease={labels.decrease}
+          increase={labels.increase}
+        /&gt;
+      {/if}
+      &lt;Button
+        variant=&#34;default&#34;
+        size=&#34;default&#34;
+        disabled={!product.inStock}
+        data-testid=&#34;add&#34;
+        onclick={() =&gt; onadd?.(product.id)}
+      &gt;
+        {labels.add}
+      &lt;/Button&gt;
+    &lt;/Group&gt;
+    {#if ((buy as string) === &#34;full&#34;)}
+      &lt;List tag=&#34;ul&#34; class=&#34;flex flex-col gap-2 text-sm text-muted-foreground&#34;&gt;
+        &lt;ListItem class=&#34;flex items-center gap-2&#34;&gt;
+          &lt;LucideIcon name=&#34;truck&#34; size={16} /&gt;
+          &lt;Inline&gt;
+            {labels.shipping}
+          &lt;/Inline&gt;
+        &lt;/ListItem&gt;
+        &lt;ListItem class=&#34;flex items-center gap-2&#34;&gt;
+          &lt;LucideIcon name=&#34;shield-check&#34; size={16} /&gt;
+          &lt;Inline&gt;
+            {labels.returns}
+          &lt;/Inline&gt;
+        &lt;/ListItem&gt;
+      &lt;/List&gt;
+    {/if}
+  &lt;/Stack&gt;
+  {#snippet aside()}
+    &lt;Stack gap=&#34;4&#34; align=&#34;stretch&#34; data-testid=&#34;gallery&#34;&gt;
+      &lt;MediaFrame alt={product.name} ratio=&#34;1/1&#34; /&gt;
+      {#if ((thumbs as string) === &#34;below&#34;)}
+        &lt;Grid cols=&#34;3&#34; class=&#34;gap-4&#34; data-testid=&#34;thumbs&#34;&gt;
+          &lt;MediaFrame alt={product.name} ratio=&#34;1/1&#34; class=&#34;ring-2 ring-foreground&#34; /&gt;
+          &lt;MediaFrame alt={product.name} ratio=&#34;1/1&#34; /&gt;
+          &lt;MediaFrame alt={product.name} ratio=&#34;1/1&#34; /&gt;
+        &lt;/Grid&gt;
+      {/if}
+    &lt;/Stack&gt;
+  {/snippet}
+&lt;/SectionFrame&gt;
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">blocks/product-detail.types.ts</span><button type="button" hidden data-copy="code-svelte-1" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-svelte-1" class="font-mono">// Code generated by xgen. DO NOT EDIT.
+// Source: xgen/screens/src/authoring/blocks/commerce.ts
+
+export type ProductDetailLabels = {
+  add: string;
+  soldOut: string;
+  inStock: string;
+  qty: string;
+  decrease: string;
+  increase: string;
+  reviews: string;
+  ratingLabel: string;
+  shipping: string;
+  returns: string;
+};
+</code></pre></div><p class="text-sm"><a class="underline" href="https://registry.buildy.tw/svelte/blocks/product-detail.json">Svelte registry item (JSON)</a></p></section><section id="panel-react" data-panel data-runtime="react" data-label="React" aria-label="React" class="mb-8"><h3 class="mb-2 text-lg font-semibold">React</h3><p class="mb-2 text-sm text-muted-foreground">Point the CLI at this runtime once, then add the item:</p><div class="mb-2"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-react-init" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit init --yes --framework react --dir src --registry-url https://registry.buildy.tw/react --strict-cdn</code><button type="button" hidden data-copy="panel-react-init" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-react-add" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit add product-detail</code><button type="button" hidden data-copy="panel-react-add" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">blocks/product-detail.tsx</span><button type="button" hidden data-copy="code-react-0" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-react-0" class="font-mono">// Code generated by xgen. DO NOT EDIT.
+// Source: xgen/screens/src/authoring/blocks/commerce.ts
+/**
+ * A product page: a gallery (the main picture and optional thumbnails) beside the buy box (badge, rating, price,
+ * stock, quantity, add button, shipping and returns notes). Axes: layout (split, stacked), media side, thumbs
+ * (none, below), buy (full, compact), tone, density.
+ */
+import { type ReactNode } from &#34;react&#34;;
+import { Badge } from &#34;../primitives/badge/badge&#34;;
+import { Button } from &#34;../primitives/button/button&#34;;
+import { Grid } from &#34;../primitives/grid/grid&#34;;
+import { Group } from &#34;../primitives/group/group&#34;;
+import { Inline } from &#34;../primitives/inline/inline&#34;;
+import { List } from &#34;../primitives/list/list&#34;;
+import { ListItem } from &#34;../primitives/list/list-item&#34;;
+import { LucideIcon } from &#34;../primitives/lucide-icon/lucide-icon&#34;;
+import { Stack } from &#34;../primitives/stack/stack&#34;;
+import { Text } from &#34;../primitives/text/text&#34;;
+import { MediaFrame } from &#34;../components/media-frame&#34;;
+import { NumberField } from &#34;../components/number-field&#34;;
+import { Rating } from &#34;../components/rating&#34;;
+import { SectionFrame } from &#34;../components/section-frame&#34;;
+import { at, fmtMoney, tpl } from &#34;../utils&#34;;
+import type { ProductDetailLabels } from &#34;./product-detail.types&#34;;
+import type { Product } from &#34;./product-card.types&#34;;
+
+export type ProductDetailProps = {
+  id: string;
+  product: Product;
+  labels: ProductDetailLabels;
+  badges: Record&lt;string, string&gt;;
+  level?: 1 | 2;
+  layout?: &#34;split&#34; | &#34;stacked&#34;;
+  mediaSide?: &#34;start&#34; | &#34;end&#34;;
+  thumbs?: &#34;none&#34; | &#34;below&#34;;
+  buy?: &#34;full&#34; | &#34;compact&#34;;
+  tone?: &#34;default&#34; | &#34;muted&#34;;
+  density?: &#34;default&#34; | &#34;roomy&#34;;
+  onAdd?: (id: string) =&gt; void;
+};
+
+export function ProductDetail({
+  id,
+  product,
+  labels,
+  badges,
+  level = 1,
+  layout = &#34;split&#34;,
+  mediaSide = &#34;start&#34;,
+  thumbs = &#34;below&#34;,
+  buy = &#34;full&#34;,
+  tone = &#34;default&#34;,
+  density = &#34;default&#34;,
+  onAdd,
+}: ProductDetailProps) {
+  return (
+    &lt;SectionFrame
+      id={id}
+      title={product.name}
+      lead={product.summary}
+      heading={{ level }}
+      layout={(((layout as string) === &#34;split&#34;) ? &#34;split&#34; : &#34;stack&#34;)}
+      media={{ show: true, side: mediaSide, align: &#34;start&#34; }}
+      tone={tone}
+      density={density}
+      aside={(
+        &lt;Stack gap=&#34;4&#34; align=&#34;stretch&#34; data-testid=&#34;gallery&#34;&gt;
+          &lt;MediaFrame alt={product.name} ratio=&#34;1/1&#34; /&gt;
+          {((thumbs as string) === &#34;below&#34;) ? (
+            &lt;Grid cols=&#34;3&#34; className=&#34;gap-4&#34; data-testid=&#34;thumbs&#34;&gt;
+              &lt;MediaFrame alt={product.name} ratio=&#34;1/1&#34; className=&#34;ring-2 ring-foreground&#34; /&gt;
+              &lt;MediaFrame alt={product.name} ratio=&#34;1/1&#34; /&gt;
+              &lt;MediaFrame alt={product.name} ratio=&#34;1/1&#34; /&gt;
+            &lt;/Grid&gt;
+          ) : null}
+        &lt;/Stack&gt;
+      )}
+    &gt;
+      &lt;Stack gap=&#34;4&#34; align=&#34;stretch&#34; data-testid=&#34;buy-box&#34;&gt;
+        &lt;Group gap=&#34;4&#34; align=&#34;center&#34; className=&#34;flex-wrap&#34;&gt;
+          &lt;Text size=&#34;4xl&#34; weight=&#34;bold&#34;&gt;
+            {fmtMoney(product.price, product.currency)}
+          &lt;/Text&gt;
+          {product.badge ? (
+            &lt;Badge variant=&#34;default&#34; size=&#34;default&#34;&gt;
+              {at(badges, product.badge)}
+            &lt;/Badge&gt;
+          ) : null}
+        &lt;/Group&gt;
+        &lt;Group gap=&#34;2&#34;&gt;
+          &lt;Rating value={product.rating} label={tpl(labels.ratingLabel, product.rating)} size={16} /&gt;
+          &lt;Text size=&#34;sm&#34; className=&#34;text-muted-foreground&#34;&gt;
+            {tpl(labels.reviews, product.reviews)}
+          &lt;/Text&gt;
+        &lt;/Group&gt;
+        &lt;Text
+          size=&#34;sm&#34;
+          weight=&#34;medium&#34;
+          className={(product.inStock ? &#34;text-foreground&#34; : &#34;text-destructive&#34;)}
+          data-testid=&#34;stock&#34;
+        &gt;
+          {(product.inStock ? labels.inStock : labels.soldOut)}
+        &lt;/Text&gt;
+        &lt;Group gap=&#34;4&#34; className=&#34;flex-wrap&#34;&gt;
+          {((buy as string) === &#34;full&#34;) ? (
+            &lt;NumberField
+              value=&#34;1&#34;
+              name=&#34;qty&#34;
+              min=&#34;1&#34;
+              label={labels.qty}
+              decrease={labels.decrease}
+              increase={labels.increase}
+            /&gt;
+          ) : null}
+          &lt;Button
+            variant=&#34;default&#34;
+            size=&#34;default&#34;
+            disabled={!product.inStock}
+            data-testid=&#34;add&#34;
+            onClick={() =&gt; onAdd?.(product.id)}
+          &gt;
+            {labels.add}
+          &lt;/Button&gt;
+        &lt;/Group&gt;
+        {((buy as string) === &#34;full&#34;) ? (
+          &lt;List tag=&#34;ul&#34; className=&#34;flex flex-col gap-2 text-sm text-muted-foreground&#34;&gt;
+            &lt;ListItem className=&#34;flex items-center gap-2&#34;&gt;
+              &lt;LucideIcon name=&#34;truck&#34; size={16} /&gt;
+              &lt;Inline&gt;
+                {labels.shipping}
+              &lt;/Inline&gt;
+            &lt;/ListItem&gt;
+            &lt;ListItem className=&#34;flex items-center gap-2&#34;&gt;
+              &lt;LucideIcon name=&#34;shield-check&#34; size={16} /&gt;
+              &lt;Inline&gt;
+                {labels.returns}
+              &lt;/Inline&gt;
+            &lt;/ListItem&gt;
+          &lt;/List&gt;
+        ) : null}
+      &lt;/Stack&gt;
+    &lt;/SectionFrame&gt;
+  );
+}
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">blocks/product-detail.types.ts</span><button type="button" hidden data-copy="code-react-1" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-react-1" class="font-mono">// Code generated by xgen. DO NOT EDIT.
+// Source: xgen/screens/src/authoring/blocks/commerce.ts
+
+export type ProductDetailLabels = {
+  add: string;
+  soldOut: string;
+  inStock: string;
+  qty: string;
+  decrease: string;
+  increase: string;
+  reviews: string;
+  ratingLabel: string;
+  shipping: string;
+  returns: string;
+};
+</code></pre></div><p class="text-sm"><a class="underline" href="https://registry.buildy.tw/react/blocks/product-detail.json">React registry item (JSON)</a></p></section><section id="panel-vue" data-panel data-runtime="vue" data-label="Vue" aria-label="Vue" class="mb-8"><h3 class="mb-2 text-lg font-semibold">Vue</h3><p class="mb-2 text-sm text-muted-foreground">Point the CLI at this runtime once, then add the item:</p><div class="mb-2"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-vue-init" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit init --yes --framework vue --dir src --registry-url https://registry.buildy.tw/vue --strict-cdn</code><button type="button" hidden data-copy="panel-vue-init" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-vue-add" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit add product-detail</code><button type="button" hidden data-copy="panel-vue-add" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">blocks/product-detail.types.ts</span><button type="button" hidden data-copy="code-vue-0" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-vue-0" class="font-mono">// Code generated by xgen. DO NOT EDIT.
+// Source: xgen/screens/src/authoring/blocks/commerce.ts
+
+export type ProductDetailLabels = {
+  add: string;
+  soldOut: string;
+  inStock: string;
+  qty: string;
+  decrease: string;
+  increase: string;
+  reviews: string;
+  ratingLabel: string;
+  shipping: string;
+  returns: string;
+};
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">blocks/product-detail.vue</span><button type="button" hidden data-copy="code-vue-1" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-vue-1" class="font-mono">&lt;!-- Code generated by xgen. DO NOT EDIT. --&gt;
+&lt;!-- Source: xgen/screens/src/authoring/blocks/commerce.ts --&gt;
+&lt;!--
+  A product page: a gallery (the main picture and optional thumbnails) beside the buy box (badge, rating, price,
+  stock, quantity, add button, shipping and returns notes). Axes: layout (split, stacked), media side, thumbs
+  (none, below), buy (full, compact), tone, density.
+--&gt;
+&lt;script lang=&#34;ts&#34;&gt;
+import type { ProductDetailLabels } from &#34;./product-detail.types&#34;;
+import type { Product } from &#34;./product-card.types&#34;;
+
+export type ProductDetailProps = {
+  id: string;
+  product: Product;
+  labels: ProductDetailLabels;
+  badges: Record&lt;string, string&gt;;
+  level?: 1 | 2;
+  layout?: &#34;split&#34; | &#34;stacked&#34;;
+  mediaSide?: &#34;start&#34; | &#34;end&#34;;
+  thumbs?: &#34;none&#34; | &#34;below&#34;;
+  buy?: &#34;full&#34; | &#34;compact&#34;;
+  tone?: &#34;default&#34; | &#34;muted&#34;;
+  density?: &#34;default&#34; | &#34;roomy&#34;;
+};
+&lt;/script&gt;
+
+&lt;script setup lang=&#34;ts&#34;&gt;
+import Badge from &#34;../primitives/badge/badge.vue&#34;;
+import Button from &#34;../primitives/button/button.vue&#34;;
+import Grid from &#34;../primitives/grid/grid.vue&#34;;
+import Group from &#34;../primitives/group/group.vue&#34;;
+import Inline from &#34;../primitives/inline/inline.vue&#34;;
+import List from &#34;../primitives/list/list.vue&#34;;
+import ListItem from &#34;../primitives/list/list-item.vue&#34;;
+import LucideIcon from &#34;../primitives/lucide-icon/lucide-icon.vue&#34;;
+import Stack from &#34;../primitives/stack/stack.vue&#34;;
+import Text from &#34;../primitives/text/text.vue&#34;;
+import MediaFrame from &#34;../components/media-frame.vue&#34;;
+import NumberField from &#34;../components/number-field.vue&#34;;
+import Rating from &#34;../components/rating.vue&#34;;
+import SectionFrame from &#34;../components/section-frame.vue&#34;;
+import { at, fmtMoney, tpl } from &#34;../utils&#34;;
+
+const {
+  id,
+  product,
+  labels,
+  badges,
+  level = 1,
+  layout = &#34;split&#34;,
+  mediaSide = &#34;start&#34;,
+  thumbs = &#34;below&#34;,
+  buy = &#34;full&#34;,
+  tone = &#34;default&#34;,
+  density = &#34;default&#34;,
+} = defineProps&lt;ProductDetailProps&gt;();
+const emit = defineEmits&lt;{ add: [id: string] }&gt;();
+&lt;/script&gt;
+
+&lt;template&gt;
+  &lt;SectionFrame
+    :id=&#34;id&#34;
+    :title=&#34;product.name&#34;
+    :lead=&#34;product.summary&#34;
+    :heading=&#34;{ level }&#34;
+    :layout=&#34;(((layout as string) === &#39;split&#39;) ? &#39;split&#39; : &#39;stack&#39;)&#34;
+    :media=&#34;{ show: true, side: mediaSide, align: &#39;start&#39; }&#34;
+    :tone=&#34;tone&#34;
+    :density=&#34;density&#34;
+  &gt;
+    &lt;Stack gap=&#34;4&#34; align=&#34;stretch&#34; data-testid=&#34;buy-box&#34;&gt;
+      &lt;Group gap=&#34;4&#34; align=&#34;center&#34; class=&#34;flex-wrap&#34;&gt;
+        &lt;Text size=&#34;4xl&#34; weight=&#34;bold&#34;&gt;
+          {{ fmtMoney(product.price, product.currency) }}
+        &lt;/Text&gt;
+        &lt;Badge v-if=&#34;product.badge&#34; variant=&#34;default&#34; size=&#34;default&#34;&gt;
+          {{ at(badges, product.badge) }}
+        &lt;/Badge&gt;
+      &lt;/Group&gt;
+      &lt;Group gap=&#34;2&#34;&gt;
+        &lt;Rating :value=&#34;product.rating&#34; :label=&#34;tpl(labels.ratingLabel, product.rating)&#34; :size=&#34;16&#34; /&gt;
+        &lt;Text size=&#34;sm&#34; class=&#34;text-muted-foreground&#34;&gt;
+          {{ tpl(labels.reviews, product.reviews) }}
+        &lt;/Text&gt;
+      &lt;/Group&gt;
+      &lt;Text
+        size=&#34;sm&#34;
+        weight=&#34;medium&#34;
+        :class=&#34;(product.inStock ? &#39;text-foreground&#39; : &#39;text-destructive&#39;)&#34;
+        data-testid=&#34;stock&#34;
+      &gt;
+        {{ (product.inStock ? labels.inStock : labels.soldOut) }}
+      &lt;/Text&gt;
+      &lt;Group gap=&#34;4&#34; class=&#34;flex-wrap&#34;&gt;
+        &lt;NumberField v-if=&#34;((buy as string) === &#39;full&#39;)&#34;
+          value=&#34;1&#34;
+          name=&#34;qty&#34;
+          min=&#34;1&#34;
+          :label=&#34;labels.qty&#34;
+          :decrease=&#34;labels.decrease&#34;
+          :increase=&#34;labels.increase&#34;
+        /&gt;
+        &lt;Button
+          variant=&#34;default&#34;
+          size=&#34;default&#34;
+          :disabled=&#34;!product.inStock&#34;
+          data-testid=&#34;add&#34;
+          @click=&#34;() =&gt; emit(&#39;add&#39;, product.id)&#34;
+        &gt;
+          {{ labels.add }}
+        &lt;/Button&gt;
+      &lt;/Group&gt;
+      &lt;List v-if=&#34;((buy as string) === &#39;full&#39;)&#34; tag=&#34;ul&#34; class=&#34;flex flex-col gap-2 text-sm text-muted-foreground&#34;&gt;
+        &lt;ListItem class=&#34;flex items-center gap-2&#34;&gt;
+          &lt;LucideIcon name=&#34;truck&#34; :size=&#34;16&#34; /&gt;
+          &lt;Inline&gt;
+            {{ labels.shipping }}
+          &lt;/Inline&gt;
+        &lt;/ListItem&gt;
+        &lt;ListItem class=&#34;flex items-center gap-2&#34;&gt;
+          &lt;LucideIcon name=&#34;shield-check&#34; :size=&#34;16&#34; /&gt;
+          &lt;Inline&gt;
+            {{ labels.returns }}
+          &lt;/Inline&gt;
+        &lt;/ListItem&gt;
+      &lt;/List&gt;
+    &lt;/Stack&gt;
+    &lt;template #aside&gt;
+      &lt;Stack gap=&#34;4&#34; align=&#34;stretch&#34; data-testid=&#34;gallery&#34;&gt;
+        &lt;MediaFrame :alt=&#34;product.name&#34; ratio=&#34;1/1&#34; /&gt;
+        &lt;Grid v-if=&#34;((thumbs as string) === &#39;below&#39;)&#34; cols=&#34;3&#34; class=&#34;gap-4&#34; data-testid=&#34;thumbs&#34;&gt;
+          &lt;MediaFrame :alt=&#34;product.name&#34; ratio=&#34;1/1&#34; class=&#34;ring-2 ring-foreground&#34; /&gt;
+          &lt;MediaFrame :alt=&#34;product.name&#34; ratio=&#34;1/1&#34; /&gt;
+          &lt;MediaFrame :alt=&#34;product.name&#34; ratio=&#34;1/1&#34; /&gt;
+        &lt;/Grid&gt;
+      &lt;/Stack&gt;
+    &lt;/template&gt;
+  &lt;/SectionFrame&gt;
+&lt;/template&gt;
+</code></pre></div><p class="text-sm"><a class="underline" href="https://registry.buildy.tw/vue/blocks/product-detail.json">Vue registry item (JSON)</a></p></section></div></article></main></div><footer class="border-t border-border"><div class="mx-auto max-w-6xl px-4 py-8 text-sm text-muted-foreground">ui8kit, MIT licence. Static docs generated from markdown and the registry (<a class="underline" href="https://registry.buildy.tw/registry.json">registry.json</a>).</div></footer></body></html>

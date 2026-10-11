@@ -1,0 +1,1035 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Table (primitive) | ui8kit</title><meta name="description" content="Table primitive"><link rel="canonical" href="https://ui.buildy.tw/primitives/table/"><link rel="stylesheet" href="/assets/site.css"><script src="/assets/app.js" defer></script></head><body class="min-h-screen bg-background text-foreground font-sans"><a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:left-2 focus:top-2 focus:bg-background focus:px-4 focus:py-2 focus:z-50">Skip to content</a><header class="border-b border-border"><div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-4 py-4"><a href="/" class="text-lg font-semibold">ui8kit</a><nav aria-label="Main" class="flex items-center gap-4 text-sm"><a href="/docs/" class="hover:underline">Docs</a> <a href="/docs/categories/blocks-marketing/" class="hover:underline">Blocks</a> <a href="/docs/categories/primitives/" class="hover:underline">Primitives</a> <a href="/docs/cli/" class="hover:underline">CLI</a></nav><form id="search" role="search" class="relative w-full sm:w-72" data-index="/search-index.json"><label for="search-input" class="sr-only">Search components and blocks</label> <input id="search-input" type="search" autocomplete="off" placeholder="Search, press /" class="h-10 w-full rounded border border-input bg-card px-4 text-sm"><ul id="search-results" hidden class="absolute left-0 right-0 top-12 z-40 rounded border border-border bg-popover text-popover-foreground shadow-md" aria-live="polite"></ul></form></div></header><div class="mx-auto flex max-w-6xl flex-col gap-8 px-4 py-8 md:flex-row"><nav aria-label="Docs" class="md:w-64 md:shrink-0"><h2 class="mb-2 text-sm font-semibold">Guides</h2><ul class="mb-6 flex flex-col gap-1"><li><a href="/docs/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Overview</a></li><li><a href="/docs/getting-started/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Getting started</a></li><li><a href="/docs/installation/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Installation</a></li><li><a href="/docs/cli/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">CLI</a></li><li><a href="/docs/theming-skins/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Theming and skins</a></li><li><a href="/docs/grid-8px/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">The 8px grid</a></li></ul><h2 class="mb-2 text-sm font-semibold">Categories</h2><ul class="mb-6 flex flex-col gap-1"><li><a href="/docs/categories/primitives/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Primitives</a></li><li><a href="/docs/categories/components/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Components</a></li><li><a href="/docs/categories/blocks-marketing/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: marketing</a></li><li><a href="/docs/categories/blocks-commerce/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: commerce</a></li><li><a href="/docs/categories/blocks-dashboard/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: dashboard</a></li><li><a href="/docs/categories/blocks-content/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: content</a></li><li><a href="/docs/categories/blocks-account/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: account</a></li><li><a href="/docs/categories/blocks-promo/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: promo</a></li><li><a href="/docs/categories/blocks-support/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: support</a></li><li><a href="/docs/categories/blocks-onboarding/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: onboarding</a></li><li><a href="/docs/categories/blocks-general/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: general</a></li></ul></nav><main id="main" class="min-w-0 flex-1"><article><p class="text-sm text-muted-foreground"><a class="underline" href="/docs/categories/primitives/">primitive / primitives</a></p><h1 class="mb-2 text-3xl font-semibold tracking-tight">Table</h1><p class="mb-6 max-w-3xl text-muted-foreground">Table primitive</p><h2 class="mb-2 text-xl font-semibold">Install</h2><div class="mb-6 max-w-xl"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="install-table" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit add table</code><button type="button" hidden data-copy="install-table" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><p class="mb-6 text-sm text-muted-foreground">Pulls in:  <a class="underline" href="/lib/utils/">utils</a></p><h2 class="mb-2 text-xl font-semibold">Code</h2><div data-tabs><section id="panel-svelte" data-panel data-runtime="svelte" data-label="Svelte" aria-label="Svelte" class="mb-8"><h3 class="mb-2 text-lg font-semibold">Svelte</h3><p class="mb-2 text-sm text-muted-foreground">Point the CLI at this runtime once, then add the item:</p><div class="mb-2"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-svelte-init" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit init --yes --framework svelte --dir src --registry-url https://registry.buildy.tw/svelte --strict-cdn</code><button type="button" hidden data-copy="panel-svelte-init" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-svelte-add" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit add table</code><button type="button" hidden data-copy="panel-svelte-add" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/table/table-body.svelte</span><button type="button" hidden data-copy="code-svelte-0" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-svelte-0" class="font-mono">&lt;!-- Code generated by xgen. DO NOT EDIT. --&gt;
+&lt;!-- Source: xgen/specs/ui/table.json --&gt;
+&lt;!--
+  TableBody renders the tbody section.
+--&gt;
+&lt;script lang=&#34;ts&#34; module&gt;
+  import type { Snippet } from &#34;svelte&#34;;
+
+  export type TableBodyProps = {
+    class?: string;
+    children?: Snippet;
+    [key: string]: unknown;
+  };
+&lt;/script&gt;
+
+&lt;script lang=&#34;ts&#34;&gt;
+  import { cn } from &#34;../../utils&#34;;
+
+  let {
+    class: className,
+    children,
+    ...rest
+  }: TableBodyProps = $props();
+
+  const cls = $derived(cn(className));
+&lt;/script&gt;
+
+&lt;tbody {...(cls ? { class: cls } : {})} {...rest}&gt;
+  {@render children?.()}
+&lt;/tbody&gt;
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/table/table-caption.svelte</span><button type="button" hidden data-copy="code-svelte-1" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-svelte-1" class="font-mono">&lt;!-- Code generated by xgen. DO NOT EDIT. --&gt;
+&lt;!-- Source: xgen/specs/ui/table.json --&gt;
+&lt;!--
+  TableCaption renders the table caption.
+--&gt;
+&lt;script lang=&#34;ts&#34; module&gt;
+  import type { Snippet } from &#34;svelte&#34;;
+
+  export type TableCaptionProps = {
+    class?: string;
+    children?: Snippet;
+    [key: string]: unknown;
+  };
+&lt;/script&gt;
+
+&lt;script lang=&#34;ts&#34;&gt;
+  import { cn } from &#34;../../utils&#34;;
+
+  let {
+    class: className,
+    children,
+    ...rest
+  }: TableCaptionProps = $props();
+
+  const cls = $derived(cn(className));
+&lt;/script&gt;
+
+&lt;caption {...(cls ? { class: cls } : {})} {...rest}&gt;
+  {@render children?.()}
+&lt;/caption&gt;
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/table/table-cell.svelte</span><button type="button" hidden data-copy="code-svelte-2" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-svelte-2" class="font-mono">&lt;!-- Code generated by xgen. DO NOT EDIT. --&gt;
+&lt;!-- Source: xgen/specs/ui/table.json --&gt;
+&lt;!--
+  TableCell renders td with colspan and rowspan.
+--&gt;
+&lt;script lang=&#34;ts&#34; module&gt;
+  import type { Snippet } from &#34;svelte&#34;;
+  import { variants } from &#34;../../utils&#34;;
+
+  /** TableCell: the classes of each value of each prop (shadcn/cva style). */
+  export const tableCellVariants = variants({
+    base: &#34;px-2 py-2 align-middle&#34;,
+    variants: {},
+    defaultVariants: {},
+  });
+
+  export type TableCellProps = {
+    scope?: string;
+    colspan?: number;
+    rowspan?: number;
+    abbr?: string;
+    class?: string;
+    children?: Snippet;
+    [key: string]: unknown;
+  };
+&lt;/script&gt;
+
+&lt;script lang=&#34;ts&#34;&gt;
+  import { cn } from &#34;../../utils&#34;;
+  import { isSetNum } from &#34;../../utils/expr&#34;;
+
+  let {
+    scope,
+    colspan: colSpan,
+    rowspan: rowSpan,
+    abbr,
+    class: className,
+    children,
+    ...rest
+  }: TableCellProps = $props();
+
+  const cls = $derived(cn(tableCellVariants(), className));
+&lt;/script&gt;
+
+&lt;td
+  {...(cls ? { class: cls } : {})}
+  {...({ &#34;colspan&#34;: isSetNum(colSpan) ? String(colSpan ?? 0) : undefined } as Record&lt;string, unknown&gt;)}
+  {...({ &#34;rowspan&#34;: isSetNum(rowSpan) ? String(rowSpan ?? 0) : undefined } as Record&lt;string, unknown&gt;)}
+  {...rest}
+&gt;
+  {@render children?.()}
+&lt;/td&gt;
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/table/table-col-group.svelte</span><button type="button" hidden data-copy="code-svelte-3" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-svelte-3" class="font-mono">&lt;!-- Code generated by xgen. DO NOT EDIT. --&gt;
+&lt;!-- Source: xgen/specs/ui/table.json --&gt;
+&lt;!--
+  TableColGroup renders colgroup with optional span.
+--&gt;
+&lt;script lang=&#34;ts&#34; module&gt;
+  import type { Snippet } from &#34;svelte&#34;;
+
+  export type TableColGroupProps = {
+    span?: number;
+    class?: string;
+    children?: Snippet;
+    [key: string]: unknown;
+  };
+&lt;/script&gt;
+
+&lt;script lang=&#34;ts&#34;&gt;
+  import { cn } from &#34;../../utils&#34;;
+  import { isSetNum } from &#34;../../utils/expr&#34;;
+
+  let {
+    span,
+    class: className,
+    children,
+    ...rest
+  }: TableColGroupProps = $props();
+
+  const cls = $derived(cn(className));
+&lt;/script&gt;
+
+&lt;colgroup
+  {...(cls ? { class: cls } : {})}
+  {...({ &#34;span&#34;: isSetNum(span) ? String(span ?? 0) : undefined } as Record&lt;string, unknown&gt;)}
+  {...rest}
+&gt;
+  {@render children?.()}
+&lt;/colgroup&gt;
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/table/table-col.svelte</span><button type="button" hidden data-copy="code-svelte-4" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-svelte-4" class="font-mono">&lt;!-- Code generated by xgen. DO NOT EDIT. --&gt;
+&lt;!-- Source: xgen/specs/ui/table.json --&gt;
+&lt;!--
+  TableCol renders a single col definition.
+--&gt;
+&lt;script lang=&#34;ts&#34; module&gt;
+
+  export type TableColProps = {
+    span?: number;
+    class?: string;
+    [key: string]: unknown;
+  };
+&lt;/script&gt;
+
+&lt;script lang=&#34;ts&#34;&gt;
+  import { cn } from &#34;../../utils&#34;;
+  import { isSetNum } from &#34;../../utils/expr&#34;;
+
+  let {
+    span,
+    class: className,
+    ...rest
+  }: TableColProps = $props();
+
+  const cls = $derived(cn(className));
+&lt;/script&gt;
+
+&lt;col
+  {...(cls ? { class: cls } : {})}
+  {...({ &#34;span&#34;: isSetNum(span) ? String(span ?? 0) : undefined } as Record&lt;string, unknown&gt;)}
+  {...rest}
+/&gt;
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/table/table-foot.svelte</span><button type="button" hidden data-copy="code-svelte-5" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-svelte-5" class="font-mono">&lt;!-- Code generated by xgen. DO NOT EDIT. --&gt;
+&lt;!-- Source: xgen/specs/ui/table.json --&gt;
+&lt;!--
+  TableFoot renders the tfoot section.
+--&gt;
+&lt;script lang=&#34;ts&#34; module&gt;
+  import type { Snippet } from &#34;svelte&#34;;
+
+  export type TableFootProps = {
+    class?: string;
+    children?: Snippet;
+    [key: string]: unknown;
+  };
+&lt;/script&gt;
+
+&lt;script lang=&#34;ts&#34;&gt;
+  import { cn } from &#34;../../utils&#34;;
+
+  let {
+    class: className,
+    children,
+    ...rest
+  }: TableFootProps = $props();
+
+  const cls = $derived(cn(className));
+&lt;/script&gt;
+
+&lt;tfoot {...(cls ? { class: cls } : {})} {...rest}&gt;
+  {@render children?.()}
+&lt;/tfoot&gt;
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/table/table-head-cell.svelte</span><button type="button" hidden data-copy="code-svelte-6" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-svelte-6" class="font-mono">&lt;!-- Code generated by xgen. DO NOT EDIT. --&gt;
+&lt;!-- Source: xgen/specs/ui/table.json --&gt;
+&lt;!--
+  TableHeadCell renders th with optional scope and abbr.
+--&gt;
+&lt;script lang=&#34;ts&#34; module&gt;
+  import type { Snippet } from &#34;svelte&#34;;
+  import { variants } from &#34;../../utils&#34;;
+
+  /** TableHeadCell: the classes of each value of each prop (shadcn/cva style). */
+  export const tableHeadCellVariants = variants({
+    base: &#34;px-2 py-2 text-left align-middle font-semibold&#34;,
+    variants: {},
+    defaultVariants: {},
+  });
+
+  export type TableHeadCellProps = {
+    scope?: string;
+    colspan?: number;
+    rowspan?: number;
+    abbr?: string;
+    class?: string;
+    children?: Snippet;
+    [key: string]: unknown;
+  };
+&lt;/script&gt;
+
+&lt;script lang=&#34;ts&#34;&gt;
+  import { cn } from &#34;../../utils&#34;;
+  import { isSetNum, oneOfOrLower, orUndef } from &#34;../../utils/expr&#34;;
+
+  let {
+    scope,
+    colspan: colSpan,
+    rowspan: rowSpan,
+    abbr,
+    class: className,
+    children,
+    ...rest
+  }: TableHeadCellProps = $props();
+
+  const cls = $derived(cn(tableHeadCellVariants(), className));
+&lt;/script&gt;
+
+&lt;th
+  {...(cls ? { class: cls } : {})}
+  {...({ &#34;scope&#34;: orUndef(oneOfOrLower(scope, &#34;&#34;, &#34;col&#34;, &#34;colgroup&#34;, &#34;row&#34;, &#34;rowgroup&#34;)) } as Record&lt;string, unknown&gt;)}
+  abbr={orUndef(abbr)}
+  {...({ &#34;colspan&#34;: isSetNum(colSpan) ? String(colSpan ?? 0) : undefined } as Record&lt;string, unknown&gt;)}
+  {...({ &#34;rowspan&#34;: isSetNum(rowSpan) ? String(rowSpan ?? 0) : undefined } as Record&lt;string, unknown&gt;)}
+  {...rest}
+&gt;
+  {@render children?.()}
+&lt;/th&gt;
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/table/table-head.svelte</span><button type="button" hidden data-copy="code-svelte-7" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-svelte-7" class="font-mono">&lt;!-- Code generated by xgen. DO NOT EDIT. --&gt;
+&lt;!-- Source: xgen/specs/ui/table.json --&gt;
+&lt;!--
+  TableHead renders the thead section.
+--&gt;
+&lt;script lang=&#34;ts&#34; module&gt;
+  import type { Snippet } from &#34;svelte&#34;;
+
+  export type TableHeadProps = {
+    class?: string;
+    children?: Snippet;
+    [key: string]: unknown;
+  };
+&lt;/script&gt;
+
+&lt;script lang=&#34;ts&#34;&gt;
+  import { cn } from &#34;../../utils&#34;;
+
+  let {
+    class: className,
+    children,
+    ...rest
+  }: TableHeadProps = $props();
+
+  const cls = $derived(cn(className));
+&lt;/script&gt;
+
+&lt;thead {...(cls ? { class: cls } : {})} {...rest}&gt;
+  {@render children?.()}
+&lt;/thead&gt;
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/table/table-row.svelte</span><button type="button" hidden data-copy="code-svelte-8" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-svelte-8" class="font-mono">&lt;!-- Code generated by xgen. DO NOT EDIT. --&gt;
+&lt;!-- Source: xgen/specs/ui/table.json --&gt;
+&lt;!--
+  TableRow renders one tr row.
+--&gt;
+&lt;script lang=&#34;ts&#34; module&gt;
+  import type { Snippet } from &#34;svelte&#34;;
+
+  export type TableRowProps = {
+    class?: string;
+    children?: Snippet;
+    [key: string]: unknown;
+  };
+&lt;/script&gt;
+
+&lt;script lang=&#34;ts&#34;&gt;
+  import { cn } from &#34;../../utils&#34;;
+
+  let {
+    class: className,
+    children,
+    ...rest
+  }: TableRowProps = $props();
+
+  const cls = $derived(cn(className));
+&lt;/script&gt;
+
+&lt;tr {...(cls ? { class: cls } : {})} {...rest}&gt;
+  {@render children?.()}
+&lt;/tr&gt;
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/table/table.svelte</span><button type="button" hidden data-copy="code-svelte-9" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-svelte-9" class="font-mono">&lt;!-- Code generated by xgen. DO NOT EDIT. --&gt;
+&lt;!-- Source: xgen/specs/ui/table.json --&gt;
+&lt;!--
+  Table renders the root table element.
+--&gt;
+&lt;script lang=&#34;ts&#34; module&gt;
+  import type { Snippet } from &#34;svelte&#34;;
+
+  export type TableProps = {
+    class?: string;
+    children?: Snippet;
+    [key: string]: unknown;
+  };
+&lt;/script&gt;
+
+&lt;script lang=&#34;ts&#34;&gt;
+  import { cn } from &#34;../../utils&#34;;
+
+  let {
+    class: className,
+    children,
+    ...rest
+  }: TableProps = $props();
+
+  const cls = $derived(cn(className));
+&lt;/script&gt;
+
+&lt;table {...(cls ? { class: cls } : {})} {...rest}&gt;
+  {@render children?.()}
+&lt;/table&gt;
+</code></pre></div><p class="text-sm"><a class="underline" href="https://registry.buildy.tw/svelte/components/ui/table.json">Svelte registry item (JSON)</a></p></section><section id="panel-react" data-panel data-runtime="react" data-label="React" aria-label="React" class="mb-8"><h3 class="mb-2 text-lg font-semibold">React</h3><p class="mb-2 text-sm text-muted-foreground">Point the CLI at this runtime once, then add the item:</p><div class="mb-2"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-react-init" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit init --yes --framework react --dir src --registry-url https://registry.buildy.tw/react --strict-cdn</code><button type="button" hidden data-copy="panel-react-init" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-react-add" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit add table</code><button type="button" hidden data-copy="panel-react-add" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/table/table-body.tsx</span><button type="button" hidden data-copy="code-react-0" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-react-0" class="font-mono">// Code generated by xgen. DO NOT EDIT.
+// Source: xgen/specs/ui/table.json
+/**
+ * TableBody: one part of Table (one file per part, as in the Svelte package).
+ */
+
+import { forwardRef, type ReactNode, type HTMLAttributes } from &#34;react&#34;;
+import { cn } from &#34;../../utils&#34;;
+
+/**
+ * TableBody renders the tbody section.
+ */
+export type TableBodyProps = Omit&lt;
+  HTMLAttributes&lt;HTMLTableSectionElement&gt;,
+  | &#34;className&#34; | &#34;children&#34;
+&gt; &amp; {
+  className?: string;
+  children?: ReactNode;
+};
+
+export const TableBody = forwardRef&lt;HTMLTableSectionElement, TableBodyProps&gt;(function TableBody(
+  { className, children, ...rest },
+  ref
+) {
+  const cls = cn(className);
+  return (
+    &lt;tbody ref={ref} className={cls || undefined} {...rest}&gt;
+      {children}
+    &lt;/tbody&gt;
+  );
+});
+TableBody.displayName = &#34;TableBody&#34;;
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/table/table-caption.tsx</span><button type="button" hidden data-copy="code-react-1" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-react-1" class="font-mono">// Code generated by xgen. DO NOT EDIT.
+// Source: xgen/specs/ui/table.json
+/**
+ * TableCaption: one part of Table (one file per part, as in the Svelte package).
+ */
+
+import { forwardRef, type ReactNode, type HTMLAttributes } from &#34;react&#34;;
+import { cn } from &#34;../../utils&#34;;
+
+/**
+ * TableCaption renders the table caption.
+ */
+export type TableCaptionProps = Omit&lt;
+  HTMLAttributes&lt;HTMLTableCaptionElement&gt;,
+  | &#34;className&#34; | &#34;children&#34;
+&gt; &amp; {
+  className?: string;
+  children?: ReactNode;
+};
+
+export const TableCaption = forwardRef&lt;HTMLTableCaptionElement, TableCaptionProps&gt;(function TableCaption(
+  { className, children, ...rest },
+  ref
+) {
+  const cls = cn(className);
+  return (
+    &lt;caption ref={ref} className={cls || undefined} {...rest}&gt;
+      {children}
+    &lt;/caption&gt;
+  );
+});
+TableCaption.displayName = &#34;TableCaption&#34;;
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/table/table-cell.tsx</span><button type="button" hidden data-copy="code-react-2" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-react-2" class="font-mono">// Code generated by xgen. DO NOT EDIT.
+// Source: xgen/specs/ui/table.json
+/**
+ * TableCell: one part of Table (one file per part, as in the Svelte package).
+ */
+
+import { forwardRef, type ReactNode, type TdHTMLAttributes } from &#34;react&#34;;
+import { cn, variants } from &#34;../../utils&#34;;
+import { isSetNum } from &#34;../../utils/expr&#34;;
+
+/** TableCell: the classes of each value of each prop (shadcn/cva style). */
+export const tableCellVariants = variants({
+  base: &#34;px-2 py-2 align-middle&#34;,
+  variants: {},
+  defaultVariants: {},
+});
+
+/**
+ * TableCell renders td with colspan and rowspan.
+ */
+export type TableCellProps = Omit&lt;
+  TdHTMLAttributes&lt;HTMLTableCellElement&gt;,
+  | &#34;className&#34; | &#34;children&#34; | &#34;scope&#34; | &#34;colSpan&#34; | &#34;rowSpan&#34; | &#34;abbr&#34;
+&gt; &amp; {
+  scope?: string;
+  colSpan?: number;
+  rowSpan?: number;
+  abbr?: string;
+  className?: string;
+  children?: ReactNode;
+};
+
+export const TableCell = forwardRef&lt;HTMLTableCellElement, TableCellProps&gt;(function TableCell(
+  { scope, colSpan, rowSpan, abbr, className, children, ...rest },
+  ref
+) {
+  const cls = cn(tableCellVariants(), className);
+  return (
+    &lt;td
+      ref={ref}
+      className={cls || undefined}
+      colSpan={isSetNum(colSpan) ? colSpan : undefined}
+      rowSpan={isSetNum(rowSpan) ? rowSpan : undefined}
+      {...rest}
+    &gt;
+      {children}
+    &lt;/td&gt;
+  );
+});
+TableCell.displayName = &#34;TableCell&#34;;
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/table/table-col-group.tsx</span><button type="button" hidden data-copy="code-react-3" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-react-3" class="font-mono">// Code generated by xgen. DO NOT EDIT.
+// Source: xgen/specs/ui/table.json
+/**
+ * TableColGroup: one part of Table (one file per part, as in the Svelte package).
+ */
+
+import { forwardRef, type ReactNode, type ColgroupHTMLAttributes } from &#34;react&#34;;
+import { cn } from &#34;../../utils&#34;;
+import { isSetNum } from &#34;../../utils/expr&#34;;
+
+/**
+ * TableColGroup renders colgroup with optional span.
+ */
+export type TableColGroupProps = Omit&lt;
+  ColgroupHTMLAttributes&lt;HTMLTableColElement&gt;,
+  | &#34;className&#34; | &#34;children&#34; | &#34;span&#34;
+&gt; &amp; {
+  span?: number;
+  className?: string;
+  children?: ReactNode;
+};
+
+export const TableColGroup = forwardRef&lt;HTMLTableColElement, TableColGroupProps&gt;(function TableColGroup(
+  { span, className, children, ...rest },
+  ref
+) {
+  const cls = cn(className);
+  return (
+    &lt;colgroup ref={ref} className={cls || undefined} span={isSetNum(span) ? span : undefined} {...rest}&gt;
+      {children}
+    &lt;/colgroup&gt;
+  );
+});
+TableColGroup.displayName = &#34;TableColGroup&#34;;
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/table/table-col.tsx</span><button type="button" hidden data-copy="code-react-4" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-react-4" class="font-mono">// Code generated by xgen. DO NOT EDIT.
+// Source: xgen/specs/ui/table.json
+/**
+ * TableCol: one part of Table (one file per part, as in the Svelte package).
+ */
+
+import { forwardRef, type ReactNode, type ColHTMLAttributes } from &#34;react&#34;;
+import { cn } from &#34;../../utils&#34;;
+import { isSetNum } from &#34;../../utils/expr&#34;;
+
+/**
+ * TableCol renders a single col definition.
+ */
+export type TableColProps = Omit&lt;
+  ColHTMLAttributes&lt;HTMLTableColElement&gt;,
+  | &#34;className&#34; | &#34;children&#34; | &#34;span&#34;
+&gt; &amp; {
+  span?: number;
+  className?: string;
+};
+
+export const TableCol = forwardRef&lt;HTMLTableColElement, TableColProps&gt;(function TableCol(
+  { span, className, ...rest },
+  ref
+) {
+  const cls = cn(className);
+  return (
+    &lt;col ref={ref} className={cls || undefined} span={isSetNum(span) ? span : undefined} {...rest} /&gt;
+  );
+});
+TableCol.displayName = &#34;TableCol&#34;;
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/table/table-foot.tsx</span><button type="button" hidden data-copy="code-react-5" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-react-5" class="font-mono">// Code generated by xgen. DO NOT EDIT.
+// Source: xgen/specs/ui/table.json
+/**
+ * TableFoot: one part of Table (one file per part, as in the Svelte package).
+ */
+
+import { forwardRef, type ReactNode, type HTMLAttributes } from &#34;react&#34;;
+import { cn } from &#34;../../utils&#34;;
+
+/**
+ * TableFoot renders the tfoot section.
+ */
+export type TableFootProps = Omit&lt;
+  HTMLAttributes&lt;HTMLTableSectionElement&gt;,
+  | &#34;className&#34; | &#34;children&#34;
+&gt; &amp; {
+  className?: string;
+  children?: ReactNode;
+};
+
+export const TableFoot = forwardRef&lt;HTMLTableSectionElement, TableFootProps&gt;(function TableFoot(
+  { className, children, ...rest },
+  ref
+) {
+  const cls = cn(className);
+  return (
+    &lt;tfoot ref={ref} className={cls || undefined} {...rest}&gt;
+      {children}
+    &lt;/tfoot&gt;
+  );
+});
+TableFoot.displayName = &#34;TableFoot&#34;;
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/table/table-head-cell.tsx</span><button type="button" hidden data-copy="code-react-6" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-react-6" class="font-mono">// Code generated by xgen. DO NOT EDIT.
+// Source: xgen/specs/ui/table.json
+/**
+ * TableHeadCell: one part of Table (one file per part, as in the Svelte package).
+ */
+
+import { forwardRef, type ReactNode, type ThHTMLAttributes } from &#34;react&#34;;
+import { cn, variants } from &#34;../../utils&#34;;
+import { isSetNum, oneOfOrLower, orUndef } from &#34;../../utils/expr&#34;;
+
+/** TableHeadCell: the classes of each value of each prop (shadcn/cva style). */
+export const tableHeadCellVariants = variants({
+  base: &#34;px-2 py-2 text-left align-middle font-semibold&#34;,
+  variants: {},
+  defaultVariants: {},
+});
+
+/**
+ * TableHeadCell renders th with optional scope and abbr.
+ */
+export type TableHeadCellProps = Omit&lt;
+  ThHTMLAttributes&lt;HTMLTableCellElement&gt;,
+  | &#34;className&#34; | &#34;children&#34; | &#34;scope&#34; | &#34;colSpan&#34; | &#34;rowSpan&#34; | &#34;abbr&#34;
+&gt; &amp; {
+  scope?: string;
+  colSpan?: number;
+  rowSpan?: number;
+  abbr?: string;
+  className?: string;
+  children?: ReactNode;
+};
+
+export const TableHeadCell = forwardRef&lt;HTMLTableCellElement, TableHeadCellProps&gt;(function TableHeadCell(
+  { scope, colSpan, rowSpan, abbr, className, children, ...rest },
+  ref
+) {
+  const cls = cn(tableHeadCellVariants(), className);
+  return (
+    &lt;th
+      ref={ref}
+      className={cls || undefined}
+      scope={orUndef(oneOfOrLower(scope, &#34;&#34;, &#34;col&#34;, &#34;colgroup&#34;, &#34;row&#34;, &#34;rowgroup&#34;))}
+      abbr={orUndef(abbr)}
+      colSpan={isSetNum(colSpan) ? colSpan : undefined}
+      rowSpan={isSetNum(rowSpan) ? rowSpan : undefined}
+      {...rest}
+    &gt;
+      {children}
+    &lt;/th&gt;
+  );
+});
+TableHeadCell.displayName = &#34;TableHeadCell&#34;;
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/table/table-head.tsx</span><button type="button" hidden data-copy="code-react-7" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-react-7" class="font-mono">// Code generated by xgen. DO NOT EDIT.
+// Source: xgen/specs/ui/table.json
+/**
+ * TableHead: one part of Table (one file per part, as in the Svelte package).
+ */
+
+import { forwardRef, type ReactNode, type HTMLAttributes } from &#34;react&#34;;
+import { cn } from &#34;../../utils&#34;;
+
+/**
+ * TableHead renders the thead section.
+ */
+export type TableHeadProps = Omit&lt;
+  HTMLAttributes&lt;HTMLTableSectionElement&gt;,
+  | &#34;className&#34; | &#34;children&#34;
+&gt; &amp; {
+  className?: string;
+  children?: ReactNode;
+};
+
+export const TableHead = forwardRef&lt;HTMLTableSectionElement, TableHeadProps&gt;(function TableHead(
+  { className, children, ...rest },
+  ref
+) {
+  const cls = cn(className);
+  return (
+    &lt;thead ref={ref} className={cls || undefined} {...rest}&gt;
+      {children}
+    &lt;/thead&gt;
+  );
+});
+TableHead.displayName = &#34;TableHead&#34;;
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/table/table-row.tsx</span><button type="button" hidden data-copy="code-react-8" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-react-8" class="font-mono">// Code generated by xgen. DO NOT EDIT.
+// Source: xgen/specs/ui/table.json
+/**
+ * TableRow: one part of Table (one file per part, as in the Svelte package).
+ */
+
+import { forwardRef, type ReactNode, type HTMLAttributes } from &#34;react&#34;;
+import { cn } from &#34;../../utils&#34;;
+
+/**
+ * TableRow renders one tr row.
+ */
+export type TableRowProps = Omit&lt;HTMLAttributes&lt;HTMLTableRowElement&gt;, &#34;className&#34; | &#34;children&#34;&gt; &amp; {
+  className?: string;
+  children?: ReactNode;
+};
+
+export const TableRow = forwardRef&lt;HTMLTableRowElement, TableRowProps&gt;(function TableRow(
+  { className, children, ...rest },
+  ref
+) {
+  const cls = cn(className);
+  return (
+    &lt;tr ref={ref} className={cls || undefined} {...rest}&gt;
+      {children}
+    &lt;/tr&gt;
+  );
+});
+TableRow.displayName = &#34;TableRow&#34;;
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/table/table.tsx</span><button type="button" hidden data-copy="code-react-9" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-react-9" class="font-mono">// Code generated by xgen. DO NOT EDIT.
+// Source: xgen/specs/ui/table.json
+/**
+ * Table composes semantic table, caption, sections, rows, and cells.
+ * Supports scope, colspan, and headers attrs on head cells.
+ */
+
+import { forwardRef, type ReactNode, type TableHTMLAttributes } from &#34;react&#34;;
+import { cn } from &#34;../../utils&#34;;
+
+/**
+ * Table renders the root table element.
+ */
+export type TableProps = Omit&lt;TableHTMLAttributes&lt;HTMLTableElement&gt;, &#34;className&#34; | &#34;children&#34;&gt; &amp; {
+  className?: string;
+  children?: ReactNode;
+};
+
+export const Table = forwardRef&lt;HTMLTableElement, TableProps&gt;(function Table(
+  { className, children, ...rest },
+  ref
+) {
+  const cls = cn(className);
+  return (
+    &lt;table ref={ref} className={cls || undefined} {...rest}&gt;
+      {children}
+    &lt;/table&gt;
+  );
+});
+Table.displayName = &#34;Table&#34;;
+</code></pre></div><p class="text-sm"><a class="underline" href="https://registry.buildy.tw/react/components/ui/table.json">React registry item (JSON)</a></p></section><section id="panel-vue" data-panel data-runtime="vue" data-label="Vue" aria-label="Vue" class="mb-8"><h3 class="mb-2 text-lg font-semibold">Vue</h3><p class="mb-2 text-sm text-muted-foreground">Point the CLI at this runtime once, then add the item:</p><div class="mb-2"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-vue-init" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit init --yes --framework vue --dir src --registry-url https://registry.buildy.tw/vue --strict-cdn</code><button type="button" hidden data-copy="panel-vue-init" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-vue-add" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit add table</code><button type="button" hidden data-copy="panel-vue-add" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/table/table-body.vue</span><button type="button" hidden data-copy="code-vue-0" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-vue-0" class="font-mono">&lt;!-- Code generated by xgen. DO NOT EDIT. --&gt;
+&lt;!-- Source: xgen/specs/ui/table.json --&gt;
+&lt;!--
+  TableBody renders the tbody section.
+--&gt;
+&lt;script lang=&#34;ts&#34;&gt;
+export type TableBodyProps = {
+  class?: string;
+};
+&lt;/script&gt;
+
+&lt;script setup lang=&#34;ts&#34;&gt;
+import { computed, useAttrs } from &#34;vue&#34;;
+import { cn } from &#34;../../utils&#34;;
+
+defineOptions({ inheritAttrs: false });
+defineSlots&lt;{ default?(): unknown }&gt;();
+const { class: className } = defineProps&lt;TableBodyProps&gt;();
+const attrs = useAttrs();
+const cls = computed(() =&gt; cn(className));
+&lt;/script&gt;
+
+&lt;template&gt;
+  &lt;tbody :class=&#34;cls || undefined&#34; v-bind=&#34;attrs&#34;&gt;
+    &lt;slot /&gt;
+  &lt;/tbody&gt;
+&lt;/template&gt;
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/table/table-caption.vue</span><button type="button" hidden data-copy="code-vue-1" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-vue-1" class="font-mono">&lt;!-- Code generated by xgen. DO NOT EDIT. --&gt;
+&lt;!-- Source: xgen/specs/ui/table.json --&gt;
+&lt;!--
+  TableCaption renders the table caption.
+--&gt;
+&lt;script lang=&#34;ts&#34;&gt;
+export type TableCaptionProps = {
+  class?: string;
+};
+&lt;/script&gt;
+
+&lt;script setup lang=&#34;ts&#34;&gt;
+import { computed, useAttrs } from &#34;vue&#34;;
+import { cn } from &#34;../../utils&#34;;
+
+defineOptions({ inheritAttrs: false });
+defineSlots&lt;{ default?(): unknown }&gt;();
+const { class: className } = defineProps&lt;TableCaptionProps&gt;();
+const attrs = useAttrs();
+const cls = computed(() =&gt; cn(className));
+&lt;/script&gt;
+
+&lt;template&gt;
+  &lt;caption :class=&#34;cls || undefined&#34; v-bind=&#34;attrs&#34;&gt;
+    &lt;slot /&gt;
+  &lt;/caption&gt;
+&lt;/template&gt;
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/table/table-cell.vue</span><button type="button" hidden data-copy="code-vue-2" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-vue-2" class="font-mono">&lt;!-- Code generated by xgen. DO NOT EDIT. --&gt;
+&lt;!-- Source: xgen/specs/ui/table.json --&gt;
+&lt;!--
+  TableCell renders td with colspan and rowspan.
+--&gt;
+&lt;script lang=&#34;ts&#34;&gt;
+import { variants } from &#34;../../utils&#34;;
+
+/** TableCell: the classes of each value of each prop (shadcn/cva style). */
+export const tableCellVariants = variants({
+  base: &#34;px-2 py-2 align-middle&#34;,
+  variants: {},
+  defaultVariants: {},
+});
+
+export type TableCellProps = {
+  scope?: string;
+  colspan?: number;
+  rowspan?: number;
+  abbr?: string;
+  class?: string;
+};
+&lt;/script&gt;
+
+&lt;script setup lang=&#34;ts&#34;&gt;
+import { computed, useAttrs } from &#34;vue&#34;;
+import { cn } from &#34;../../utils&#34;;
+import { isSetNum } from &#34;../../utils/expr&#34;;
+
+defineOptions({ inheritAttrs: false });
+defineSlots&lt;{ default?(): unknown }&gt;();
+const { scope, colspan: colSpan, rowspan: rowSpan, abbr, class: className } = defineProps&lt;TableCellProps&gt;();
+const attrs = useAttrs();
+const cls = computed(() =&gt; cn(tableCellVariants(), className));
+&lt;/script&gt;
+
+&lt;template&gt;
+  &lt;td
+    :class=&#34;cls || undefined&#34;
+    :colspan=&#34;isSetNum(colSpan) ? String(colSpan ?? 0) : undefined&#34;
+    :rowspan=&#34;isSetNum(rowSpan) ? String(rowSpan ?? 0) : undefined&#34;
+    v-bind=&#34;attrs&#34;
+  &gt;
+    &lt;slot /&gt;
+  &lt;/td&gt;
+&lt;/template&gt;
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/table/table-col-group.vue</span><button type="button" hidden data-copy="code-vue-3" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-vue-3" class="font-mono">&lt;!-- Code generated by xgen. DO NOT EDIT. --&gt;
+&lt;!-- Source: xgen/specs/ui/table.json --&gt;
+&lt;!--
+  TableColGroup renders colgroup with optional span.
+--&gt;
+&lt;script lang=&#34;ts&#34;&gt;
+export type TableColGroupProps = {
+  span?: number;
+  class?: string;
+};
+&lt;/script&gt;
+
+&lt;script setup lang=&#34;ts&#34;&gt;
+import { computed, useAttrs } from &#34;vue&#34;;
+import { cn } from &#34;../../utils&#34;;
+import { isSetNum } from &#34;../../utils/expr&#34;;
+
+defineOptions({ inheritAttrs: false });
+defineSlots&lt;{ default?(): unknown }&gt;();
+const { span, class: className } = defineProps&lt;TableColGroupProps&gt;();
+const attrs = useAttrs();
+const cls = computed(() =&gt; cn(className));
+&lt;/script&gt;
+
+&lt;template&gt;
+  &lt;colgroup
+    :class=&#34;cls || undefined&#34;
+    :span=&#34;isSetNum(span) ? String(span ?? 0) : undefined&#34;
+    v-bind=&#34;attrs&#34;
+  &gt;
+    &lt;slot /&gt;
+  &lt;/colgroup&gt;
+&lt;/template&gt;
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/table/table-col.vue</span><button type="button" hidden data-copy="code-vue-4" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-vue-4" class="font-mono">&lt;!-- Code generated by xgen. DO NOT EDIT. --&gt;
+&lt;!-- Source: xgen/specs/ui/table.json --&gt;
+&lt;!--
+  TableCol renders a single col definition.
+--&gt;
+&lt;script lang=&#34;ts&#34;&gt;
+export type TableColProps = {
+  span?: number;
+  class?: string;
+};
+&lt;/script&gt;
+
+&lt;script setup lang=&#34;ts&#34;&gt;
+import { computed, useAttrs } from &#34;vue&#34;;
+import { cn } from &#34;../../utils&#34;;
+import { isSetNum } from &#34;../../utils/expr&#34;;
+
+defineOptions({ inheritAttrs: false });
+const { span, class: className } = defineProps&lt;TableColProps&gt;();
+const attrs = useAttrs();
+const cls = computed(() =&gt; cn(className));
+&lt;/script&gt;
+
+&lt;template&gt;
+  &lt;col
+    :class=&#34;cls || undefined&#34;
+    :span=&#34;isSetNum(span) ? String(span ?? 0) : undefined&#34;
+    v-bind=&#34;attrs&#34;
+  /&gt;
+&lt;/template&gt;
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/table/table-foot.vue</span><button type="button" hidden data-copy="code-vue-5" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-vue-5" class="font-mono">&lt;!-- Code generated by xgen. DO NOT EDIT. --&gt;
+&lt;!-- Source: xgen/specs/ui/table.json --&gt;
+&lt;!--
+  TableFoot renders the tfoot section.
+--&gt;
+&lt;script lang=&#34;ts&#34;&gt;
+export type TableFootProps = {
+  class?: string;
+};
+&lt;/script&gt;
+
+&lt;script setup lang=&#34;ts&#34;&gt;
+import { computed, useAttrs } from &#34;vue&#34;;
+import { cn } from &#34;../../utils&#34;;
+
+defineOptions({ inheritAttrs: false });
+defineSlots&lt;{ default?(): unknown }&gt;();
+const { class: className } = defineProps&lt;TableFootProps&gt;();
+const attrs = useAttrs();
+const cls = computed(() =&gt; cn(className));
+&lt;/script&gt;
+
+&lt;template&gt;
+  &lt;tfoot :class=&#34;cls || undefined&#34; v-bind=&#34;attrs&#34;&gt;
+    &lt;slot /&gt;
+  &lt;/tfoot&gt;
+&lt;/template&gt;
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/table/table-head-cell.vue</span><button type="button" hidden data-copy="code-vue-6" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-vue-6" class="font-mono">&lt;!-- Code generated by xgen. DO NOT EDIT. --&gt;
+&lt;!-- Source: xgen/specs/ui/table.json --&gt;
+&lt;!--
+  TableHeadCell renders th with optional scope and abbr.
+--&gt;
+&lt;script lang=&#34;ts&#34;&gt;
+import { variants } from &#34;../../utils&#34;;
+
+/** TableHeadCell: the classes of each value of each prop (shadcn/cva style). */
+export const tableHeadCellVariants = variants({
+  base: &#34;px-2 py-2 text-left align-middle font-semibold&#34;,
+  variants: {},
+  defaultVariants: {},
+});
+
+export type TableHeadCellProps = {
+  scope?: string;
+  colspan?: number;
+  rowspan?: number;
+  abbr?: string;
+  class?: string;
+};
+&lt;/script&gt;
+
+&lt;script setup lang=&#34;ts&#34;&gt;
+import { computed, useAttrs } from &#34;vue&#34;;
+import { cn } from &#34;../../utils&#34;;
+import { isSetNum, oneOfOrLower, orUndef } from &#34;../../utils/expr&#34;;
+
+defineOptions({ inheritAttrs: false });
+defineSlots&lt;{ default?(): unknown }&gt;();
+const {
+  scope,
+  colspan: colSpan,
+  rowspan: rowSpan,
+  abbr,
+  class: className,
+} = defineProps&lt;TableHeadCellProps&gt;();
+const attrs = useAttrs();
+const cls = computed(() =&gt; cn(tableHeadCellVariants(), className));
+&lt;/script&gt;
+
+&lt;template&gt;
+  &lt;th
+    :class=&#34;cls || undefined&#34;
+    :scope=&#34;orUndef(oneOfOrLower(scope, &#39;&#39;, &#39;col&#39;, &#39;colgroup&#39;, &#39;row&#39;, &#39;rowgroup&#39;))&#34;
+    :abbr=&#34;orUndef(abbr)&#34;
+    :colspan=&#34;isSetNum(colSpan) ? String(colSpan ?? 0) : undefined&#34;
+    :rowspan=&#34;isSetNum(rowSpan) ? String(rowSpan ?? 0) : undefined&#34;
+    v-bind=&#34;attrs&#34;
+  &gt;
+    &lt;slot /&gt;
+  &lt;/th&gt;
+&lt;/template&gt;
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/table/table-head.vue</span><button type="button" hidden data-copy="code-vue-7" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-vue-7" class="font-mono">&lt;!-- Code generated by xgen. DO NOT EDIT. --&gt;
+&lt;!-- Source: xgen/specs/ui/table.json --&gt;
+&lt;!--
+  TableHead renders the thead section.
+--&gt;
+&lt;script lang=&#34;ts&#34;&gt;
+export type TableHeadProps = {
+  class?: string;
+};
+&lt;/script&gt;
+
+&lt;script setup lang=&#34;ts&#34;&gt;
+import { computed, useAttrs } from &#34;vue&#34;;
+import { cn } from &#34;../../utils&#34;;
+
+defineOptions({ inheritAttrs: false });
+defineSlots&lt;{ default?(): unknown }&gt;();
+const { class: className } = defineProps&lt;TableHeadProps&gt;();
+const attrs = useAttrs();
+const cls = computed(() =&gt; cn(className));
+&lt;/script&gt;
+
+&lt;template&gt;
+  &lt;thead :class=&#34;cls || undefined&#34; v-bind=&#34;attrs&#34;&gt;
+    &lt;slot /&gt;
+  &lt;/thead&gt;
+&lt;/template&gt;
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/table/table-row.vue</span><button type="button" hidden data-copy="code-vue-8" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-vue-8" class="font-mono">&lt;!-- Code generated by xgen. DO NOT EDIT. --&gt;
+&lt;!-- Source: xgen/specs/ui/table.json --&gt;
+&lt;!--
+  TableRow renders one tr row.
+--&gt;
+&lt;script lang=&#34;ts&#34;&gt;
+export type TableRowProps = {
+  class?: string;
+};
+&lt;/script&gt;
+
+&lt;script setup lang=&#34;ts&#34;&gt;
+import { computed, useAttrs } from &#34;vue&#34;;
+import { cn } from &#34;../../utils&#34;;
+
+defineOptions({ inheritAttrs: false });
+defineSlots&lt;{ default?(): unknown }&gt;();
+const { class: className } = defineProps&lt;TableRowProps&gt;();
+const attrs = useAttrs();
+const cls = computed(() =&gt; cn(className));
+&lt;/script&gt;
+
+&lt;template&gt;
+  &lt;tr :class=&#34;cls || undefined&#34; v-bind=&#34;attrs&#34;&gt;
+    &lt;slot /&gt;
+  &lt;/tr&gt;
+&lt;/template&gt;
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/table/table.vue</span><button type="button" hidden data-copy="code-vue-9" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-vue-9" class="font-mono">&lt;!-- Code generated by xgen. DO NOT EDIT. --&gt;
+&lt;!-- Source: xgen/specs/ui/table.json --&gt;
+&lt;!--
+  Table renders the root table element.
+--&gt;
+&lt;script lang=&#34;ts&#34;&gt;
+export type TableProps = {
+  class?: string;
+};
+&lt;/script&gt;
+
+&lt;script setup lang=&#34;ts&#34;&gt;
+import { computed, useAttrs } from &#34;vue&#34;;
+import { cn } from &#34;../../utils&#34;;
+
+defineOptions({ inheritAttrs: false });
+defineSlots&lt;{ default?(): unknown }&gt;();
+const { class: className } = defineProps&lt;TableProps&gt;();
+const attrs = useAttrs();
+const cls = computed(() =&gt; cn(className));
+&lt;/script&gt;
+
+&lt;template&gt;
+  &lt;table :class=&#34;cls || undefined&#34; v-bind=&#34;attrs&#34;&gt;
+    &lt;slot /&gt;
+  &lt;/table&gt;
+&lt;/template&gt;
+</code></pre></div><p class="text-sm"><a class="underline" href="https://registry.buildy.tw/vue/components/ui/table.json">Vue registry item (JSON)</a></p></section></div></article></main></div><footer class="border-t border-border"><div class="mx-auto max-w-6xl px-4 py-8 text-sm text-muted-foreground">ui8kit, MIT licence. Static docs generated from markdown and the registry (<a class="underline" href="https://registry.buildy.tw/registry.json">registry.json</a>).</div></footer></body></html>

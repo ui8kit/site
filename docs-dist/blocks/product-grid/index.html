@@ -1,0 +1,256 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Product Grid (block) | ui8kit</title><meta name="description" content="Products as cards in a grid, a list or a rail that scrolls sideways."><link rel="canonical" href="https://ui.buildy.tw/blocks/product-grid/"><link rel="stylesheet" href="/assets/site.css"><script src="/assets/app.js" defer></script></head><body class="min-h-screen bg-background text-foreground font-sans"><a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:left-2 focus:top-2 focus:bg-background focus:px-4 focus:py-2 focus:z-50">Skip to content</a><header class="border-b border-border"><div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-4 py-4"><a href="/" class="text-lg font-semibold">ui8kit</a><nav aria-label="Main" class="flex items-center gap-4 text-sm"><a href="/docs/" class="hover:underline">Docs</a> <a href="/docs/categories/blocks-marketing/" class="hover:underline">Blocks</a> <a href="/docs/categories/primitives/" class="hover:underline">Primitives</a> <a href="/docs/cli/" class="hover:underline">CLI</a></nav><form id="search" role="search" class="relative w-full sm:w-72" data-index="/search-index.json"><label for="search-input" class="sr-only">Search components and blocks</label> <input id="search-input" type="search" autocomplete="off" placeholder="Search, press /" class="h-10 w-full rounded border border-input bg-card px-4 text-sm"><ul id="search-results" hidden class="absolute left-0 right-0 top-12 z-40 rounded border border-border bg-popover text-popover-foreground shadow-md" aria-live="polite"></ul></form></div></header><div class="mx-auto flex max-w-6xl flex-col gap-8 px-4 py-8 md:flex-row"><nav aria-label="Docs" class="md:w-64 md:shrink-0"><h2 class="mb-2 text-sm font-semibold">Guides</h2><ul class="mb-6 flex flex-col gap-1"><li><a href="/docs/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Overview</a></li><li><a href="/docs/getting-started/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Getting started</a></li><li><a href="/docs/installation/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Installation</a></li><li><a href="/docs/cli/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">CLI</a></li><li><a href="/docs/theming-skins/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Theming and skins</a></li><li><a href="/docs/grid-8px/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">The 8px grid</a></li></ul><h2 class="mb-2 text-sm font-semibold">Categories</h2><ul class="mb-6 flex flex-col gap-1"><li><a href="/docs/categories/primitives/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Primitives</a></li><li><a href="/docs/categories/components/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Components</a></li><li><a href="/docs/categories/blocks-marketing/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: marketing</a></li><li><a href="/docs/categories/blocks-commerce/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: commerce</a></li><li><a href="/docs/categories/blocks-dashboard/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: dashboard</a></li><li><a href="/docs/categories/blocks-content/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: content</a></li><li><a href="/docs/categories/blocks-account/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: account</a></li><li><a href="/docs/categories/blocks-promo/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: promo</a></li><li><a href="/docs/categories/blocks-support/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: support</a></li><li><a href="/docs/categories/blocks-onboarding/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: onboarding</a></li><li><a href="/docs/categories/blocks-general/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: general</a></li></ul></nav><main id="main" class="min-w-0 flex-1"><article><p class="text-sm text-muted-foreground"><a class="underline" href="/docs/categories/blocks-commerce/">block / commerce</a></p><h1 class="mb-2 text-3xl font-semibold tracking-tight">Product Grid</h1><p class="mb-6 max-w-3xl text-muted-foreground">Products as cards in a grid, a list or a rail that scrolls sideways.</p><h2 class="mb-2 text-xl font-semibold">Install</h2><div class="mb-6 max-w-xl"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="install-product-grid" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit add product-grid</code><button type="button" hidden data-copy="install-product-grid" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><p class="mb-6 text-sm text-muted-foreground">Pulls in:  <a class="underline" href="/primitives/box/">box</a><span>, </span> <a class="underline" href="/primitives/grid/">grid</a><span>, </span> <a class="underline" href="/blocks/product-card/">product-card</a><span>, </span> <a class="underline" href="/components/section-frame/">section-frame</a><span>, </span> <a class="underline" href="/lib/utils/">utils</a></p><h2 class="mb-2 text-xl font-semibold">Code</h2><div data-tabs><section id="panel-svelte" data-panel data-runtime="svelte" data-label="Svelte" aria-label="Svelte" class="mb-8"><h3 class="mb-2 text-lg font-semibold">Svelte</h3><p class="mb-2 text-sm text-muted-foreground">Point the CLI at this runtime once, then add the item:</p><div class="mb-2"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-svelte-init" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit init --yes --framework svelte --dir src --registry-url https://registry.buildy.tw/svelte --strict-cdn</code><button type="button" hidden data-copy="panel-svelte-init" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-svelte-add" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit add product-grid</code><button type="button" hidden data-copy="panel-svelte-add" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">blocks/product-grid.svelte</span><button type="button" hidden data-copy="code-svelte-0" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-svelte-0" class="font-mono">&lt;!-- Code generated by xgen. DO NOT EDIT. --&gt;
+&lt;!-- Source: xgen/screens/src/authoring/blocks/commerce.ts --&gt;
+&lt;!--
+  A section with a heading and the products as cards in a grid, as a list of horizontal cards, or as a rail that
+  scrolls sideways. Axes: layout (grid, list, rail), columns, ratio, rating, action, tone, density.
+--&gt;
+&lt;script lang=&#34;ts&#34; module&gt;
+  import type { Snippet } from &#34;svelte&#34;;
+  import type { Product, ProductLabels } from &#34;./product-card.types&#34;;
+
+  export type ProductGridProps = {
+    id: string;
+    title: string;
+    products: Product[];
+    labels: ProductLabels;
+    badges: Record&lt;string, string&gt;;
+    layout?: &#34;grid&#34; | &#34;list&#34; | &#34;rail&#34;;
+    cols?: &#34;1-2&#34; | &#34;1-3&#34; | &#34;1-4&#34;;
+    ratio?: &#34;4/3&#34; | &#34;1/1&#34; | &#34;3/4&#34;;
+    rating?: &#34;show&#34; | &#34;hide&#34;;
+    action?: &#34;button&#34; | &#34;none&#34;;
+    tone?: &#34;default&#34; | &#34;muted&#34;;
+    density?: &#34;roomy&#34; | &#34;default&#34; | &#34;compact&#34;;
+    onadd?: (id: string) =&gt; void;
+  };
+&lt;/script&gt;
+
+&lt;script lang=&#34;ts&#34;&gt;
+  import Box from &#34;../primitives/box/box.svelte&#34;;
+  import Grid from &#34;../primitives/grid/grid.svelte&#34;;
+  import ProductCard from &#34;../blocks/product-card.svelte&#34;;
+  import SectionFrame from &#34;../components/section-frame.svelte&#34;;
+
+  let {
+    id,
+    title,
+    products,
+    labels,
+    badges,
+    layout = &#34;grid&#34;,
+    cols = &#34;1-3&#34;,
+    ratio = &#34;4/3&#34;,
+    rating = &#34;show&#34;,
+    action = &#34;button&#34;,
+    tone = &#34;default&#34;,
+    density = &#34;default&#34;,
+    onadd,
+  }: ProductGridProps = $props();
+&lt;/script&gt;
+
+&lt;SectionFrame id={id} title={title} tone={tone} density={density}&gt;
+  {#if ((layout as string) === &#34;rail&#34;)}
+    &lt;Box class=&#34;flex snap-x gap-4 overflow-x-auto pb-4&#34; data-testid=&#34;items&#34;&gt;
+      {#each products as p (p.id)}
+        &lt;Box class=&#34;w-64 shrink-0 snap-start&#34;&gt;
+          &lt;ProductCard
+            product={p}
+            labels={labels}
+            badges={badges}
+            layout={(((layout as string) === &#34;list&#34;) ? &#34;horizontal&#34; : &#34;vertical&#34;)}
+            ratio={ratio}
+            rating={rating}
+            action={action}
+            density={(((density as string) === &#34;compact&#34;) ? &#34;compact&#34; : &#34;default&#34;)}
+            onadd={() =&gt; onadd?.(p.id)}
+          /&gt;
+        &lt;/Box&gt;
+      {/each}
+    &lt;/Box&gt;
+  {:else}
+    &lt;Grid cols={(((layout as string) === &#34;list&#34;) ? &#34;1&#34; : cols)} class=&#34;gap-4&#34; data-testid=&#34;items&#34;&gt;
+      {#each products as p (p.id)}
+        &lt;ProductCard
+          product={p}
+          labels={labels}
+          badges={badges}
+          layout={(((layout as string) === &#34;list&#34;) ? &#34;horizontal&#34; : &#34;vertical&#34;)}
+          ratio={ratio}
+          rating={rating}
+          action={action}
+          density={(((density as string) === &#34;compact&#34;) ? &#34;compact&#34; : &#34;default&#34;)}
+          onadd={() =&gt; onadd?.(p.id)}
+        /&gt;
+      {/each}
+    &lt;/Grid&gt;
+  {/if}
+&lt;/SectionFrame&gt;
+</code></pre></div><p class="text-sm"><a class="underline" href="https://registry.buildy.tw/svelte/blocks/product-grid.json">Svelte registry item (JSON)</a></p></section><section id="panel-react" data-panel data-runtime="react" data-label="React" aria-label="React" class="mb-8"><h3 class="mb-2 text-lg font-semibold">React</h3><p class="mb-2 text-sm text-muted-foreground">Point the CLI at this runtime once, then add the item:</p><div class="mb-2"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-react-init" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit init --yes --framework react --dir src --registry-url https://registry.buildy.tw/react --strict-cdn</code><button type="button" hidden data-copy="panel-react-init" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-react-add" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit add product-grid</code><button type="button" hidden data-copy="panel-react-add" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">blocks/product-grid.tsx</span><button type="button" hidden data-copy="code-react-0" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-react-0" class="font-mono">// Code generated by xgen. DO NOT EDIT.
+// Source: xgen/screens/src/authoring/blocks/commerce.ts
+/**
+ * A section with a heading and the products as cards in a grid, as a list of horizontal cards, or as a rail that
+ * scrolls sideways. Axes: layout (grid, list, rail), columns, ratio, rating, action, tone, density.
+ */
+import { type ReactNode } from &#34;react&#34;;
+import { Box } from &#34;../primitives/box/box&#34;;
+import { Grid } from &#34;../primitives/grid/grid&#34;;
+import { ProductCard } from &#34;../blocks/product-card&#34;;
+import { SectionFrame } from &#34;../components/section-frame&#34;;
+import type { Product, ProductLabels } from &#34;./product-card.types&#34;;
+
+export type ProductGridProps = {
+  id: string;
+  title: string;
+  products: Product[];
+  labels: ProductLabels;
+  badges: Record&lt;string, string&gt;;
+  layout?: &#34;grid&#34; | &#34;list&#34; | &#34;rail&#34;;
+  cols?: &#34;1-2&#34; | &#34;1-3&#34; | &#34;1-4&#34;;
+  ratio?: &#34;4/3&#34; | &#34;1/1&#34; | &#34;3/4&#34;;
+  rating?: &#34;show&#34; | &#34;hide&#34;;
+  action?: &#34;button&#34; | &#34;none&#34;;
+  tone?: &#34;default&#34; | &#34;muted&#34;;
+  density?: &#34;roomy&#34; | &#34;default&#34; | &#34;compact&#34;;
+  onAdd?: (id: string) =&gt; void;
+};
+
+export function ProductGrid({
+  id,
+  title,
+  products,
+  labels,
+  badges,
+  layout = &#34;grid&#34;,
+  cols = &#34;1-3&#34;,
+  ratio = &#34;4/3&#34;,
+  rating = &#34;show&#34;,
+  action = &#34;button&#34;,
+  tone = &#34;default&#34;,
+  density = &#34;default&#34;,
+  onAdd,
+}: ProductGridProps) {
+  return (
+    &lt;SectionFrame id={id} title={title} tone={tone} density={density}&gt;
+      {((layout as string) === &#34;rail&#34;) ? (
+        &lt;Box className=&#34;flex snap-x gap-4 overflow-x-auto pb-4&#34; data-testid=&#34;items&#34;&gt;
+          {(products ?? []).map((p) =&gt; (
+            &lt;Box key={p.id} className=&#34;w-64 shrink-0 snap-start&#34;&gt;
+              &lt;ProductCard
+                product={p}
+                labels={labels}
+                badges={badges}
+                layout={(((layout as string) === &#34;list&#34;) ? &#34;horizontal&#34; : &#34;vertical&#34;)}
+                ratio={ratio}
+                rating={rating}
+                action={action}
+                density={(((density as string) === &#34;compact&#34;) ? &#34;compact&#34; : &#34;default&#34;)}
+                onAdd={() =&gt; onAdd?.(p.id)}
+              /&gt;
+            &lt;/Box&gt;
+          ))}
+        &lt;/Box&gt;
+      ) : (
+        &lt;Grid cols={(((layout as string) === &#34;list&#34;) ? &#34;1&#34; : cols)} className=&#34;gap-4&#34; data-testid=&#34;items&#34;&gt;
+          {(products ?? []).map((p) =&gt; (
+            &lt;ProductCard key={p.id}
+              product={p}
+              labels={labels}
+              badges={badges}
+              layout={(((layout as string) === &#34;list&#34;) ? &#34;horizontal&#34; : &#34;vertical&#34;)}
+              ratio={ratio}
+              rating={rating}
+              action={action}
+              density={(((density as string) === &#34;compact&#34;) ? &#34;compact&#34; : &#34;default&#34;)}
+              onAdd={() =&gt; onAdd?.(p.id)}
+            /&gt;
+          ))}
+        &lt;/Grid&gt;
+      )}
+    &lt;/SectionFrame&gt;
+  );
+}
+</code></pre></div><p class="text-sm"><a class="underline" href="https://registry.buildy.tw/react/blocks/product-grid.json">React registry item (JSON)</a></p></section><section id="panel-vue" data-panel data-runtime="vue" data-label="Vue" aria-label="Vue" class="mb-8"><h3 class="mb-2 text-lg font-semibold">Vue</h3><p class="mb-2 text-sm text-muted-foreground">Point the CLI at this runtime once, then add the item:</p><div class="mb-2"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-vue-init" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit init --yes --framework vue --dir src --registry-url https://registry.buildy.tw/vue --strict-cdn</code><button type="button" hidden data-copy="panel-vue-init" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-vue-add" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit add product-grid</code><button type="button" hidden data-copy="panel-vue-add" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">blocks/product-grid.vue</span><button type="button" hidden data-copy="code-vue-0" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-vue-0" class="font-mono">&lt;!-- Code generated by xgen. DO NOT EDIT. --&gt;
+&lt;!-- Source: xgen/screens/src/authoring/blocks/commerce.ts --&gt;
+&lt;!--
+  A section with a heading and the products as cards in a grid, as a list of horizontal cards, or as a rail that
+  scrolls sideways. Axes: layout (grid, list, rail), columns, ratio, rating, action, tone, density.
+--&gt;
+&lt;script lang=&#34;ts&#34;&gt;
+import type { Product, ProductLabels } from &#34;./product-card.types&#34;;
+
+export type ProductGridProps = {
+  id: string;
+  title: string;
+  products: Product[];
+  labels: ProductLabels;
+  badges: Record&lt;string, string&gt;;
+  layout?: &#34;grid&#34; | &#34;list&#34; | &#34;rail&#34;;
+  cols?: &#34;1-2&#34; | &#34;1-3&#34; | &#34;1-4&#34;;
+  ratio?: &#34;4/3&#34; | &#34;1/1&#34; | &#34;3/4&#34;;
+  rating?: &#34;show&#34; | &#34;hide&#34;;
+  action?: &#34;button&#34; | &#34;none&#34;;
+  tone?: &#34;default&#34; | &#34;muted&#34;;
+  density?: &#34;roomy&#34; | &#34;default&#34; | &#34;compact&#34;;
+};
+&lt;/script&gt;
+
+&lt;script setup lang=&#34;ts&#34;&gt;
+import Box from &#34;../primitives/box/box.vue&#34;;
+import Grid from &#34;../primitives/grid/grid.vue&#34;;
+import ProductCard from &#34;../blocks/product-card.vue&#34;;
+import SectionFrame from &#34;../components/section-frame.vue&#34;;
+
+const {
+  id,
+  title,
+  products,
+  labels,
+  badges,
+  layout = &#34;grid&#34;,
+  cols = &#34;1-3&#34;,
+  ratio = &#34;4/3&#34;,
+  rating = &#34;show&#34;,
+  action = &#34;button&#34;,
+  tone = &#34;default&#34;,
+  density = &#34;default&#34;,
+} = defineProps&lt;ProductGridProps&gt;();
+const emit = defineEmits&lt;{ add: [id: string] }&gt;();
+&lt;/script&gt;
+
+&lt;template&gt;
+  &lt;SectionFrame :id=&#34;id&#34; :title=&#34;title&#34; :tone=&#34;tone&#34; :density=&#34;density&#34;&gt;
+    &lt;Box
+      v-if=&#34;((layout as string) === &#39;rail&#39;)&#34;
+      class=&#34;flex snap-x gap-4 overflow-x-auto pb-4&#34;
+      data-testid=&#34;items&#34;
+    &gt;
+      &lt;Box v-for=&#34;p in products&#34; :key=&#34;p.id&#34; class=&#34;w-64 shrink-0 snap-start&#34;&gt;
+        &lt;ProductCard
+          :product=&#34;p&#34;
+          :labels=&#34;labels&#34;
+          :badges=&#34;badges&#34;
+          :layout=&#34;(((layout as string) === &#39;list&#39;) ? &#39;horizontal&#39; : &#39;vertical&#39;)&#34;
+          :ratio=&#34;ratio&#34;
+          :rating=&#34;rating&#34;
+          :action=&#34;action&#34;
+          :density=&#34;(((density as string) === &#39;compact&#39;) ? &#39;compact&#39; : &#39;default&#39;)&#34;
+          @add=&#34;() =&gt; emit(&#39;add&#39;, p.id)&#34;
+        /&gt;
+      &lt;/Box&gt;
+    &lt;/Box&gt;
+    &lt;Grid v-else :cols=&#34;(((layout as string) === &#39;list&#39;) ? &#39;1&#39; : cols)&#34; class=&#34;gap-4&#34; data-testid=&#34;items&#34;&gt;
+      &lt;ProductCard v-for=&#34;p in products&#34; :key=&#34;p.id&#34;
+        :product=&#34;p&#34;
+        :labels=&#34;labels&#34;
+        :badges=&#34;badges&#34;
+        :layout=&#34;(((layout as string) === &#39;list&#39;) ? &#39;horizontal&#39; : &#39;vertical&#39;)&#34;
+        :ratio=&#34;ratio&#34;
+        :rating=&#34;rating&#34;
+        :action=&#34;action&#34;
+        :density=&#34;(((density as string) === &#39;compact&#39;) ? &#39;compact&#39; : &#39;default&#39;)&#34;
+        @add=&#34;() =&gt; emit(&#39;add&#39;, p.id)&#34;
+      /&gt;
+    &lt;/Grid&gt;
+  &lt;/SectionFrame&gt;
+&lt;/template&gt;
+</code></pre></div><p class="text-sm"><a class="underline" href="https://registry.buildy.tw/vue/blocks/product-grid.json">Vue registry item (JSON)</a></p></section></div></article></main></div><footer class="border-t border-border"><div class="mx-auto max-w-6xl px-4 py-8 text-sm text-muted-foreground">ui8kit, MIT licence. Static docs generated from markdown and the registry (<a class="underline" href="https://registry.buildy.tw/registry.json">registry.json</a>).</div></footer></body></html>

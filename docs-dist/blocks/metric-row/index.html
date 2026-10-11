@@ -1,0 +1,232 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Metric Row (block) | ui8kit</title><meta name="description" content="Key counters of a dashboard."><link rel="canonical" href="https://ui.buildy.tw/blocks/metric-row/"><link rel="stylesheet" href="/assets/site.css"><script src="/assets/app.js" defer></script></head><body class="min-h-screen bg-background text-foreground font-sans"><a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:left-2 focus:top-2 focus:bg-background focus:px-4 focus:py-2 focus:z-50">Skip to content</a><header class="border-b border-border"><div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-4 py-4"><a href="/" class="text-lg font-semibold">ui8kit</a><nav aria-label="Main" class="flex items-center gap-4 text-sm"><a href="/docs/" class="hover:underline">Docs</a> <a href="/docs/categories/blocks-marketing/" class="hover:underline">Blocks</a> <a href="/docs/categories/primitives/" class="hover:underline">Primitives</a> <a href="/docs/cli/" class="hover:underline">CLI</a></nav><form id="search" role="search" class="relative w-full sm:w-72" data-index="/search-index.json"><label for="search-input" class="sr-only">Search components and blocks</label> <input id="search-input" type="search" autocomplete="off" placeholder="Search, press /" class="h-10 w-full rounded border border-input bg-card px-4 text-sm"><ul id="search-results" hidden class="absolute left-0 right-0 top-12 z-40 rounded border border-border bg-popover text-popover-foreground shadow-md" aria-live="polite"></ul></form></div></header><div class="mx-auto flex max-w-6xl flex-col gap-8 px-4 py-8 md:flex-row"><nav aria-label="Docs" class="md:w-64 md:shrink-0"><h2 class="mb-2 text-sm font-semibold">Guides</h2><ul class="mb-6 flex flex-col gap-1"><li><a href="/docs/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Overview</a></li><li><a href="/docs/getting-started/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Getting started</a></li><li><a href="/docs/installation/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Installation</a></li><li><a href="/docs/cli/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">CLI</a></li><li><a href="/docs/theming-skins/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Theming and skins</a></li><li><a href="/docs/grid-8px/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">The 8px grid</a></li></ul><h2 class="mb-2 text-sm font-semibold">Categories</h2><ul class="mb-6 flex flex-col gap-1"><li><a href="/docs/categories/primitives/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Primitives</a></li><li><a href="/docs/categories/components/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Components</a></li><li><a href="/docs/categories/blocks-marketing/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: marketing</a></li><li><a href="/docs/categories/blocks-commerce/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: commerce</a></li><li><a href="/docs/categories/blocks-dashboard/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: dashboard</a></li><li><a href="/docs/categories/blocks-content/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: content</a></li><li><a href="/docs/categories/blocks-account/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: account</a></li><li><a href="/docs/categories/blocks-promo/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: promo</a></li><li><a href="/docs/categories/blocks-support/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: support</a></li><li><a href="/docs/categories/blocks-onboarding/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: onboarding</a></li><li><a href="/docs/categories/blocks-general/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: general</a></li></ul></nav><main id="main" class="min-w-0 flex-1"><article><p class="text-sm text-muted-foreground"><a class="underline" href="/docs/categories/blocks-dashboard/">block / dashboard</a></p><h1 class="mb-2 text-3xl font-semibold tracking-tight">Metric Row</h1><p class="mb-6 max-w-3xl text-muted-foreground">Key counters of a dashboard.</p><h2 class="mb-2 text-xl font-semibold">Install</h2><div class="mb-6 max-w-xl"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="install-metric-row" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit add metric-row</code><button type="button" hidden data-copy="install-metric-row" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><p class="mb-6 text-sm text-muted-foreground">Pulls in:  <a class="underline" href="/primitives/block/">block</a><span>, </span> <a class="underline" href="/primitives/grid/">grid</a><span>, </span> <a class="underline" href="/primitives/group/">group</a><span>, </span> <a class="underline" href="/primitives/lucide-icon/">lucide-icon</a><span>, </span> <a class="underline" href="/components/section-frame/">section-frame</a><span>, </span> <a class="underline" href="/primitives/stack/">stack</a><span>, </span> <a class="underline" href="/components/stat-tile/">stat-tile</a><span>, </span> <a class="underline" href="/primitives/text/">text</a><span>, </span> <a class="underline" href="/lib/utils/">utils</a></p><h2 class="mb-2 text-xl font-semibold">Code</h2><div data-tabs><section id="panel-svelte" data-panel data-runtime="svelte" data-label="Svelte" aria-label="Svelte" class="mb-8"><h3 class="mb-2 text-lg font-semibold">Svelte</h3><p class="mb-2 text-sm text-muted-foreground">Point the CLI at this runtime once, then add the item:</p><div class="mb-2"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-svelte-init" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit init --yes --framework svelte --dir src --registry-url https://registry.buildy.tw/svelte --strict-cdn</code><button type="button" hidden data-copy="panel-svelte-init" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-svelte-add" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit add metric-row</code><button type="button" hidden data-copy="panel-svelte-add" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">blocks/metric-row.svelte</span><button type="button" hidden data-copy="code-svelte-0" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-svelte-0" class="font-mono">&lt;!-- Code generated by xgen. DO NOT EDIT. --&gt;
+&lt;!-- Source: xgen/screens/src/authoring/blocks/dashboard.ts --&gt;
+&lt;!--
+  Dashboard counters in a row or a grid: tiles with an icon, a number and a caption, or compact figures. Axes:
+  columns (2, 4), item (tile, compact), tone (default, muted), density (default, compact).
+--&gt;
+&lt;script lang=&#34;ts&#34; module&gt;
+  import type { Snippet } from &#34;svelte&#34;;
+  import type { Metric } from &#34;./metric-row.types&#34;;
+
+  export type MetricRowProps = {
+    id: string;
+    title: string;
+    metrics: Metric[];
+    cols?: &#34;2&#34; | &#34;4&#34;;
+    item?: &#34;tile&#34; | &#34;compact&#34;;
+    tone?: &#34;default&#34; | &#34;muted&#34;;
+    density?: &#34;default&#34; | &#34;compact&#34;;
+  };
+&lt;/script&gt;
+
+&lt;script lang=&#34;ts&#34;&gt;
+  import Block from &#34;../primitives/block/block.svelte&#34;;
+  import Grid from &#34;../primitives/grid/grid.svelte&#34;;
+  import Group from &#34;../primitives/group/group.svelte&#34;;
+  import LucideIcon from &#34;../primitives/lucide-icon/lucide-icon.svelte&#34;;
+  import Stack from &#34;../primitives/stack/stack.svelte&#34;;
+  import Text from &#34;../primitives/text/text.svelte&#34;;
+  import SectionFrame from &#34;../components/section-frame.svelte&#34;;
+  import StatTile from &#34;../components/stat-tile.svelte&#34;;
+
+  let {
+    id,
+    title,
+    metrics,
+    cols = &#34;4&#34;,
+    item = &#34;tile&#34;,
+    tone = &#34;default&#34;,
+    density = &#34;default&#34;,
+  }: MetricRowProps = $props();
+&lt;/script&gt;
+
+&lt;SectionFrame id={id} title={title} tone={tone} density={density}&gt;
+  &lt;Grid cols={(((cols as string) === &#34;2&#34;) ? &#34;1-2&#34; : &#34;1-4&#34;)} class=&#34;gap-4&#34; data-testid=&#34;items&#34;&gt;
+    {#each metrics as m (m.id)}
+      {#if ((item as string) === &#34;tile&#34;)}
+        &lt;Block tag=&#34;div&#34; data-testid=&#34;item&#34;&gt;
+          &lt;StatTile label={m.label} value={m.value} icon={m.icon} hint={m.hint} /&gt;
+        &lt;/Block&gt;
+      {:else}
+        &lt;Stack gap=&#34;0&#34; class=&#34;rounded bg-card p-4 inset-ring inset-ring-border&#34; data-testid=&#34;item&#34;&gt;
+          &lt;Group gap=&#34;2&#34; align=&#34;center&#34; class=&#34;text-muted-foreground&#34;&gt;
+            &lt;LucideIcon name={m.icon} size={16} /&gt;
+            &lt;Text size=&#34;xs&#34;&gt;
+              {m.label}
+            &lt;/Text&gt;
+          &lt;/Group&gt;
+          &lt;Text size=&#34;2xl&#34; weight=&#34;bold&#34;&gt;
+            {m.value}
+          &lt;/Text&gt;
+          &lt;Text size=&#34;xs&#34; class=&#34;text-muted-foreground&#34;&gt;
+            {m.hint}
+          &lt;/Text&gt;
+        &lt;/Stack&gt;
+      {/if}
+    {/each}
+  &lt;/Grid&gt;
+&lt;/SectionFrame&gt;
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">blocks/metric-row.types.ts</span><button type="button" hidden data-copy="code-svelte-1" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-svelte-1" class="font-mono">// Code generated by xgen. DO NOT EDIT.
+// Source: xgen/screens/src/authoring/blocks/dashboard.ts
+
+export type Metric = {
+  id: string;
+  label: string;
+  value: string;
+  icon: string;
+  hint: string;
+};
+</code></pre></div><p class="text-sm"><a class="underline" href="https://registry.buildy.tw/svelte/blocks/metric-row.json">Svelte registry item (JSON)</a></p></section><section id="panel-react" data-panel data-runtime="react" data-label="React" aria-label="React" class="mb-8"><h3 class="mb-2 text-lg font-semibold">React</h3><p class="mb-2 text-sm text-muted-foreground">Point the CLI at this runtime once, then add the item:</p><div class="mb-2"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-react-init" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit init --yes --framework react --dir src --registry-url https://registry.buildy.tw/react --strict-cdn</code><button type="button" hidden data-copy="panel-react-init" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-react-add" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit add metric-row</code><button type="button" hidden data-copy="panel-react-add" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">blocks/metric-row.tsx</span><button type="button" hidden data-copy="code-react-0" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-react-0" class="font-mono">// Code generated by xgen. DO NOT EDIT.
+// Source: xgen/screens/src/authoring/blocks/dashboard.ts
+/**
+ * Dashboard counters in a row or a grid: tiles with an icon, a number and a caption, or compact figures. Axes:
+ * columns (2, 4), item (tile, compact), tone (default, muted), density (default, compact).
+ */
+import { Fragment, type ReactNode } from &#34;react&#34;;
+import { Block } from &#34;../primitives/block/block&#34;;
+import { Grid } from &#34;../primitives/grid/grid&#34;;
+import { Group } from &#34;../primitives/group/group&#34;;
+import { LucideIcon } from &#34;../primitives/lucide-icon/lucide-icon&#34;;
+import { Stack } from &#34;../primitives/stack/stack&#34;;
+import { Text } from &#34;../primitives/text/text&#34;;
+import { SectionFrame } from &#34;../components/section-frame&#34;;
+import { StatTile } from &#34;../components/stat-tile&#34;;
+import type { Metric } from &#34;./metric-row.types&#34;;
+
+export type MetricRowProps = {
+  id: string;
+  title: string;
+  metrics: Metric[];
+  cols?: &#34;2&#34; | &#34;4&#34;;
+  item?: &#34;tile&#34; | &#34;compact&#34;;
+  tone?: &#34;default&#34; | &#34;muted&#34;;
+  density?: &#34;default&#34; | &#34;compact&#34;;
+};
+
+export function MetricRow({
+  id,
+  title,
+  metrics,
+  cols = &#34;4&#34;,
+  item = &#34;tile&#34;,
+  tone = &#34;default&#34;,
+  density = &#34;default&#34;,
+}: MetricRowProps) {
+  return (
+    &lt;SectionFrame id={id} title={title} tone={tone} density={density}&gt;
+      &lt;Grid cols={(((cols as string) === &#34;2&#34;) ? &#34;1-2&#34; : &#34;1-4&#34;)} className=&#34;gap-4&#34; data-testid=&#34;items&#34;&gt;
+        {(metrics ?? []).map((m) =&gt; (
+          &lt;Fragment key={m.id}&gt;
+            {((item as string) === &#34;tile&#34;) ? (
+              &lt;Block tag=&#34;div&#34; data-testid=&#34;item&#34;&gt;
+                &lt;StatTile label={m.label} value={m.value} icon={m.icon} hint={m.hint} /&gt;
+              &lt;/Block&gt;
+            ) : (
+              &lt;Stack gap=&#34;0&#34; className=&#34;rounded bg-card p-4 inset-ring inset-ring-border&#34; data-testid=&#34;item&#34;&gt;
+                &lt;Group gap=&#34;2&#34; align=&#34;center&#34; className=&#34;text-muted-foreground&#34;&gt;
+                  &lt;LucideIcon name={m.icon} size={16} /&gt;
+                  &lt;Text size=&#34;xs&#34;&gt;
+                    {m.label}
+                  &lt;/Text&gt;
+                &lt;/Group&gt;
+                &lt;Text size=&#34;2xl&#34; weight=&#34;bold&#34;&gt;
+                  {m.value}
+                &lt;/Text&gt;
+                &lt;Text size=&#34;xs&#34; className=&#34;text-muted-foreground&#34;&gt;
+                  {m.hint}
+                &lt;/Text&gt;
+              &lt;/Stack&gt;
+            )}
+          &lt;/Fragment&gt;
+        ))}
+      &lt;/Grid&gt;
+    &lt;/SectionFrame&gt;
+  );
+}
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">blocks/metric-row.types.ts</span><button type="button" hidden data-copy="code-react-1" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-react-1" class="font-mono">// Code generated by xgen. DO NOT EDIT.
+// Source: xgen/screens/src/authoring/blocks/dashboard.ts
+
+export type Metric = {
+  id: string;
+  label: string;
+  value: string;
+  icon: string;
+  hint: string;
+};
+</code></pre></div><p class="text-sm"><a class="underline" href="https://registry.buildy.tw/react/blocks/metric-row.json">React registry item (JSON)</a></p></section><section id="panel-vue" data-panel data-runtime="vue" data-label="Vue" aria-label="Vue" class="mb-8"><h3 class="mb-2 text-lg font-semibold">Vue</h3><p class="mb-2 text-sm text-muted-foreground">Point the CLI at this runtime once, then add the item:</p><div class="mb-2"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-vue-init" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit init --yes --framework vue --dir src --registry-url https://registry.buildy.tw/vue --strict-cdn</code><button type="button" hidden data-copy="panel-vue-init" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-vue-add" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit add metric-row</code><button type="button" hidden data-copy="panel-vue-add" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">blocks/metric-row.types.ts</span><button type="button" hidden data-copy="code-vue-0" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-vue-0" class="font-mono">// Code generated by xgen. DO NOT EDIT.
+// Source: xgen/screens/src/authoring/blocks/dashboard.ts
+
+export type Metric = {
+  id: string;
+  label: string;
+  value: string;
+  icon: string;
+  hint: string;
+};
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">blocks/metric-row.vue</span><button type="button" hidden data-copy="code-vue-1" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-vue-1" class="font-mono">&lt;!-- Code generated by xgen. DO NOT EDIT. --&gt;
+&lt;!-- Source: xgen/screens/src/authoring/blocks/dashboard.ts --&gt;
+&lt;!--
+  Dashboard counters in a row or a grid: tiles with an icon, a number and a caption, or compact figures. Axes:
+  columns (2, 4), item (tile, compact), tone (default, muted), density (default, compact).
+--&gt;
+&lt;script lang=&#34;ts&#34;&gt;
+import type { Metric } from &#34;./metric-row.types&#34;;
+
+export type MetricRowProps = {
+  id: string;
+  title: string;
+  metrics: Metric[];
+  cols?: &#34;2&#34; | &#34;4&#34;;
+  item?: &#34;tile&#34; | &#34;compact&#34;;
+  tone?: &#34;default&#34; | &#34;muted&#34;;
+  density?: &#34;default&#34; | &#34;compact&#34;;
+};
+&lt;/script&gt;
+
+&lt;script setup lang=&#34;ts&#34;&gt;
+import Block from &#34;../primitives/block/block.vue&#34;;
+import Grid from &#34;../primitives/grid/grid.vue&#34;;
+import Group from &#34;../primitives/group/group.vue&#34;;
+import LucideIcon from &#34;../primitives/lucide-icon/lucide-icon.vue&#34;;
+import Stack from &#34;../primitives/stack/stack.vue&#34;;
+import Text from &#34;../primitives/text/text.vue&#34;;
+import SectionFrame from &#34;../components/section-frame.vue&#34;;
+import StatTile from &#34;../components/stat-tile.vue&#34;;
+
+const {
+  id,
+  title,
+  metrics,
+  cols = &#34;4&#34;,
+  item = &#34;tile&#34;,
+  tone = &#34;default&#34;,
+  density = &#34;default&#34;,
+} = defineProps&lt;MetricRowProps&gt;();
+&lt;/script&gt;
+
+&lt;template&gt;
+  &lt;SectionFrame :id=&#34;id&#34; :title=&#34;title&#34; :tone=&#34;tone&#34; :density=&#34;density&#34;&gt;
+    &lt;Grid :cols=&#34;(((cols as string) === &#39;2&#39;) ? &#39;1-2&#39; : &#39;1-4&#39;)&#34; class=&#34;gap-4&#34; data-testid=&#34;items&#34;&gt;
+      &lt;template v-for=&#34;m in metrics&#34; :key=&#34;m.id&#34;&gt;
+        &lt;Block v-if=&#34;((item as string) === &#39;tile&#39;)&#34; tag=&#34;div&#34; data-testid=&#34;item&#34;&gt;
+          &lt;StatTile :label=&#34;m.label&#34; :value=&#34;m.value&#34; :icon=&#34;m.icon&#34; :hint=&#34;m.hint&#34; /&gt;
+        &lt;/Block&gt;
+        &lt;Stack v-else gap=&#34;0&#34; class=&#34;rounded bg-card p-4 inset-ring inset-ring-border&#34; data-testid=&#34;item&#34;&gt;
+          &lt;Group gap=&#34;2&#34; align=&#34;center&#34; class=&#34;text-muted-foreground&#34;&gt;
+            &lt;LucideIcon :name=&#34;m.icon&#34; :size=&#34;16&#34; /&gt;
+            &lt;Text size=&#34;xs&#34;&gt;
+              {{ m.label }}
+            &lt;/Text&gt;
+          &lt;/Group&gt;
+          &lt;Text size=&#34;2xl&#34; weight=&#34;bold&#34;&gt;
+            {{ m.value }}
+          &lt;/Text&gt;
+          &lt;Text size=&#34;xs&#34; class=&#34;text-muted-foreground&#34;&gt;
+            {{ m.hint }}
+          &lt;/Text&gt;
+        &lt;/Stack&gt;
+      &lt;/template&gt;
+    &lt;/Grid&gt;
+  &lt;/SectionFrame&gt;
+&lt;/template&gt;
+</code></pre></div><p class="text-sm"><a class="underline" href="https://registry.buildy.tw/vue/blocks/metric-row.json">Vue registry item (JSON)</a></p></section></div></article></main></div><footer class="border-t border-border"><div class="mx-auto max-w-6xl px-4 py-8 text-sm text-muted-foreground">ui8kit, MIT licence. Static docs generated from markdown and the registry (<a class="underline" href="https://registry.buildy.tw/registry.json">registry.json</a>).</div></footer></body></html>

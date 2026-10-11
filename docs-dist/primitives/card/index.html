@@ -1,0 +1,600 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Card (primitive) | ui8kit</title><meta name="description" content="Card primitive"><link rel="canonical" href="https://ui.buildy.tw/primitives/card/"><link rel="stylesheet" href="/assets/site.css"><script src="/assets/app.js" defer></script></head><body class="min-h-screen bg-background text-foreground font-sans"><a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:left-2 focus:top-2 focus:bg-background focus:px-4 focus:py-2 focus:z-50">Skip to content</a><header class="border-b border-border"><div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-4 py-4"><a href="/" class="text-lg font-semibold">ui8kit</a><nav aria-label="Main" class="flex items-center gap-4 text-sm"><a href="/docs/" class="hover:underline">Docs</a> <a href="/docs/categories/blocks-marketing/" class="hover:underline">Blocks</a> <a href="/docs/categories/primitives/" class="hover:underline">Primitives</a> <a href="/docs/cli/" class="hover:underline">CLI</a></nav><form id="search" role="search" class="relative w-full sm:w-72" data-index="/search-index.json"><label for="search-input" class="sr-only">Search components and blocks</label> <input id="search-input" type="search" autocomplete="off" placeholder="Search, press /" class="h-10 w-full rounded border border-input bg-card px-4 text-sm"><ul id="search-results" hidden class="absolute left-0 right-0 top-12 z-40 rounded border border-border bg-popover text-popover-foreground shadow-md" aria-live="polite"></ul></form></div></header><div class="mx-auto flex max-w-6xl flex-col gap-8 px-4 py-8 md:flex-row"><nav aria-label="Docs" class="md:w-64 md:shrink-0"><h2 class="mb-2 text-sm font-semibold">Guides</h2><ul class="mb-6 flex flex-col gap-1"><li><a href="/docs/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Overview</a></li><li><a href="/docs/getting-started/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Getting started</a></li><li><a href="/docs/installation/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Installation</a></li><li><a href="/docs/cli/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">CLI</a></li><li><a href="/docs/theming-skins/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Theming and skins</a></li><li><a href="/docs/grid-8px/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">The 8px grid</a></li></ul><h2 class="mb-2 text-sm font-semibold">Categories</h2><ul class="mb-6 flex flex-col gap-1"><li><a href="/docs/categories/primitives/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Primitives</a></li><li><a href="/docs/categories/components/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Components</a></li><li><a href="/docs/categories/blocks-marketing/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: marketing</a></li><li><a href="/docs/categories/blocks-commerce/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: commerce</a></li><li><a href="/docs/categories/blocks-dashboard/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: dashboard</a></li><li><a href="/docs/categories/blocks-content/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: content</a></li><li><a href="/docs/categories/blocks-account/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: account</a></li><li><a href="/docs/categories/blocks-promo/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: promo</a></li><li><a href="/docs/categories/blocks-support/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: support</a></li><li><a href="/docs/categories/blocks-onboarding/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: onboarding</a></li><li><a href="/docs/categories/blocks-general/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: general</a></li></ul></nav><main id="main" class="min-w-0 flex-1"><article><p class="text-sm text-muted-foreground"><a class="underline" href="/docs/categories/primitives/">primitive / primitives</a></p><h1 class="mb-2 text-3xl font-semibold tracking-tight">Card</h1><p class="mb-6 max-w-3xl text-muted-foreground">Card primitive</p><h2 class="mb-2 text-xl font-semibold">Install</h2><div class="mb-6 max-w-xl"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="install-card" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit add card</code><button type="button" hidden data-copy="install-card" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><p class="mb-6 text-sm text-muted-foreground">Pulls in:  <a class="underline" href="/primitives/slot/">slot</a><span>, </span> <a class="underline" href="/lib/utils/">utils</a></p><h2 class="mb-2 text-xl font-semibold">Code</h2><div data-tabs><section id="panel-svelte" data-panel data-runtime="svelte" data-label="Svelte" aria-label="Svelte" class="mb-8"><h3 class="mb-2 text-lg font-semibold">Svelte</h3><p class="mb-2 text-sm text-muted-foreground">Point the CLI at this runtime once, then add the item:</p><div class="mb-2"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-svelte-init" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit init --yes --framework svelte --dir src --registry-url https://registry.buildy.tw/svelte --strict-cdn</code><button type="button" hidden data-copy="panel-svelte-init" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-svelte-add" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit add card</code><button type="button" hidden data-copy="panel-svelte-add" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/card/card-content.svelte</span><button type="button" hidden data-copy="code-svelte-0" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-svelte-0" class="font-mono">&lt;!-- Code generated by xgen. DO NOT EDIT. --&gt;
+&lt;!-- Source: xgen/specs/ui/card.json --&gt;
+&lt;!--
+  CardContent renders the padded main body slot.
+--&gt;
+&lt;script lang=&#34;ts&#34; module&gt;
+  import type { Snippet } from &#34;svelte&#34;;
+
+  export type CardContentProps = {
+    class?: string;
+    children?: Snippet;
+    [key: string]: unknown;
+  };
+&lt;/script&gt;
+
+&lt;script lang=&#34;ts&#34;&gt;
+  import { cn } from &#34;../../utils&#34;;
+
+  let {
+    class: className,
+    children,
+    ...rest
+  }: CardContentProps = $props();
+
+  const cls = $derived(cn(className));
+&lt;/script&gt;
+
+&lt;div {...(cls ? { class: cls } : {})} {...rest}&gt;
+  {@render children?.()}
+&lt;/div&gt;
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/card/card-description.svelte</span><button type="button" hidden data-copy="code-svelte-1" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-svelte-1" class="font-mono">&lt;!-- Code generated by xgen. DO NOT EDIT. --&gt;
+&lt;!-- Source: xgen/specs/ui/card.json --&gt;
+&lt;!--
+  CardDescription renders a muted subtitle in a p element.
+--&gt;
+&lt;script lang=&#34;ts&#34; module&gt;
+  import type { Snippet } from &#34;svelte&#34;;
+
+  export type CardDescriptionProps = {
+    class?: string;
+    children?: Snippet;
+    [key: string]: unknown;
+  };
+&lt;/script&gt;
+
+&lt;script lang=&#34;ts&#34;&gt;
+  import { cn } from &#34;../../utils&#34;;
+
+  let {
+    class: className,
+    children,
+    ...rest
+  }: CardDescriptionProps = $props();
+
+  const cls = $derived(cn(&#34;text-sm text-muted-foreground&#34;, className));
+&lt;/script&gt;
+
+&lt;p {...(cls ? { class: cls } : {})} {...rest}&gt;
+  {@render children?.()}
+&lt;/p&gt;
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/card/card-footer.svelte</span><button type="button" hidden data-copy="code-svelte-2" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-svelte-2" class="font-mono">&lt;!-- Code generated by xgen. DO NOT EDIT. --&gt;
+&lt;!-- Source: xgen/specs/ui/card.json --&gt;
+&lt;!--
+  CardFooter renders the bottom action slot.
+--&gt;
+&lt;script lang=&#34;ts&#34; module&gt;
+  import type { Snippet } from &#34;svelte&#34;;
+
+  export type CardFooterProps = {
+    class?: string;
+    children?: Snippet;
+    [key: string]: unknown;
+  };
+&lt;/script&gt;
+
+&lt;script lang=&#34;ts&#34;&gt;
+  import { cn } from &#34;../../utils&#34;;
+
+  let {
+    class: className,
+    children,
+    ...rest
+  }: CardFooterProps = $props();
+
+  const cls = $derived(cn(&#34;flex items-center&#34;, className));
+&lt;/script&gt;
+
+&lt;div {...(cls ? { class: cls } : {})} {...rest}&gt;
+  {@render children?.()}
+&lt;/div&gt;
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/card/card-header.svelte</span><button type="button" hidden data-copy="code-svelte-3" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-svelte-3" class="font-mono">&lt;!-- Code generated by xgen. DO NOT EDIT. --&gt;
+&lt;!-- Source: xgen/specs/ui/card.json --&gt;
+&lt;!--
+  CardHeader renders the top slot.
+--&gt;
+&lt;script lang=&#34;ts&#34; module&gt;
+  import type { Snippet } from &#34;svelte&#34;;
+
+  export type CardHeaderProps = {
+    class?: string;
+    children?: Snippet;
+    [key: string]: unknown;
+  };
+&lt;/script&gt;
+
+&lt;script lang=&#34;ts&#34;&gt;
+  import { cn } from &#34;../../utils&#34;;
+
+  let {
+    class: className,
+    children,
+    ...rest
+  }: CardHeaderProps = $props();
+
+  const cls = $derived(cn(&#34;grid auto-rows-min items-start gap-2&#34;, className));
+&lt;/script&gt;
+
+&lt;div {...(cls ? { class: cls } : {})} {...rest}&gt;
+  {@render children?.()}
+&lt;/div&gt;
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/card/card-title.svelte</span><button type="button" hidden data-copy="code-svelte-4" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-svelte-4" class="font-mono">&lt;!-- Code generated by xgen. DO NOT EDIT. --&gt;
+&lt;!-- Source: xgen/specs/ui/card.json --&gt;
+&lt;!--
+  CardTitle renders heading text at the As level (default h2).
+--&gt;
+&lt;script lang=&#34;ts&#34; module&gt;
+  import type { Snippet } from &#34;svelte&#34;;
+
+  export type CardTitleProps = {
+    as?: 1 | 2 | 3 | 4 | 5 | 6;
+    class?: string;
+    children?: Snippet;
+    [key: string]: unknown;
+  };
+&lt;/script&gt;
+
+&lt;script lang=&#34;ts&#34;&gt;
+  import { cn } from &#34;../../utils&#34;;
+  import { titleTag } from &#34;../../utils/expr&#34;;
+
+  let {
+    as,
+    class: className,
+    children,
+    ...rest
+  }: CardTitleProps = $props();
+
+  const cls = $derived(cn(&#34;font-semibold leading-none&#34;, className));
+  const resolvedTagValue = $derived(titleTag(as));
+&lt;/script&gt;
+
+&lt;svelte:element this={resolvedTagValue} {...(cls ? { class: cls } : {})} {...rest}&gt;
+  {@render children?.()}
+&lt;/svelte:element&gt;
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/card/card.svelte</span><button type="button" hidden data-copy="code-svelte-5" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-svelte-5" class="font-mono">&lt;!-- Code generated by xgen. DO NOT EDIT. --&gt;
+&lt;!-- Source: xgen/specs/ui/card.json --&gt;
+&lt;!--
+  Card renders the bordered surface wrapper.
+--&gt;
+&lt;script lang=&#34;ts&#34; module&gt;
+  import type { Snippet } from &#34;svelte&#34;;
+  import { variants, type VariantKey } from &#34;../../utils&#34;;
+
+  /** Card: the classes of each value of each prop (shadcn/cva style). */
+  export const cardVariants = variants({
+    base: &#34;flex flex-col gap-8 bg-card p-6 text-card-foreground inset-ring inset-ring-border rounded&#34;,
+    variants: {
+      variant: {
+        default: &#34;&#34;,
+        muted: &#34;bg-muted&#34;,
+        ghost: &#34;bg-transparent&#34;,
+        compact: &#34;gap-4 p-4&#34;,
+      },
+    },
+    defaultVariants: { variant: &#34;default&#34; },
+  });
+
+  export type CardVariant = VariantKey&lt;typeof cardVariants, &#34;variant&#34;&gt;;
+
+  export type CardProps = {
+    variant?: CardVariant;
+    class?: string;
+    children?: Snippet;
+    [key: string]: unknown;
+  };
+&lt;/script&gt;
+
+&lt;script lang=&#34;ts&#34;&gt;
+  import { cn } from &#34;../../utils&#34;;
+
+  let {
+    variant,
+    class: className,
+    children,
+    ...rest
+  }: CardProps = $props();
+
+  const cls = $derived(cn(cardVariants({ variant }), className));
+&lt;/script&gt;
+
+&lt;div {...(cls ? { class: cls } : {})} data-slot=&#34;card&#34; {...rest}&gt;
+  {@render children?.()}
+&lt;/div&gt;
+</code></pre></div><p class="text-sm"><a class="underline" href="https://registry.buildy.tw/svelte/components/ui/card.json">Svelte registry item (JSON)</a></p></section><section id="panel-react" data-panel data-runtime="react" data-label="React" aria-label="React" class="mb-8"><h3 class="mb-2 text-lg font-semibold">React</h3><p class="mb-2 text-sm text-muted-foreground">Point the CLI at this runtime once, then add the item:</p><div class="mb-2"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-react-init" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit init --yes --framework react --dir src --registry-url https://registry.buildy.tw/react --strict-cdn</code><button type="button" hidden data-copy="panel-react-init" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-react-add" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit add card</code><button type="button" hidden data-copy="panel-react-add" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/card/card-content.tsx</span><button type="button" hidden data-copy="code-react-0" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-react-0" class="font-mono">// Code generated by xgen. DO NOT EDIT.
+// Source: xgen/specs/ui/card.json
+/**
+ * CardContent: one part of Card (one file per part, as in the Svelte package).
+ */
+
+import { forwardRef, type ReactNode, type HTMLAttributes } from &#34;react&#34;;
+import { cn } from &#34;../../utils&#34;;
+
+/**
+ * CardContent renders the padded main body slot.
+ */
+export type CardContentProps = Omit&lt;HTMLAttributes&lt;HTMLDivElement&gt;, &#34;className&#34; | &#34;children&#34;&gt; &amp; {
+  className?: string;
+  children?: ReactNode;
+};
+
+export const CardContent = forwardRef&lt;HTMLDivElement, CardContentProps&gt;(function CardContent(
+  { className, children, ...rest },
+  ref
+) {
+  const cls = cn(className);
+  return (
+    &lt;div ref={ref} className={cls || undefined} {...rest}&gt;
+      {children}
+    &lt;/div&gt;
+  );
+});
+CardContent.displayName = &#34;CardContent&#34;;
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/card/card-description.tsx</span><button type="button" hidden data-copy="code-react-1" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-react-1" class="font-mono">// Code generated by xgen. DO NOT EDIT.
+// Source: xgen/specs/ui/card.json
+/**
+ * CardDescription: one part of Card (one file per part, as in the Svelte package).
+ */
+
+import { forwardRef, type ReactNode, type HTMLAttributes } from &#34;react&#34;;
+import { cn } from &#34;../../utils&#34;;
+
+/**
+ * CardDescription renders a muted subtitle in a p element.
+ */
+export type CardDescriptionProps = Omit&lt;
+  HTMLAttributes&lt;HTMLParagraphElement&gt;,
+  | &#34;className&#34; | &#34;children&#34;
+&gt; &amp; {
+  className?: string;
+  children?: ReactNode;
+};
+
+export const CardDescription = forwardRef&lt;HTMLParagraphElement, CardDescriptionProps&gt;(function CardDescription(
+  { className, children, ...rest },
+  ref
+) {
+  const cls = cn(&#34;text-sm text-muted-foreground&#34;, className);
+  return (
+    &lt;p ref={ref} className={cls || undefined} {...rest}&gt;
+      {children}
+    &lt;/p&gt;
+  );
+});
+CardDescription.displayName = &#34;CardDescription&#34;;
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/card/card-footer.tsx</span><button type="button" hidden data-copy="code-react-2" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-react-2" class="font-mono">// Code generated by xgen. DO NOT EDIT.
+// Source: xgen/specs/ui/card.json
+/**
+ * CardFooter: one part of Card (one file per part, as in the Svelte package).
+ */
+
+import { forwardRef, type ReactNode, type HTMLAttributes } from &#34;react&#34;;
+import { cn } from &#34;../../utils&#34;;
+
+/**
+ * CardFooter renders the bottom action slot.
+ */
+export type CardFooterProps = Omit&lt;HTMLAttributes&lt;HTMLDivElement&gt;, &#34;className&#34; | &#34;children&#34;&gt; &amp; {
+  className?: string;
+  children?: ReactNode;
+};
+
+export const CardFooter = forwardRef&lt;HTMLDivElement, CardFooterProps&gt;(function CardFooter(
+  { className, children, ...rest },
+  ref
+) {
+  const cls = cn(&#34;flex items-center&#34;, className);
+  return (
+    &lt;div ref={ref} className={cls || undefined} {...rest}&gt;
+      {children}
+    &lt;/div&gt;
+  );
+});
+CardFooter.displayName = &#34;CardFooter&#34;;
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/card/card-header.tsx</span><button type="button" hidden data-copy="code-react-3" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-react-3" class="font-mono">// Code generated by xgen. DO NOT EDIT.
+// Source: xgen/specs/ui/card.json
+/**
+ * CardHeader: one part of Card (one file per part, as in the Svelte package).
+ */
+
+import { forwardRef, type ReactNode, type HTMLAttributes } from &#34;react&#34;;
+import { cn } from &#34;../../utils&#34;;
+
+/**
+ * CardHeader renders the top slot.
+ */
+export type CardHeaderProps = Omit&lt;HTMLAttributes&lt;HTMLDivElement&gt;, &#34;className&#34; | &#34;children&#34;&gt; &amp; {
+  className?: string;
+  children?: ReactNode;
+};
+
+export const CardHeader = forwardRef&lt;HTMLDivElement, CardHeaderProps&gt;(function CardHeader(
+  { className, children, ...rest },
+  ref
+) {
+  const cls = cn(&#34;grid auto-rows-min items-start gap-2&#34;, className);
+  return (
+    &lt;div ref={ref} className={cls || undefined} {...rest}&gt;
+      {children}
+    &lt;/div&gt;
+  );
+});
+CardHeader.displayName = &#34;CardHeader&#34;;
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/card/card-title.tsx</span><button type="button" hidden data-copy="code-react-4" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-react-4" class="font-mono">// Code generated by xgen. DO NOT EDIT.
+// Source: xgen/specs/ui/card.json
+/**
+ * CardTitle: one part of Card (one file per part, as in the Svelte package).
+ */
+
+import { forwardRef, type ReactNode, type HTMLAttributes, type ElementType, type Ref } from &#34;react&#34;;
+import { cn } from &#34;../../utils&#34;;
+import { titleTag } from &#34;../../utils/expr&#34;;
+
+/**
+ * CardTitle renders heading text at the As level (default h2).
+ */
+export type CardTitleProps = Omit&lt;HTMLAttributes&lt;HTMLElement&gt;, &#34;className&#34; | &#34;children&#34; | &#34;as&#34;&gt; &amp; {
+  as?: 1 | 2 | 3 | 4 | 5 | 6;
+  className?: string;
+  children?: ReactNode;
+};
+
+export const CardTitle = forwardRef&lt;HTMLElement, CardTitleProps&gt;(function CardTitle(
+  { as, className, children, ...rest },
+  ref
+) {
+  const cls = cn(&#34;font-semibold leading-none&#34;, className);
+  const resolvedTagValue = titleTag(as);
+  const Tag = resolvedTagValue as ElementType;
+  return (
+    &lt;Tag ref={ref as Ref&lt;HTMLElement&gt;} className={cls || undefined} {...rest}&gt;
+      {children}
+    &lt;/Tag&gt;
+  );
+});
+CardTitle.displayName = &#34;CardTitle&#34;;
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/card/card.tsx</span><button type="button" hidden data-copy="code-react-5" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-react-5" class="font-mono">// Code generated by xgen. DO NOT EDIT.
+// Source: xgen/specs/ui/card.json
+/**
+ * Card groups related content in one bordered surface.
+ * Card uses header, content, and footer slots.
+ * For semantic root elements (section, article), use CardClasses on a manual wrapper.
+ */
+
+import { forwardRef, type ReactNode, type HTMLAttributes } from &#34;react&#34;;
+import { cn, variants, type VariantKey } from &#34;../../utils&#34;;
+import { Slot } from &#34;../slot/slot&#34;;
+
+/** Card: the classes of each value of each prop (shadcn/cva style). */
+export const cardVariants = variants({
+  base: &#34;flex flex-col gap-8 bg-card p-6 text-card-foreground inset-ring inset-ring-border rounded&#34;,
+  variants: {
+    variant: {
+      default: &#34;&#34;,
+      muted: &#34;bg-muted&#34;,
+      ghost: &#34;bg-transparent&#34;,
+      compact: &#34;gap-4 p-4&#34;,
+    },
+  },
+  defaultVariants: { variant: &#34;default&#34; },
+});
+
+export type CardVariant = VariantKey&lt;typeof cardVariants, &#34;variant&#34;&gt;;
+
+/**
+ * Card renders the bordered surface wrapper.
+ */
+export type CardProps = Omit&lt;
+  HTMLAttributes&lt;HTMLDivElement&gt;,
+  | &#34;className&#34; | &#34;children&#34; | &#34;variant&#34;
+&gt; &amp; {
+  variant?: CardVariant;
+  className?: string;
+  children?: ReactNode;
+  asChild?: boolean;
+};
+
+export const Card = forwardRef&lt;HTMLDivElement, CardProps&gt;(function Card(
+  { variant, className, children, asChild, ...rest },
+  ref
+) {
+  const cls = cn(cardVariants({ variant }), className);
+  if (asChild) {
+    return (
+      &lt;Slot ref={ref} className={cls} {...rest}&gt;
+        {children}
+      &lt;/Slot&gt;
+    );
+  }
+  return (
+    &lt;div ref={ref} className={cls || undefined} data-slot=&#34;card&#34; {...rest}&gt;
+      {children}
+    &lt;/div&gt;
+  );
+});
+Card.displayName = &#34;Card&#34;;
+</code></pre></div><p class="text-sm"><a class="underline" href="https://registry.buildy.tw/react/components/ui/card.json">React registry item (JSON)</a></p></section><section id="panel-vue" data-panel data-runtime="vue" data-label="Vue" aria-label="Vue" class="mb-8"><h3 class="mb-2 text-lg font-semibold">Vue</h3><p class="mb-2 text-sm text-muted-foreground">Point the CLI at this runtime once, then add the item:</p><div class="mb-2"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-vue-init" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit init --yes --framework vue --dir src --registry-url https://registry.buildy.tw/vue --strict-cdn</code><button type="button" hidden data-copy="panel-vue-init" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code id="panel-vue-add" tabindex="0" class="overflow-x-auto whitespace-nowrap font-mono text-sm">npx ui8kit add card</code><button type="button" hidden data-copy="panel-vue-add" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/card/card-content.vue</span><button type="button" hidden data-copy="code-vue-0" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-vue-0" class="font-mono">&lt;!-- Code generated by xgen. DO NOT EDIT. --&gt;
+&lt;!-- Source: xgen/specs/ui/card.json --&gt;
+&lt;!--
+  CardContent renders the padded main body slot.
+--&gt;
+&lt;script lang=&#34;ts&#34;&gt;
+export type CardContentProps = {
+  class?: string;
+};
+&lt;/script&gt;
+
+&lt;script setup lang=&#34;ts&#34;&gt;
+import { computed, useAttrs } from &#34;vue&#34;;
+import { cn } from &#34;../../utils&#34;;
+
+defineOptions({ inheritAttrs: false });
+defineSlots&lt;{ default?(): unknown }&gt;();
+const { class: className } = defineProps&lt;CardContentProps&gt;();
+const attrs = useAttrs();
+const cls = computed(() =&gt; cn(className));
+&lt;/script&gt;
+
+&lt;template&gt;
+  &lt;div :class=&#34;cls || undefined&#34; v-bind=&#34;attrs&#34;&gt;
+    &lt;slot /&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/card/card-description.vue</span><button type="button" hidden data-copy="code-vue-1" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-vue-1" class="font-mono">&lt;!-- Code generated by xgen. DO NOT EDIT. --&gt;
+&lt;!-- Source: xgen/specs/ui/card.json --&gt;
+&lt;!--
+  CardDescription renders a muted subtitle in a p element.
+--&gt;
+&lt;script lang=&#34;ts&#34;&gt;
+export type CardDescriptionProps = {
+  class?: string;
+};
+&lt;/script&gt;
+
+&lt;script setup lang=&#34;ts&#34;&gt;
+import { computed, useAttrs } from &#34;vue&#34;;
+import { cn } from &#34;../../utils&#34;;
+
+defineOptions({ inheritAttrs: false });
+defineSlots&lt;{ default?(): unknown }&gt;();
+const { class: className } = defineProps&lt;CardDescriptionProps&gt;();
+const attrs = useAttrs();
+const cls = computed(() =&gt; cn(&#34;text-sm text-muted-foreground&#34;, className));
+&lt;/script&gt;
+
+&lt;template&gt;
+  &lt;p :class=&#34;cls || undefined&#34; v-bind=&#34;attrs&#34;&gt;
+    &lt;slot /&gt;
+  &lt;/p&gt;
+&lt;/template&gt;
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/card/card-footer.vue</span><button type="button" hidden data-copy="code-vue-2" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-vue-2" class="font-mono">&lt;!-- Code generated by xgen. DO NOT EDIT. --&gt;
+&lt;!-- Source: xgen/specs/ui/card.json --&gt;
+&lt;!--
+  CardFooter renders the bottom action slot.
+--&gt;
+&lt;script lang=&#34;ts&#34;&gt;
+export type CardFooterProps = {
+  class?: string;
+};
+&lt;/script&gt;
+
+&lt;script setup lang=&#34;ts&#34;&gt;
+import { computed, useAttrs } from &#34;vue&#34;;
+import { cn } from &#34;../../utils&#34;;
+
+defineOptions({ inheritAttrs: false });
+defineSlots&lt;{ default?(): unknown }&gt;();
+const { class: className } = defineProps&lt;CardFooterProps&gt;();
+const attrs = useAttrs();
+const cls = computed(() =&gt; cn(&#34;flex items-center&#34;, className));
+&lt;/script&gt;
+
+&lt;template&gt;
+  &lt;div :class=&#34;cls || undefined&#34; v-bind=&#34;attrs&#34;&gt;
+    &lt;slot /&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/card/card-header.vue</span><button type="button" hidden data-copy="code-vue-3" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-vue-3" class="font-mono">&lt;!-- Code generated by xgen. DO NOT EDIT. --&gt;
+&lt;!-- Source: xgen/specs/ui/card.json --&gt;
+&lt;!--
+  CardHeader renders the top slot.
+--&gt;
+&lt;script lang=&#34;ts&#34;&gt;
+export type CardHeaderProps = {
+  class?: string;
+};
+&lt;/script&gt;
+
+&lt;script setup lang=&#34;ts&#34;&gt;
+import { computed, useAttrs } from &#34;vue&#34;;
+import { cn } from &#34;../../utils&#34;;
+
+defineOptions({ inheritAttrs: false });
+defineSlots&lt;{ default?(): unknown }&gt;();
+const { class: className } = defineProps&lt;CardHeaderProps&gt;();
+const attrs = useAttrs();
+const cls = computed(() =&gt; cn(&#34;grid auto-rows-min items-start gap-2&#34;, className));
+&lt;/script&gt;
+
+&lt;template&gt;
+  &lt;div :class=&#34;cls || undefined&#34; v-bind=&#34;attrs&#34;&gt;
+    &lt;slot /&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/card/card-title.vue</span><button type="button" hidden data-copy="code-vue-4" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-vue-4" class="font-mono">&lt;!-- Code generated by xgen. DO NOT EDIT. --&gt;
+&lt;!-- Source: xgen/specs/ui/card.json --&gt;
+&lt;!--
+  CardTitle renders heading text at the As level (default h2).
+--&gt;
+&lt;script lang=&#34;ts&#34;&gt;
+export type CardTitleProps = {
+  as?: 1 | 2 | 3 | 4 | 5 | 6;
+  class?: string;
+};
+&lt;/script&gt;
+
+&lt;script setup lang=&#34;ts&#34;&gt;
+import { computed, useAttrs } from &#34;vue&#34;;
+import { cn } from &#34;../../utils&#34;;
+import { titleTag } from &#34;../../utils/expr&#34;;
+
+defineOptions({ inheritAttrs: false });
+defineSlots&lt;{ default?(): unknown }&gt;();
+const { as, class: className } = defineProps&lt;CardTitleProps&gt;();
+const attrs = useAttrs();
+const cls = computed(() =&gt; cn(&#34;font-semibold leading-none&#34;, className));
+const resolvedTagValue = computed(() =&gt; titleTag(as));
+&lt;/script&gt;
+
+&lt;template&gt;
+  &lt;component :is=&#34;resolvedTagValue&#34; :class=&#34;cls || undefined&#34; v-bind=&#34;attrs&#34;&gt;
+    &lt;slot /&gt;
+  &lt;/component&gt;
+&lt;/template&gt;
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/card/card.vue</span><button type="button" hidden data-copy="code-vue-5" class="h-8 rounded border border-input bg-card px-3 text-xs font-medium hover:bg-accent">Copy</button></div><pre tabindex="0" class="max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6"><code id="code-vue-5" class="font-mono">&lt;!-- Code generated by xgen. DO NOT EDIT. --&gt;
+&lt;!-- Source: xgen/specs/ui/card.json --&gt;
+&lt;!--
+  Card renders the bordered surface wrapper.
+--&gt;
+&lt;script lang=&#34;ts&#34;&gt;
+import { variants, type VariantKey } from &#34;../../utils&#34;;
+
+/** Card: the classes of each value of each prop (shadcn/cva style). */
+export const cardVariants = variants({
+  base: &#34;flex flex-col gap-8 bg-card p-6 text-card-foreground inset-ring inset-ring-border rounded&#34;,
+  variants: {
+    variant: {
+      default: &#34;&#34;,
+      muted: &#34;bg-muted&#34;,
+      ghost: &#34;bg-transparent&#34;,
+      compact: &#34;gap-4 p-4&#34;,
+    },
+  },
+  defaultVariants: { variant: &#34;default&#34; },
+});
+
+export type CardVariant = VariantKey&lt;typeof cardVariants, &#34;variant&#34;&gt;;
+
+export type CardProps = {
+  variant?: CardVariant;
+  class?: string;
+};
+&lt;/script&gt;
+
+&lt;script setup lang=&#34;ts&#34;&gt;
+import { computed, useAttrs } from &#34;vue&#34;;
+import { cn } from &#34;../../utils&#34;;
+
+defineOptions({ inheritAttrs: false });
+defineSlots&lt;{ default?(): unknown }&gt;();
+const { variant, class: className } = defineProps&lt;CardProps&gt;();
+const attrs = useAttrs();
+const cls = computed(() =&gt; cn(cardVariants({ variant }), className));
+&lt;/script&gt;
+
+&lt;template&gt;
+  &lt;div :class=&#34;cls || undefined&#34; data-slot=&#34;card&#34; v-bind=&#34;attrs&#34;&gt;
+    &lt;slot /&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+</code></pre></div><p class="text-sm"><a class="underline" href="https://registry.buildy.tw/vue/components/ui/card.json">Vue registry item (JSON)</a></p></section></div></article></main></div><footer class="border-t border-border"><div class="mx-auto max-w-6xl px-4 py-8 text-sm text-muted-foreground">ui8kit, MIT licence. Static docs generated from markdown and the registry (<a class="underline" href="https://registry.buildy.tw/registry.json">registry.json</a>).</div></footer></body></html>
