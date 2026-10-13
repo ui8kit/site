@@ -12,6 +12,7 @@
 .theme-ctl { display: none; }
 .js .theme-ctl { display: flex; }
 @source "../../previews/html";
+@source "../../previews/templates";
 
 /* ---- syntax highlighting: chroma token classes at build time, colours as variables (light and dark, AA on card/muted/background) ---- */
 :root {

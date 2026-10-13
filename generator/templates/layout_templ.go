@@ -68,7 +68,7 @@ func Layout(m Meta) templ.Component {
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 4, "\"><script src=\"/assets/theme.js\"></script><link rel=\"stylesheet\" href=\"/assets/site.css\"><link rel=\"stylesheet\" href=\"/assets/skins.css\"><script src=\"/assets/app.js\" defer></script></head><body class=\"min-h-screen bg-background text-foreground font-sans\"><a href=\"#main\" class=\"sr-only focus:not-sr-only focus:absolute focus:left-2 focus:top-2 focus:bg-background focus:px-4 focus:py-2 focus:z-50\">Skip to content</a><header class=\"border-b border-border\"><div class=\"mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-4 py-4\"><a href=\"/\" class=\"text-lg font-semibold\">ui8kit</a><nav aria-label=\"Main\" class=\"flex items-center gap-4 text-sm\"><a href=\"/docs/\" class=\"hover:underline\">Docs</a> <a href=\"/docs/categories/blocks-marketing/\" class=\"hover:underline\">Blocks</a> <a href=\"/docs/categories/primitives/\" class=\"hover:underline\">Primitives</a> <a href=\"/docs/cli/\" class=\"hover:underline\">CLI</a></nav><form id=\"search\" role=\"search\" class=\"relative w-full sm:w-72\" data-index=\"/search-index.json\"><label for=\"search-input\" class=\"sr-only\">Search components and blocks</label> <input id=\"search-input\" type=\"search\" autocomplete=\"off\" placeholder=\"Search, press /\" class=\"h-10 w-full rounded border border-input bg-card px-4 text-sm\"><ul id=\"search-results\" hidden class=\"absolute left-0 right-0 top-12 z-40 rounded border border-border bg-popover text-popover-foreground shadow-md\" aria-live=\"polite\"></ul></form><div class=\"theme-ctl items-center gap-2 text-sm\"><label for=\"theme-select\" class=\"sr-only\">Colour mode</label> <select id=\"theme-select\" class=\"h-10 rounded border border-input bg-card px-2 text-sm text-card-foreground\"><option value=\"system\">System</option> <option value=\"light\">Light</option> <option value=\"dark\">Dark</option></select> <label for=\"skin-select\" class=\"sr-only\">Skin</label> <select id=\"skin-select\" class=\"h-10 rounded border border-input bg-card px-2 text-sm text-card-foreground\"><option value=\"\">Default</option> ")
+		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 4, "\"><script src=\"/assets/theme.js\"></script><link rel=\"stylesheet\" href=\"/assets/site.css\"><link rel=\"stylesheet\" href=\"/assets/skins.css\"><script src=\"/assets/app.js\" defer></script></head><body class=\"min-h-screen bg-background text-foreground font-sans\"><a href=\"#main\" class=\"sr-only focus:not-sr-only focus:absolute focus:left-2 focus:top-2 focus:bg-background focus:px-4 focus:py-2 focus:z-50\">Skip to content</a><header class=\"border-b border-border\"><div class=\"mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-4 py-4\"><a href=\"/\" class=\"text-lg font-semibold\">ui8kit</a><nav aria-label=\"Main\" class=\"flex items-center gap-4 text-sm\"><a href=\"/docs/\" class=\"hover:underline\">Docs</a> <a href=\"/docs/categories/blocks-marketing/\" class=\"hover:underline\">Blocks</a> <a href=\"/docs/categories/primitives/\" class=\"hover:underline\">Primitives</a> <a href=\"/templates/\" class=\"hover:underline\">Templates</a> <a href=\"/docs/cli/\" class=\"hover:underline\">CLI</a></nav><form id=\"search\" role=\"search\" class=\"relative w-full sm:w-72\" data-index=\"/search-index.json\"><label for=\"search-input\" class=\"sr-only\">Search components and blocks</label> <input id=\"search-input\" type=\"search\" autocomplete=\"off\" placeholder=\"Search, press /\" class=\"h-10 w-full rounded border border-input bg-card px-4 text-sm\"><ul id=\"search-results\" hidden class=\"absolute left-0 right-0 top-12 z-40 rounded border border-border bg-popover text-popover-foreground shadow-md\" aria-live=\"polite\"></ul></form><div class=\"theme-ctl items-center gap-2 text-sm\"><label for=\"theme-select\" class=\"sr-only\">Colour mode</label> <select id=\"theme-select\" class=\"h-10 rounded border border-input bg-card px-2 text-sm text-card-foreground\"><option value=\"system\">System</option> <option value=\"light\">Light</option> <option value=\"dark\">Dark</option></select> <label for=\"skin-select\" class=\"sr-only\">Skin</label> <select id=\"skin-select\" class=\"h-10 rounded border border-input bg-card px-2 text-sm text-card-foreground\"><option value=\"\">Default</option> ")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -80,7 +80,7 @@ func Layout(m Meta) templ.Component {
 			var templ_7745c5c3_Var5 string
 			templ_7745c5c3_Var5, templ_7745c5c3_Err = templ.ResolveAttributeValue(s.ID)
 			if templ_7745c5c3_Err != nil {
-				return templ.Error{Err: templ_7745c5c3_Err, FileName: `templates/layout.templ`, Line: 44, Col: 28}
+				return templ.Error{Err: templ_7745c5c3_Err, FileName: `templates/layout.templ`, Line: 45, Col: 28}
 			}
 			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ_7745c5c3_Var5)
 			if templ_7745c5c3_Err != nil {
@@ -93,7 +93,7 @@ func Layout(m Meta) templ.Component {
 			var templ_7745c5c3_Var6 string
 			templ_7745c5c3_Var6, templ_7745c5c3_Err = templ.JoinStringErrs(s.Label)
 			if templ_7745c5c3_Err != nil {
-				return templ.Error{Err: templ_7745c5c3_Err, FileName: `templates/layout.templ`, Line: 44, Col: 40}
+				return templ.Error{Err: templ_7745c5c3_Err, FileName: `templates/layout.templ`, Line: 45, Col: 40}
 			}
 			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var6))
 			if templ_7745c5c3_Err != nil {
@@ -121,7 +121,7 @@ func Layout(m Meta) templ.Component {
 				var templ_7745c5c3_Var7 string
 				templ_7745c5c3_Var7, templ_7745c5c3_Err = templ.JoinStringErrs(g.Title)
 				if templ_7745c5c3_Err != nil {
-					return templ.Error{Err: templ_7745c5c3_Err, FileName: `templates/layout.templ`, Line: 54, Col: 55}
+					return templ.Error{Err: templ_7745c5c3_Err, FileName: `templates/layout.templ`, Line: 55, Col: 55}
 				}
 				_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var7))
 				if templ_7745c5c3_Err != nil {
@@ -144,7 +144,7 @@ func Layout(m Meta) templ.Component {
 						var templ_7745c5c3_Var8 templ.SafeURL
 						templ_7745c5c3_Var8, templ_7745c5c3_Err = templ.JoinURLErrs(templ.SafeURL(l.Href))
 						if templ_7745c5c3_Err != nil {
-							return templ.Error{Err: templ_7745c5c3_Err, FileName: `templates/layout.templ`, Line: 59, Col: 42}
+							return templ.Error{Err: templ_7745c5c3_Err, FileName: `templates/layout.templ`, Line: 60, Col: 42}
 						}
 						_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var8))
 						if templ_7745c5c3_Err != nil {
@@ -157,7 +157,7 @@ func Layout(m Meta) templ.Component {
 						var templ_7745c5c3_Var9 string
 						templ_7745c5c3_Var9, templ_7745c5c3_Err = templ.JoinStringErrs(l.Title)
 						if templ_7745c5c3_Err != nil {
-							return templ.Error{Err: templ_7745c5c3_Err, FileName: `templates/layout.templ`, Line: 59, Col: 159}
+							return templ.Error{Err: templ_7745c5c3_Err, FileName: `templates/layout.templ`, Line: 60, Col: 159}
 						}
 						_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var9))
 						if templ_7745c5c3_Err != nil {
@@ -175,7 +175,7 @@ func Layout(m Meta) templ.Component {
 						var templ_7745c5c3_Var10 templ.SafeURL
 						templ_7745c5c3_Var10, templ_7745c5c3_Err = templ.JoinURLErrs(templ.SafeURL(l.Href))
 						if templ_7745c5c3_Err != nil {
-							return templ.Error{Err: templ_7745c5c3_Err, FileName: `templates/layout.templ`, Line: 61, Col: 42}
+							return templ.Error{Err: templ_7745c5c3_Err, FileName: `templates/layout.templ`, Line: 62, Col: 42}
 						}
 						_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var10))
 						if templ_7745c5c3_Err != nil {
@@ -188,7 +188,7 @@ func Layout(m Meta) templ.Component {
 						var templ_7745c5c3_Var11 string
 						templ_7745c5c3_Var11, templ_7745c5c3_Err = templ.JoinStringErrs(l.Title)
 						if templ_7745c5c3_Err != nil {
-							return templ.Error{Err: templ_7745c5c3_Err, FileName: `templates/layout.templ`, Line: 61, Col: 161}
+							return templ.Error{Err: templ_7745c5c3_Err, FileName: `templates/layout.templ`, Line: 62, Col: 161}
 						}
 						_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var11))
 						if templ_7745c5c3_Err != nil {
@@ -229,7 +229,7 @@ func Layout(m Meta) templ.Component {
 		var templ_7745c5c3_Var12 templ.SafeURL
 		templ_7745c5c3_Var12, templ_7745c5c3_Err = templ.JoinURLErrs(templ.SafeURL(m.RegistryURL + "/registry.json"))
 		if templ_7745c5c3_Err != nil {
-			return templ.Error{Err: templ_7745c5c3_Err, FileName: `templates/layout.templ`, Line: 75, Col: 155}
+			return templ.Error{Err: templ_7745c5c3_Err, FileName: `templates/layout.templ`, Line: 76, Col: 155}
 		}
 		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var12))
 		if templ_7745c5c3_Err != nil {

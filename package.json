@@ -15,7 +15,8 @@
     "docs:build": "bash scripts/build-docs.sh",
     "site:build": "bun run registry:build && bun run registry:validate && bun run site:generate",
     "site:css": "tailwindcss -i generator/assets/site.src.css -o generator/assets/site.css --minify",
-    "site:templ": "cd generator && templ generate"
+    "site:templ": "cd generator && templ generate",
+    "templates:build": "bun run registry/src/templates.ts"
   },
   "devDependencies": {
     "@tailwindcss/cli": "^4.3.3",

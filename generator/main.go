@@ -286,6 +286,7 @@ func main() {
 	for _, d := range docs {
 		search = append(search, map[string]string{"t": d.Title, "n": d.Slug, "k": "doc", "c": d.Section, "d": d.Desc, "u": docURL(d)})
 	}
+	search = append(search, buildTemplates(reg.Runtimes, itemURL, nav)...)
 	sb, err := json.Marshal(search)
 	must(err)
 	write("search-index.json", sb)

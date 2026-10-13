@@ -128,3 +128,32 @@ type ListData struct {
 }
 
 func (c Card) HasTag() bool { return c.Tag != "" }
+
+// Templates tab: theme apps of the monorepo (a set of pages built from registry blocks), from previews/templates/index.json
+type TemplateApp struct {
+	Name, Title, Description, Href string
+	Pages                          []TemplatePageLink
+	Blocks                         int
+}
+
+type TemplatePageLink struct {
+	Title, Nav, Href string
+	Sections         int
+}
+
+type TemplatesIndexData struct {
+	Apps   []TemplateApp
+	Commit string
+}
+
+type TemplatePageData struct {
+	App      TemplateApp
+	Title    string
+	Nav      string
+	Preview  string // static HTML rendered at build time (trusted: built from the monorepo by registry/src/templates.ts)
+	Install  string
+	Blocks   []Related
+	Panels   []RuntimePanel
+	Sections int
+	Commit   string
+}
