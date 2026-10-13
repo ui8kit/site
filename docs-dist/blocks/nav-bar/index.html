@@ -1,5 +1,5 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Nav Bar (block) | ui8kit</title><meta name="description" content="A top bar in four shapes: inline, split around the brand, with a search field, and transparent over a picture."><link rel="canonical" href="https://ui.buildy.tw/blocks/nav-bar/"><script src="/assets/theme.js"></script><link rel="stylesheet" href="/assets/site.css"><link rel="stylesheet" href="/assets/skins.css"><script src="/assets/app.js" defer></script></head><body class="min-h-screen bg-background text-foreground font-sans"><a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:left-2 focus:top-2 focus:bg-background focus:px-4 focus:py-2 focus:z-50">Skip to content</a><header class="border-b border-border"><div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-4 py-4"><a href="/" class="text-lg font-semibold">ui8kit</a><nav class="flex items-center gap-4 text-sm" aria-label="Main"><a href="/docs/" class="hover:underline">Docs</a><a href="/docs/categories/blocks-marketing/" class="hover:underline">Blocks</a><a href="/docs/categories/primitives/" class="hover:underline">Primitives</a><a href="/templates/" class="hover:underline">Templates</a><a href="/docs/cli/" class="hover:underline">CLI</a></nav><form id="search" class="grid gap-4 relative w-full sm:w-72" data-index="/search-index.json" role="search"><label class="text-xs font-bold text-foreground sr-only" for="search-input">Search components and blocks</label><input id="search-input" type="search" placeholder="Search, press /" autocomplete="off" class="w-full min-w-0 text-foreground inset-ring inset-ring-input outline-none placeholder:text-muted-foreground disabled:cursor-not-allowed disabled:opacity-50 focus-visible:inset-ring-ring rounded h-10 bg-card px-4 text-sm md:text-sm"><ul class="absolute left-0 right-0 top-12 z-40 rounded border border-border bg-popover text-popover-foreground shadow-md" aria-live="polite" hidden id="search-results"></ul></form><div class="theme-ctl items-center gap-2 text-sm"><label class="text-xs font-bold text-foreground sr-only" for="theme-select">Colour mode</label><select id="theme-select" class="min-w-0 inset-ring inset-ring-input outline-none placeholder:text-muted-foreground disabled:cursor-not-allowed disabled:opacity-50 focus-visible:inset-ring-ring rounded h-10 text-sm w-auto bg-card px-2 text-card-foreground"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select><label class="text-xs font-bold text-foreground sr-only" for="skin-select">Skin</label><select id="skin-select" class="min-w-0 inset-ring inset-ring-input outline-none placeholder:text-muted-foreground disabled:cursor-not-allowed disabled:opacity-50 focus-visible:inset-ring-ring rounded h-10 text-sm w-auto bg-card px-2 text-card-foreground"><option value="" selected>Default</option><option value="sky">Sky</option><option value="modern-minimal">Modern Minimal</option><option value="violet-bloom">Violet Bloom</option><option value="t3-chat">T3 Chat</option><option value="bubblegum">Bubblegum</option><option value="doom-64">Doom 64</option><option value="amber-minimal">Amber Minimal</option><option value="supabase">Supabase</option><option value="kodama-grove">Kodama Grove</option><option value="perpetuity">Perpetuity</option><option value="cosmic-night">Cosmic Night</option><option value="claude">Claude</option><option value="mocha-mousse">Mocha Mousse</option><option value="neo-brutalism">Neo Brutalism</option><option value="notebook">Notebook</option></select></div></div></header><div class="mx-auto flex max-w-6xl flex-col gap-8 px-4 py-8 md:flex-row"><nav class="md:w-64 md:shrink-0" aria-label="Docs"><h2 class="text-foreground text-sm font-semibold mb-2">Guides</h2><ul class="mb-6 flex flex-col gap-1"><li class=""><a href="/docs/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Overview</a></li><li class=""><a href="/docs/getting-started/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Getting started</a></li><li class=""><a href="/docs/installation/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Installation</a></li><li class=""><a href="/docs/cli/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">CLI</a></li><li class=""><a href="/docs/theming-skins/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Theming and skins</a></li><li class=""><a href="/docs/grid-8px/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">The 8px grid</a></li></ul><h2 class="text-foreground text-sm font-semibold mb-2">Categories</h2><ul class="mb-6 flex flex-col gap-1"><li class=""><a href="/docs/categories/primitives/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Primitives</a></li><li class=""><a href="/docs/categories/components/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Components</a></li><li class=""><a href="/docs/categories/blocks-marketing/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: marketing</a></li><li class=""><a href="/docs/categories/blocks-commerce/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: commerce</a></li><li class=""><a href="/docs/categories/blocks-dashboard/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: dashboard</a></li><li class=""><a href="/docs/categories/blocks-content/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: content</a></li><li class=""><a href="/docs/categories/blocks-account/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: account</a></li><li class=""><a href="/docs/categories/blocks-promo/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: promo</a></li><li class=""><a href="/docs/categories/blocks-support/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: support</a></li><li class=""><a href="/docs/categories/blocks-onboarding/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: onboarding</a></li><li class=""><a href="/docs/categories/blocks-general/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: general</a></li></ul></nav> <main class="min-w-0 flex-1" id="main"><article class=""><p class="text-sm text-muted-foreground"><a href="/docs/categories/blocks-marketing/" class="underline">block / marketing</a></p><h1 class="text-foreground text-3xl font-semibold mb-2 tracking-tight">Nav Bar</h1><p class="mb-6 max-w-3xl text-muted-foreground">A top bar in four shapes: inline, split around the brand, with a search field, and transparent over a picture.</p><h2 class="text-foreground text-xl font-semibold mb-2">Install</h2><div class="mb-6 max-w-xl"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code class="overflow-x-auto whitespace-nowrap font-mono text-sm" id="install-nav-bar" tabindex="0">npx ui8kit add nav-bar</code><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="install-nav-bar" hidden>Copy</button></div></div><p class="text-sm mb-6 text-muted-foreground">Pulls in:   <a href="/primitives/block/" class="underline">block</a><span class="">, </span> <a href="/primitives/box/" class="underline">box</a><span class="">, </span> <a href="/primitives/container/" class="underline">container</a><span class="">, </span> <a href="/primitives/grid/" class="underline">grid</a><span class="">, </span> <a href="/primitives/group/" class="underline">group</a><span class="">, </span> <a href="/primitives/link/" class="underline">link</a><span class="">, </span> <a href="/primitives/link-plain/" class="underline">link-plain</a><span class="">, </span> <a href="/components/nav-actions/" class="underline">nav-actions</a><span class="">, </span> <a href="/components/nav-links/" class="underline">nav-links</a><span class="">, </span> <a href="/components/over-media/" class="underline">over-media</a><span class="">, </span> <a href="/components/search-palette/" class="underline">search-palette</a><span class="">, </span> <a href="/lib/utils/" class="underline">utils</a></p> <h2 class="text-foreground text-xl font-semibold mb-2">Preview</h2><div class="preview mb-8 rounded border border-border bg-background" aria-label="Nav Bar preview" role="group" tabindex="0"><header class="relative border-b border-border bg-background" data-testid="nav-bar" data-layout="inline" data-tone="default"><div class="mx-auto w-full max-w-6xl px-4" data-slot="container"><div class="flex flex-wrap items-center justify-between gap-4 py-4"><a class="inline-flex items-center underline-offset-4 gap-2 text-foreground hover:underline text-lg font-medium" href="#" data-testid="brand">Northwind</a><nav class="order-last w-full overflow-x-auto md:order-none md:w-auto [&amp;&gt;div]:flex-nowrap md:[&amp;&gt;div]:flex-wrap [&amp;_a]:shrink-0" aria-label="Main navigation" data-testid="site-nav"><div class="flex min-w-0 gap-4 items-center justify-start flex-wrap"><a class="inline-flex items-center underline-offset-4 gap-2 font-semibold text-foreground hover:underline text-sm" href="#" aria-current="page" data-testid="nav-link">Product</a><a class="inline-flex items-center underline-offset-4 gap-2 font-semibold text-foreground hover:underline text-sm" href="#" data-testid="nav-link">Solutions</a><a class="inline-flex items-center underline-offset-4 gap-2 font-semibold text-foreground hover:underline text-sm" href="#" data-testid="nav-link">Pricing</a><a class="inline-flex items-center underline-offset-4 gap-2 font-semibold text-foreground hover:underline text-sm" href="#" data-testid="nav-link">Docs</a><a class="inline-flex items-center underline-offset-4 gap-2 font-semibold text-foreground hover:underline text-sm" href="#" data-testid="nav-link">Company</a></div></nav><a href="#" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-transparent text-foreground inset-ring-transparent h-8 px-3 text-sm" data-slot="button" data-testid="nav-login">Log In</a><a href="#" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-primary text-primary-foreground inset-ring-primary h-8 px-3 text-sm" data-slot="button" data-testid="header-cta">Get Started</a></div></div></header>
-</div><h2 class="text-foreground text-xl font-semibold mb-2">Code</h2><div class="rt mb-8"><div class="rt-bar" aria-label="Runtime" role="radiogroup"><input id="rt-svelte" type="radio" name="rt" value="svelte" class="shrink-0 appearance-none rounded-full bg-background inset-ring inset-ring-input checked:bg-primary checked:inset-ring-primary radio-glyph disabled:cursor-not-allowed disabled:opacity-50 [--dot:10px] sr-only size-px" checked><label class="text-xs font-bold text-foreground" for="rt-svelte">Svelte</label><input id="rt-react" type="radio" name="rt" value="react" class="shrink-0 appearance-none rounded-full bg-background inset-ring inset-ring-input checked:bg-primary checked:inset-ring-primary radio-glyph disabled:cursor-not-allowed disabled:opacity-50 [--dot:10px] sr-only size-px"><label class="text-xs font-bold text-foreground" for="rt-react">React</label><input id="rt-vue" type="radio" name="rt" value="vue" class="shrink-0 appearance-none rounded-full bg-background inset-ring inset-ring-input checked:bg-primary checked:inset-ring-primary radio-glyph disabled:cursor-not-allowed disabled:opacity-50 [--dot:10px] sr-only size-px"><label class="text-xs font-bold text-foreground" for="rt-vue">Vue</label></div><section class="rt-panel" id="panel-svelte" aria-label="Svelte code" data-runtime="svelte"><p class="text-sm mb-2 text-muted-foreground">Point the CLI at this runtime once, then add the item:</p><div class="mb-2"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code class="overflow-x-auto whitespace-nowrap font-mono text-sm" id="panel-svelte-init" tabindex="0">npx ui8kit init --yes --framework svelte --dir src --registry-url https://registry.buildy.tw/svelte --strict-cdn</code><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="panel-svelte-init" hidden>Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code class="overflow-x-auto whitespace-nowrap font-mono text-sm" id="panel-svelte-add" tabindex="0">npx ui8kit add nav-bar</code><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="panel-svelte-add" hidden>Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">blocks/nav-bar.svelte</span><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="code-svelte-0" hidden>Copy</button></div><pre class="hl max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6" tabindex="0"><code class="font-mono" id="code-svelte-0"><span class="c">&lt;!-- Code generated by xgen. DO NOT EDIT. --&gt;</span>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Nav Bar (block) | ui8kit</title><meta name="description" content="A top bar in four shapes: inline, split around the brand, with a search field, and transparent over a picture."><link rel="canonical" href="https://ui.buildy.tw/blocks/nav-bar/"><script src="/assets/theme.js"></script><link rel="stylesheet" href="/assets/site.css"><link rel="stylesheet" href="/assets/skins.css"><script src="/assets/app.js" defer></script></head><body class="min-h-screen bg-background text-foreground font-sans"><a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:left-2 focus:top-2 focus:bg-background focus:px-4 focus:py-2 focus:z-50">Skip to content</a><header class="border-b border-border"><div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-4 py-4"><a href="/" class="text-lg font-semibold">ui8kit</a><nav class="flex items-center gap-4 text-sm" aria-label="Main"><a href="/docs/" class="hover:underline">Docs</a><a href="/docs/categories/blocks-marketing/" class="hover:underline">Blocks</a><a href="/docs/categories/primitives/" class="hover:underline">Primitives</a><a href="/templates/" class="hover:underline">Templates</a><a href="/docs/cli/" class="hover:underline">CLI</a></nav><form id="search" class="grid gap-4 relative w-full sm:w-72" data-index="/search-index.json" role="search"><label class="text-xs font-bold text-foreground sr-only" for="search-input">Search components and blocks</label><input id="search-input" type="search" placeholder="Search, press /" autocomplete="off" class="w-full min-w-0 text-foreground inset-ring inset-ring-input outline-none placeholder:text-muted-foreground disabled:cursor-not-allowed disabled:opacity-50 focus-visible:inset-ring-ring rounded h-10 bg-card px-4 text-sm md:text-sm"><ul class="absolute left-0 right-0 top-12 z-40 rounded border border-border bg-popover text-popover-foreground shadow-md" aria-live="polite" hidden id="search-results"></ul></form><div class="theme-ctl items-center gap-2 text-sm"><label class="text-xs font-bold text-foreground sr-only" for="theme-select">Colour mode</label><select id="theme-select" class="min-w-0 inset-ring inset-ring-input outline-none placeholder:text-muted-foreground disabled:cursor-not-allowed disabled:opacity-50 focus-visible:inset-ring-ring rounded h-10 text-sm w-auto bg-card px-2 text-card-foreground"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select><label class="text-xs font-bold text-foreground sr-only" for="skin-select">Skin</label><select id="skin-select" class="min-w-0 inset-ring inset-ring-input outline-none placeholder:text-muted-foreground disabled:cursor-not-allowed disabled:opacity-50 focus-visible:inset-ring-ring rounded h-10 text-sm w-auto bg-card px-2 text-card-foreground"><option value="" selected>Default</option><option value="sky">Sky</option><option value="modern-minimal">Modern Minimal</option><option value="violet-bloom">Violet Bloom</option><option value="t3-chat">T3 Chat</option><option value="bubblegum">Bubblegum</option><option value="doom-64">Doom 64</option><option value="amber-minimal">Amber Minimal</option><option value="supabase">Supabase</option><option value="kodama-grove">Kodama Grove</option><option value="perpetuity">Perpetuity</option><option value="cosmic-night">Cosmic Night</option><option value="claude">Claude</option><option value="mocha-mousse">Mocha Mousse</option><option value="neo-brutalism">Neo Brutalism</option><option value="notebook">Notebook</option></select></div></div></header><div class="mx-auto flex max-w-6xl flex-col gap-8 px-4 py-8 md:flex-row"><nav class="md:w-64 md:shrink-0" aria-label="Docs"><h2 class="text-foreground text-sm font-semibold mb-2">Guides</h2><ul class="mb-6 flex flex-col gap-1"><li class=""><a href="/docs/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Overview</a></li><li class=""><a href="/docs/getting-started/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Getting started</a></li><li class=""><a href="/docs/installation/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Installation</a></li><li class=""><a href="/docs/cli/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">CLI</a></li><li class=""><a href="/docs/theming-skins/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Theming and skins</a></li><li class=""><a href="/docs/grid-8px/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">The 8px grid</a></li></ul><h2 class="text-foreground text-sm font-semibold mb-2">Categories</h2><ul class="mb-6 flex flex-col gap-1"><li class=""><a href="/docs/categories/primitives/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Primitives</a></li><li class=""><a href="/docs/categories/components/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Components</a></li><li class=""><a href="/docs/categories/blocks-marketing/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: marketing</a></li><li class=""><a href="/docs/categories/blocks-commerce/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: commerce</a></li><li class=""><a href="/docs/categories/blocks-dashboard/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: dashboard</a></li><li class=""><a href="/docs/categories/blocks-content/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: content</a></li><li class=""><a href="/docs/categories/blocks-account/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: account</a></li><li class=""><a href="/docs/categories/blocks-promo/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: promo</a></li><li class=""><a href="/docs/categories/blocks-support/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: support</a></li><li class=""><a href="/docs/categories/blocks-onboarding/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: onboarding</a></li><li class=""><a href="/docs/categories/blocks-general/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: general</a></li></ul></nav> <main class="min-w-0 flex-1" id="main"><article class=""><p class="text-sm text-muted-foreground"><a href="/docs/categories/blocks-marketing/" class="underline">block / marketing</a></p><h1 class="text-foreground text-3xl font-semibold mb-2 tracking-tight">Nav Bar</h1><p class="mb-6 max-w-3xl text-muted-foreground">A top bar in four shapes: inline, split around the brand, with a search field, and transparent over a picture.</p><h2 class="text-foreground text-xl font-semibold mb-2">Install</h2><div class="mb-6 max-w-xl"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code class="overflow-x-auto whitespace-nowrap font-mono text-sm" id="install-nav-bar" tabindex="0">npx ui8kit add nav-bar</code><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="install-nav-bar" hidden>Copy</button></div></div><p class="text-sm mb-6 text-muted-foreground">Pulls in:   <a href="/primitives/block/" class="underline">block</a><span class="">, </span> <a href="/primitives/box/" class="underline">box</a><span class="">, </span> <a href="/primitives/container/" class="underline">container</a><span class="">, </span> <a href="/primitives/grid/" class="underline">grid</a><span class="">, </span> <a href="/primitives/group/" class="underline">group</a><span class="">, </span> <a href="/primitives/link/" class="underline">link</a><span class="">, </span> <a href="/primitives/link-plain/" class="underline">link-plain</a><span class="">, </span> <a href="/components/nav-actions/" class="underline">nav-actions</a><span class="">, </span> <a href="/components/nav-block/" class="underline">nav-block</a><span class="">, </span> <a href="/components/nav-links/" class="underline">nav-links</a><span class="">, </span> <a href="/components/over-media/" class="underline">over-media</a><span class="">, </span> <a href="/components/search-palette/" class="underline">search-palette</a><span class="">, </span> <a href="/lib/utils/" class="underline">utils</a></p> <h2 class="text-foreground text-xl font-semibold mb-2">Preview</h2><div class="preview mb-8 rounded border border-border bg-background" aria-label="Nav Bar preview" role="group" tabindex="0"><header class="relative border-b border-border bg-background" data-testid="nav-bar" data-layout="inline" data-tone="default"><div class="mx-auto w-full max-w-6xl px-4" data-slot="container"><div class="flex flex-wrap items-center justify-between gap-4 py-4"><a class="inline-flex items-center underline-offset-4 gap-2 text-foreground hover:underline text-lg font-medium" href="#" data-testid="brand">Northwind</a><nav class="order-last w-full overflow-x-auto md:order-none md:w-auto [&amp;&gt;div]:flex-nowrap md:[&amp;&gt;div]:flex-wrap [&amp;_a]:shrink-0" aria-label="Main navigation" data-testid="site-nav"><div class="flex min-w-0 gap-4 items-center justify-start flex-wrap"><a class="inline-flex items-center underline-offset-4 gap-2 font-semibold text-foreground hover:underline text-sm" href="#" aria-current="page" data-testid="nav-link">Product</a><a class="inline-flex items-center underline-offset-4 gap-2 font-semibold text-foreground hover:underline text-sm" href="#" data-testid="nav-link">Solutions</a><a class="inline-flex items-center underline-offset-4 gap-2 font-semibold text-foreground hover:underline text-sm" href="#" data-testid="nav-link">Pricing</a><a class="inline-flex items-center underline-offset-4 gap-2 font-semibold text-foreground hover:underline text-sm" href="#" data-testid="nav-link">Docs</a><a class="inline-flex items-center underline-offset-4 gap-2 font-semibold text-foreground hover:underline text-sm" href="#" data-testid="nav-link">Company</a></div></nav><a href="#" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-transparent text-foreground inset-ring-transparent h-8 px-3 text-sm" data-slot="button" data-testid="nav-login">Log In</a><a href="#" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-primary text-primary-foreground inset-ring-primary h-8 px-3 text-sm" data-slot="button" data-testid="header-cta">Get Started</a></div></div></header>
+</div><h2 class="text-foreground text-xl font-semibold mb-2">Code</h2><div class="rt mb-8"><div class="rt-bar" aria-label="Runtime" role="radiogroup"><input id="rt-svelte" type="radio" name="rt" value="svelte" class="shrink-0 appearance-none rounded-full bg-background inset-ring inset-ring-input checked:bg-primary checked:inset-ring-primary radio-glyph disabled:cursor-not-allowed disabled:opacity-50 [--dot:10px] sr-only size-px" checked><label class="text-xs font-bold text-foreground" for="rt-svelte">Svelte</label><input id="rt-react" type="radio" name="rt" value="react" class="shrink-0 appearance-none rounded-full bg-background inset-ring inset-ring-input checked:bg-primary checked:inset-ring-primary radio-glyph disabled:cursor-not-allowed disabled:opacity-50 [--dot:10px] sr-only size-px"><label class="text-xs font-bold text-foreground" for="rt-react">React</label><input id="rt-vue" type="radio" name="rt" value="vue" class="shrink-0 appearance-none rounded-full bg-background inset-ring inset-ring-input checked:bg-primary checked:inset-ring-primary radio-glyph disabled:cursor-not-allowed disabled:opacity-50 [--dot:10px] sr-only size-px"><label class="text-xs font-bold text-foreground" for="rt-vue">Vue</label><input id="rt-solid" type="radio" name="rt" value="solid" class="shrink-0 appearance-none rounded-full bg-background inset-ring inset-ring-input checked:bg-primary checked:inset-ring-primary radio-glyph disabled:cursor-not-allowed disabled:opacity-50 [--dot:10px] sr-only size-px"><label class="text-xs font-bold text-foreground" for="rt-solid">Solid</label></div><section class="rt-panel" id="panel-svelte" aria-label="Svelte code" data-runtime="svelte"><p class="text-sm mb-2 text-muted-foreground">Point the CLI at this runtime once, then add the item:</p><div class="mb-2"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code class="overflow-x-auto whitespace-nowrap font-mono text-sm" id="panel-svelte-init" tabindex="0">npx ui8kit init --yes --framework svelte --dir src --registry-url https://registry.buildy.tw/svelte --strict-cdn</code><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="panel-svelte-init" hidden>Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code class="overflow-x-auto whitespace-nowrap font-mono text-sm" id="panel-svelte-add" tabindex="0">npx ui8kit add nav-bar</code><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="panel-svelte-add" hidden>Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">blocks/nav-bar.svelte</span><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="code-svelte-0" hidden>Copy</button></div><pre class="hl max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6" tabindex="0"><code class="font-mono" id="code-svelte-0"><span class="c">&lt;!-- Code generated by xgen. DO NOT EDIT. --&gt;</span>
 <span class="c">&lt;!-- Source: xgen/screens/src/authoring/blocks/navigation.ts --&gt;</span>
 <span class="c">&lt;!--
 </span><span class="c">  A top bar in four shapes. Axes: layout (inline: brand left, links, button right; split: the brand in the
@@ -22,6 +22,7 @@
     layout?: <span class="s2">&#34;inline&#34;</span> | <span class="s2">&#34;split&#34;</span> | <span class="s2">&#34;search&#34;</span>;
     over?: <span class="s2">&#34;none&#34;</span> | <span class="s2">&#34;media&#34;</span>;
     skip?: <span class="kt">string</span>;
+    landmarkLabel?: <span class="kt">string</span>;
     ontheme?: () =&gt; <span class="k">void</span>;
   };
 &lt;/<span class="nt">script</span>&gt;
@@ -35,10 +36,11 @@
   <span class="kr">import</span> Link <span class="kr">from</span> <span class="s2">&#34;../primitives/link/link.svelte&#34;</span>;
   <span class="kr">import</span> LinkPlain <span class="kr">from</span> <span class="s2">&#34;../primitives/link-plain/link-plain.svelte&#34;</span>;
   <span class="kr">import</span> NavActions <span class="kr">from</span> <span class="s2">&#34;../components/nav-actions.svelte&#34;</span>;
+  <span class="kr">import</span> NavBlock <span class="kr">from</span> <span class="s2">&#34;../components/nav-block.svelte&#34;</span>;
   <span class="kr">import</span> NavLinks <span class="kr">from</span> <span class="s2">&#34;../components/nav-links.svelte&#34;</span>;
   <span class="kr">import</span> OverMedia <span class="kr">from</span> <span class="s2">&#34;../components/over-media.svelte&#34;</span>;
   <span class="kr">import</span> SearchPalette <span class="kr">from</span> <span class="s2">&#34;../components/search-palette.svelte&#34;</span>;
-  <span class="kr">import</span> { cn } <span class="kr">from</span> <span class="s2">&#34;../utils&#34;</span>;
+  <span class="kr">import</span> { cn, tpl, uniqLabel } <span class="kr">from</span> <span class="s2">&#34;../utils&#34;</span>;
 
   <span class="kd">let</span> {
     label,
@@ -51,92 +53,99 @@
     layout = <span class="s2">&#34;inline&#34;</span>,
     over = <span class="s2">&#34;none&#34;</span>,
     skip,
+    landmarkLabel,
     ontheme,
   }: NavBarProps = $props();
 &lt;/<span class="nt">script</span>&gt;
 
-&lt;<span class="nt">OverMedia</span> <span class="na">on</span>={((over <span class="kr">as</span> <span class="kt">string</span>) === <span class="s2">&#34;media&#34;</span>)} <span class="s">alt=</span>{brand}&gt;
-  &lt;<span class="nt">Block</span>
-    <span class="na">tag</span>=<span class="s">&#34;header&#34;</span>
-    <span class="na">class</span>={cn(
-      <span class="s2">&#34;relative&#34;</span>,
-      (
-        (tone <span class="kr">as</span> <span class="kt">string</span>) === <span class="s2">&#34;inverse&#34;</span> ? <span class="s2">&#34;border-b border-transparent bg-foreground text-background [&amp;_a]:text-background [&amp;_button]:text-background&#34;</span>
-        : <span class="s2">&#34;border-b border-border bg-background&#34;</span>
-      )
-    )}
-    <span class="s">data-testid=&#34;nav-bar&#34;</span>
-    <span class="na">data-layout</span>={layout}
-    <span class="s">data-tone=</span>{tone}
-  &gt;
-    {<span class="k">#if</span> skip}
-      &lt;<span class="nt">LinkPlain</span>
-        <span class="na">href</span>=<span class="s">&#34;#main-content&#34;</span>
-        <span class="na">class</span>={<span class="s2">&#34;sr-only focus:not-sr-only focus:fixed focus:left-2 focus:top-2 focus:z-50 focus:rounded focus:bg-background &#34;</span> +
-          <span class="s2">&#34;focus:px-4 focus:py-2 focus:text-sm focus:inset-ring focus:inset-ring-border&#34;</span>}
-        <span class="s">data-testid=&#34;skip-link&#34;</span>
-      &gt;
-        {skip}
-      &lt;/<span class="nt">LinkPlain</span>&gt;
-    {<span class="k">/if</span>}
-    &lt;<span class="nt">Container</span> <span class="na">class</span>=<span class="s">&#34;mx-auto w-full max-w-6xl px-4&#34;</span> <span class="na">data-slot</span>=<span class="s">&#34;container&#34;</span>&gt;
-      &lt;<span class="nt">Box</span> <span class="na">class</span>={cn(<span class="s2">&#34;flex flex-wrap items-center justify-between gap-4&#34;</span>, <span class="s2">&#34;py-4&#34;</span>)}<span class="err">&gt;</span>
-        {<span class="k">#if</span> ((layout <span class="kr">as</span> <span class="kt">string</span>) === <span class="s2">&#34;split&#34;</span>)}
-          &lt;<span class="nt">Grid</span> <span class="na">cols</span>=<span class="s">&#34;1-3&#34;</span> <span class="na">class</span>=<span class="s">&#34;w-full items-center gap-4&#34;</span>&gt;
-            &lt;<span class="nt">Block</span> <span class="na">tag</span>=<span class="s">&#34;nav&#34;</span> <span class="na">class</span>=<span class="s">&#34;md:justify-self-start&#34;</span> <span class="na">aria-label</span>={label} <span class="s">data-testid=&#34;site-nav&#34;</span>&gt;
-              &lt;<span class="nt">NavLinks</span> <span class="na">links</span>={links} <span class="s">current=</span>{current} <span class="na">side</span>=<span class="s">&#34;left&#34;</span> /&gt;
-            &lt;/<span class="nt">Block</span>&gt;
+&lt;<span class="nt">Block</span>
+  <span class="na">tag</span>=<span class="s">&#34;header&#34;</span>
+  <span class="na">class</span>={cn(
+    <span class="s2">&#34;relative&#34;</span>,
+    (
+      (tone <span class="kr">as</span> <span class="kt">string</span>) === <span class="s2">&#34;inverse&#34;</span> ? <span class="s2">&#34;border-b border-transparent bg-foreground text-background [&amp;_a]:text-background [&amp;_button]:text-background&#34;</span>
+      : <span class="s2">&#34;border-b border-border bg-background&#34;</span>
+    ),
+    (((over <span class="kr">as</span> <span class="kt">string</span>) === <span class="s2">&#34;media&#34;</span>) ? <span class="s2">&#34;isolate overflow-hidden border-0 bg-transparent&#34;</span> : <span class="s2">&#34;&#34;</span>)
+  )}
+  <span class="s">data-testid=&#34;nav-bar&#34;</span>
+  <span class="na">data-layout</span>={layout}
+  <span class="s">data-tone=</span>{tone}
+  <span class="na">aria-label</span>={landmarkLabel}
+<span class="err">&gt;</span>
+  &lt;<span class="nt">OverMedia</span> <span class="na">on</span>={((over <span class="kr">as</span> <span class="kt">string</span>) === <span class="s2">&#34;media&#34;</span>)} <span class="s">alt=</span>{brand} /&gt;
+  {<span class="k">#if</span> skip}
+    &lt;<span class="nt">LinkPlain</span>
+      <span class="na">href</span>=<span class="s">&#34;#main-content&#34;</span>
+      <span class="na">class</span>={<span class="s2">&#34;sr-only focus:not-sr-only focus:fixed focus:left-2 focus:top-2 focus:z-50 focus:rounded focus:bg-background &#34;</span> +
+        <span class="s2">&#34;focus:px-4 focus:py-2 focus:text-sm focus:inset-ring focus:inset-ring-border&#34;</span>}
+      <span class="s">data-testid=&#34;skip-link&#34;</span>
+    &gt;
+      {skip}
+    &lt;/<span class="nt">LinkPlain</span>&gt;
+  {<span class="k">/if</span>}
+  &lt;<span class="nt">Container</span> <span class="na">class</span>=<span class="s">&#34;mx-auto w-full max-w-6xl px-4&#34;</span> <span class="na">data-slot</span>=<span class="s">&#34;container&#34;</span>&gt;
+    &lt;<span class="nt">Box</span> <span class="na">class</span>={cn(<span class="s2">&#34;flex flex-wrap items-center justify-between gap-4&#34;</span>, <span class="s2">&#34;py-4&#34;</span>)}<span class="err">&gt;</span>
+      {<span class="k">#if</span> ((layout <span class="kr">as</span> <span class="kt">string</span>) === <span class="s2">&#34;split&#34;</span>)}
+        &lt;<span class="nt">NavBlock</span>
+          <span class="na">label</span>={(landmarkLabel ? uniqLabel(tpl(<span class="err">&#34;</span>{<span class="mi">0</span>}, {<span class="mi">1</span>}<span class="s2">&#34;, label, landmarkLabel)) : label)}
+</span><span class="s2">          class=&#34;</span>w-full<span class="s2">&#34;
+</span><span class="s2">          testid=&#34;</span>site-nav<span class="s2">&#34;
+</span><span class="s2">        &gt;
+</span><span class="s2">          &lt;Grid cols=&#34;</span><span class="mi">1</span>-<span class="mi">3</span><span class="s2">&#34; class=&#34;</span>w-full items-center gap-<span class="mi">4</span><span class="s2">&#34;&gt;
+</span><span class="s2">            &lt;Box class=&#34;</span>md:<span class="kt">justify</span>-self-start<span class="err">&#34;</span>&gt;
+              &lt;<span class="nt">NavLinks</span> <span class="na">links</span>={links} current={current} side=<span class="s2">&#34;left&#34;</span> /&gt;
+            &lt;/<span class="nt">Box</span>&gt;
             &lt;<span class="nt">Box</span> <span class="na">class</span>=<span class="s">&#34;text-center&#34;</span>&gt;
               &lt;<span class="nt">Link</span> <span class="na">href</span>=<span class="s">&#34;#/&#34;</span> <span class="na">variant</span>=<span class="s">&#34;default&#34;</span> <span class="na">class</span>=<span class="s">&#34;text-lg font-medium&#34;</span> <span class="na">data-testid</span>=<span class="s">&#34;brand&#34;</span>&gt;
                 {brand}
               &lt;/<span class="nt">Link</span>&gt;
             &lt;/<span class="nt">Box</span>&gt;
             &lt;<span class="nt">Group</span> <span class="na">gap</span>=<span class="s">&#34;4&#34;</span> <span class="na">align</span>=<span class="s">&#34;center&#34;</span> <span class="na">justify</span>=<span class="s">&#34;end&#34;</span> <span class="na">class</span>=<span class="s">&#34;flex-wrap md:justify-self-end&#34;</span>&gt;
-              &lt;<span class="nt">Block</span> <span class="na">tag</span>=<span class="s">&#34;nav&#34;</span> <span class="na">aria-label</span>={label}<span class="err">&gt;</span>
-                &lt;<span class="nt">NavLinks</span> <span class="na">links</span>={links} <span class="s">current=</span>{current} <span class="na">side</span>=<span class="s">&#34;right&#34;</span> /&gt;
-              &lt;/<span class="nt">Block</span>&gt;
+              &lt;<span class="nt">Box</span>&gt;
+                &lt;<span class="nt">NavLinks</span> <span class="na">links</span>={links} current={current} side=<span class="s2">&#34;right&#34;</span> /&gt;
+              &lt;/<span class="nt">Box</span>&gt;
               &lt;<span class="nt">NavActions</span>
                 <span class="na">login</span>={actions?.login}
-                <span class="s">loginHref=</span>{actions?.loginHref}
-                <span class="na">cta</span>={actions?.cta}
-                <span class="s">ctaHref=</span>{actions?.href}
-                <span class="na">actions</span>={actions?.mode}
-                <span class="s">tone=</span>{tone}
-                <span class="na">themeLabel</span>={actions?.themeLabel}
-                <span class="s">ontheme=</span>{() =&gt; ontheme?.()}
-              /&gt;
+                loginHref={actions?.loginHref}
+                cta={actions?.cta}
+                ctaHref={actions?.href}
+                actions={actions?.mode}
+                tone={tone}
+                themeLabel={actions?.themeLabel}
+                ontheme={() =&gt; ontheme?.()}
+              <span class="err">/&gt;</span>
             &lt;/<span class="nt">Group</span>&gt;
           &lt;/<span class="nt">Grid</span>&gt;
-        {:<span class="k">else</span>}
-          &lt;<span class="nt">Link</span> <span class="na">href</span>=<span class="s">&#34;#/&#34;</span> <span class="na">variant</span>=<span class="s">&#34;default&#34;</span> <span class="na">class</span>=<span class="s">&#34;text-lg font-medium&#34;</span> <span class="na">data-testid</span>=<span class="s">&#34;brand&#34;</span>&gt;
-            {brand}
-          &lt;/<span class="nt">Link</span>&gt;
-          {<span class="k">#if</span> ((layout <span class="kr">as</span> <span class="kt">string</span>) === <span class="s2">&#34;search&#34;</span>)}
-            &lt;<span class="nt">SearchPalette</span> <span class="na">label</span>={search.label} <span class="s">shortcut=</span>{search.shortcut} /&gt;
-          {<span class="k">/if</span>}
-          &lt;<span class="nt">Block</span>
-            <span class="na">tag</span>=<span class="s">&#34;nav&#34;</span>
-            <span class="na">class</span>={<span class="s2">&#34;order-last w-full overflow-x-auto md:order-none md:w-auto [&amp;&gt;div]:flex-nowrap md:[&amp;&gt;div]:flex-wrap [&amp;_a]:shrink-0&#34;</span>}
-            <span class="s">aria-label=</span>{label}
-            <span class="na">data-testid</span>=<span class="s">&#34;site-nav&#34;</span>
-          &gt;
-            &lt;<span class="nt">NavLinks</span> <span class="na">links</span>={links} <span class="s">current=</span>{current} <span class="na">side</span>=<span class="s">&#34;all&#34;</span> /&gt;
-          &lt;/<span class="nt">Block</span>&gt;
-          &lt;<span class="nt">NavActions</span>
-            <span class="na">login</span>={actions?.login}
-            <span class="s">loginHref=</span>{actions?.loginHref}
-            <span class="na">cta</span>={actions?.cta}
-            <span class="s">ctaHref=</span>{actions?.href}
-            <span class="na">actions</span>={actions?.mode}
-            <span class="s">tone=</span>{tone}
-            <span class="na">themeLabel</span>={actions?.themeLabel}
-            <span class="s">ontheme=</span>{() =&gt; ontheme?.()}
-          /&gt;
+        &lt;/<span class="nt">NavBlock</span>&gt;
+      {:<span class="k">else</span>}
+        &lt;<span class="nt">Link</span> <span class="na">href</span>=<span class="s">&#34;#/&#34;</span> <span class="na">variant</span>=<span class="s">&#34;default&#34;</span> <span class="na">class</span>=<span class="s">&#34;text-lg font-medium&#34;</span> <span class="na">data-testid</span>=<span class="s">&#34;brand&#34;</span>&gt;
+          {brand}
+        &lt;/<span class="nt">Link</span>&gt;
+        {<span class="k">#if</span> ((layout <span class="kr">as</span> <span class="kt">string</span>) === <span class="s2">&#34;search&#34;</span>)}
+          &lt;<span class="nt">SearchPalette</span> <span class="na">label</span>={search.label} shortcut={search.shortcut} <span class="err">/&gt;</span>
         {<span class="k">/if</span>}
-      &lt;/<span class="nt">Box</span>&gt;
-    &lt;/<span class="nt">Container</span>&gt;
-  &lt;/<span class="nt">Block</span>&gt;
-&lt;/<span class="nt">OverMedia</span>&gt;
+        &lt;<span class="nt">NavBlock</span>
+          <span class="na">label</span>={(landmarkLabel ? uniqLabel(tpl(<span class="err">&#34;</span>{<span class="mi">0</span>}, {<span class="mi">1</span>}<span class="s2">&#34;, label, landmarkLabel)) : label)}
+</span><span class="s2">          class={&#34;</span>order-last w-full overflow-x-auto md:<span class="kt">order</span>-none md:<span class="kt">w</span>-auto [&amp;&gt;div]:flex-nowrap md:[&amp;&gt;div]:flex-wrap [&amp;_a]:shrink-<span class="mi">0</span><span class="err">&#34;</span>}
+          testid=<span class="s2">&#34;site-nav&#34;</span>
+        &gt;
+          &lt;<span class="nt">NavLinks</span> <span class="na">links</span>={links} current={current} <span class="err">/&gt;</span>
+        &lt;/<span class="nt">NavBlock</span>&gt;
+        &lt;<span class="nt">NavActions</span>
+          <span class="na">login</span>={actions?.login}
+          loginHref={actions?.loginHref}
+          cta={actions?.cta}
+          ctaHref={actions?.href}
+          actions={actions?.mode}
+          tone={tone}
+          themeLabel={actions?.themeLabel}
+          ontheme={() =&gt; ontheme?.()}
+        <span class="err">/&gt;</span>
+      {<span class="k">/if</span>}
+    &lt;/<span class="nt">Box</span>&gt;
+  &lt;/<span class="nt">Container</span>&gt;
+&lt;/<span class="nt">Block</span>&gt;
 </code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">blocks/nav-bar.types.ts</span><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="code-svelte-1" hidden>Copy</button></div><pre class="hl max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6" tabindex="0"><code class="font-mono" id="code-svelte-1"><span class="c1">// Code generated by xgen. DO NOT EDIT.
 </span><span class="c1">// Source: xgen/screens/src/authoring/blocks/navigation.ts
 </span>
@@ -185,10 +194,11 @@
 <span class="kr">import</span> { LinkPlain } <span class="kr">from</span> <span class="s2">&#34;../primitives/link-plain/link-plain&#34;</span>;
 <span class="kr">import</span> { Link } <span class="kr">from</span> <span class="s2">&#34;../primitives/link/link&#34;</span>;
 <span class="kr">import</span> { NavActions } <span class="kr">from</span> <span class="s2">&#34;../components/nav-actions&#34;</span>;
+<span class="kr">import</span> { NavBlock } <span class="kr">from</span> <span class="s2">&#34;../components/nav-block&#34;</span>;
 <span class="kr">import</span> { NavLinks } <span class="kr">from</span> <span class="s2">&#34;../components/nav-links&#34;</span>;
 <span class="kr">import</span> { OverMedia } <span class="kr">from</span> <span class="s2">&#34;../components/over-media&#34;</span>;
 <span class="kr">import</span> { SearchPalette } <span class="kr">from</span> <span class="s2">&#34;../components/search-palette&#34;</span>;
-<span class="kr">import</span> { cn } <span class="kr">from</span> <span class="s2">&#34;../utils&#34;</span>;
+<span class="kr">import</span> { cn, tpl, uniqLabel } <span class="kr">from</span> <span class="s2">&#34;../utils&#34;</span>;
 <span class="kr">import</span> <span class="kr">type</span> { NavLink, NavBarActions, NavSearch } <span class="kr">from</span> <span class="s2">&#34;./nav-bar.types&#34;</span>;
 
 <span class="kr">export</span> <span class="kr">type</span> NavBarProps = {
@@ -202,6 +212,7 @@
   layout?: <span class="s2">&#34;inline&#34;</span> | <span class="s2">&#34;split&#34;</span> | <span class="s2">&#34;search&#34;</span>;
   over?: <span class="s2">&#34;none&#34;</span> | <span class="s2">&#34;media&#34;</span>;
   skip?: <span class="kt">string</span>;
+  landmarkLabel?: <span class="kt">string</span>;
   onTheme?: () =&gt; <span class="k">void</span>;
 };
 
@@ -216,49 +227,57 @@
   layout = <span class="s2">&#34;inline&#34;</span>,
   over = <span class="s2">&#34;none&#34;</span>,
   skip,
+  landmarkLabel,
   onTheme,
 }: NavBarProps) {
   <span class="k">return</span> (
-    &lt;<span class="nt">OverMedia</span> <span class="na">on</span>={((over <span class="kr">as</span> <span class="kt">string</span>) === <span class="s2">&#34;media&#34;</span>)} <span class="na">alt</span>={brand}&gt;
-      &lt;<span class="nt">Block</span>
-        <span class="na">tag</span>=<span class="s">&#34;header&#34;</span>
-        <span class="na">className</span>={cn(
-          <span class="s2">&#34;relative&#34;</span>,
-          (
-            (tone <span class="kr">as</span> <span class="kt">string</span>) === <span class="s2">&#34;inverse&#34;</span> ? <span class="s2">&#34;border-b border-transparent bg-foreground text-background [&amp;_a]:text-background [&amp;_button]:text-background&#34;</span>
-            : <span class="s2">&#34;border-b border-border bg-background&#34;</span>
-          )
-        )}
-        <span class="na">data-testid</span>=<span class="s">&#34;nav-bar&#34;</span>
-        <span class="na">data-layout</span>={layout}
-        <span class="na">data-tone</span>={tone}
-      &gt;
-        {skip ? (
-          &lt;<span class="nt">LinkPlain</span>
-            <span class="na">href</span>=<span class="s">&#34;#main-content&#34;</span>
-            <span class="na">className</span>={<span class="s2">&#34;sr-only focus:not-sr-only focus:fixed focus:left-2 focus:top-2 focus:z-50 focus:rounded focus:bg-background &#34;</span> +
-              <span class="s2">&#34;focus:px-4 focus:py-2 focus:text-sm focus:inset-ring focus:inset-ring-border&#34;</span>}
-            <span class="na">data-testid</span>=<span class="s">&#34;skip-link&#34;</span>
-          &gt;
-            {skip}
-          &lt;/<span class="nt">LinkPlain</span>&gt;
-        ) : <span class="kc">null</span>}
-        &lt;<span class="nt">Container</span> <span class="na">className</span>=<span class="s">&#34;mx-auto w-full max-w-6xl px-4&#34;</span> <span class="na">data-slot</span>=<span class="s">&#34;container&#34;</span>&gt;
-          &lt;<span class="nt">Box</span> <span class="na">className</span>={cn(<span class="s2">&#34;flex flex-wrap items-center justify-between gap-4&#34;</span>, <span class="s2">&#34;py-4&#34;</span>)}&gt;
-            {((layout <span class="kr">as</span> <span class="kt">string</span>) === <span class="s2">&#34;split&#34;</span>) ? (
+    &lt;<span class="nt">Block</span>
+      <span class="na">tag</span>=<span class="s">&#34;header&#34;</span>
+      <span class="na">className</span>={cn(
+        <span class="s2">&#34;relative&#34;</span>,
+        (
+          (tone <span class="kr">as</span> <span class="kt">string</span>) === <span class="s2">&#34;inverse&#34;</span> ? <span class="s2">&#34;border-b border-transparent bg-foreground text-background [&amp;_a]:text-background [&amp;_button]:text-background&#34;</span>
+          : <span class="s2">&#34;border-b border-border bg-background&#34;</span>
+        ),
+        (((over <span class="kr">as</span> <span class="kt">string</span>) === <span class="s2">&#34;media&#34;</span>) ? <span class="s2">&#34;isolate overflow-hidden border-0 bg-transparent&#34;</span> : <span class="s2">&#34;&#34;</span>)
+      )}
+      <span class="na">data-testid</span>=<span class="s">&#34;nav-bar&#34;</span>
+      <span class="na">data-layout</span>={layout}
+      <span class="na">data-tone</span>={tone}
+      <span class="na">aria-label</span>={landmarkLabel}
+    &gt;
+      &lt;<span class="nt">OverMedia</span> <span class="na">on</span>={((over <span class="kr">as</span> <span class="kt">string</span>) === <span class="s2">&#34;media&#34;</span>)} <span class="na">alt</span>={brand} /&gt;
+      {skip ? (
+        &lt;<span class="nt">LinkPlain</span>
+          <span class="na">href</span>=<span class="s">&#34;#main-content&#34;</span>
+          <span class="na">className</span>={<span class="s2">&#34;sr-only focus:not-sr-only focus:fixed focus:left-2 focus:top-2 focus:z-50 focus:rounded focus:bg-background &#34;</span> +
+            <span class="s2">&#34;focus:px-4 focus:py-2 focus:text-sm focus:inset-ring focus:inset-ring-border&#34;</span>}
+          <span class="na">data-testid</span>=<span class="s">&#34;skip-link&#34;</span>
+        &gt;
+          {skip}
+        &lt;/<span class="nt">LinkPlain</span>&gt;
+      ) : <span class="kc">null</span>}
+      &lt;<span class="nt">Container</span> <span class="na">className</span>=<span class="s">&#34;mx-auto w-full max-w-6xl px-4&#34;</span> <span class="na">data-slot</span>=<span class="s">&#34;container&#34;</span>&gt;
+        &lt;<span class="nt">Box</span> <span class="na">className</span>={cn(<span class="s2">&#34;flex flex-wrap items-center justify-between gap-4&#34;</span>, <span class="s2">&#34;py-4&#34;</span>)}&gt;
+          {((layout <span class="kr">as</span> <span class="kt">string</span>) === <span class="s2">&#34;split&#34;</span>) ? (
+            &lt;<span class="nt">NavBlock</span>
+              <span class="na">label</span>={(landmarkLabel ? uniqLabel(tpl(<span class="s2">&#34;{0}, {1}&#34;</span>, label, landmarkLabel)) : label)}
+              <span class="na">className</span>=<span class="s">&#34;w-full&#34;</span>
+              <span class="na">testid</span>=<span class="s">&#34;site-nav&#34;</span>
+            &gt;
               &lt;<span class="nt">Grid</span> <span class="na">cols</span>=<span class="s">&#34;1-3&#34;</span> <span class="na">className</span>=<span class="s">&#34;w-full items-center gap-4&#34;</span>&gt;
-                &lt;<span class="nt">Block</span> <span class="na">tag</span>=<span class="s">&#34;nav&#34;</span> <span class="na">className</span>=<span class="s">&#34;md:justify-self-start&#34;</span> <span class="na">aria-label</span>={label} <span class="na">data-testid</span>=<span class="s">&#34;site-nav&#34;</span>&gt;
+                &lt;<span class="nt">Box</span> <span class="na">className</span>=<span class="s">&#34;md:justify-self-start&#34;</span>&gt;
                   &lt;<span class="nt">NavLinks</span> <span class="na">links</span>={links} <span class="na">current</span>={current} <span class="na">side</span>=<span class="s">&#34;left&#34;</span> /&gt;
-                &lt;/<span class="nt">Block</span>&gt;
+                &lt;/<span class="nt">Box</span>&gt;
                 &lt;<span class="nt">Box</span> <span class="na">className</span>=<span class="s">&#34;text-center&#34;</span>&gt;
                   &lt;<span class="nt">Link</span> <span class="na">href</span>=<span class="s">&#34;#/&#34;</span> <span class="na">variant</span>=<span class="s">&#34;default&#34;</span> <span class="na">className</span>=<span class="s">&#34;text-lg font-medium&#34;</span> <span class="na">data-testid</span>=<span class="s">&#34;brand&#34;</span>&gt;
                     {brand}
                   &lt;/<span class="nt">Link</span>&gt;
                 &lt;/<span class="nt">Box</span>&gt;
                 &lt;<span class="nt">Group</span> <span class="na">gap</span>=<span class="s">&#34;4&#34;</span> <span class="na">align</span>=<span class="s">&#34;center&#34;</span> <span class="na">justify</span>=<span class="s">&#34;end&#34;</span> <span class="na">className</span>=<span class="s">&#34;flex-wrap md:justify-self-end&#34;</span>&gt;
-                  &lt;<span class="nt">Block</span> <span class="na">tag</span>=<span class="s">&#34;nav&#34;</span> <span class="na">aria-label</span>={label}&gt;
+                  &lt;<span class="nt">Box</span>&gt;
                     &lt;<span class="nt">NavLinks</span> <span class="na">links</span>={links} <span class="na">current</span>={current} <span class="na">side</span>=<span class="s">&#34;right&#34;</span> /&gt;
-                  &lt;/<span class="nt">Block</span>&gt;
+                  &lt;/<span class="nt">Box</span>&gt;
                   &lt;<span class="nt">NavActions</span>
                     <span class="na">login</span>={actions?.login}
                     <span class="na">loginHref</span>={actions?.loginHref}
@@ -271,38 +290,37 @@
                   /&gt;
                 &lt;/<span class="nt">Group</span>&gt;
               &lt;/<span class="nt">Grid</span>&gt;
-            ) : (
-              &lt;&gt;
-                &lt;<span class="nt">Link</span> <span class="na">href</span>=<span class="s">&#34;#/&#34;</span> <span class="na">variant</span>=<span class="s">&#34;default&#34;</span> <span class="na">className</span>=<span class="s">&#34;text-lg font-medium&#34;</span> <span class="na">data-testid</span>=<span class="s">&#34;brand&#34;</span>&gt;
-                  {brand}
-                &lt;/<span class="nt">Link</span>&gt;
-                {((layout <span class="kr">as</span> <span class="kt">string</span>) === <span class="s2">&#34;search&#34;</span>) ? (
-                  &lt;<span class="nt">SearchPalette</span> <span class="na">label</span>={search.label} <span class="na">shortcut</span>={search.shortcut} /&gt;
-                ) : <span class="kc">null</span>}
-                &lt;<span class="nt">Block</span>
-                  <span class="na">tag</span>=<span class="s">&#34;nav&#34;</span>
-                  <span class="na">className</span>={<span class="s2">&#34;order-last w-full overflow-x-auto md:order-none md:w-auto [&amp;&gt;div]:flex-nowrap md:[&amp;&gt;div]:flex-wrap [&amp;_a]:shrink-0&#34;</span>}
-                  <span class="na">aria-label</span>={label}
-                  <span class="na">data-testid</span>=<span class="s">&#34;site-nav&#34;</span>
-                &gt;
-                  &lt;<span class="nt">NavLinks</span> <span class="na">links</span>={links} <span class="na">current</span>={current} <span class="na">side</span>=<span class="s">&#34;all&#34;</span> /&gt;
-                &lt;/<span class="nt">Block</span>&gt;
-                &lt;<span class="nt">NavActions</span>
-                  <span class="na">login</span>={actions?.login}
-                  <span class="na">loginHref</span>={actions?.loginHref}
-                  <span class="na">cta</span>={actions?.cta}
-                  <span class="na">ctaHref</span>={actions?.href}
-                  <span class="na">actions</span>={actions?.mode}
-                  <span class="na">tone</span>={tone}
-                  <span class="na">themeLabel</span>={actions?.themeLabel}
-                  <span class="na">onTheme</span>={() =&gt; onTheme?.()}
-                /&gt;
-              &lt;/&gt;
-            )}
-          &lt;/<span class="nt">Box</span>&gt;
-        &lt;/<span class="nt">Container</span>&gt;
-      &lt;/<span class="nt">Block</span>&gt;
-    &lt;/<span class="nt">OverMedia</span>&gt;
+            &lt;/<span class="nt">NavBlock</span>&gt;
+          ) : (
+            &lt;&gt;
+              &lt;<span class="nt">Link</span> <span class="na">href</span>=<span class="s">&#34;#/&#34;</span> <span class="na">variant</span>=<span class="s">&#34;default&#34;</span> <span class="na">className</span>=<span class="s">&#34;text-lg font-medium&#34;</span> <span class="na">data-testid</span>=<span class="s">&#34;brand&#34;</span>&gt;
+                {brand}
+              &lt;/<span class="nt">Link</span>&gt;
+              {((layout <span class="kr">as</span> <span class="kt">string</span>) === <span class="s2">&#34;search&#34;</span>) ? (
+                &lt;<span class="nt">SearchPalette</span> <span class="na">label</span>={search.label} <span class="na">shortcut</span>={search.shortcut} /&gt;
+              ) : <span class="kc">null</span>}
+              &lt;<span class="nt">NavBlock</span>
+                <span class="na">label</span>={(landmarkLabel ? uniqLabel(tpl(<span class="s2">&#34;{0}, {1}&#34;</span>, label, landmarkLabel)) : label)}
+                <span class="na">className</span>={<span class="s2">&#34;order-last w-full overflow-x-auto md:order-none md:w-auto [&amp;&gt;div]:flex-nowrap md:[&amp;&gt;div]:flex-wrap [&amp;_a]:shrink-0&#34;</span>}
+                <span class="na">testid</span>=<span class="s">&#34;site-nav&#34;</span>
+              &gt;
+                &lt;<span class="nt">NavLinks</span> <span class="na">links</span>={links} <span class="na">current</span>={current} /&gt;
+              &lt;/<span class="nt">NavBlock</span>&gt;
+              &lt;<span class="nt">NavActions</span>
+                <span class="na">login</span>={actions?.login}
+                <span class="na">loginHref</span>={actions?.loginHref}
+                <span class="na">cta</span>={actions?.cta}
+                <span class="na">ctaHref</span>={actions?.href}
+                <span class="na">actions</span>={actions?.mode}
+                <span class="na">tone</span>={tone}
+                <span class="na">themeLabel</span>={actions?.themeLabel}
+                <span class="na">onTheme</span>={() =&gt; onTheme?.()}
+              /&gt;
+            &lt;/&gt;
+          )}
+        &lt;/<span class="nt">Box</span>&gt;
+      &lt;/<span class="nt">Container</span>&gt;
+    &lt;/<span class="nt">Block</span>&gt;
   );
 }
 </code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">blocks/nav-bar.types.ts</span><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="code-react-1" hidden>Copy</button></div><pre class="hl max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6" tabindex="0"><code class="font-mono" id="code-react-1"><span class="c1">// Code generated by xgen. DO NOT EDIT.
@@ -389,6 +407,7 @@
   layout?: <span class="s2">&#34;inline&#34;</span> | <span class="s2">&#34;split&#34;</span> | <span class="s2">&#34;search&#34;</span>;
   over?: <span class="s2">&#34;none&#34;</span> | <span class="s2">&#34;media&#34;</span>;
   skip?: string;
+  landmarkLabel?: string;
 };
 &lt;/<span class="nt">script</span>&gt;
 
@@ -401,10 +420,11 @@
 <span class="kr">import</span> Link from <span class="s2">&#34;../primitives/link/link.vue&#34;</span>;
 <span class="kr">import</span> LinkPlain from <span class="s2">&#34;../primitives/link-plain/link-plain.vue&#34;</span>;
 <span class="kr">import</span> NavActions from <span class="s2">&#34;../components/nav-actions.vue&#34;</span>;
+<span class="kr">import</span> NavBlock from <span class="s2">&#34;../components/nav-block.vue&#34;</span>;
 <span class="kr">import</span> NavLinks from <span class="s2">&#34;../components/nav-links.vue&#34;</span>;
 <span class="kr">import</span> OverMedia from <span class="s2">&#34;../components/over-media.vue&#34;</span>;
 <span class="kr">import</span> SearchPalette from <span class="s2">&#34;../components/search-palette.vue&#34;</span>;
-<span class="kr">import</span> { cn } from <span class="s2">&#34;../utils&#34;</span>;
+<span class="kr">import</span> { cn, tpl, uniqLabel } from <span class="s2">&#34;../utils&#34;</span>;
 
 <span class="kr">const</span> {
   label,
@@ -417,48 +437,56 @@
   layout = <span class="s2">&#34;inline&#34;</span>,
   over = <span class="s2">&#34;none&#34;</span>,
   skip,
+  landmarkLabel,
 } = defineProps&lt;<span class="nt">NavBarProps</span>&gt;();
 <span class="kr">const</span> emit = defineEmits&lt;{ theme: [] }&gt;();
 &lt;/<span class="nt">script</span>&gt;
 
 &lt;<span class="nt">template</span>&gt;
-  &lt;<span class="nt">OverMedia</span> :<span class="na">on</span>=<span class="s">&#34;((over as string) === &#39;media&#39;)&#34;</span> <span class="nt">:alt</span>=<span class="s">&#34;brand&#34;</span>&gt;
-    &lt;<span class="nt">Block</span>
-      <span class="na">tag</span>=<span class="s">&#34;header&#34;</span>
-      :<span class="na">class</span>=<span class="s">&#34;cn(
-</span><span class="s">        &#39;relative&#39;,
-</span><span class="s">        (
-</span><span class="s">          (tone as string) === &#39;inverse&#39; ? &#39;border-b border-transparent bg-foreground text-background [&amp;_a]:text-background [&amp;_button]:text-background&#39;
-</span><span class="s">          : &#39;border-b border-border bg-background&#39;
-</span><span class="s">        )
-</span><span class="s">      )&#34;</span>
-      <span class="na">data</span><span class="nt">-testid</span><span class="err">=&#34;</span><span class="na">nav</span><span class="nt">-bar</span><span class="err">&#34;</span>
-      <span class="nt">:data-layout</span>=<span class="s">&#34;layout&#34;</span>
-      <span class="nt">:data-tone</span>=<span class="s">&#34;tone&#34;</span>
+  &lt;<span class="nt">Block</span>
+    <span class="na">tag</span>=<span class="s">&#34;header&#34;</span>
+    :<span class="na">class</span>=<span class="s">&#34;cn(
+</span><span class="s">      &#39;relative&#39;,
+</span><span class="s">      (
+</span><span class="s">        (tone as string) === &#39;inverse&#39; ? &#39;border-b border-transparent bg-foreground text-background [&amp;_a]:text-background [&amp;_button]:text-background&#39;
+</span><span class="s">        : &#39;border-b border-border bg-background&#39;
+</span><span class="s">      ),
+</span><span class="s">      (((over as string) === &#39;media&#39;) ? &#39;isolate overflow-hidden border-0 bg-transparent&#39; : &#39;&#39;)
+</span><span class="s">    )&#34;</span>
+    <span class="na">data</span><span class="nt">-testid</span><span class="err">=&#34;</span><span class="na">nav</span><span class="nt">-bar</span><span class="err">&#34;</span>
+    <span class="nt">:data-layout</span>=<span class="s">&#34;layout&#34;</span>
+    <span class="nt">:data-tone</span>=<span class="s">&#34;tone&#34;</span>
+    <span class="nt">:aria-label</span>=<span class="s">&#34;landmarkLabel&#34;</span>
+  &gt;
+    &lt;<span class="nt">OverMedia</span> :<span class="na">on</span>=<span class="s">&#34;((over as string) === &#39;media&#39;)&#34;</span> <span class="nt">:alt</span>=<span class="s">&#34;brand&#34;</span> /&gt;
+    &lt;<span class="nt">LinkPlain</span> <span class="nt">v-if</span>=<span class="s">&#34;skip&#34;</span>
+      <span class="na">href</span>=<span class="s">&#34;#main-content&#34;</span>
+      :<span class="na">class</span>=<span class="s">&#34;&#39;sr-only focus:not-sr-only focus:fixed focus:left-2 focus:top-2 focus:z-50 focus:rounded focus:bg-background &#39; +
+</span><span class="s">        &#39;focus:px-4 focus:py-2 focus:text-sm focus:inset-ring focus:inset-ring-border&#39;&#34;</span>
+      <span class="na">data</span><span class="nt">-testid</span><span class="err">=&#34;</span><span class="na">skip</span><span class="nt">-link</span><span class="err">&#34;</span>
     &gt;
-      &lt;<span class="nt">LinkPlain</span> <span class="nt">v-if</span>=<span class="s">&#34;skip&#34;</span>
-        <span class="na">href</span>=<span class="s">&#34;#main-content&#34;</span>
-        :<span class="na">class</span>=<span class="s">&#34;&#39;sr-only focus:not-sr-only focus:fixed focus:left-2 focus:top-2 focus:z-50 focus:rounded focus:bg-background &#39; +
-</span><span class="s">          &#39;focus:px-4 focus:py-2 focus:text-sm focus:inset-ring focus:inset-ring-border&#39;&#34;</span>
-        <span class="na">data</span><span class="nt">-testid</span><span class="err">=&#34;</span><span class="na">skip</span><span class="nt">-link</span><span class="err">&#34;</span>
-      &gt;
-        {{ skip }}
-      &lt;/<span class="nt">LinkPlain</span>&gt;
-      &lt;<span class="nt">Container</span> <span class="na">class</span>=<span class="s">&#34;mx-auto w-full max-w-6xl px-4&#34;</span> <span class="na">data</span><span class="nt">-slot</span><span class="err">=&#34;</span><span class="na">container</span><span class="err">&#34;</span>&gt;
-        &lt;<span class="nt">Box</span> :<span class="na">class</span>=<span class="s">&#34;cn(&#39;flex flex-wrap items-center justify-between gap-4&#39;, &#39;py-4&#39;)&#34;</span>&gt;
-          &lt;<span class="nt">Grid</span> <span class="nt">v-if</span>=<span class="s">&#34;((layout as string) === &#39;split&#39;)&#34; cols=&#34;1-3&#34; class=&#34;w-full items-center gap-4&#34;</span>&gt;
-            &lt;<span class="nt">Block</span> <span class="na">tag</span>=<span class="s">&#34;nav&#34;</span> <span class="na">class</span>=<span class="s">&#34;md:justify-self-start&#34;</span> <span class="nt">:aria-label</span>=<span class="s">&#34;label&#34;</span> <span class="na">data</span><span class="nt">-testid</span><span class="err">=&#34;</span><span class="na">site</span><span class="nt">-nav</span><span class="err">&#34;</span>&gt;
+      {{ skip }}
+    &lt;/<span class="nt">LinkPlain</span>&gt;
+    &lt;<span class="nt">Container</span> <span class="na">class</span>=<span class="s">&#34;mx-auto w-full max-w-6xl px-4&#34;</span> <span class="na">data</span><span class="nt">-slot</span><span class="err">=&#34;</span><span class="na">container</span><span class="err">&#34;</span>&gt;
+      &lt;<span class="nt">Box</span> :<span class="na">class</span>=<span class="s">&#34;cn(&#39;flex flex-wrap items-center justify-between gap-4&#39;, &#39;py-4&#39;)&#34;</span>&gt;
+        &lt;<span class="nt">NavBlock</span> <span class="nt">v-if</span>=<span class="s">&#34;((layout as string) === &#39;split&#39;)&#34;</span>
+          :<span class="na">label</span>=<span class="s">&#34;(landmarkLabel ? uniqLabel(tpl(&#39;{0}, {1}&#39;, label, landmarkLabel)) : label)&#34;</span>
+          <span class="na">class</span>=<span class="s">&#34;w-full&#34;</span>
+          <span class="na">testid</span>=<span class="s">&#34;site-nav&#34;</span>
+        &gt;
+          &lt;<span class="nt">Grid</span> <span class="na">cols</span>=<span class="s">&#34;1-3&#34;</span> <span class="na">class</span>=<span class="s">&#34;w-full items-center gap-4&#34;</span>&gt;
+            &lt;<span class="nt">Box</span> <span class="na">class</span>=<span class="s">&#34;md:justify-self-start&#34;</span>&gt;
               &lt;<span class="nt">NavLinks</span> <span class="nt">:links</span>=<span class="s">&#34;links&#34;</span> <span class="nt">:current</span>=<span class="s">&#34;current&#34;</span> <span class="na">side</span>=<span class="s">&#34;left&#34;</span> /&gt;
-            &lt;/<span class="nt">Block</span>&gt;
+            &lt;/<span class="nt">Box</span>&gt;
             &lt;<span class="nt">Box</span> <span class="na">class</span>=<span class="s">&#34;text-center&#34;</span>&gt;
               &lt;<span class="nt">Link</span> <span class="na">href</span>=<span class="s">&#34;#/&#34;</span> <span class="na">variant</span>=<span class="s">&#34;default&#34;</span> <span class="na">class</span>=<span class="s">&#34;text-lg font-medium&#34;</span> <span class="na">data</span><span class="nt">-testid</span><span class="err">=&#34;</span><span class="na">brand</span><span class="err">&#34;</span>&gt;
                 {{ brand }}
               &lt;/<span class="nt">Link</span>&gt;
             &lt;/<span class="nt">Box</span>&gt;
             &lt;<span class="nt">Group</span> <span class="na">gap</span>=<span class="s">&#34;4&#34;</span> <span class="na">align</span>=<span class="s">&#34;center&#34;</span> <span class="na">justify</span>=<span class="s">&#34;end&#34;</span> <span class="na">class</span>=<span class="s">&#34;flex-wrap md:justify-self-end&#34;</span>&gt;
-              &lt;<span class="nt">Block</span> <span class="na">tag</span>=<span class="s">&#34;nav&#34;</span> <span class="nt">:aria-label</span>=<span class="s">&#34;label&#34;</span>&gt;
+              &lt;<span class="nt">Box</span>&gt;
                 &lt;<span class="nt">NavLinks</span> <span class="nt">:links</span>=<span class="s">&#34;links&#34;</span> <span class="nt">:current</span>=<span class="s">&#34;current&#34;</span> <span class="na">side</span>=<span class="s">&#34;right&#34;</span> /&gt;
-              &lt;/<span class="nt">Block</span>&gt;
+              &lt;/<span class="nt">Box</span>&gt;
               &lt;<span class="nt">NavActions</span>
                 <span class="nt">:login</span>=<span class="s">&#34;actions?.login&#34;</span>
                 <span class="nt">:loginHref</span>=<span class="s">&#34;actions?.loginHref&#34;</span>
@@ -471,33 +499,209 @@
               /&gt;
             &lt;/<span class="nt">Group</span>&gt;
           &lt;/<span class="nt">Grid</span>&gt;
-          &lt;<span class="nt">template</span> <span class="nt">v-else</span>&gt;
-            &lt;<span class="nt">Link</span> <span class="na">href</span>=<span class="s">&#34;#/&#34;</span> <span class="na">variant</span>=<span class="s">&#34;default&#34;</span> <span class="na">class</span>=<span class="s">&#34;text-lg font-medium&#34;</span> <span class="na">data</span><span class="nt">-testid</span><span class="err">=&#34;</span><span class="na">brand</span><span class="err">&#34;</span>&gt;
-              {{ brand }}
-            &lt;/<span class="nt">Link</span>&gt;
-            &lt;<span class="nt">SearchPalette</span> <span class="nt">v-if</span>=<span class="s">&#34;((layout as string) === &#39;search&#39;)&#34; :label=&#34;search.label&#34; :shortcut=&#34;search.shortcut&#34;</span> /&gt;
-            &lt;<span class="nt">Block</span>
-              <span class="na">tag</span>=<span class="s">&#34;nav&#34;</span>
-              :<span class="na">class</span>=<span class="s">&#34;&#39;order-last w-full overflow-x-auto md:order-none md:w-auto [&amp;&gt;div]:flex-nowrap md:[&amp;&gt;div]:flex-wrap [&amp;_a]:shrink-0&#39;&#34;</span>
-              <span class="nt">:aria-label</span>=<span class="s">&#34;label&#34;</span>
-              <span class="na">data</span><span class="nt">-testid</span><span class="err">=&#34;</span><span class="na">site</span><span class="nt">-nav</span><span class="err">&#34;</span>
+        &lt;/<span class="nt">NavBlock</span>&gt;
+        &lt;<span class="nt">template</span> <span class="nt">v-else</span>&gt;
+          &lt;<span class="nt">Link</span> <span class="na">href</span>=<span class="s">&#34;#/&#34;</span> <span class="na">variant</span>=<span class="s">&#34;default&#34;</span> <span class="na">class</span>=<span class="s">&#34;text-lg font-medium&#34;</span> <span class="na">data</span><span class="nt">-testid</span><span class="err">=&#34;</span><span class="na">brand</span><span class="err">&#34;</span>&gt;
+            {{ brand }}
+          &lt;/<span class="nt">Link</span>&gt;
+          &lt;<span class="nt">SearchPalette</span> <span class="nt">v-if</span>=<span class="s">&#34;((layout as string) === &#39;search&#39;)&#34; :label=&#34;search.label&#34; :shortcut=&#34;search.shortcut&#34;</span> /&gt;
+          &lt;<span class="nt">NavBlock</span>
+            :<span class="na">label</span>=<span class="s">&#34;(landmarkLabel ? uniqLabel(tpl(&#39;{0}, {1}&#39;, label, landmarkLabel)) : label)&#34;</span>
+            :<span class="na">class</span>=<span class="s">&#34;&#39;order-last w-full overflow-x-auto md:order-none md:w-auto [&amp;&gt;div]:flex-nowrap md:[&amp;&gt;div]:flex-wrap [&amp;_a]:shrink-0&#39;&#34;</span>
+            <span class="na">testid</span>=<span class="s">&#34;site-nav&#34;</span>
+          &gt;
+            &lt;<span class="nt">NavLinks</span> <span class="nt">:links</span>=<span class="s">&#34;links&#34;</span> <span class="nt">:current</span>=<span class="s">&#34;current&#34;</span> /&gt;
+          &lt;/<span class="nt">NavBlock</span>&gt;
+          &lt;<span class="nt">NavActions</span>
+            <span class="nt">:login</span>=<span class="s">&#34;actions?.login&#34;</span>
+            <span class="nt">:loginHref</span>=<span class="s">&#34;actions?.loginHref&#34;</span>
+            <span class="nt">:cta</span>=<span class="s">&#34;actions?.cta&#34;</span>
+            <span class="nt">:ctaHref</span>=<span class="s">&#34;actions?.href&#34;</span>
+            <span class="nt">:actions</span>=<span class="s">&#34;actions?.mode&#34;</span>
+            <span class="nt">:tone</span>=<span class="s">&#34;tone&#34;</span>
+            <span class="nt">:themeLabel</span>=<span class="s">&#34;actions?.themeLabel&#34;</span>
+            <span class="nt">@theme</span><span class="s">=&#34;() =&gt; emit(&#39;theme&#39;)&#34;</span>
+          /&gt;
+        &lt;/<span class="nt">template</span>&gt;
+      &lt;/<span class="nt">Box</span>&gt;
+    &lt;/<span class="nt">Container</span>&gt;
+  &lt;/<span class="nt">Block</span>&gt;
+&lt;/<span class="nt">template</span>&gt;
+</code></pre></div> <p class="text-sm"><a href="https://registry.buildy.tw/vue/blocks/nav-bar.json" class="underline">Vue registry item (JSON)</a></p></section><section class="rt-panel" id="panel-solid" aria-label="Solid code" data-runtime="solid"><p class="text-sm mb-2 text-muted-foreground">Point the CLI at this runtime once, then add the item:</p><div class="mb-2"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code class="overflow-x-auto whitespace-nowrap font-mono text-sm" id="panel-solid-init" tabindex="0">npx ui8kit init --yes --framework solid --dir src --registry-url https://registry.buildy.tw/solid --strict-cdn</code><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="panel-solid-init" hidden>Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code class="overflow-x-auto whitespace-nowrap font-mono text-sm" id="panel-solid-add" tabindex="0">npx ui8kit add nav-bar</code><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="panel-solid-add" hidden>Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">blocks/nav-bar.tsx</span><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="code-solid-0" hidden>Copy</button></div><pre class="hl max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6" tabindex="0"><code class="font-mono" id="code-solid-0"><span class="c1">// Code generated by xgen. DO NOT EDIT.
+</span><span class="c1">// Source: xgen/screens/src/authoring/blocks/navigation.ts
+</span><span class="cm">/**
+</span><span class="cm"> * A top bar in four shapes. Axes: layout (inline: brand left, links, button right; split: the brand in the
+</span><span class="cm"> * middle with the links on both sides; search: a search field with its shortcut in the middle), over (none,
+</span><span class="cm"> * media: the bar sits over a picture, transparent), actions mode (none, cta), tone (default, inverse: on a dark
+</span><span class="cm"> * hero band). Turning solid on scroll is a port contract.
+</span><span class="cm"> */</span>
+<span class="kr">import</span> { <span class="kr">type</span> JSX } <span class="kr">from</span> <span class="s2">&#34;solid-js&#34;</span>;
+<span class="kr">import</span> { Block } <span class="kr">from</span> <span class="s2">&#34;../primitives/block/block&#34;</span>;
+<span class="kr">import</span> { Box } <span class="kr">from</span> <span class="s2">&#34;../primitives/box/box&#34;</span>;
+<span class="kr">import</span> { Container } <span class="kr">from</span> <span class="s2">&#34;../primitives/container/container&#34;</span>;
+<span class="kr">import</span> { Grid } <span class="kr">from</span> <span class="s2">&#34;../primitives/grid/grid&#34;</span>;
+<span class="kr">import</span> { Group } <span class="kr">from</span> <span class="s2">&#34;../primitives/group/group&#34;</span>;
+<span class="kr">import</span> { LinkPlain } <span class="kr">from</span> <span class="s2">&#34;../primitives/link-plain/link-plain&#34;</span>;
+<span class="kr">import</span> { Link } <span class="kr">from</span> <span class="s2">&#34;../primitives/link/link&#34;</span>;
+<span class="kr">import</span> { NavActions } <span class="kr">from</span> <span class="s2">&#34;../components/nav-actions&#34;</span>;
+<span class="kr">import</span> { NavBlock } <span class="kr">from</span> <span class="s2">&#34;../components/nav-block&#34;</span>;
+<span class="kr">import</span> { NavLinks } <span class="kr">from</span> <span class="s2">&#34;../components/nav-links&#34;</span>;
+<span class="kr">import</span> { OverMedia } <span class="kr">from</span> <span class="s2">&#34;../components/over-media&#34;</span>;
+<span class="kr">import</span> { SearchPalette } <span class="kr">from</span> <span class="s2">&#34;../components/search-palette&#34;</span>;
+<span class="kr">import</span> { cn, tpl, uniqLabel } <span class="kr">from</span> <span class="s2">&#34;../utils&#34;</span>;
+<span class="kr">import</span> <span class="kr">type</span> { NavLink, NavBarActions, NavSearch } <span class="kr">from</span> <span class="s2">&#34;./nav-bar.types&#34;</span>;
+
+<span class="kr">export</span> <span class="kr">type</span> NavBarProps = {
+  label: <span class="kt">string</span>;
+  brand: <span class="kt">string</span>;
+  links: <span class="kt">NavLink</span>[];
+  current?: <span class="kt">string</span>;
+  actions?: <span class="kt">NavBarActions</span>;
+  search: <span class="kt">NavSearch</span>;
+  tone?: <span class="s2">&#34;default&#34;</span> | <span class="s2">&#34;inverse&#34;</span>;
+  layout?: <span class="s2">&#34;inline&#34;</span> | <span class="s2">&#34;split&#34;</span> | <span class="s2">&#34;search&#34;</span>;
+  over?: <span class="s2">&#34;none&#34;</span> | <span class="s2">&#34;media&#34;</span>;
+  skip?: <span class="kt">string</span>;
+  landmarkLabel?: <span class="kt">string</span>;
+  onTheme?: () =&gt; <span class="k">void</span>;
+};
+
+<span class="kr">export</span> <span class="kd">function</span> NavBar({
+  label,
+  brand,
+  links,
+  current = <span class="s2">&#34;&#34;</span>,
+  actions,
+  search,
+  tone = <span class="s2">&#34;default&#34;</span>,
+  layout = <span class="s2">&#34;inline&#34;</span>,
+  over = <span class="s2">&#34;none&#34;</span>,
+  skip,
+  landmarkLabel,
+  onTheme,
+}: NavBarProps) {
+  <span class="k">return</span> (
+    &lt;<span class="nt">Block</span>
+      <span class="na">tag</span>=<span class="s">&#34;header&#34;</span>
+      <span class="na">class</span>={cn(
+        <span class="s2">&#34;relative&#34;</span>,
+        (
+          (tone <span class="kr">as</span> <span class="kt">string</span>) === <span class="s2">&#34;inverse&#34;</span> ? <span class="s2">&#34;border-b border-transparent bg-foreground text-background [&amp;_a]:text-background [&amp;_button]:text-background&#34;</span>
+          : <span class="s2">&#34;border-b border-border bg-background&#34;</span>
+        ),
+        (((over <span class="kr">as</span> <span class="kt">string</span>) === <span class="s2">&#34;media&#34;</span>) ? <span class="s2">&#34;isolate overflow-hidden border-0 bg-transparent&#34;</span> : <span class="s2">&#34;&#34;</span>)
+      )}
+      <span class="na">data-testid</span>=<span class="s">&#34;nav-bar&#34;</span>
+      <span class="na">data-layout</span>={layout}
+      <span class="na">data-tone</span>={tone}
+      <span class="na">aria-label</span>={landmarkLabel}
+    &gt;
+      &lt;<span class="nt">OverMedia</span> <span class="na">on</span>={((over <span class="kr">as</span> <span class="kt">string</span>) === <span class="s2">&#34;media&#34;</span>)} <span class="na">alt</span>={brand} /&gt;
+      {skip ? (
+        &lt;<span class="nt">LinkPlain</span>
+          <span class="na">href</span>=<span class="s">&#34;#main-content&#34;</span>
+          <span class="na">class</span>={<span class="s2">&#34;sr-only focus:not-sr-only focus:fixed focus:left-2 focus:top-2 focus:z-50 focus:rounded focus:bg-background &#34;</span> +
+            <span class="s2">&#34;focus:px-4 focus:py-2 focus:text-sm focus:inset-ring focus:inset-ring-border&#34;</span>}
+          <span class="na">data-testid</span>=<span class="s">&#34;skip-link&#34;</span>
+        &gt;
+          {skip}
+        &lt;/<span class="nt">LinkPlain</span>&gt;
+      ) : <span class="kc">null</span>}
+      &lt;<span class="nt">Container</span> <span class="na">class</span>=<span class="s">&#34;mx-auto w-full max-w-6xl px-4&#34;</span> <span class="na">data-slot</span>=<span class="s">&#34;container&#34;</span>&gt;
+        &lt;<span class="nt">Box</span> <span class="na">class</span>={cn(<span class="s2">&#34;flex flex-wrap items-center justify-between gap-4&#34;</span>, <span class="s2">&#34;py-4&#34;</span>)}&gt;
+          {((layout <span class="kr">as</span> <span class="kt">string</span>) === <span class="s2">&#34;split&#34;</span>) ? (
+            &lt;<span class="nt">NavBlock</span>
+              <span class="na">label</span>={(landmarkLabel ? uniqLabel(tpl(<span class="s2">&#34;{0}, {1}&#34;</span>, label, landmarkLabel)) : label)}
+              <span class="na">class</span>=<span class="s">&#34;w-full&#34;</span>
+              <span class="na">testid</span>=<span class="s">&#34;site-nav&#34;</span>
             &gt;
-              &lt;<span class="nt">NavLinks</span> <span class="nt">:links</span>=<span class="s">&#34;links&#34;</span> <span class="nt">:current</span>=<span class="s">&#34;current&#34;</span> <span class="na">side</span>=<span class="s">&#34;all&#34;</span> /&gt;
-            &lt;/<span class="nt">Block</span>&gt;
-            &lt;<span class="nt">NavActions</span>
-              <span class="nt">:login</span>=<span class="s">&#34;actions?.login&#34;</span>
-              <span class="nt">:loginHref</span>=<span class="s">&#34;actions?.loginHref&#34;</span>
-              <span class="nt">:cta</span>=<span class="s">&#34;actions?.cta&#34;</span>
-              <span class="nt">:ctaHref</span>=<span class="s">&#34;actions?.href&#34;</span>
-              <span class="nt">:actions</span>=<span class="s">&#34;actions?.mode&#34;</span>
-              <span class="nt">:tone</span>=<span class="s">&#34;tone&#34;</span>
-              <span class="nt">:themeLabel</span>=<span class="s">&#34;actions?.themeLabel&#34;</span>
-              <span class="nt">@theme</span><span class="s">=&#34;() =&gt; emit(&#39;theme&#39;)&#34;</span>
-            /&gt;
-          &lt;/<span class="nt">template</span>&gt;
+              &lt;<span class="nt">Grid</span> <span class="na">cols</span>=<span class="s">&#34;1-3&#34;</span> <span class="na">class</span>=<span class="s">&#34;w-full items-center gap-4&#34;</span>&gt;
+                &lt;<span class="nt">Box</span> <span class="na">class</span>=<span class="s">&#34;md:justify-self-start&#34;</span>&gt;
+                  &lt;<span class="nt">NavLinks</span> <span class="na">links</span>={links} <span class="na">current</span>={current} <span class="na">side</span>=<span class="s">&#34;left&#34;</span> /&gt;
+                &lt;/<span class="nt">Box</span>&gt;
+                &lt;<span class="nt">Box</span> <span class="na">class</span>=<span class="s">&#34;text-center&#34;</span>&gt;
+                  &lt;<span class="nt">Link</span> <span class="na">href</span>=<span class="s">&#34;#/&#34;</span> <span class="na">variant</span>=<span class="s">&#34;default&#34;</span> <span class="na">class</span>=<span class="s">&#34;text-lg font-medium&#34;</span> <span class="na">data-testid</span>=<span class="s">&#34;brand&#34;</span>&gt;
+                    {brand}
+                  &lt;/<span class="nt">Link</span>&gt;
+                &lt;/<span class="nt">Box</span>&gt;
+                &lt;<span class="nt">Group</span> <span class="na">gap</span>=<span class="s">&#34;4&#34;</span> <span class="na">align</span>=<span class="s">&#34;center&#34;</span> <span class="na">justify</span>=<span class="s">&#34;end&#34;</span> <span class="na">class</span>=<span class="s">&#34;flex-wrap md:justify-self-end&#34;</span>&gt;
+                  &lt;<span class="nt">Box</span>&gt;
+                    &lt;<span class="nt">NavLinks</span> <span class="na">links</span>={links} <span class="na">current</span>={current} <span class="na">side</span>=<span class="s">&#34;right&#34;</span> /&gt;
+                  &lt;/<span class="nt">Box</span>&gt;
+                  &lt;<span class="nt">NavActions</span>
+                    <span class="na">login</span>={actions?.login}
+                    <span class="na">loginHref</span>={actions?.loginHref}
+                    <span class="na">cta</span>={actions?.cta}
+                    <span class="na">ctaHref</span>={actions?.href}
+                    <span class="na">actions</span>={actions?.mode}
+                    <span class="na">tone</span>={tone}
+                    <span class="na">themeLabel</span>={actions?.themeLabel}
+                    <span class="na">onTheme</span>={() =&gt; onTheme?.()}
+                  /&gt;
+                &lt;/<span class="nt">Group</span>&gt;
+              &lt;/<span class="nt">Grid</span>&gt;
+            &lt;/<span class="nt">NavBlock</span>&gt;
+          ) : (
+            &lt;&gt;
+              &lt;<span class="nt">Link</span> <span class="na">href</span>=<span class="s">&#34;#/&#34;</span> <span class="na">variant</span>=<span class="s">&#34;default&#34;</span> <span class="na">class</span>=<span class="s">&#34;text-lg font-medium&#34;</span> <span class="na">data-testid</span>=<span class="s">&#34;brand&#34;</span>&gt;
+                {brand}
+              &lt;/<span class="nt">Link</span>&gt;
+              {((layout <span class="kr">as</span> <span class="kt">string</span>) === <span class="s2">&#34;search&#34;</span>) ? (
+                &lt;<span class="nt">SearchPalette</span> <span class="na">label</span>={search.label} <span class="na">shortcut</span>={search.shortcut} /&gt;
+              ) : <span class="kc">null</span>}
+              &lt;<span class="nt">NavBlock</span>
+                <span class="na">label</span>={(landmarkLabel ? uniqLabel(tpl(<span class="s2">&#34;{0}, {1}&#34;</span>, label, landmarkLabel)) : label)}
+                <span class="na">class</span>={<span class="s2">&#34;order-last w-full overflow-x-auto md:order-none md:w-auto [&amp;&gt;div]:flex-nowrap md:[&amp;&gt;div]:flex-wrap [&amp;_a]:shrink-0&#34;</span>}
+                <span class="na">testid</span>=<span class="s">&#34;site-nav&#34;</span>
+              &gt;
+                &lt;<span class="nt">NavLinks</span> <span class="na">links</span>={links} <span class="na">current</span>={current} /&gt;
+              &lt;/<span class="nt">NavBlock</span>&gt;
+              &lt;<span class="nt">NavActions</span>
+                <span class="na">login</span>={actions?.login}
+                <span class="na">loginHref</span>={actions?.loginHref}
+                <span class="na">cta</span>={actions?.cta}
+                <span class="na">ctaHref</span>={actions?.href}
+                <span class="na">actions</span>={actions?.mode}
+                <span class="na">tone</span>={tone}
+                <span class="na">themeLabel</span>={actions?.themeLabel}
+                <span class="na">onTheme</span>={() =&gt; onTheme?.()}
+              /&gt;
+            &lt;/&gt;
+          )}
         &lt;/<span class="nt">Box</span>&gt;
       &lt;/<span class="nt">Container</span>&gt;
     &lt;/<span class="nt">Block</span>&gt;
-  &lt;/<span class="nt">OverMedia</span>&gt;
-&lt;/<span class="nt">template</span>&gt;
-</code></pre></div> <p class="text-sm"><a href="https://registry.buildy.tw/vue/blocks/nav-bar.json" class="underline">Vue registry item (JSON)</a></p></section></div><h2 class="text-foreground text-xl font-semibold mb-2">Props</h2><p class="text-sm mb-4 max-w-3xl text-muted-foreground">Names and types come from the xgen specs of the source. Standard HTML attributes (id, role, tabIndex, aria-*) pass through to the root element; the class prop is className in React.</p><div class="mb-8"> <p class="text-sm mb-2 max-w-3xl whitespace-pre-line text-muted-foreground">A top bar in four shapes. Axes: layout (inline: brand left, links, button right; split: the brand in the middle with the links on both sides; search: a search field with its shortcut in the middle), over (none, media: the bar sits over a picture, transparent), actions mode (none, cta), tone (default, inverse: on a dark hero band). Turning solid on scroll is a port contract.</p> <div class="overflow-x-auto" aria-label="Props of NavBar" role="region" tabindex="0"><table class="w-full min-w-[40rem] text-left text-sm"><caption class="sr-only">Props of NavBar</caption><thead class=""><tr class="border-b border-border"><th class="text-left align-middle px-0 py-2 pr-4 font-medium" scope="col">Prop</th><th class="text-left align-middle px-0 py-2 pr-4 font-medium" scope="col">Type</th><th class="text-left align-middle px-0 py-2 pr-4 font-medium" scope="col">Default</th> <th class="text-left align-middle px-0 py-2 font-medium" scope="col">Description</th></tr></thead><tbody class=""><tr class="border-b border-border align-top"><th class="text-left align-middle px-0 py-2 pr-4 align-top font-mono text-xs font-medium" scope="row">label <span class="font-sans text-muted-foreground"> (required)</span></th><td class="align-middle px-0 py-2 pr-4 align-top font-mono text-xs">string</td><td class="align-middle px-0 py-2 pr-4 align-top font-mono text-xs"><span class="text-muted-foreground">-</span></td><td class="align-middle px-0 py-2 align-top text-muted-foreground">accessible name of the navigation</td></tr><tr class="border-b border-border align-top"><th class="text-left align-middle px-0 py-2 pr-4 align-top font-mono text-xs font-medium" scope="row">brand <span class="font-sans text-muted-foreground"> (required)</span></th><td class="align-middle px-0 py-2 pr-4 align-top font-mono text-xs">string</td><td class="align-middle px-0 py-2 pr-4 align-top font-mono text-xs"><span class="text-muted-foreground">-</span></td><td class="align-middle px-0 py-2 align-top text-muted-foreground"></td></tr><tr class="border-b border-border align-top"><th class="text-left align-middle px-0 py-2 pr-4 align-top font-mono text-xs font-medium" scope="row">links <span class="font-sans text-muted-foreground"> (required)</span></th><td class="align-middle px-0 py-2 pr-4 align-top font-mono text-xs">NavLink[]</td><td class="align-middle px-0 py-2 pr-4 align-top font-mono text-xs"><span class="text-muted-foreground">-</span></td><td class="align-middle px-0 py-2 align-top text-muted-foreground"></td></tr><tr class="border-b border-border align-top"><th class="text-left align-middle px-0 py-2 pr-4 align-top font-mono text-xs font-medium" scope="row">current </th><td class="align-middle px-0 py-2 pr-4 align-top font-mono text-xs">string</td><td class="align-middle px-0 py-2 pr-4 align-top font-mono text-xs">&#34;&#34;</td><td class="align-middle px-0 py-2 align-top text-muted-foreground">id of the current link</td></tr><tr class="border-b border-border align-top"><th class="text-left align-middle px-0 py-2 pr-4 align-top font-mono text-xs font-medium" scope="row">actions </th><td class="align-middle px-0 py-2 pr-4 align-top font-mono text-xs">NavBarActions</td><td class="align-middle px-0 py-2 pr-4 align-top font-mono text-xs"><span class="text-muted-foreground">-</span></td><td class="align-middle px-0 py-2 align-top text-muted-foreground">the buttons at the end of the bar</td></tr><tr class="border-b border-border align-top"><th class="text-left align-middle px-0 py-2 pr-4 align-top font-mono text-xs font-medium" scope="row">search <span class="font-sans text-muted-foreground"> (required)</span></th><td class="align-middle px-0 py-2 pr-4 align-top font-mono text-xs">NavSearch</td><td class="align-middle px-0 py-2 pr-4 align-top font-mono text-xs"><span class="text-muted-foreground">-</span></td><td class="align-middle px-0 py-2 align-top text-muted-foreground">the search field of layout search</td></tr><tr class="border-b border-border align-top"><th class="text-left align-middle px-0 py-2 pr-4 align-top font-mono text-xs font-medium" scope="row">tone </th><td class="align-middle px-0 py-2 pr-4 align-top font-mono text-xs">&#34;default&#34; | &#34;inverse&#34;</td><td class="align-middle px-0 py-2 pr-4 align-top font-mono text-xs">&#34;default&#34;</td><td class="align-middle px-0 py-2 align-top text-muted-foreground">inverse: sits on a dark hero band</td></tr><tr class="border-b border-border align-top"><th class="text-left align-middle px-0 py-2 pr-4 align-top font-mono text-xs font-medium" scope="row">layout </th><td class="align-middle px-0 py-2 pr-4 align-top font-mono text-xs">&#34;inline&#34; | &#34;split&#34; | &#34;search&#34;</td><td class="align-middle px-0 py-2 pr-4 align-top font-mono text-xs">&#34;inline&#34;</td><td class="align-middle px-0 py-2 align-top text-muted-foreground"></td></tr><tr class="border-b border-border align-top"><th class="text-left align-middle px-0 py-2 pr-4 align-top font-mono text-xs font-medium" scope="row">over </th><td class="align-middle px-0 py-2 pr-4 align-top font-mono text-xs">&#34;none&#34; | &#34;media&#34;</td><td class="align-middle px-0 py-2 pr-4 align-top font-mono text-xs">&#34;none&#34;</td><td class="align-middle px-0 py-2 align-top text-muted-foreground"></td></tr><tr class="border-b border-border align-top"><th class="text-left align-middle px-0 py-2 pr-4 align-top font-mono text-xs font-medium" scope="row">skip </th><td class="align-middle px-0 py-2 pr-4 align-top font-mono text-xs">string</td><td class="align-middle px-0 py-2 pr-4 align-top font-mono text-xs"><span class="text-muted-foreground">-</span></td><td class="align-middle px-0 py-2 align-top text-muted-foreground">text of the skip link to the main content; none: no link</td></tr></tbody></table></div></div> <h2 class="text-foreground text-xl font-semibold mb-2">Used in</h2><ul class="flex flex-wrap gap-x-4 gap-y-1 text-sm"><li class=""><a href="/blocks/app-shell/" class="underline">app-shell</a></li><li class=""><a href="/blocks/bottom-nav/" class="underline">bottom-nav</a></li><li class=""><a href="/blocks/dashboard-shell/" class="underline">dashboard-shell</a></li><li class=""><a href="/components/hero-head/" class="underline">hero-head</a></li><li class=""><a href="/blocks/hero-prompt/" class="underline">hero-prompt</a></li><li class=""><a href="/blocks/mega-menu/" class="underline">mega-menu</a></li><li class=""><a href="/components/nav-links/" class="underline">nav-links</a></li><li class=""><a href="/components/page-crumbs/" class="underline">page-crumbs</a></li><li class=""><a href="/blocks/page-trail/" class="underline">page-trail</a></li><li class=""><a href="/blocks/post-split/" class="underline">post-split</a></li><li class=""><a href="/components/post-tags/" class="underline">post-tags</a></li><li class=""><a href="/blocks/sidebar-nav/" class="underline">sidebar-nav</a></li></ul></article></main></div><footer class="border-t border-border"><div class="mx-auto max-w-6xl px-4 py-8 text-sm text-muted-foreground">ui8kit, MIT licence. Static docs generated from markdown and the registry (<a href="https://registry.buildy.tw/registry.json" class="underline">registry.json</a>).</div></footer></body></html>
+  );
+}
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">blocks/nav-bar.types.ts</span><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="code-solid-1" hidden>Copy</button></div><pre class="hl max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6" tabindex="0"><code class="font-mono" id="code-solid-1"><span class="c1">// Code generated by xgen. DO NOT EDIT.
+</span><span class="c1">// Source: xgen/screens/src/authoring/blocks/navigation.ts
+</span>
+<span class="kr">export</span> <span class="kr">type</span> NavLink = {
+  id: <span class="kt">string</span>;
+  name: <span class="kt">string</span>;
+  icon: <span class="kt">string</span>;
+  href?: <span class="kt">string</span>;
+};
+
+<span class="kr">export</span> <span class="kr">type</span> NavBarActions = {
+  <span class="cm">/** cta: show the call to action */</span>
+  mode?: <span class="s2">&#34;none&#34;</span> | <span class="s2">&#34;cta&#34;</span>;
+  <span class="cm">/** text of the call to action */</span>
+  cta?: <span class="kt">string</span>;
+  <span class="cm">/** href of the call to action */</span>
+  href?: <span class="kt">string</span>;
+  <span class="cm">/** text of the login link; none: no login */</span>
+  login?: <span class="kt">string</span>;
+  <span class="cm">/** href of the login link */</span>
+  loginHref?: <span class="kt">string</span>;
+  <span class="cm">/** text of the theme button; none: no button */</span>
+  themeLabel?: <span class="kt">string</span>;
+};
+
+<span class="kr">export</span> <span class="kr">type</span> NavSearch = {
+  <span class="cm">/** name and placeholder of the search field (layout search) */</span>
+  label: <span class="kt">string</span>;
+  <span class="cm">/** the keys that open the search, shown in the field */</span>
+  shortcut: <span class="kt">string</span>;
+};
+</code></pre></div> <p class="text-sm"><a href="https://registry.buildy.tw/solid/blocks/nav-bar.json" class="underline">Solid registry item (JSON)</a></p></section></div><h2 class="text-foreground text-xl font-semibold mb-2">Props</h2><p class="text-sm mb-4 max-w-3xl text-muted-foreground">Names and types come from the xgen specs of the source. Standard HTML attributes (id, role, tabIndex, aria-*) pass through to the root element; the class prop is className in React.</p><div class="mb-8"> <p class="text-sm mb-2 max-w-3xl whitespace-pre-line text-muted-foreground">A top bar in four shapes. Axes: layout (inline: brand left, links, button right; split: the brand in the middle with the links on both sides; search: a search field with its shortcut in the middle), over (none, media: the bar sits over a picture, transparent), actions mode (none, cta), tone (default, inverse: on a dark hero band). Turning solid on scroll is a port contract.</p> <div class="overflow-x-auto" aria-label="Props of NavBar" role="region" tabindex="0"><table class="w-full min-w-[40rem] text-left text-sm"><caption class="sr-only">Props of NavBar</caption><thead class=""><tr class="border-b border-border"><th class="text-left align-middle px-0 py-2 pr-4 font-medium" scope="col">Prop</th><th class="text-left align-middle px-0 py-2 pr-4 font-medium" scope="col">Type</th><th class="text-left align-middle px-0 py-2 pr-4 font-medium" scope="col">Default</th> <th class="text-left align-middle px-0 py-2 font-medium" scope="col">Description</th></tr></thead><tbody class=""><tr class="border-b border-border align-top"><th class="text-left align-middle px-0 py-2 pr-4 align-top font-mono text-xs font-medium" scope="row">label <span class="font-sans text-muted-foreground"> (required)</span></th><td class="align-middle px-0 py-2 pr-4 align-top font-mono text-xs">string</td><td class="align-middle px-0 py-2 pr-4 align-top font-mono text-xs"><span class="text-muted-foreground">-</span></td><td class="align-middle px-0 py-2 align-top text-muted-foreground">accessible name of the navigation</td></tr><tr class="border-b border-border align-top"><th class="text-left align-middle px-0 py-2 pr-4 align-top font-mono text-xs font-medium" scope="row">brand <span class="font-sans text-muted-foreground"> (required)</span></th><td class="align-middle px-0 py-2 pr-4 align-top font-mono text-xs">string</td><td class="align-middle px-0 py-2 pr-4 align-top font-mono text-xs"><span class="text-muted-foreground">-</span></td><td class="align-middle px-0 py-2 align-top text-muted-foreground"></td></tr><tr class="border-b border-border align-top"><th class="text-left align-middle px-0 py-2 pr-4 align-top font-mono text-xs font-medium" scope="row">links <span class="font-sans text-muted-foreground"> (required)</span></th><td class="align-middle px-0 py-2 pr-4 align-top font-mono text-xs">NavLink[]</td><td class="align-middle px-0 py-2 pr-4 align-top font-mono text-xs"><span class="text-muted-foreground">-</span></td><td class="align-middle px-0 py-2 align-top text-muted-foreground"></td></tr><tr class="border-b border-border align-top"><th class="text-left align-middle px-0 py-2 pr-4 align-top font-mono text-xs font-medium" scope="row">current </th><td class="align-middle px-0 py-2 pr-4 align-top font-mono text-xs">string</td><td class="align-middle px-0 py-2 pr-4 align-top font-mono text-xs">&#34;&#34;</td><td class="align-middle px-0 py-2 align-top text-muted-foreground">id of the current link</td></tr><tr class="border-b border-border align-top"><th class="text-left align-middle px-0 py-2 pr-4 align-top font-mono text-xs font-medium" scope="row">actions </th><td class="align-middle px-0 py-2 pr-4 align-top font-mono text-xs">NavBarActions</td><td class="align-middle px-0 py-2 pr-4 align-top font-mono text-xs"><span class="text-muted-foreground">-</span></td><td class="align-middle px-0 py-2 align-top text-muted-foreground">the buttons at the end of the bar</td></tr><tr class="border-b border-border align-top"><th class="text-left align-middle px-0 py-2 pr-4 align-top font-mono text-xs font-medium" scope="row">search <span class="font-sans text-muted-foreground"> (required)</span></th><td class="align-middle px-0 py-2 pr-4 align-top font-mono text-xs">NavSearch</td><td class="align-middle px-0 py-2 pr-4 align-top font-mono text-xs"><span class="text-muted-foreground">-</span></td><td class="align-middle px-0 py-2 align-top text-muted-foreground">the search field of layout search</td></tr><tr class="border-b border-border align-top"><th class="text-left align-middle px-0 py-2 pr-4 align-top font-mono text-xs font-medium" scope="row">tone </th><td class="align-middle px-0 py-2 pr-4 align-top font-mono text-xs">&#34;default&#34; | &#34;inverse&#34;</td><td class="align-middle px-0 py-2 pr-4 align-top font-mono text-xs">&#34;default&#34;</td><td class="align-middle px-0 py-2 align-top text-muted-foreground">inverse: sits on a dark hero band</td></tr><tr class="border-b border-border align-top"><th class="text-left align-middle px-0 py-2 pr-4 align-top font-mono text-xs font-medium" scope="row">layout </th><td class="align-middle px-0 py-2 pr-4 align-top font-mono text-xs">&#34;inline&#34; | &#34;split&#34; | &#34;search&#34;</td><td class="align-middle px-0 py-2 pr-4 align-top font-mono text-xs">&#34;inline&#34;</td><td class="align-middle px-0 py-2 align-top text-muted-foreground"></td></tr><tr class="border-b border-border align-top"><th class="text-left align-middle px-0 py-2 pr-4 align-top font-mono text-xs font-medium" scope="row">over </th><td class="align-middle px-0 py-2 pr-4 align-top font-mono text-xs">&#34;none&#34; | &#34;media&#34;</td><td class="align-middle px-0 py-2 pr-4 align-top font-mono text-xs">&#34;none&#34;</td><td class="align-middle px-0 py-2 align-top text-muted-foreground"></td></tr><tr class="border-b border-border align-top"><th class="text-left align-middle px-0 py-2 pr-4 align-top font-mono text-xs font-medium" scope="row">skip </th><td class="align-middle px-0 py-2 pr-4 align-top font-mono text-xs">string</td><td class="align-middle px-0 py-2 pr-4 align-top font-mono text-xs"><span class="text-muted-foreground">-</span></td><td class="align-middle px-0 py-2 align-top text-muted-foreground">text of the skip link to the main content; none: no link</td></tr><tr class="border-b border-border align-top"><th class="text-left align-middle px-0 py-2 pr-4 align-top font-mono text-xs font-medium" scope="row">landmarkLabel </th><td class="align-middle px-0 py-2 pr-4 align-top font-mono text-xs">string</td><td class="align-middle px-0 py-2 pr-4 align-top font-mono text-xs"><span class="text-muted-foreground">-</span></td><td class="align-middle px-0 py-2 align-top text-muted-foreground">accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one</td></tr></tbody></table></div></div> <h2 class="text-foreground text-xl font-semibold mb-2">Used in</h2><ul class="flex flex-wrap gap-x-4 gap-y-1 text-sm"><li class=""><a href="/blocks/app-shell/" class="underline">app-shell</a></li><li class=""><a href="/blocks/bottom-nav/" class="underline">bottom-nav</a></li><li class=""><a href="/blocks/dashboard-shell/" class="underline">dashboard-shell</a></li><li class=""><a href="/components/hero-head/" class="underline">hero-head</a></li><li class=""><a href="/blocks/hero-prompt/" class="underline">hero-prompt</a></li><li class=""><a href="/blocks/mega-menu/" class="underline">mega-menu</a></li><li class=""><a href="/components/nav-links/" class="underline">nav-links</a></li><li class=""><a href="/components/page-crumbs/" class="underline">page-crumbs</a></li><li class=""><a href="/blocks/page-trail/" class="underline">page-trail</a></li><li class=""><a href="/blocks/post-split/" class="underline">post-split</a></li><li class=""><a href="/components/post-tags/" class="underline">post-tags</a></li><li class=""><a href="/blocks/sidebar-nav/" class="underline">sidebar-nav</a></li></ul></article></main></div><footer class="border-t border-border"><div class="mx-auto max-w-6xl px-4 py-8 text-sm text-muted-foreground">ui8kit, MIT licence. Static docs generated from markdown and the registry (<a href="https://registry.buildy.tw/registry.json" class="underline">registry.json</a>).</div></footer></body></html>

@@ -29,6 +29,26 @@
             "utils"
           ]
         },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/about-company.tsx"
+          ],
+          "path": "solid/blocks/about-company.json",
+          "registryDependencies": [
+            "box",
+            "feature-grid",
+            "grid",
+            "group",
+            "lucide-icon",
+            "media-frame",
+            "section-frame",
+            "stack",
+            "stats-band",
+            "text",
+            "utils"
+          ]
+        },
         "svelte": {
           "dependencies": [],
           "files": [
@@ -87,6 +107,27 @@
             "blocks/about-me.types.ts"
           ],
           "path": "react/blocks/about-me.json",
+          "registryDependencies": [
+            "action-group",
+            "error-page",
+            "form",
+            "group",
+            "list",
+            "media-frame",
+            "product-info",
+            "section-frame",
+            "stack",
+            "text",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/about-me.tsx",
+            "blocks/about-me.types.ts"
+          ],
+          "path": "solid/blocks/about-me.json",
           "registryDependencies": [
             "action-group",
             "error-page",
@@ -166,6 +207,18 @@
             "utils"
           ]
         },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/action-group.tsx"
+          ],
+          "path": "solid/components/action-group.json",
+          "registryDependencies": [
+            "button",
+            "group",
+            "utils"
+          ]
+        },
         "svelte": {
           "dependencies": [],
           "files": [
@@ -209,6 +262,25 @@
           ],
           "path": "react/blocks/activity-feed.json",
           "registryDependencies": [
+            "block",
+            "container",
+            "list",
+            "panel",
+            "stack",
+            "text",
+            "timeline",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/activity-feed.tsx",
+            "blocks/activity-feed.types.ts"
+          ],
+          "path": "solid/blocks/activity-feed.json",
+          "registryDependencies": [
+            "block",
             "container",
             "list",
             "panel",
@@ -226,6 +298,7 @@
           ],
           "path": "svelte/blocks/activity-feed.json",
           "registryDependencies": [
+            "block",
             "container",
             "list",
             "panel",
@@ -243,6 +316,7 @@
           ],
           "path": "vue/blocks/activity-feed.json",
           "registryDependencies": [
+            "block",
             "container",
             "list",
             "panel",
@@ -271,6 +345,16 @@
           "path": "react/components/ui/alert.json",
           "registryDependencies": [
             "slot",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "primitives/alert/alert.tsx"
+          ],
+          "path": "solid/components/ui/alert.json",
+          "registryDependencies": [
             "utils"
           ]
         },
@@ -311,6 +395,24 @@
             "blocks/announcement-bar.tsx"
           ],
           "path": "react/blocks/announcement-bar.json",
+          "registryDependencies": [
+            "block",
+            "button",
+            "container",
+            "group",
+            "inline",
+            "link-plain",
+            "lucide-icon",
+            "text",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/announcement-bar.tsx"
+          ],
+          "path": "solid/blocks/announcement-bar.json",
           "registryDependencies": [
             "block",
             "button",
@@ -379,7 +481,29 @@
           "registryDependencies": [
             "activity-feed",
             "bar-chart",
-            "block",
+            "box",
+            "chart-panel",
+            "dashboard-overview",
+            "grid",
+            "metric-row",
+            "panel",
+            "stack",
+            "stat-tile",
+            "timeline",
+            "title",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/app-main.tsx"
+          ],
+          "path": "solid/components/app-main.json",
+          "registryDependencies": [
+            "activity-feed",
+            "bar-chart",
+            "box",
             "chart-panel",
             "dashboard-overview",
             "grid",
@@ -401,7 +525,7 @@
           "registryDependencies": [
             "activity-feed",
             "bar-chart",
-            "block",
+            "box",
             "chart-panel",
             "dashboard-overview",
             "grid",
@@ -423,7 +547,7 @@
           "registryDependencies": [
             "activity-feed",
             "bar-chart",
-            "block",
+            "box",
             "chart-panel",
             "dashboard-overview",
             "grid",
@@ -454,6 +578,31 @@
             "blocks/app-shell.types.ts"
           ],
           "path": "react/blocks/app-shell.json",
+          "registryDependencies": [
+            "activity-feed",
+            "app-main",
+            "block",
+            "chart-panel",
+            "container",
+            "dashboard-overview",
+            "grid",
+            "list",
+            "metric-row",
+            "nav-bar",
+            "panel",
+            "sidebar-nav",
+            "stack",
+            "text",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/app-shell.tsx",
+            "blocks/app-shell.types.ts"
+          ],
+          "path": "solid/blocks/app-shell.json",
           "registryDependencies": [
             "activity-feed",
             "app-main",
@@ -527,6 +676,61 @@
       "type": "registry:block"
     },
     {
+      "category": "components",
+      "description": "Article Block component",
+      "group": "",
+      "kind": "component",
+      "name": "article-block",
+      "runtimes": {
+        "react": {
+          "dependencies": [],
+          "files": [
+            "components/article-block.tsx"
+          ],
+          "path": "react/components/article-block.json",
+          "registryDependencies": [
+            "block",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/article-block.tsx"
+          ],
+          "path": "solid/components/article-block.json",
+          "registryDependencies": [
+            "block",
+            "utils"
+          ]
+        },
+        "svelte": {
+          "dependencies": [],
+          "files": [
+            "components/article-block.svelte"
+          ],
+          "path": "svelte/components/article-block.json",
+          "registryDependencies": [
+            "block",
+            "utils"
+          ]
+        },
+        "vue": {
+          "dependencies": [],
+          "files": [
+            "components/article-block.vue"
+          ],
+          "path": "vue/components/article-block.json",
+          "registryDependencies": [
+            "block",
+            "utils"
+          ]
+        }
+      },
+      "title": "Article Block",
+      "type": "registry:component"
+    },
+    {
       "category": "content",
       "description": "A long read in one reading column, or beside a table of contents that links to the sections.",
       "group": "blog",
@@ -541,10 +745,31 @@
           ],
           "path": "react/blocks/article-body.json",
           "registryDependencies": [
-            "block",
+            "box",
             "grid",
             "link",
             "list",
+            "nav-block",
+            "section-frame",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/article-body.tsx",
+            "blocks/article-body.types.ts"
+          ],
+          "path": "solid/blocks/article-body.json",
+          "registryDependencies": [
+            "box",
+            "grid",
+            "link",
+            "list",
+            "nav-block",
             "section-frame",
             "stack",
             "text",
@@ -560,10 +785,11 @@
           ],
           "path": "svelte/blocks/article-body.json",
           "registryDependencies": [
-            "block",
+            "box",
             "grid",
             "link",
             "list",
+            "nav-block",
             "section-frame",
             "stack",
             "text",
@@ -579,10 +805,11 @@
           ],
           "path": "vue/blocks/article-body.json",
           "registryDependencies": [
-            "block",
+            "box",
             "grid",
             "link",
             "list",
+            "nav-block",
             "section-frame",
             "stack",
             "text",
@@ -608,6 +835,27 @@
             "blocks/auth-card.types.ts"
           ],
           "path": "react/blocks/auth-card.json",
+          "registryDependencies": [
+            "auth-form",
+            "block",
+            "button",
+            "group",
+            "link",
+            "lucide-icon",
+            "separator",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/auth-card.tsx",
+            "blocks/auth-card.types.ts"
+          ],
+          "path": "solid/blocks/auth-card.json",
           "registryDependencies": [
             "auth-form",
             "block",
@@ -694,6 +942,25 @@
             "utils"
           ]
         },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/auth-form.tsx"
+          ],
+          "path": "solid/components/auth-form.json",
+          "registryDependencies": [
+            "auth-card",
+            "button",
+            "checkbox",
+            "field",
+            "form",
+            "group",
+            "input",
+            "label",
+            "link",
+            "utils"
+          ]
+        },
         "svelte": {
           "dependencies": [],
           "files": [
@@ -750,6 +1017,26 @@
             "blocks/auth-layout.types.ts"
           ],
           "path": "react/blocks/auth-layout.json",
+          "registryDependencies": [
+            "auth-card",
+            "block",
+            "box",
+            "container",
+            "grid",
+            "media-frame",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/auth-layout.tsx",
+            "blocks/auth-layout.types.ts"
+          ],
+          "path": "solid/blocks/auth-layout.json",
           "registryDependencies": [
             "auth-card",
             "block",
@@ -826,6 +1113,18 @@
             "utils"
           ]
         },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/avatar.tsx"
+          ],
+          "path": "solid/components/avatar.json",
+          "registryDependencies": [
+            "image",
+            "inline",
+            "utils"
+          ]
+        },
         "svelte": {
           "dependencies": [],
           "files": [
@@ -868,7 +1167,19 @@
           ],
           "path": "react/components/backdrop.json",
           "registryDependencies": [
-            "block",
+            "box",
+            "media-frame",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/backdrop.tsx"
+          ],
+          "path": "solid/components/backdrop.json",
+          "registryDependencies": [
+            "box",
             "media-frame",
             "utils"
           ]
@@ -880,7 +1191,7 @@
           ],
           "path": "svelte/components/backdrop.json",
           "registryDependencies": [
-            "block",
+            "box",
             "media-frame",
             "utils"
           ]
@@ -892,7 +1203,7 @@
           ],
           "path": "vue/components/backdrop.json",
           "registryDependencies": [
-            "block",
+            "box",
             "media-frame",
             "utils"
           ]
@@ -914,6 +1225,16 @@
             "primitives/badge/badge.tsx"
           ],
           "path": "react/components/ui/badge.json",
+          "registryDependencies": [
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "primitives/badge/badge.tsx"
+          ],
+          "path": "solid/components/ui/badge.json",
           "registryDependencies": [
             "utils"
           ]
@@ -960,6 +1281,17 @@
             "utils"
           ]
         },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/badge-square.tsx"
+          ],
+          "path": "solid/components/badge-square.json",
+          "registryDependencies": [
+            "inline",
+            "utils"
+          ]
+        },
         "svelte": {
           "dependencies": [],
           "files": [
@@ -1001,7 +1333,19 @@
           ],
           "path": "react/components/bar-chart.json",
           "registryDependencies": [
-            "block",
+            "box",
+            "text",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/bar-chart.tsx",
+            "components/bar-chart.types.ts"
+          ],
+          "path": "solid/components/bar-chart.json",
+          "registryDependencies": [
             "box",
             "text",
             "utils"
@@ -1015,7 +1359,6 @@
           ],
           "path": "svelte/components/bar-chart.json",
           "registryDependencies": [
-            "block",
             "box",
             "text",
             "utils"
@@ -1029,7 +1372,6 @@
           ],
           "path": "vue/components/bar-chart.json",
           "registryDependencies": [
-            "block",
             "box",
             "text",
             "utils"
@@ -1053,6 +1395,26 @@
             "blocks/before-after.types.ts"
           ],
           "path": "react/blocks/before-after.json",
+          "registryDependencies": [
+            "card",
+            "grid",
+            "group",
+            "list",
+            "lucide-icon",
+            "section-frame",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/before-after.tsx",
+            "blocks/before-after.types.ts"
+          ],
+          "path": "solid/blocks/before-after.json",
           "registryDependencies": [
             "card",
             "grid",
@@ -1135,6 +1497,24 @@
             "utils"
           ]
         },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/bento-grid.tsx",
+            "blocks/bento-grid.types.ts"
+          ],
+          "path": "solid/blocks/bento-grid.json",
+          "registryDependencies": [
+            "card",
+            "grid",
+            "lucide-icon",
+            "media-frame",
+            "section-frame",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
         "svelte": {
           "dependencies": [],
           "files": [
@@ -1193,6 +1573,16 @@
             "utils"
           ]
         },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "primitives/block/block.tsx"
+          ],
+          "path": "solid/components/ui/block.json",
+          "registryDependencies": [
+            "utils"
+          ]
+        },
         "svelte": {
           "dependencies": [],
           "files": [
@@ -1230,6 +1620,22 @@
             "blocks/bottom-nav.tsx"
           ],
           "path": "react/blocks/bottom-nav.json",
+          "registryDependencies": [
+            "block",
+            "inline",
+            "link",
+            "list",
+            "lucide-icon",
+            "nav-bar",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/bottom-nav.tsx"
+          ],
+          "path": "solid/blocks/bottom-nav.json",
           "registryDependencies": [
             "block",
             "inline",
@@ -1294,6 +1700,16 @@
             "utils"
           ]
         },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "primitives/box/box.tsx"
+          ],
+          "path": "solid/components/ui/box.json",
+          "registryDependencies": [
+            "utils"
+          ]
+        },
         "svelte": {
           "dependencies": [],
           "files": [
@@ -1331,6 +1747,16 @@
             "primitives/breadcrumb/breadcrumb.tsx"
           ],
           "path": "react/components/ui/breadcrumb.json",
+          "registryDependencies": [
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "primitives/breadcrumb/breadcrumb.tsx"
+          ],
+          "path": "solid/components/ui/breadcrumb.json",
           "registryDependencies": [
             "utils"
           ]
@@ -1373,7 +1799,21 @@
           ],
           "path": "react/components/bulk-bar.json",
           "registryDependencies": [
-            "block",
+            "box",
+            "button",
+            "inline",
+            "lucide-icon",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/bulk-bar.tsx"
+          ],
+          "path": "solid/components/bulk-bar.json",
+          "registryDependencies": [
+            "box",
             "button",
             "inline",
             "lucide-icon",
@@ -1387,7 +1827,7 @@
           ],
           "path": "svelte/components/bulk-bar.json",
           "registryDependencies": [
-            "block",
+            "box",
             "button",
             "inline",
             "lucide-icon",
@@ -1401,7 +1841,7 @@
           ],
           "path": "vue/components/bulk-bar.json",
           "registryDependencies": [
-            "block",
+            "box",
             "button",
             "inline",
             "lucide-icon",
@@ -1427,6 +1867,16 @@
           "path": "react/components/ui/button.json",
           "registryDependencies": [
             "slot",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "primitives/button/button.tsx"
+          ],
+          "path": "solid/components/ui/button.json",
+          "registryDependencies": [
             "utils"
           ]
         },
@@ -1467,6 +1917,16 @@
             "primitives/button-plain/button-plain.tsx"
           ],
           "path": "react/components/ui/button-plain.json",
+          "registryDependencies": [
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "primitives/button-plain/button-plain.tsx"
+          ],
+          "path": "solid/components/ui/button-plain.json",
           "registryDependencies": [
             "utils"
           ]
@@ -1518,6 +1978,21 @@
             "utils"
           ]
         },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "primitives/card/card-content.tsx",
+            "primitives/card/card-description.tsx",
+            "primitives/card/card-footer.tsx",
+            "primitives/card/card-header.tsx",
+            "primitives/card/card-title.tsx",
+            "primitives/card/card.tsx"
+          ],
+          "path": "solid/components/ui/card.json",
+          "registryDependencies": [
+            "utils"
+          ]
+        },
         "svelte": {
           "dependencies": [],
           "files": [
@@ -1566,6 +2041,29 @@
             "blocks/cart-drawer.types.ts"
           ],
           "path": "react/blocks/cart-drawer.json",
+          "registryDependencies": [
+            "block",
+            "box",
+            "button",
+            "cart-list",
+            "container",
+            "drawer-lines",
+            "group",
+            "lucide-icon",
+            "order-summary",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/cart-drawer.tsx",
+            "blocks/cart-drawer.types.ts"
+          ],
+          "path": "solid/blocks/cart-drawer.json",
           "registryDependencies": [
             "block",
             "box",
@@ -1659,6 +2157,26 @@
             "utils"
           ]
         },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/cart-list.tsx",
+            "blocks/cart-list.types.ts"
+          ],
+          "path": "solid/blocks/cart-list.json",
+          "registryDependencies": [
+            "button",
+            "card",
+            "cart-table",
+            "lucide-icon",
+            "media-frame",
+            "number-field",
+            "section-frame",
+            "stack",
+            "text",
+            "utils"
+          ]
+        },
         "svelte": {
           "dependencies": [],
           "files": [
@@ -1717,6 +2235,30 @@
             "components/cart-summary-card.types.ts"
           ],
           "path": "react/components/cart-summary-card.json",
+          "registryDependencies": [
+            "badge",
+            "button",
+            "cart-list",
+            "form",
+            "group",
+            "inline",
+            "input",
+            "list",
+            "media-frame",
+            "order-summary",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/cart-summary-card.tsx",
+            "components/cart-summary-card.types.ts"
+          ],
+          "path": "solid/components/cart-summary-card.json",
           "registryDependencies": [
             "badge",
             "button",
@@ -1814,6 +2356,27 @@
             "utils"
           ]
         },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/cart-table.tsx"
+          ],
+          "path": "solid/components/cart-table.json",
+          "registryDependencies": [
+            "box",
+            "button",
+            "cart-list",
+            "group",
+            "inline",
+            "lucide-icon",
+            "media-frame",
+            "number-field",
+            "stack",
+            "table",
+            "text",
+            "utils"
+          ]
+        },
         "svelte": {
           "dependencies": [],
           "files": [
@@ -1874,6 +2437,27 @@
             "blocks/category-nav.types.ts"
           ],
           "path": "react/blocks/category-nav.json",
+          "registryDependencies": [
+            "block",
+            "container",
+            "group",
+            "inline",
+            "link",
+            "list",
+            "lucide-icon",
+            "search-field",
+            "select",
+            "text",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/category-nav.tsx",
+            "blocks/category-nav.types.ts"
+          ],
+          "path": "solid/blocks/category-nav.json",
           "registryDependencies": [
             "block",
             "container",
@@ -1950,6 +2534,24 @@
           "path": "react/blocks/chart-panel.json",
           "registryDependencies": [
             "bar-chart",
+            "block",
+            "container",
+            "meter-row",
+            "panel",
+            "stack",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/chart-panel.tsx",
+            "blocks/chart-panel.types.ts"
+          ],
+          "path": "solid/blocks/chart-panel.json",
+          "registryDependencies": [
+            "bar-chart",
+            "block",
             "container",
             "meter-row",
             "panel",
@@ -1966,6 +2568,7 @@
           "path": "svelte/blocks/chart-panel.json",
           "registryDependencies": [
             "bar-chart",
+            "block",
             "container",
             "meter-row",
             "panel",
@@ -1982,6 +2585,7 @@
           "path": "vue/blocks/chart-panel.json",
           "registryDependencies": [
             "bar-chart",
+            "block",
             "container",
             "meter-row",
             "panel",
@@ -2006,6 +2610,16 @@
             "primitives/checkbox/checkbox.tsx"
           ],
           "path": "react/components/ui/checkbox.json",
+          "registryDependencies": [
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "primitives/checkbox/checkbox.tsx"
+          ],
+          "path": "solid/components/ui/checkbox.json",
           "registryDependencies": [
             "utils"
           ]
@@ -2048,6 +2662,25 @@
             "blocks/checklist.types.ts"
           ],
           "path": "react/blocks/checklist.json",
+          "registryDependencies": [
+            "disclosure",
+            "form",
+            "iconbadge",
+            "list",
+            "lucide-icon",
+            "section-frame",
+            "stack",
+            "text",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/checklist.tsx",
+            "blocks/checklist.types.ts"
+          ],
+          "path": "solid/blocks/checklist.json",
           "registryDependencies": [
             "disclosure",
             "form",
@@ -2118,23 +2751,43 @@
           "path": "react/blocks/checkout-form.json",
           "registryDependencies": [
             "box",
-            "button",
             "cart-list",
             "cart-summary-card",
-            "checkbox",
             "checkout-step",
+            "checkout-submit",
             "field",
             "form",
             "grid",
-            "group",
             "input",
-            "label",
             "order-summary",
             "payment-options",
             "section-frame",
             "slot-grid",
-            "stack",
-            "text",
+            "textarea",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/checkout-form.tsx",
+            "blocks/checkout-form.types.ts"
+          ],
+          "path": "solid/blocks/checkout-form.json",
+          "registryDependencies": [
+            "box",
+            "cart-list",
+            "cart-summary-card",
+            "checkout-step",
+            "checkout-submit",
+            "field",
+            "form",
+            "grid",
+            "input",
+            "order-summary",
+            "payment-options",
+            "section-frame",
+            "slot-grid",
             "textarea",
             "utils"
           ]
@@ -2148,23 +2801,18 @@
           "path": "svelte/blocks/checkout-form.json",
           "registryDependencies": [
             "box",
-            "button",
             "cart-list",
             "cart-summary-card",
-            "checkbox",
             "checkout-step",
+            "checkout-submit",
             "field",
             "form",
             "grid",
-            "group",
             "input",
-            "label",
             "order-summary",
             "payment-options",
             "section-frame",
             "slot-grid",
-            "stack",
-            "text",
             "textarea",
             "utils"
           ]
@@ -2178,23 +2826,18 @@
           "path": "vue/blocks/checkout-form.json",
           "registryDependencies": [
             "box",
-            "button",
             "cart-list",
             "cart-summary-card",
-            "checkbox",
             "checkout-step",
+            "checkout-submit",
             "field",
             "form",
             "grid",
-            "group",
             "input",
-            "label",
             "order-summary",
             "payment-options",
             "section-frame",
             "slot-grid",
-            "stack",
-            "text",
             "textarea",
             "utils"
           ]
@@ -2216,6 +2859,21 @@
             "components/checkout-step.tsx"
           ],
           "path": "react/components/checkout-step.json",
+          "registryDependencies": [
+            "box",
+            "group",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/checkout-step.tsx"
+          ],
+          "path": "solid/components/checkout-step.json",
           "registryDependencies": [
             "box",
             "group",
@@ -2261,6 +2919,81 @@
     },
     {
       "category": "components",
+      "description": "Checkout Submit component",
+      "group": "",
+      "kind": "component",
+      "name": "checkout-submit",
+      "runtimes": {
+        "react": {
+          "dependencies": [],
+          "files": [
+            "components/checkout-submit.tsx"
+          ],
+          "path": "react/components/checkout-submit.json",
+          "registryDependencies": [
+            "button",
+            "checkbox",
+            "group",
+            "label",
+            "stack",
+            "text",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/checkout-submit.tsx"
+          ],
+          "path": "solid/components/checkout-submit.json",
+          "registryDependencies": [
+            "button",
+            "checkbox",
+            "group",
+            "label",
+            "stack",
+            "text",
+            "utils"
+          ]
+        },
+        "svelte": {
+          "dependencies": [],
+          "files": [
+            "components/checkout-submit.svelte"
+          ],
+          "path": "svelte/components/checkout-submit.json",
+          "registryDependencies": [
+            "button",
+            "checkbox",
+            "group",
+            "label",
+            "stack",
+            "text",
+            "utils"
+          ]
+        },
+        "vue": {
+          "dependencies": [],
+          "files": [
+            "components/checkout-submit.vue"
+          ],
+          "path": "vue/components/checkout-submit.json",
+          "registryDependencies": [
+            "button",
+            "checkbox",
+            "group",
+            "label",
+            "stack",
+            "text",
+            "utils"
+          ]
+        }
+      },
+      "title": "Checkout Submit",
+      "type": "registry:component"
+    },
+    {
+      "category": "components",
       "description": "Code Window component",
       "group": "",
       "kind": "component",
@@ -2274,7 +3007,21 @@
           ],
           "path": "react/components/code-window.json",
           "registryDependencies": [
-            "block",
+            "box",
+            "inline",
+            "list",
+            "text",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/code-window.tsx",
+            "components/code-window.types.ts"
+          ],
+          "path": "solid/components/code-window.json",
+          "registryDependencies": [
             "box",
             "inline",
             "list",
@@ -2290,7 +3037,6 @@
           ],
           "path": "svelte/components/code-window.json",
           "registryDependencies": [
-            "block",
             "box",
             "inline",
             "list",
@@ -2306,7 +3052,6 @@
           ],
           "path": "vue/components/code-window.json",
           "registryDependencies": [
-            "block",
             "box",
             "inline",
             "list",
@@ -2331,6 +3076,18 @@
             "components/compare-mark.tsx"
           ],
           "path": "react/components/compare-mark.json",
+          "registryDependencies": [
+            "inline",
+            "lucide-icon",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/compare-mark.tsx"
+          ],
+          "path": "solid/components/compare-mark.json",
           "registryDependencies": [
             "inline",
             "lucide-icon",
@@ -2387,6 +3144,21 @@
             "utils"
           ]
         },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/comparison-table.tsx",
+            "blocks/comparison-table.types.ts"
+          ],
+          "path": "solid/blocks/comparison-table.json",
+          "registryDependencies": [
+            "box",
+            "compare-mark",
+            "section-frame",
+            "table",
+            "utils"
+          ]
+        },
         "svelte": {
           "dependencies": [],
           "files": [
@@ -2435,6 +3207,31 @@
             "blocks/contact-form.types.ts"
           ],
           "path": "react/blocks/contact-form.json",
+          "registryDependencies": [
+            "button",
+            "checkbox",
+            "feature-grid",
+            "field",
+            "form",
+            "grid",
+            "group",
+            "input",
+            "label",
+            "lucide-icon",
+            "section-frame",
+            "stack",
+            "text",
+            "textarea",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/contact-form.tsx",
+            "blocks/contact-form.types.ts"
+          ],
+          "path": "solid/blocks/contact-form.json",
           "registryDependencies": [
             "button",
             "checkbox",
@@ -2525,6 +3322,16 @@
             "utils"
           ]
         },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "primitives/container/container.tsx"
+          ],
+          "path": "solid/components/ui/container.json",
+          "registryDependencies": [
+            "utils"
+          ]
+        },
         "svelte": {
           "dependencies": [],
           "files": [
@@ -2562,6 +3369,25 @@
             "blocks/cookie-banner.tsx"
           ],
           "path": "react/blocks/cookie-banner.json",
+          "registryDependencies": [
+            "block",
+            "box",
+            "button",
+            "container",
+            "group",
+            "lucide-icon",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/cookie-banner.tsx"
+          ],
+          "path": "solid/blocks/cookie-banner.json",
           "registryDependencies": [
             "block",
             "box",
@@ -2644,6 +3470,26 @@
             "utils"
           ]
         },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/credit-packs.tsx",
+            "blocks/credit-packs.types.ts"
+          ],
+          "path": "solid/blocks/credit-packs.json",
+          "registryDependencies": [
+            "badge",
+            "box",
+            "button",
+            "card",
+            "grid",
+            "section-frame",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
         "svelte": {
           "dependencies": [],
           "files": [
@@ -2712,6 +3558,23 @@
             "utils"
           ]
         },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/cta-actions.tsx",
+            "components/cta-actions.types.ts"
+          ],
+          "path": "solid/components/cta-actions.json",
+          "registryDependencies": [
+            "action-group",
+            "button",
+            "form",
+            "group",
+            "input",
+            "label",
+            "utils"
+          ]
+        },
         "svelte": {
           "dependencies": [],
           "files": [
@@ -2764,6 +3627,28 @@
             "blocks/cta-band.types.ts"
           ],
           "path": "react/blocks/cta-band.json",
+          "registryDependencies": [
+            "block",
+            "card",
+            "container",
+            "cta-actions",
+            "cta-banner",
+            "media-frame",
+            "quote-proof",
+            "section-frame",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/cta-band.tsx",
+            "blocks/cta-band.types.ts"
+          ],
+          "path": "solid/blocks/cta-band.json",
           "registryDependencies": [
             "block",
             "card",
@@ -2850,6 +3735,22 @@
             "utils"
           ]
         },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/cta-banner.tsx"
+          ],
+          "path": "solid/blocks/cta-banner.json",
+          "registryDependencies": [
+            "block",
+            "box",
+            "button",
+            "presets",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
         "svelte": {
           "dependencies": [],
           "files": [
@@ -2900,6 +3801,27 @@
             "blocks/cta-proof.types.ts"
           ],
           "path": "react/blocks/cta-proof.json",
+          "registryDependencies": [
+            "action-group",
+            "cta-proof-items",
+            "error-page",
+            "feature-grid",
+            "logo-cloud",
+            "media-frame",
+            "section-frame",
+            "stats-band",
+            "text",
+            "utils",
+            "zone-table"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/cta-proof.tsx",
+            "blocks/cta-proof.types.ts"
+          ],
+          "path": "solid/blocks/cta-proof.json",
           "registryDependencies": [
             "action-group",
             "cta-proof-items",
@@ -2984,6 +3906,23 @@
             "utils"
           ]
         },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/cta-proof-items.tsx"
+          ],
+          "path": "solid/components/cta-proof-items.json",
+          "registryDependencies": [
+            "box",
+            "cta-proof",
+            "group",
+            "list",
+            "lucide-icon",
+            "stack",
+            "text",
+            "utils"
+          ]
+        },
         "svelte": {
           "dependencies": [],
           "files": [
@@ -3039,7 +3978,29 @@
           "registryDependencies": [
             "activity-feed",
             "bar-chart",
-            "block",
+            "box",
+            "chart-panel",
+            "grid",
+            "metric-row",
+            "panel",
+            "section-frame",
+            "stack",
+            "stat-tile",
+            "timeline",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/dashboard-overview.tsx",
+            "blocks/dashboard-overview.types.ts"
+          ],
+          "path": "solid/blocks/dashboard-overview.json",
+          "registryDependencies": [
+            "activity-feed",
+            "bar-chart",
+            "box",
             "chart-panel",
             "grid",
             "metric-row",
@@ -3061,7 +4022,7 @@
           "registryDependencies": [
             "activity-feed",
             "bar-chart",
-            "block",
+            "box",
             "chart-panel",
             "grid",
             "metric-row",
@@ -3083,7 +4044,7 @@
           "registryDependencies": [
             "activity-feed",
             "bar-chart",
-            "block",
+            "box",
             "chart-panel",
             "grid",
             "metric-row",
@@ -3113,6 +4074,24 @@
             "blocks/dashboard-shell.types.ts"
           ],
           "path": "react/blocks/dashboard-shell.json",
+          "registryDependencies": [
+            "block",
+            "box",
+            "nav-bar",
+            "shell-content",
+            "shell-footer",
+            "shell-sidebar",
+            "shell-topbar",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/dashboard-shell.tsx",
+            "blocks/dashboard-shell.types.ts"
+          ],
+          "path": "solid/blocks/dashboard-shell.json",
           "registryDependencies": [
             "block",
             "box",
@@ -3193,6 +4172,28 @@
             "zone-table"
           ]
         },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/delivery-info.tsx",
+            "blocks/delivery-info.types.ts"
+          ],
+          "path": "solid/blocks/delivery-info.json",
+          "registryDependencies": [
+            "badge",
+            "box",
+            "feature-grid",
+            "grid",
+            "group",
+            "lucide-icon",
+            "section-frame",
+            "stack",
+            "text",
+            "title",
+            "utils",
+            "zone-table"
+          ]
+        },
         "svelte": {
           "dependencies": [],
           "files": [
@@ -3258,6 +4259,16 @@
             "utils"
           ]
         },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "primitives/dialog/dialog.tsx"
+          ],
+          "path": "solid/components/ui/dialog.json",
+          "registryDependencies": [
+            "utils"
+          ]
+        },
         "svelte": {
           "dependencies": [],
           "files": [
@@ -3296,6 +4307,17 @@
             "primitives/disclosure/summary.tsx"
           ],
           "path": "react/components/ui/disclosure.json",
+          "registryDependencies": [
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "primitives/disclosure/disclosure.tsx",
+            "primitives/disclosure/summary.tsx"
+          ],
+          "path": "solid/components/ui/disclosure.json",
           "registryDependencies": [
             "utils"
           ]
@@ -3339,6 +4361,28 @@
             "components/drawer-lines.tsx"
           ],
           "path": "react/components/drawer-lines.json",
+          "registryDependencies": [
+            "button",
+            "cart-drawer",
+            "cart-list",
+            "form",
+            "group",
+            "inline",
+            "list",
+            "media-frame",
+            "number-field",
+            "order-summary",
+            "stack",
+            "text",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/drawer-lines.tsx"
+          ],
+          "path": "solid/components/drawer-lines.json",
           "registryDependencies": [
             "button",
             "cart-drawer",
@@ -3422,6 +4466,18 @@
             "utils"
           ]
         },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/dropdown-item.tsx"
+          ],
+          "path": "solid/components/dropdown-item.json",
+          "registryDependencies": [
+            "button-plain",
+            "inline",
+            "utils"
+          ]
+        },
         "svelte": {
           "dependencies": [],
           "files": [
@@ -3464,7 +4520,21 @@
           ],
           "path": "react/components/editor-tab.json",
           "registryDependencies": [
-            "block",
+            "box",
+            "button",
+            "inline",
+            "lucide-icon",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/editor-tab.tsx"
+          ],
+          "path": "solid/components/editor-tab.json",
+          "registryDependencies": [
+            "box",
             "button",
             "inline",
             "lucide-icon",
@@ -3478,7 +4548,7 @@
           ],
           "path": "svelte/components/editor-tab.json",
           "registryDependencies": [
-            "block",
+            "box",
             "button",
             "inline",
             "lucide-icon",
@@ -3492,7 +4562,7 @@
           ],
           "path": "vue/components/editor-tab.json",
           "registryDependencies": [
-            "block",
+            "box",
             "button",
             "inline",
             "lucide-icon",
@@ -3516,6 +4586,24 @@
             "blocks/empty-panel.tsx"
           ],
           "path": "react/blocks/empty-panel.json",
+          "registryDependencies": [
+            "block",
+            "button",
+            "container",
+            "empty-state",
+            "media-frame",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/empty-panel.tsx"
+          ],
+          "path": "solid/blocks/empty-panel.json",
           "registryDependencies": [
             "block",
             "button",
@@ -3582,7 +4670,21 @@
           ],
           "path": "react/components/empty-state.json",
           "registryDependencies": [
-            "block",
+            "box",
+            "iconbadge",
+            "lucide-icon",
+            "text",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/empty-state.tsx"
+          ],
+          "path": "solid/components/empty-state.json",
+          "registryDependencies": [
+            "box",
             "iconbadge",
             "lucide-icon",
             "text",
@@ -3596,7 +4698,7 @@
           ],
           "path": "svelte/components/empty-state.json",
           "registryDependencies": [
-            "block",
+            "box",
             "iconbadge",
             "lucide-icon",
             "text",
@@ -3610,7 +4712,7 @@
           ],
           "path": "vue/components/empty-state.json",
           "registryDependencies": [
-            "block",
+            "box",
             "iconbadge",
             "lucide-icon",
             "text",
@@ -3635,6 +4737,21 @@
             "blocks/error-page.types.ts"
           ],
           "path": "react/blocks/error-page.json",
+          "registryDependencies": [
+            "action-group",
+            "media-frame",
+            "section-frame",
+            "text",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/error-page.tsx",
+            "blocks/error-page.types.ts"
+          ],
+          "path": "solid/blocks/error-page.json",
           "registryDependencies": [
             "action-group",
             "media-frame",
@@ -3691,8 +4808,27 @@
           ],
           "path": "react/components/faq-cards.json",
           "registryDependencies": [
+            "article-block",
             "badge",
-            "block",
+            "box",
+            "faq-split",
+            "link",
+            "lucide-icon",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/faq-cards.tsx"
+          ],
+          "path": "solid/components/faq-cards.json",
+          "registryDependencies": [
+            "article-block",
+            "badge",
             "box",
             "faq-split",
             "link",
@@ -3710,8 +4846,8 @@
           ],
           "path": "svelte/components/faq-cards.json",
           "registryDependencies": [
+            "article-block",
             "badge",
-            "block",
             "box",
             "faq-split",
             "link",
@@ -3729,8 +4865,8 @@
           ],
           "path": "vue/components/faq-cards.json",
           "registryDependencies": [
+            "article-block",
             "badge",
-            "block",
             "box",
             "faq-split",
             "link",
@@ -3758,6 +4894,20 @@
             "components/faq-disclosures.tsx"
           ],
           "path": "react/components/faq-disclosures.json",
+          "registryDependencies": [
+            "disclosure",
+            "faq-split",
+            "stack",
+            "text",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/faq-disclosures.tsx"
+          ],
+          "path": "solid/components/faq-disclosures.json",
           "registryDependencies": [
             "disclosure",
             "faq-split",
@@ -3811,6 +4961,25 @@
             "components/faq-finder.tsx"
           ],
           "path": "react/components/faq-finder.json",
+          "registryDependencies": [
+            "button",
+            "faq-list",
+            "faq-split",
+            "group",
+            "link",
+            "list",
+            "search-field",
+            "stack",
+            "text",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/faq-finder.tsx"
+          ],
+          "path": "solid/components/faq-finder.json",
           "registryDependencies": [
             "button",
             "faq-list",
@@ -3892,6 +5061,25 @@
             "utils"
           ]
         },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/faq-help.tsx"
+          ],
+          "path": "solid/components/faq-help.json",
+          "registryDependencies": [
+            "block",
+            "box",
+            "faq-split",
+            "feature-grid",
+            "link",
+            "list",
+            "lucide-icon",
+            "stack",
+            "text",
+            "utils"
+          ]
+        },
         "svelte": {
           "dependencies": [],
           "files": [
@@ -3949,7 +5137,27 @@
           ],
           "path": "react/blocks/faq-list.json",
           "registryDependencies": [
-            "block",
+            "box",
+            "disclosure",
+            "grid",
+            "search-field",
+            "section-frame",
+            "stack",
+            "switcher",
+            "switcher-item",
+            "text",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/faq-list.tsx",
+            "blocks/faq-list.types.ts"
+          ],
+          "path": "solid/blocks/faq-list.json",
+          "registryDependencies": [
+            "box",
             "disclosure",
             "grid",
             "search-field",
@@ -3969,7 +5177,7 @@
           ],
           "path": "svelte/blocks/faq-list.json",
           "registryDependencies": [
-            "block",
+            "box",
             "disclosure",
             "grid",
             "search-field",
@@ -3989,7 +5197,7 @@
           ],
           "path": "vue/blocks/faq-list.json",
           "registryDependencies": [
-            "block",
+            "box",
             "disclosure",
             "grid",
             "search-field",
@@ -4019,6 +5227,27 @@
             "blocks/faq-split.types.ts"
           ],
           "path": "react/blocks/faq-split.json",
+          "registryDependencies": [
+            "box",
+            "button",
+            "faq-cards",
+            "faq-disclosures",
+            "faq-finder",
+            "faq-help",
+            "faq-list",
+            "feature-grid",
+            "media-frame",
+            "section-frame",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/faq-split.tsx",
+            "blocks/faq-split.types.ts"
+          ],
+          "path": "solid/blocks/faq-split.json",
           "registryDependencies": [
             "box",
             "button",
@@ -4095,7 +5324,25 @@
           "registryDependencies": [
             "disclosure",
             "feature-grid",
-            "group",
+            "inline",
+            "lucide-icon",
+            "media-frame",
+            "section-frame",
+            "stack",
+            "text",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/feature-accordion.tsx"
+          ],
+          "path": "solid/blocks/feature-accordion.json",
+          "registryDependencies": [
+            "disclosure",
+            "feature-grid",
+            "inline",
             "lucide-icon",
             "media-frame",
             "section-frame",
@@ -4113,7 +5360,7 @@
           "registryDependencies": [
             "disclosure",
             "feature-grid",
-            "group",
+            "inline",
             "lucide-icon",
             "media-frame",
             "section-frame",
@@ -4131,7 +5378,7 @@
           "registryDependencies": [
             "disclosure",
             "feature-grid",
-            "group",
+            "inline",
             "lucide-icon",
             "media-frame",
             "section-frame",
@@ -4157,6 +5404,26 @@
             "components/feature-cards.tsx"
           ],
           "path": "react/components/feature-cards.json",
+          "registryDependencies": [
+            "card",
+            "feature-grid",
+            "grid",
+            "group",
+            "iconbadge",
+            "lucide-icon",
+            "presets",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/feature-cards.tsx"
+          ],
+          "path": "solid/components/feature-cards.json",
           "registryDependencies": [
             "card",
             "feature-grid",
@@ -4240,6 +5507,24 @@
             "utils"
           ]
         },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/feature-grid.tsx",
+            "blocks/feature-grid.types.ts"
+          ],
+          "path": "solid/blocks/feature-grid.json",
+          "registryDependencies": [
+            "feature-cards",
+            "feature-rows",
+            "group",
+            "link",
+            "presets",
+            "section-frame",
+            "title",
+            "utils"
+          ]
+        },
         "svelte": {
           "dependencies": [],
           "files": [
@@ -4293,6 +5578,23 @@
             "components/feature-metric-cards.tsx"
           ],
           "path": "react/components/feature-metric-cards.json",
+          "registryDependencies": [
+            "box",
+            "group",
+            "inline",
+            "lucide-icon",
+            "stack",
+            "stats-band",
+            "text",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/feature-metric-cards.tsx"
+          ],
+          "path": "solid/components/feature-metric-cards.json",
           "registryDependencies": [
             "box",
             "group",
@@ -4367,6 +5669,24 @@
             "utils"
           ]
         },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/feature-pairs.tsx"
+          ],
+          "path": "solid/components/feature-pairs.json",
+          "registryDependencies": [
+            "box",
+            "feature-grid",
+            "group",
+            "inline",
+            "lucide-icon",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
         "svelte": {
           "dependencies": [],
           "files": [
@@ -4420,6 +5740,24 @@
             "components/feature-rows.tsx"
           ],
           "path": "react/components/feature-rows.json",
+          "registryDependencies": [
+            "box",
+            "feature-grid",
+            "grid",
+            "lucide-icon",
+            "media-frame",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/feature-rows.tsx"
+          ],
+          "path": "solid/components/feature-rows.json",
           "registryDependencies": [
             "box",
             "feature-grid",
@@ -4498,6 +5836,25 @@
             "utils"
           ]
         },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/feature-showcase.tsx"
+          ],
+          "path": "solid/blocks/feature-showcase.json",
+          "registryDependencies": [
+            "box",
+            "card",
+            "feature-grid",
+            "link",
+            "lucide-icon",
+            "media-frame",
+            "section-frame",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
         "svelte": {
           "dependencies": [],
           "files": [
@@ -4553,6 +5910,26 @@
             "blocks/feature-split.tsx"
           ],
           "path": "react/blocks/feature-split.json",
+          "registryDependencies": [
+            "action-group",
+            "error-page",
+            "feature-cards",
+            "feature-grid",
+            "feature-metric-cards",
+            "feature-pairs",
+            "feature-stat-rows",
+            "media-frame",
+            "section-frame",
+            "stats-band",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/feature-split.tsx"
+          ],
+          "path": "solid/blocks/feature-split.json",
           "registryDependencies": [
             "action-group",
             "error-page",
@@ -4637,6 +6014,25 @@
             "utils"
           ]
         },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/feature-stat-rows.tsx"
+          ],
+          "path": "solid/components/feature-stat-rows.json",
+          "registryDependencies": [
+            "box",
+            "feature-grid",
+            "group",
+            "inline",
+            "lucide-icon",
+            "stack",
+            "stats-band",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
         "svelte": {
           "dependencies": [],
           "files": [
@@ -4692,6 +6088,25 @@
             "blocks/feature-sticky.tsx"
           ],
           "path": "react/blocks/feature-sticky.json",
+          "registryDependencies": [
+            "box",
+            "feature-grid",
+            "grid",
+            "lucide-icon",
+            "media-frame",
+            "section-frame",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/feature-sticky.tsx"
+          ],
+          "path": "solid/blocks/feature-sticky.json",
           "registryDependencies": [
             "box",
             "feature-grid",
@@ -4774,6 +6189,26 @@
             "utils"
           ]
         },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/feature-tabs.tsx"
+          ],
+          "path": "solid/blocks/feature-tabs.json",
+          "registryDependencies": [
+            "feature-grid",
+            "grid",
+            "lucide-icon",
+            "media-frame",
+            "section-frame",
+            "stack",
+            "switcher",
+            "switcher-item",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
         "svelte": {
           "dependencies": [],
           "files": [
@@ -4832,7 +6267,20 @@
           ],
           "path": "react/components/field.json",
           "registryDependencies": [
-            "block",
+            "box",
+            "label",
+            "text",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/field.tsx"
+          ],
+          "path": "solid/components/field.json",
+          "registryDependencies": [
+            "box",
             "label",
             "text",
             "utils"
@@ -4845,7 +6293,7 @@
           ],
           "path": "svelte/components/field.json",
           "registryDependencies": [
-            "block",
+            "box",
             "label",
             "text",
             "utils"
@@ -4858,7 +6306,7 @@
           ],
           "path": "vue/components/field.json",
           "registryDependencies": [
-            "block",
+            "box",
             "label",
             "text",
             "utils"
@@ -4866,6 +6314,61 @@
         }
       },
       "title": "Field",
+      "type": "registry:component"
+    },
+    {
+      "category": "components",
+      "description": "Figure Block component",
+      "group": "",
+      "kind": "component",
+      "name": "figure-block",
+      "runtimes": {
+        "react": {
+          "dependencies": [],
+          "files": [
+            "components/figure-block.tsx"
+          ],
+          "path": "react/components/figure-block.json",
+          "registryDependencies": [
+            "block",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/figure-block.tsx"
+          ],
+          "path": "solid/components/figure-block.json",
+          "registryDependencies": [
+            "block",
+            "utils"
+          ]
+        },
+        "svelte": {
+          "dependencies": [],
+          "files": [
+            "components/figure-block.svelte"
+          ],
+          "path": "svelte/components/figure-block.json",
+          "registryDependencies": [
+            "block",
+            "utils"
+          ]
+        },
+        "vue": {
+          "dependencies": [],
+          "files": [
+            "components/figure-block.vue"
+          ],
+          "path": "vue/components/figure-block.json",
+          "registryDependencies": [
+            "block",
+            "utils"
+          ]
+        }
+      },
+      "title": "Figure Block",
       "type": "registry:component"
     },
     {
@@ -4882,7 +6385,18 @@
           ],
           "path": "react/components/file-tree.json",
           "registryDependencies": [
-            "block",
+            "box",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/file-tree.tsx"
+          ],
+          "path": "solid/components/file-tree.json",
+          "registryDependencies": [
+            "box",
             "utils"
           ]
         },
@@ -4893,7 +6407,7 @@
           ],
           "path": "svelte/components/file-tree.json",
           "registryDependencies": [
-            "block",
+            "box",
             "utils"
           ]
         },
@@ -4904,7 +6418,7 @@
           ],
           "path": "vue/components/file-tree.json",
           "registryDependencies": [
-            "block",
+            "box",
             "utils"
           ]
         }
@@ -4925,6 +6439,19 @@
             "components/file-tree-item.tsx"
           ],
           "path": "react/components/file-tree-item.json",
+          "registryDependencies": [
+            "button-plain",
+            "inline",
+            "lucide-icon",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/file-tree-item.tsx"
+          ],
+          "path": "solid/components/file-tree-item.json",
           "registryDependencies": [
             "button-plain",
             "inline",
@@ -4975,6 +6502,21 @@
             "components/footer-brand.tsx"
           ],
           "path": "react/components/footer-brand.json",
+          "registryDependencies": [
+            "group",
+            "inline",
+            "lucide-icon",
+            "stack",
+            "text",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/footer-brand.tsx"
+          ],
+          "path": "solid/components/footer-brand.json",
           "registryDependencies": [
             "group",
             "inline",
@@ -5041,6 +6583,30 @@
             "list",
             "lucide-icon",
             "mega-menu",
+            "nav-block",
+            "presets",
+            "stack",
+            "text",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/footer-card.tsx"
+          ],
+          "path": "solid/components/footer-card.json",
+          "registryDependencies": [
+            "block",
+            "box",
+            "container",
+            "group",
+            "inline",
+            "link",
+            "list",
+            "lucide-icon",
+            "mega-menu",
+            "nav-block",
             "presets",
             "stack",
             "text",
@@ -5063,6 +6629,7 @@
             "list",
             "lucide-icon",
             "mega-menu",
+            "nav-block",
             "presets",
             "stack",
             "text",
@@ -5085,6 +6652,7 @@
             "list",
             "lucide-icon",
             "mega-menu",
+            "nav-block",
             "presets",
             "stack",
             "text",
@@ -5108,6 +6676,22 @@
             "components/footer-channels.tsx"
           ],
           "path": "react/components/footer-channels.json",
+          "registryDependencies": [
+            "box",
+            "footer-split",
+            "inline",
+            "lucide-icon",
+            "stack",
+            "text",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/footer-channels.tsx"
+          ],
+          "path": "solid/components/footer-channels.json",
           "registryDependencies": [
             "box",
             "footer-split",
@@ -5167,6 +6751,23 @@
             "components/footer-columns.tsx"
           ],
           "path": "react/components/footer-columns.json",
+          "registryDependencies": [
+            "block",
+            "grid",
+            "link",
+            "list",
+            "mega-menu",
+            "stack",
+            "text",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/footer-columns.tsx"
+          ],
+          "path": "solid/components/footer-columns.json",
           "registryDependencies": [
             "block",
             "grid",
@@ -5239,6 +6840,22 @@
             "utils"
           ]
         },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/footer-contacts.tsx"
+          ],
+          "path": "solid/components/footer-contacts.json",
+          "registryDependencies": [
+            "footer-split",
+            "group",
+            "inline",
+            "lucide-icon",
+            "stack",
+            "text",
+            "utils"
+          ]
+        },
         "svelte": {
           "dependencies": [],
           "files": [
@@ -5296,6 +6913,20 @@
             "utils"
           ]
         },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/footer-figures.tsx"
+          ],
+          "path": "solid/components/footer-figures.json",
+          "registryDependencies": [
+            "footer-split",
+            "group",
+            "stack",
+            "text",
+            "utils"
+          ]
+        },
         "svelte": {
           "dependencies": [],
           "files": [
@@ -5341,6 +6972,26 @@
             "components/footer-group-cards.tsx"
           ],
           "path": "react/components/footer-group-cards.json",
+          "registryDependencies": [
+            "block",
+            "box",
+            "group",
+            "inline",
+            "link",
+            "list",
+            "lucide-icon",
+            "mega-menu",
+            "stack",
+            "text",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/footer-group-cards.tsx"
+          ],
+          "path": "solid/components/footer-group-cards.json",
           "registryDependencies": [
             "block",
             "box",
@@ -5423,6 +7074,23 @@
             "utils"
           ]
         },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/footer-link-columns.tsx"
+          ],
+          "path": "solid/components/footer-link-columns.json",
+          "registryDependencies": [
+            "block",
+            "box",
+            "link",
+            "list",
+            "mega-menu",
+            "stack",
+            "text",
+            "utils"
+          ]
+        },
         "svelte": {
           "dependencies": [],
           "files": [
@@ -5474,6 +7142,21 @@
             "components/footer-points.tsx"
           ],
           "path": "react/components/footer-points.json",
+          "registryDependencies": [
+            "footer-split",
+            "group",
+            "lucide-icon",
+            "stack",
+            "text",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/footer-points.tsx"
+          ],
+          "path": "solid/components/footer-points.json",
           "registryDependencies": [
             "footer-split",
             "group",
@@ -5543,6 +7226,25 @@
             "utils"
           ]
         },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/footer-signup-card.tsx"
+          ],
+          "path": "solid/components/footer-signup-card.json",
+          "registryDependencies": [
+            "button",
+            "footer-split",
+            "form",
+            "group",
+            "input",
+            "label",
+            "lucide-icon",
+            "stack",
+            "text",
+            "utils"
+          ]
+        },
         "svelte": {
           "dependencies": [],
           "files": [
@@ -5599,6 +7301,38 @@
             "blocks/footer-split.types.ts"
           ],
           "path": "react/blocks/footer-split.json",
+          "registryDependencies": [
+            "action-group",
+            "block",
+            "box",
+            "container",
+            "feature-grid",
+            "footer-brand",
+            "footer-channels",
+            "footer-contacts",
+            "footer-figures",
+            "footer-group-cards",
+            "footer-link-columns",
+            "footer-points",
+            "footer-signup-card",
+            "group",
+            "link",
+            "lucide-icon",
+            "media-frame",
+            "mega-menu",
+            "stack",
+            "stats-band",
+            "text",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/footer-split.tsx",
+            "blocks/footer-split.types.ts"
+          ],
+          "path": "solid/blocks/footer-split.json",
           "registryDependencies": [
             "action-group",
             "block",
@@ -5719,6 +7453,26 @@
             "utils"
           ]
         },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "primitives/form/data-list.tsx",
+            "primitives/form/data-option.tsx",
+            "primitives/form/fieldset.tsx",
+            "primitives/form/form-description.tsx",
+            "primitives/form/form-item.tsx",
+            "primitives/form/form-message.tsx",
+            "primitives/form/form.tsx",
+            "primitives/form/legend.tsx",
+            "primitives/form/meter.tsx",
+            "primitives/form/output.tsx",
+            "primitives/form/progress.tsx"
+          ],
+          "path": "solid/components/ui/form.json",
+          "registryDependencies": [
+            "utils"
+          ]
+        },
         "svelte": {
           "dependencies": [],
           "files": [
@@ -5782,6 +7536,17 @@
             "utils"
           ]
         },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "primitives/grid/grid-col.tsx",
+            "primitives/grid/grid.tsx"
+          ],
+          "path": "solid/components/ui/grid.json",
+          "registryDependencies": [
+            "utils"
+          ]
+        },
         "svelte": {
           "dependencies": [],
           "files": [
@@ -5826,6 +7591,16 @@
             "utils"
           ]
         },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "primitives/group/group.tsx"
+          ],
+          "path": "solid/components/ui/group.json",
+          "registryDependencies": [
+            "utils"
+          ]
+        },
         "svelte": {
           "dependencies": [],
           "files": [
@@ -5863,6 +7638,20 @@
             "components/hero-badge.tsx"
           ],
           "path": "react/components/hero-badge.json",
+          "registryDependencies": [
+            "badge",
+            "group",
+            "presets",
+            "text",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/hero-badge.tsx"
+          ],
+          "path": "solid/components/hero-badge.json",
           "registryDependencies": [
             "badge",
             "group",
@@ -5917,6 +7706,30 @@
             "blocks/hero-classic.types.ts"
           ],
           "path": "react/blocks/hero-classic.json",
+          "registryDependencies": [
+            "action-group",
+            "backdrop",
+            "box",
+            "button",
+            "code-window",
+            "cta-actions",
+            "grid",
+            "group",
+            "input",
+            "label",
+            "media-frame",
+            "section-frame",
+            "topic-chips",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/hero-classic.tsx",
+            "blocks/hero-classic.types.ts"
+          ],
+          "path": "solid/blocks/hero-classic.json",
           "registryDependencies": [
             "action-group",
             "backdrop",
@@ -6006,6 +7819,25 @@
             "link",
             "link-plain",
             "nav-bar",
+            "nav-block",
+            "presets",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/hero-head.tsx"
+          ],
+          "path": "solid/components/hero-head.json",
+          "registryDependencies": [
+            "block",
+            "button",
+            "group",
+            "link",
+            "link-plain",
+            "nav-bar",
+            "nav-block",
             "presets",
             "utils"
           ]
@@ -6023,6 +7855,7 @@
             "link",
             "link-plain",
             "nav-bar",
+            "nav-block",
             "presets",
             "utils"
           ]
@@ -6040,6 +7873,7 @@
             "link",
             "link-plain",
             "nav-bar",
+            "nav-block",
             "presets",
             "utils"
           ]
@@ -6062,6 +7896,29 @@
             "blocks/hero-prompt.types.ts"
           ],
           "path": "react/blocks/hero-prompt.json",
+          "registryDependencies": [
+            "action-group",
+            "block",
+            "container",
+            "cta-actions",
+            "hero-badge",
+            "hero-head",
+            "nav-bar",
+            "presets",
+            "prompt-composer",
+            "stack",
+            "topic-chips",
+            "utils",
+            "weighted-title"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/hero-prompt.tsx",
+            "blocks/hero-prompt.types.ts"
+          ],
+          "path": "solid/blocks/hero-prompt.json",
           "registryDependencies": [
             "action-group",
             "block",
@@ -6156,6 +8013,27 @@
             "utils"
           ]
         },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/hero-split.tsx",
+            "blocks/hero-split.types.ts"
+          ],
+          "path": "solid/blocks/hero-split.json",
+          "registryDependencies": [
+            "action-group",
+            "error-page",
+            "feature-grid",
+            "hero-split-extras",
+            "hero-split-media",
+            "pricing-card",
+            "section-frame",
+            "stats-band",
+            "store-hero",
+            "testimonial-grid",
+            "utils"
+          ]
+        },
         "svelte": {
           "dependencies": [],
           "files": [
@@ -6216,8 +8094,26 @@
           ],
           "path": "react/components/hero-split-extras.json",
           "registryDependencies": [
-            "block",
             "box",
+            "figure-block",
+            "group",
+            "hero-split",
+            "lucide-icon",
+            "media-frame",
+            "stack",
+            "text",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/hero-split-extras.tsx"
+          ],
+          "path": "solid/components/hero-split-extras.json",
+          "registryDependencies": [
+            "box",
+            "figure-block",
             "group",
             "hero-split",
             "lucide-icon",
@@ -6234,8 +8130,8 @@
           ],
           "path": "svelte/components/hero-split-extras.json",
           "registryDependencies": [
-            "block",
             "box",
+            "figure-block",
             "group",
             "hero-split",
             "lucide-icon",
@@ -6252,8 +8148,8 @@
           ],
           "path": "vue/components/hero-split-extras.json",
           "registryDependencies": [
-            "block",
             "box",
+            "figure-block",
             "group",
             "hero-split",
             "lucide-icon",
@@ -6281,8 +8177,27 @@
           ],
           "path": "react/components/hero-split-media.json",
           "registryDependencies": [
-            "block",
             "box",
+            "figure-block",
+            "group",
+            "hero-split",
+            "lucide-icon",
+            "media-frame",
+            "offer-media",
+            "stack",
+            "text",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/hero-split-media.tsx"
+          ],
+          "path": "solid/components/hero-split-media.json",
+          "registryDependencies": [
+            "box",
+            "figure-block",
             "group",
             "hero-split",
             "lucide-icon",
@@ -6300,8 +8215,8 @@
           ],
           "path": "svelte/components/hero-split-media.json",
           "registryDependencies": [
-            "block",
             "box",
+            "figure-block",
             "group",
             "hero-split",
             "lucide-icon",
@@ -6319,8 +8234,8 @@
           ],
           "path": "vue/components/hero-split-media.json",
           "registryDependencies": [
-            "block",
             "box",
+            "figure-block",
             "group",
             "hero-split",
             "lucide-icon",
@@ -6348,6 +8263,16 @@
             "primitives/icon/icon.tsx"
           ],
           "path": "react/components/ui/icon.json",
+          "registryDependencies": [
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "primitives/icon/icon.tsx"
+          ],
+          "path": "solid/components/ui/icon.json",
           "registryDependencies": [
             "utils"
           ]
@@ -6394,6 +8319,17 @@
             "utils"
           ]
         },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/icon-tab.tsx"
+          ],
+          "path": "solid/components/icon-tab.json",
+          "registryDependencies": [
+            "button-plain",
+            "utils"
+          ]
+        },
         "svelte": {
           "dependencies": [],
           "files": [
@@ -6434,7 +8370,18 @@
           ],
           "path": "react/components/icon-tabs.json",
           "registryDependencies": [
-            "block",
+            "box",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/icon-tabs.tsx"
+          ],
+          "path": "solid/components/icon-tabs.json",
+          "registryDependencies": [
+            "box",
             "utils"
           ]
         },
@@ -6445,7 +8392,7 @@
           ],
           "path": "svelte/components/icon-tabs.json",
           "registryDependencies": [
-            "block",
+            "box",
             "utils"
           ]
         },
@@ -6456,7 +8403,7 @@
           ],
           "path": "vue/components/icon-tabs.json",
           "registryDependencies": [
-            "block",
+            "box",
             "utils"
           ]
         }
@@ -6477,6 +8424,22 @@
             "blocks/icon-wall.tsx"
           ],
           "path": "react/blocks/icon-wall.json",
+          "registryDependencies": [
+            "box",
+            "feature-grid",
+            "grid",
+            "lucide-icon",
+            "section-frame",
+            "text",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/icon-wall.tsx"
+          ],
+          "path": "solid/blocks/icon-wall.json",
           "registryDependencies": [
             "box",
             "feature-grid",
@@ -6540,6 +8503,16 @@
             "utils"
           ]
         },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "primitives/iconbadge/iconbadge.tsx"
+          ],
+          "path": "solid/components/ui/iconbadge.json",
+          "registryDependencies": [
+            "utils"
+          ]
+        },
         "svelte": {
           "dependencies": [],
           "files": [
@@ -6579,6 +8552,18 @@
             "primitives/image/source.tsx"
           ],
           "path": "react/components/ui/image.json",
+          "registryDependencies": [
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "primitives/image/image.tsx",
+            "primitives/image/picture.tsx",
+            "primitives/image/source.tsx"
+          ],
+          "path": "solid/components/ui/image.json",
           "registryDependencies": [
             "utils"
           ]
@@ -6629,6 +8614,16 @@
             "utils"
           ]
         },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "primitives/inline/inline.tsx"
+          ],
+          "path": "solid/components/ui/inline.json",
+          "registryDependencies": [
+            "utils"
+          ]
+        },
         "svelte": {
           "dependencies": [],
           "files": [
@@ -6666,6 +8661,16 @@
             "primitives/input/input.tsx"
           ],
           "path": "react/components/ui/input.json",
+          "registryDependencies": [
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "primitives/input/input.tsx"
+          ],
+          "path": "solid/components/ui/input.json",
           "registryDependencies": [
             "utils"
           ]
@@ -6708,6 +8713,26 @@
             "blocks/job-board.types.ts"
           ],
           "path": "react/blocks/job-board.json",
+          "registryDependencies": [
+            "badge",
+            "group",
+            "job-cards",
+            "link",
+            "list",
+            "section-frame",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/job-board.tsx",
+            "blocks/job-board.types.ts"
+          ],
+          "path": "solid/blocks/job-board.json",
           "registryDependencies": [
             "badge",
             "group",
@@ -6778,6 +8803,27 @@
             "components/job-cards.tsx"
           ],
           "path": "react/components/job-cards.json",
+          "registryDependencies": [
+            "badge",
+            "box",
+            "grid",
+            "group",
+            "inline",
+            "job-board",
+            "link",
+            "lucide-icon",
+            "stack",
+            "table",
+            "text",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/job-cards.tsx"
+          ],
+          "path": "solid/components/job-cards.json",
           "registryDependencies": [
             "badge",
             "box",
@@ -6865,6 +8911,25 @@
             "utils"
           ]
         },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/kanban-board.tsx",
+            "blocks/kanban-board.types.ts"
+          ],
+          "path": "solid/blocks/kanban-board.json",
+          "registryDependencies": [
+            "grid",
+            "group",
+            "list",
+            "pill",
+            "section-frame",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
         "svelte": {
           "dependencies": [],
           "files": [
@@ -6924,6 +8989,16 @@
             "utils"
           ]
         },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "primitives/label/label.tsx"
+          ],
+          "path": "solid/components/ui/label.json",
+          "registryDependencies": [
+            "utils"
+          ]
+        },
         "svelte": {
           "dependencies": [],
           "files": [
@@ -6961,6 +9036,16 @@
             "primitives/linebreak/linebreak.tsx"
           ],
           "path": "react/components/ui/linebreak.json",
+          "registryDependencies": [
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "primitives/linebreak/linebreak.tsx"
+          ],
+          "path": "solid/components/ui/linebreak.json",
           "registryDependencies": [
             "utils"
           ]
@@ -7006,6 +9091,16 @@
             "utils"
           ]
         },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "primitives/link/link.tsx"
+          ],
+          "path": "solid/components/ui/link.json",
+          "registryDependencies": [
+            "utils"
+          ]
+        },
         "svelte": {
           "dependencies": [],
           "files": [
@@ -7043,6 +9138,16 @@
             "primitives/link-plain/link-plain.tsx"
           ],
           "path": "react/components/ui/link-plain.json",
+          "registryDependencies": [
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "primitives/link-plain/link-plain.tsx"
+          ],
+          "path": "solid/components/ui/link-plain.json",
           "registryDependencies": [
             "utils"
           ]
@@ -7089,6 +9194,17 @@
             "utils"
           ]
         },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "primitives/list/list-item.tsx",
+            "primitives/list/list.tsx"
+          ],
+          "path": "solid/components/ui/list.json",
+          "registryDependencies": [
+            "utils"
+          ]
+        },
         "svelte": {
           "dependencies": [],
           "files": [
@@ -7129,6 +9245,23 @@
             "blocks/logo-cloud.types.ts"
           ],
           "path": "react/blocks/logo-cloud.json",
+          "registryDependencies": [
+            "grid",
+            "group",
+            "logo-ribbon",
+            "lucide-icon",
+            "section-frame",
+            "text",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/logo-cloud.tsx",
+            "blocks/logo-cloud.types.ts"
+          ],
+          "path": "solid/blocks/logo-cloud.json",
           "registryDependencies": [
             "grid",
             "group",
@@ -7201,6 +9334,23 @@
             "utils"
           ]
         },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/logo-ribbon.tsx"
+          ],
+          "path": "solid/blocks/logo-ribbon.json",
+          "registryDependencies": [
+            "group",
+            "logo-cloud",
+            "logo-slot",
+            "presets",
+            "section-frame",
+            "stack",
+            "title",
+            "utils"
+          ]
+        },
         "svelte": {
           "dependencies": [],
           "files": [
@@ -7253,7 +9403,19 @@
           ],
           "path": "react/components/logo-sidebar.json",
           "registryDependencies": [
-            "block",
+            "box",
+            "inline",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/logo-sidebar.tsx"
+          ],
+          "path": "solid/components/logo-sidebar.json",
+          "registryDependencies": [
+            "box",
             "inline",
             "utils"
           ]
@@ -7265,7 +9427,7 @@
           ],
           "path": "svelte/components/logo-sidebar.json",
           "registryDependencies": [
-            "block",
+            "box",
             "inline",
             "utils"
           ]
@@ -7277,7 +9439,7 @@
           ],
           "path": "vue/components/logo-sidebar.json",
           "registryDependencies": [
-            "block",
+            "box",
             "inline",
             "utils"
           ]
@@ -7299,6 +9461,20 @@
             "components/logo-slot.tsx"
           ],
           "path": "react/components/logo-slot.json",
+          "registryDependencies": [
+            "box",
+            "lucide-icon",
+            "presets",
+            "text",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/logo-slot.tsx"
+          ],
+          "path": "solid/components/logo-slot.json",
           "registryDependencies": [
             "box",
             "lucide-icon",
@@ -7357,6 +9533,17 @@
             "utils"
           ]
         },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "primitives/lucide-icon/lucide-icon.tsx",
+            "primitives/lucide-icon/lucide-icons.ts"
+          ],
+          "path": "solid/components/ui/lucide-icon.json",
+          "registryDependencies": [
+            "utils"
+          ]
+        },
         "svelte": {
           "dependencies": [],
           "files": [
@@ -7396,6 +9583,22 @@
             "components/media-contacts.tsx"
           ],
           "path": "react/components/media-contacts.json",
+          "registryDependencies": [
+            "button",
+            "group",
+            "lucide-icon",
+            "media-list",
+            "stack",
+            "text",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/media-contacts.tsx"
+          ],
+          "path": "solid/components/media-contacts.json",
           "registryDependencies": [
             "button",
             "group",
@@ -7463,6 +9666,20 @@
             "utils"
           ]
         },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/media-figures.tsx"
+          ],
+          "path": "solid/components/media-figures.json",
+          "registryDependencies": [
+            "box",
+            "media-list",
+            "stack",
+            "text",
+            "utils"
+          ]
+        },
         "svelte": {
           "dependencies": [],
           "files": [
@@ -7515,6 +9732,19 @@
             "utils"
           ]
         },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/media-frame.assets.ts",
+            "components/media-frame.tsx"
+          ],
+          "path": "solid/components/media-frame.json",
+          "registryDependencies": [
+            "box",
+            "image",
+            "utils"
+          ]
+        },
         "svelte": {
           "dependencies": [],
           "files": [
@@ -7559,6 +9789,33 @@
             "blocks/media-list.types.ts"
           ],
           "path": "react/blocks/media-list.json",
+          "registryDependencies": [
+            "action-group",
+            "category-nav",
+            "error-page",
+            "feature-grid",
+            "media-contacts",
+            "media-figures",
+            "media-frame",
+            "media-posts",
+            "media-review",
+            "media-steps",
+            "media-topics",
+            "post-card",
+            "review-list",
+            "section-frame",
+            "stats-band",
+            "steps-list",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/media-list.tsx",
+            "blocks/media-list.types.ts"
+          ],
+          "path": "solid/blocks/media-list.json",
           "registryDependencies": [
             "action-group",
             "category-nav",
@@ -7660,6 +9917,22 @@
             "utils"
           ]
         },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/media-posts.tsx"
+          ],
+          "path": "solid/components/media-posts.json",
+          "registryDependencies": [
+            "group",
+            "inline",
+            "link",
+            "media-list",
+            "stack",
+            "text",
+            "utils"
+          ]
+        },
         "svelte": {
           "dependencies": [],
           "files": [
@@ -7709,6 +9982,21 @@
             "components/media-review.tsx"
           ],
           "path": "react/components/media-review.json",
+          "registryDependencies": [
+            "group",
+            "media-list",
+            "rating",
+            "stack",
+            "text",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/media-review.tsx"
+          ],
+          "path": "solid/components/media-review.json",
           "registryDependencies": [
             "group",
             "media-list",
@@ -7775,6 +10063,22 @@
             "utils"
           ]
         },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/media-steps.tsx"
+          ],
+          "path": "solid/components/media-steps.json",
+          "registryDependencies": [
+            "group",
+            "inline",
+            "lucide-icon",
+            "media-list",
+            "stack",
+            "text",
+            "utils"
+          ]
+        },
         "svelte": {
           "dependencies": [],
           "files": [
@@ -7824,6 +10128,22 @@
             "components/media-topics.tsx"
           ],
           "path": "react/components/media-topics.json",
+          "registryDependencies": [
+            "inline",
+            "link",
+            "lucide-icon",
+            "media-list",
+            "stack",
+            "text",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/media-topics.tsx"
+          ],
+          "path": "solid/components/media-topics.json",
           "registryDependencies": [
             "inline",
             "link",
@@ -7896,6 +10216,32 @@
             "lucide-icon",
             "media-frame",
             "nav-bar",
+            "nav-block",
+            "stack",
+            "text",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/mega-menu.tsx",
+            "blocks/mega-menu.types.ts"
+          ],
+          "path": "solid/blocks/mega-menu.json",
+          "registryDependencies": [
+            "block",
+            "box",
+            "button-plain",
+            "container",
+            "grid",
+            "group",
+            "link",
+            "list",
+            "lucide-icon",
+            "media-frame",
+            "nav-bar",
+            "nav-block",
             "stack",
             "text",
             "utils"
@@ -7920,6 +10266,7 @@
             "lucide-icon",
             "media-frame",
             "nav-bar",
+            "nav-block",
             "stack",
             "text",
             "utils"
@@ -7944,6 +10291,7 @@
             "lucide-icon",
             "media-frame",
             "nav-bar",
+            "nav-block",
             "stack",
             "text",
             "utils"
@@ -7966,6 +10314,24 @@
             "components/member-row.tsx"
           ],
           "path": "react/components/member-row.json",
+          "registryDependencies": [
+            "badge",
+            "group",
+            "inline",
+            "lucide-icon",
+            "media-frame",
+            "stack",
+            "team-grid",
+            "text",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/member-row.tsx"
+          ],
+          "path": "solid/components/member-row.json",
           "registryDependencies": [
             "badge",
             "group",
@@ -8032,7 +10398,20 @@
           ],
           "path": "react/components/meter-row.json",
           "registryDependencies": [
-            "block",
+            "box",
+            "form",
+            "link",
+            "text",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/meter-row.tsx"
+          ],
+          "path": "solid/components/meter-row.json",
+          "registryDependencies": [
             "box",
             "form",
             "link",
@@ -8047,7 +10426,6 @@
           ],
           "path": "svelte/components/meter-row.json",
           "registryDependencies": [
-            "block",
             "box",
             "form",
             "link",
@@ -8062,7 +10440,6 @@
           ],
           "path": "vue/components/meter-row.json",
           "registryDependencies": [
-            "block",
             "box",
             "form",
             "link",
@@ -8089,7 +10466,26 @@
           ],
           "path": "react/blocks/metric-row.json",
           "registryDependencies": [
-            "block",
+            "box",
+            "grid",
+            "group",
+            "lucide-icon",
+            "section-frame",
+            "stack",
+            "stat-tile",
+            "text",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/metric-row.tsx",
+            "blocks/metric-row.types.ts"
+          ],
+          "path": "solid/blocks/metric-row.json",
+          "registryDependencies": [
+            "box",
             "grid",
             "group",
             "lucide-icon",
@@ -8108,7 +10504,7 @@
           ],
           "path": "svelte/blocks/metric-row.json",
           "registryDependencies": [
-            "block",
+            "box",
             "grid",
             "group",
             "lucide-icon",
@@ -8127,7 +10523,7 @@
           ],
           "path": "vue/blocks/metric-row.json",
           "registryDependencies": [
-            "block",
+            "box",
             "grid",
             "group",
             "lucide-icon",
@@ -8156,6 +10552,25 @@
             "blocks/milestone-timeline.types.ts"
           ],
           "path": "react/blocks/milestone-timeline.json",
+          "registryDependencies": [
+            "badge",
+            "group",
+            "inline",
+            "list",
+            "media-frame",
+            "section-frame",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/milestone-timeline.tsx",
+            "blocks/milestone-timeline.types.ts"
+          ],
+          "path": "solid/blocks/milestone-timeline.json",
           "registryDependencies": [
             "badge",
             "group",
@@ -8228,6 +10643,17 @@
             "utils"
           ]
         },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/nav-actions.tsx"
+          ],
+          "path": "solid/components/nav-actions.json",
+          "registryDependencies": [
+            "button",
+            "utils"
+          ]
+        },
         "svelte": {
           "dependencies": [],
           "files": [
@@ -8277,6 +10703,30 @@
             "link",
             "link-plain",
             "nav-actions",
+            "nav-block",
+            "nav-links",
+            "over-media",
+            "search-palette",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/nav-bar.tsx",
+            "blocks/nav-bar.types.ts"
+          ],
+          "path": "solid/blocks/nav-bar.json",
+          "registryDependencies": [
+            "block",
+            "box",
+            "container",
+            "grid",
+            "group",
+            "link",
+            "link-plain",
+            "nav-actions",
+            "nav-block",
             "nav-links",
             "over-media",
             "search-palette",
@@ -8299,6 +10749,7 @@
             "link",
             "link-plain",
             "nav-actions",
+            "nav-block",
             "nav-links",
             "over-media",
             "search-palette",
@@ -8321,6 +10772,7 @@
             "link",
             "link-plain",
             "nav-actions",
+            "nav-block",
             "nav-links",
             "over-media",
             "search-palette",
@@ -8330,6 +10782,61 @@
       },
       "title": "Nav Bar",
       "type": "registry:block"
+    },
+    {
+      "category": "components",
+      "description": "Nav Block component",
+      "group": "",
+      "kind": "component",
+      "name": "nav-block",
+      "runtimes": {
+        "react": {
+          "dependencies": [],
+          "files": [
+            "components/nav-block.tsx"
+          ],
+          "path": "react/components/nav-block.json",
+          "registryDependencies": [
+            "block",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/nav-block.tsx"
+          ],
+          "path": "solid/components/nav-block.json",
+          "registryDependencies": [
+            "block",
+            "utils"
+          ]
+        },
+        "svelte": {
+          "dependencies": [],
+          "files": [
+            "components/nav-block.svelte"
+          ],
+          "path": "svelte/components/nav-block.json",
+          "registryDependencies": [
+            "block",
+            "utils"
+          ]
+        },
+        "vue": {
+          "dependencies": [],
+          "files": [
+            "components/nav-block.vue"
+          ],
+          "path": "vue/components/nav-block.json",
+          "registryDependencies": [
+            "block",
+            "utils"
+          ]
+        }
+      },
+      "title": "Nav Block",
+      "type": "registry:component"
     },
     {
       "category": "components",
@@ -8344,6 +10851,20 @@
             "components/nav-item.tsx"
           ],
           "path": "react/components/nav-item.json",
+          "registryDependencies": [
+            "box",
+            "button-plain",
+            "link-plain",
+            "nav-item-row",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/nav-item.tsx"
+          ],
+          "path": "solid/components/nav-item.json",
           "registryDependencies": [
             "box",
             "button-plain",
@@ -8402,6 +10923,17 @@
             "utils"
           ]
         },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/nav-item-row.tsx"
+          ],
+          "path": "solid/components/nav-item-row.json",
+          "registryDependencies": [
+            "inline",
+            "utils"
+          ]
+        },
         "svelte": {
           "dependencies": [],
           "files": [
@@ -8441,6 +10973,19 @@
             "components/nav-links.tsx"
           ],
           "path": "react/components/nav-links.json",
+          "registryDependencies": [
+            "group",
+            "link",
+            "nav-bar",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/nav-links.tsx"
+          ],
+          "path": "solid/components/nav-links.json",
           "registryDependencies": [
             "group",
             "link",
@@ -8491,6 +11036,24 @@
             "blocks/newsletter-form.tsx"
           ],
           "path": "react/blocks/newsletter-form.json",
+          "registryDependencies": [
+            "button",
+            "form",
+            "group",
+            "input",
+            "label",
+            "media-frame",
+            "section-frame",
+            "text",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/newsletter-form.tsx"
+          ],
+          "path": "solid/blocks/newsletter-form.json",
           "registryDependencies": [
             "button",
             "form",
@@ -8557,7 +11120,20 @@
           ],
           "path": "react/components/notice.json",
           "registryDependencies": [
-            "block",
+            "box",
+            "lucide-icon",
+            "text",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/notice.tsx"
+          ],
+          "path": "solid/components/notice.json",
+          "registryDependencies": [
+            "box",
             "lucide-icon",
             "text",
             "utils"
@@ -8570,7 +11146,7 @@
           ],
           "path": "svelte/components/notice.json",
           "registryDependencies": [
-            "block",
+            "box",
             "lucide-icon",
             "text",
             "utils"
@@ -8583,7 +11159,7 @@
           ],
           "path": "vue/components/notice.json",
           "registryDependencies": [
-            "block",
+            "box",
             "lucide-icon",
             "text",
             "utils"
@@ -8606,6 +11182,20 @@
             "components/number-field.tsx"
           ],
           "path": "react/components/number-field.json",
+          "registryDependencies": [
+            "box",
+            "button",
+            "input",
+            "lucide-icon",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/number-field.tsx"
+          ],
+          "path": "solid/components/number-field.json",
           "registryDependencies": [
             "box",
             "button",
@@ -8659,6 +11249,23 @@
             "components/offer-media.tsx"
           ],
           "path": "react/components/offer-media.json",
+          "registryDependencies": [
+            "box",
+            "group",
+            "lucide-icon",
+            "media-frame",
+            "stack",
+            "store-hero",
+            "text",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/offer-media.tsx"
+          ],
+          "path": "solid/components/offer-media.json",
           "registryDependencies": [
             "box",
             "group",
@@ -8729,6 +11336,20 @@
             "utils"
           ]
         },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/order-rows.tsx"
+          ],
+          "path": "solid/components/order-rows.json",
+          "registryDependencies": [
+            "box",
+            "order-table",
+            "pill",
+            "table",
+            "utils"
+          ]
+        },
         "svelte": {
           "dependencies": [],
           "files": [
@@ -8775,6 +11396,24 @@
             "blocks/order-summary.types.ts"
           ],
           "path": "react/blocks/order-summary.json",
+          "registryDependencies": [
+            "box",
+            "button",
+            "inline",
+            "list",
+            "section-frame",
+            "stack",
+            "text",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/order-summary.tsx",
+            "blocks/order-summary.types.ts"
+          ],
+          "path": "solid/blocks/order-summary.json",
           "registryDependencies": [
             "box",
             "button",
@@ -8851,6 +11490,24 @@
             "utils"
           ]
         },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/order-table.tsx",
+            "blocks/order-table.types.ts"
+          ],
+          "path": "solid/blocks/order-table.json",
+          "registryDependencies": [
+            "card",
+            "order-rows",
+            "pager",
+            "pill",
+            "section-frame",
+            "stack",
+            "text",
+            "utils"
+          ]
+        },
         "svelte": {
           "dependencies": [],
           "files": [
@@ -8905,7 +11562,19 @@
           ],
           "path": "react/components/over-media.json",
           "registryDependencies": [
-            "block",
+            "box",
+            "media-frame",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/over-media.tsx"
+          ],
+          "path": "solid/components/over-media.json",
+          "registryDependencies": [
+            "box",
             "media-frame",
             "utils"
           ]
@@ -8917,7 +11586,7 @@
           ],
           "path": "svelte/components/over-media.json",
           "registryDependencies": [
-            "block",
+            "box",
             "media-frame",
             "utils"
           ]
@@ -8929,7 +11598,7 @@
           ],
           "path": "vue/components/over-media.json",
           "registryDependencies": [
-            "block",
+            "box",
             "media-frame",
             "utils"
           ]
@@ -8951,6 +11620,22 @@
             "components/page-aside.tsx"
           ],
           "path": "react/components/page-aside.json",
+          "registryDependencies": [
+            "box",
+            "group",
+            "lucide-icon",
+            "page-trail",
+            "stack",
+            "text",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/page-aside.tsx"
+          ],
+          "path": "solid/components/page-aside.json",
           "registryDependencies": [
             "box",
             "group",
@@ -9020,6 +11705,22 @@
             "utils"
           ]
         },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/page-crumbs.tsx"
+          ],
+          "path": "solid/components/page-crumbs.json",
+          "registryDependencies": [
+            "block",
+            "inline",
+            "link",
+            "list",
+            "lucide-icon",
+            "nav-bar",
+            "utils"
+          ]
+        },
         "svelte": {
           "dependencies": [],
           "files": [
@@ -9070,7 +11771,19 @@
           ],
           "path": "react/components/page-header.json",
           "registryDependencies": [
-            "block",
+            "box",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/page-header.tsx"
+          ],
+          "path": "solid/components/page-header.json",
+          "registryDependencies": [
             "box",
             "text",
             "title",
@@ -9084,7 +11797,6 @@
           ],
           "path": "svelte/components/page-header.json",
           "registryDependencies": [
-            "block",
             "box",
             "text",
             "title",
@@ -9098,7 +11810,6 @@
           ],
           "path": "vue/components/page-header.json",
           "registryDependencies": [
-            "block",
             "box",
             "text",
             "title",
@@ -9122,6 +11833,18 @@
             "blocks/page-intro.tsx"
           ],
           "path": "react/blocks/page-intro.json",
+          "registryDependencies": [
+            "action-group",
+            "section-frame",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/page-intro.tsx"
+          ],
+          "path": "solid/blocks/page-intro.json",
           "registryDependencies": [
             "action-group",
             "section-frame",
@@ -9170,6 +11893,26 @@
             "blocks/page-trail.types.ts"
           ],
           "path": "react/blocks/page-trail.json",
+          "registryDependencies": [
+            "block",
+            "box",
+            "container",
+            "nav-bar",
+            "page-aside",
+            "page-crumbs",
+            "section-header",
+            "stack",
+            "stats-band",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/page-trail.tsx",
+            "blocks/page-trail.types.ts"
+          ],
+          "path": "solid/blocks/page-trail.json",
           "registryDependencies": [
             "block",
             "box",
@@ -9241,7 +11984,21 @@
           ],
           "path": "react/components/pager.json",
           "registryDependencies": [
-            "block",
+            "box",
+            "button",
+            "inline",
+            "lucide-icon",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/pager.tsx"
+          ],
+          "path": "solid/components/pager.json",
+          "registryDependencies": [
+            "box",
             "button",
             "inline",
             "lucide-icon",
@@ -9255,7 +12012,7 @@
           ],
           "path": "svelte/components/pager.json",
           "registryDependencies": [
-            "block",
+            "box",
             "button",
             "inline",
             "lucide-icon",
@@ -9269,7 +12026,7 @@
           ],
           "path": "vue/components/pager.json",
           "registryDependencies": [
-            "block",
+            "box",
             "button",
             "inline",
             "lucide-icon",
@@ -9294,7 +12051,19 @@
           ],
           "path": "react/components/panel.json",
           "registryDependencies": [
-            "block",
+            "box",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/panel.tsx"
+          ],
+          "path": "solid/components/panel.json",
+          "registryDependencies": [
             "box",
             "text",
             "title",
@@ -9308,7 +12077,6 @@
           ],
           "path": "svelte/components/panel.json",
           "registryDependencies": [
-            "block",
             "box",
             "text",
             "title",
@@ -9322,7 +12090,6 @@
           ],
           "path": "vue/components/panel.json",
           "registryDependencies": [
-            "block",
             "box",
             "text",
             "title",
@@ -9349,11 +12116,26 @@
           "path": "react/components/payment-options.json",
           "registryDependencies": [
             "grid",
+            "inline",
             "label",
             "lucide-icon",
             "radio",
-            "stack",
-            "text",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/payment-options.tsx",
+            "components/payment-options.types.ts"
+          ],
+          "path": "solid/components/payment-options.json",
+          "registryDependencies": [
+            "grid",
+            "inline",
+            "label",
+            "lucide-icon",
+            "radio",
             "utils"
           ]
         },
@@ -9366,11 +12148,10 @@
           "path": "svelte/components/payment-options.json",
           "registryDependencies": [
             "grid",
+            "inline",
             "label",
             "lucide-icon",
             "radio",
-            "stack",
-            "text",
             "utils"
           ]
         },
@@ -9383,11 +12164,10 @@
           "path": "vue/components/payment-options.json",
           "registryDependencies": [
             "grid",
+            "inline",
             "label",
             "lucide-icon",
             "radio",
-            "stack",
-            "text",
             "utils"
           ]
         }
@@ -9411,9 +12191,30 @@
           "path": "react/blocks/photo-gallery.json",
           "registryDependencies": [
             "badge",
-            "block",
             "box",
             "button",
+            "figure-block",
+            "group",
+            "lucide-icon",
+            "media-frame",
+            "section-frame",
+            "stack",
+            "text",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/photo-gallery.tsx",
+            "blocks/photo-gallery.types.ts"
+          ],
+          "path": "solid/blocks/photo-gallery.json",
+          "registryDependencies": [
+            "badge",
+            "box",
+            "button",
+            "figure-block",
             "group",
             "lucide-icon",
             "media-frame",
@@ -9432,9 +12233,9 @@
           "path": "svelte/blocks/photo-gallery.json",
           "registryDependencies": [
             "badge",
-            "block",
             "box",
             "button",
+            "figure-block",
             "group",
             "lucide-icon",
             "media-frame",
@@ -9453,9 +12254,9 @@
           "path": "vue/blocks/photo-gallery.json",
           "registryDependencies": [
             "badge",
-            "block",
             "box",
             "button",
+            "figure-block",
             "group",
             "lucide-icon",
             "media-frame",
@@ -9483,7 +12284,20 @@
           ],
           "path": "react/components/pill.json",
           "registryDependencies": [
-            "block",
+            "box",
+            "inline",
+            "lucide-icon",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/pill.tsx"
+          ],
+          "path": "solid/components/pill.json",
+          "registryDependencies": [
+            "box",
             "inline",
             "lucide-icon",
             "utils"
@@ -9496,7 +12310,7 @@
           ],
           "path": "svelte/components/pill.json",
           "registryDependencies": [
-            "block",
+            "box",
             "inline",
             "lucide-icon",
             "utils"
@@ -9509,7 +12323,7 @@
           ],
           "path": "vue/components/pill.json",
           "registryDependencies": [
-            "block",
+            "box",
             "inline",
             "lucide-icon",
             "utils"
@@ -9532,6 +12346,21 @@
             "components/post-actions.tsx"
           ],
           "path": "react/components/post-actions.json",
+          "registryDependencies": [
+            "button",
+            "group",
+            "lucide-icon",
+            "post-card",
+            "post-split",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/post-actions.tsx"
+          ],
+          "path": "solid/components/post-actions.json",
           "registryDependencies": [
             "button",
             "group",
@@ -9588,6 +12417,25 @@
             "components/post-author.tsx"
           ],
           "path": "react/components/post-author.json",
+          "registryDependencies": [
+            "box",
+            "button",
+            "group",
+            "lucide-icon",
+            "media-frame",
+            "post-card",
+            "post-split",
+            "stack",
+            "text",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/post-author.tsx"
+          ],
+          "path": "solid/components/post-author.json",
           "registryDependencies": [
             "box",
             "button",
@@ -9658,6 +12506,28 @@
           ],
           "path": "react/blocks/post-card.json",
           "registryDependencies": [
+            "block",
+            "box",
+            "card",
+            "group",
+            "link",
+            "lucide-icon",
+            "media-frame",
+            "presets",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/post-card.tsx",
+            "blocks/post-card.types.ts"
+          ],
+          "path": "solid/blocks/post-card.json",
+          "registryDependencies": [
+            "block",
             "box",
             "card",
             "group",
@@ -9678,6 +12548,7 @@
           ],
           "path": "svelte/blocks/post-card.json",
           "registryDependencies": [
+            "block",
             "box",
             "card",
             "group",
@@ -9698,6 +12569,7 @@
           ],
           "path": "vue/blocks/post-card.json",
           "registryDependencies": [
+            "block",
             "box",
             "card",
             "group",
@@ -9727,6 +12599,25 @@
             "components/post-feature.tsx"
           ],
           "path": "react/components/post-feature.json",
+          "registryDependencies": [
+            "badge",
+            "button",
+            "group",
+            "lucide-icon",
+            "media-frame",
+            "post-card",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/post-feature.tsx"
+          ],
+          "path": "solid/components/post-feature.json",
           "registryDependencies": [
             "badge",
             "button",
@@ -9806,6 +12697,23 @@
             "utils"
           ]
         },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/post-grid.tsx",
+            "blocks/post-grid.types.ts"
+          ],
+          "path": "solid/blocks/post-grid.json",
+          "registryDependencies": [
+            "grid",
+            "post-card",
+            "section-frame",
+            "stack",
+            "switcher",
+            "switcher-item",
+            "utils"
+          ]
+        },
         "svelte": {
           "dependencies": [],
           "files": [
@@ -9867,6 +12775,22 @@
             "utils"
           ]
         },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/post-header.tsx"
+          ],
+          "path": "solid/blocks/post-header.json",
+          "registryDependencies": [
+            "group",
+            "media-frame",
+            "pill",
+            "post-card",
+            "section-frame",
+            "text",
+            "utils"
+          ]
+        },
         "svelte": {
           "dependencies": [],
           "files": [
@@ -9916,6 +12840,22 @@
             "components/post-mini-card.tsx"
           ],
           "path": "react/components/post-mini-card.json",
+          "registryDependencies": [
+            "badge",
+            "media-frame",
+            "post-card",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/post-mini-card.tsx"
+          ],
+          "path": "solid/components/post-mini-card.json",
           "registryDependencies": [
             "badge",
             "media-frame",
@@ -9986,6 +12926,23 @@
             "utils"
           ]
         },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/post-outline.tsx"
+          ],
+          "path": "solid/components/post-outline.json",
+          "registryDependencies": [
+            "group",
+            "link",
+            "lucide-icon",
+            "post-card",
+            "post-split",
+            "stack",
+            "text",
+            "utils"
+          ]
+        },
         "svelte": {
           "dependencies": [],
           "files": [
@@ -10037,6 +12994,26 @@
             "components/post-overlay-card.tsx"
           ],
           "path": "react/components/post-overlay-card.json",
+          "registryDependencies": [
+            "badge",
+            "box",
+            "group",
+            "link",
+            "lucide-icon",
+            "media-frame",
+            "post-card",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/post-overlay-card.tsx"
+          ],
+          "path": "solid/components/post-overlay-card.json",
           "registryDependencies": [
             "badge",
             "box",
@@ -10121,6 +13098,25 @@
             "utils"
           ]
         },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/post-showcase.tsx"
+          ],
+          "path": "solid/blocks/post-showcase.json",
+          "registryDependencies": [
+            "box",
+            "link",
+            "lucide-icon",
+            "media-frame",
+            "post-card",
+            "post-feature",
+            "post-mini-card",
+            "post-overlay-card",
+            "section-frame",
+            "utils"
+          ]
+        },
         "svelte": {
           "dependencies": [],
           "files": [
@@ -10177,6 +13173,26 @@
             "blocks/post-split.types.ts"
           ],
           "path": "react/blocks/post-split.json",
+          "registryDependencies": [
+            "media-frame",
+            "nav-bar",
+            "post-actions",
+            "post-author",
+            "post-card",
+            "post-outline",
+            "post-stats",
+            "post-tags",
+            "section-frame",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/post-split.tsx",
+            "blocks/post-split.types.ts"
+          ],
+          "path": "solid/blocks/post-split.json",
           "registryDependencies": [
             "media-frame",
             "nav-bar",
@@ -10256,6 +13272,21 @@
             "utils"
           ]
         },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/post-stats.tsx"
+          ],
+          "path": "solid/components/post-stats.json",
+          "registryDependencies": [
+            "group",
+            "lucide-icon",
+            "post-card",
+            "post-split",
+            "text",
+            "utils"
+          ]
+        },
         "svelte": {
           "dependencies": [],
           "files": [
@@ -10310,6 +13341,19 @@
             "utils"
           ]
         },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/post-tags.tsx"
+          ],
+          "path": "solid/components/post-tags.json",
+          "registryDependencies": [
+            "badge",
+            "group",
+            "nav-bar",
+            "utils"
+          ]
+        },
         "svelte": {
           "dependencies": [],
           "files": [
@@ -10355,6 +13399,14 @@
           "path": "react/lib/presets.json",
           "registryDependencies": []
         },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "presets/defaults.ts"
+          ],
+          "path": "solid/lib/presets.json",
+          "registryDependencies": []
+        },
         "svelte": {
           "dependencies": [],
           "files": [
@@ -10391,6 +13443,27 @@
           "path": "react/blocks/pricing-card.json",
           "registryDependencies": [
             "badge",
+            "block",
+            "box",
+            "button",
+            "card",
+            "group",
+            "list",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/pricing-card.tsx",
+            "blocks/pricing-card.types.ts"
+          ],
+          "path": "solid/blocks/pricing-card.json",
+          "registryDependencies": [
+            "badge",
+            "block",
             "box",
             "button",
             "card",
@@ -10410,6 +13483,7 @@
           "path": "svelte/blocks/pricing-card.json",
           "registryDependencies": [
             "badge",
+            "block",
             "box",
             "button",
             "card",
@@ -10429,6 +13503,7 @@
           "path": "vue/blocks/pricing-card.json",
           "registryDependencies": [
             "badge",
+            "block",
             "box",
             "button",
             "card",
@@ -10457,6 +13532,24 @@
             "blocks/pricing-tiers.types.ts"
           ],
           "path": "react/blocks/pricing-tiers.json",
+          "registryDependencies": [
+            "badge",
+            "grid",
+            "group",
+            "pricing-card",
+            "section-frame",
+            "switcher",
+            "switcher-item",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/pricing-tiers.tsx",
+            "blocks/pricing-tiers.types.ts"
+          ],
+          "path": "solid/blocks/pricing-tiers.json",
           "registryDependencies": [
             "badge",
             "grid",
@@ -10524,6 +13617,28 @@
           "path": "react/blocks/product-card.json",
           "registryDependencies": [
             "badge",
+            "block",
+            "box",
+            "button",
+            "card",
+            "group",
+            "media-frame",
+            "rating",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/product-card.tsx",
+            "blocks/product-card.types.ts"
+          ],
+          "path": "solid/blocks/product-card.json",
+          "registryDependencies": [
+            "badge",
+            "block",
             "box",
             "button",
             "card",
@@ -10544,6 +13659,7 @@
           "path": "svelte/blocks/product-card.json",
           "registryDependencies": [
             "badge",
+            "block",
             "box",
             "button",
             "card",
@@ -10564,6 +13680,7 @@
           "path": "vue/blocks/product-card.json",
           "registryDependencies": [
             "badge",
+            "block",
             "box",
             "button",
             "card",
@@ -10593,6 +13710,31 @@
             "blocks/product-detail.types.ts"
           ],
           "path": "react/blocks/product-detail.json",
+          "registryDependencies": [
+            "badge",
+            "button",
+            "grid",
+            "group",
+            "inline",
+            "list",
+            "lucide-icon",
+            "media-frame",
+            "number-field",
+            "product-card",
+            "rating",
+            "section-frame",
+            "stack",
+            "text",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/product-detail.tsx",
+            "blocks/product-detail.types.ts"
+          ],
+          "path": "solid/blocks/product-detail.json",
           "registryDependencies": [
             "badge",
             "button",
@@ -10686,6 +13828,20 @@
             "utils"
           ]
         },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/product-grid.tsx"
+          ],
+          "path": "solid/blocks/product-grid.json",
+          "registryDependencies": [
+            "box",
+            "grid",
+            "product-card",
+            "section-frame",
+            "utils"
+          ]
+        },
         "svelte": {
           "dependencies": [],
           "files": [
@@ -10732,6 +13888,25 @@
             "blocks/product-info.types.ts"
           ],
           "path": "react/blocks/product-info.json",
+          "registryDependencies": [
+            "box",
+            "disclosure",
+            "inline",
+            "list",
+            "section-frame",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/product-info.tsx",
+            "blocks/product-info.types.ts"
+          ],
+          "path": "solid/blocks/product-info.json",
           "registryDependencies": [
             "box",
             "disclosure",
@@ -10801,6 +13976,33 @@
           ],
           "path": "react/blocks/profile-form.json",
           "registryDependencies": [
+            "block",
+            "button",
+            "container",
+            "field",
+            "form",
+            "grid",
+            "group",
+            "input",
+            "label",
+            "media-frame",
+            "panel",
+            "stack",
+            "switch",
+            "textarea",
+            "title",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/profile-form.tsx",
+            "blocks/profile-form.types.ts"
+          ],
+          "path": "solid/blocks/profile-form.json",
+          "registryDependencies": [
+            "block",
             "button",
             "container",
             "field",
@@ -10826,6 +14028,7 @@
           ],
           "path": "svelte/blocks/profile-form.json",
           "registryDependencies": [
+            "block",
             "button",
             "container",
             "field",
@@ -10851,6 +14054,7 @@
           ],
           "path": "vue/blocks/profile-form.json",
           "registryDependencies": [
+            "block",
             "button",
             "container",
             "field",
@@ -10886,6 +14090,24 @@
             "blocks/project-grid.types.ts"
           ],
           "path": "react/blocks/project-grid.json",
+          "registryDependencies": [
+            "box",
+            "group",
+            "media-frame",
+            "project-tiles",
+            "section-frame",
+            "stack",
+            "text",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/project-grid.tsx",
+            "blocks/project-grid.types.ts"
+          ],
+          "path": "solid/blocks/project-grid.json",
           "registryDependencies": [
             "box",
             "group",
@@ -10951,8 +14173,29 @@
           ],
           "path": "react/components/project-tiles.json",
           "registryDependencies": [
+            "article-block",
             "badge",
-            "block",
+            "box",
+            "group",
+            "link",
+            "lucide-icon",
+            "media-frame",
+            "project-grid",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/project-tiles.tsx"
+          ],
+          "path": "solid/components/project-tiles.json",
+          "registryDependencies": [
+            "article-block",
+            "badge",
             "box",
             "group",
             "link",
@@ -10972,8 +14215,8 @@
           ],
           "path": "svelte/components/project-tiles.json",
           "registryDependencies": [
+            "article-block",
             "badge",
-            "block",
             "box",
             "group",
             "link",
@@ -10993,8 +14236,8 @@
           ],
           "path": "vue/components/project-tiles.json",
           "registryDependencies": [
+            "article-block",
             "badge",
-            "block",
             "box",
             "group",
             "link",
@@ -11024,6 +14267,22 @@
             "components/prompt-composer.tsx"
           ],
           "path": "react/components/prompt-composer.json",
+          "registryDependencies": [
+            "box",
+            "button",
+            "group",
+            "lucide-icon",
+            "presets",
+            "text",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/prompt-composer.tsx"
+          ],
+          "path": "solid/components/prompt-composer.json",
           "registryDependencies": [
             "box",
             "button",
@@ -11095,6 +14354,24 @@
             "utils"
           ]
         },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/proof-band.tsx"
+          ],
+          "path": "solid/blocks/proof-band.json",
+          "registryDependencies": [
+            "grid",
+            "group",
+            "logo-cloud",
+            "lucide-icon",
+            "section-frame",
+            "stack",
+            "stats-band",
+            "text",
+            "utils"
+          ]
+        },
         "svelte": {
           "dependencies": [],
           "files": [
@@ -11149,7 +14426,26 @@
           ],
           "path": "react/components/quote-card.json",
           "registryDependencies": [
-            "block",
+            "figure-block",
+            "group",
+            "inline",
+            "lucide-icon",
+            "media-frame",
+            "rating",
+            "stack",
+            "testimonial-grid",
+            "text",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/quote-card.tsx"
+          ],
+          "path": "solid/components/quote-card.json",
+          "registryDependencies": [
+            "figure-block",
             "group",
             "inline",
             "lucide-icon",
@@ -11168,7 +14464,7 @@
           ],
           "path": "svelte/components/quote-card.json",
           "registryDependencies": [
-            "block",
+            "figure-block",
             "group",
             "inline",
             "lucide-icon",
@@ -11187,7 +14483,7 @@
           ],
           "path": "vue/components/quote-card.json",
           "registryDependencies": [
-            "block",
+            "figure-block",
             "group",
             "inline",
             "lucide-icon",
@@ -11216,6 +14512,21 @@
             "components/quote-figures.tsx"
           ],
           "path": "react/components/quote-figures.json",
+          "registryDependencies": [
+            "box",
+            "quote-split",
+            "stack",
+            "testimonial-grid",
+            "text",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/quote-figures.tsx"
+          ],
+          "path": "solid/components/quote-figures.json",
           "registryDependencies": [
             "box",
             "quote-split",
@@ -11282,6 +14593,22 @@
             "utils"
           ]
         },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/quote-logo-tiles.tsx"
+          ],
+          "path": "solid/components/quote-logo-tiles.json",
+          "registryDependencies": [
+            "box",
+            "group",
+            "lucide-icon",
+            "quote-split",
+            "testimonial-grid",
+            "text",
+            "utils"
+          ]
+        },
         "svelte": {
           "dependencies": [],
           "files": [
@@ -11337,6 +14664,18 @@
             "utils"
           ]
         },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/quote-proof.tsx"
+          ],
+          "path": "solid/components/quote-proof.json",
+          "registryDependencies": [
+            "block",
+            "text",
+            "utils"
+          ]
+        },
         "svelte": {
           "dependencies": [],
           "files": [
@@ -11378,6 +14717,22 @@
             "components/quote-rating-panel.tsx"
           ],
           "path": "react/components/quote-rating-panel.json",
+          "registryDependencies": [
+            "box",
+            "quote-split",
+            "rating",
+            "stack",
+            "testimonial-grid",
+            "text",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/quote-rating-panel.tsx"
+          ],
+          "path": "solid/components/quote-rating-panel.json",
           "registryDependencies": [
             "box",
             "quote-split",
@@ -11444,6 +14799,19 @@
             "utils"
           ]
         },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/quote-slot.tsx"
+          ],
+          "path": "solid/components/quote-slot.json",
+          "registryDependencies": [
+            "box",
+            "quote-card",
+            "testimonial-grid",
+            "utils"
+          ]
+        },
         "svelte": {
           "dependencies": [],
           "files": [
@@ -11488,6 +14856,30 @@
             "blocks/quote-split.types.ts"
           ],
           "path": "react/blocks/quote-split.json",
+          "registryDependencies": [
+            "action-group",
+            "box",
+            "error-page",
+            "logo-cloud",
+            "media-frame",
+            "quote-figures",
+            "quote-logo-tiles",
+            "quote-rating-panel",
+            "quote-slot",
+            "section-frame",
+            "stack",
+            "stats-band",
+            "testimonial-grid",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/quote-split.tsx",
+            "blocks/quote-split.types.ts"
+          ],
+          "path": "solid/blocks/quote-split.json",
           "registryDependencies": [
             "action-group",
             "box",
@@ -11574,6 +14966,16 @@
             "utils"
           ]
         },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "primitives/radio/radio.tsx"
+          ],
+          "path": "solid/components/ui/radio.json",
+          "registryDependencies": [
+            "utils"
+          ]
+        },
         "svelte": {
           "dependencies": [],
           "files": [
@@ -11611,6 +15013,16 @@
             "primitives/range/range.tsx"
           ],
           "path": "react/components/ui/range.json",
+          "registryDependencies": [
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "primitives/range/range.tsx"
+          ],
+          "path": "solid/components/ui/range.json",
           "registryDependencies": [
             "utils"
           ]
@@ -11653,7 +15065,21 @@
           ],
           "path": "react/components/range-field.json",
           "registryDependencies": [
-            "block",
+            "box",
+            "inline",
+            "input",
+            "range",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/range-field.tsx"
+          ],
+          "path": "solid/components/range-field.json",
+          "registryDependencies": [
+            "box",
             "inline",
             "input",
             "range",
@@ -11667,7 +15093,7 @@
           ],
           "path": "svelte/components/range-field.json",
           "registryDependencies": [
-            "block",
+            "box",
             "inline",
             "input",
             "range",
@@ -11681,7 +15107,7 @@
           ],
           "path": "vue/components/range-field.json",
           "registryDependencies": [
-            "block",
+            "box",
             "inline",
             "input",
             "range",
@@ -11706,7 +15132,19 @@
           ],
           "path": "react/components/rating.json",
           "registryDependencies": [
-            "block",
+            "box",
+            "lucide-icon",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/rating.tsx"
+          ],
+          "path": "solid/components/rating.json",
+          "registryDependencies": [
+            "box",
             "lucide-icon",
             "utils"
           ]
@@ -11718,7 +15156,7 @@
           ],
           "path": "svelte/components/rating.json",
           "registryDependencies": [
-            "block",
+            "box",
             "lucide-icon",
             "utils"
           ]
@@ -11730,7 +15168,7 @@
           ],
           "path": "vue/components/rating.json",
           "registryDependencies": [
-            "block",
+            "box",
             "lucide-icon",
             "utils"
           ]
@@ -11752,6 +15190,17 @@
             "components/region.tsx"
           ],
           "path": "react/components/region.json",
+          "registryDependencies": [
+            "block",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/region.tsx"
+          ],
+          "path": "solid/components/region.json",
           "registryDependencies": [
             "block",
             "utils"
@@ -11798,7 +15247,27 @@
           ],
           "path": "react/blocks/review-list.json",
           "registryDependencies": [
-            "block",
+            "article-block",
+            "grid",
+            "group",
+            "media-frame",
+            "rating",
+            "section-frame",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/review-list.tsx",
+            "blocks/review-list.types.ts"
+          ],
+          "path": "solid/blocks/review-list.json",
+          "registryDependencies": [
+            "article-block",
             "grid",
             "group",
             "media-frame",
@@ -11818,7 +15287,7 @@
           ],
           "path": "svelte/blocks/review-list.json",
           "registryDependencies": [
-            "block",
+            "article-block",
             "grid",
             "group",
             "media-frame",
@@ -11838,7 +15307,7 @@
           ],
           "path": "vue/blocks/review-list.json",
           "registryDependencies": [
-            "block",
+            "article-block",
             "grid",
             "group",
             "media-frame",
@@ -11868,7 +15337,20 @@
           ],
           "path": "react/components/search-field.json",
           "registryDependencies": [
-            "block",
+            "box",
+            "input",
+            "lucide-icon",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/search-field.tsx"
+          ],
+          "path": "solid/components/search-field.json",
+          "registryDependencies": [
+            "box",
             "input",
             "lucide-icon",
             "utils"
@@ -11881,7 +15363,7 @@
           ],
           "path": "svelte/components/search-field.json",
           "registryDependencies": [
-            "block",
+            "box",
             "input",
             "lucide-icon",
             "utils"
@@ -11894,7 +15376,7 @@
           ],
           "path": "vue/components/search-field.json",
           "registryDependencies": [
-            "block",
+            "box",
             "input",
             "lucide-icon",
             "utils"
@@ -11917,6 +15399,20 @@
             "components/search-palette.tsx"
           ],
           "path": "react/components/search-palette.json",
+          "registryDependencies": [
+            "box",
+            "inline",
+            "input",
+            "lucide-icon",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/search-palette.tsx"
+          ],
+          "path": "solid/components/search-palette.json",
           "registryDependencies": [
             "box",
             "inline",
@@ -11975,6 +15471,17 @@
             "utils"
           ]
         },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/section-box.tsx"
+          ],
+          "path": "solid/components/section-box.json",
+          "registryDependencies": [
+            "card",
+            "utils"
+          ]
+        },
         "svelte": {
           "dependencies": [],
           "files": [
@@ -12014,6 +15521,17 @@
             "components/section-column.tsx"
           ],
           "path": "react/components/section-column.json",
+          "registryDependencies": [
+            "stack",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/section-column.tsx"
+          ],
+          "path": "solid/components/section-column.json",
           "registryDependencies": [
             "stack",
             "utils"
@@ -12059,6 +15577,26 @@
             "components/section-frame.types.ts"
           ],
           "path": "react/components/section-frame.json",
+          "registryDependencies": [
+            "block",
+            "box",
+            "container",
+            "grid",
+            "presets",
+            "section-box",
+            "section-column",
+            "section-header",
+            "stack",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/section-frame.tsx",
+            "components/section-frame.types.ts"
+          ],
+          "path": "solid/components/section-frame.json",
           "registryDependencies": [
             "block",
             "box",
@@ -12136,6 +15674,19 @@
             "utils"
           ]
         },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/section-head.tsx"
+          ],
+          "path": "solid/components/section-head.json",
+          "registryDependencies": [
+            "box",
+            "button-plain",
+            "inline",
+            "utils"
+          ]
+        },
         "svelte": {
           "dependencies": [],
           "files": [
@@ -12179,6 +15730,23 @@
             "components/section-header.tsx"
           ],
           "path": "react/components/section-header.json",
+          "registryDependencies": [
+            "badge",
+            "group",
+            "link",
+            "presets",
+            "section-frame",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/section-header.tsx"
+          ],
+          "path": "solid/components/section-header.json",
           "registryDependencies": [
             "badge",
             "group",
@@ -12247,6 +15815,18 @@
             "utils"
           ]
         },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "primitives/select/opt-group.tsx",
+            "primitives/select/select-option.tsx",
+            "primitives/select/select.tsx"
+          ],
+          "path": "solid/components/ui/select.json",
+          "registryDependencies": [
+            "utils"
+          ]
+        },
         "svelte": {
           "dependencies": [],
           "files": [
@@ -12292,6 +15872,16 @@
             "utils"
           ]
         },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "primitives/separator/separator.tsx"
+          ],
+          "path": "solid/components/ui/separator.json",
+          "registryDependencies": [
+            "utils"
+          ]
+        },
         "svelte": {
           "dependencies": [],
           "files": [
@@ -12329,6 +15919,20 @@
             "components/shell-content.tsx"
           ],
           "path": "react/components/shell-content.json",
+          "registryDependencies": [
+            "box",
+            "group",
+            "stack",
+            "title",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/shell-content.tsx"
+          ],
+          "path": "solid/components/shell-content.json",
           "registryDependencies": [
             "box",
             "group",
@@ -12387,6 +15991,23 @@
             "dashboard-shell",
             "link",
             "list",
+            "nav-block",
+            "text",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/shell-footer.tsx"
+          ],
+          "path": "solid/components/shell-footer.json",
+          "registryDependencies": [
+            "block",
+            "dashboard-shell",
+            "link",
+            "list",
+            "nav-block",
             "text",
             "utils"
           ]
@@ -12402,6 +16023,7 @@
             "dashboard-shell",
             "link",
             "list",
+            "nav-block",
             "text",
             "utils"
           ]
@@ -12417,6 +16039,7 @@
             "dashboard-shell",
             "link",
             "list",
+            "nav-block",
             "text",
             "utils"
           ]
@@ -12448,6 +16071,28 @@
             "link",
             "list",
             "lucide-icon",
+            "nav-block",
+            "text",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/shell-sidebar.tsx"
+          ],
+          "path": "solid/components/shell-sidebar.json",
+          "registryDependencies": [
+            "block",
+            "box",
+            "button-plain",
+            "dashboard-shell",
+            "group",
+            "inline",
+            "link",
+            "list",
+            "lucide-icon",
+            "nav-block",
             "text",
             "utils"
           ]
@@ -12468,6 +16113,7 @@
             "link",
             "list",
             "lucide-icon",
+            "nav-block",
             "text",
             "utils"
           ]
@@ -12488,6 +16134,7 @@
             "link",
             "list",
             "lucide-icon",
+            "nav-block",
             "text",
             "utils"
           ]
@@ -12519,6 +16166,29 @@
             "list",
             "lucide-icon",
             "media-frame",
+            "nav-block",
+            "search-palette",
+            "text",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/shell-topbar.tsx"
+          ],
+          "path": "solid/components/shell-topbar.json",
+          "registryDependencies": [
+            "block",
+            "box",
+            "dashboard-shell",
+            "group",
+            "inline",
+            "link",
+            "list",
+            "lucide-icon",
+            "media-frame",
+            "nav-block",
             "search-palette",
             "text",
             "utils"
@@ -12540,6 +16210,7 @@
             "list",
             "lucide-icon",
             "media-frame",
+            "nav-block",
             "search-palette",
             "text",
             "utils"
@@ -12561,6 +16232,7 @@
             "list",
             "lucide-icon",
             "media-frame",
+            "nav-block",
             "search-palette",
             "text",
             "utils"
@@ -12584,6 +16256,29 @@
             "blocks/shopping-cart.types.ts"
           ],
           "path": "react/blocks/shopping-cart.json",
+          "registryDependencies": [
+            "box",
+            "button",
+            "cart-list",
+            "cart-summary-card",
+            "group",
+            "lucide-icon",
+            "media-frame",
+            "number-field",
+            "order-summary",
+            "section-frame",
+            "stack",
+            "text",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/shopping-cart.tsx",
+            "blocks/shopping-cart.types.ts"
+          ],
+          "path": "solid/blocks/shopping-cart.json",
           "registryDependencies": [
             "box",
             "button",
@@ -12672,6 +16367,28 @@
             "lucide-icon",
             "media-frame",
             "nav-bar",
+            "nav-block",
+            "stack",
+            "text",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/sidebar-nav.tsx"
+          ],
+          "path": "solid/blocks/sidebar-nav.json",
+          "registryDependencies": [
+            "block",
+            "group",
+            "inline",
+            "link",
+            "list",
+            "lucide-icon",
+            "media-frame",
+            "nav-bar",
+            "nav-block",
             "stack",
             "text",
             "utils"
@@ -12692,6 +16409,7 @@
             "lucide-icon",
             "media-frame",
             "nav-bar",
+            "nav-block",
             "stack",
             "text",
             "utils"
@@ -12712,6 +16430,7 @@
             "lucide-icon",
             "media-frame",
             "nav-bar",
+            "nav-block",
             "stack",
             "text",
             "utils"
@@ -12734,6 +16453,17 @@
             "components/sidebar-panel.tsx"
           ],
           "path": "react/components/sidebar-panel.json",
+          "registryDependencies": [
+            "block",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/sidebar-panel.tsx"
+          ],
+          "path": "solid/components/sidebar-panel.json",
           "registryDependencies": [
             "block",
             "utils"
@@ -12781,6 +16511,30 @@
           "path": "react/blocks/signup-wizard.json",
           "registryDependencies": [
             "block",
+            "box",
+            "button",
+            "field",
+            "form",
+            "group",
+            "input",
+            "list",
+            "lucide-icon",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/signup-wizard.tsx",
+            "blocks/signup-wizard.types.ts"
+          ],
+          "path": "solid/blocks/signup-wizard.json",
+          "registryDependencies": [
+            "block",
+            "box",
             "button",
             "field",
             "form",
@@ -12803,6 +16557,7 @@
           "path": "svelte/blocks/signup-wizard.json",
           "registryDependencies": [
             "block",
+            "box",
             "button",
             "field",
             "form",
@@ -12825,6 +16580,7 @@
           "path": "vue/blocks/signup-wizard.json",
           "registryDependencies": [
             "block",
+            "box",
             "button",
             "field",
             "form",
@@ -12861,6 +16617,24 @@
             "container",
             "group",
             "link",
+            "nav-block",
+            "text",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/site-footer.tsx",
+            "blocks/site-footer.types.ts"
+          ],
+          "path": "solid/blocks/site-footer.json",
+          "registryDependencies": [
+            "block",
+            "container",
+            "group",
+            "link",
+            "nav-block",
             "text",
             "utils"
           ]
@@ -12877,6 +16651,7 @@
             "container",
             "group",
             "link",
+            "nav-block",
             "text",
             "utils"
           ]
@@ -12893,6 +16668,7 @@
             "container",
             "group",
             "link",
+            "nav-block",
             "text",
             "utils"
           ]
@@ -12922,6 +16698,25 @@
             "group",
             "link",
             "link-plain",
+            "nav-block",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/site-header.tsx",
+            "blocks/site-header.types.ts"
+          ],
+          "path": "solid/blocks/site-header.json",
+          "registryDependencies": [
+            "block",
+            "button",
+            "container",
+            "group",
+            "link",
+            "link-plain",
+            "nav-block",
             "utils"
           ]
         },
@@ -12939,6 +16734,7 @@
             "group",
             "link",
             "link-plain",
+            "nav-block",
             "utils"
           ]
         },
@@ -12956,6 +16752,7 @@
             "group",
             "link",
             "link-plain",
+            "nav-block",
             "utils"
           ]
         }
@@ -12990,6 +16787,35 @@
             "label",
             "link",
             "mega-menu",
+            "nav-block",
+            "pill",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/sitemap-footer.tsx",
+            "blocks/sitemap-footer.types.ts"
+          ],
+          "path": "solid/blocks/sitemap-footer.json",
+          "registryDependencies": [
+            "block",
+            "box",
+            "button",
+            "container",
+            "footer-card",
+            "footer-columns",
+            "form",
+            "group",
+            "input",
+            "label",
+            "link",
+            "mega-menu",
+            "nav-block",
             "pill",
             "stack",
             "text",
@@ -13017,6 +16843,7 @@
             "label",
             "link",
             "mega-menu",
+            "nav-block",
             "pill",
             "stack",
             "text",
@@ -13044,6 +16871,7 @@
             "label",
             "link",
             "mega-menu",
+            "nav-block",
             "pill",
             "stack",
             "text",
@@ -13068,6 +16896,16 @@
             "primitives/skeleton/skeleton.tsx"
           ],
           "path": "react/components/ui/skeleton.json",
+          "registryDependencies": [
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "primitives/skeleton/skeleton.tsx"
+          ],
+          "path": "solid/components/ui/skeleton.json",
           "registryDependencies": [
             "utils"
           ]
@@ -13110,6 +16948,23 @@
             "blocks/skeleton-layout.types.ts"
           ],
           "path": "react/blocks/skeleton-layout.json",
+          "registryDependencies": [
+            "block",
+            "grid",
+            "group",
+            "section-frame",
+            "skeleton",
+            "stack",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/skeleton-layout.tsx",
+            "blocks/skeleton-layout.types.ts"
+          ],
+          "path": "solid/blocks/skeleton-layout.json",
           "registryDependencies": [
             "block",
             "grid",
@@ -13208,6 +17063,28 @@
             "zone-table"
           ]
         },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/slot-board.tsx",
+            "blocks/slot-board.types.ts"
+          ],
+          "path": "solid/blocks/slot-board.json",
+          "registryDependencies": [
+            "box",
+            "button",
+            "field",
+            "inline",
+            "list",
+            "section-frame",
+            "select",
+            "slot-grid",
+            "stack",
+            "text",
+            "utils",
+            "zone-table"
+          ]
+        },
         "svelte": {
           "dependencies": [],
           "files": [
@@ -13281,6 +17158,24 @@
             "utils"
           ]
         },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/slot-grid.tsx",
+            "components/slot-grid.types.ts"
+          ],
+          "path": "solid/components/slot-grid.json",
+          "registryDependencies": [
+            "box",
+            "group",
+            "inline",
+            "label",
+            "radio",
+            "stack",
+            "text",
+            "utils"
+          ]
+        },
         "svelte": {
           "dependencies": [],
           "files": [
@@ -13339,6 +17234,16 @@
             "utils"
           ]
         },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "primitives/stack/stack.tsx"
+          ],
+          "path": "solid/components/ui/stack.json",
+          "registryDependencies": [
+            "utils"
+          ]
+        },
         "svelte": {
           "dependencies": [],
           "files": [
@@ -13376,6 +17281,22 @@
             "components/stat-figure.tsx"
           ],
           "path": "react/components/stat-figure.json",
+          "registryDependencies": [
+            "lucide-icon",
+            "presets",
+            "stack",
+            "stat-tile",
+            "stats-band",
+            "text",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/stat-figure.tsx"
+          ],
+          "path": "solid/components/stat-figure.json",
           "registryDependencies": [
             "lucide-icon",
             "presets",
@@ -13436,7 +17357,21 @@
           ],
           "path": "react/components/stat-tile.json",
           "registryDependencies": [
-            "block",
+            "box",
+            "iconbadge",
+            "link",
+            "lucide-icon",
+            "text",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/stat-tile.tsx"
+          ],
+          "path": "solid/components/stat-tile.json",
+          "registryDependencies": [
             "box",
             "iconbadge",
             "link",
@@ -13452,7 +17387,6 @@
           ],
           "path": "svelte/components/stat-tile.json",
           "registryDependencies": [
-            "block",
             "box",
             "iconbadge",
             "link",
@@ -13468,7 +17402,6 @@
           ],
           "path": "vue/components/stat-tile.json",
           "registryDependencies": [
-            "block",
             "box",
             "iconbadge",
             "link",
@@ -13495,6 +17428,22 @@
             "blocks/stats-band.types.ts"
           ],
           "path": "react/blocks/stats-band.json",
+          "registryDependencies": [
+            "backdrop",
+            "grid",
+            "presets",
+            "section-frame",
+            "stat-figure",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/stats-band.tsx",
+            "blocks/stats-band.types.ts"
+          ],
+          "path": "solid/blocks/stats-band.json",
           "registryDependencies": [
             "backdrop",
             "grid",
@@ -13557,6 +17506,28 @@
             "button",
             "group",
             "iconbadge",
+            "inline",
+            "list",
+            "lucide-icon",
+            "section-frame",
+            "stack",
+            "steps-list",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/stepper.tsx"
+          ],
+          "path": "solid/blocks/stepper.json",
+          "registryDependencies": [
+            "button",
+            "group",
+            "iconbadge",
+            "inline",
             "list",
             "lucide-icon",
             "section-frame",
@@ -13577,6 +17548,7 @@
             "button",
             "group",
             "iconbadge",
+            "inline",
             "list",
             "lucide-icon",
             "section-frame",
@@ -13597,6 +17569,7 @@
             "button",
             "group",
             "iconbadge",
+            "inline",
             "list",
             "lucide-icon",
             "section-frame",
@@ -13627,6 +17600,26 @@
           "path": "react/blocks/steps-list.json",
           "registryDependencies": [
             "iconbadge",
+            "inline",
+            "list",
+            "lucide-icon",
+            "section-frame",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/steps-list.tsx",
+            "blocks/steps-list.types.ts"
+          ],
+          "path": "solid/blocks/steps-list.json",
+          "registryDependencies": [
+            "iconbadge",
+            "inline",
             "list",
             "lucide-icon",
             "section-frame",
@@ -13645,6 +17638,7 @@
           "path": "svelte/blocks/steps-list.json",
           "registryDependencies": [
             "iconbadge",
+            "inline",
             "list",
             "lucide-icon",
             "section-frame",
@@ -13663,6 +17657,7 @@
           "path": "vue/blocks/steps-list.json",
           "registryDependencies": [
             "iconbadge",
+            "inline",
             "list",
             "lucide-icon",
             "section-frame",
@@ -13690,6 +17685,29 @@
             "blocks/store-hero.types.ts"
           ],
           "path": "react/blocks/store-hero.json",
+          "registryDependencies": [
+            "action-group",
+            "backdrop",
+            "box",
+            "error-page",
+            "feature-grid",
+            "grid",
+            "group",
+            "lucide-icon",
+            "offer-media",
+            "section-frame",
+            "stack",
+            "text",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/store-hero.tsx",
+            "blocks/store-hero.types.ts"
+          ],
+          "path": "solid/blocks/store-hero.json",
           "registryDependencies": [
             "action-group",
             "backdrop",
@@ -13786,6 +17804,29 @@
             "utils"
           ]
         },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/store-locations.tsx",
+            "blocks/store-locations.types.ts"
+          ],
+          "path": "solid/blocks/store-locations.json",
+          "registryDependencies": [
+            "badge",
+            "box",
+            "group",
+            "inline",
+            "link",
+            "list",
+            "lucide-icon",
+            "media-frame",
+            "section-frame",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
         "svelte": {
           "dependencies": [],
           "files": [
@@ -13857,6 +17898,20 @@
             "utils"
           ]
         },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/story-dots.tsx"
+          ],
+          "path": "solid/components/story-dots.json",
+          "registryDependencies": [
+            "group",
+            "inline",
+            "milestone-timeline",
+            "story-tabs",
+            "utils"
+          ]
+        },
         "svelte": {
           "dependencies": [],
           "files": [
@@ -13902,6 +17957,24 @@
             "components/story-panel.tsx"
           ],
           "path": "react/components/story-panel.json",
+          "registryDependencies": [
+            "badge",
+            "box",
+            "group",
+            "milestone-timeline",
+            "stack",
+            "story-tabs",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/story-panel.tsx"
+          ],
+          "path": "solid/components/story-panel.json",
           "registryDependencies": [
             "badge",
             "box",
@@ -13972,6 +18045,7 @@
             "box",
             "button",
             "group",
+            "inline",
             "lucide-icon",
             "media-frame",
             "milestone-timeline",
@@ -13979,7 +18053,28 @@
             "stack",
             "story-dots",
             "story-panel",
-            "text",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/story-tabs.tsx",
+            "blocks/story-tabs.types.ts"
+          ],
+          "path": "solid/blocks/story-tabs.json",
+          "registryDependencies": [
+            "box",
+            "button",
+            "group",
+            "inline",
+            "lucide-icon",
+            "media-frame",
+            "milestone-timeline",
+            "section-frame",
+            "stack",
+            "story-dots",
+            "story-panel",
             "utils"
           ]
         },
@@ -13994,6 +18089,7 @@
             "box",
             "button",
             "group",
+            "inline",
             "lucide-icon",
             "media-frame",
             "milestone-timeline",
@@ -14001,7 +18097,6 @@
             "stack",
             "story-dots",
             "story-panel",
-            "text",
             "utils"
           ]
         },
@@ -14016,6 +18111,7 @@
             "box",
             "button",
             "group",
+            "inline",
             "lucide-icon",
             "media-frame",
             "milestone-timeline",
@@ -14023,7 +18119,6 @@
             "stack",
             "story-dots",
             "story-panel",
-            "text",
             "utils"
           ]
         }
@@ -14044,6 +18139,25 @@
             "blocks/support-channels.tsx"
           ],
           "path": "react/blocks/support-channels.json",
+          "registryDependencies": [
+            "card",
+            "feature-grid",
+            "grid",
+            "link",
+            "lucide-icon",
+            "section-frame",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/support-channels.tsx"
+          ],
+          "path": "solid/blocks/support-channels.json",
           "registryDependencies": [
             "card",
             "feature-grid",
@@ -14116,6 +18230,16 @@
             "utils"
           ]
         },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "primitives/switch/switch.tsx"
+          ],
+          "path": "solid/components/ui/switch.json",
+          "registryDependencies": [
+            "utils"
+          ]
+        },
         "svelte": {
           "dependencies": [],
           "files": [
@@ -14154,7 +18278,18 @@
           ],
           "path": "react/components/switcher.json",
           "registryDependencies": [
-            "block",
+            "box",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/switcher.tsx"
+          ],
+          "path": "solid/components/switcher.json",
+          "registryDependencies": [
+            "box",
             "utils"
           ]
         },
@@ -14165,7 +18300,7 @@
           ],
           "path": "svelte/components/switcher.json",
           "registryDependencies": [
-            "block",
+            "box",
             "utils"
           ]
         },
@@ -14176,7 +18311,7 @@
           ],
           "path": "vue/components/switcher.json",
           "registryDependencies": [
-            "block",
+            "box",
             "utils"
           ]
         }
@@ -14197,6 +18332,17 @@
             "components/switcher-item.tsx"
           ],
           "path": "react/components/switcher-item.json",
+          "registryDependencies": [
+            "button-plain",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/switcher-item.tsx"
+          ],
+          "path": "solid/components/switcher-item.json",
           "registryDependencies": [
             "button-plain",
             "utils"
@@ -14250,6 +18396,25 @@
             "primitives/table/table.tsx"
           ],
           "path": "react/components/ui/table.json",
+          "registryDependencies": [
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "primitives/table/table-body.tsx",
+            "primitives/table/table-caption.tsx",
+            "primitives/table/table-cell.tsx",
+            "primitives/table/table-col-group.tsx",
+            "primitives/table/table-col.tsx",
+            "primitives/table/table-foot.tsx",
+            "primitives/table/table-head-cell.tsx",
+            "primitives/table/table-head.tsx",
+            "primitives/table/table-row.tsx",
+            "primitives/table/table.tsx"
+          ],
+          "path": "solid/components/ui/table.json",
           "registryDependencies": [
             "utils"
           ]
@@ -14310,7 +18475,19 @@
           ],
           "path": "react/components/table-toolbar.json",
           "registryDependencies": [
-            "block",
+            "box",
+            "inline",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/table-toolbar.tsx"
+          ],
+          "path": "solid/components/table-toolbar.json",
+          "registryDependencies": [
+            "box",
             "inline",
             "utils"
           ]
@@ -14322,7 +18499,7 @@
           ],
           "path": "svelte/components/table-toolbar.json",
           "registryDependencies": [
-            "block",
+            "box",
             "inline",
             "utils"
           ]
@@ -14334,7 +18511,7 @@
           ],
           "path": "vue/components/table-toolbar.json",
           "registryDependencies": [
-            "block",
+            "box",
             "inline",
             "utils"
           ]
@@ -14357,6 +18534,23 @@
             "blocks/team-grid.types.ts"
           ],
           "path": "react/blocks/team-grid.json",
+          "registryDependencies": [
+            "box",
+            "media-frame",
+            "member-row",
+            "section-frame",
+            "stack",
+            "text",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/team-grid.tsx",
+            "blocks/team-grid.types.ts"
+          ],
+          "path": "solid/blocks/team-grid.json",
           "registryDependencies": [
             "box",
             "media-frame",
@@ -14425,6 +18619,31 @@
             "grid",
             "group",
             "iconbadge",
+            "inline",
+            "lucide-icon",
+            "media-frame",
+            "presets",
+            "section-frame",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/template-grid.tsx",
+            "blocks/template-grid.types.ts"
+          ],
+          "path": "solid/blocks/template-grid.json",
+          "registryDependencies": [
+            "box",
+            "button",
+            "grid",
+            "group",
+            "iconbadge",
+            "inline",
             "lucide-icon",
             "media-frame",
             "presets",
@@ -14448,6 +18667,7 @@
             "grid",
             "group",
             "iconbadge",
+            "inline",
             "lucide-icon",
             "media-frame",
             "presets",
@@ -14471,6 +18691,7 @@
             "grid",
             "group",
             "iconbadge",
+            "inline",
             "lucide-icon",
             "media-frame",
             "presets",
@@ -14499,6 +18720,21 @@
             "blocks/testimonial-grid.types.ts"
           ],
           "path": "react/blocks/testimonial-grid.json",
+          "registryDependencies": [
+            "block",
+            "grid",
+            "quote-card",
+            "section-frame",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/testimonial-grid.tsx",
+            "blocks/testimonial-grid.types.ts"
+          ],
+          "path": "solid/blocks/testimonial-grid.json",
           "registryDependencies": [
             "block",
             "grid",
@@ -14559,6 +18795,16 @@
             "utils"
           ]
         },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "primitives/text/text.tsx"
+          ],
+          "path": "solid/components/ui/text.json",
+          "registryDependencies": [
+            "utils"
+          ]
+        },
         "svelte": {
           "dependencies": [],
           "files": [
@@ -14596,6 +18842,16 @@
             "primitives/textarea/textarea.tsx"
           ],
           "path": "react/components/ui/textarea.json",
+          "registryDependencies": [
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "primitives/textarea/textarea.tsx"
+          ],
+          "path": "solid/components/ui/textarea.json",
           "registryDependencies": [
             "utils"
           ]
@@ -14639,7 +18895,21 @@
           ],
           "path": "react/components/timeline.json",
           "registryDependencies": [
-            "block",
+            "box",
+            "inline",
+            "list",
+            "text",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/timeline.tsx",
+            "components/timeline.types.ts"
+          ],
+          "path": "solid/components/timeline.json",
+          "registryDependencies": [
             "box",
             "inline",
             "list",
@@ -14655,7 +18925,6 @@
           ],
           "path": "svelte/components/timeline.json",
           "registryDependencies": [
-            "block",
             "box",
             "inline",
             "list",
@@ -14671,7 +18940,6 @@
           ],
           "path": "vue/components/timeline.json",
           "registryDependencies": [
-            "block",
             "box",
             "inline",
             "list",
@@ -14698,6 +18966,16 @@
           "path": "react/components/ui/title.json",
           "registryDependencies": [
             "slot",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "primitives/title/title.tsx"
+          ],
+          "path": "solid/components/ui/title.json",
+          "registryDependencies": [
             "utils"
           ]
         },
@@ -14739,6 +19017,20 @@
             "components/topic-chips.types.ts"
           ],
           "path": "react/components/topic-chips.json",
+          "registryDependencies": [
+            "button",
+            "group",
+            "lucide-icon",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/topic-chips.tsx",
+            "components/topic-chips.types.ts"
+          ],
+          "path": "solid/components/topic-chips.json",
           "registryDependencies": [
             "button",
             "group",
@@ -14791,6 +19083,22 @@
             "blocks/tour-callout.tsx"
           ],
           "path": "react/blocks/tour-callout.json",
+          "registryDependencies": [
+            "block",
+            "button",
+            "group",
+            "section-frame",
+            "stack",
+            "text",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/tour-callout.tsx"
+          ],
+          "path": "solid/blocks/tour-callout.json",
           "registryDependencies": [
             "block",
             "button",
@@ -14861,6 +19169,23 @@
             "utils"
           ]
         },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/usage-calculator.tsx",
+            "blocks/usage-calculator.types.ts"
+          ],
+          "path": "solid/blocks/usage-calculator.json",
+          "registryDependencies": [
+            "button",
+            "group",
+            "range",
+            "section-frame",
+            "stack",
+            "text",
+            "utils"
+          ]
+        },
         "svelte": {
           "dependencies": [],
           "files": [
@@ -14912,6 +19237,25 @@
             "blocks/usp-strip.tsx"
           ],
           "path": "react/blocks/usp-strip.json",
+          "registryDependencies": [
+            "box",
+            "feature-grid",
+            "grid",
+            "inline",
+            "list",
+            "lucide-icon",
+            "section-frame",
+            "stack",
+            "text",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/usp-strip.tsx"
+          ],
+          "path": "solid/blocks/usp-strip.json",
           "registryDependencies": [
             "box",
             "feature-grid",
@@ -14997,6 +19341,29 @@
           "path": "react/utils/utils.json",
           "registryDependencies": []
         },
+        "solid": {
+          "dependencies": [
+            "clsx",
+            "tailwind-merge"
+          ],
+          "files": [
+            "utils/a11y/dismiss.ts",
+            "utils/a11y/focus-trap.ts",
+            "utils/a11y/focusable.ts",
+            "utils/a11y/index.ts",
+            "utils/a11y/roving.ts",
+            "utils/a11y/scroll-lock.ts",
+            "utils/cn.ts",
+            "utils/env.ts",
+            "utils/expr.ts",
+            "utils/format.ts",
+            "utils/index.ts",
+            "utils/tags.ts",
+            "utils/variants.ts"
+          ],
+          "path": "solid/utils/utils.json",
+          "registryDependencies": []
+        },
         "svelte": {
           "dependencies": [
             "clsx",
@@ -15061,9 +19428,28 @@
           ],
           "path": "react/blocks/video-grid.json",
           "registryDependencies": [
-            "block",
             "box",
             "button",
+            "figure-block",
+            "grid",
+            "lucide-icon",
+            "media-frame",
+            "section-frame",
+            "testimonial-grid",
+            "text",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/video-grid.tsx"
+          ],
+          "path": "solid/blocks/video-grid.json",
+          "registryDependencies": [
+            "box",
+            "button",
+            "figure-block",
             "grid",
             "lucide-icon",
             "media-frame",
@@ -15080,9 +19466,9 @@
           ],
           "path": "svelte/blocks/video-grid.json",
           "registryDependencies": [
-            "block",
             "box",
             "button",
+            "figure-block",
             "grid",
             "lucide-icon",
             "media-frame",
@@ -15099,9 +19485,9 @@
           ],
           "path": "vue/blocks/video-grid.json",
           "registryDependencies": [
-            "block",
             "box",
             "button",
+            "figure-block",
             "grid",
             "lucide-icon",
             "media-frame",
@@ -15129,6 +19515,27 @@
             "blocks/video-modal.types.ts"
           ],
           "path": "react/blocks/video-modal.json",
+          "registryDependencies": [
+            "box",
+            "button",
+            "group",
+            "list",
+            "lucide-icon",
+            "media-frame",
+            "section-frame",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/video-modal.tsx",
+            "blocks/video-modal.types.ts"
+          ],
+          "path": "solid/blocks/video-modal.json",
           "registryDependencies": [
             "box",
             "button",
@@ -15209,6 +19616,19 @@
             "utils"
           ]
         },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/weighted-title.tsx"
+          ],
+          "path": "solid/components/weighted-title.json",
+          "registryDependencies": [
+            "inline",
+            "presets",
+            "title",
+            "utils"
+          ]
+        },
         "svelte": {
           "dependencies": [],
           "files": [
@@ -15252,6 +19672,22 @@
             "components/zone-rows.tsx"
           ],
           "path": "react/components/zone-rows.json",
+          "registryDependencies": [
+            "badge",
+            "box",
+            "stack",
+            "table",
+            "text",
+            "utils",
+            "zone-table"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/zone-rows.tsx"
+          ],
+          "path": "solid/components/zone-rows.json",
           "registryDependencies": [
             "badge",
             "box",
@@ -15325,6 +19761,26 @@
             "zone-rows"
           ]
         },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/zone-table.tsx",
+            "blocks/zone-table.types.ts"
+          ],
+          "path": "solid/blocks/zone-table.json",
+          "registryDependencies": [
+            "badge",
+            "grid",
+            "inline",
+            "list",
+            "section-frame",
+            "stack",
+            "text",
+            "title",
+            "utils",
+            "zone-rows"
+          ]
+        },
         "svelte": {
           "dependencies": [],
           "files": [
@@ -15370,13 +19826,14 @@
       "type": "registry:block"
     }
   ],
-  "lastUpdated": "2026-10-11T23:04:31+03:00",
+  "lastUpdated": "2026-10-13T21:35:03+03:00",
   "layout": "<runtime>/index.json + <runtime>/{components/ui,components,blocks,utils,lib}/<name>.json; use r/<runtime> as registryUrl",
   "runtimes": [
     "svelte",
     "react",
-    "vue"
+    "vue",
+    "solid"
   ],
-  "sourceCommit": "8efbb7e81376eb7704a43288bca63212bc2b97cd",
+  "sourceCommit": "6c20aba1e4be2d8cea631c32d5fba534a0383ce5",
   "version": "0.1.0"
 }

@@ -55,6 +55,11 @@
       "default",
       "compact"
      ]
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
     }
    ]
   }
@@ -139,6 +144,11 @@
       "default",
       "muted"
      ]
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
     }
    ]
   }
@@ -231,6 +241,11 @@
       "default",
       "muted"
      ]
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
     }
    ]
   }
@@ -361,6 +376,11 @@
       "top",
       "bottom"
      ]
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
     }
    ]
   }
@@ -483,6 +503,24 @@
       "default",
       "compact"
      ]
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
+    }
+   ]
+  }
+ ],
+ "article-block": [
+  {
+   "docs": "A self-contained item (a review, a card, a project) in its own file: Block tag article.",
+   "part": "ArticleBlock",
+   "rows": [
+    {
+     "desc": "data-testid of the root",
+     "name": "testid",
+     "type": "string"
     }
    ]
   }
@@ -538,6 +576,11 @@
       "default",
       "muted"
      ]
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
     }
    ]
   }
@@ -626,6 +669,11 @@
       "1",
       "2"
      ]
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
     }
    ]
   }
@@ -756,6 +804,11 @@
       "show",
       "first"
      ]
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
     }
    ]
   }
@@ -794,7 +847,7 @@
  ],
  "backdrop": [
   {
-   "docs": "Something behind the children: a faint full-size picture (image), or nothing (none: the children as they are, no wrapper).",
+   "docs": "A faint full-size picture behind the content of its section (image), or nothing (none). It sits inside the Block of the block, which `behind` makes `relative isolate overflow-hidden`, so the section stays the root of the block (rule 01).",
    "part": "Backdrop",
    "rows": [
     {
@@ -965,6 +1018,11 @@
       "default",
       "compact"
      ]
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
     }
    ]
   }
@@ -1024,6 +1082,11 @@
       "default",
       "compact"
      ]
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
     }
    ]
   }
@@ -1039,7 +1102,7 @@
      "type": "string"
     },
     {
-     "desc": "semantic landmark: main, header, section, footer, nav, article, aside, figure",
+     "desc": "semantic tag: div (default), section, article, aside, header, footer, main, nav, figure, search, hgroup",
      "name": "tag",
      "type": "string"
     },
@@ -1096,6 +1159,11 @@
       "default",
       "muted"
      ]
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
     }
    ]
   }
@@ -1425,6 +1493,11 @@
       "image",
       "none"
      ]
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
     }
    ]
   }
@@ -1489,6 +1562,11 @@
       "default",
       "compact"
      ]
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
     }
    ]
   }
@@ -1536,6 +1614,12 @@
       "show",
       "hide"
      ]
+    },
+    {
+     "default": "\"promo\"",
+     "desc": "name of the promo code field (unique on the page)",
+     "name": "field",
+     "type": "string"
     },
     {
      "default": "\"show\"",
@@ -1587,6 +1671,12 @@
       "default",
       "compact"
      ]
+    },
+    {
+     "default": "\"qty\"",
+     "desc": "prefix of the quantity field names (one name per line: <field>-<line id>)",
+     "name": "field",
+     "type": "string"
     }
    ]
   }
@@ -1656,6 +1746,11 @@
      "desc": "the toolbar layout: labels of the search, the sort and the number shown",
      "name": "tools",
      "type": "CategoryTools"
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
     }
    ]
   }
@@ -1724,6 +1819,11 @@
       "default",
       "muted"
      ]
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
     }
    ]
   }
@@ -1845,6 +1945,11 @@
       "default",
       "muted"
      ]
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
     }
    ]
   }
@@ -1927,6 +2032,11 @@
       "default",
       "muted"
      ]
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
     }
    ]
   }
@@ -1960,6 +2070,35 @@
       "cards",
       "numbered"
      ]
+    }
+   ]
+  }
+ ],
+ "checkout-submit": [
+  {
+   "docs": "The end of the checkout form: the consent checkbox, the submit button and the legal line.",
+   "part": "CheckoutSubmit",
+   "rows": [
+    {
+     "desc": "id of the form block (the checkbox id is <id>-consent)",
+     "name": "id",
+     "required": true,
+     "type": "string"
+    },
+    {
+     "name": "consent",
+     "required": true,
+     "type": "string"
+    },
+    {
+     "name": "submit",
+     "required": true,
+     "type": "string"
+    },
+    {
+     "name": "legal",
+     "required": true,
+     "type": "string"
     }
    ]
   }
@@ -2067,6 +2206,11 @@
       "default",
       "compact"
      ]
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
     }
    ]
   }
@@ -2156,6 +2300,11 @@
       "default",
       "muted"
      ]
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
     }
    ]
   }
@@ -2243,6 +2392,11 @@
       "default",
       "muted"
      ]
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
     }
    ]
   }
@@ -2313,6 +2467,11 @@
       "default",
       "compact"
      ]
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
     }
    ]
   }
@@ -2410,6 +2569,11 @@
       "default",
       "compact"
      ]
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
     }
    ]
   }
@@ -2452,6 +2616,11 @@
       "default",
       "muted"
      ]
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
     }
    ]
   }
@@ -2536,6 +2705,11 @@
       "default",
       "muted"
      ]
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
     }
    ]
   }
@@ -2636,6 +2810,11 @@
       "default",
       "compact"
      ]
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
     }
    ]
   }
@@ -2738,6 +2917,11 @@
       "window",
       "page"
      ]
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
     }
    ]
   }
@@ -2804,6 +2988,11 @@
       "default",
       "compact"
      ]
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
     }
    ]
   }
@@ -2947,6 +3136,12 @@
       "image",
       "none"
      ]
+    },
+    {
+     "default": "\"qty\"",
+     "desc": "prefix of the quantity field names (one name per line: <field>-<line id>)",
+     "name": "field",
+     "type": "string"
     }
    ]
   }
@@ -3067,6 +3262,11 @@
       "default",
       "compact"
      ]
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
     }
    ]
   }
@@ -3162,6 +3362,11 @@
       "default",
       "muted"
      ]
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
     }
    ]
   }
@@ -3250,6 +3455,11 @@
      "name": "channels",
      "required": true,
      "type": "Feature[]"
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
     }
    ]
   }
@@ -3326,6 +3536,11 @@
       "default",
       "compact"
      ]
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
     }
    ]
   }
@@ -3417,6 +3632,11 @@
       "default",
       "muted"
      ]
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
     }
    ]
   }
@@ -3482,6 +3702,11 @@
       "default",
       "compact"
      ]
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
     }
    ]
   }
@@ -3606,6 +3831,11 @@
       "default",
       "compact"
      ]
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
     }
    ]
   }
@@ -3717,6 +3947,11 @@
       "default",
       "muted"
      ]
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
     }
    ]
   }
@@ -3800,6 +4035,11 @@
       "default",
       "muted"
      ]
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
     }
    ]
   }
@@ -3883,6 +4123,11 @@
       "default",
       "compact"
      ]
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
     }
    ]
   }
@@ -3944,6 +4189,11 @@
       "default",
       "compact"
      ]
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
     }
    ]
   }
@@ -3971,6 +4221,19 @@
     {
      "desc": "when set it replaces the hint and is announced (role alert)",
      "name": "error",
+     "type": "string"
+    }
+   ]
+  }
+ ],
+ "figure-block": [
+  {
+   "docs": "Self-contained content with an optional caption (a quote, a picture, a stat) in its own file: Block tag figure.",
+   "part": "FigureBlock",
+   "rows": [
+    {
+     "desc": "data-testid of the root",
+     "name": "testid",
      "type": "string"
     }
    ]
@@ -4062,6 +4325,11 @@
      "name": "groups",
      "required": true,
      "type": "MegaGroup[]"
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
     }
    ]
   }
@@ -4095,6 +4363,11 @@
      "name": "groups",
      "required": true,
      "type": "MegaGroup[]"
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
     }
    ]
   }
@@ -4142,6 +4415,11 @@
      "name": "groups",
      "required": true,
      "type": "MegaGroup[]"
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
     }
    ]
   }
@@ -4161,6 +4439,11 @@
      "name": "groups",
      "required": true,
      "type": "MegaGroup[]"
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
     }
    ]
   }
@@ -4280,6 +4563,11 @@
       "default",
       "muted"
      ]
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
     }
    ]
   }
@@ -4570,6 +4858,11 @@
       "default",
       "compact"
      ]
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
     }
    ]
   }
@@ -4620,6 +4913,11 @@
     {
      "desc": "accessible name of the menu",
      "name": "navLabel",
+     "type": "string"
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
      "type": "string"
     }
    ]
@@ -4682,6 +4980,11 @@
       "default",
       "compact"
      ]
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
     }
    ]
   }
@@ -4771,6 +5074,11 @@
       "default",
       "muted"
      ]
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
     }
    ]
   }
@@ -4990,6 +5298,11 @@
       "default",
       "compact"
      ]
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
     }
    ]
   }
@@ -5284,6 +5597,11 @@
       "default",
       "muted"
      ]
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
     }
    ]
   }
@@ -5396,6 +5714,11 @@
       "default",
       "compact"
      ]
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
     }
    ]
   }
@@ -5648,6 +5971,11 @@
       "default",
       "compact"
      ]
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
     }
    ]
   }
@@ -5690,6 +6018,11 @@
       "default",
       "compact"
      ]
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
     }
    ]
   }
@@ -5919,6 +6252,11 @@
       "default",
       "muted"
      ]
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
     }
    ]
   }
@@ -6061,6 +6399,11 @@
       "none",
       "card"
      ]
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
     }
    ]
   }
@@ -6184,6 +6527,11 @@
       "default",
       "compact"
      ]
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
     }
    ]
   }
@@ -6240,6 +6588,11 @@
       "default",
       "compact"
      ]
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
     }
    ]
   }
@@ -6363,6 +6716,34 @@
     {
      "desc": "text of the skip link to the main content; none: no link",
      "name": "skip",
+     "type": "string"
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
+    }
+   ]
+  }
+ ],
+ "nav-block": [
+  {
+   "docs": "A navigation region in its own file: Block tag nav named by `label`.",
+   "part": "NavBlock",
+   "rows": [
+    {
+     "desc": "accessible name of the navigation",
+     "name": "label",
+     "type": "string"
+    },
+    {
+     "desc": "data-testid of the root",
+     "name": "testid",
+     "type": "string"
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
      "type": "string"
     }
    ]
@@ -6534,6 +6915,11 @@
       "start",
       "center"
      ]
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
     }
    ]
   }
@@ -6713,6 +7099,11 @@
       "default",
       "compact"
      ]
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
     }
    ]
   }
@@ -6783,13 +7174,18 @@
       "default",
       "compact"
      ]
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
     }
    ]
   }
  ],
  "over-media": [
   {
-   "docs": "Puts its children over a faded picture (a transparent top bar over a hero image). on false: the children alone, no wrapper.",
+   "docs": "A faded picture behind the content of its header (a transparent top bar over a hero image); on false: nothing. It sits inside the header Block, which is `relative isolate overflow-hidden` and transparent when on, so the header stays the root of the block (rule 01).",
    "part": "OverMedia",
    "rows": [
     {
@@ -6845,6 +7241,11 @@
      "name": "crumbs",
      "required": true,
      "type": "NavLink[]"
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
     }
    ]
   }
@@ -6934,6 +7335,11 @@
       "default",
       "compact"
      ]
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
     }
    ]
   }
@@ -7010,6 +7416,11 @@
       "default",
       "muted"
      ]
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
     }
    ]
   }
@@ -7067,7 +7478,7 @@
  ],
  "panel": [
   {
-   "docs": "A titled card (surface bg-card, hairline ring): the content panel of a page. An optional title, description and header actions. Pass `id` to name the section by its title.",
+   "docs": "A titled card (surface bg-card, hairline ring): the content panel of a page. An optional title, description and header actions. Pass `id` to name the panel by its title. Not a landmark: a labelled group inside the Block of its block (rule 01).",
    "part": "Panel",
    "rows": [
     {
@@ -7079,7 +7490,7 @@
      "type": "string"
     },
     {
-     "desc": "base id: the title gets `{id}-t` and the section points at it with aria-labelledby",
+     "desc": "base id: the title gets `{id}-t` and the panel points at it with aria-labelledby",
      "name": "id",
      "type": "string"
     }
@@ -7179,6 +7590,11 @@
       "default",
       "compact"
      ]
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
     }
    ]
   }
@@ -7442,6 +7858,11 @@
       "default",
       "compact"
      ]
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
     }
    ]
   }
@@ -7510,6 +7931,11 @@
       "default",
       "muted"
      ]
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
     }
    ]
   }
@@ -7663,6 +8089,11 @@
       "default",
       "muted"
      ]
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
     }
    ]
   }
@@ -7758,6 +8189,11 @@
       "default",
       "muted"
      ]
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
     }
    ]
   }
@@ -7958,6 +8394,11 @@
       "default",
       "compact"
      ]
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
     }
    ]
   }
@@ -8128,6 +8569,11 @@
       "default",
       "roomy"
      ]
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
     }
    ]
   }
@@ -8228,6 +8674,11 @@
       "default",
       "compact"
      ]
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
     }
    ]
   }
@@ -8288,6 +8739,11 @@
       "default",
       "muted"
      ]
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
     }
    ]
   }
@@ -8352,6 +8808,11 @@
       "default",
       "muted"
      ]
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
     }
    ]
   }
@@ -8415,6 +8876,11 @@
       "default",
       "compact"
      ]
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
     }
    ]
   }
@@ -8541,6 +9007,11 @@
       "default",
       "compact"
      ]
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
     }
    ]
   }
@@ -8763,6 +9234,11 @@
       "default",
       "muted"
      ]
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
     }
    ]
   }
@@ -8949,6 +9425,11 @@
       "search",
       "div"
      ]
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
     }
    ]
   }
@@ -9022,6 +9503,11 @@
       "default",
       "roomy"
      ]
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
     }
    ]
   }
@@ -9211,6 +9697,11 @@
       "2xl",
       "3xl"
      ]
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
     }
    ]
   }
@@ -9470,6 +9961,11 @@
       "full",
       "inset"
      ]
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
     }
    ]
   }
@@ -9515,6 +10011,11 @@
       "show",
       "hide"
      ]
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
     }
    ]
   }
@@ -9556,6 +10057,11 @@
       "show",
       "hide"
      ]
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
     }
    ]
   }
@@ -9642,6 +10148,11 @@
       "default",
       "muted"
      ]
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
     }
    ]
   }
@@ -9707,6 +10218,11 @@
       "default",
       "compact"
      ]
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
     }
    ]
   }
@@ -9724,6 +10240,11 @@
       "chat",
       "creator"
      ]
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
     }
    ]
   }
@@ -9784,6 +10305,11 @@
       "card",
       "plain"
      ]
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
     }
    ]
   }
@@ -9816,6 +10342,11 @@
       "default",
       "compact"
      ]
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
     }
    ]
   }
@@ -9873,6 +10404,11 @@
     },
     {
      "name": "ctaHref",
+     "type": "string"
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
      "type": "string"
     }
    ]
@@ -9943,6 +10479,11 @@
       "default",
       "compact"
      ]
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
     }
    ]
   }
@@ -10015,6 +10556,11 @@
       "default",
       "muted"
      ]
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
     }
    ]
   }
@@ -10081,6 +10627,11 @@
       "default",
       "muted"
      ]
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
     }
    ]
   }
@@ -10329,6 +10880,11 @@
       "default",
       "compact"
      ]
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
     }
    ]
   }
@@ -10401,6 +10957,11 @@
       "show",
       "hide"
      ]
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
     }
    ]
   }
@@ -10470,6 +11031,11 @@
       "default",
       "compact"
      ]
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
     }
    ]
   }
@@ -10552,6 +11118,11 @@
       "default",
       "muted"
      ]
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
     }
    ]
   }
@@ -10610,6 +11181,11 @@
       "default",
       "muted"
      ]
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
     }
    ]
   }
@@ -10721,6 +11297,11 @@
       "default",
       "muted"
      ]
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
     }
    ]
   }
@@ -10786,6 +11367,11 @@
       "default",
       "muted"
      ]
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
     }
    ]
   }
@@ -11169,6 +11755,11 @@
       "default",
       "compact"
      ]
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
     }
    ]
   }
@@ -11254,6 +11845,11 @@
       "default",
       "compact"
      ]
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
     }
    ]
   }
@@ -11329,13 +11925,18 @@
       "default",
       "compact"
      ]
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
     }
    ]
   }
  ],
  "text": [
   {
-   "docs": "Text renders a p element with body copy classes.",
+   "docs": "Text renders a p element with body copy classes, or the block or inline text element of `Tag`.",
    "part": "Text",
    "rows": [
     {
@@ -11372,6 +11973,11 @@
     {
      "desc": "adds Tailwind utilities",
      "name": "class",
+     "type": "string"
+    },
+    {
+     "desc": "p (default), blockquote, figcaption, address, pre, or an inline element (span, strong, em, ...)",
+     "name": "tag",
      "type": "string"
     },
     {
@@ -11590,6 +12196,11 @@
       "default",
       "compact"
      ]
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
     }
    ]
   }
@@ -11667,6 +12278,11 @@
       "default",
       "muted"
      ]
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
     }
    ]
   }
@@ -11719,6 +12335,11 @@
       "default",
       "compact"
      ]
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
     }
    ]
   }
@@ -11790,6 +12411,11 @@
       "default",
       "compact"
      ]
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
     }
    ]
   }
@@ -11862,6 +12488,11 @@
       "default",
       "muted"
      ]
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
     }
    ]
   }
@@ -11974,6 +12605,11 @@
       "default",
       "compact"
      ]
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
     }
    ]
   }

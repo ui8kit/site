@@ -4,7 +4,7 @@
 //
 // A template is a theme app of the monorepo (xgen theme screens): a set of pages, each a lead block and a list of blocks in fixed variants,
 // framed by a top bar and a footer. Per page: the static preview (the React page of host-react rendered with react-dom/server on the placeholder
-// content, no iframe, no runtime), the page source per runtime (host-svelte, host-react, host-vue), and the registry blocks it uses (the install
+// content, no iframe, no runtime), the page source per runtime (host-svelte, host-react, host-vue, host-solid), and the registry blocks it uses (the install
 // command). Deterministic output: previews/templates/index.json and previews/templates/<app>/<page>.html.
 import { createHash } from "node:crypto";
 import { existsSync, mkdirSync, readFileSync, readdirSync, rmSync, writeFileSync } from "node:fs";
@@ -50,7 +50,7 @@ function finish(html: string): string {
 const blockSpec: Record<string, any> = {};
 for (const f of readdirSync(path.join(SRC, "xgen/specs/blocks"))) { const b = rj(SRC, "xgen/specs/blocks", f); blockSpec[f.slice(0, -5)] = b; }
 const regOf = (key: string): string | null => { const b = blockSpec[key]; const n = b ? kebab(b.organism) : null; return n && regNames.has(n) ? n : null; };
-const EXT: Record<string, string> = { svelte: "svelte", react: "tsx", vue: "vue" };
+const EXT: Record<string, string> = { svelte: "svelte", react: "tsx", vue: "vue", solid: "tsx" };
 const at = (o: any, p: string) => p.split(".").reduce((x, k) => x?.[k], o);
 
 const problems: string[] = [];
@@ -69,7 +69,7 @@ for (const app of themeApps as any[]) {
     const blocks = [...new Set([...frame.slice(0, 1), ...uses, ...frame.slice(1)].map(regOf).filter((x): x is string => !!x))];
     for (const u of new Set([...frame, ...uses])) if (!regOf(u)) problems.push(`${app.name}/${area}: block ${u} is not in the registry`);
     const code: Record<string, { name: string; content: string }> = {};
-    for (const rt of ["svelte", "react", "vue"]) {
+    for (const rt of ["svelte", "react", "vue", "solid"]) {
       const f = path.join(SRC, `apps/host-${rt}/xgen/screens/${screen}/${comp}.${EXT[rt]}`);
       if (existsSync(f)) code[rt] = { name: `${comp}.${EXT[rt]}`, content: readFileSync(f, "utf8") };
       else problems.push(`${app.name}/${area}: no ${rt} page`);

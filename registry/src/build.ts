@@ -9,7 +9,7 @@ import { execFileSync } from "node:child_process";
 import { existsSync, mkdirSync, readdirSync, readFileSync, rmSync, statSync, writeFileSync } from "node:fs";
 import path from "node:path";
 
-export const RUNTIMES = ["svelte", "react", "vue"] as const;
+export const RUNTIMES = ["svelte", "react", "vue", "solid"] as const;
 export type Runtime = (typeof RUNTIMES)[number];
 
 type Kind = "utils" | "lib" | "primitive" | "component" | "block";
@@ -74,7 +74,7 @@ function blockMeta(): Map<string, { theme: string; group: string; docs: string }
   return map;
 }
 
-const EXT: Record<Runtime, string[]> = { svelte: [".svelte"], react: [".tsx"], vue: [".vue"] };
+const EXT: Record<Runtime, string[]> = { svelte: [".svelte"], react: [".tsx"], vue: [".vue"], solid: [".tsx"] };
 
 function buildRuntime(rt: Runtime, meta: ReturnType<typeof blockMeta>): Item[] {
   const root = path.join(SRC, "packages", rt, "ui/src");
@@ -132,7 +132,7 @@ function buildRuntime(rt: Runtime, meta: ReturnType<typeof blockMeta>): Item[] {
           const hit = resolveImport(f, spec);
           const dep = hit ? fileToKey.get(hit) : null;
           if (dep && dep !== name) deps.add(dep);
-        } else if (!["svelte", "react", "vue", "react/jsx-runtime"].includes(spec) && !spec.startsWith("svelte/") && !spec.startsWith("vue/")) {
+        } else if (!["svelte", "react", "vue", "react/jsx-runtime", "solid-js"].includes(spec) && !spec.startsWith("svelte/") && !spec.startsWith("vue/") && !spec.startsWith("solid-js/")) {
           npm.add(spec.startsWith("@") ? spec.split("/").slice(0, 2).join("/") : spec.split("/")[0]!);
         }
       }

@@ -53,6 +53,7 @@
       "description": "Recent events as a timeline or a list.",
       "name": "activity-feed",
       "registryDependencies": [
+        "block",
         "container",
         "list",
         "panel",
@@ -111,10 +112,11 @@
       "description": "A long read in one reading column, or beside a table of contents that links to the sections.",
       "name": "article-body",
       "registryDependencies": [
-        "block",
+        "box",
         "grid",
         "link",
         "list",
+        "nav-block",
         "section-frame",
         "stack",
         "text",
@@ -282,6 +284,7 @@
       "name": "chart-panel",
       "registryDependencies": [
         "bar-chart",
+        "block",
         "container",
         "meter-row",
         "panel",
@@ -315,23 +318,18 @@
       "name": "checkout-form",
       "registryDependencies": [
         "box",
-        "button",
         "cart-list",
         "cart-summary-card",
-        "checkbox",
         "checkout-step",
+        "checkout-submit",
         "field",
         "form",
         "grid",
-        "group",
         "input",
-        "label",
         "order-summary",
         "payment-options",
         "section-frame",
         "slot-grid",
-        "stack",
-        "text",
         "textarea",
         "utils"
       ],
@@ -478,7 +476,7 @@
       "registryDependencies": [
         "activity-feed",
         "bar-chart",
-        "block",
+        "box",
         "chart-panel",
         "grid",
         "metric-row",
@@ -567,7 +565,7 @@
       "description": "Questions as native disclosures.",
       "name": "faq-list",
       "registryDependencies": [
-        "block",
+        "box",
         "disclosure",
         "grid",
         "search-field",
@@ -608,7 +606,7 @@
       "registryDependencies": [
         "disclosure",
         "feature-grid",
-        "group",
+        "inline",
         "lucide-icon",
         "media-frame",
         "section-frame",
@@ -938,6 +936,7 @@
         "lucide-icon",
         "media-frame",
         "nav-bar",
+        "nav-block",
         "stack",
         "text",
         "utils"
@@ -950,7 +949,7 @@
       "description": "Key counters of a dashboard.",
       "name": "metric-row",
       "registryDependencies": [
-        "block",
+        "box",
         "grid",
         "group",
         "lucide-icon",
@@ -994,6 +993,7 @@
         "link",
         "link-plain",
         "nav-actions",
+        "nav-block",
         "nav-links",
         "over-media",
         "search-palette",
@@ -1091,9 +1091,9 @@
       "name": "photo-gallery",
       "registryDependencies": [
         "badge",
-        "block",
         "box",
         "button",
+        "figure-block",
         "group",
         "lucide-icon",
         "media-frame",
@@ -1110,6 +1110,7 @@
       "description": "A post as a card: cover picture, category, title, excerpt, author line and a read link. Axes: layout (vertical, horizontal), media (image, none), meta (full, short: the date only, news: date and title only), density.",
       "name": "post-card",
       "registryDependencies": [
+        "block",
         "box",
         "card",
         "group",
@@ -1200,6 +1201,7 @@
       "name": "pricing-card",
       "registryDependencies": [
         "badge",
+        "block",
         "box",
         "button",
         "card",
@@ -1235,6 +1237,7 @@
       "name": "product-card",
       "registryDependencies": [
         "badge",
+        "block",
         "box",
         "button",
         "card",
@@ -1309,6 +1312,7 @@
       "description": "Account settings: picture, name, email, bio and notifications.",
       "name": "profile-form",
       "registryDependencies": [
+        "block",
         "button",
         "container",
         "field",
@@ -1391,7 +1395,7 @@
       "description": "Customer reviews with ratings.",
       "name": "review-list",
       "registryDependencies": [
-        "block",
+        "article-block",
         "grid",
         "group",
         "media-frame",
@@ -1440,6 +1444,7 @@
         "lucide-icon",
         "media-frame",
         "nav-bar",
+        "nav-block",
         "stack",
         "text",
         "utils"
@@ -1453,6 +1458,7 @@
       "name": "signup-wizard",
       "registryDependencies": [
         "block",
+        "box",
         "button",
         "field",
         "form",
@@ -1477,6 +1483,7 @@
         "container",
         "group",
         "link",
+        "nav-block",
         "text",
         "utils"
       ],
@@ -1494,6 +1501,7 @@
         "group",
         "link",
         "link-plain",
+        "nav-block",
         "utils"
       ],
       "title": "Site Header",
@@ -1516,6 +1524,7 @@
         "label",
         "link",
         "mega-menu",
+        "nav-block",
         "pill",
         "stack",
         "text",
@@ -1585,6 +1594,7 @@
         "button",
         "group",
         "iconbadge",
+        "inline",
         "list",
         "lucide-icon",
         "section-frame",
@@ -1603,6 +1613,7 @@
       "name": "steps-list",
       "registryDependencies": [
         "iconbadge",
+        "inline",
         "list",
         "lucide-icon",
         "section-frame",
@@ -1666,6 +1677,7 @@
         "box",
         "button",
         "group",
+        "inline",
         "lucide-icon",
         "media-frame",
         "milestone-timeline",
@@ -1673,7 +1685,6 @@
         "stack",
         "story-dots",
         "story-panel",
-        "text",
         "utils"
       ],
       "title": "Story Tabs",
@@ -1724,6 +1735,7 @@
         "grid",
         "group",
         "iconbadge",
+        "inline",
         "lucide-icon",
         "media-frame",
         "presets",
@@ -1806,9 +1818,9 @@
       "description": "Customer videos as thumbnails with a play button. Playing is a port contract (VideoEmbed).",
       "name": "video-grid",
       "registryDependencies": [
-        "block",
         "box",
         "button",
+        "figure-block",
         "grid",
         "lucide-icon",
         "media-frame",
@@ -1878,7 +1890,7 @@
       "registryDependencies": [
         "activity-feed",
         "bar-chart",
-        "block",
+        "box",
         "chart-panel",
         "dashboard-overview",
         "grid",
@@ -1891,6 +1903,17 @@
         "utils"
       ],
       "title": "App Main",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "A self-contained item (a review, a card, a project) in its own file: Block tag article.",
+      "name": "article-block",
+      "registryDependencies": [
+        "block",
+        "utils"
+      ],
+      "title": "Article Block",
       "type": "registry:component"
     },
     {
@@ -1926,10 +1949,10 @@
     },
     {
       "dependencies": [],
-      "description": "Something behind the children: a faint full-size picture (image), or nothing (none: the children as they are, no wrapper).",
+      "description": "A faint full-size picture behind the content of its section (image), or nothing (none). It sits inside the Block of the block, which `behind` makes `relative isolate overflow-hidden`, so the section stays the root of the block (rule 01).",
       "name": "backdrop",
       "registryDependencies": [
-        "block",
+        "box",
         "media-frame",
         "utils"
       ],
@@ -1952,7 +1975,6 @@
       "description": "A row of vertical bars (sales by day, orders by week) with a caption under each bar. The chart is one image for assistive technology: `label` carries the summary, the bar values are in the captions and titles.",
       "name": "bar-chart",
       "registryDependencies": [
-        "block",
         "box",
         "text",
         "utils"
@@ -1965,7 +1987,7 @@
       "description": "The \"N selected\" bar of a list: a count, a clear button and the bulk actions (children). All text comes in through props.",
       "name": "bulk-bar",
       "registryDependencies": [
-        "block",
+        "box",
         "button",
         "inline",
         "lucide-icon",
@@ -2035,10 +2057,25 @@
     },
     {
       "dependencies": [],
+      "description": "The end of the checkout form: the consent checkbox, the submit button and the legal line.",
+      "name": "checkout-submit",
+      "registryDependencies": [
+        "button",
+        "checkbox",
+        "group",
+        "label",
+        "stack",
+        "text",
+        "utils"
+      ],
+      "title": "Checkout Submit",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
       "description": "A terminal or code window: a title bar with three round marks, then the lines. A `command` line starts with the prompt, an `output` line is muted. Static: the typing animation belongs to the port (TypingText contract).",
       "name": "code-window",
       "registryDependencies": [
-        "block",
         "box",
         "inline",
         "list",
@@ -2132,7 +2169,7 @@
       "description": "An editor file tab (40 px high): a file icon, the label and a close button. `preview` marks a tab that is not pinned yet. Keyboard (Enter and Space activate, Delete closes) is the programmer's behind the click and close events.",
       "name": "editor-tab",
       "registryDependencies": [
-        "block",
+        "box",
         "button",
         "inline",
         "lucide-icon",
@@ -2146,7 +2183,7 @@
       "description": "Empty list or nothing found: a round icon, a title, a hint and an optional action.",
       "name": "empty-state",
       "registryDependencies": [
-        "block",
+        "box",
         "iconbadge",
         "lucide-icon",
         "text",
@@ -2160,8 +2197,8 @@
       "description": "The questions of FaqSplit as cards: the topic, the question, the answer and a read-more link; with an icon square on top in the icons shape. Shapes: grid3, grid4, icons (three columns).",
       "name": "faq-cards",
       "registryDependencies": [
+        "article-block",
         "badge",
-        "block",
         "box",
         "faq-split",
         "link",
@@ -2323,7 +2360,7 @@
       "description": "A form field: label, control (children), hint and error text. `htmlFor` ties the label to the id of the control.",
       "name": "field",
       "registryDependencies": [
-        "block",
+        "box",
         "label",
         "text",
         "utils"
@@ -2333,10 +2370,21 @@
     },
     {
       "dependencies": [],
+      "description": "Self-contained content with an optional caption (a quote, a picture, a stat) in its own file: Block tag figure.",
+      "name": "figure-block",
+      "registryDependencies": [
+        "block",
+        "utils"
+      ],
+      "title": "Figure Block",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
       "description": "The list of a file tree. Put FileTreeItem in it. Arrow keys and type-ahead: attach `moveFocus` and `typeahead` from the utils to the keydown (vertical, no loop).",
       "name": "file-tree",
       "registryDependencies": [
-        "block",
+        "box",
         "utils"
       ],
       "title": "File Tree",
@@ -2384,6 +2432,7 @@
         "list",
         "lucide-icon",
         "mega-menu",
+        "nav-block",
         "presets",
         "stack",
         "text",
@@ -2551,6 +2600,7 @@
         "link",
         "link-plain",
         "nav-bar",
+        "nav-block",
         "presets",
         "utils"
       ],
@@ -2562,8 +2612,8 @@
       "description": "What HeroSplit shows under the lead: three figures in cards, a row of faces with a proof line, two small feature cards, or a quote with its author over three figures.",
       "name": "hero-split-extras",
       "registryDependencies": [
-        "block",
         "box",
+        "figure-block",
         "group",
         "hero-split",
         "lucide-icon",
@@ -2580,8 +2630,8 @@
       "description": "What HeroSplit shows beside the text: a picture, a picture with a floating card, a grid of four pictures with captions, or a picture with two plan cards floating over it.",
       "name": "hero-split-media",
       "registryDependencies": [
-        "block",
         "box",
+        "figure-block",
         "group",
         "hero-split",
         "lucide-icon",
@@ -2610,7 +2660,7 @@
       "description": "A row of icon-only tabs (a file tree pane: Files, Search, Apps). Put IconTab in it. Arrow keys: attach `moveFocus` from the utils to the keydown of the row (orientation horizontal, activate).",
       "name": "icon-tabs",
       "registryDependencies": [
-        "block",
+        "box",
         "utils"
       ],
       "title": "Icon Tabs",
@@ -2642,7 +2692,7 @@
       "description": "The brand row of a sidebar: a mark and the product name on the left, trailing actions on the right. The variant picks the padding (recipe).",
       "name": "logo-sidebar",
       "registryDependencies": [
-        "block",
+        "box",
         "inline",
         "utils"
       ],
@@ -2791,7 +2841,6 @@
       "description": "A name, a value caption and a progress bar (completeness by section, issues by rule, stock by warehouse). With `href` the whole row is a link.",
       "name": "meter-row",
       "registryDependencies": [
-        "block",
         "box",
         "form",
         "link",
@@ -2810,6 +2859,17 @@
         "utils"
       ],
       "title": "Nav Actions",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "A navigation region in its own file: Block tag nav named by `label`.",
+      "name": "nav-block",
+      "registryDependencies": [
+        "block",
+        "utils"
+      ],
+      "title": "Nav Block",
       "type": "registry:component"
     },
     {
@@ -2855,7 +2915,7 @@
       "description": "A short confirmation toast: fixed bottom right, read out by screen readers through role status. Empty text renders nothing visible.",
       "name": "notice",
       "registryDependencies": [
-        "block",
+        "box",
         "lucide-icon",
         "text",
         "utils"
@@ -2910,10 +2970,10 @@
     },
     {
       "dependencies": [],
-      "description": "Puts its children over a faded picture (a transparent top bar over a hero image). on false: the children alone, no wrapper.",
+      "description": "A faded picture behind the content of its header (a transparent top bar over a hero image); on false: nothing. It sits inside the header Block, which is `relative isolate overflow-hidden` and transparent when on, so the header stays the root of the block (rule 01).",
       "name": "over-media",
       "registryDependencies": [
-        "block",
+        "box",
         "media-frame",
         "utils"
       ],
@@ -2957,7 +3017,6 @@
       "description": "The page heading: a title, a one-line summary and the action buttons on the right (below on phones).",
       "name": "page-header",
       "registryDependencies": [
-        "block",
         "box",
         "text",
         "title",
@@ -2971,7 +3030,7 @@
       "description": "The list footer: a summary line and previous / next page buttons. With `numbered` it shows page numbers (1 … 4 5 6 … 21), with `moreLabel` a \"Load more\" button. The current page is a plain element marked aria-current=\"page\"; the others are buttons. All text comes in through props",
       "name": "pager",
       "registryDependencies": [
-        "block",
+        "box",
         "button",
         "inline",
         "lucide-icon",
@@ -2982,10 +3041,9 @@
     },
     {
       "dependencies": [],
-      "description": "A titled card (surface bg-card, hairline ring): the content panel of a page. An optional title, description and header actions. Pass `id` to name the section by its title.",
+      "description": "A titled card (surface bg-card, hairline ring): the content panel of a page. An optional title, description and header actions. Pass `id` to name the panel by its title. Not a landmark: a labelled group inside the Block of its block (rule 01).",
       "name": "panel",
       "registryDependencies": [
-        "block",
         "box",
         "text",
         "title",
@@ -3000,11 +3058,10 @@
       "name": "payment-options",
       "registryDependencies": [
         "grid",
+        "inline",
         "label",
         "lucide-icon",
         "radio",
-        "stack",
-        "text",
         "utils"
       ],
       "title": "Payment Options",
@@ -3015,7 +3072,7 @@
       "description": "A status pill: a tinted label with an icon (published, draft, role, comment state).",
       "name": "pill",
       "registryDependencies": [
-        "block",
+        "box",
         "inline",
         "lucide-icon",
         "utils"
@@ -3162,8 +3219,8 @@
       "description": "The projects of ProjectGrid as tiles: cards (picture, featured badge, category and year, title, summary, tags, two links), compact cards in four columns, captions over the pictures, or a bento where the first project takes a big tile.",
       "name": "project-tiles",
       "registryDependencies": [
+        "article-block",
         "badge",
-        "block",
         "box",
         "group",
         "link",
@@ -3199,7 +3256,7 @@
       "description": "One customer quote of TestimonialGrid: a card, a plain figure or a social post, with the author's picture, the stars and a company glyph as `item` says.",
       "name": "quote-card",
       "registryDependencies": [
-        "block",
+        "figure-block",
         "group",
         "inline",
         "lucide-icon",
@@ -3290,7 +3347,7 @@
       "description": "A from–to pair for numbers or dates (price range, period). Empty means an open end. With numeric bounds two sliders sit above the inputs. Each control has its own accessible name; every change reports both ends.",
       "name": "range-field",
       "registryDependencies": [
-        "block",
+        "box",
         "inline",
         "input",
         "range",
@@ -3304,7 +3361,7 @@
       "description": "One to five stars (a review's grade, the average of a product). The value is read as the label; the stars themselves are decoration.",
       "name": "rating",
       "registryDependencies": [
-        "block",
+        "box",
         "lucide-icon",
         "utils"
       ],
@@ -3327,7 +3384,7 @@
       "description": "A search input with a magnifier. `value` fires on every keystroke with the new text.",
       "name": "search-field",
       "registryDependencies": [
-        "block",
+        "box",
         "input",
         "lucide-icon",
         "utils"
@@ -3443,6 +3500,7 @@
         "dashboard-shell",
         "link",
         "list",
+        "nav-block",
         "text",
         "utils"
       ],
@@ -3463,6 +3521,7 @@
         "link",
         "list",
         "lucide-icon",
+        "nav-block",
         "text",
         "utils"
       ],
@@ -3483,6 +3542,7 @@
         "list",
         "lucide-icon",
         "media-frame",
+        "nav-block",
         "search-palette",
         "text",
         "utils"
@@ -3539,7 +3599,6 @@
       "description": "A dashboard counter: an icon, a big number, a caption. With `href` the whole tile is a link, without it the tile is a plain figure.",
       "name": "stat-tile",
       "registryDependencies": [
-        "block",
         "box",
         "iconbadge",
         "link",
@@ -3587,7 +3646,7 @@
       "description": "A segmented switcher: a tab list whose items (SwitcherItem) share size and layout. Canary handed these down through context; here each item takes the same two props. Arrow keys: attach `moveFocus` to the keydown (horizontal, activate).",
       "name": "switcher",
       "registryDependencies": [
-        "block",
+        "box",
         "utils"
       ],
       "title": "Switcher",
@@ -3609,7 +3668,7 @@
       "description": "The toolbar above a table: search and filter controls on the left (children), the actions on the right (`actions`). One tab stop group (role toolbar).",
       "name": "table-toolbar",
       "registryDependencies": [
-        "block",
+        "box",
         "inline",
         "utils"
       ],
@@ -3621,7 +3680,6 @@
       "description": "A vertical list of events (an order's history): a dot on a line, the title, an optional text and the time. Newest first or oldest first is the caller's order.",
       "name": "timeline",
       "registryDependencies": [
-        "block",
         "box",
         "inline",
         "list",
@@ -3704,7 +3762,7 @@
     },
     {
       "dependencies": [],
-      "description": "Block is a top-level page landmark (main, header, section, nav, …). Use for document structure; do not nest Block inside Block.",
+      "description": "Block is the one semantic root of a file (div, section, article, aside, header, footer, main, nav, figure, search, hgroup). Any file (block, composite, screen) may open on one Block; never nest Block inside Block in one file, never repeat it in a loop.",
       "name": "block",
       "registryDependencies": [
         "slot",
@@ -4043,7 +4101,7 @@
     },
     {
       "dependencies": [],
-      "description": "Text renders a paragraph of body copy. Use Inline for inline span copy and Title (as 1–6) for headings.",
+      "description": "Text renders body copy: a paragraph by default; Tag picks another text element (blockquote, figcaption, address, pre, or an inline element). Title (as 1–6) is for headings.",
       "name": "text",
       "registryDependencies": [
         "slot",
@@ -4085,7 +4143,7 @@
       "type": "registry:utils"
     }
   ],
-  "lastUpdated": "2026-10-11T23:04:31+03:00",
+  "lastUpdated": "2026-10-13T21:35:03+03:00",
   "registry": "ui",
   "version": "0.1.0"
 }

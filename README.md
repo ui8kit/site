@@ -1,6 +1,6 @@
 # ui8kit/site
 
-Registry, tooling and static docs site for **ui8kit** (shadcn-style blocks and primitives for Svelte, React and Vue).
+Registry, tooling and static docs site for **ui8kit** (shadcn-style blocks and primitives for Svelte, React, Vue and Solid).
 
 - `r/`: the registry for all runtimes, consumed by the [`ui8kit` CLI](https://github.com/ui8kit/cli) (`npx ui8kit add <name>`)
 - `registry/`: Bun/TS tooling that builds `r/` from the generated packages of the private source monorepo

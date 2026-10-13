@@ -25,7 +25,7 @@ jobs:
           (cd npm-pkg && npm pkg set version="${{ inputs.version }}" && npm pack --dry-run)
       - name: GitHub Release
         if: ${{ inputs.publish_release }}
-        run: gh release create "r-v${{ inputs.version }}" r.tar.gz r.tar.gz.sha256 --title "registry ${{ inputs.version }}" --notes "ui8kit registry r/ (svelte, react, vue)"
+        run: gh release create "r-v${{ inputs.version }}" r.tar.gz r.tar.gz.sha256 --title "registry ${{ inputs.version }}" --notes "ui8kit registry r/ (svelte, react, vue, solid)"
         env: { GH_TOKEN: "${{ github.token }}" }
       - name: npm publish
         if: ${{ inputs.publish_npm }}

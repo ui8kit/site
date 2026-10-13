@@ -4,7 +4,7 @@ description: "Install your first ui8kit block in a Svelte, React or Vue app in t
 order: 1
 ---
 ui8kit is a **shadcn-style registry**: the CLI copies source files into your app, so Tailwind sees every class and you own the code.
-Each item exists for **Svelte, React and Vue**; this site only shows the code and the install command.
+Each item exists for **Svelte, React, Vue and Solid**; this site only shows the code and the install command.
 
 ## 1. Point the CLI at a runtime
 

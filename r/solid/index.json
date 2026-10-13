@@ -1,0 +1,4127 @@
+{
+  "$schema": "https://ui.buildy.tw/schema/registry.json",
+  "categories": [
+    "lib",
+    "utils",
+    "ui",
+    "components",
+    "blocks"
+  ],
+  "components": [
+    {
+      "dependencies": [],
+      "description": "The culture: a strip of pictures, figures and values.",
+      "name": "about-company",
+      "registryDependencies": [
+        "box",
+        "feature-grid",
+        "grid",
+        "group",
+        "lucide-icon",
+        "media-frame",
+        "section-frame",
+        "stack",
+        "stats-band",
+        "text",
+        "utils"
+      ],
+      "title": "About Company",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "A personal about section beside a portrait: key facts or skills.",
+      "name": "about-me",
+      "registryDependencies": [
+        "action-group",
+        "error-page",
+        "form",
+        "group",
+        "list",
+        "media-frame",
+        "product-info",
+        "section-frame",
+        "stack",
+        "text",
+        "utils"
+      ],
+      "title": "About Me",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "Recent events as a timeline or a list.",
+      "name": "activity-feed",
+      "registryDependencies": [
+        "block",
+        "container",
+        "list",
+        "panel",
+        "stack",
+        "text",
+        "timeline",
+        "utils"
+      ],
+      "title": "Activity Feed",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "A thin strip above the page with one sentence and a link.",
+      "name": "announcement-bar",
+      "registryDependencies": [
+        "block",
+        "button",
+        "container",
+        "group",
+        "inline",
+        "link-plain",
+        "lucide-icon",
+        "text",
+        "utils"
+      ],
+      "title": "Announcement Bar",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "The frame of a signed-in app with a first screen: a sidebar, a top bar, or three panes.",
+      "name": "app-shell",
+      "registryDependencies": [
+        "activity-feed",
+        "app-main",
+        "block",
+        "chart-panel",
+        "container",
+        "dashboard-overview",
+        "grid",
+        "list",
+        "metric-row",
+        "nav-bar",
+        "panel",
+        "sidebar-nav",
+        "stack",
+        "text",
+        "utils"
+      ],
+      "title": "App Shell",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "A long read in one reading column, or beside a table of contents that links to the sections.",
+      "name": "article-body",
+      "registryDependencies": [
+        "box",
+        "grid",
+        "link",
+        "list",
+        "nav-block",
+        "section-frame",
+        "stack",
+        "text",
+        "title",
+        "utils"
+      ],
+      "title": "Article Body",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "Sign in, sign up and reset password.",
+      "name": "auth-card",
+      "registryDependencies": [
+        "auth-form",
+        "block",
+        "button",
+        "group",
+        "link",
+        "lucide-icon",
+        "separator",
+        "stack",
+        "text",
+        "title",
+        "utils"
+      ],
+      "title": "Auth Card",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "A whole sign-in page: the card beside a picture panel, on a tinted page, or alone; with any mode of the card.",
+      "name": "auth-layout",
+      "registryDependencies": [
+        "auth-card",
+        "block",
+        "box",
+        "container",
+        "grid",
+        "media-frame",
+        "stack",
+        "text",
+        "title",
+        "utils"
+      ],
+      "title": "Auth Layout",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "Two sides of the same points: how it was and how it is, as two cards or as rows.",
+      "name": "before-after",
+      "registryDependencies": [
+        "card",
+        "grid",
+        "group",
+        "list",
+        "lucide-icon",
+        "section-frame",
+        "stack",
+        "text",
+        "title",
+        "utils"
+      ],
+      "title": "Before After",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "Tiles of different sizes in one grid; the large tiles hold the main features.",
+      "name": "bento-grid",
+      "registryDependencies": [
+        "card",
+        "grid",
+        "lucide-icon",
+        "media-frame",
+        "section-frame",
+        "text",
+        "title",
+        "utils"
+      ],
+      "title": "Bento Grid",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "An app-style tab bar for a phone: an icon over a name, the current tab marked.",
+      "name": "bottom-nav",
+      "registryDependencies": [
+        "block",
+        "inline",
+        "link",
+        "list",
+        "lucide-icon",
+        "nav-bar",
+        "utils"
+      ],
+      "title": "Bottom Nav",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "The cart drawer in its open state, filled or empty.",
+      "name": "cart-drawer",
+      "registryDependencies": [
+        "block",
+        "box",
+        "button",
+        "cart-list",
+        "container",
+        "drawer-lines",
+        "group",
+        "lucide-icon",
+        "order-summary",
+        "stack",
+        "text",
+        "title",
+        "utils"
+      ],
+      "title": "Cart Drawer",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "The lines of a cart as a table or as cards.",
+      "name": "cart-list",
+      "registryDependencies": [
+        "button",
+        "card",
+        "cart-table",
+        "lucide-icon",
+        "media-frame",
+        "number-field",
+        "section-frame",
+        "stack",
+        "text",
+        "utils"
+      ],
+      "title": "Cart List",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "Categories as chips, a bar, a side list, tiles, or chips under a toolbar.",
+      "name": "category-nav",
+      "registryDependencies": [
+        "block",
+        "container",
+        "group",
+        "inline",
+        "link",
+        "list",
+        "lucide-icon",
+        "search-field",
+        "select",
+        "text",
+        "utils"
+      ],
+      "title": "Category Nav",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "Orders per day as bars or meters.",
+      "name": "chart-panel",
+      "registryDependencies": [
+        "bar-chart",
+        "block",
+        "container",
+        "meter-row",
+        "panel",
+        "stack",
+        "utils"
+      ],
+      "title": "Chart Panel",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "Tasks to finish after sign-up, with progress.",
+      "name": "checklist",
+      "registryDependencies": [
+        "disclosure",
+        "form",
+        "iconbadge",
+        "list",
+        "lucide-icon",
+        "section-frame",
+        "stack",
+        "text",
+        "utils"
+      ],
+      "title": "Checklist",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "Contacts, address, a window and the payment beside a sticky order summary.",
+      "name": "checkout-form",
+      "registryDependencies": [
+        "box",
+        "cart-list",
+        "cart-summary-card",
+        "checkout-step",
+        "checkout-submit",
+        "field",
+        "form",
+        "grid",
+        "input",
+        "order-summary",
+        "payment-options",
+        "section-frame",
+        "slot-grid",
+        "textarea",
+        "utils"
+      ],
+      "title": "Checkout Form",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "Plans, or a product and its rivals, in columns, and the features in rows; yes and no as marks.",
+      "name": "comparison-table",
+      "registryDependencies": [
+        "box",
+        "compare-mark",
+        "section-frame",
+        "table",
+        "utils"
+      ],
+      "title": "Comparison Table",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "A message form, alone or beside the ways to reach us.",
+      "name": "contact-form",
+      "registryDependencies": [
+        "button",
+        "checkbox",
+        "feature-grid",
+        "field",
+        "form",
+        "grid",
+        "group",
+        "input",
+        "label",
+        "lucide-icon",
+        "section-frame",
+        "stack",
+        "text",
+        "textarea",
+        "utils"
+      ],
+      "title": "Contact Form",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "A consent notice with accept and decline buttons.",
+      "name": "cookie-banner",
+      "registryDependencies": [
+        "block",
+        "box",
+        "button",
+        "container",
+        "group",
+        "lucide-icon",
+        "stack",
+        "text",
+        "title",
+        "utils"
+      ],
+      "title": "Cookie Banner",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "One-off packs of credits with a price: tiles in two or four columns, or rows.",
+      "name": "credit-packs",
+      "registryDependencies": [
+        "badge",
+        "box",
+        "button",
+        "card",
+        "grid",
+        "section-frame",
+        "stack",
+        "text",
+        "title",
+        "utils"
+      ],
+      "title": "Credit Packs",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "A closing call to action.",
+      "name": "cta-band",
+      "registryDependencies": [
+        "block",
+        "card",
+        "container",
+        "cta-actions",
+        "cta-banner",
+        "media-frame",
+        "quote-proof",
+        "section-frame",
+        "stack",
+        "text",
+        "title",
+        "utils"
+      ],
+      "title": "Cta Band",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "A centered closing card: heading, one sentence and a pill button. Sizes from the default preset.",
+      "name": "cta-banner",
+      "registryDependencies": [
+        "block",
+        "box",
+        "button",
+        "presets",
+        "text",
+        "title",
+        "utils"
+      ],
+      "title": "Cta Banner",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "A call to action with logos, features, figures, icon rows or delivery zones; centered or beside a picture.",
+      "name": "cta-proof",
+      "registryDependencies": [
+        "action-group",
+        "cta-proof-items",
+        "error-page",
+        "feature-grid",
+        "logo-cloud",
+        "media-frame",
+        "section-frame",
+        "stats-band",
+        "text",
+        "utils",
+        "zone-table"
+      ],
+      "title": "Cta Proof",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "Counters, a chart and recent activity in one section.",
+      "name": "dashboard-overview",
+      "registryDependencies": [
+        "activity-feed",
+        "bar-chart",
+        "box",
+        "chart-panel",
+        "grid",
+        "metric-row",
+        "panel",
+        "section-frame",
+        "stack",
+        "stat-tile",
+        "timeline",
+        "utils"
+      ],
+      "title": "Dashboard Overview",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "Twelve frames of a signed-in app around empty cards: a top bar across the shell or over the content, with or without search; a wide, rail, collapsed, two-level or no sidebar, at the start or the end; a footer across the shell, under the content or none.",
+      "name": "dashboard-shell",
+      "registryDependencies": [
+        "block",
+        "box",
+        "nav-bar",
+        "shell-content",
+        "shell-footer",
+        "shell-sidebar",
+        "shell-topbar",
+        "utils"
+      ],
+      "title": "Dashboard Shell",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "How delivery works: the facts, then the zones.",
+      "name": "delivery-info",
+      "registryDependencies": [
+        "badge",
+        "box",
+        "feature-grid",
+        "grid",
+        "group",
+        "lucide-icon",
+        "section-frame",
+        "stack",
+        "text",
+        "title",
+        "utils",
+        "zone-table"
+      ],
+      "title": "Delivery Info",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "A list with nothing in it, with an optional action.",
+      "name": "empty-panel",
+      "registryDependencies": [
+        "block",
+        "button",
+        "container",
+        "empty-state",
+        "media-frame",
+        "stack",
+        "text",
+        "title",
+        "utils"
+      ],
+      "title": "Empty Panel",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "A page for something that went wrong, such as a missing page: a code, a heading, a sentence and the way back.",
+      "name": "error-page",
+      "registryDependencies": [
+        "action-group",
+        "media-frame",
+        "section-frame",
+        "text",
+        "utils"
+      ],
+      "title": "Error Page",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "Questions as native disclosures.",
+      "name": "faq-list",
+      "registryDependencies": [
+        "box",
+        "disclosure",
+        "grid",
+        "search-field",
+        "section-frame",
+        "stack",
+        "switcher",
+        "switcher-item",
+        "text",
+        "utils"
+      ],
+      "title": "Faq List",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "Questions beside the heading, a help card, a picture or a finder, or as cards in three or four columns.",
+      "name": "faq-split",
+      "registryDependencies": [
+        "box",
+        "button",
+        "faq-cards",
+        "faq-disclosures",
+        "faq-finder",
+        "faq-help",
+        "faq-list",
+        "feature-grid",
+        "media-frame",
+        "section-frame",
+        "utils"
+      ],
+      "title": "Faq Split",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "Features as a list of disclosures, the first one open, with an optional picture.",
+      "name": "feature-accordion",
+      "registryDependencies": [
+        "disclosure",
+        "feature-grid",
+        "inline",
+        "lucide-icon",
+        "media-frame",
+        "section-frame",
+        "stack",
+        "text",
+        "utils"
+      ],
+      "title": "Feature Accordion",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "Features as cards, tiles or rows with a picture.",
+      "name": "feature-grid",
+      "registryDependencies": [
+        "feature-cards",
+        "feature-rows",
+        "group",
+        "link",
+        "presets",
+        "section-frame",
+        "title",
+        "utils"
+      ],
+      "title": "Feature Grid",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "Cards with a picture on top and a read link, or with a muted glyph panel on top like an index of categories, in three or four columns.",
+      "name": "feature-showcase",
+      "registryDependencies": [
+        "box",
+        "card",
+        "feature-grid",
+        "link",
+        "lucide-icon",
+        "media-frame",
+        "section-frame",
+        "text",
+        "title",
+        "utils"
+      ],
+      "title": "Feature Showcase",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "Features beside a picture: plain in two columns, as cards with actions, two figures over checked rows, or four metric cards with actions.",
+      "name": "feature-split",
+      "registryDependencies": [
+        "action-group",
+        "error-page",
+        "feature-cards",
+        "feature-grid",
+        "feature-metric-cards",
+        "feature-pairs",
+        "feature-stat-rows",
+        "media-frame",
+        "section-frame",
+        "stats-band",
+        "utils"
+      ],
+      "title": "Feature Split",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "A picture that stays in view beside a list of features. Following the section being read is a port contract (ScrollSpy).",
+      "name": "feature-sticky",
+      "registryDependencies": [
+        "box",
+        "feature-grid",
+        "grid",
+        "lucide-icon",
+        "media-frame",
+        "section-frame",
+        "stack",
+        "text",
+        "title",
+        "utils"
+      ],
+      "title": "Feature Sticky",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "Features as tabs; the chosen one fills the panel beside or below the tab list.",
+      "name": "feature-tabs",
+      "registryDependencies": [
+        "feature-grid",
+        "grid",
+        "lucide-icon",
+        "media-frame",
+        "section-frame",
+        "stack",
+        "switcher",
+        "switcher-item",
+        "text",
+        "title",
+        "utils"
+      ],
+      "title": "Feature Tabs",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "The brand with figures and a sitemap link over link-group cards; or a split beside a picture with points, link columns, a newsletter card, the contacts or the community channels.",
+      "name": "footer-split",
+      "registryDependencies": [
+        "action-group",
+        "block",
+        "box",
+        "container",
+        "feature-grid",
+        "footer-brand",
+        "footer-channels",
+        "footer-contacts",
+        "footer-figures",
+        "footer-group-cards",
+        "footer-link-columns",
+        "footer-points",
+        "footer-signup-card",
+        "group",
+        "link",
+        "lucide-icon",
+        "media-frame",
+        "mega-menu",
+        "stack",
+        "stats-band",
+        "text",
+        "utils"
+      ],
+      "title": "Footer Split",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "Heading, lead, one or two actions and optional media.",
+      "name": "hero-classic",
+      "registryDependencies": [
+        "action-group",
+        "backdrop",
+        "box",
+        "button",
+        "code-window",
+        "cta-actions",
+        "grid",
+        "group",
+        "input",
+        "label",
+        "media-frame",
+        "section-frame",
+        "topic-chips",
+        "utils"
+      ],
+      "title": "Hero Classic",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "Heading, lead, one or two actions and optional media.",
+      "name": "hero-prompt",
+      "registryDependencies": [
+        "action-group",
+        "block",
+        "container",
+        "cta-actions",
+        "hero-badge",
+        "hero-head",
+        "nav-bar",
+        "presets",
+        "prompt-composer",
+        "stack",
+        "topic-chips",
+        "utils",
+        "weighted-title"
+      ],
+      "title": "Hero Prompt",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "A split hero with figures, faces, small cards or a quote under the lead, beside a picture, a floating card, a picture grid or plan cards.",
+      "name": "hero-split",
+      "registryDependencies": [
+        "action-group",
+        "error-page",
+        "feature-grid",
+        "hero-split-extras",
+        "hero-split-media",
+        "pricing-card",
+        "section-frame",
+        "stats-band",
+        "store-hero",
+        "testimonial-grid",
+        "utils"
+      ],
+      "title": "Hero Split",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "Many small features as icons with a name: tiles or chips in three to six columns.",
+      "name": "icon-wall",
+      "registryDependencies": [
+        "box",
+        "feature-grid",
+        "grid",
+        "lucide-icon",
+        "section-frame",
+        "text",
+        "utils"
+      ],
+      "title": "Icon Wall",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "Open jobs as cards, grouped by department, or as a table.",
+      "name": "job-board",
+      "registryDependencies": [
+        "badge",
+        "group",
+        "job-cards",
+        "link",
+        "list",
+        "section-frame",
+        "stack",
+        "text",
+        "title",
+        "utils"
+      ],
+      "title": "Job Board",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "Work items in lanes with a count; cards with a tag and a person. Moving cards is a port contract (SortableList).",
+      "name": "kanban-board",
+      "registryDependencies": [
+        "grid",
+        "group",
+        "list",
+        "pill",
+        "section-frame",
+        "stack",
+        "text",
+        "title",
+        "utils"
+      ],
+      "title": "Kanban Board",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "Customers and partners as glyphs with names.",
+      "name": "logo-cloud",
+      "registryDependencies": [
+        "grid",
+        "group",
+        "logo-ribbon",
+        "lucide-icon",
+        "section-frame",
+        "text",
+        "utils"
+      ],
+      "title": "Logo Cloud",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "A heading over one centered row of logo slots (LogoSlot); the row and slot sizes come from the default preset.",
+      "name": "logo-ribbon",
+      "registryDependencies": [
+        "group",
+        "logo-cloud",
+        "logo-slot",
+        "presets",
+        "section-frame",
+        "stack",
+        "title",
+        "utils"
+      ],
+      "title": "Logo Ribbon",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "Four figures, figures with a featured review, numbered steps, the latest posts, topic rows, or contact buttons with support figures, beside a picture.",
+      "name": "media-list",
+      "registryDependencies": [
+        "action-group",
+        "category-nav",
+        "error-page",
+        "feature-grid",
+        "media-contacts",
+        "media-figures",
+        "media-frame",
+        "media-posts",
+        "media-review",
+        "media-steps",
+        "media-topics",
+        "post-card",
+        "review-list",
+        "section-frame",
+        "stats-band",
+        "steps-list",
+        "utils"
+      ],
+      "title": "Media List",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "A top bar whose first item opens a wide panel of link groups, with an optional promo card.",
+      "name": "mega-menu",
+      "registryDependencies": [
+        "block",
+        "box",
+        "button-plain",
+        "container",
+        "grid",
+        "group",
+        "link",
+        "list",
+        "lucide-icon",
+        "media-frame",
+        "nav-bar",
+        "nav-block",
+        "stack",
+        "text",
+        "utils"
+      ],
+      "title": "Mega Menu",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "Key counters of a dashboard.",
+      "name": "metric-row",
+      "registryDependencies": [
+        "box",
+        "grid",
+        "group",
+        "lucide-icon",
+        "section-frame",
+        "stack",
+        "stat-tile",
+        "text",
+        "utils"
+      ],
+      "title": "Metric Row",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "Milestones on a vertical line beside a picture, in a narrow column, or in a row.",
+      "name": "milestone-timeline",
+      "registryDependencies": [
+        "badge",
+        "group",
+        "inline",
+        "list",
+        "media-frame",
+        "section-frame",
+        "text",
+        "title",
+        "utils"
+      ],
+      "title": "Milestone Timeline",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "A top bar in four shapes: inline, split around the brand, with a search field, and transparent over a picture.",
+      "name": "nav-bar",
+      "registryDependencies": [
+        "block",
+        "box",
+        "container",
+        "grid",
+        "group",
+        "link",
+        "link-plain",
+        "nav-actions",
+        "nav-block",
+        "nav-links",
+        "over-media",
+        "search-palette",
+        "utils"
+      ],
+      "title": "Nav Bar",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "An email field and a button, inline, stacked or beside a picture.",
+      "name": "newsletter-form",
+      "registryDependencies": [
+        "button",
+        "form",
+        "group",
+        "input",
+        "label",
+        "media-frame",
+        "section-frame",
+        "text",
+        "utils"
+      ],
+      "title": "Newsletter Form",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "Subtotal, shipping, tax and the total.",
+      "name": "order-summary",
+      "registryDependencies": [
+        "box",
+        "button",
+        "inline",
+        "list",
+        "section-frame",
+        "stack",
+        "text",
+        "utils"
+      ],
+      "title": "Order Summary",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "Past orders with status.",
+      "name": "order-table",
+      "registryDependencies": [
+        "card",
+        "order-rows",
+        "pager",
+        "pill",
+        "section-frame",
+        "stack",
+        "text",
+        "utils"
+      ],
+      "title": "Order Table",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "The head of an inner page: the heading, one sentence and an optional action.",
+      "name": "page-intro",
+      "registryDependencies": [
+        "action-group",
+        "section-frame",
+        "utils"
+      ],
+      "title": "Page Intro",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "Breadcrumbs over the badge, the heading and the lead; with one large figure, a note card or four key facts at the end.",
+      "name": "page-trail",
+      "registryDependencies": [
+        "block",
+        "box",
+        "container",
+        "nav-bar",
+        "page-aside",
+        "page-crumbs",
+        "section-header",
+        "stack",
+        "stats-band",
+        "utils"
+      ],
+      "title": "Page Trail",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "Photos in a grid, a masonry, a mosaic, a featured picture with thumbnails, or cards.",
+      "name": "photo-gallery",
+      "registryDependencies": [
+        "badge",
+        "box",
+        "button",
+        "figure-block",
+        "group",
+        "lucide-icon",
+        "media-frame",
+        "section-frame",
+        "stack",
+        "text",
+        "utils"
+      ],
+      "title": "Photo Gallery",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "A post as a card: cover picture, category, title, excerpt, author line and a read link. Axes: layout (vertical, horizontal), media (image, none), meta (full, short: the date only, news: date and title only), density.",
+      "name": "post-card",
+      "registryDependencies": [
+        "block",
+        "box",
+        "card",
+        "group",
+        "link",
+        "lucide-icon",
+        "media-frame",
+        "presets",
+        "text",
+        "title",
+        "utils"
+      ],
+      "title": "Post Card",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "Posts as a grid, a list or a magazine.",
+      "name": "post-grid",
+      "registryDependencies": [
+        "grid",
+        "post-card",
+        "section-frame",
+        "stack",
+        "switcher",
+        "switcher-item",
+        "utils"
+      ],
+      "title": "Post Grid",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "Category, title, excerpt, author line and a wide cover.",
+      "name": "post-header",
+      "registryDependencies": [
+        "group",
+        "media-frame",
+        "pill",
+        "post-card",
+        "section-frame",
+        "text",
+        "utils"
+      ],
+      "title": "Post Header",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "Four small post cards beside an intro with a view-all link; the first post in detail beside its picture; or cards with the text on a panel over the picture, in two or three columns.",
+      "name": "post-showcase",
+      "registryDependencies": [
+        "box",
+        "link",
+        "lucide-icon",
+        "media-frame",
+        "post-card",
+        "post-feature",
+        "post-mini-card",
+        "post-overlay-card",
+        "section-frame",
+        "utils"
+      ],
+      "title": "Post Showcase",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "Tags, reading figures and an author card with share and save over a wide cover; the author, figures, tags and actions beside the cover; or the facts and related reading beside it.",
+      "name": "post-split",
+      "registryDependencies": [
+        "media-frame",
+        "nav-bar",
+        "post-actions",
+        "post-author",
+        "post-card",
+        "post-outline",
+        "post-stats",
+        "post-tags",
+        "section-frame",
+        "utils"
+      ],
+      "title": "Post Split",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "One plan as a card.",
+      "name": "pricing-card",
+      "registryDependencies": [
+        "badge",
+        "block",
+        "box",
+        "button",
+        "card",
+        "group",
+        "list",
+        "text",
+        "title",
+        "utils"
+      ],
+      "title": "Pricing Card",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "Plans as a grid or a stack of cards.",
+      "name": "pricing-tiers",
+      "registryDependencies": [
+        "badge",
+        "grid",
+        "group",
+        "pricing-card",
+        "section-frame",
+        "switcher",
+        "switcher-item",
+        "utils"
+      ],
+      "title": "Pricing Tiers",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "A product as a card: picture, optional badge, category, name, rating, summary, price and an add button. Axes: layout (vertical, horizontal), media (image, none), ratio, rating (show, hide), action (button, none), density.",
+      "name": "product-card",
+      "registryDependencies": [
+        "badge",
+        "block",
+        "box",
+        "button",
+        "card",
+        "group",
+        "media-frame",
+        "rating",
+        "text",
+        "title",
+        "utils"
+      ],
+      "title": "Product Card",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "The gallery and the buy box of one product.",
+      "name": "product-detail",
+      "registryDependencies": [
+        "badge",
+        "button",
+        "grid",
+        "group",
+        "inline",
+        "list",
+        "lucide-icon",
+        "media-frame",
+        "number-field",
+        "product-card",
+        "rating",
+        "section-frame",
+        "stack",
+        "text",
+        "utils"
+      ],
+      "title": "Product Detail",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "Products as cards in a grid, a list or a rail that scrolls sideways.",
+      "name": "product-grid",
+      "registryDependencies": [
+        "box",
+        "grid",
+        "product-card",
+        "section-frame",
+        "utils"
+      ],
+      "title": "Product Grid",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "Texts in an accordion beside a card of specs.",
+      "name": "product-info",
+      "registryDependencies": [
+        "box",
+        "disclosure",
+        "inline",
+        "list",
+        "section-frame",
+        "stack",
+        "text",
+        "title",
+        "utils"
+      ],
+      "title": "Product Info",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "Account settings: picture, name, email, bio and notifications.",
+      "name": "profile-form",
+      "registryDependencies": [
+        "block",
+        "button",
+        "container",
+        "field",
+        "form",
+        "grid",
+        "group",
+        "input",
+        "label",
+        "media-frame",
+        "panel",
+        "stack",
+        "switch",
+        "textarea",
+        "title",
+        "utils"
+      ],
+      "title": "Profile Form",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "Projects as cards, a compact grid, captions over pictures, a bento or a list beside a collage.",
+      "name": "project-grid",
+      "registryDependencies": [
+        "box",
+        "group",
+        "media-frame",
+        "project-tiles",
+        "section-frame",
+        "stack",
+        "text",
+        "utils"
+      ],
+      "title": "Project Grid",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "A bar of customer logos and a row of key figures together.",
+      "name": "proof-band",
+      "registryDependencies": [
+        "grid",
+        "group",
+        "logo-cloud",
+        "lucide-icon",
+        "section-frame",
+        "stack",
+        "stats-band",
+        "text",
+        "utils"
+      ],
+      "title": "Proof Band",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "One quote beside a picture, a rating panel or over logo tiles; stacked quotes beside a picture; four compact quotes; figures over a featured quote and a stack.",
+      "name": "quote-split",
+      "registryDependencies": [
+        "action-group",
+        "box",
+        "error-page",
+        "logo-cloud",
+        "media-frame",
+        "quote-figures",
+        "quote-logo-tiles",
+        "quote-rating-panel",
+        "quote-slot",
+        "section-frame",
+        "stack",
+        "stats-band",
+        "testimonial-grid",
+        "utils"
+      ],
+      "title": "Quote Split",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "Customer reviews with ratings.",
+      "name": "review-list",
+      "registryDependencies": [
+        "article-block",
+        "grid",
+        "group",
+        "media-frame",
+        "rating",
+        "section-frame",
+        "stack",
+        "text",
+        "title",
+        "utils"
+      ],
+      "title": "Review List",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "The cart lines beside a summary with a promo code and a free-delivery bar.",
+      "name": "shopping-cart",
+      "registryDependencies": [
+        "box",
+        "button",
+        "cart-list",
+        "cart-summary-card",
+        "group",
+        "lucide-icon",
+        "media-frame",
+        "number-field",
+        "order-summary",
+        "section-frame",
+        "stack",
+        "text",
+        "utils"
+      ],
+      "title": "Shopping Cart",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "A vertical navigation with the brand on top and the user at the bottom: full, or icons only.",
+      "name": "sidebar-nav",
+      "registryDependencies": [
+        "block",
+        "group",
+        "inline",
+        "link",
+        "list",
+        "lucide-icon",
+        "media-frame",
+        "nav-bar",
+        "nav-block",
+        "stack",
+        "text",
+        "utils"
+      ],
+      "title": "Sidebar Nav",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "A sign-up in steps with a progress bar or a list of steps; back and next move between them.",
+      "name": "signup-wizard",
+      "registryDependencies": [
+        "block",
+        "box",
+        "button",
+        "field",
+        "form",
+        "group",
+        "input",
+        "list",
+        "lucide-icon",
+        "stack",
+        "text",
+        "title",
+        "utils"
+      ],
+      "title": "Signup Wizard",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "Copyright and links.",
+      "name": "site-footer",
+      "registryDependencies": [
+        "block",
+        "container",
+        "group",
+        "link",
+        "nav-block",
+        "text",
+        "utils"
+      ],
+      "title": "Site Footer",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "Skip link, brand, navigation, theme button and an optional call to action.",
+      "name": "site-header",
+      "registryDependencies": [
+        "block",
+        "button",
+        "container",
+        "group",
+        "link",
+        "link-plain",
+        "nav-block",
+        "utils"
+      ],
+      "title": "Site Header",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "A footer with the brand, groups of links and the copyright; a single row, a sign-up first or a status pill.",
+      "name": "sitemap-footer",
+      "registryDependencies": [
+        "block",
+        "box",
+        "button",
+        "container",
+        "footer-card",
+        "footer-columns",
+        "form",
+        "group",
+        "input",
+        "label",
+        "link",
+        "mega-menu",
+        "nav-block",
+        "pill",
+        "stack",
+        "text",
+        "title",
+        "utils"
+      ],
+      "title": "Sitemap Footer",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "Grey blocks in the shape of what is coming: cards, a list or an article.",
+      "name": "skeleton-layout",
+      "registryDependencies": [
+        "block",
+        "grid",
+        "group",
+        "section-frame",
+        "skeleton",
+        "stack",
+        "utils"
+      ],
+      "title": "Skeleton Layout",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "Days with their delivery windows as radio chips, beside the zone card.",
+      "name": "slot-board",
+      "registryDependencies": [
+        "box",
+        "button",
+        "field",
+        "inline",
+        "list",
+        "section-frame",
+        "select",
+        "slot-grid",
+        "stack",
+        "text",
+        "utils",
+        "zone-table"
+      ],
+      "title": "Slot Board",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "Key numbers as figures, cards or figures with icons.",
+      "name": "stats-band",
+      "registryDependencies": [
+        "backdrop",
+        "grid",
+        "presets",
+        "section-frame",
+        "stat-figure",
+        "utils"
+      ],
+      "title": "Stats Band",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "A multi-step form header with the current step.",
+      "name": "stepper",
+      "registryDependencies": [
+        "button",
+        "group",
+        "iconbadge",
+        "inline",
+        "list",
+        "lucide-icon",
+        "section-frame",
+        "stack",
+        "steps-list",
+        "text",
+        "title",
+        "utils"
+      ],
+      "title": "Stepper",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "Numbered or icon steps in a row or a column.",
+      "name": "steps-list",
+      "registryDependencies": [
+        "iconbadge",
+        "inline",
+        "list",
+        "lucide-icon",
+        "section-frame",
+        "stack",
+        "text",
+        "title",
+        "utils"
+      ],
+      "title": "Steps List",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "The hero of a store with promises under the actions, beside a picture with an offer card or over a faint picture.",
+      "name": "store-hero",
+      "registryDependencies": [
+        "action-group",
+        "backdrop",
+        "box",
+        "error-page",
+        "feature-grid",
+        "grid",
+        "group",
+        "lucide-icon",
+        "offer-media",
+        "section-frame",
+        "stack",
+        "text",
+        "utils"
+      ],
+      "title": "Store Hero",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "The stores with address, hours, phone and services.",
+      "name": "store-locations",
+      "registryDependencies": [
+        "badge",
+        "box",
+        "group",
+        "inline",
+        "link",
+        "list",
+        "lucide-icon",
+        "media-frame",
+        "section-frame",
+        "stack",
+        "text",
+        "title",
+        "utils"
+      ],
+      "title": "Store Locations",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "Year tabs over the panel of the chosen year, or the heading beside a picture with arrows and one dot per step. Choosing a step is an event.",
+      "name": "story-tabs",
+      "registryDependencies": [
+        "box",
+        "button",
+        "group",
+        "inline",
+        "lucide-icon",
+        "media-frame",
+        "milestone-timeline",
+        "section-frame",
+        "stack",
+        "story-dots",
+        "story-panel",
+        "utils"
+      ],
+      "title": "Story Tabs",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "Ways to get help: email, chat, docs.",
+      "name": "support-channels",
+      "registryDependencies": [
+        "card",
+        "feature-grid",
+        "grid",
+        "link",
+        "lucide-icon",
+        "section-frame",
+        "stack",
+        "text",
+        "title",
+        "utils"
+      ],
+      "title": "Support Channels",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "The people of a team as cards, a minimal grid, detailed cards, rows beside a picture or a directory.",
+      "name": "team-grid",
+      "registryDependencies": [
+        "box",
+        "media-frame",
+        "member-row",
+        "section-frame",
+        "stack",
+        "text",
+        "utils"
+      ],
+      "title": "Team Grid",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "Template gallery: filters, a browse-all button and an 8-card MediaFrame grid.",
+      "name": "template-grid",
+      "registryDependencies": [
+        "box",
+        "button",
+        "grid",
+        "group",
+        "iconbadge",
+        "inline",
+        "lucide-icon",
+        "media-frame",
+        "presets",
+        "section-frame",
+        "stack",
+        "text",
+        "title",
+        "utils"
+      ],
+      "title": "Template Grid",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "Customer quotes as cards or plain figures.",
+      "name": "testimonial-grid",
+      "registryDependencies": [
+        "block",
+        "grid",
+        "quote-card",
+        "section-frame",
+        "utils"
+      ],
+      "title": "Testimonial Grid",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "One stop of a product tour: the explained element and a callout with the step, a sentence and buttons. Placing it on the real element is a port contract.",
+      "name": "tour-callout",
+      "registryDependencies": [
+        "block",
+        "button",
+        "group",
+        "section-frame",
+        "stack",
+        "text",
+        "utils"
+      ],
+      "title": "Tour Callout",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "A slider for how much is used and the price it gives. The estimate follows the slider; the page keeps the value.",
+      "name": "usage-calculator",
+      "registryDependencies": [
+        "button",
+        "group",
+        "range",
+        "section-frame",
+        "stack",
+        "text",
+        "utils"
+      ],
+      "title": "Usage Calculator",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "Free delivery, returns, warranty and help in one band.",
+      "name": "usp-strip",
+      "registryDependencies": [
+        "box",
+        "feature-grid",
+        "grid",
+        "inline",
+        "list",
+        "lucide-icon",
+        "section-frame",
+        "stack",
+        "text",
+        "utils"
+      ],
+      "title": "Usp Strip",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "Customer videos as thumbnails with a play button. Playing is a port contract (VideoEmbed).",
+      "name": "video-grid",
+      "registryDependencies": [
+        "box",
+        "button",
+        "figure-block",
+        "grid",
+        "lucide-icon",
+        "media-frame",
+        "section-frame",
+        "testimonial-grid",
+        "text",
+        "utils"
+      ],
+      "title": "Video Grid",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "A dialog with a walkthrough video and an optional list of chapters. Opening and playing are port contracts.",
+      "name": "video-modal",
+      "registryDependencies": [
+        "box",
+        "button",
+        "group",
+        "list",
+        "lucide-icon",
+        "media-frame",
+        "section-frame",
+        "stack",
+        "text",
+        "title",
+        "utils"
+      ],
+      "title": "Video Modal",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "Delivery zones and their prices as a table or as cards.",
+      "name": "zone-table",
+      "registryDependencies": [
+        "badge",
+        "grid",
+        "inline",
+        "list",
+        "section-frame",
+        "stack",
+        "text",
+        "title",
+        "utils",
+        "zone-rows"
+      ],
+      "title": "Zone Table",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "One or two calls to action side by side: a filled primary button and an outline secondary one. Links, not handlers: the page decides what they open.",
+      "name": "action-group",
+      "registryDependencies": [
+        "button",
+        "group",
+        "utils"
+      ],
+      "title": "Action Group",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "The main column of AppShell: the heading, the metric tiles, and the chart panel (beside the activity panel when `activity` is given).",
+      "name": "app-main",
+      "registryDependencies": [
+        "activity-feed",
+        "bar-chart",
+        "box",
+        "chart-panel",
+        "dashboard-overview",
+        "grid",
+        "metric-row",
+        "panel",
+        "stack",
+        "stat-tile",
+        "timeline",
+        "title",
+        "utils"
+      ],
+      "title": "App Main",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "A self-contained item (a review, a card, a project) in its own file: Block tag article.",
+      "name": "article-block",
+      "registryDependencies": [
+        "block",
+        "utils"
+      ],
+      "title": "Article Block",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "The form of AuthCard: the fields of the mode (sign-in, sign-up, reset, magic link), remember me and the forgot link, the terms, the submit button.",
+      "name": "auth-form",
+      "registryDependencies": [
+        "auth-card",
+        "button",
+        "checkbox",
+        "field",
+        "form",
+        "group",
+        "input",
+        "label",
+        "link",
+        "utils"
+      ],
+      "title": "Auth Form",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "An image in a round frame (recipe: size xs to xl, 24 to 64 px). Avatars are always round.",
+      "name": "avatar",
+      "registryDependencies": [
+        "image",
+        "inline",
+        "utils"
+      ],
+      "title": "Avatar",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "A faint full-size picture behind the content of its section (image), or nothing (none). It sits inside the Block of the block, which `behind` makes `relative isolate overflow-hidden`, so the section stays the root of the block (rule 01).",
+      "name": "backdrop",
+      "registryDependencies": [
+        "box",
+        "media-frame",
+        "utils"
+      ],
+      "title": "Backdrop",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "A keyboard hint or counter in a small pill. Colours come from the middle layer (.badge-kbd).",
+      "name": "badge-square",
+      "registryDependencies": [
+        "inline",
+        "utils"
+      ],
+      "title": "Badge Square",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "A row of vertical bars (sales by day, orders by week) with a caption under each bar. The chart is one image for assistive technology: `label` carries the summary, the bar values are in the captions and titles.",
+      "name": "bar-chart",
+      "registryDependencies": [
+        "box",
+        "text",
+        "utils"
+      ],
+      "title": "Bar Chart",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "The \"N selected\" bar of a list: a count, a clear button and the bulk actions (children). All text comes in through props.",
+      "name": "bulk-bar",
+      "registryDependencies": [
+        "box",
+        "button",
+        "inline",
+        "lucide-icon",
+        "utils"
+      ],
+      "title": "Bulk Bar",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "The order summary card of the cart page and the checkout: the lines in short (optional), a promo code field with ready codes, the free-delivery progress, the totals, the button and a note. Static markup.",
+      "name": "cart-summary-card",
+      "registryDependencies": [
+        "badge",
+        "button",
+        "cart-list",
+        "form",
+        "group",
+        "inline",
+        "input",
+        "list",
+        "media-frame",
+        "order-summary",
+        "stack",
+        "text",
+        "title",
+        "utils"
+      ],
+      "title": "Cart Summary Card",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "The lines of a cart as a table (the table layout of CartList): product, price, quantity, line total and a remove button.",
+      "name": "cart-table",
+      "registryDependencies": [
+        "box",
+        "button",
+        "cart-list",
+        "group",
+        "inline",
+        "lucide-icon",
+        "media-frame",
+        "number-field",
+        "stack",
+        "table",
+        "text",
+        "utils"
+      ],
+      "title": "Cart Table",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "One step of a long form: an optional number, a heading (h2) and a line of text over the fields (`children`). Axes: layout (cards: the step in a card, numbered: a number beside the heading and a line between steps).",
+      "name": "checkout-step",
+      "registryDependencies": [
+        "box",
+        "group",
+        "stack",
+        "text",
+        "title",
+        "utils"
+      ],
+      "title": "Checkout Step",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "The end of the checkout form: the consent checkbox, the submit button and the legal line.",
+      "name": "checkout-submit",
+      "registryDependencies": [
+        "button",
+        "checkbox",
+        "group",
+        "label",
+        "stack",
+        "text",
+        "utils"
+      ],
+      "title": "Checkout Submit",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "A terminal or code window: a title bar with three round marks, then the lines. A `command` line starts with the prompt, an `output` line is muted. Static: the typing animation belongs to the port (TypingText contract).",
+      "name": "code-window",
+      "registryDependencies": [
+        "box",
+        "inline",
+        "list",
+        "text",
+        "utils"
+      ],
+      "title": "Code Window",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "One cell value of ComparisonTable: yes shows a check, no a dash (both with the hidden word for screen readers), any other value is shown as text.",
+      "name": "compare-mark",
+      "registryDependencies": [
+        "inline",
+        "lucide-icon",
+        "utils"
+      ],
+      "title": "Compare Mark",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "The actions of a call to action: one or two links (ActionGroup), or an email field with a button (actions form).",
+      "name": "cta-actions",
+      "registryDependencies": [
+        "action-group",
+        "button",
+        "form",
+        "group",
+        "input",
+        "label",
+        "utils"
+      ],
+      "title": "Cta Actions",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "The proof of CtaProof. Shapes: logos (six names with a glyph), features (small features in two columns), stats (three figures), rows (four icon rows), zones (delivery zones: name and areas, price and time).",
+      "name": "cta-proof-items",
+      "registryDependencies": [
+        "box",
+        "cta-proof",
+        "group",
+        "list",
+        "lucide-icon",
+        "stack",
+        "text",
+        "utils"
+      ],
+      "title": "Cta Proof Items",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "The filled body of the CartDrawer: the lines with a quantity field, then the free-delivery bar, the subtotal and total and the button.",
+      "name": "drawer-lines",
+      "registryDependencies": [
+        "button",
+        "cart-drawer",
+        "cart-list",
+        "form",
+        "group",
+        "inline",
+        "list",
+        "media-frame",
+        "number-field",
+        "order-summary",
+        "stack",
+        "text",
+        "utils"
+      ],
+      "title": "Drawer Lines",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "A menu item: an optional icon, the label and an optional trailing mark (a check for selected items). tabindex -1: the menu moves focus with the arrow keys.",
+      "name": "dropdown-item",
+      "registryDependencies": [
+        "button-plain",
+        "inline",
+        "utils"
+      ],
+      "title": "Dropdown Item",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "An editor file tab (40 px high): a file icon, the label and a close button. `preview` marks a tab that is not pinned yet. Keyboard (Enter and Space activate, Delete closes) is the programmer's behind the click and close events.",
+      "name": "editor-tab",
+      "registryDependencies": [
+        "box",
+        "button",
+        "inline",
+        "lucide-icon",
+        "utils"
+      ],
+      "title": "Editor Tab",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "Empty list or nothing found: a round icon, a title, a hint and an optional action.",
+      "name": "empty-state",
+      "registryDependencies": [
+        "box",
+        "iconbadge",
+        "lucide-icon",
+        "text",
+        "utils"
+      ],
+      "title": "Empty State",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "The questions of FaqSplit as cards: the topic, the question, the answer and a read-more link; with an icon square on top in the icons shape. Shapes: grid3, grid4, icons (three columns).",
+      "name": "faq-cards",
+      "registryDependencies": [
+        "article-block",
+        "badge",
+        "box",
+        "faq-split",
+        "link",
+        "lucide-icon",
+        "stack",
+        "text",
+        "title",
+        "utils"
+      ],
+      "title": "Faq Cards",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "The questions of FaqSplit as native disclosures, one open at a time.",
+      "name": "faq-disclosures",
+      "registryDependencies": [
+        "disclosure",
+        "faq-split",
+        "stack",
+        "text",
+        "utils"
+      ],
+      "title": "Faq Disclosures",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "The finder of FaqSplit: a search field, the topics as a row of buttons, and the first three questions as popular links.",
+      "name": "faq-finder",
+      "registryDependencies": [
+        "button",
+        "faq-list",
+        "faq-split",
+        "group",
+        "link",
+        "list",
+        "search-field",
+        "stack",
+        "text",
+        "utils"
+      ],
+      "title": "Faq Finder",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "The help card beside the questions of FaqSplit: a title, a line of text, the ways to reach the team (icon, name, one line) and a link.",
+      "name": "faq-help",
+      "registryDependencies": [
+        "block",
+        "box",
+        "faq-split",
+        "feature-grid",
+        "link",
+        "list",
+        "lucide-icon",
+        "stack",
+        "text",
+        "utils"
+      ],
+      "title": "Faq Help",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "The features as a grid of cards, tiles or bordered cells (the body of FeatureGrid). Icons are Lucide names.",
+      "name": "feature-cards",
+      "registryDependencies": [
+        "card",
+        "feature-grid",
+        "grid",
+        "group",
+        "iconbadge",
+        "lucide-icon",
+        "presets",
+        "stack",
+        "text",
+        "title",
+        "utils"
+      ],
+      "title": "Feature Cards",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "Four figures of FeatureSplit as small cards in two columns: a glyph tile, the value with its hint and the label.",
+      "name": "feature-metric-cards",
+      "registryDependencies": [
+        "box",
+        "group",
+        "inline",
+        "lucide-icon",
+        "stack",
+        "stats-band",
+        "text",
+        "utils"
+      ],
+      "title": "Feature Metric Cards",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "Four features of FeatureSplit in two columns: a glyph tile beside the title and text, without cards.",
+      "name": "feature-pairs",
+      "registryDependencies": [
+        "box",
+        "feature-grid",
+        "group",
+        "inline",
+        "lucide-icon",
+        "stack",
+        "text",
+        "title",
+        "utils"
+      ],
+      "title": "Feature Pairs",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "The features as rows: text beside a picture (the rows layout of FeatureGrid). Icons are Lucide names.",
+      "name": "feature-rows",
+      "registryDependencies": [
+        "box",
+        "feature-grid",
+        "grid",
+        "lucide-icon",
+        "media-frame",
+        "stack",
+        "text",
+        "title",
+        "utils"
+      ],
+      "title": "Feature Rows",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "Two figures of FeatureSplit as cards, then three features as checked rows.",
+      "name": "feature-stat-rows",
+      "registryDependencies": [
+        "box",
+        "feature-grid",
+        "group",
+        "inline",
+        "lucide-icon",
+        "stack",
+        "stats-band",
+        "text",
+        "title",
+        "utils"
+      ],
+      "title": "Feature Stat Rows",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "A form field: label, control (children), hint and error text. `htmlFor` ties the label to the id of the control.",
+      "name": "field",
+      "registryDependencies": [
+        "box",
+        "label",
+        "text",
+        "utils"
+      ],
+      "title": "Field",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "Self-contained content with an optional caption (a quote, a picture, a stat) in its own file: Block tag figure.",
+      "name": "figure-block",
+      "registryDependencies": [
+        "block",
+        "utils"
+      ],
+      "title": "Figure Block",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "The list of a file tree. Put FileTreeItem in it. Arrow keys and type-ahead: attach `moveFocus` and `typeahead` from the utils to the keydown (vertical, no loop).",
+      "name": "file-tree",
+      "registryDependencies": [
+        "box",
+        "utils"
+      ],
+      "title": "File Tree",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "A row of a file tree: a folder with a disclosure chevron, or a file. The glyphs are Lucide.",
+      "name": "file-tree-item",
+      "registryDependencies": [
+        "button-plain",
+        "inline",
+        "lucide-icon",
+        "utils"
+      ],
+      "title": "File Tree Item",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "The brand of FooterSplit: a mark and the brand word over the tagline.",
+      "name": "footer-brand",
+      "registryDependencies": [
+        "group",
+        "inline",
+        "lucide-icon",
+        "stack",
+        "text",
+        "utils"
+      ],
+      "title": "Footer Brand",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "The card layout of SitemapFooter: the brand mark and word, then the link groups in one row, in a rounded card.",
+      "name": "footer-card",
+      "registryDependencies": [
+        "block",
+        "box",
+        "container",
+        "group",
+        "inline",
+        "link",
+        "list",
+        "lucide-icon",
+        "mega-menu",
+        "nav-block",
+        "presets",
+        "stack",
+        "text",
+        "utils"
+      ],
+      "title": "Footer Card",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "The channels of the community as three cards: a glyph over the name and one line.",
+      "name": "footer-channels",
+      "registryDependencies": [
+        "box",
+        "footer-split",
+        "inline",
+        "lucide-icon",
+        "stack",
+        "text",
+        "utils"
+      ],
+      "title": "Footer Channels",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "The link groups of SitemapFooter as columns: a group title over its links, up to five columns.",
+      "name": "footer-columns",
+      "registryDependencies": [
+        "block",
+        "grid",
+        "link",
+        "list",
+        "mega-menu",
+        "stack",
+        "text",
+        "utils"
+      ],
+      "title": "Footer Columns",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "The ways to reach the team in a column: a glyph tile, the kind (Email, Phone) and the value.",
+      "name": "footer-contacts",
+      "registryDependencies": [
+        "footer-split",
+        "group",
+        "inline",
+        "lucide-icon",
+        "stack",
+        "text",
+        "utils"
+      ],
+      "title": "Footer Contacts",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "Three figures in a row under the brand of FooterSplit.",
+      "name": "footer-figures",
+      "registryDependencies": [
+        "footer-split",
+        "group",
+        "stack",
+        "text",
+        "utils"
+      ],
+      "title": "Footer Figures",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "The link groups of FooterSplit as cards: a glyph and the group title over its links, four across on wide screens.",
+      "name": "footer-group-cards",
+      "registryDependencies": [
+        "block",
+        "box",
+        "group",
+        "inline",
+        "link",
+        "list",
+        "lucide-icon",
+        "mega-menu",
+        "stack",
+        "text",
+        "utils"
+      ],
+      "title": "Footer Group Cards",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "The first three link groups of FooterSplit as small columns beside each other.",
+      "name": "footer-link-columns",
+      "registryDependencies": [
+        "block",
+        "box",
+        "link",
+        "list",
+        "mega-menu",
+        "stack",
+        "text",
+        "utils"
+      ],
+      "title": "Footer Link Columns",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "Four points with their glyphs in a column, under the tagline of FooterSplit.",
+      "name": "footer-points",
+      "registryDependencies": [
+        "footer-split",
+        "group",
+        "lucide-icon",
+        "stack",
+        "text",
+        "utils"
+      ],
+      "title": "Footer Points",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "The newsletter sign-up of FooterSplit in a card: a title with a glyph, the email field and button, and a note.",
+      "name": "footer-signup-card",
+      "registryDependencies": [
+        "button",
+        "footer-split",
+        "form",
+        "group",
+        "input",
+        "label",
+        "lucide-icon",
+        "stack",
+        "text",
+        "utils"
+      ],
+      "title": "Footer Signup Card",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "A composite badge on a dark band: an optional small mark beside a label.",
+      "name": "hero-badge",
+      "registryDependencies": [
+        "badge",
+        "group",
+        "presets",
+        "text",
+        "utils"
+      ],
+      "title": "Hero Badge",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "The head row of a hero band: skip link, brand, menu links (the current one carries aria-current), login and a call to action.",
+      "name": "hero-head",
+      "registryDependencies": [
+        "block",
+        "button",
+        "group",
+        "link",
+        "link-plain",
+        "nav-bar",
+        "nav-block",
+        "presets",
+        "utils"
+      ],
+      "title": "Hero Head",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "What HeroSplit shows under the lead: three figures in cards, a row of faces with a proof line, two small feature cards, or a quote with its author over three figures.",
+      "name": "hero-split-extras",
+      "registryDependencies": [
+        "box",
+        "figure-block",
+        "group",
+        "hero-split",
+        "lucide-icon",
+        "media-frame",
+        "stack",
+        "text",
+        "utils"
+      ],
+      "title": "Hero Split Extras",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "What HeroSplit shows beside the text: a picture, a picture with a floating card, a grid of four pictures with captions, or a picture with two plan cards floating over it.",
+      "name": "hero-split-media",
+      "registryDependencies": [
+        "box",
+        "figure-block",
+        "group",
+        "hero-split",
+        "lucide-icon",
+        "media-frame",
+        "offer-media",
+        "stack",
+        "text",
+        "utils"
+      ],
+      "title": "Hero Split Media",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "One icon-only tab (28 by 28, a 16 px glyph in the children). `label` is its accessible name. Arrow-key movement between tabs is the job of IconTabs (see roving).",
+      "name": "icon-tab",
+      "registryDependencies": [
+        "button-plain",
+        "utils"
+      ],
+      "title": "Icon Tab",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "A row of icon-only tabs (a file tree pane: Files, Search, Apps). Put IconTab in it. Arrow keys: attach `moveFocus` from the utils to the keydown of the row (orientation horizontal, activate).",
+      "name": "icon-tabs",
+      "registryDependencies": [
+        "box",
+        "utils"
+      ],
+      "title": "Icon Tabs",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "The jobs of JobBoard as cards in two columns (title, department, place, type, optional salary, posted, apply) or as a table.",
+      "name": "job-cards",
+      "registryDependencies": [
+        "badge",
+        "box",
+        "grid",
+        "group",
+        "inline",
+        "job-board",
+        "link",
+        "lucide-icon",
+        "stack",
+        "table",
+        "text",
+        "utils"
+      ],
+      "title": "Job Cards",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "The brand row of a sidebar: a mark and the product name on the left, trailing actions on the right. The variant picks the padding (recipe).",
+      "name": "logo-sidebar",
+      "registryDependencies": [
+        "box",
+        "inline",
+        "utils"
+      ],
+      "title": "Logo Sidebar",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "One logo of a logo ribbon: a fixed-size slot with a Lucide glyph; the name is read by screen readers only.",
+      "name": "logo-slot",
+      "registryDependencies": [
+        "box",
+        "lucide-icon",
+        "presets",
+        "text",
+        "utils"
+      ],
+      "title": "Logo Slot",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "The ways to get help of MediaList as wide outline buttons, then three support figures as rows in a card.",
+      "name": "media-contacts",
+      "registryDependencies": [
+        "button",
+        "group",
+        "lucide-icon",
+        "media-list",
+        "stack",
+        "text",
+        "utils"
+      ],
+      "title": "Media Contacts",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "The figures of MediaList: four in two columns, centered, or three in a row.",
+      "name": "media-figures",
+      "registryDependencies": [
+        "box",
+        "media-list",
+        "stack",
+        "text",
+        "utils"
+      ],
+      "title": "Media Figures",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "A picture in a fixed ratio that follows the theme. `src` is the picture of the light theme, `darkSrc` the one of the dark theme (without it the dark theme shows `src`). Without both it shows the built-in neutral placeholders (base64 data URIs, one light and one dark), so a page c",
+      "name": "media-frame",
+      "registryDependencies": [
+        "box",
+        "image",
+        "utils"
+      ],
+      "title": "Media Frame",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "The latest posts of MediaList as rows: a dot, the title, the date and reading time.",
+      "name": "media-posts",
+      "registryDependencies": [
+        "group",
+        "inline",
+        "link",
+        "media-list",
+        "stack",
+        "text",
+        "utils"
+      ],
+      "title": "Media Posts",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "The featured review of MediaList in a muted card: a label with the stars, the text in quotes and the author.",
+      "name": "media-review",
+      "registryDependencies": [
+        "group",
+        "media-list",
+        "rating",
+        "stack",
+        "text",
+        "utils"
+      ],
+      "title": "Media Review",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "The steps of MediaList as numbered rows: the number, a glyph, the title and the text.",
+      "name": "media-steps",
+      "registryDependencies": [
+        "group",
+        "inline",
+        "lucide-icon",
+        "media-list",
+        "stack",
+        "text",
+        "utils"
+      ],
+      "title": "Media Steps",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "The topics of MediaList as card rows: a glyph tile, the name, the count and an arrow.",
+      "name": "media-topics",
+      "registryDependencies": [
+        "inline",
+        "link",
+        "lucide-icon",
+        "media-list",
+        "stack",
+        "text",
+        "utils"
+      ],
+      "title": "Media Topics",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "One member of TeamGrid beside a small portrait: the name, the role, then the department and the place (detailed, directory), the bio (detailed) and the skills (detailed, list).",
+      "name": "member-row",
+      "registryDependencies": [
+        "badge",
+        "group",
+        "inline",
+        "lucide-icon",
+        "media-frame",
+        "stack",
+        "team-grid",
+        "text",
+        "utils"
+      ],
+      "title": "Member Row",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "A name, a value caption and a progress bar (completeness by section, issues by rule, stock by warehouse). With `href` the whole row is a link.",
+      "name": "meter-row",
+      "registryDependencies": [
+        "box",
+        "form",
+        "link",
+        "text",
+        "utils"
+      ],
+      "title": "Meter Row",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "The buttons at the end of a top bar: login, the call to action and the theme button (it only reports the press). No wrapper: they sit in the row of the bar.",
+      "name": "nav-actions",
+      "registryDependencies": [
+        "button",
+        "utils"
+      ],
+      "title": "Nav Actions",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "A navigation region in its own file: Block tag nav named by `label`.",
+      "name": "nav-block",
+      "registryDependencies": [
+        "block",
+        "utils"
+      ],
+      "title": "Nav Block",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "A sidebar list item: icon, label and an optional right slot. With `href` it is a link, with `interactive` a button, otherwise a static box.",
+      "name": "nav-item",
+      "registryDependencies": [
+        "box",
+        "button-plain",
+        "link-plain",
+        "nav-item-row",
+        "utils"
+      ],
+      "title": "Nav Item",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "The row inside NavItem: the icon and the label on the left, the right slot (or an empty 20 by 20 frame) on the right.",
+      "name": "nav-item-row",
+      "registryDependencies": [
+        "inline",
+        "utils"
+      ],
+      "title": "Nav Item Row",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "The links of a top bar in a row; the current one carries aria-current. side: all, or the first or second half of the list.",
+      "name": "nav-links",
+      "registryDependencies": [
+        "group",
+        "link",
+        "nav-bar",
+        "utils"
+      ],
+      "title": "Nav Links",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "A short confirmation toast: fixed bottom right, read out by screen readers through role status. Empty text renders nothing visible.",
+      "name": "notice",
+      "registryDependencies": [
+        "box",
+        "lucide-icon",
+        "text",
+        "utils"
+      ],
+      "title": "Notice",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "A narrow number field between a minus and a plus ghost icon button, drawn as one control (4px inside its ring). Static markup: the buttons carry no logic; the page wires them.",
+      "name": "number-field",
+      "registryDependencies": [
+        "box",
+        "button",
+        "input",
+        "lucide-icon",
+        "utils"
+      ],
+      "title": "Number Field",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "The picture of the StoreHero overlay layout with an offer card floating on its lower corner (the card floats over the picture).",
+      "name": "offer-media",
+      "registryDependencies": [
+        "box",
+        "group",
+        "lucide-icon",
+        "media-frame",
+        "stack",
+        "store-hero",
+        "text",
+        "utils"
+      ],
+      "title": "Offer Media",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "The orders as a table (the table layout of OrderTable): number, date, items, total and a status pill.",
+      "name": "order-rows",
+      "registryDependencies": [
+        "box",
+        "order-table",
+        "pill",
+        "table",
+        "utils"
+      ],
+      "title": "Order Rows",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "A faded picture behind the content of its header (a transparent top bar over a hero image); on false: nothing. It sits inside the header Block, which is `relative isolate overflow-hidden` and transparent when on, so the header stays the root of the block (rule 01).",
+      "name": "over-media",
+      "registryDependencies": [
+        "box",
+        "media-frame",
+        "utils"
+      ],
+      "title": "Over Media",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "The aside at the end of a page head: one large figure with its caption, a note card with a glyph, or four key facts as cards in two columns.",
+      "name": "page-aside",
+      "registryDependencies": [
+        "box",
+        "group",
+        "lucide-icon",
+        "page-trail",
+        "stack",
+        "text",
+        "utils"
+      ],
+      "title": "Page Aside",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "The breadcrumbs of an inner page: links to the parent pages separated by chevrons; the last entry is the current page and is not a link.",
+      "name": "page-crumbs",
+      "registryDependencies": [
+        "block",
+        "inline",
+        "link",
+        "list",
+        "lucide-icon",
+        "nav-bar",
+        "utils"
+      ],
+      "title": "Page Crumbs",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "The page heading: a title, a one-line summary and the action buttons on the right (below on phones).",
+      "name": "page-header",
+      "registryDependencies": [
+        "box",
+        "text",
+        "title",
+        "utils"
+      ],
+      "title": "Page Header",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "The list footer: a summary line and previous / next page buttons. With `numbered` it shows page numbers (1 … 4 5 6 … 21), with `moreLabel` a \"Load more\" button. The current page is a plain element marked aria-current=\"page\"; the others are buttons. All text comes in through props",
+      "name": "pager",
+      "registryDependencies": [
+        "box",
+        "button",
+        "inline",
+        "lucide-icon",
+        "utils"
+      ],
+      "title": "Pager",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "A titled card (surface bg-card, hairline ring): the content panel of a page. An optional title, description and header actions. Pass `id` to name the panel by its title. Not a landmark: a labelled group inside the Block of its block (rule 01).",
+      "name": "panel",
+      "registryDependencies": [
+        "box",
+        "text",
+        "title",
+        "utils"
+      ],
+      "title": "Panel",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "Ways to pay as radio cards: icon, name and a line of text; `checked` is the chosen one. Static markup.",
+      "name": "payment-options",
+      "registryDependencies": [
+        "grid",
+        "inline",
+        "label",
+        "lucide-icon",
+        "radio",
+        "utils"
+      ],
+      "title": "Payment Options",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "A status pill: a tinted label with an icon (published, draft, role, comment state).",
+      "name": "pill",
+      "registryDependencies": [
+        "box",
+        "inline",
+        "lucide-icon",
+        "utils"
+      ],
+      "title": "Pill",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "The calls to action of a post header: share and save side by side, one wide read button, or a wide read button with share and save as icons.",
+      "name": "post-actions",
+      "registryDependencies": [
+        "button",
+        "group",
+        "lucide-icon",
+        "post-card",
+        "post-split",
+        "utils"
+      ],
+      "title": "Post Actions",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "The author of a post: the portrait, the name and role, and the date or the share and save buttons; as a line, a card, or a card with the bio.",
+      "name": "post-author",
+      "registryDependencies": [
+        "box",
+        "button",
+        "group",
+        "lucide-icon",
+        "media-frame",
+        "post-card",
+        "post-split",
+        "stack",
+        "text",
+        "utils"
+      ],
+      "title": "Post Author",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "The featured post of PostShowcase: the category, the title, the excerpt, the author with the date and reading time, and a wide read button.",
+      "name": "post-feature",
+      "registryDependencies": [
+        "badge",
+        "button",
+        "group",
+        "lucide-icon",
+        "media-frame",
+        "post-card",
+        "stack",
+        "text",
+        "title",
+        "utils"
+      ],
+      "title": "Post Feature",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "A small post card of PostShowcase: the picture, the category, the title and the author with the reading time.",
+      "name": "post-mini-card",
+      "registryDependencies": [
+        "badge",
+        "media-frame",
+        "post-card",
+        "stack",
+        "text",
+        "title",
+        "utils"
+      ],
+      "title": "Post Mini Card",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "The facts of a post in a column (author, date, minutes, views), then the related reading as links.",
+      "name": "post-outline",
+      "registryDependencies": [
+        "group",
+        "link",
+        "lucide-icon",
+        "post-card",
+        "post-split",
+        "stack",
+        "text",
+        "utils"
+      ],
+      "title": "Post Outline",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "A post card of PostShowcase with the text on a panel over the lower part of the picture: the category and date, the title, the excerpt and a read link.",
+      "name": "post-overlay-card",
+      "registryDependencies": [
+        "badge",
+        "box",
+        "group",
+        "link",
+        "lucide-icon",
+        "media-frame",
+        "post-card",
+        "stack",
+        "text",
+        "title",
+        "utils"
+      ],
+      "title": "Post Overlay Card",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "The reading figures of a post: minutes to read, views and likes, each with its glyph.",
+      "name": "post-stats",
+      "registryDependencies": [
+        "group",
+        "lucide-icon",
+        "post-card",
+        "post-split",
+        "text",
+        "utils"
+      ],
+      "title": "Post Stats",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "The tags of a post as small badges in a wrapping row.",
+      "name": "post-tags",
+      "registryDependencies": [
+        "badge",
+        "group",
+        "nav-bar",
+        "utils"
+      ],
+      "title": "Post Tags",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "The projects of ProjectGrid as tiles: cards (picture, featured badge, category and year, title, summary, tags, two links), compact cards in four columns, captions over the pictures, or a bento where the first project takes a big tile.",
+      "name": "project-tiles",
+      "registryDependencies": [
+        "article-block",
+        "badge",
+        "box",
+        "group",
+        "link",
+        "lucide-icon",
+        "media-frame",
+        "project-grid",
+        "stack",
+        "text",
+        "title",
+        "utils"
+      ],
+      "title": "Project Tiles",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "A prompt box on a dark band: attachment chips, the prompt line, a plus button, the model pill and a send button. Static links only; a host adds behavior.",
+      "name": "prompt-composer",
+      "registryDependencies": [
+        "box",
+        "button",
+        "group",
+        "lucide-icon",
+        "presets",
+        "text",
+        "utils"
+      ],
+      "title": "Prompt Composer",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "One customer quote of TestimonialGrid: a card, a plain figure or a social post, with the author's picture, the stars and a company glyph as `item` says.",
+      "name": "quote-card",
+      "registryDependencies": [
+        "figure-block",
+        "group",
+        "inline",
+        "lucide-icon",
+        "media-frame",
+        "rating",
+        "stack",
+        "testimonial-grid",
+        "text",
+        "utils"
+      ],
+      "title": "Quote Card",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "Three figures in a row above the quotes of QuoteSplit.",
+      "name": "quote-figures",
+      "registryDependencies": [
+        "box",
+        "quote-split",
+        "stack",
+        "testimonial-grid",
+        "text",
+        "utils"
+      ],
+      "title": "Quote Figures",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "Four customer names with their glyphs in tiles of two columns, under the quote of QuoteSplit.",
+      "name": "quote-logo-tiles",
+      "registryDependencies": [
+        "box",
+        "group",
+        "lucide-icon",
+        "quote-split",
+        "testimonial-grid",
+        "text",
+        "utils"
+      ],
+      "title": "Quote Logo Tiles",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "A customer quote and who said it, as a figure.",
+      "name": "quote-proof",
+      "registryDependencies": [
+        "block",
+        "text",
+        "utils"
+      ],
+      "title": "Quote Proof",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "The rating summary of QuoteSplit: the average in large type, the stars, the number of reviews and two figures.",
+      "name": "quote-rating-panel",
+      "registryDependencies": [
+        "box",
+        "quote-split",
+        "rating",
+        "stack",
+        "testimonial-grid",
+        "text",
+        "utils"
+      ],
+      "title": "Quote Rating Panel",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "One quote of QuoteSplit: a QuoteCard with the author's picture and the stars, as a card or a plain figure, in a box that can span grid rows.",
+      "name": "quote-slot",
+      "registryDependencies": [
+        "box",
+        "quote-card",
+        "testimonial-grid",
+        "utils"
+      ],
+      "title": "Quote Slot",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "A from–to pair for numbers or dates (price range, period). Empty means an open end. With numeric bounds two sliders sit above the inputs. Each control has its own accessible name; every change reports both ends.",
+      "name": "range-field",
+      "registryDependencies": [
+        "box",
+        "inline",
+        "input",
+        "range",
+        "utils"
+      ],
+      "title": "Range Field",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "One to five stars (a review's grade, the average of a product). The value is read as the label; the stars themselves are decoration.",
+      "name": "rating",
+      "registryDependencies": [
+        "box",
+        "lucide-icon",
+        "utils"
+      ],
+      "title": "Rating",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "A landmark region (header, nav, section, aside, footer, article, figure) inside another file: one Block, never nested, so a nested landmark is its own component.",
+      "name": "region",
+      "registryDependencies": [
+        "block",
+        "utils"
+      ],
+      "title": "Region",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "A search input with a magnifier. `value` fires on every keystroke with the new text.",
+      "name": "search-field",
+      "registryDependencies": [
+        "box",
+        "input",
+        "lucide-icon",
+        "utils"
+      ],
+      "title": "Search Field",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "A search field with a search glyph and the keys that open it.",
+      "name": "search-palette",
+      "registryDependencies": [
+        "box",
+        "inline",
+        "input",
+        "lucide-icon",
+        "utils"
+      ],
+      "title": "Search Palette",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "The body of a SectionFrame: inside a card when `boxed`, else the children as they are (no wrapper).",
+      "name": "section-box",
+      "registryDependencies": [
+        "card",
+        "utils"
+      ],
+      "title": "Section Box",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "The stacked body of a SectionFrame: the heading, the children and the media in one column; a narrow measure (xs to 3xl) holds the column at that width, centred.",
+      "name": "section-column",
+      "registryDependencies": [
+        "stack",
+        "utils"
+      ],
+      "title": "Section Column",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "A page section: the landmark named by its heading, the heading (h1 or h2), an optional lead, the body (`children`) and optional media. `layout` stacks everything or puts the media beside the text; `boxed` puts the body in a card. Axes: layout, media side, tone, density, align.",
+      "name": "section-frame",
+      "registryDependencies": [
+        "block",
+        "box",
+        "container",
+        "grid",
+        "presets",
+        "section-box",
+        "section-column",
+        "section-header",
+        "stack",
+        "utils"
+      ],
+      "title": "Section Frame",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "A sidebar section heading with optional right actions. Set `expanded` and it becomes a disclosure button (aria-expanded, the toggle event).",
+      "name": "section-head",
+      "registryDependencies": [
+        "box",
+        "button-plain",
+        "inline",
+        "utils"
+      ],
+      "title": "Section Head",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "The head of a section: an optional badge, the heading (h1 or h2) with an optional link opposite it, and an optional lead. No wrapper: its parts are children of the section stack.",
+      "name": "section-header",
+      "registryDependencies": [
+        "badge",
+        "group",
+        "link",
+        "presets",
+        "section-frame",
+        "text",
+        "title",
+        "utils"
+      ],
+      "title": "Section Header",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "The placeholder content of DashboardShell: the page heading beside a grey action, then empty cards on the 8px grid. Shapes: grid (four small cards over a big one), split (a wide card beside a narrow one over a low one), list (a toolbar over a card of rows). The cards are hidden f",
+      "name": "shell-content",
+      "registryDependencies": [
+        "box",
+        "group",
+        "stack",
+        "title",
+        "utils"
+      ],
+      "title": "Shell Content",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "The footer of DashboardShell: the copyright and a row of links, under the content column (inset) or across the whole shell (full).",
+      "name": "shell-footer",
+      "registryDependencies": [
+        "block",
+        "dashboard-shell",
+        "link",
+        "list",
+        "nav-block",
+        "text",
+        "utils"
+      ],
+      "title": "Shell Footer",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "The sidebar of DashboardShell. Shapes: wide (icon and name), rail (icons only, the names still read), collapsed (the static collapsed state of a wide sidebar, with its expand button), twolevel (a rail beside a panel of the current section's links). side puts it at the start or th",
+      "name": "shell-sidebar",
+      "registryDependencies": [
+        "block",
+        "box",
+        "button-plain",
+        "dashboard-shell",
+        "group",
+        "inline",
+        "link",
+        "list",
+        "lucide-icon",
+        "nav-block",
+        "text",
+        "utils"
+      ],
+      "title": "Shell Sidebar",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "The top bar of DashboardShell: the brand (when no sidebar carries it), the links (when there is no sidebar), an optional search field, and the signed-in person.",
+      "name": "shell-topbar",
+      "registryDependencies": [
+        "block",
+        "box",
+        "dashboard-shell",
+        "group",
+        "inline",
+        "link",
+        "list",
+        "lucide-icon",
+        "media-frame",
+        "nav-block",
+        "search-palette",
+        "text",
+        "utils"
+      ],
+      "title": "Shell Topbar",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "The app sidebar panel: width, padding and gap per kit sidebar type. Colours come from the middle layer.",
+      "name": "sidebar-panel",
+      "registryDependencies": [
+        "block",
+        "utils"
+      ],
+      "title": "Sidebar Panel",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "Delivery windows by day: each day lists its windows as radio chips; closed windows are disabled and struck through. One radio group (`name`) across all days. Static markup.",
+      "name": "slot-grid",
+      "registryDependencies": [
+        "box",
+        "group",
+        "inline",
+        "label",
+        "radio",
+        "stack",
+        "text",
+        "utils"
+      ],
+      "title": "Slot Grid",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "One key number of StatsBand: a card (StatTile), or the value over its label, optionally under a Lucide icon.",
+      "name": "stat-figure",
+      "registryDependencies": [
+        "lucide-icon",
+        "presets",
+        "stack",
+        "stat-tile",
+        "stats-band",
+        "text",
+        "utils"
+      ],
+      "title": "Stat Figure",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "A dashboard counter: an icon, a big number, a caption. With `href` the whole tile is a link, without it the tile is a plain figure.",
+      "name": "stat-tile",
+      "registryDependencies": [
+        "box",
+        "iconbadge",
+        "link",
+        "lucide-icon",
+        "text",
+        "utils"
+      ],
+      "title": "Stat Tile",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "One dot per step of StoryTabs; the dot of the active step is filled.",
+      "name": "story-dots",
+      "registryDependencies": [
+        "group",
+        "inline",
+        "milestone-timeline",
+        "story-tabs",
+        "utils"
+      ],
+      "title": "Story Dots",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "The panel of the active step of StoryTabs: the year badge and the step count, the title, the text and the tag in a muted box.",
+      "name": "story-panel",
+      "registryDependencies": [
+        "badge",
+        "box",
+        "group",
+        "milestone-timeline",
+        "stack",
+        "story-tabs",
+        "text",
+        "title",
+        "utils"
+      ],
+      "title": "Story Panel",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "A segmented switcher: a tab list whose items (SwitcherItem) share size and layout. Canary handed these down through context; here each item takes the same two props. Arrow keys: attach `moveFocus` to the keydown (horizontal, activate).",
+      "name": "switcher",
+      "registryDependencies": [
+        "box",
+        "utils"
+      ],
+      "title": "Switcher",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "One item of a Switcher (default or active). Pass the same size and layout as the Switcher.",
+      "name": "switcher-item",
+      "registryDependencies": [
+        "button-plain",
+        "utils"
+      ],
+      "title": "Switcher Item",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "The toolbar above a table: search and filter controls on the left (children), the actions on the right (`actions`). One tab stop group (role toolbar).",
+      "name": "table-toolbar",
+      "registryDependencies": [
+        "box",
+        "inline",
+        "utils"
+      ],
+      "title": "Table Toolbar",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "A vertical list of events (an order's history): a dot on a line, the title, an optional text and the time. Newest first or oldest first is the caller's order.",
+      "name": "timeline",
+      "registryDependencies": [
+        "box",
+        "inline",
+        "list",
+        "text",
+        "utils"
+      ],
+      "title": "Timeline",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "A centered row of topic pills (static links). tone inverse: on a dark band with an icon per topic; default: outlined.",
+      "name": "topic-chips",
+      "registryDependencies": [
+        "button",
+        "group",
+        "lucide-icon",
+        "utils"
+      ],
+      "title": "Topic Chips",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "A display title, one span per word; word i takes weights[i] (from the preset). The words wrap like text.",
+      "name": "weighted-title",
+      "registryDependencies": [
+        "inline",
+        "presets",
+        "title",
+        "utils"
+      ],
+      "title": "Weighted Title",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "The zones as a table (the table layout of ZoneTable): the zone and its areas, the price, free from, the minimum order, the time and an express badge.",
+      "name": "zone-rows",
+      "registryDependencies": [
+        "badge",
+        "box",
+        "stack",
+        "table",
+        "text",
+        "utils",
+        "zone-table"
+      ],
+      "title": "Zone Rows",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "Default layout preset: the sizes of the landing blocks as Tailwind classes. Blocks combine these with token classes; swap the preset to resize every block at once. Numbers: ui8kit default sizes (Tailwind scale, no arbitrary values)",
+      "name": "presets",
+      "registryDependencies": [],
+      "title": "Presets",
+      "type": "registry:lib"
+    },
+    {
+      "dependencies": [],
+      "description": "Alert displays a static status or informational message. Renders a live region with role=status by default; children carry the message body.",
+      "name": "alert",
+      "registryDependencies": [
+        "utils"
+      ],
+      "title": "Alert",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "Badge shows a short status label. Badge uses variant and size presets.",
+      "name": "badge",
+      "registryDependencies": [
+        "utils"
+      ],
+      "title": "Badge",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "Block is the one semantic root of a file (div, section, article, aside, header, footer, main, nav, figure, search, hgroup). Any file (block, composite, screen) may open on one Block; never nest Block inside Block in one file, never repeat it in a loop.",
+      "name": "block",
+      "registryDependencies": [
+        "utils"
+      ],
+      "title": "Block",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "Box is a generic layout wrapper for internal sections. Not for top-level landmarks — use Block for page regions.",
+      "name": "box",
+      "registryDependencies": [
+        "utils"
+      ],
+      "title": "Box",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "Breadcrumb shows the current page location within a hierarchy. Renders nav with ordered links and aria-current on the active item.",
+      "name": "breadcrumb",
+      "registryDependencies": [
+        "utils"
+      ],
+      "title": "Breadcrumb",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "Button triggers an action on click. Optional Href renders an anchor with button appearance (CTA navigation). For exotic roots, use ButtonClasses (Templ/Svelte/Vue/Solid) or asChild (React). Prefer Link for prose/semantic navigation.",
+      "name": "button",
+      "registryDependencies": [
+        "utils"
+      ],
+      "title": "Button",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "ButtonPlain is a bare button element: no styling beyond Class. Patterns (tabs, tree rows, menu items) style it themselves.",
+      "name": "button-plain",
+      "registryDependencies": [
+        "utils"
+      ],
+      "title": "Button Plain",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "CardContent: one part of Card (one file per part, as in the Svelte package).",
+      "name": "card",
+      "registryDependencies": [
+        "utils"
+      ],
+      "title": "Card",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "Checkbox is a native boolean form control. Wireframe styling via Variant and Size; supports standard ARIA attrs.",
+      "name": "checkbox",
+      "registryDependencies": [
+        "utils"
+      ],
+      "title": "Checkbox",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "Container wraps page content with a constrained width shell. Optional main or section tag for inner layout regions.",
+      "name": "container",
+      "registryDependencies": [
+        "utils"
+      ],
+      "title": "Container",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "Dialog renders a native dialog root with an optional behavior hook. The data-ui8kit hook defaults off; the registry ships no client JS.",
+      "name": "dialog",
+      "registryDependencies": [
+        "utils"
+      ],
+      "title": "Dialog",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "Disclosure renders native details and summary elements. Open is a static attribute only — no controlled-state contract.",
+      "name": "disclosure",
+      "registryDependencies": [
+        "utils"
+      ],
+      "title": "Disclosure",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "DataList: one part of Fieldset (one file per part, as in the Svelte package).",
+      "name": "form",
+      "registryDependencies": [
+        "utils"
+      ],
+      "title": "Form",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "GridCol: one part of Grid (one file per part, as in the Svelte package).",
+      "name": "grid",
+      "registryDependencies": [
+        "utils"
+      ],
+      "title": "Grid",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "Group arranges children in a horizontal flex row. Supports fieldset for related form controls.",
+      "name": "group",
+      "registryDependencies": [
+        "utils"
+      ],
+      "title": "Group",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "Icon renders a class-based span, svg use reference, or text fallback. Decorative icons are hidden from assistive technology by default.",
+      "name": "icon",
+      "registryDependencies": [
+        "utils"
+      ],
+      "title": "Icon",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "IconBadge renders a small icon surface for nav rows, cards, and status blocks. Pass the letter, glyph, or Icon node as children.",
+      "name": "iconbadge",
+      "registryDependencies": [
+        "utils"
+      ],
+      "title": "Iconbadge",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "Image renders accessible img, picture, and source primitives. Use Decorative for purely visual images so alt stays empty.",
+      "name": "image",
+      "registryDependencies": [
+        "utils"
+      ],
+      "title": "Image",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "Inline renders inline copy as a span. Use Text for paragraph blocks and Title (as 1–6) for headings.",
+      "name": "inline",
+      "registryDependencies": [
+        "utils"
+      ],
+      "title": "Inline",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "Input is a single-line native text field. Supports types, validation attrs, and wireframe variant/size classes.",
+      "name": "input",
+      "registryDependencies": [
+        "utils"
+      ],
+      "title": "Input",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "Label associates visible text with a form control via the for attribute.",
+      "name": "label",
+      "registryDependencies": [
+        "utils"
+      ],
+      "title": "Label",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "Break renders br or wbr for controlled inline wrapping.",
+      "name": "linebreak",
+      "registryDependencies": [
+        "utils"
+      ],
+      "title": "Linebreak",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "Link renders a semantic anchor for navigation and prose. Use Button for actions; use Link for destinations.",
+      "name": "link",
+      "registryDependencies": [
+        "utils"
+      ],
+      "title": "Link",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "LinkPlain is a bare anchor: no styling beyond Class.",
+      "name": "link-plain",
+      "registryDependencies": [
+        "utils"
+      ],
+      "title": "Link Plain",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "ListItem: one part of List (one file per part, as in the Svelte package).",
+      "name": "list",
+      "registryDependencies": [
+        "utils"
+      ],
+      "title": "List",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "LucideIcon: a Lucide glyph (ISC license) by kebab-case name, drawn from the registry next to this file. Decorative (aria-hidden) unless a `label` is given.",
+      "name": "lucide-icon",
+      "registryDependencies": [
+        "utils"
+      ],
+      "title": "Lucide Icon",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "Radio is a native single-choice control within a named group.",
+      "name": "radio",
+      "registryDependencies": [
+        "utils"
+      ],
+      "title": "Radio",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "Range renders a styled input[type=range] (single thumb slider). The value is controlled from outside: Value in, an input event out (canary used a bindable prop).",
+      "name": "range",
+      "registryDependencies": [
+        "utils"
+      ],
+      "title": "Range",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "OptGroup: one part of Select (one file per part, as in the Svelte package).",
+      "name": "select",
+      "registryDependencies": [
+        "utils"
+      ],
+      "title": "Select",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "Separator renders a semantic or decorative hr.",
+      "name": "separator",
+      "registryDependencies": [
+        "utils"
+      ],
+      "title": "Separator",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "Skeleton renders a pulsing placeholder box (loading state). It is decorative: aria-hidden; the loading state is announced by the container (aria-busy).",
+      "name": "skeleton",
+      "registryDependencies": [
+        "utils"
+      ],
+      "title": "Skeleton",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "Stack arranges children vertically in a flex column. Default layout primitive for spacing sections and form fields.",
+      "name": "stack",
+      "registryDependencies": [
+        "utils"
+      ],
+      "title": "Stack",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "Switch is a toggle control (checkbox with switch ARIA semantics). Use for on/off settings; wireframe uses native checkbox styling.",
+      "name": "switch",
+      "registryDependencies": [
+        "utils"
+      ],
+      "title": "Switch",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "TableBody: one part of Table (one file per part, as in the Svelte package).",
+      "name": "table",
+      "registryDependencies": [
+        "utils"
+      ],
+      "title": "Table",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "Text renders body copy: a paragraph by default; Tag picks another text element (blockquote, figcaption, address, pre, or an inline element). Title (as 1–6) is for headings.",
+      "name": "text",
+      "registryDependencies": [
+        "utils"
+      ],
+      "title": "Text",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "Textarea is a multi-line native text field with row sizing.",
+      "name": "textarea",
+      "registryDependencies": [
+        "utils"
+      ],
+      "title": "Textarea",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "Title renders a heading (h1–h6) from As (1–6). Defaults to h2 when As is 0 or out of range.",
+      "name": "title",
+      "registryDependencies": [
+        "utils"
+      ],
+      "title": "Title",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [
+        "clsx",
+        "tailwind-merge"
+      ],
+      "description": "Escape and pointer-down outside the node call onDismiss. Returns the cleanup.",
+      "name": "utils",
+      "registryDependencies": [],
+      "title": "Utils",
+      "type": "registry:utils"
+    }
+  ],
+  "lastUpdated": "2026-10-13T21:35:03+03:00",
+  "registry": "ui",
+  "version": "0.1.0"
+}

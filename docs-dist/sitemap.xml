@@ -100,6 +100,7 @@
   <url><loc>https://ui.buildy.tw/blocks/zone-table/</loc></url>
   <url><loc>https://ui.buildy.tw/components/action-group/</loc></url>
   <url><loc>https://ui.buildy.tw/components/app-main/</loc></url>
+  <url><loc>https://ui.buildy.tw/components/article-block/</loc></url>
   <url><loc>https://ui.buildy.tw/components/auth-form/</loc></url>
   <url><loc>https://ui.buildy.tw/components/avatar/</loc></url>
   <url><loc>https://ui.buildy.tw/components/backdrop/</loc></url>
@@ -109,6 +110,7 @@
   <url><loc>https://ui.buildy.tw/components/cart-summary-card/</loc></url>
   <url><loc>https://ui.buildy.tw/components/cart-table/</loc></url>
   <url><loc>https://ui.buildy.tw/components/checkout-step/</loc></url>
+  <url><loc>https://ui.buildy.tw/components/checkout-submit/</loc></url>
   <url><loc>https://ui.buildy.tw/components/code-window/</loc></url>
   <url><loc>https://ui.buildy.tw/components/compare-mark/</loc></url>
   <url><loc>https://ui.buildy.tw/components/cta-actions/</loc></url>
@@ -127,6 +129,7 @@
   <url><loc>https://ui.buildy.tw/components/feature-rows/</loc></url>
   <url><loc>https://ui.buildy.tw/components/feature-stat-rows/</loc></url>
   <url><loc>https://ui.buildy.tw/components/field/</loc></url>
+  <url><loc>https://ui.buildy.tw/components/figure-block/</loc></url>
   <url><loc>https://ui.buildy.tw/components/file-tree-item/</loc></url>
   <url><loc>https://ui.buildy.tw/components/file-tree/</loc></url>
   <url><loc>https://ui.buildy.tw/components/footer-brand/</loc></url>
@@ -158,6 +161,7 @@
   <url><loc>https://ui.buildy.tw/components/member-row/</loc></url>
   <url><loc>https://ui.buildy.tw/components/meter-row/</loc></url>
   <url><loc>https://ui.buildy.tw/components/nav-actions/</loc></url>
+  <url><loc>https://ui.buildy.tw/components/nav-block/</loc></url>
   <url><loc>https://ui.buildy.tw/components/nav-item-row/</loc></url>
   <url><loc>https://ui.buildy.tw/components/nav-item/</loc></url>
   <url><loc>https://ui.buildy.tw/components/nav-links/</loc></url>

@@ -1,5 +1,5 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Form (primitive) | ui8kit</title><meta name="description" content="Form primitive"><link rel="canonical" href="https://ui.buildy.tw/primitives/form/"><script src="/assets/theme.js"></script><link rel="stylesheet" href="/assets/site.css"><link rel="stylesheet" href="/assets/skins.css"><script src="/assets/app.js" defer></script></head><body class="min-h-screen bg-background text-foreground font-sans"><a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:left-2 focus:top-2 focus:bg-background focus:px-4 focus:py-2 focus:z-50">Skip to content</a><header class="border-b border-border"><div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-4 py-4"><a href="/" class="text-lg font-semibold">ui8kit</a><nav class="flex items-center gap-4 text-sm" aria-label="Main"><a href="/docs/" class="hover:underline">Docs</a><a href="/docs/categories/blocks-marketing/" class="hover:underline">Blocks</a><a href="/docs/categories/primitives/" class="hover:underline">Primitives</a><a href="/templates/" class="hover:underline">Templates</a><a href="/docs/cli/" class="hover:underline">CLI</a></nav><form id="search" class="grid gap-4 relative w-full sm:w-72" data-index="/search-index.json" role="search"><label class="text-xs font-bold text-foreground sr-only" for="search-input">Search components and blocks</label><input id="search-input" type="search" placeholder="Search, press /" autocomplete="off" class="w-full min-w-0 text-foreground inset-ring inset-ring-input outline-none placeholder:text-muted-foreground disabled:cursor-not-allowed disabled:opacity-50 focus-visible:inset-ring-ring rounded h-10 bg-card px-4 text-sm md:text-sm"><ul class="absolute left-0 right-0 top-12 z-40 rounded border border-border bg-popover text-popover-foreground shadow-md" aria-live="polite" hidden id="search-results"></ul></form><div class="theme-ctl items-center gap-2 text-sm"><label class="text-xs font-bold text-foreground sr-only" for="theme-select">Colour mode</label><select id="theme-select" class="min-w-0 inset-ring inset-ring-input outline-none placeholder:text-muted-foreground disabled:cursor-not-allowed disabled:opacity-50 focus-visible:inset-ring-ring rounded h-10 text-sm w-auto bg-card px-2 text-card-foreground"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select><label class="text-xs font-bold text-foreground sr-only" for="skin-select">Skin</label><select id="skin-select" class="min-w-0 inset-ring inset-ring-input outline-none placeholder:text-muted-foreground disabled:cursor-not-allowed disabled:opacity-50 focus-visible:inset-ring-ring rounded h-10 text-sm w-auto bg-card px-2 text-card-foreground"><option value="" selected>Default</option><option value="sky">Sky</option><option value="modern-minimal">Modern Minimal</option><option value="violet-bloom">Violet Bloom</option><option value="t3-chat">T3 Chat</option><option value="bubblegum">Bubblegum</option><option value="doom-64">Doom 64</option><option value="amber-minimal">Amber Minimal</option><option value="supabase">Supabase</option><option value="kodama-grove">Kodama Grove</option><option value="perpetuity">Perpetuity</option><option value="cosmic-night">Cosmic Night</option><option value="claude">Claude</option><option value="mocha-mousse">Mocha Mousse</option><option value="neo-brutalism">Neo Brutalism</option><option value="notebook">Notebook</option></select></div></div></header><div class="mx-auto flex max-w-6xl flex-col gap-8 px-4 py-8 md:flex-row"><nav class="md:w-64 md:shrink-0" aria-label="Docs"><h2 class="text-foreground text-sm font-semibold mb-2">Guides</h2><ul class="mb-6 flex flex-col gap-1"><li class=""><a href="/docs/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Overview</a></li><li class=""><a href="/docs/getting-started/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Getting started</a></li><li class=""><a href="/docs/installation/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Installation</a></li><li class=""><a href="/docs/cli/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">CLI</a></li><li class=""><a href="/docs/theming-skins/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Theming and skins</a></li><li class=""><a href="/docs/grid-8px/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">The 8px grid</a></li></ul><h2 class="text-foreground text-sm font-semibold mb-2">Categories</h2><ul class="mb-6 flex flex-col gap-1"><li class=""><a href="/docs/categories/primitives/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Primitives</a></li><li class=""><a href="/docs/categories/components/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Components</a></li><li class=""><a href="/docs/categories/blocks-marketing/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: marketing</a></li><li class=""><a href="/docs/categories/blocks-commerce/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: commerce</a></li><li class=""><a href="/docs/categories/blocks-dashboard/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: dashboard</a></li><li class=""><a href="/docs/categories/blocks-content/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: content</a></li><li class=""><a href="/docs/categories/blocks-account/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: account</a></li><li class=""><a href="/docs/categories/blocks-promo/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: promo</a></li><li class=""><a href="/docs/categories/blocks-support/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: support</a></li><li class=""><a href="/docs/categories/blocks-onboarding/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: onboarding</a></li><li class=""><a href="/docs/categories/blocks-general/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: general</a></li></ul></nav> <main class="min-w-0 flex-1" id="main"><article class=""><p class="text-sm text-muted-foreground"><a href="/docs/categories/primitives/" class="underline">primitive / primitives</a></p><h1 class="text-foreground text-3xl font-semibold mb-2 tracking-tight">Form</h1><p class="mb-6 max-w-3xl text-muted-foreground">Form primitive</p><h2 class="text-foreground text-xl font-semibold mb-2">Install</h2><div class="mb-6 max-w-xl"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code class="overflow-x-auto whitespace-nowrap font-mono text-sm" id="install-form" tabindex="0">npx ui8kit add form</code><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="install-form" hidden>Copy</button></div></div><p class="text-sm mb-6 text-muted-foreground">Pulls in:   <a href="/lib/utils/" class="underline">utils</a></p> <h2 class="text-foreground text-xl font-semibold mb-2">Preview</h2><div class="preview mb-8 rounded border border-border bg-background p-6" aria-label="Form preview" role="group" tabindex="0"><form class="grid gap-4" data-testid="auth-form"><div class="flex min-w-0 flex-col gap-2"><label class="text-xs font-bold text-foreground" for="auth-name">Full name</label><input type="text" class="w-full min-w-0 bg-background text-foreground inset-ring inset-ring-input outline-none placeholder:text-muted-foreground disabled:cursor-not-allowed disabled:opacity-50 focus-visible:inset-ring-ring rounded h-10 px-3 text-base md:text-sm" autoComplete="name" id="auth-name" data-testid="field" name="name"/></div><div class="flex min-w-0 flex-col gap-2"><label class="text-xs font-bold text-foreground" for="auth-email">Email</label><input type="email" class="w-full min-w-0 bg-background text-foreground inset-ring inset-ring-input outline-none placeholder:text-muted-foreground disabled:cursor-not-allowed disabled:opacity-50 focus-visible:inset-ring-ring rounded h-10 px-3 text-base md:text-sm" autoComplete="email" id="auth-email" data-testid="field" name="email"/></div><div class="flex min-w-0 flex-col gap-2"><label class="text-xs font-bold text-foreground" for="auth-password">Password</label><input type="password" class="w-full min-w-0 bg-background text-foreground inset-ring inset-ring-input outline-none placeholder:text-muted-foreground disabled:cursor-not-allowed disabled:opacity-50 focus-visible:inset-ring-ring rounded h-10 px-3 text-base md:text-sm" autoComplete="new-password" id="auth-password" data-testid="field" name="password"/></div><div class="flex min-w-0 gap-2 items-center justify-start w-fit"><input type="checkbox" class="peer shrink-0 appearance-none bg-background inset-ring inset-ring-input checked:bg-primary checked:inset-ring-primary checkbox-glyph disabled:cursor-not-allowed disabled:opacity-50 size-5" id="auth-terms" name="terms"/><label class="font-bold text-foreground text-sm" for="auth-terms">I agree to the terms of service</label></div><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-primary text-primary-foreground inset-ring-primary h-10 px-4 text-sm w-full" data-slot="button" data-testid="submit">Create account</button></form>
-</div><h2 class="text-foreground text-xl font-semibold mb-2">Code</h2><div class="rt mb-8"><div class="rt-bar" aria-label="Runtime" role="radiogroup"><input id="rt-svelte" type="radio" name="rt" value="svelte" class="shrink-0 appearance-none rounded-full bg-background inset-ring inset-ring-input checked:bg-primary checked:inset-ring-primary radio-glyph disabled:cursor-not-allowed disabled:opacity-50 [--dot:10px] sr-only size-px" checked><label class="text-xs font-bold text-foreground" for="rt-svelte">Svelte</label><input id="rt-react" type="radio" name="rt" value="react" class="shrink-0 appearance-none rounded-full bg-background inset-ring inset-ring-input checked:bg-primary checked:inset-ring-primary radio-glyph disabled:cursor-not-allowed disabled:opacity-50 [--dot:10px] sr-only size-px"><label class="text-xs font-bold text-foreground" for="rt-react">React</label><input id="rt-vue" type="radio" name="rt" value="vue" class="shrink-0 appearance-none rounded-full bg-background inset-ring inset-ring-input checked:bg-primary checked:inset-ring-primary radio-glyph disabled:cursor-not-allowed disabled:opacity-50 [--dot:10px] sr-only size-px"><label class="text-xs font-bold text-foreground" for="rt-vue">Vue</label></div><section class="rt-panel" id="panel-svelte" aria-label="Svelte code" data-runtime="svelte"><p class="text-sm mb-2 text-muted-foreground">Point the CLI at this runtime once, then add the item:</p><div class="mb-2"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code class="overflow-x-auto whitespace-nowrap font-mono text-sm" id="panel-svelte-init" tabindex="0">npx ui8kit init --yes --framework svelte --dir src --registry-url https://registry.buildy.tw/svelte --strict-cdn</code><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="panel-svelte-init" hidden>Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code class="overflow-x-auto whitespace-nowrap font-mono text-sm" id="panel-svelte-add" tabindex="0">npx ui8kit add form</code><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="panel-svelte-add" hidden>Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/form/data-list.svelte</span><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="code-svelte-0" hidden>Copy</button></div><pre class="hl max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6" tabindex="0"><code class="font-mono" id="code-svelte-0"><span class="c">&lt;!-- Code generated by xgen. DO NOT EDIT. --&gt;</span>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Form (primitive) | ui8kit</title><meta name="description" content="Form primitive"><link rel="canonical" href="https://ui.buildy.tw/primitives/form/"><script src="/assets/theme.js"></script><link rel="stylesheet" href="/assets/site.css"><link rel="stylesheet" href="/assets/skins.css"><script src="/assets/app.js" defer></script></head><body class="min-h-screen bg-background text-foreground font-sans"><a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:left-2 focus:top-2 focus:bg-background focus:px-4 focus:py-2 focus:z-50">Skip to content</a><header class="border-b border-border"><div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-4 py-4"><a href="/" class="text-lg font-semibold">ui8kit</a><nav class="flex items-center gap-4 text-sm" aria-label="Main"><a href="/docs/" class="hover:underline">Docs</a><a href="/docs/categories/blocks-marketing/" class="hover:underline">Blocks</a><a href="/docs/categories/primitives/" class="hover:underline">Primitives</a><a href="/templates/" class="hover:underline">Templates</a><a href="/docs/cli/" class="hover:underline">CLI</a></nav><form id="search" class="grid gap-4 relative w-full sm:w-72" data-index="/search-index.json" role="search"><label class="text-xs font-bold text-foreground sr-only" for="search-input">Search components and blocks</label><input id="search-input" type="search" placeholder="Search, press /" autocomplete="off" class="w-full min-w-0 text-foreground inset-ring inset-ring-input outline-none placeholder:text-muted-foreground disabled:cursor-not-allowed disabled:opacity-50 focus-visible:inset-ring-ring rounded h-10 bg-card px-4 text-sm md:text-sm"><ul class="absolute left-0 right-0 top-12 z-40 rounded border border-border bg-popover text-popover-foreground shadow-md" aria-live="polite" hidden id="search-results"></ul></form><div class="theme-ctl items-center gap-2 text-sm"><label class="text-xs font-bold text-foreground sr-only" for="theme-select">Colour mode</label><select id="theme-select" class="min-w-0 inset-ring inset-ring-input outline-none placeholder:text-muted-foreground disabled:cursor-not-allowed disabled:opacity-50 focus-visible:inset-ring-ring rounded h-10 text-sm w-auto bg-card px-2 text-card-foreground"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select><label class="text-xs font-bold text-foreground sr-only" for="skin-select">Skin</label><select id="skin-select" class="min-w-0 inset-ring inset-ring-input outline-none placeholder:text-muted-foreground disabled:cursor-not-allowed disabled:opacity-50 focus-visible:inset-ring-ring rounded h-10 text-sm w-auto bg-card px-2 text-card-foreground"><option value="" selected>Default</option><option value="sky">Sky</option><option value="modern-minimal">Modern Minimal</option><option value="violet-bloom">Violet Bloom</option><option value="t3-chat">T3 Chat</option><option value="bubblegum">Bubblegum</option><option value="doom-64">Doom 64</option><option value="amber-minimal">Amber Minimal</option><option value="supabase">Supabase</option><option value="kodama-grove">Kodama Grove</option><option value="perpetuity">Perpetuity</option><option value="cosmic-night">Cosmic Night</option><option value="claude">Claude</option><option value="mocha-mousse">Mocha Mousse</option><option value="neo-brutalism">Neo Brutalism</option><option value="notebook">Notebook</option></select></div></div></header><div class="mx-auto flex max-w-6xl flex-col gap-8 px-4 py-8 md:flex-row"><nav class="md:w-64 md:shrink-0" aria-label="Docs"><h2 class="text-foreground text-sm font-semibold mb-2">Guides</h2><ul class="mb-6 flex flex-col gap-1"><li class=""><a href="/docs/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Overview</a></li><li class=""><a href="/docs/getting-started/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Getting started</a></li><li class=""><a href="/docs/installation/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Installation</a></li><li class=""><a href="/docs/cli/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">CLI</a></li><li class=""><a href="/docs/theming-skins/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Theming and skins</a></li><li class=""><a href="/docs/grid-8px/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">The 8px grid</a></li></ul><h2 class="text-foreground text-sm font-semibold mb-2">Categories</h2><ul class="mb-6 flex flex-col gap-1"><li class=""><a href="/docs/categories/primitives/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Primitives</a></li><li class=""><a href="/docs/categories/components/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Components</a></li><li class=""><a href="/docs/categories/blocks-marketing/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: marketing</a></li><li class=""><a href="/docs/categories/blocks-commerce/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: commerce</a></li><li class=""><a href="/docs/categories/blocks-dashboard/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: dashboard</a></li><li class=""><a href="/docs/categories/blocks-content/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: content</a></li><li class=""><a href="/docs/categories/blocks-account/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: account</a></li><li class=""><a href="/docs/categories/blocks-promo/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: promo</a></li><li class=""><a href="/docs/categories/blocks-support/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: support</a></li><li class=""><a href="/docs/categories/blocks-onboarding/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: onboarding</a></li><li class=""><a href="/docs/categories/blocks-general/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: general</a></li></ul></nav> <main class="min-w-0 flex-1" id="main"><article class=""><p class="text-sm text-muted-foreground"><a href="/docs/categories/primitives/" class="underline">primitive / primitives</a></p><h1 class="text-foreground text-3xl font-semibold mb-2 tracking-tight">Form</h1><p class="mb-6 max-w-3xl text-muted-foreground">Form primitive</p><h2 class="text-foreground text-xl font-semibold mb-2">Install</h2><div class="mb-6 max-w-xl"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code class="overflow-x-auto whitespace-nowrap font-mono text-sm" id="install-form" tabindex="0">npx ui8kit add form</code><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="install-form" hidden>Copy</button></div></div><p class="text-sm mb-6 text-muted-foreground">Pulls in:   <a href="/lib/utils/" class="underline">utils</a></p> <h2 class="text-foreground text-xl font-semibold mb-2">Preview</h2><div class="preview mb-8 rounded border border-border bg-background p-6" aria-label="Form preview" role="group" tabindex="0"><form class="grid gap-4" data-testid="auth-form" method="dialog"><div class="flex min-w-0 flex-col gap-2"><label class="text-xs font-bold text-foreground" for="auth-name">Full name</label><input type="text" class="w-full min-w-0 bg-background text-foreground inset-ring inset-ring-input outline-none placeholder:text-muted-foreground disabled:cursor-not-allowed disabled:opacity-50 focus-visible:inset-ring-ring rounded h-10 px-3 text-base md:text-sm" autoComplete="name" id="auth-name" data-testid="field" name="name"/></div><div class="flex min-w-0 flex-col gap-2"><label class="text-xs font-bold text-foreground" for="auth-email">Email</label><input type="email" class="w-full min-w-0 bg-background text-foreground inset-ring inset-ring-input outline-none placeholder:text-muted-foreground disabled:cursor-not-allowed disabled:opacity-50 focus-visible:inset-ring-ring rounded h-10 px-3 text-base md:text-sm" autoComplete="email" id="auth-email" data-testid="field" name="email"/></div><div class="flex min-w-0 flex-col gap-2"><label class="text-xs font-bold text-foreground" for="auth-password">Password</label><input type="password" class="w-full min-w-0 bg-background text-foreground inset-ring inset-ring-input outline-none placeholder:text-muted-foreground disabled:cursor-not-allowed disabled:opacity-50 focus-visible:inset-ring-ring rounded h-10 px-3 text-base md:text-sm" autoComplete="new-password" id="auth-password" data-testid="field" name="password"/></div><div class="flex min-w-0 gap-2 items-center justify-start w-fit"><input type="checkbox" class="peer shrink-0 appearance-none bg-background inset-ring inset-ring-input checked:bg-primary checked:inset-ring-primary checkbox-glyph disabled:cursor-not-allowed disabled:opacity-50 size-5" id="auth-terms" name="terms"/><label class="font-bold text-foreground text-sm" for="auth-terms">I agree to the terms of service</label></div><button type="submit" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-primary text-primary-foreground inset-ring-primary h-10 px-4 text-sm w-full" data-slot="button" data-testid="submit">Create account</button></form>
+</div><h2 class="text-foreground text-xl font-semibold mb-2">Code</h2><div class="rt mb-8"><div class="rt-bar" aria-label="Runtime" role="radiogroup"><input id="rt-svelte" type="radio" name="rt" value="svelte" class="shrink-0 appearance-none rounded-full bg-background inset-ring inset-ring-input checked:bg-primary checked:inset-ring-primary radio-glyph disabled:cursor-not-allowed disabled:opacity-50 [--dot:10px] sr-only size-px" checked><label class="text-xs font-bold text-foreground" for="rt-svelte">Svelte</label><input id="rt-react" type="radio" name="rt" value="react" class="shrink-0 appearance-none rounded-full bg-background inset-ring inset-ring-input checked:bg-primary checked:inset-ring-primary radio-glyph disabled:cursor-not-allowed disabled:opacity-50 [--dot:10px] sr-only size-px"><label class="text-xs font-bold text-foreground" for="rt-react">React</label><input id="rt-vue" type="radio" name="rt" value="vue" class="shrink-0 appearance-none rounded-full bg-background inset-ring inset-ring-input checked:bg-primary checked:inset-ring-primary radio-glyph disabled:cursor-not-allowed disabled:opacity-50 [--dot:10px] sr-only size-px"><label class="text-xs font-bold text-foreground" for="rt-vue">Vue</label><input id="rt-solid" type="radio" name="rt" value="solid" class="shrink-0 appearance-none rounded-full bg-background inset-ring inset-ring-input checked:bg-primary checked:inset-ring-primary radio-glyph disabled:cursor-not-allowed disabled:opacity-50 [--dot:10px] sr-only size-px"><label class="text-xs font-bold text-foreground" for="rt-solid">Solid</label></div><section class="rt-panel" id="panel-svelte" aria-label="Svelte code" data-runtime="svelte"><p class="text-sm mb-2 text-muted-foreground">Point the CLI at this runtime once, then add the item:</p><div class="mb-2"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code class="overflow-x-auto whitespace-nowrap font-mono text-sm" id="panel-svelte-init" tabindex="0">npx ui8kit init --yes --framework svelte --dir src --registry-url https://registry.buildy.tw/svelte --strict-cdn</code><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="panel-svelte-init" hidden>Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code class="overflow-x-auto whitespace-nowrap font-mono text-sm" id="panel-svelte-add" tabindex="0">npx ui8kit add form</code><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="panel-svelte-add" hidden>Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/form/data-list.svelte</span><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="code-svelte-0" hidden>Copy</button></div><pre class="hl max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6" tabindex="0"><code class="font-mono" id="code-svelte-0"><span class="c">&lt;!-- Code generated by xgen. DO NOT EDIT. --&gt;</span>
 <span class="c">&lt;!-- Source: xgen/specs/ui/controls.json --&gt;</span>
 <span class="c">&lt;!--
 </span><span class="c">  DataList renders a native datalist.
@@ -1346,4 +1346,434 @@ defineSlots&lt;{ <span class="k">default</span>?(): unknown }&gt;();
     &lt;<span class="nt">slot</span> /&gt;
   &lt;/<span class="nt">progress</span>&gt;
 &lt;/<span class="nt">template</span>&gt;
-</code></pre></div> <p class="text-sm"><a href="https://registry.buildy.tw/vue/components/ui/form.json" class="underline">Vue registry item (JSON)</a></p></section></div><h2 class="text-foreground text-xl font-semibold mb-2">Props</h2><p class="text-sm mb-4 max-w-3xl text-muted-foreground">Names and types come from the xgen specs of the source. Standard HTML attributes (id, role, tabIndex, aria-*) pass through to the root element; the class prop is className in React.</p><div class="mb-8"><h3 class="text-foreground text-base font-semibold mb-2 font-mono">Form</h3> <p class="text-sm mb-2 max-w-3xl whitespace-pre-line text-muted-foreground">Form renders a vertical grid form container.</p> <div class="overflow-x-auto" aria-label="Props of Form" role="region" tabindex="0"><table class="w-full min-w-[40rem] text-left text-sm"><caption class="sr-only">Props of Form</caption><thead class=""><tr class="border-b border-border"><th class="text-left align-middle px-0 py-2 pr-4 font-medium" scope="col">Prop</th><th class="text-left align-middle px-0 py-2 pr-4 font-medium" scope="col">Type</th><th class="text-left align-middle px-0 py-2 pr-4 font-medium" scope="col">Default</th> <th class="text-left align-middle px-0 py-2 font-medium" scope="col">Description</th></tr></thead><tbody class=""><tr class="border-b border-border align-top"><th class="text-left align-middle px-0 py-2 pr-4 align-top font-mono text-xs font-medium" scope="row">class </th><td class="align-middle px-0 py-2 pr-4 align-top font-mono text-xs">string</td><td class="align-middle px-0 py-2 pr-4 align-top font-mono text-xs"><span class="text-muted-foreground">-</span></td><td class="align-middle px-0 py-2 align-top text-muted-foreground">adds Tailwind utilities</td></tr><tr class="border-b border-border align-top"><th class="text-left align-middle px-0 py-2 pr-4 align-top font-mono text-xs font-medium" scope="row">noValidate </th><td class="align-middle px-0 py-2 pr-4 align-top font-mono text-xs">boolean</td><td class="align-middle px-0 py-2 pr-4 align-top font-mono text-xs"><span class="text-muted-foreground">-</span></td><td class="align-middle px-0 py-2 align-top text-muted-foreground"></td></tr><tr class="border-b border-border align-top"><th class="text-left align-middle px-0 py-2 pr-4 align-top font-mono text-xs font-medium" scope="row">children </th><td class="align-middle px-0 py-2 pr-4 align-top font-mono text-xs">children</td><td class="align-middle px-0 py-2 pr-4 align-top font-mono text-xs"><span class="text-muted-foreground">-</span></td><td class="align-middle px-0 py-2 align-top text-muted-foreground"></td></tr></tbody></table></div></div><div class="mb-8"><h3 class="text-foreground text-base font-semibold mb-2 font-mono">FormItem</h3> <p class="text-sm mb-2 max-w-3xl whitespace-pre-line text-muted-foreground">FormItem groups a single field with spacing for label and control.</p> <div class="overflow-x-auto" aria-label="Props of FormItem" role="region" tabindex="0"><table class="w-full min-w-[40rem] text-left text-sm"><caption class="sr-only">Props of FormItem</caption><thead class=""><tr class="border-b border-border"><th class="text-left align-middle px-0 py-2 pr-4 font-medium" scope="col">Prop</th><th class="text-left align-middle px-0 py-2 pr-4 font-medium" scope="col">Type</th><th class="text-left align-middle px-0 py-2 pr-4 font-medium" scope="col">Default</th> <th class="text-left align-middle px-0 py-2 font-medium" scope="col">Description</th></tr></thead><tbody class=""><tr class="border-b border-border align-top"><th class="text-left align-middle px-0 py-2 pr-4 align-top font-mono text-xs font-medium" scope="row">class </th><td class="align-middle px-0 py-2 pr-4 align-top font-mono text-xs">string</td><td class="align-middle px-0 py-2 pr-4 align-top font-mono text-xs"><span class="text-muted-foreground">-</span></td><td class="align-middle px-0 py-2 align-top text-muted-foreground">adds Tailwind utilities</td></tr><tr class="border-b border-border align-top"><th class="text-left align-middle px-0 py-2 pr-4 align-top font-mono text-xs font-medium" scope="row">children </th><td class="align-middle px-0 py-2 pr-4 align-top font-mono text-xs">children</td><td class="align-middle px-0 py-2 pr-4 align-top font-mono text-xs"><span class="text-muted-foreground">-</span></td><td class="align-middle px-0 py-2 align-top text-muted-foreground"></td></tr></tbody></table></div></div><div class="mb-8"><h3 class="text-foreground text-base font-semibold mb-2 font-mono">FormDescription</h3> <p class="text-sm mb-2 max-w-3xl whitespace-pre-line text-muted-foreground">FormDescription renders muted helper copy below a control.</p> <div class="overflow-x-auto" aria-label="Props of FormDescription" role="region" tabindex="0"><table class="w-full min-w-[40rem] text-left text-sm"><caption class="sr-only">Props of FormDescription</caption><thead class=""><tr class="border-b border-border"><th class="text-left align-middle px-0 py-2 pr-4 font-medium" scope="col">Prop</th><th class="text-left align-middle px-0 py-2 pr-4 font-medium" scope="col">Type</th><th class="text-left align-middle px-0 py-2 pr-4 font-medium" scope="col">Default</th> <th class="text-left align-middle px-0 py-2 font-medium" scope="col">Description</th></tr></thead><tbody class=""><tr class="border-b border-border align-top"><th class="text-left align-middle px-0 py-2 pr-4 align-top font-mono text-xs font-medium" scope="row">class </th><td class="align-middle px-0 py-2 pr-4 align-top font-mono text-xs">string</td><td class="align-middle px-0 py-2 pr-4 align-top font-mono text-xs"><span class="text-muted-foreground">-</span></td><td class="align-middle px-0 py-2 align-top text-muted-foreground">adds Tailwind utilities</td></tr><tr class="border-b border-border align-top"><th class="text-left align-middle px-0 py-2 pr-4 align-top font-mono text-xs font-medium" scope="row">children </th><td class="align-middle px-0 py-2 pr-4 align-top font-mono text-xs">children</td><td class="align-middle px-0 py-2 pr-4 align-top font-mono text-xs"><span class="text-muted-foreground">-</span></td><td class="align-middle px-0 py-2 align-top text-muted-foreground"></td></tr></tbody></table></div></div><div class="mb-8"><h3 class="text-foreground text-base font-semibold mb-2 font-mono">FormMessage</h3> <p class="text-sm mb-2 max-w-3xl whitespace-pre-line text-muted-foreground">FormMessage renders destructive validation feedback.</p> <div class="overflow-x-auto" aria-label="Props of FormMessage" role="region" tabindex="0"><table class="w-full min-w-[40rem] text-left text-sm"><caption class="sr-only">Props of FormMessage</caption><thead class=""><tr class="border-b border-border"><th class="text-left align-middle px-0 py-2 pr-4 font-medium" scope="col">Prop</th><th class="text-left align-middle px-0 py-2 pr-4 font-medium" scope="col">Type</th><th class="text-left align-middle px-0 py-2 pr-4 font-medium" scope="col">Default</th> <th class="text-left align-middle px-0 py-2 font-medium" scope="col">Description</th></tr></thead><tbody class=""><tr class="border-b border-border align-top"><th class="text-left align-middle px-0 py-2 pr-4 align-top font-mono text-xs font-medium" scope="row">class </th><td class="align-middle px-0 py-2 pr-4 align-top font-mono text-xs">string</td><td class="align-middle px-0 py-2 pr-4 align-top font-mono text-xs"><span class="text-muted-foreground">-</span></td><td class="align-middle px-0 py-2 align-top text-muted-foreground">adds Tailwind utilities</td></tr><tr class="border-b border-border align-top"><th class="text-left align-middle px-0 py-2 pr-4 align-top font-mono text-xs font-medium" scope="row">children </th><td class="align-middle px-0 py-2 pr-4 align-top font-mono text-xs">children</td><td class="align-middle px-0 py-2 pr-4 align-top font-mono text-xs"><span class="text-muted-foreground">-</span></td><td class="align-middle px-0 py-2 align-top text-muted-foreground"></td></tr></tbody></table></div></div> <h2 class="text-foreground text-xl font-semibold mb-2">Used in</h2><ul class="flex flex-wrap gap-x-4 gap-y-1 text-sm"><li class=""><a href="/blocks/about-me/" class="underline">about-me</a></li><li class=""><a href="/components/auth-form/" class="underline">auth-form</a></li><li class=""><a href="/components/cart-summary-card/" class="underline">cart-summary-card</a></li><li class=""><a href="/blocks/checklist/" class="underline">checklist</a></li><li class=""><a href="/blocks/checkout-form/" class="underline">checkout-form</a></li><li class=""><a href="/blocks/contact-form/" class="underline">contact-form</a></li><li class=""><a href="/components/cta-actions/" class="underline">cta-actions</a></li><li class=""><a href="/components/drawer-lines/" class="underline">drawer-lines</a></li><li class=""><a href="/components/footer-signup-card/" class="underline">footer-signup-card</a></li><li class=""><a href="/components/meter-row/" class="underline">meter-row</a></li><li class=""><a href="/blocks/newsletter-form/" class="underline">newsletter-form</a></li><li class=""><a href="/blocks/profile-form/" class="underline">profile-form</a></li><li class=""><a href="/blocks/signup-wizard/" class="underline">signup-wizard</a></li><li class=""><a href="/blocks/sitemap-footer/" class="underline">sitemap-footer</a></li></ul></article></main></div><footer class="border-t border-border"><div class="mx-auto max-w-6xl px-4 py-8 text-sm text-muted-foreground">ui8kit, MIT licence. Static docs generated from markdown and the registry (<a href="https://registry.buildy.tw/registry.json" class="underline">registry.json</a>).</div></footer></body></html>
+</code></pre></div> <p class="text-sm"><a href="https://registry.buildy.tw/vue/components/ui/form.json" class="underline">Vue registry item (JSON)</a></p></section><section class="rt-panel" id="panel-solid" aria-label="Solid code" data-runtime="solid"><p class="text-sm mb-2 text-muted-foreground">Point the CLI at this runtime once, then add the item:</p><div class="mb-2"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code class="overflow-x-auto whitespace-nowrap font-mono text-sm" id="panel-solid-init" tabindex="0">npx ui8kit init --yes --framework solid --dir src --registry-url https://registry.buildy.tw/solid --strict-cdn</code><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="panel-solid-init" hidden>Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code class="overflow-x-auto whitespace-nowrap font-mono text-sm" id="panel-solid-add" tabindex="0">npx ui8kit add form</code><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="panel-solid-add" hidden>Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/form/data-list.tsx</span><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="code-solid-0" hidden>Copy</button></div><pre class="hl max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6" tabindex="0"><code class="font-mono" id="code-solid-0"><span class="c1">// Code generated by xgen. DO NOT EDIT.
+</span><span class="c1">// Source: xgen/specs/ui/controls.json
+</span><span class="cm">/**
+</span><span class="cm"> * DataList: one part of Fieldset (one file per part, as in the Svelte package).
+</span><span class="cm"> */</span>
+
+<span class="kr">import</span> { splitProps, <span class="kr">type</span> Component, <span class="kr">type</span> JSX } <span class="kr">from</span> <span class="s2">&#34;solid-js&#34;</span>;
+<span class="kr">import</span> { cn } <span class="kr">from</span> <span class="s2">&#34;../../utils&#34;</span>;
+
+<span class="cm">/**
+</span><span class="cm"> * DataList renders a native datalist.
+</span><span class="cm"> */</span>
+<span class="kr">export</span> <span class="kr">type</span> DataListProps = Omit&lt;<span class="nt">JSX.HTMLAttributes</span>&lt;<span class="nt">HTMLDataListElement</span>&gt;, <span class="s2">&#34;class&#34;</span> <span class="err">|</span> <span class="s2">&#34;children&#34;</span>&gt; &amp; {
+  <span class="kr">class</span>?: <span class="kt">string</span>;
+  children?: <span class="kt">JSX.Element</span>;
+};
+
+<span class="kr">export</span> <span class="kr">const</span> DataList: <span class="kt">Component</span>&lt;<span class="nt">DataListProps</span>&gt; = (props) =&gt; {
+  <span class="kr">const</span> [local, rest] = splitProps(props, [<span class="s2">&#34;class&#34;</span>, <span class="s2">&#34;children&#34;</span>]);
+  <span class="kr">const</span> cls = () =&gt; cn(local.<span class="kr">class</span>);
+  <span class="k">return</span> (
+    &lt;<span class="nt">datalist</span> <span class="na">class</span>={cls() || <span class="kc">undefined</span>} {<span class="na">...rest</span>}&gt;
+      {local.children}
+    &lt;/<span class="nt">datalist</span>&gt;
+  );
+};
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/form/data-option.tsx</span><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="code-solid-1" hidden>Copy</button></div><pre class="hl max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6" tabindex="0"><code class="font-mono" id="code-solid-1"><span class="c1">// Code generated by xgen. DO NOT EDIT.
+</span><span class="c1">// Source: xgen/specs/ui/controls.json
+</span><span class="cm">/**
+</span><span class="cm"> * DataOption: one part of Fieldset (one file per part, as in the Svelte package).
+</span><span class="cm"> */</span>
+
+<span class="kr">import</span> { splitProps, <span class="kr">type</span> Component, <span class="kr">type</span> JSX } <span class="kr">from</span> <span class="s2">&#34;solid-js&#34;</span>;
+
+<span class="cm">/**
+</span><span class="cm"> * DataOption renders an option inside a datalist.
+</span><span class="cm"> */</span>
+<span class="kr">export</span> <span class="kr">type</span> DataOptionProps = Omit&lt;
+  JSX.OptionHTMLAttributes&lt;<span class="nt">HTMLOptionElement</span>&gt;,
+  <span class="s2">&#34;class&#34;</span> | <span class="s2">&#34;children&#34;</span>
+&gt; &amp; {
+  <span class="kr">class</span>?: <span class="kt">string</span>;
+};
+
+<span class="kr">export</span> <span class="kr">const</span> DataOption: <span class="kt">Component</span>&lt;<span class="nt">DataOptionProps</span>&gt; = (props) =&gt; {
+  <span class="kr">const</span> [local, rest] = splitProps(props, [<span class="s2">&#34;class&#34;</span>]);
+  <span class="k">return</span> (
+    &lt;<span class="nt">option</span> {<span class="na">...rest</span>} /&gt;
+  );
+};
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/form/fieldset.tsx</span><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="code-solid-2" hidden>Copy</button></div><pre class="hl max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6" tabindex="0"><code class="font-mono" id="code-solid-2"><span class="c1">// Code generated by xgen. DO NOT EDIT.
+</span><span class="c1">// Source: xgen/specs/ui/controls.json
+</span><span class="cm">/**
+</span><span class="cm"> * Form controls covers fieldset, legend, datalist, output, meter, and progress.
+</span><span class="cm"> */</span>
+
+<span class="kr">import</span> { splitProps, <span class="kr">type</span> Component, <span class="kr">type</span> JSX } <span class="kr">from</span> <span class="s2">&#34;solid-js&#34;</span>;
+<span class="kr">import</span> { cn, variants, <span class="kr">type</span> VariantKey } <span class="kr">from</span> <span class="s2">&#34;../../utils&#34;</span>;
+
+<span class="cm">/** Fieldset: the classes of each value of each prop (shadcn/cva style). */</span>
+<span class="kr">export</span> <span class="kr">const</span> fieldsetVariants = variants({
+  base: <span class="s2">&#34;grid&#34;</span>,
+  variants: {
+    size: {
+      <span class="k">default</span>: <span class="s2">&#34;gap-2&#34;</span>,
+      lg: <span class="s2">&#34;gap-4&#34;</span>,
+      sm: <span class="s2">&#34;gap-2&#34;</span>,
+    },
+    variant: {
+      card: <span class="s2">&#34;rounded p-4 inset-ring inset-ring-border&#34;</span>,
+      <span class="k">default</span>: <span class="s2">&#34;&#34;</span>,
+      inline: <span class="s2">&#34;flex flex-wrap items-start gap-4&#34;</span>,
+    },
+  },
+  defaultVariants: { size: <span class="s2">&#34;default&#34;</span>, variant: <span class="s2">&#34;default&#34;</span> },
+});
+
+<span class="kr">export</span> <span class="kr">type</span> FieldsetVariant = VariantKey&lt;<span class="nt">typeof</span> <span class="na">fieldsetVariants</span>, <span class="s2">&#34;variant&#34;</span>&gt;;
+<span class="kr">export</span> <span class="kr">type</span> FieldsetSize = VariantKey&lt;<span class="nt">typeof</span> <span class="na">fieldsetVariants</span>, <span class="s2">&#34;size&#34;</span>&gt;;
+
+<span class="cm">/**
+</span><span class="cm"> * Fieldset renders a native fieldset.
+</span><span class="cm"> */</span>
+<span class="kr">export</span> <span class="kr">type</span> FieldsetProps = Omit&lt;
+  JSX.FieldsetHTMLAttributes&lt;<span class="nt">HTMLFieldSetElement</span>&gt;,
+  <span class="s2">&#34;class&#34;</span> | <span class="s2">&#34;children&#34;</span> | <span class="s2">&#34;variant&#34;</span> | <span class="s2">&#34;size&#34;</span> | <span class="s2">&#34;disabled&#34;</span>
+&gt; &amp; {
+  variant?: <span class="kt">FieldsetVariant</span>;
+  size?: <span class="kt">FieldsetSize</span>;
+  disabled?: <span class="kt">boolean</span>;
+  <span class="kr">class</span>?: <span class="kt">string</span>;
+  children?: <span class="kt">JSX.Element</span>;
+};
+
+<span class="kr">export</span> <span class="kr">const</span> Fieldset: <span class="kt">Component</span>&lt;<span class="nt">FieldsetProps</span>&gt; = (props) =&gt; {
+  <span class="kr">const</span> [local, rest] = splitProps(props, [<span class="s2">&#34;variant&#34;</span>, <span class="s2">&#34;size&#34;</span>, <span class="s2">&#34;disabled&#34;</span>, <span class="s2">&#34;class&#34;</span>, <span class="s2">&#34;children&#34;</span>]);
+  <span class="kr">const</span> cls = () =&gt; cn(fieldsetVariants({ size: <span class="kt">local.size</span>, variant: <span class="kt">local.variant</span> }), local.<span class="kr">class</span>);
+  <span class="k">return</span> (
+    &lt;<span class="nt">fieldset</span> <span class="na">class</span>={cls() || <span class="kc">undefined</span>} <span class="na">disabled</span>={local.disabled || <span class="kc">undefined</span>} {<span class="na">...rest</span>}&gt;
+      {local.children}
+    &lt;/<span class="nt">fieldset</span>&gt;
+  );
+};
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/form/form-description.tsx</span><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="code-solid-3" hidden>Copy</button></div><pre class="hl max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6" tabindex="0"><code class="font-mono" id="code-solid-3"><span class="c1">// Code generated by xgen. DO NOT EDIT.
+</span><span class="c1">// Source: xgen/specs/ui/controls.json
+</span><span class="cm">/**
+</span><span class="cm"> * FormDescription: one part of Form (one file per part, as in the Svelte package).
+</span><span class="cm"> */</span>
+
+<span class="kr">import</span> { splitProps, <span class="kr">type</span> Component, <span class="kr">type</span> JSX } <span class="kr">from</span> <span class="s2">&#34;solid-js&#34;</span>;
+<span class="kr">import</span> { cn, variants } <span class="kr">from</span> <span class="s2">&#34;../../utils&#34;</span>;
+
+<span class="cm">/** FormDescription: the classes of each value of each prop (shadcn/cva style). */</span>
+<span class="kr">export</span> <span class="kr">const</span> formDescriptionVariants = variants({
+  base: <span class="s2">&#34;text-xs font-semibold text-muted-foreground&#34;</span>,
+  variants: {},
+  defaultVariants: {},
+});
+
+<span class="cm">/**
+</span><span class="cm"> * FormDescription renders muted helper copy below a control.
+</span><span class="cm"> */</span>
+<span class="kr">export</span> <span class="kr">type</span> FormDescriptionProps = Omit&lt;
+  JSX.HTMLAttributes&lt;<span class="nt">HTMLParagraphElement</span>&gt;,
+  <span class="s2">&#34;class&#34;</span> | <span class="s2">&#34;children&#34;</span>
+&gt; &amp; {
+  <span class="kr">class</span>?: <span class="kt">string</span>;
+  children?: <span class="kt">JSX.Element</span>;
+};
+
+<span class="kr">export</span> <span class="kr">const</span> FormDescription: <span class="kt">Component</span>&lt;<span class="nt">FormDescriptionProps</span>&gt; = (props) =&gt; {
+  <span class="kr">const</span> [local, rest] = splitProps(props, [<span class="s2">&#34;class&#34;</span>, <span class="s2">&#34;children&#34;</span>]);
+  <span class="kr">const</span> cls = () =&gt; cn(formDescriptionVariants(), local.<span class="kr">class</span>);
+  <span class="k">return</span> (
+    &lt;<span class="nt">p</span> <span class="na">class</span>={cls() || <span class="kc">undefined</span>} {<span class="na">...rest</span>}&gt;
+      {local.children}
+    &lt;/<span class="nt">p</span>&gt;
+  );
+};
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/form/form-item.tsx</span><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="code-solid-4" hidden>Copy</button></div><pre class="hl max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6" tabindex="0"><code class="font-mono" id="code-solid-4"><span class="c1">// Code generated by xgen. DO NOT EDIT.
+</span><span class="c1">// Source: xgen/specs/ui/controls.json
+</span><span class="cm">/**
+</span><span class="cm"> * FormItem: one part of Form (one file per part, as in the Svelte package).
+</span><span class="cm"> */</span>
+
+<span class="kr">import</span> { splitProps, <span class="kr">type</span> Component, <span class="kr">type</span> JSX } <span class="kr">from</span> <span class="s2">&#34;solid-js&#34;</span>;
+<span class="kr">import</span> { cn, variants } <span class="kr">from</span> <span class="s2">&#34;../../utils&#34;</span>;
+
+<span class="cm">/** FormItem: the classes of each value of each prop (shadcn/cva style). */</span>
+<span class="kr">export</span> <span class="kr">const</span> formItemVariants = variants({
+  base: <span class="s2">&#34;flex flex-col gap-2&#34;</span>,
+  variants: {},
+  defaultVariants: {},
+});
+
+<span class="cm">/**
+</span><span class="cm"> * FormItem groups a single field with spacing for label and control.
+</span><span class="cm"> */</span>
+<span class="kr">export</span> <span class="kr">type</span> FormItemProps = Omit&lt;<span class="nt">JSX.HTMLAttributes</span>&lt;<span class="nt">HTMLDivElement</span>&gt;, <span class="s2">&#34;class&#34;</span> <span class="err">|</span> <span class="s2">&#34;children&#34;</span>&gt; &amp; {
+  <span class="kr">class</span>?: <span class="kt">string</span>;
+  children?: <span class="kt">JSX.Element</span>;
+};
+
+<span class="kr">export</span> <span class="kr">const</span> FormItem: <span class="kt">Component</span>&lt;<span class="nt">FormItemProps</span>&gt; = (props) =&gt; {
+  <span class="kr">const</span> [local, rest] = splitProps(props, [<span class="s2">&#34;class&#34;</span>, <span class="s2">&#34;children&#34;</span>]);
+  <span class="kr">const</span> cls = () =&gt; cn(formItemVariants(), local.<span class="kr">class</span>);
+  <span class="k">return</span> (
+    &lt;<span class="nt">div</span> <span class="na">class</span>={cls() || <span class="kc">undefined</span>} {<span class="na">...rest</span>}&gt;
+      {local.children}
+    &lt;/<span class="nt">div</span>&gt;
+  );
+};
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/form/form-message.tsx</span><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="code-solid-5" hidden>Copy</button></div><pre class="hl max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6" tabindex="0"><code class="font-mono" id="code-solid-5"><span class="c1">// Code generated by xgen. DO NOT EDIT.
+</span><span class="c1">// Source: xgen/specs/ui/controls.json
+</span><span class="cm">/**
+</span><span class="cm"> * FormMessage: one part of Form (one file per part, as in the Svelte package).
+</span><span class="cm"> */</span>
+
+<span class="kr">import</span> { splitProps, <span class="kr">type</span> Component, <span class="kr">type</span> JSX } <span class="kr">from</span> <span class="s2">&#34;solid-js&#34;</span>;
+<span class="kr">import</span> { cn, variants } <span class="kr">from</span> <span class="s2">&#34;../../utils&#34;</span>;
+
+<span class="cm">/** FormMessage: the classes of each value of each prop (shadcn/cva style). */</span>
+<span class="kr">export</span> <span class="kr">const</span> formMessageVariants = variants({
+  base: <span class="s2">&#34;text-xs font-semibold text-destructive&#34;</span>,
+  variants: {},
+  defaultVariants: {},
+});
+
+<span class="cm">/**
+</span><span class="cm"> * FormMessage renders destructive validation feedback.
+</span><span class="cm"> */</span>
+<span class="kr">export</span> <span class="kr">type</span> FormMessageProps = Omit&lt;
+  JSX.HTMLAttributes&lt;<span class="nt">HTMLParagraphElement</span>&gt;,
+  <span class="s2">&#34;class&#34;</span> | <span class="s2">&#34;children&#34;</span>
+&gt; &amp; {
+  <span class="kr">class</span>?: <span class="kt">string</span>;
+  children?: <span class="kt">JSX.Element</span>;
+};
+
+<span class="kr">export</span> <span class="kr">const</span> FormMessage: <span class="kt">Component</span>&lt;<span class="nt">FormMessageProps</span>&gt; = (props) =&gt; {
+  <span class="kr">const</span> [local, rest] = splitProps(props, [<span class="s2">&#34;class&#34;</span>, <span class="s2">&#34;children&#34;</span>]);
+  <span class="kr">const</span> cls = () =&gt; cn(formMessageVariants(), local.<span class="kr">class</span>);
+  <span class="k">return</span> (
+    &lt;<span class="nt">p</span> <span class="na">class</span>={cls() || <span class="kc">undefined</span>} <span class="na">role</span>=<span class="s">&#34;alert&#34;</span> {<span class="na">...rest</span>}&gt;
+      {local.children}
+    &lt;/<span class="nt">p</span>&gt;
+  );
+};
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/form/form.tsx</span><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="code-solid-6" hidden>Copy</button></div><pre class="hl max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6" tabindex="0"><code class="font-mono" id="code-solid-6"><span class="c1">// Code generated by xgen. DO NOT EDIT.
+</span><span class="c1">// Source: xgen/specs/ui/controls.json
+</span><span class="cm">/**
+</span><span class="cm"> * Form primitives: form wrapper, field item, description, and validation message.
+</span><span class="cm"> * Composes with Label, Input, and other controls.
+</span><span class="cm"> */</span>
+
+<span class="kr">import</span> { splitProps, <span class="kr">type</span> Component, <span class="kr">type</span> JSX } <span class="kr">from</span> <span class="s2">&#34;solid-js&#34;</span>;
+<span class="kr">import</span> { cn, variants } <span class="kr">from</span> <span class="s2">&#34;../../utils&#34;</span>;
+
+<span class="cm">/** Form: the classes of each value of each prop (shadcn/cva style). */</span>
+<span class="kr">export</span> <span class="kr">const</span> formVariants = variants({
+  base: <span class="s2">&#34;grid gap-4&#34;</span>,
+  variants: {},
+  defaultVariants: {},
+});
+
+<span class="cm">/**
+</span><span class="cm"> * Form renders a vertical grid form container.
+</span><span class="cm"> */</span>
+<span class="kr">export</span> <span class="kr">type</span> FormProps = Omit&lt;
+  JSX.FormHTMLAttributes&lt;<span class="nt">HTMLFormElement</span>&gt;,
+  <span class="s2">&#34;class&#34;</span> | <span class="s2">&#34;children&#34;</span> | <span class="s2">&#34;noValidate&#34;</span>
+&gt; &amp; {
+  noValidate?: <span class="kt">boolean</span>;
+  <span class="kr">class</span>?: <span class="kt">string</span>;
+  children?: <span class="kt">JSX.Element</span>;
+};
+
+<span class="kr">export</span> <span class="kr">const</span> Form: <span class="kt">Component</span>&lt;<span class="nt">FormProps</span>&gt; = (props) =&gt; {
+  <span class="kr">const</span> [local, rest] = splitProps(props, [<span class="s2">&#34;noValidate&#34;</span>, <span class="s2">&#34;class&#34;</span>, <span class="s2">&#34;children&#34;</span>]);
+  <span class="kr">const</span> cls = () =&gt; cn(formVariants(), local.<span class="kr">class</span>);
+  <span class="k">return</span> (
+    &lt;<span class="nt">form</span> <span class="na">class</span>={cls() || <span class="kc">undefined</span>} <span class="na">novalidate</span>={local.noValidate || <span class="kc">undefined</span>} {<span class="na">...rest</span>}&gt;
+      {local.children}
+    &lt;/<span class="nt">form</span>&gt;
+  );
+};
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/form/legend.tsx</span><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="code-solid-7" hidden>Copy</button></div><pre class="hl max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6" tabindex="0"><code class="font-mono" id="code-solid-7"><span class="c1">// Code generated by xgen. DO NOT EDIT.
+</span><span class="c1">// Source: xgen/specs/ui/controls.json
+</span><span class="cm">/**
+</span><span class="cm"> * Legend: one part of Fieldset (one file per part, as in the Svelte package).
+</span><span class="cm"> */</span>
+
+<span class="kr">import</span> { splitProps, <span class="kr">type</span> Component, <span class="kr">type</span> JSX } <span class="kr">from</span> <span class="s2">&#34;solid-js&#34;</span>;
+<span class="kr">import</span> { cn, variants, <span class="kr">type</span> VariantKey } <span class="kr">from</span> <span class="s2">&#34;../../utils&#34;</span>;
+
+<span class="cm">/** Legend: the classes of each value of each prop (shadcn/cva style). */</span>
+<span class="kr">export</span> <span class="kr">const</span> legendVariants = variants({
+  base: <span class="s2">&#34;font-bold&#34;</span>,
+  variants: {
+    size: {
+      sm: <span class="s2">&#34;text-xs&#34;</span>,
+      <span class="k">default</span>: <span class="s2">&#34;text-sm&#34;</span>,
+      lg: <span class="s2">&#34;text-base&#34;</span>,
+    },
+    variant: {
+      <span class="k">default</span>: <span class="s2">&#34;&#34;</span>,
+      muted: <span class="s2">&#34;text-muted-foreground&#34;</span>,
+    },
+  },
+  defaultVariants: { size: <span class="s2">&#34;default&#34;</span>, variant: <span class="s2">&#34;default&#34;</span> },
+});
+
+<span class="kr">export</span> <span class="kr">type</span> LegendVariant = VariantKey&lt;<span class="nt">typeof</span> <span class="na">legendVariants</span>, <span class="s2">&#34;variant&#34;</span>&gt;;
+<span class="kr">export</span> <span class="kr">type</span> LegendSize = VariantKey&lt;<span class="nt">typeof</span> <span class="na">legendVariants</span>, <span class="s2">&#34;size&#34;</span>&gt;;
+
+<span class="cm">/**
+</span><span class="cm"> * Legend renders a native legend.
+</span><span class="cm"> */</span>
+<span class="kr">export</span> <span class="kr">type</span> LegendProps = Omit&lt;
+  JSX.HTMLAttributes&lt;<span class="nt">HTMLLegendElement</span>&gt;,
+  <span class="s2">&#34;class&#34;</span> | <span class="s2">&#34;children&#34;</span> | <span class="s2">&#34;variant&#34;</span> | <span class="s2">&#34;size&#34;</span>
+&gt; &amp; {
+  variant?: <span class="kt">LegendVariant</span>;
+  size?: <span class="kt">LegendSize</span>;
+  <span class="kr">class</span>?: <span class="kt">string</span>;
+  children?: <span class="kt">JSX.Element</span>;
+};
+
+<span class="kr">export</span> <span class="kr">const</span> Legend: <span class="kt">Component</span>&lt;<span class="nt">LegendProps</span>&gt; = (props) =&gt; {
+  <span class="kr">const</span> [local, rest] = splitProps(props, [<span class="s2">&#34;variant&#34;</span>, <span class="s2">&#34;size&#34;</span>, <span class="s2">&#34;class&#34;</span>, <span class="s2">&#34;children&#34;</span>]);
+  <span class="kr">const</span> cls = () =&gt; cn(legendVariants({ size: <span class="kt">local.size</span>, variant: <span class="kt">local.variant</span> }), local.<span class="kr">class</span>);
+  <span class="k">return</span> (
+    &lt;<span class="nt">legend</span> <span class="na">class</span>={cls() || <span class="kc">undefined</span>} {<span class="na">...rest</span>}&gt;
+      {local.children}
+    &lt;/<span class="nt">legend</span>&gt;
+  );
+};
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/form/meter.tsx</span><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="code-solid-8" hidden>Copy</button></div><pre class="hl max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6" tabindex="0"><code class="font-mono" id="code-solid-8"><span class="c1">// Code generated by xgen. DO NOT EDIT.
+</span><span class="c1">// Source: xgen/specs/ui/controls.json
+</span><span class="cm">/**
+</span><span class="cm"> * Meter: one part of Fieldset (one file per part, as in the Svelte package).
+</span><span class="cm"> */</span>
+
+<span class="kr">import</span> { splitProps, <span class="kr">type</span> Component, <span class="kr">type</span> JSX } <span class="kr">from</span> <span class="s2">&#34;solid-js&#34;</span>;
+<span class="kr">import</span> { cn, variants, <span class="kr">type</span> VariantKey } <span class="kr">from</span> <span class="s2">&#34;../../utils&#34;</span>;
+
+<span class="cm">/** Meter: the classes of each value of each prop (shadcn/cva style). */</span>
+<span class="kr">export</span> <span class="kr">const</span> meterVariants = variants({
+  base: <span class="s2">&#34;w-full appearance-none overflow-hidden bg-muted progress-bar rounded&#34;</span>,
+  variants: {
+    size: {
+      sm: <span class="s2">&#34;h-1&#34;</span>,
+      <span class="k">default</span>: <span class="s2">&#34;h-2&#34;</span>,
+      lg: <span class="s2">&#34;h-3&#34;</span>,
+    },
+    variant: {
+      <span class="k">default</span>: <span class="s2">&#34;[--bar:var(--color-primary)]&#34;</span>,
+      muted: <span class="s2">&#34;[--bar:var(--color-muted-foreground)]&#34;</span>,
+    },
+  },
+  defaultVariants: { size: <span class="s2">&#34;default&#34;</span>, variant: <span class="s2">&#34;default&#34;</span> },
+});
+
+<span class="kr">export</span> <span class="kr">type</span> MeterVariant = VariantKey&lt;<span class="nt">typeof</span> <span class="na">meterVariants</span>, <span class="s2">&#34;variant&#34;</span>&gt;;
+<span class="kr">export</span> <span class="kr">type</span> MeterSize = VariantKey&lt;<span class="nt">typeof</span> <span class="na">meterVariants</span>, <span class="s2">&#34;size&#34;</span>&gt;;
+
+<span class="cm">/**
+</span><span class="cm"> * Meter renders a native meter.
+</span><span class="cm"> */</span>
+<span class="kr">export</span> <span class="kr">type</span> MeterProps = Omit&lt;
+  JSX.MeterHTMLAttributes&lt;<span class="nt">HTMLMeterElement</span>&gt;,
+  <span class="s2">&#34;class&#34;</span> | <span class="s2">&#34;children&#34;</span> | <span class="s2">&#34;variant&#34;</span> | <span class="s2">&#34;size&#34;</span>
+&gt; &amp; {
+  variant?: <span class="kt">MeterVariant</span>;
+  size?: <span class="kt">MeterSize</span>;
+  <span class="kr">class</span>?: <span class="kt">string</span>;
+  children?: <span class="kt">JSX.Element</span>;
+};
+
+<span class="kr">export</span> <span class="kr">const</span> Meter: <span class="kt">Component</span>&lt;<span class="nt">MeterProps</span>&gt; = (props) =&gt; {
+  <span class="kr">const</span> [local, rest] = splitProps(props, [<span class="s2">&#34;variant&#34;</span>, <span class="s2">&#34;size&#34;</span>, <span class="s2">&#34;class&#34;</span>, <span class="s2">&#34;children&#34;</span>]);
+  <span class="kr">const</span> cls = () =&gt; cn(meterVariants({ size: <span class="kt">local.size</span>, variant: <span class="kt">local.variant</span> }), local.<span class="kr">class</span>);
+  <span class="k">return</span> (
+    &lt;<span class="nt">meter</span> <span class="na">class</span>={cls() || <span class="kc">undefined</span>} {<span class="na">...rest</span>}&gt;
+      {local.children}
+    &lt;/<span class="nt">meter</span>&gt;
+  );
+};
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/form/output.tsx</span><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="code-solid-9" hidden>Copy</button></div><pre class="hl max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6" tabindex="0"><code class="font-mono" id="code-solid-9"><span class="c1">// Code generated by xgen. DO NOT EDIT.
+</span><span class="c1">// Source: xgen/specs/ui/controls.json
+</span><span class="cm">/**
+</span><span class="cm"> * Output: one part of Fieldset (one file per part, as in the Svelte package).
+</span><span class="cm"> */</span>
+
+<span class="kr">import</span> { splitProps, <span class="kr">type</span> Component, <span class="kr">type</span> JSX } <span class="kr">from</span> <span class="s2">&#34;solid-js&#34;</span>;
+<span class="kr">import</span> { cn } <span class="kr">from</span> <span class="s2">&#34;../../utils&#34;</span>;
+
+<span class="cm">/**
+</span><span class="cm"> * Output renders a native output element.
+</span><span class="cm"> */</span>
+<span class="kr">export</span> <span class="kr">type</span> OutputProps = Omit&lt;
+  JSX.OutputHTMLAttributes&lt;<span class="nt">HTMLOutputElement</span>&gt;,
+  <span class="s2">&#34;class&#34;</span> | <span class="s2">&#34;children&#34;</span> | <span class="s2">&#34;value&#34;</span>
+&gt; &amp; {
+  value?: <span class="kt">string</span>;
+  <span class="kr">class</span>?: <span class="kt">string</span>;
+  children?: <span class="kt">JSX.Element</span>;
+};
+
+<span class="kr">export</span> <span class="kr">const</span> Output: <span class="kt">Component</span>&lt;<span class="nt">OutputProps</span>&gt; = (props) =&gt; {
+  <span class="kr">const</span> [local, rest] = splitProps(props, [<span class="s2">&#34;value&#34;</span>, <span class="s2">&#34;class&#34;</span>, <span class="s2">&#34;children&#34;</span>]);
+  <span class="kr">const</span> cls = () =&gt; cn(local.<span class="kr">class</span>);
+  <span class="k">return</span> (
+    &lt;<span class="nt">output</span> <span class="na">class</span>={cls() || <span class="kc">undefined</span>} {<span class="na">...rest</span>}&gt;
+      {local.value}
+      {local.children}
+    &lt;/<span class="nt">output</span>&gt;
+  );
+};
+</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/form/progress.tsx</span><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="code-solid-10" hidden>Copy</button></div><pre class="hl max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6" tabindex="0"><code class="font-mono" id="code-solid-10">// Code generated by xgen. DO NOT EDIT.
+// Source: xgen/specs/ui/controls.json
+/**
+ * Progress: one part of Fieldset (one file per part, as in the Svelte package).
+ */
+
+import { splitProps, type Component, type JSX } from &#34;solid-js&#34;;
+import { cn, variants, type VariantKey } from &#34;../../utils&#34;;
+
+/** Progress: the classes of each value of each prop (shadcn/cva style). */
+export const progressVariants = variants({
+  base: &#34;w-full appearance-none overflow-hidden bg-muted progress-bar rounded&#34;,
+  variants: {
+    size: {
+      sm: &#34;h-1&#34;,
+      default: &#34;h-2&#34;,
+      lg: &#34;h-3&#34;,
+    },
+    variant: {
+      default: &#34;[--bar:var(--color-primary)]&#34;,
+      muted: &#34;[--bar:var(--color-muted-foreground)]&#34;,
+    },
+  },
+  defaultVariants: { size: &#34;default&#34;, variant: &#34;default&#34; },
+});
+
+export type ProgressVariant = VariantKey&lt;typeof progressVariants, &#34;variant&#34;&gt;;
+export type ProgressSize = VariantKey&lt;typeof progressVariants, &#34;size&#34;&gt;;
+
+/**
+ * Progress renders a native progress element.
+ */
+export type ProgressProps = Omit&lt;
+  JSX.ProgressHTMLAttributes&lt;HTMLProgressElement&gt;,
+  &#34;class&#34; | &#34;children&#34; | &#34;variant&#34; | &#34;size&#34;
+&gt; &amp; {
+  variant?: ProgressVariant;
+  size?: ProgressSize;
+  class?: string;
+  children?: JSX.Element;
+};
+
+export const Progress: Component&lt;ProgressProps&gt; = (props) =&gt; {
+  const [local, rest] = splitProps(props, [&#34;variant&#34;, &#34;size&#34;, &#34;class&#34;, &#34;children&#34;]);
+  const cls = () =&gt; cn(progressVariants({ size: local.size, variant: local.variant }), local.class);
+  return (
+    &lt;progress class={cls() || undefined} {...rest}&gt;
+      {local.children}
+    &lt;/progress&gt;
+  );
+};
+</code></pre></div> <p class="text-sm"><a href="https://registry.buildy.tw/solid/components/ui/form.json" class="underline">Solid registry item (JSON)</a></p></section></div><h2 class="text-foreground text-xl font-semibold mb-2">Props</h2><p class="text-sm mb-4 max-w-3xl text-muted-foreground">Names and types come from the xgen specs of the source. Standard HTML attributes (id, role, tabIndex, aria-*) pass through to the root element; the class prop is className in React.</p><div class="mb-8"><h3 class="text-foreground text-base font-semibold mb-2 font-mono">Form</h3> <p class="text-sm mb-2 max-w-3xl whitespace-pre-line text-muted-foreground">Form renders a vertical grid form container.</p> <div class="overflow-x-auto" aria-label="Props of Form" role="region" tabindex="0"><table class="w-full min-w-[40rem] text-left text-sm"><caption class="sr-only">Props of Form</caption><thead class=""><tr class="border-b border-border"><th class="text-left align-middle px-0 py-2 pr-4 font-medium" scope="col">Prop</th><th class="text-left align-middle px-0 py-2 pr-4 font-medium" scope="col">Type</th><th class="text-left align-middle px-0 py-2 pr-4 font-medium" scope="col">Default</th> <th class="text-left align-middle px-0 py-2 font-medium" scope="col">Description</th></tr></thead><tbody class=""><tr class="border-b border-border align-top"><th class="text-left align-middle px-0 py-2 pr-4 align-top font-mono text-xs font-medium" scope="row">class </th><td class="align-middle px-0 py-2 pr-4 align-top font-mono text-xs">string</td><td class="align-middle px-0 py-2 pr-4 align-top font-mono text-xs"><span class="text-muted-foreground">-</span></td><td class="align-middle px-0 py-2 align-top text-muted-foreground">adds Tailwind utilities</td></tr><tr class="border-b border-border align-top"><th class="text-left align-middle px-0 py-2 pr-4 align-top font-mono text-xs font-medium" scope="row">noValidate </th><td class="align-middle px-0 py-2 pr-4 align-top font-mono text-xs">boolean</td><td class="align-middle px-0 py-2 pr-4 align-top font-mono text-xs"><span class="text-muted-foreground">-</span></td><td class="align-middle px-0 py-2 align-top text-muted-foreground"></td></tr><tr class="border-b border-border align-top"><th class="text-left align-middle px-0 py-2 pr-4 align-top font-mono text-xs font-medium" scope="row">children </th><td class="align-middle px-0 py-2 pr-4 align-top font-mono text-xs">children</td><td class="align-middle px-0 py-2 pr-4 align-top font-mono text-xs"><span class="text-muted-foreground">-</span></td><td class="align-middle px-0 py-2 align-top text-muted-foreground"></td></tr></tbody></table></div></div><div class="mb-8"><h3 class="text-foreground text-base font-semibold mb-2 font-mono">FormItem</h3> <p class="text-sm mb-2 max-w-3xl whitespace-pre-line text-muted-foreground">FormItem groups a single field with spacing for label and control.</p> <div class="overflow-x-auto" aria-label="Props of FormItem" role="region" tabindex="0"><table class="w-full min-w-[40rem] text-left text-sm"><caption class="sr-only">Props of FormItem</caption><thead class=""><tr class="border-b border-border"><th class="text-left align-middle px-0 py-2 pr-4 font-medium" scope="col">Prop</th><th class="text-left align-middle px-0 py-2 pr-4 font-medium" scope="col">Type</th><th class="text-left align-middle px-0 py-2 pr-4 font-medium" scope="col">Default</th> <th class="text-left align-middle px-0 py-2 font-medium" scope="col">Description</th></tr></thead><tbody class=""><tr class="border-b border-border align-top"><th class="text-left align-middle px-0 py-2 pr-4 align-top font-mono text-xs font-medium" scope="row">class </th><td class="align-middle px-0 py-2 pr-4 align-top font-mono text-xs">string</td><td class="align-middle px-0 py-2 pr-4 align-top font-mono text-xs"><span class="text-muted-foreground">-</span></td><td class="align-middle px-0 py-2 align-top text-muted-foreground">adds Tailwind utilities</td></tr><tr class="border-b border-border align-top"><th class="text-left align-middle px-0 py-2 pr-4 align-top font-mono text-xs font-medium" scope="row">children </th><td class="align-middle px-0 py-2 pr-4 align-top font-mono text-xs">children</td><td class="align-middle px-0 py-2 pr-4 align-top font-mono text-xs"><span class="text-muted-foreground">-</span></td><td class="align-middle px-0 py-2 align-top text-muted-foreground"></td></tr></tbody></table></div></div><div class="mb-8"><h3 class="text-foreground text-base font-semibold mb-2 font-mono">FormDescription</h3> <p class="text-sm mb-2 max-w-3xl whitespace-pre-line text-muted-foreground">FormDescription renders muted helper copy below a control.</p> <div class="overflow-x-auto" aria-label="Props of FormDescription" role="region" tabindex="0"><table class="w-full min-w-[40rem] text-left text-sm"><caption class="sr-only">Props of FormDescription</caption><thead class=""><tr class="border-b border-border"><th class="text-left align-middle px-0 py-2 pr-4 font-medium" scope="col">Prop</th><th class="text-left align-middle px-0 py-2 pr-4 font-medium" scope="col">Type</th><th class="text-left align-middle px-0 py-2 pr-4 font-medium" scope="col">Default</th> <th class="text-left align-middle px-0 py-2 font-medium" scope="col">Description</th></tr></thead><tbody class=""><tr class="border-b border-border align-top"><th class="text-left align-middle px-0 py-2 pr-4 align-top font-mono text-xs font-medium" scope="row">class </th><td class="align-middle px-0 py-2 pr-4 align-top font-mono text-xs">string</td><td class="align-middle px-0 py-2 pr-4 align-top font-mono text-xs"><span class="text-muted-foreground">-</span></td><td class="align-middle px-0 py-2 align-top text-muted-foreground">adds Tailwind utilities</td></tr><tr class="border-b border-border align-top"><th class="text-left align-middle px-0 py-2 pr-4 align-top font-mono text-xs font-medium" scope="row">children </th><td class="align-middle px-0 py-2 pr-4 align-top font-mono text-xs">children</td><td class="align-middle px-0 py-2 pr-4 align-top font-mono text-xs"><span class="text-muted-foreground">-</span></td><td class="align-middle px-0 py-2 align-top text-muted-foreground"></td></tr></tbody></table></div></div><div class="mb-8"><h3 class="text-foreground text-base font-semibold mb-2 font-mono">FormMessage</h3> <p class="text-sm mb-2 max-w-3xl whitespace-pre-line text-muted-foreground">FormMessage renders destructive validation feedback.</p> <div class="overflow-x-auto" aria-label="Props of FormMessage" role="region" tabindex="0"><table class="w-full min-w-[40rem] text-left text-sm"><caption class="sr-only">Props of FormMessage</caption><thead class=""><tr class="border-b border-border"><th class="text-left align-middle px-0 py-2 pr-4 font-medium" scope="col">Prop</th><th class="text-left align-middle px-0 py-2 pr-4 font-medium" scope="col">Type</th><th class="text-left align-middle px-0 py-2 pr-4 font-medium" scope="col">Default</th> <th class="text-left align-middle px-0 py-2 font-medium" scope="col">Description</th></tr></thead><tbody class=""><tr class="border-b border-border align-top"><th class="text-left align-middle px-0 py-2 pr-4 align-top font-mono text-xs font-medium" scope="row">class </th><td class="align-middle px-0 py-2 pr-4 align-top font-mono text-xs">string</td><td class="align-middle px-0 py-2 pr-4 align-top font-mono text-xs"><span class="text-muted-foreground">-</span></td><td class="align-middle px-0 py-2 align-top text-muted-foreground">adds Tailwind utilities</td></tr><tr class="border-b border-border align-top"><th class="text-left align-middle px-0 py-2 pr-4 align-top font-mono text-xs font-medium" scope="row">children </th><td class="align-middle px-0 py-2 pr-4 align-top font-mono text-xs">children</td><td class="align-middle px-0 py-2 pr-4 align-top font-mono text-xs"><span class="text-muted-foreground">-</span></td><td class="align-middle px-0 py-2 align-top text-muted-foreground"></td></tr></tbody></table></div></div> <h2 class="text-foreground text-xl font-semibold mb-2">Used in</h2><ul class="flex flex-wrap gap-x-4 gap-y-1 text-sm"><li class=""><a href="/blocks/about-me/" class="underline">about-me</a></li><li class=""><a href="/components/auth-form/" class="underline">auth-form</a></li><li class=""><a href="/components/cart-summary-card/" class="underline">cart-summary-card</a></li><li class=""><a href="/blocks/checklist/" class="underline">checklist</a></li><li class=""><a href="/blocks/checkout-form/" class="underline">checkout-form</a></li><li class=""><a href="/blocks/contact-form/" class="underline">contact-form</a></li><li class=""><a href="/components/cta-actions/" class="underline">cta-actions</a></li><li class=""><a href="/components/drawer-lines/" class="underline">drawer-lines</a></li><li class=""><a href="/components/footer-signup-card/" class="underline">footer-signup-card</a></li><li class=""><a href="/components/meter-row/" class="underline">meter-row</a></li><li class=""><a href="/blocks/newsletter-form/" class="underline">newsletter-form</a></li><li class=""><a href="/blocks/profile-form/" class="underline">profile-form</a></li><li class=""><a href="/blocks/signup-wizard/" class="underline">signup-wizard</a></li><li class=""><a href="/blocks/sitemap-footer/" class="underline">sitemap-footer</a></li></ul></article></main></div><footer class="border-t border-border"><div class="mx-auto max-w-6xl px-4 py-8 text-sm text-muted-foreground">ui8kit, MIT licence. Static docs generated from markdown and the registry (<a href="https://registry.buildy.tw/registry.json" class="underline">registry.json</a>).</div></footer></body></html>

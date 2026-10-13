@@ -85,7 +85,7 @@ type doc struct {
 	Order                                    int
 }
 
-var runtimeLabels = map[string]string{"svelte": "Svelte", "react": "React", "vue": "Vue"}
+var runtimeLabels = map[string]string{"svelte": "Svelte", "react": "React", "vue": "Vue", "solid": "Solid"}
 
 var cfg struct {
 	registry, content, previews, out, siteURL, registryURL string
@@ -197,7 +197,7 @@ func main() {
 			home.Primitives = append(home.Primitives, card(it))
 		}
 	}
-	render("/", templates.Meta{Title: "ui8kit: blocks and primitives for Svelte, React and Vue", Description: "Static docs and registry of ui8kit: copy the code or install it with npx ui8kit add.", Path: "/", SiteURL: cfg.siteURL, RegistryURL: cfg.registryURL}, templates.Home(home), nil)
+	render("/", templates.Meta{Title: "ui8kit: blocks and primitives for Svelte, React, Vue and Solid", Description: "Static docs and registry of ui8kit: copy the code or install it with npx ui8kit add.", Path: "/", SiteURL: cfg.siteURL, RegistryURL: cfg.registryURL}, templates.Home(home), nil)
 
 	// docs index + markdown pages
 	idx := templates.DocsIndexData{}

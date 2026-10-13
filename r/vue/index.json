@@ -53,6 +53,7 @@
       "description": "Recent events as a timeline or a list.",
       "name": "activity-feed",
       "registryDependencies": [
+        "block",
         "container",
         "list",
         "panel",
@@ -111,10 +112,11 @@
       "description": "A long read in one reading column, or beside a table of contents that links to the sections.",
       "name": "article-body",
       "registryDependencies": [
-        "block",
+        "box",
         "grid",
         "link",
         "list",
+        "nav-block",
         "section-frame",
         "stack",
         "text",
@@ -282,6 +284,7 @@
       "name": "chart-panel",
       "registryDependencies": [
         "bar-chart",
+        "block",
         "container",
         "meter-row",
         "panel",
@@ -315,23 +318,18 @@
       "name": "checkout-form",
       "registryDependencies": [
         "box",
-        "button",
         "cart-list",
         "cart-summary-card",
-        "checkbox",
         "checkout-step",
+        "checkout-submit",
         "field",
         "form",
         "grid",
-        "group",
         "input",
-        "label",
         "order-summary",
         "payment-options",
         "section-frame",
         "slot-grid",
-        "stack",
-        "text",
         "textarea",
         "utils"
       ],
@@ -478,7 +476,7 @@
       "registryDependencies": [
         "activity-feed",
         "bar-chart",
-        "block",
+        "box",
         "chart-panel",
         "grid",
         "metric-row",
@@ -567,7 +565,7 @@
       "description": "Questions as native disclosures.",
       "name": "faq-list",
       "registryDependencies": [
-        "block",
+        "box",
         "disclosure",
         "grid",
         "search-field",
@@ -608,7 +606,7 @@
       "registryDependencies": [
         "disclosure",
         "feature-grid",
-        "group",
+        "inline",
         "lucide-icon",
         "media-frame",
         "section-frame",
@@ -938,6 +936,7 @@
         "lucide-icon",
         "media-frame",
         "nav-bar",
+        "nav-block",
         "stack",
         "text",
         "utils"
@@ -950,7 +949,7 @@
       "description": "Key counters of a dashboard.",
       "name": "metric-row",
       "registryDependencies": [
-        "block",
+        "box",
         "grid",
         "group",
         "lucide-icon",
@@ -994,6 +993,7 @@
         "link",
         "link-plain",
         "nav-actions",
+        "nav-block",
         "nav-links",
         "over-media",
         "search-palette",
@@ -1091,9 +1091,9 @@
       "name": "photo-gallery",
       "registryDependencies": [
         "badge",
-        "block",
         "box",
         "button",
+        "figure-block",
         "group",
         "lucide-icon",
         "media-frame",
@@ -1110,6 +1110,7 @@
       "description": "Post Card block",
       "name": "post-card",
       "registryDependencies": [
+        "block",
         "box",
         "card",
         "group",
@@ -1200,6 +1201,7 @@
       "name": "pricing-card",
       "registryDependencies": [
         "badge",
+        "block",
         "box",
         "button",
         "card",
@@ -1235,6 +1237,7 @@
       "name": "product-card",
       "registryDependencies": [
         "badge",
+        "block",
         "box",
         "button",
         "card",
@@ -1309,6 +1312,7 @@
       "description": "Account settings: picture, name, email, bio and notifications.",
       "name": "profile-form",
       "registryDependencies": [
+        "block",
         "button",
         "container",
         "field",
@@ -1391,7 +1395,7 @@
       "description": "Customer reviews with ratings.",
       "name": "review-list",
       "registryDependencies": [
-        "block",
+        "article-block",
         "grid",
         "group",
         "media-frame",
@@ -1440,6 +1444,7 @@
         "lucide-icon",
         "media-frame",
         "nav-bar",
+        "nav-block",
         "stack",
         "text",
         "utils"
@@ -1453,6 +1458,7 @@
       "name": "signup-wizard",
       "registryDependencies": [
         "block",
+        "box",
         "button",
         "field",
         "form",
@@ -1477,6 +1483,7 @@
         "container",
         "group",
         "link",
+        "nav-block",
         "text",
         "utils"
       ],
@@ -1494,6 +1501,7 @@
         "group",
         "link",
         "link-plain",
+        "nav-block",
         "utils"
       ],
       "title": "Site Header",
@@ -1516,6 +1524,7 @@
         "label",
         "link",
         "mega-menu",
+        "nav-block",
         "pill",
         "stack",
         "text",
@@ -1585,6 +1594,7 @@
         "button",
         "group",
         "iconbadge",
+        "inline",
         "list",
         "lucide-icon",
         "section-frame",
@@ -1603,6 +1613,7 @@
       "name": "steps-list",
       "registryDependencies": [
         "iconbadge",
+        "inline",
         "list",
         "lucide-icon",
         "section-frame",
@@ -1666,6 +1677,7 @@
         "box",
         "button",
         "group",
+        "inline",
         "lucide-icon",
         "media-frame",
         "milestone-timeline",
@@ -1673,7 +1685,6 @@
         "stack",
         "story-dots",
         "story-panel",
-        "text",
         "utils"
       ],
       "title": "Story Tabs",
@@ -1724,6 +1735,7 @@
         "grid",
         "group",
         "iconbadge",
+        "inline",
         "lucide-icon",
         "media-frame",
         "presets",
@@ -1806,9 +1818,9 @@
       "description": "Customer videos as thumbnails with a play button. Playing is a port contract (VideoEmbed).",
       "name": "video-grid",
       "registryDependencies": [
-        "block",
         "box",
         "button",
+        "figure-block",
         "grid",
         "lucide-icon",
         "media-frame",
@@ -1878,7 +1890,7 @@
       "registryDependencies": [
         "activity-feed",
         "bar-chart",
-        "block",
+        "box",
         "chart-panel",
         "dashboard-overview",
         "grid",
@@ -1891,6 +1903,17 @@
         "utils"
       ],
       "title": "App Main",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "Article Block component",
+      "name": "article-block",
+      "registryDependencies": [
+        "block",
+        "utils"
+      ],
+      "title": "Article Block",
       "type": "registry:component"
     },
     {
@@ -1929,7 +1952,7 @@
       "description": "Backdrop component",
       "name": "backdrop",
       "registryDependencies": [
-        "block",
+        "box",
         "media-frame",
         "utils"
       ],
@@ -1952,7 +1975,6 @@
       "description": "Bar Chart component",
       "name": "bar-chart",
       "registryDependencies": [
-        "block",
         "box",
         "text",
         "utils"
@@ -1965,7 +1987,7 @@
       "description": "Bulk Bar component",
       "name": "bulk-bar",
       "registryDependencies": [
-        "block",
+        "box",
         "button",
         "inline",
         "lucide-icon",
@@ -2035,10 +2057,25 @@
     },
     {
       "dependencies": [],
+      "description": "Checkout Submit component",
+      "name": "checkout-submit",
+      "registryDependencies": [
+        "button",
+        "checkbox",
+        "group",
+        "label",
+        "stack",
+        "text",
+        "utils"
+      ],
+      "title": "Checkout Submit",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
       "description": "Code Window component",
       "name": "code-window",
       "registryDependencies": [
-        "block",
         "box",
         "inline",
         "list",
@@ -2132,7 +2169,7 @@
       "description": "Editor Tab component",
       "name": "editor-tab",
       "registryDependencies": [
-        "block",
+        "box",
         "button",
         "inline",
         "lucide-icon",
@@ -2146,7 +2183,7 @@
       "description": "Empty State component",
       "name": "empty-state",
       "registryDependencies": [
-        "block",
+        "box",
         "iconbadge",
         "lucide-icon",
         "text",
@@ -2160,8 +2197,8 @@
       "description": "Faq Cards component",
       "name": "faq-cards",
       "registryDependencies": [
+        "article-block",
         "badge",
-        "block",
         "box",
         "faq-split",
         "link",
@@ -2323,7 +2360,7 @@
       "description": "Field component",
       "name": "field",
       "registryDependencies": [
-        "block",
+        "box",
         "label",
         "text",
         "utils"
@@ -2333,10 +2370,21 @@
     },
     {
       "dependencies": [],
+      "description": "Figure Block component",
+      "name": "figure-block",
+      "registryDependencies": [
+        "block",
+        "utils"
+      ],
+      "title": "Figure Block",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
       "description": "File Tree component",
       "name": "file-tree",
       "registryDependencies": [
-        "block",
+        "box",
         "utils"
       ],
       "title": "File Tree",
@@ -2384,6 +2432,7 @@
         "list",
         "lucide-icon",
         "mega-menu",
+        "nav-block",
         "presets",
         "stack",
         "text",
@@ -2551,6 +2600,7 @@
         "link",
         "link-plain",
         "nav-bar",
+        "nav-block",
         "presets",
         "utils"
       ],
@@ -2562,8 +2612,8 @@
       "description": "Hero Split Extras component",
       "name": "hero-split-extras",
       "registryDependencies": [
-        "block",
         "box",
+        "figure-block",
         "group",
         "hero-split",
         "lucide-icon",
@@ -2580,8 +2630,8 @@
       "description": "Hero Split Media component",
       "name": "hero-split-media",
       "registryDependencies": [
-        "block",
         "box",
+        "figure-block",
         "group",
         "hero-split",
         "lucide-icon",
@@ -2610,7 +2660,7 @@
       "description": "Icon Tabs component",
       "name": "icon-tabs",
       "registryDependencies": [
-        "block",
+        "box",
         "utils"
       ],
       "title": "Icon Tabs",
@@ -2642,7 +2692,7 @@
       "description": "Logo Sidebar component",
       "name": "logo-sidebar",
       "registryDependencies": [
-        "block",
+        "box",
         "inline",
         "utils"
       ],
@@ -2791,7 +2841,6 @@
       "description": "Meter Row component",
       "name": "meter-row",
       "registryDependencies": [
-        "block",
         "box",
         "form",
         "link",
@@ -2810,6 +2859,17 @@
         "utils"
       ],
       "title": "Nav Actions",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "Nav Block component",
+      "name": "nav-block",
+      "registryDependencies": [
+        "block",
+        "utils"
+      ],
+      "title": "Nav Block",
       "type": "registry:component"
     },
     {
@@ -2855,7 +2915,7 @@
       "description": "Notice component",
       "name": "notice",
       "registryDependencies": [
-        "block",
+        "box",
         "lucide-icon",
         "text",
         "utils"
@@ -2913,7 +2973,7 @@
       "description": "Over Media component",
       "name": "over-media",
       "registryDependencies": [
-        "block",
+        "box",
         "media-frame",
         "utils"
       ],
@@ -2957,7 +3017,6 @@
       "description": "Page Header component",
       "name": "page-header",
       "registryDependencies": [
-        "block",
         "box",
         "text",
         "title",
@@ -2971,7 +3030,7 @@
       "description": "Pager component",
       "name": "pager",
       "registryDependencies": [
-        "block",
+        "box",
         "button",
         "inline",
         "lucide-icon",
@@ -2985,7 +3044,6 @@
       "description": "Panel component",
       "name": "panel",
       "registryDependencies": [
-        "block",
         "box",
         "text",
         "title",
@@ -3000,11 +3058,10 @@
       "name": "payment-options",
       "registryDependencies": [
         "grid",
+        "inline",
         "label",
         "lucide-icon",
         "radio",
-        "stack",
-        "text",
         "utils"
       ],
       "title": "Payment Options",
@@ -3015,7 +3072,7 @@
       "description": "Pill component",
       "name": "pill",
       "registryDependencies": [
-        "block",
+        "box",
         "inline",
         "lucide-icon",
         "utils"
@@ -3162,8 +3219,8 @@
       "description": "Project Tiles component",
       "name": "project-tiles",
       "registryDependencies": [
+        "article-block",
         "badge",
-        "block",
         "box",
         "group",
         "link",
@@ -3199,7 +3256,7 @@
       "description": "Quote Card component",
       "name": "quote-card",
       "registryDependencies": [
-        "block",
+        "figure-block",
         "group",
         "inline",
         "lucide-icon",
@@ -3290,7 +3347,7 @@
       "description": "Range Field component",
       "name": "range-field",
       "registryDependencies": [
-        "block",
+        "box",
         "inline",
         "input",
         "range",
@@ -3304,7 +3361,7 @@
       "description": "Rating component",
       "name": "rating",
       "registryDependencies": [
-        "block",
+        "box",
         "lucide-icon",
         "utils"
       ],
@@ -3327,7 +3384,7 @@
       "description": "Search Field component",
       "name": "search-field",
       "registryDependencies": [
-        "block",
+        "box",
         "input",
         "lucide-icon",
         "utils"
@@ -3443,6 +3500,7 @@
         "dashboard-shell",
         "link",
         "list",
+        "nav-block",
         "text",
         "utils"
       ],
@@ -3463,6 +3521,7 @@
         "link",
         "list",
         "lucide-icon",
+        "nav-block",
         "text",
         "utils"
       ],
@@ -3483,6 +3542,7 @@
         "list",
         "lucide-icon",
         "media-frame",
+        "nav-block",
         "search-palette",
         "text",
         "utils"
@@ -3539,7 +3599,6 @@
       "description": "Stat Tile component",
       "name": "stat-tile",
       "registryDependencies": [
-        "block",
         "box",
         "iconbadge",
         "link",
@@ -3587,7 +3646,7 @@
       "description": "Switcher component",
       "name": "switcher",
       "registryDependencies": [
-        "block",
+        "box",
         "utils"
       ],
       "title": "Switcher",
@@ -3609,7 +3668,7 @@
       "description": "Table Toolbar component",
       "name": "table-toolbar",
       "registryDependencies": [
-        "block",
+        "box",
         "inline",
         "utils"
       ],
@@ -3621,7 +3680,6 @@
       "description": "Timeline component",
       "name": "timeline",
       "registryDependencies": [
-        "block",
         "box",
         "inline",
         "list",
@@ -4063,7 +4121,7 @@
       "type": "registry:utils"
     }
   ],
-  "lastUpdated": "2026-10-11T23:04:31+03:00",
+  "lastUpdated": "2026-10-13T21:35:03+03:00",
   "registry": "ui",
   "version": "0.1.0"
 }
