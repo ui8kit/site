@@ -93,6 +93,11 @@ func buildTemplates(runtimes []string, itemURL map[string]string, nav []template
 					InstallAdd:  d.Install,
 					Files:       []templates.CodeFile{{ID: "code-" + rt, Name: c.Name, Content: c.Content, HTML: code}}})
 			}
+			for _, rt := range staticRuntimes { // no page-level template in these runtimes: the block templates the page is built from
+				if p, ok := staticPanel(rt, pg.Blocks, true); ok {
+					d.Panels = append(d.Panels, p)
+				}
+			}
 			desc := fmt.Sprintf("%s page of the %s template: %d sections built from ui8kit registry blocks.", pg.Nav, ta.Title, pg.Sections)
 			render(u, meta(u, ta.Title+": "+pg.Nav+" | ui8kit", desc), templates.TemplatePage(d), nil)
 			search = append(search, map[string]string{"t": ta.Title + ": " + pg.Nav, "n": a.Name + "/" + pg.Area, "k": "template", "c": "Templates", "d": desc, "u": u})

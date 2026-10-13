@@ -34,16 +34,22 @@
 .hl .na, .hl .nv, .hl .py { color: var(--tok-attr); }
 
 /* ---- code tabs without JavaScript: radio + label, panels switched with :has() ---- */
-.rt-bar { display: flex; gap: 8px; margin-bottom: 16px; border-bottom: 1px solid var(--border); }
+.rt-bar { display: flex; flex-wrap: wrap; column-gap: 8px; margin-bottom: 16px; border-bottom: 1px solid var(--border); }
 .rt-bar label { display: inline-flex; align-items: center; height: 40px; padding: 0 16px; border-bottom: 2px solid transparent; margin-bottom: -1px;
-  font-size: 0.875rem; font-weight: 500; color: var(--muted-foreground); cursor: pointer; }
+  font-size: 0.875rem; font-weight: 500; color: var(--muted-foreground); cursor: pointer; white-space: nowrap; }
+@media (max-width: 640px) { .rt-bar label { padding: 0 10px; } }
 .rt-bar label:hover { color: var(--foreground); }
 .rt-bar input:checked + label { color: var(--foreground); border-bottom-color: var(--primary); }
 .rt-bar input:focus-visible + label { outline: 2px solid var(--ring); outline-offset: -2px; border-radius: var(--radius); }
 .rt-panel { display: none; }
 .rt:has(input[value="svelte"]:checked) .rt-panel[data-runtime="svelte"],
 .rt:has(input[value="react"]:checked) .rt-panel[data-runtime="react"],
-.rt:has(input[value="vue"]:checked) .rt-panel[data-runtime="vue"] { display: block; }
+.rt:has(input[value="vue"]:checked) .rt-panel[data-runtime="vue"],
+.rt:has(input[value="solid"]:checked) .rt-panel[data-runtime="solid"],
+.rt:has(input[value="templ"]:checked) .rt-panel[data-runtime="templ"],
+.rt:has(input[value="twig"]:checked) .rt-panel[data-runtime="twig"],
+.rt:has(input[value="jinja2"]:checked) .rt-panel[data-runtime="jinja2"],
+.rt:has(input[value="latte"]:checked) .rt-panel[data-runtime="latte"] { display: block; }
 
 /* ---- static preview frame: fixed/sticky parts of a sample stay inside the frame, wide samples scroll instead of widening the page ---- */
 .preview { contain: layout paint; overflow-x: auto; max-height: 48rem; overflow-y: auto; isolation: isolate; }

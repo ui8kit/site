@@ -23,7 +23,23 @@ const (
 var formatter = chtml.New(chtml.WithClasses(true), chtml.PreventSurroundingPre(true))
 
 func lexerFor(name string) chroma.Lexer {
+	switch n := strings.ToLower(name); {
+	case strings.HasSuffix(n, ".html.twig"):
+		return lexers.Get("twig")
+	case strings.HasSuffix(n, ".html.j2"):
+		return lexers.Get("django") // Django/Jinja
+	case strings.HasSuffix(n, ".latte"):
+		return lexers.Get("smarty") // chroma has no Latte lexer; Smarty is the closest brace-tag syntax ({if}...{/if}, {$var})
+	}
 	switch strings.ToLower(path.Ext(name)) {
+	case ".templ":
+		return lexers.Get("templ")
+	case ".go":
+		return lexers.Get("go")
+	case ".php":
+		return lexers.Get("php")
+	case ".py":
+		return lexers.Get("python")
 	case ".svelte":
 		return lexers.Get("svelte")
 	case ".vue":

@@ -25,7 +25,8 @@
     "site:templ": "cd generator && templ generate",
     "site:sync-ui8kit": "bash scripts/sync-ui8kit-templ.sh",
     "site:rules": "bun scripts/check-rules.ts",
-    "templates:build": "bun run registry/src/templates.ts"
+    "templates:build": "bun run registry/src/templates.ts",
+    "static-code:build": "bun run registry/src/static-code.ts"
   },
   "devDependencies": {
     "@tailwindcss/cli": "^4.3.3",

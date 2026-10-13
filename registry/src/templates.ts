@@ -10,6 +10,7 @@ import { createHash } from "node:crypto";
 import { existsSync, mkdirSync, readFileSync, readdirSync, rmSync, writeFileSync } from "node:fs";
 import { createRequire } from "node:module";
 import path from "node:path";
+import { buildStaticCode } from "./static-code";
 
 const arg = (n: string, env: string, d: string) => {
   const i = process.argv.indexOf(`--${n}`);
@@ -91,4 +92,6 @@ mkdirSync(PH_OUT, { recursive: true });
 for (const [h, svg] of [...PH].sort()) if (!existsSync(path.join(PH_OUT, h + ".svg"))) writeFileSync(path.join(PH_OUT, h + ".svg"), svg);
 writeFileSync(path.join(OUT, "index.json"), JSON.stringify({ sourceCommit: reg.sourceCommit, apps }, null, 1) + "\n");
 console.log(`templates: ${apps.length} apps, ${apps.reduce((n, a) => n + a.pages.length, 0)} pages, ${apps.reduce((n, a) => n + a.pages.filter((p: any) => p.preview).length, 0)} with preview`);
+// the server-template runtimes (templ, Twig, Jinja2, Latte) of the same source: previews/static-code.json
+problems.push(...buildStaticCode(SRC, path.join(repoRoot, "previews", "static-code.json"), reg));
 if (problems.length) console.log("problems:\n" + problems.join("\n"));

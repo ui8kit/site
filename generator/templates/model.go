@@ -84,6 +84,9 @@ type RuntimePanel struct {
 	InstallInit string
 	InstallAdd  string
 	Deps        []string // npm
+	Static      bool     // a server-template runtime: no CLI, Note and Helpers instead of the commands
+	Note        string
+	Helpers     []string
 }
 
 type Related struct {

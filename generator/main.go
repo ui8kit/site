@@ -85,7 +85,8 @@ type doc struct {
 	Order                                    int
 }
 
-var runtimeLabels = map[string]string{"svelte": "Svelte", "react": "React", "vue": "Vue", "solid": "Solid"}
+var runtimeLabels = map[string]string{"svelte": "Svelte", "react": "React", "vue": "Vue", "solid": "Solid",
+	"templ": "templ", "twig": "Twig", "jinja2": "Jinja2", "latte": "Latte"}
 
 var cfg struct {
 	registry, content, previews, out, siteURL, registryURL string
@@ -145,6 +146,7 @@ func main() {
 
 	// previews: html/<name>.html, ph/*.svg (shared placeholder pictures), props.json
 	allProps := map[string][]propTable{}
+	loadStaticCode()
 	if _, err := os.Stat(filepath.Join(cfg.previews, "props.json")); err == nil {
 		readJSON(filepath.Join(cfg.previews, "props.json"), &allProps)
 		must(copyDir(filepath.Join(cfg.previews, "ph"), filepath.Join(cfg.out, "assets", "ph")))
@@ -276,6 +278,11 @@ func main() {
 					reqSeen[r] = true
 					d.Requires = append(d.Requires, templates.Related{Name: r, Href: u})
 				}
+			}
+		}
+		for _, rt := range staticRuntimes {
+			if p, ok := staticPanel(rt, []string{it.Name}, it.Kind != "utils" && it.Kind != "lib"); ok {
+				d.Panels = append(d.Panels, p)
 			}
 		}
 		sort.Slice(d.Requires, func(i, j int) bool { return d.Requires[i].Name < d.Requires[j].Name })
