@@ -17,7 +17,7 @@ jobs:
         run: bun run registry:validate
       - name: templ output is up to date
         run: |
-          go install github.com/a-h/templ/cmd/templ@latest
+          go install github.com/a-h/templ/cmd/templ@v0.3.1070
           (cd generator && "$(go env GOPATH)/bin/templ" generate)
           git diff --exit-code -- generator
       - name: Tailwind CSS is up to date
