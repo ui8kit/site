@@ -1,0 +1,2 @@
+ui8kit Go templ package, copied verbatim from packages/templ/ui of the source monorepo (commit 56a9871) by scripts/sync-ui8kit-templ.sh.
+Generated code: do not edit here.

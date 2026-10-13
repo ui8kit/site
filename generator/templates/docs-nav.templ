@@ -1,0 +1,34 @@
+package templates
+
+import (
+	"github.com/codegen-x/ui8kit/packages/templ/ui/ui/block"
+	linkplain "github.com/codegen-x/ui8kit/packages/templ/ui/ui/link-plain"
+	"github.com/codegen-x/ui8kit/packages/templ/ui/ui/list"
+	"github.com/codegen-x/ui8kit/packages/templ/ui/ui/title"
+)
+
+// DocsNav: the guide and category links; the current page is marked with aria-current="page".
+templ DocsNav(m Meta) {
+	@block.Block(block.BlockProps{Tag: "nav", Class: "md:w-64 md:shrink-0", Attrs: templ.Attributes{"aria-label": T("nav.docsNav")}}) {
+		for _, g := range m.Nav {
+			@title.Title(title.TitleProps{As: 2, Size: "sm", Class: "mb-2"}) {
+				{ g.Title }
+			}
+			@list.List(list.ListProps{Class: "mb-6 flex flex-col gap-1"}) {
+				for _, l := range g.Links {
+					@list.ListItem(list.ListItemProps{}) {
+						if l.Href == m.Path {
+							@linkplain.LinkPlain(linkplain.LinkPlainProps{Href: l.Href, AriaCurrent: "page", Class: "block rounded bg-accent px-2 py-1 text-sm font-medium text-accent-foreground"}) {
+								{ l.Title }
+							}
+						} else {
+							@linkplain.LinkPlain(linkplain.LinkPlainProps{Href: l.Href, Class: "block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground"}) {
+								{ l.Title }
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

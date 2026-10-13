@@ -1,0 +1,19 @@
+package templates
+
+import (
+	"github.com/codegen-x/ui8kit/packages/templ/ui/ui/block"
+	"github.com/codegen-x/ui8kit/packages/templ/ui/ui/box"
+	linkplain "github.com/codegen-x/ui8kit/packages/templ/ui/ui/link-plain"
+)
+
+templ SiteFooter(m Meta) {
+	@block.Block(block.BlockProps{Tag: "footer", Class: "border-t border-border"}) {
+		@box.Box(box.BoxProps{Class: "mx-auto max-w-6xl px-4 py-8 text-sm text-muted-foreground"}) {
+			{ T("footer.text") }
+			@linkplain.LinkPlain(linkplain.LinkPlainProps{Href: m.RegistryURL + "/registry.json", Class: "underline"}) {
+				{ T("footer.link") }
+			}
+			{ T("footer.end") }
+		}
+	}
+}

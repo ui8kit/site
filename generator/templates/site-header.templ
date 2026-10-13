@@ -1,0 +1,41 @@
+package templates
+
+import (
+	"github.com/codegen-x/ui8kit/packages/templ/ui/ui/block"
+	"github.com/codegen-x/ui8kit/packages/templ/ui/ui/box"
+	"github.com/codegen-x/ui8kit/packages/templ/ui/ui/form"
+	"github.com/codegen-x/ui8kit/packages/templ/ui/ui/input"
+	"github.com/codegen-x/ui8kit/packages/templ/ui/ui/label"
+	linkplain "github.com/codegen-x/ui8kit/packages/templ/ui/ui/link-plain"
+	"github.com/codegen-x/ui8kit/packages/templ/ui/ui/list"
+	selectfield "github.com/codegen-x/ui8kit/packages/templ/ui/ui/select"
+)
+
+// SiteHeader: brand, main nav, search (enhanced by app.js), colour mode and skin selects (shown only with JS, theme.js).
+templ SiteHeader() {
+	@block.Block(block.BlockProps{Tag: "header", Class: "border-b border-border"}) {
+		@box.Box(box.BoxProps{Class: "mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-4 py-4"}) {
+			@linkplain.LinkPlain(linkplain.LinkPlainProps{Href: "/", Class: "text-lg font-semibold"}) {
+				{ T("brand") }
+			}
+			@MainNav()
+			@form.Form(form.FormProps{ID: "search", Class: "relative w-full sm:w-72", Attrs: templ.Attributes{"role": "search", "data-index": "/search-index.json"}}) {
+				@label.Label(label.LabelProps{HTMLFor: "search-input", Class: "sr-only"}) {
+					{ T("search.label") }
+				}
+				@input.Input(input.InputProps{ID: "search-input", Type: "search", Autocomplete: "off", Placeholder: T("search.placeholder"), Class: "bg-card px-4 text-sm md:text-sm"})
+				@list.List(list.ListProps{Class: "absolute left-0 right-0 top-12 z-40 rounded border border-border bg-popover text-popover-foreground shadow-md", Attrs: templ.Attributes{"id": "search-results", "hidden": true, "aria-live": "polite"}})
+			}
+			@box.Box(box.BoxProps{Class: "theme-ctl items-center gap-2 text-sm"}) {
+				@label.Label(label.LabelProps{HTMLFor: "theme-select", Class: "sr-only"}) {
+					{ T("theme.label") }
+				}
+				@selectfield.Select(selectfield.SelectProps{ID: "theme-select", Class: "w-auto bg-card px-2 text-card-foreground", Options: themeOptions()})
+				@label.Label(label.LabelProps{HTMLFor: "skin-select", Class: "sr-only"}) {
+					{ T("skin.label") }
+				}
+				@selectfield.Select(selectfield.SelectProps{ID: "skin-select", Class: "w-auto bg-card px-2 text-card-foreground", Options: skinOptions()})
+			}
+		}
+	}
+}

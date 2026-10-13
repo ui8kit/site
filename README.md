@@ -26,6 +26,8 @@ registry links). `INCLUDE_REGISTRY=1` additionally copies `r/` into the output (
 
 After editing templates: `cd generator && templ generate` and `bun run site:css` (the built CSS and `*_templ.go` are committed).
 
+The site chrome is built from the ui8kit Go templ primitives in `generator/ui8kit` (copied verbatim from the source monorepo by `bun run site:sync-ui8kit`, never edited here). The templates in `generator/templates` follow the ui8kit composition rules (zones in the `ui8kit` field of package.json; `bun run site:rules`, findings that are inherent recorded in `scripts/rules-baseline.json`); every text they show is a key of `generator/templates/copy.json`.
+
 ## Previews, code highlighting, props tables
 
 Every block, component and primitive page has a **Preview** (static HTML, no iframe, no browser runtime), the **Code** per runtime (CSS-only tabs, highlighted at build time), the install command and a **Props** table.

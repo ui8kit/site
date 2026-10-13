@@ -1,0 +1,17 @@
+{
+  "$comment": "Recorded findings of the ui8kit rules on the site's composition files: the document shell (html, head, body have no primitive) and HTML rendered at build time (markdown, highlighted code, block previews). Regenerate: bun scripts/check-rules.ts --write",
+  "counts": {
+    "block-root": {},
+    "raw-html": {
+      "generator/templates/code-panels.templ": 1,
+      "generator/templates/doc.templ": 1,
+      "generator/templates/preview.templ": 1
+    },
+    "dynamic-tag": {},
+    "raw-native-tag": {
+      "generator/templates/layout.templ": 12
+    },
+    "reactive-aria": {},
+    "literal-text": {}
+  }
+}

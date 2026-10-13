@@ -4,6 +4,13 @@
   "version": "0.1.0",
   "description": "ui8kit monorepo: registry (r/), registry tooling, docs content and the static site generator",
   "license": "MIT",
+  "ui8kit": {
+    "runtime": "templ",
+    "generated": false,
+    "kit": ["generator/ui8kit"],
+    "composition": ["generator/templates"],
+    "blockRoot": ["generator/templates/home.templ", "generator/templates/docs-index.templ", "generator/templates/doc.templ", "generator/templates/item.templ", "generator/templates/templates-index.templ", "generator/templates/template-app.templ", "generator/templates/template-page.templ", "generator/templates/home-hero.templ", "generator/templates/home-counts.templ", "generator/templates/home-cards.templ"]
+  },
   "workspaces": [
     "registry"
   ],
@@ -16,6 +23,8 @@
     "site:build": "bun run registry:build && bun run registry:validate && bun run site:generate",
     "site:css": "tailwindcss -i generator/assets/site.src.css -o generator/assets/site.css --minify",
     "site:templ": "cd generator && templ generate",
+    "site:sync-ui8kit": "bash scripts/sync-ui8kit-templ.sh",
+    "site:rules": "bun scripts/check-rules.ts",
     "templates:build": "bun run registry/src/templates.ts"
   },
   "devDependencies": {

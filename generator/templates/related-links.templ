@@ -1,0 +1,23 @@
+package templates
+
+import (
+	linkplain "github.com/codegen-x/ui8kit/packages/templ/ui/ui/link-plain"
+	"github.com/codegen-x/ui8kit/packages/templ/ui/ui/text"
+)
+
+// RelatedLinks: a lead text and comma separated links, in one paragraph.
+templ RelatedLinks(lead string, links []Related, class string) {
+	@text.Text(text.TextProps{Size: "sm", Class: class + " text-muted-foreground"}) {
+		{ lead }
+		for i, r := range links {
+			if i > 0 {
+				@text.Text(text.TextProps{Tag: "span"}) {
+					{ T("sep") }
+				}
+			}
+			@linkplain.LinkPlain(linkplain.LinkPlainProps{Href: r.Href, Class: "underline"}) {
+				{ r.Name }
+			}
+		}
+	}
+}

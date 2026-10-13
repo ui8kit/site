@@ -1,0 +1,47 @@
+package templates
+
+import (
+	"github.com/codegen-x/ui8kit/packages/templ/ui/ui/block"
+	"github.com/codegen-x/ui8kit/packages/templ/ui/ui/box"
+	linkplain "github.com/codegen-x/ui8kit/packages/templ/ui/ui/link-plain"
+	"github.com/codegen-x/ui8kit/packages/templ/ui/ui/text"
+	"github.com/codegen-x/ui8kit/packages/templ/ui/ui/title"
+)
+
+templ TemplatePage(d TemplatePageData) {
+	@block.Block(block.BlockProps{Tag: "article"}) {
+		@text.Text(text.TextProps{Size: "sm", Class: "text-muted-foreground"}) {
+			@linkplain.LinkPlain(linkplain.LinkPlainProps{Href: "/templates/", Class: "underline"}) {
+				{ T("tpl.title") }
+			}
+			{ T("slash") }
+			@linkplain.LinkPlain(linkplain.LinkPlainProps{Href: d.App.Href, Class: "underline"}) {
+				{ d.App.Title }
+			}
+		}
+		@title.Title(title.TitleProps{As: 1, Size: "3xl", Class: "mb-2 tracking-tight"}) {
+			{ Tf("tpl.pageTitle", d.App.Title, d.Nav) }
+		}
+		@text.Text(text.TextProps{Class: "mb-6 max-w-3xl text-muted-foreground"}) {
+			{ Tf("tpl.pageLead", d.Sections) }
+		}
+		@SectionTitle(T("item.install"))
+		@text.Text(text.TextProps{Size: "sm", Class: "mb-2 text-muted-foreground"}) {
+			{ T("tpl.installLead") }
+		}
+		@box.Box(box.BoxProps{Class: "mb-4"}) {
+			@Command("install-template", d.Install)
+		}
+		@RelatedLinks(T("tpl.blocks"), d.Blocks, "mb-6")
+		@SectionTitle(T("item.preview"))
+		@text.Text(text.TextProps{Size: "sm", Class: "mb-2 text-muted-foreground"}) {
+			{ T("tpl.previewLead") }
+		}
+		@Preview(d.Preview, Tf("tpl.previewOf", d.Nav), false, T("tpl.noPreview"))
+		@SectionTitle(T("item.code"))
+		@text.Text(text.TextProps{Size: "sm", Class: "mb-4 max-w-3xl text-muted-foreground"}) {
+			{ Tf("tpl.codeLead", d.Commit) }
+		}
+		@CodePanels(d.Panels, T("tpl.cliIntro"), false)
+	}
+}

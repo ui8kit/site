@@ -1,0 +1,36 @@
+package templates
+
+import (
+	"github.com/codegen-x/ui8kit/packages/templ/ui/ui/card"
+	linkplain "github.com/codegen-x/ui8kit/packages/templ/ui/ui/link-plain"
+	"github.com/codegen-x/ui8kit/packages/templ/ui/ui/list"
+	"github.com/codegen-x/ui8kit/packages/templ/ui/ui/text"
+	"github.com/codegen-x/ui8kit/packages/templ/ui/ui/title"
+)
+
+// CardList: a grid of link cards (the kit card recipe, compact, on list items).
+templ CardList(items []Card) {
+	@list.List(list.ListProps{Class: "grid gap-4 sm:grid-cols-2 lg:grid-cols-3"}) {
+		for _, c := range items {
+			@list.ListItem(list.ListItemProps{Class: cardClass("")}) {
+				@title.Title(title.TitleProps{As: 3, Size: "base"}) {
+					@linkplain.LinkPlain(linkplain.LinkPlainProps{Href: c.Href, Class: "hover:underline"}) {
+						{ c.Title }
+					}
+				}
+				if c.HasTag() {
+					@text.Text(text.TextProps{Size: "xs", Class: "text-muted-foreground"}) {
+						{ c.Tag }
+					}
+				}
+				@text.Text(text.TextProps{Size: "sm", Class: "mt-2 text-muted-foreground"}) {
+					{ c.Description }
+				}
+			}
+		}
+	}
+}
+
+func cardClass(extra string) string {
+	return card.CardClasses(card.CardProps{Variant: "compact", Class: "block " + extra})
+}

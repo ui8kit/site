@@ -1,0 +1,24 @@
+package templates
+
+import (
+	"github.com/codegen-x/ui8kit/packages/templ/ui/ui/box"
+	"github.com/codegen-x/ui8kit/packages/templ/ui/ui/block"
+	linkplain "github.com/codegen-x/ui8kit/packages/templ/ui/ui/link-plain"
+)
+
+// SiteFrame is everything inside body: skip link, header, the docs nav next to main, footer.
+templ SiteFrame(m Meta) {
+	@linkplain.LinkPlain(linkplain.LinkPlainProps{Href: "#main", Class: "sr-only focus:not-sr-only focus:absolute focus:left-2 focus:top-2 focus:bg-background focus:px-4 focus:py-2 focus:z-50"}) {
+		{ T("skip") }
+	}
+	@SiteHeader()
+	@box.Box(box.BoxProps{Class: "mx-auto flex max-w-6xl flex-col gap-8 px-4 py-8 md:flex-row"}) {
+		if len(m.Nav) > 0 {
+			@DocsNav(m)
+		}
+		@block.Block(block.BlockProps{Tag: "main", ID: "main", Class: "min-w-0 flex-1"}) {
+			{ children... }
+		}
+	}
+	@SiteFooter(m)
+}

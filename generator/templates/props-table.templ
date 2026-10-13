@@ -1,0 +1,83 @@
+package templates
+
+import (
+	"github.com/codegen-x/ui8kit/packages/templ/ui/ui/box"
+	"github.com/codegen-x/ui8kit/packages/templ/ui/ui/table"
+	"github.com/codegen-x/ui8kit/packages/templ/ui/ui/text"
+	"github.com/codegen-x/ui8kit/packages/templ/ui/ui/title"
+)
+
+const propCell = "px-0 py-2 pr-4 align-top"
+
+templ PropsTable(t PropTable, single bool) {
+	@box.Box(box.BoxProps{Class: "mb-8"}) {
+		if !single {
+			@title.Title(title.TitleProps{As: 3, Size: "base", Class: "mb-2 font-mono"}) {
+				{ t.Part }
+			}
+		}
+		if t.Docs != "" {
+			@text.Text(text.TextProps{Size: "sm", Class: "mb-2 max-w-3xl whitespace-pre-line text-muted-foreground"}) {
+				{ t.Docs }
+			}
+		}
+		if len(t.Rows) == 0 {
+			@text.Text(text.TextProps{Size: "sm", Class: "text-muted-foreground"}) {
+				{ T("props.none") }
+			}
+		} else {
+			@box.Box(box.BoxProps{Class: "overflow-x-auto", Attrs: templ.Attributes{"tabindex": "0", "role": "region", "aria-label": Tf("props.of", t.Part)}}) {
+				@table.Table(table.TableProps{Class: "w-full min-w-[40rem] text-left text-sm"}) {
+					@table.TableCaption(table.TableCaptionProps{Class: "sr-only"}) {
+						{ Tf("props.of", t.Part) }
+					}
+					@table.TableHead(table.TableHeadProps{}) {
+						@table.TableRow(table.TableRowProps{Class: "border-b border-border"}) {
+							for _, k := range []string{"props.colProp", "props.colType", "props.colDefault"} {
+								@table.TableHeadCell(table.TableHeadCellProps{Scope: "col", Class: "px-0 py-2 pr-4 font-medium"}) {
+									{ T(k) }
+								}
+							}
+							@table.TableHeadCell(table.TableHeadCellProps{Scope: "col", Class: "px-0 py-2 font-medium"}) {
+								{ T("props.colDesc") }
+							}
+						}
+					}
+					@table.TableBody(table.TableBodyProps{}) {
+						for _, r := range t.Rows {
+							@PropRowView(r)
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+templ PropRowView(r PropRow) {
+	@table.TableRow(table.TableRowProps{Class: "border-b border-border align-top"}) {
+		@table.TableHeadCell(table.TableHeadCellProps{Scope: "row", Class: propCell + " font-mono text-xs font-medium"}) {
+			{ r.Name }
+			if r.Required {
+				@text.Text(text.TextProps{Tag: "span", Class: "font-sans text-muted-foreground"}) {
+					{ T("props.required") }
+				}
+			}
+		}
+		@table.TableCell(table.TableCellProps{Class: propCell + " font-mono text-xs"}) {
+			{ r.Type }
+		}
+		@table.TableCell(table.TableCellProps{Class: propCell + " font-mono text-xs"}) {
+			if r.Default != "" {
+				{ r.Default }
+			} else {
+				@text.Text(text.TextProps{Tag: "span", Class: "text-muted-foreground"}) {
+					{ T("props.noDefault") }
+				}
+			}
+		}
+		@table.TableCell(table.TableCellProps{Class: "px-0 py-2 align-top text-muted-foreground"}) {
+			{ r.Desc }
+		}
+	}
+}

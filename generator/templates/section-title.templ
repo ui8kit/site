@@ -1,0 +1,9 @@
+package templates
+
+import "github.com/codegen-x/ui8kit/packages/templ/ui/ui/title"
+
+templ SectionTitle(s string) {
+	@title.Title(title.TitleProps{As: 2, Size: "xl", Class: "mb-2"}) {
+		{ s }
+	}
+}

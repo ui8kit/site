@@ -1,0 +1,16 @@
+package templates
+
+import (
+	"github.com/codegen-x/ui8kit/packages/templ/ui/ui/block"
+	linkplain "github.com/codegen-x/ui8kit/packages/templ/ui/ui/link-plain"
+)
+
+templ MainNav() {
+	@block.Block(block.BlockProps{Tag: "nav", Class: "flex items-center gap-4 text-sm", Attrs: templ.Attributes{"aria-label": T("nav.main")}}) {
+		for _, l := range mainLinks() {
+			@linkplain.LinkPlain(linkplain.LinkPlainProps{Href: l.Href, Class: "hover:underline"}) {
+				{ l.Title }
+			}
+		}
+	}
+}

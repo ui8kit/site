@@ -1,0 +1,49 @@
+package templates
+
+import (
+	"github.com/codegen-x/ui8kit/packages/templ/ui/ui/block"
+	linkplain "github.com/codegen-x/ui8kit/packages/templ/ui/ui/link-plain"
+	"github.com/codegen-x/ui8kit/packages/templ/ui/ui/list"
+	"github.com/codegen-x/ui8kit/packages/templ/ui/ui/text"
+	"github.com/codegen-x/ui8kit/packages/templ/ui/ui/title"
+)
+
+templ TemplatesIndex(d TemplatesIndexData) {
+	@block.Block(block.BlockProps{}) {
+		@title.Title(title.TitleProps{As: 1, Size: "3xl", Class: "mb-4 tracking-tight"}) {
+			{ T("tpl.title") }
+		}
+		@text.Text(text.TextProps{Class: "mb-8 max-w-2xl text-muted-foreground"}) {
+			{ T("tpl.lead") }
+		}
+		@list.List(list.ListProps{Class: "grid gap-4 sm:grid-cols-2"}) {
+			for _, a := range d.Apps {
+				@list.ListItem(list.ListItemProps{Class: cardClass("flex flex-col gap-2")}) {
+					@title.Title(title.TitleProps{As: 2, Size: "lg"}) {
+						@linkplain.LinkPlain(linkplain.LinkPlainProps{Href: a.Href, Class: "hover:underline"}) {
+							{ a.Title }
+						}
+					}
+					@text.Text(text.TextProps{Size: "xs", Class: "text-muted-foreground"}) {
+						{ Tf("tpl.counts", len(a.Pages), a.Blocks) }
+					}
+					@text.Text(text.TextProps{Size: "sm", Class: "text-muted-foreground"}) {
+						{ a.Description }
+					}
+					@list.List(list.ListProps{Class: "flex flex-wrap gap-x-4 gap-y-1 text-sm"}) {
+						for _, p := range a.Pages {
+							@list.ListItem(list.ListItemProps{}) {
+								@linkplain.LinkPlain(linkplain.LinkPlainProps{Href: p.Href, Class: "underline"}) {
+									{ p.Nav }
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		@text.Text(text.TextProps{Size: "sm", Class: "mt-8 text-muted-foreground"}) {
+			{ Tf("tpl.commit", d.Commit) }
+		}
+	}
+}

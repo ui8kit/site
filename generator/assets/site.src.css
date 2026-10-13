@@ -3,6 +3,7 @@
 @import "./styles/theme.css";
 @import "./styles/kit.css";
 @source "../templates";
+@source "../ui8kit";
 /* shadcn neutral --destructive (hsl 0.6 88% 52%) gives white text 4.25:1 on the destructive button; this site needs AA (4.5:1), so light mode uses hsl(0 72% 47%) (5.4:1 on white, 5.0:1 on muted). Dark keeps the theme value. */
 :root:not(.dark, [data-theme="dark"]) { --destructive: hsl(0 72% 47%); }
 @source "./app.js";

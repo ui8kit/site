@@ -1,0 +1,26 @@
+package templates
+
+import (
+	"github.com/codegen-x/ui8kit/packages/templ/ui/ui/block"
+	"github.com/codegen-x/ui8kit/packages/templ/ui/ui/text"
+	"github.com/codegen-x/ui8kit/packages/templ/ui/ui/title"
+)
+
+templ DocsIndex(d DocsIndexData) {
+	@block.Block(block.BlockProps{}) {
+		@title.Title(title.TitleProps{As: 1, Size: "3xl", Class: "mb-4 tracking-tight"}) {
+			{ T("docs.title") }
+		}
+		@text.Text(text.TextProps{Class: "mb-8 max-w-2xl text-muted-foreground"}) {
+			{ T("docs.lead") }
+		}
+		@title.Title(title.TitleProps{As: 2, Size: "xl", Class: "mb-4"}) {
+			{ T("docs.guides") }
+		}
+		@CardList(d.Guides)
+		@title.Title(title.TitleProps{As: 2, Size: "xl", Class: "mb-4 mt-8"}) {
+			{ T("docs.categories") }
+		}
+		@CardList(d.Categories)
+	}
+}

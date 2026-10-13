@@ -1,0 +1,25 @@
+package templates
+
+import (
+	"github.com/codegen-x/ui8kit/packages/templ/ui/ui/block"
+	"github.com/codegen-x/ui8kit/packages/templ/ui/ui/box"
+	"github.com/codegen-x/ui8kit/packages/templ/ui/ui/title"
+)
+
+// Doc: a markdown page. The body is HTML that goldmark renders at build time from content/*.md (raw-html, recorded).
+templ Doc(d DocData) {
+	@block.Block(block.BlockProps{Tag: "article", Class: "max-w-3xl"}) {
+		@title.Title(title.TitleProps{As: 1, Size: "3xl", Class: "mb-4 tracking-tight"}) {
+			{ d.Title }
+		}
+		@box.Box(box.BoxProps{Class: "prose-ui flex flex-col gap-4 text-base leading-8 [&_a]:underline [&_h2]:mt-8 [&_h2]:text-2xl [&_h2]:font-semibold [&_h3]:mt-4 [&_h3]:text-lg [&_h3]:font-semibold [&_pre]:overflow-x-auto [&_pre]:rounded [&_pre]:bg-muted [&_pre]:p-4 [&_pre]:text-sm [&_code]:font-mono [&_code]:text-sm [&_ul]:list-disc [&_ul]:pl-6 [&_ol]:list-decimal [&_ol]:pl-6 [&_table]:w-full [&_table]:text-sm [&_th]:border-b [&_th]:border-border [&_th]:py-2 [&_th]:text-left [&_td]:border-b [&_td]:border-border [&_td]:py-2"}) {
+			@templ.Raw(d.HTML)
+		}
+		if len(d.Items) > 0 {
+			@title.Title(title.TitleProps{As: 2, Size: "2xl", Class: "mb-4 mt-8"}) {
+				{ T("doc.items") }
+			}
+			@CardList(d.Items)
+		}
+	}
+}

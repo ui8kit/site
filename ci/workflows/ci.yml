@@ -24,7 +24,10 @@ jobs:
         run: bun run site:css && git diff --exit-code -- generator/assets/site.css
       - name: Highlighting tokens meet AA in light and dark
         run: node scripts/check-contrast.mjs
-      - run: cd generator && go vet ./... && go build ./...
+      - name: Go build (the site and the ui8kit templ package it renders with)
+        run: cd generator && go vet ./... && go build ./... && (cd ui8kit && go vet ./... && go build ./...)
+      - name: ui8kit composition rules on the site templates (zones in package.json "ui8kit")
+        run: bun scripts/check-rules.ts
       - name: Generate the static site
         run: bun run site:generate
       - name: Committed docs-dist is up to date

@@ -1,0 +1,12 @@
+package templates
+
+import "github.com/codegen-x/ui8kit/packages/templ/ui/ui/block"
+
+templ Home(d HomeData) {
+	@block.Block(block.BlockProps{}) {
+		@HomeHero(d)
+		@HomeCounts(d)
+		@HomeCards("blocks", T("home.blocks"), d.Blocks)
+		@HomeCards("prims", T("home.primitives"), d.Primitives)
+	}
+}

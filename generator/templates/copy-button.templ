@@ -1,0 +1,10 @@
+package templates
+
+import "github.com/codegen-x/ui8kit/packages/templ/ui/ui/button"
+
+// CopyButton copies the text of the element with id target (app.js shows it; hidden without JS).
+templ CopyButton(target string) {
+	@button.Button(button.ButtonProps{Variant: "outline", Size: "sm", Type: "button", Class: "inset-ring-input text-xs hover:bg-accent", Attrs: templ.Attributes{"hidden": true, "data-copy": target}}) {
+		{ T("copy") }
+	}
+}

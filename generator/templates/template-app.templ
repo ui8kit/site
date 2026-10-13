@@ -1,0 +1,42 @@
+package templates
+
+import (
+	"github.com/codegen-x/ui8kit/packages/templ/ui/ui/block"
+	linkplain "github.com/codegen-x/ui8kit/packages/templ/ui/ui/link-plain"
+	"github.com/codegen-x/ui8kit/packages/templ/ui/ui/list"
+	"github.com/codegen-x/ui8kit/packages/templ/ui/ui/text"
+	"github.com/codegen-x/ui8kit/packages/templ/ui/ui/title"
+)
+
+templ TemplateAppPage(a TemplateApp) {
+	@block.Block(block.BlockProps{}) {
+		@text.Text(text.TextProps{Size: "sm", Class: "text-muted-foreground"}) {
+			@linkplain.LinkPlain(linkplain.LinkPlainProps{Href: "/templates/", Class: "underline"}) {
+				{ T("tpl.title") }
+			}
+		}
+		@title.Title(title.TitleProps{As: 1, Size: "3xl", Class: "mb-2 tracking-tight"}) {
+			{ a.Title }
+		}
+		@text.Text(text.TextProps{Class: "mb-8 max-w-3xl text-muted-foreground"}) {
+			{ a.Description }
+		}
+		@list.List(list.ListProps{Class: "grid gap-4 sm:grid-cols-2 lg:grid-cols-3"}) {
+			for _, p := range a.Pages {
+				@list.ListItem(list.ListItemProps{Class: cardClass("")}) {
+					@title.Title(title.TitleProps{As: 2, Size: "base"}) {
+						@linkplain.LinkPlain(linkplain.LinkPlainProps{Href: p.Href, Class: "hover:underline"}) {
+							{ p.Nav }
+						}
+					}
+					@text.Text(text.TextProps{Size: "xs", Class: "text-muted-foreground"}) {
+						{ Tf("tpl.sections", p.Sections) }
+					}
+					@text.Text(text.TextProps{Size: "sm", Class: "mt-2 text-muted-foreground"}) {
+						{ p.Title }
+					}
+				}
+			}
+		}
+	}
+}

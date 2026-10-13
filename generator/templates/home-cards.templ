@@ -1,0 +1,15 @@
+package templates
+
+import (
+	"github.com/codegen-x/ui8kit/packages/templ/ui/ui/block"
+	"github.com/codegen-x/ui8kit/packages/templ/ui/ui/title"
+)
+
+templ HomeCards(id string, heading string, items []Card) {
+	@block.Block(block.BlockProps{Tag: "section", Class: "py-8", Attrs: templ.Attributes{"aria-labelledby": id}}) {
+		@title.Title(title.TitleProps{As: 2, Size: "2xl", Class: "mb-4", Attrs: templ.Attributes{"id": id}}) {
+			{ heading }
+		}
+		@CardList(items)
+	}
+}
