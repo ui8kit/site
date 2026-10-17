@@ -18,6 +18,7 @@ import (
 const (
 	maxHighlight    = 12 * 1024 // a single file above this stays plain
 	highlightBudget = 12 * 1024 // source bytes highlighted per runtime panel
+	maxShown        = 64 * 1024 // a registry file above this is listed by name with a link to the item JSON (same limit as static-code.ts)
 )
 
 var formatter = chtml.New(chtml.WithClasses(true), chtml.PreventSurroundingPre(true))

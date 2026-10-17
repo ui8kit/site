@@ -199,7 +199,7 @@ func main() {
 			home.Primitives = append(home.Primitives, card(it))
 		}
 	}
-	render("/", templates.Meta{Title: "ui8kit: blocks and primitives for Svelte, React, Vue and Solid", Description: "Static docs and registry of ui8kit: copy the code or install it with npx ui8kit add.", Path: "/", SiteURL: cfg.siteURL, RegistryURL: cfg.registryURL}, templates.Home(home), nil)
+	render("/", templates.Meta{Title: "ui8kit: blocks and primitives for Svelte, React, Vue, Solid, templ, Twig, Latte and Jinja2", Description: "Static docs and registry of ui8kit: copy the code or install it with npx ui8kit add.", Path: "/", SiteURL: cfg.siteURL, RegistryURL: cfg.registryURL}, templates.Home(home), nil)
 
 	// docs index + markdown pages
 	idx := templates.DocsIndexData{}
@@ -265,6 +265,12 @@ func main() {
 			}
 			budget := highlightBudget // per runtime panel: the first files are highlighted, the rest stay plain (page weight)
 			for i, fl := range f.Files {
+				if len(fl.Content) > maxShown { // data tables (the Lucide glyphs): name only, the bytes are in the registry item
+					p.Files = append(p.Files, templates.CodeFile{ID: fmt.Sprintf("code-%s-%d", rt, i), Name: fl.Target,
+						HTML: stdhtml.EscapeString(templates.Tf("code.omittedRegistry", len(fl.Content)/1024)) +
+							` <a class="underline" href="` + stdhtml.EscapeString(p.JSONHref) + `">` + stdhtml.EscapeString(templates.T("code.registryJSON")) + `</a>`})
+					continue
+				}
 				code := stdhtml.EscapeString(fl.Content)
 				if it.Kind != "utils" && it.Kind != "lib" && len(fl.Content) <= budget && len(fl.Content) <= maxHighlight {
 					budget -= len(fl.Content)
