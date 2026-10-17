@@ -1,4 +1,6 @@
-// Builds r/ (registry for every runtime) from the generated packages of the private source monorepo.
+// Builds r/ (registry for every runtime) from the generated packages of the private source monorepo:
+// the TypeScript runtimes from packages/<svelte|react|vue|solid>/ui/src, the server-template runtimes (templ, Twig, Latte, Jinja2)
+// from packages/<rt>/ui (see template-runtimes.ts). Item names and kinds are those of the TypeScript runtimes.
 //
 //   bun run registry:build                       # source from $UI8KIT_SRC or ../source next to this repo
 //   bun run registry:build -- --src /path/to/source --out r --version 0.1.0
@@ -8,11 +10,13 @@ import { createHash } from "node:crypto";
 import { execFileSync } from "node:child_process";
 import { existsSync, mkdirSync, readdirSync, readFileSync, rmSync, statSync, writeFileSync } from "node:fs";
 import path from "node:path";
+import { buildTemplateRuntime, TEMPLATE_RUNTIMES, type Kind } from "./template-runtimes";
 
-export const RUNTIMES = ["svelte", "react", "vue", "solid"] as const;
+export const TS_RUNTIMES = ["svelte", "react", "vue", "solid"] as const;
+export const RUNTIMES = [...TS_RUNTIMES, ...TEMPLATE_RUNTIMES] as const;
+export type TsRuntime = (typeof TS_RUNTIMES)[number];
 export type Runtime = (typeof RUNTIMES)[number];
 
-type Kind = "utils" | "lib" | "primitive" | "component" | "block";
 type RegType = "registry:utils" | "registry:lib" | "registry:ui" | "registry:component" | "registry:block";
 type File = { path: string; target: string; content: string };
 type Item = {
@@ -74,9 +78,9 @@ function blockMeta(): Map<string, { theme: string; group: string; docs: string }
   return map;
 }
 
-const EXT: Record<Runtime, string[]> = { svelte: [".svelte"], react: [".tsx"], vue: [".vue"], solid: [".tsx"] };
+const EXT: Record<TsRuntime, string[]> = { svelte: [".svelte"], react: [".tsx"], vue: [".vue"], solid: [".tsx"] };
 
-function buildRuntime(rt: Runtime, meta: ReturnType<typeof blockMeta>): Item[] {
+function buildRuntime(rt: TsRuntime, meta: ReturnType<typeof blockMeta>): Item[] {
   const root = path.join(SRC, "packages", rt, "ui/src");
   if (!existsSync(root)) throw new Error(`missing ${root}`);
   const pkg = JSON.parse(readFileSync(path.join(root, "../package.json"), "utf8"));
@@ -171,8 +175,30 @@ function main() {
   const manifest: any = { contractVersion: "2.0.0", version: VERSION, source: { repo: "private source monorepo", commit, dirty, commitDate }, runtimes: {} };
   const site: Record<string, any> = {};
 
+  const built = new Map<Runtime, Item[]>();
+  for (const rt of TS_RUNTIMES) built.set(rt, buildRuntime(rt, meta));
+  // the template runtimes reuse name, kind, title, description and category of the TypeScript items
+  const ref = new Map(built.get("react")!.map((i) => [i.name, i]));
+  const kinds = new Map<string, Kind>([...ref.values()].map((i) => [i.name, i.meta.kind]));
+  const problems: string[] = [];
+  for (const rt of TEMPLATE_RUNTIMES) {
+    const r = buildTemplateRuntime(SRC, rt, kinds);
+    problems.push(...r.problems);
+    built.set(rt, r.items.map((t) => {
+      const base = ref.get(t.name)!;
+      const description = t.name === "utils" ? `${rt} helpers (class merge, variants, attributes) used by every template` : t.name === "presets" ? `Presets and recipes (JSON) read by the ${rt} block templates` : base.description;
+      return {
+        name: t.name, type: base.type, title: base.title, description, runtime: rt, digest: VERSION,
+        dependencies: [], devDependencies: [], registryDependencies: t.registryDependencies,
+        files: t.files.map((f) => ({ path: f.path, target: f.path, content: f.content })),
+        meta: { ...base.meta, tags: [rt, t.kind] },
+      };
+    }));
+  }
+  if (problems.length) { console.error(problems.join("\n")); throw new Error(`${problems.length} template runtime problem(s)`); }
+
   for (const rt of RUNTIMES) {
-    const items = buildRuntime(rt, meta);
+    const items = built.get(rt)!;
     const counts: Record<string, number> = {};
     const mItems: Record<string, any> = {};
     for (const it of items) {
