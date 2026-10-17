@@ -7,4 +7,4 @@ filter: "block:onboarding"
 ---
 Setup steps and guidance.
 
-Every item below has Svelte, React, Vue and Solid code and an install command. Install one with `npx ui8kit add <name>`.
+Every item below has Svelte, React, Vue, Solid, templ, Twig, Latte and Jinja2 code and an install command. Install one with `npx ui8kit add <name>`.

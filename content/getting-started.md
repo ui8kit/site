@@ -1,14 +1,14 @@
 ---
 title: Getting started
-description: "Install your first ui8kit block in a Svelte, React or Vue app in two commands."
+description: "Install your first ui8kit block in a Svelte, React, Vue, Solid, templ, Twig, Latte or Jinja2 app in two commands."
 order: 1
 ---
 ui8kit is a **shadcn-style registry**: the CLI copies source files into your app, so Tailwind sees every class and you own the code.
-Each item exists for **Svelte, React, Vue and Solid**; this site only shows the code and the install command.
+Each item exists for **Svelte, React, Vue and Solid** and as server templates for **Go templ, Twig, Latte and Jinja2**; this site only shows the code and the install command.
 
 ## 1. Point the CLI at a runtime
 
-Every runtime has its own registry root: `{{REGISTRY_URL}}/svelte`, `{{REGISTRY_URL}}/react`, `{{REGISTRY_URL}}/vue`.
+Every runtime has its own registry root: `{{REGISTRY_URL}}/<runtime>` with `svelte`, `react`, `vue`, `solid`, `templ`, `twig`, `latte` or `jinja2` (see [Installation](/docs/installation/)).
 
 ```bash
 npx ui8kit init --yes --framework svelte --dir src \
@@ -35,6 +35,6 @@ Copy the theme tokens once (see [Theming and skins](/docs/theming-skins/)) and l
 @source "./";
 ```
 
-Peer dependencies: `clsx` and `tailwind-merge` (the CLI offers to install them).
+Peer dependencies (TypeScript runtimes): `clsx` and `tailwind-merge` (the CLI offers to install them). The template runtimes use the same Tailwind classes: add `@source` for the template folder.
 
 Next: [Installation details](/docs/installation/), [CLI reference](/docs/cli/).

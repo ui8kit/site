@@ -3,7 +3,7 @@ title: CLI
 description: "The ui8kit v2 commands and how they map to the r/ registry."
 order: 3
 ---
-The CLI is `ui8kit` on npm (current version 2.0.2, contract 2.0.0). Source: [github.com/ui8kit/cli](https://github.com/ui8kit/cli).
+The CLI is `ui8kit` on npm (current version 2.0.4, contract 2.0.0; `npx ui8kit` runs the latest). Runtimes: `svelte`, `react`, `vue`, `solid`, `templ`, `twig`, `latte`, `jinja2`; Solid, Jinja2 and the full templ/Twig/Latte items need 2.0.3 or later. Source: [github.com/ui8kit/cli](https://github.com/ui8kit/cli).
 
 | Command | What it does |
 |---|---|
