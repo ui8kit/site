@@ -19,11 +19,31 @@
 <td>Vue 3</td>
 <td><code>https://registry.buildy.tw/vue</code></td>
 </tr>
+<tr>
+<td>Solid</td>
+<td><code>https://registry.buildy.tw/solid</code></td>
+</tr>
+<tr>
+<td>Go templ</td>
+<td><code>https://registry.buildy.tw/templ</code></td>
+</tr>
+<tr>
+<td>Twig</td>
+<td><code>https://registry.buildy.tw/twig</code></td>
+</tr>
+<tr>
+<td>Latte</td>
+<td><code>https://registry.buildy.tw/latte</code></td>
+</tr>
+<tr>
+<td>Jinja2</td>
+<td><code>https://registry.buildy.tw/jinja2</code></td>
+</tr>
 </tbody>
 </table>
 <p>The URL is the <strong>base</strong> the CLI appends <code>index.json</code> and <code>components/ui/&lt;name&gt;.json</code> to. Use <code>--strict-cdn</code> so the CLI never falls back to the public CDN.</p>
 <h2 id="what-lands-where">What lands where</h2>
-<p>Files are written under your <code>dir</code> (for example <code>src</code>) with the same layout as the ui8kit packages:</p>
+<p>Files are written under your <code>dir</code> (for example <code>src</code>) with the same layout as the ui8kit packages. TypeScript runtimes (Svelte, React, Vue, Solid):</p>
 <table>
 <thead>
 <tr>
@@ -54,10 +74,44 @@
 </tr>
 </tbody>
 </table>
+<p>Server-template runtimes (templ, Twig, Latte, Jinja2): <code>dir</code> is the template root (Go module root, or the Twig / Latte / Jinja2 loader root), so include
+paths such as <code>ui/box/box.html.twig</code> and the Go imports resolve unchanged:</p>
+<table>
+<thead>
+<tr>
+<th>Registry type</th>
+<th>Files</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>registry:utils</code></td>
+<td>helpers and package manifest: <code>utils/*.go</code> + <code>go.mod</code>, <code>php/*.php</code> + <code>composer.json</code>, <code>py/ui8kit_jinja/*.py</code> + <code>requirements.txt</code></td>
+</tr>
+<tr>
+<td><code>registry:lib</code></td>
+<td><code>blocks/presets/*.json</code>, <code>blocks/recipes/*.json</code> (templ: <code>blocks/embed.go</code>)</td>
+</tr>
+<tr>
+<td><code>registry:ui</code></td>
+<td><code>ui/&lt;name&gt;/</code></td>
+</tr>
+<tr>
+<td><code>registry:component</code>, <code>registry:block</code></td>
+<td><code>blocks/&lt;name&gt;.&lt;ext&gt;</code></td>
+</tr>
+</tbody>
+</table>
+<p>The toolchain is yours: <code>templ generate</code> + <code>go build</code>, <code>composer install</code> (twig/twig or latte/latte), <code>pip install -r requirements.txt</code> (Jinja2).
+The templ files keep the module path <code>github.com/codegen-x/ui8kit/packages/templ/ui</code>: point it at the installed folder with a <code>replace</code> directive in your <code>go.mod</code>.</p>
 <h2 id="pick-the-framework-not-a-file-filter">Pick the framework, not a file filter</h2>
-<p>Pass <code>--framework svelte</code>, <code>react</code> or <code>vue</code> together with the matching registry URL. The registry is already split per runtime, and with ui8kit 2.0.2 the CLI
-installs the <code>*.types.ts</code> files that blocks import, so <code>add --all</code> leaves no unresolved relative import.</p>
+<p>Pass <code>--framework &lt;runtime&gt;</code> (<code>svelte</code>, <code>react</code>, <code>vue</code>, <code>solid</code>, <code>templ</code>, <code>twig</code>, <code>latte</code> or <code>jinja2</code>) together with the matching registry URL. The registry is
+already split per runtime, and ui8kit 2.0.3 or later installs every file of an item (the <code>*.types.ts</code> files that blocks import, Solid views, templ and
+template helpers), so <code>add --all</code> leaves no unresolved import or missing template. Use ui8kit 2.0.4 or later (<code>npx ui8kit</code> runs the latest).</p>
 <pre tabindex="0"><code class="language-bash">npx ui8kit init --yes --framework react --dir src --registry-url https://registry.buildy.tw/react --strict-cdn
 npx ui8kit add button card hero-split
+</code></pre>
+<pre tabindex="0"><code class="language-bash">npx ui8kit init --yes --framework twig --dir templates --registry-url https://registry.buildy.tw/twig --strict-cdn
+npx ui8kit add hero-split
 </code></pre>
 </div></article></main></div><footer class="border-t border-border"><div class="mx-auto max-w-6xl px-4 py-8 text-sm text-muted-foreground">ui8kit, MIT licence. Static docs generated from markdown and the registry (<a href="https://registry.buildy.tw/registry.json" class="underline">registry.json</a>).</div></footer></body></html>
