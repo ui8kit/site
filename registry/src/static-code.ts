@@ -1,6 +1,6 @@
 // Builds previews/static-code.json: the code of the four server-template runtimes of the source monorepo (Go templ, Twig, Jinja2, Latte),
-// read from packages/<rt>/ui at the source commit, for the code panels of the site. These runtimes are not in r/ (the CLI installs the
-// TypeScript runtimes only): the site shows their files and the helper files to copy.
+// read from packages/<rt>/ui at the source commit, for the code panels of the site. Since 2026-10-17 these runtimes are also in r/
+// (registry/src/template-runtimes.ts) and item pages use r/; this file still feeds the template pages (no page-level template there).
 //
 //   bun run static-code:build -- --src /path/to/source      # or UI8KIT_SRC; also run at the end of templates:build
 //

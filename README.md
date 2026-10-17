@@ -1,6 +1,7 @@
 # ui8kit/site
 
-Registry, tooling and static docs site for **ui8kit** (shadcn-style blocks and primitives for Svelte, React, Vue and Solid).
+Registry, tooling and static docs site for **ui8kit** (shadcn-style blocks and primitives for Svelte, React, Vue and Solid, and the
+same items as server templates for Go templ, Twig, Latte and Jinja2).
 
 - `r/`: the registry for all runtimes, consumed by the [`ui8kit` CLI](https://github.com/ui8kit/cli) (`npx ui8kit add <name>`)
 - `registry/`: Bun/TS tooling that builds `r/` from the generated packages of the private source monorepo
@@ -59,11 +60,13 @@ The docs project serves the committed `docs-dist/` (Vercel's build image has no 
 After changing `content/`, `generator/` or `r/`, run `bun run docs:build` (`scripts/build-docs.sh`) and commit `docs-dist/`.
 The landing page (`buildy.tw`) is plain static files (`web/index.html`, `web/style.css`), no build, not part of `docs-dist/`. Check with `node scripts/check-web.mjs`.
 The registry project redirects only its root path `/` to `https://ui.buildy.tw/` (301, `r/vercel.json`).
-Registry URLs: `https://registry.buildy.tw/<svelte|react|vue>` (no `/r/` prefix, the root directory is `r/`).
+Registry URLs: `https://registry.buildy.tw/<svelte|react|vue|solid|templ|twig|latte|jinja2>` (no `/r/` prefix, the root directory is `r/`).
+Solid, Jinja2 and the full templ/Twig/Latte items need ui8kit CLI >= 2.0.3 (see docs/PLAN.md, "Registry shape").
 
 ## Gates
 
-`scripts/cli-smoke.sh` (real CLI ui8kit 2.0.2 against a local server rooted at `r/`), `scripts/check-site.mjs` (landmarks, links, no external requests),
+`scripts/cli-smoke.sh` (real CLI against a local server rooted at `r/`, every runtime; `UI8KIT_CLI=<version>` or `UI8KIT_CLI_BIN=<local dist/index.js>`;
+template runtimes are built/rendered by `scripts/check-templates.sh` and compared across runtimes), `scripts/check-site.mjs` (landmarks, links, no external requests),
 `scripts/a11y.mjs` (axe WCAG A/AA in headless Chrome), `scripts/check-contrast.mjs` (AA over 16 skins x 2 modes: highlight tokens and chrome text pairs; `--table` prints a summary).
 
 ## Dark mode and skins
