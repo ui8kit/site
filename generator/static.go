@@ -9,7 +9,8 @@ import (
 	"github.com/ui8kit/site/generator/templates"
 )
 
-// The server-template runtimes (Go templ, Twig, Jinja2, Latte): not in r/ and not installed by the CLI. Their files come from
+// The server-template runtimes (Go templ, Twig, Jinja2, Latte). Item pages show them from r/<rt> when r/registry.json lists the
+// runtime (CLI >= 2.0.3); otherwise, and on template pages (no page-level template in these runtimes), their files come from
 // previews/static-code.json (bun run static-code:build, read from packages/<rt>/ui of the source monorepo); a panel lists the helper
 // files to copy instead of the npx commands.
 var staticRuntimes = []string{"templ", "twig", "jinja2", "latte"}

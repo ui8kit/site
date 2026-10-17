@@ -281,6 +281,9 @@ func main() {
 			}
 		}
 		for _, rt := range staticRuntimes {
+			if _, inRegistry := it.Runtimes[rt]; inRegistry {
+				continue // installable from r/<rt> since the template runtimes are in the registry: the panel above has the files
+			}
 			if p, ok := staticPanel(rt, []string{it.Name}, it.Kind != "utils" && it.Kind != "lib"); ok {
 				d.Panels = append(d.Panels, p)
 			}
