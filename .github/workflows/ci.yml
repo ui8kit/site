@@ -1,0 +1,65 @@
+# Runs on every push and PR, without secrets: the committed registries (shadcn-style r/<runtime>/ and the WP FastY
+# builder registries r/<latte|twig>/wpfasty/) are valid and reproducible, and the site still generates and passes its
+# static gates. Rebuilding r/ from the private source monorepo stays in ci/workflows/ci.yml (registry-rebuild, needs
+# a secret); here the r/ rebuild is checked for idempotency on the part that has a public source (wpfasty).
+name: ci
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  registry:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
+      - run: bun install --frozen-lockfile
+      - name: Registry is valid (shadcn-style shape, sha256, dependencies; WP FastY builder registries)
+        run: bun run registry:validate
+      - name: WP FastY builder registries rebuild idempotently (pinned wp-fasty source → same bytes, versions immutable)
+        run: |
+          git clone -q https://github.com/alexy-os/wp-fasty.git /tmp/wp-fasty
+          git -C /tmp/wp-fasty checkout -q "$(cat builder-registry/WPFASTY_COMMIT)"
+          WPFASTY=/tmp/wp-fasty bun run registry:wpfasty
+          WPFASTY=/tmp/wp-fasty bun run registry:wpfasty
+          git status --porcelain -- builder-registry r
+          git diff --exit-code -- builder-registry r
+          test -z "$(git status --porcelain -- builder-registry r)"
+      - name: shadcn-style registry untouched by the builder registries (copy step of registry:build keeps r/<rt>/index.json)
+        run: |
+          for rt in latte twig; do test -f "r/$rt/index.json"; test -d "r/$rt/wpfasty"; done
+          bun run registry:validate
+
+  site:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
+      - uses: actions/setup-go@v5
+        with: { go-version-file: generator/go.mod }
+      - run: bun install --frozen-lockfile
+      - name: templ output is up to date
+        run: |
+          go install github.com/a-h/templ/cmd/templ@v0.3.1070
+          (cd generator && "$(go env GOPATH)/bin/templ" generate)
+          git diff --exit-code -- generator
+      - name: Tailwind CSS is up to date
+        run: bun run site:css && git diff --exit-code -- generator/assets/site.css
+      - name: Highlighting tokens meet AA in light and dark
+        run: node scripts/check-contrast.mjs
+      - name: Go build + vet
+        run: cd generator && go vet ./... && go build ./... && (cd ui8kit && go vet ./... && go build ./...)
+      - name: ui8kit composition rules
+        run: bun scripts/check-rules.ts
+      - name: Generate the static site + site checks
+        run: bun run site:generate && node scripts/check-site.mjs dist
+      - name: Committed docs-dist is up to date
+        run: bash scripts/build-docs.sh && git diff --exit-code -- docs-dist
+      - name: Landing page checks (web/)
+        run: node scripts/check-web.mjs web

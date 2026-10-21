@@ -4,7 +4,8 @@
 # a version directory is immutable). registry:build copies the tree into r/ after rebuilding r/.
 #   WPFASTY=<wp-fasty checkout> bash scripts/wpfasty-registry.sh [--version x.y.z]
 # builds both runtimes with wp-fasty's tools/builder/registry-build.ts (refuses to change an existing version), then
-# syncs builder-registry/ into r/ and verifies. Served at https://registry.buildy.tw/<latte|twig>/wpfasty/[v<semver>/].
+# syncs builder-registry/ into r/ and verifies. builder-registry/WPFASTY_COMMIT pins the wp-fasty commit CI rebuilds from
+# (.github/workflows/ci.yml: the rebuild must not change a byte). Served at https://registry.buildy.tw/<latte|twig>/wpfasty/[v<semver>/].
 set -euo pipefail
 cd "$(dirname "$0")/.."
 : "${WPFASTY:?set WPFASTY to a wp-fasty checkout}"
