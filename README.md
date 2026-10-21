@@ -61,6 +61,11 @@ After changing `content/`, `generator/` or `r/`, run `bun run docs:build` (`scri
 The landing page (`buildy.tw`) is plain static files (`web/index.html`, `web/style.css`), no build, not part of `docs-dist/`. Check with `node scripts/check-web.mjs`.
 The registry project redirects only its root path `/` to `https://ui.buildy.tw/` (301, `r/vercel.json`).
 Registry URLs: `https://registry.buildy.tw/<svelte|react|vue|solid|templ|twig|latte|jinja2>` (no `/r/` prefix, the root directory is `r/`).
+WP FastY builder registries (separate format `wpfasty-catalog@2`, one per runtime, nothing shared between them):
+`https://registry.buildy.tw/<latte|twig>/wpfasty/v<semver>/` (immutable) and `…/wpfasty/latest/`, each with `catalog.json`
+and `blocks.zip`. Source of truth is `builder-registry/` (committed; copied into `r/` by `registry:build`); publish a new
+version with `WPFASTY=<wp-fasty checkout> bun run registry:wpfasty [--version x.y.z]`; `registry:validate` checks it
+(spec: wp-fasty `docs/agent/builder-registry.md`).
 Solid, Jinja2 and the full templ/Twig/Latte items need ui8kit CLI >= 2.0.3 (see docs/PLAN.md, "Registry shape").
 
 ## Gates

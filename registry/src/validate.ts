@@ -38,7 +38,8 @@ for (const rt of site.runtimes as string[]) {
 // every json file under r/<runtime> is listed in the index
 for (const rt of site.runtimes as string[]) {
   let files = 0;
-  (function walk(d: string) { for (const e of readdirSync(d)) { const p = path.join(d, e); statSync(p).isDirectory() ? walk(p) : e !== "index.json" && files++; } })(path.join(R, rt));
+  // r/<rt>/wpfasty/ is the separate WP FastY builder registry (scripts/check-wpfasty-registry.ts), not shadcn items
+  (function walk(d: string) { for (const e of readdirSync(d)) { const p = path.join(d, e); if (p === path.join(R, rt, "wpfasty")) continue; statSync(p).isDirectory() ? walk(p) : e !== "index.json" && files++; } })(path.join(R, rt));
   if (files !== manifest.runtimes[rt].items) err(`${rt}: ${files} item files on disk, ${manifest.runtimes[rt].items} in manifest`);
 }
 if (errors.length) { console.error(errors.slice(0, 30).join("\n")); console.error(`${errors.length} error(s)`); process.exit(1); }

@@ -8,7 +8,7 @@
 // Deterministic: sorted keys and items, no timestamps (lastUpdated = commit date of the source), sha256 per file.
 import { createHash } from "node:crypto";
 import { execFileSync } from "node:child_process";
-import { existsSync, mkdirSync, readdirSync, readFileSync, rmSync, statSync, writeFileSync } from "node:fs";
+import { cpSync, existsSync, mkdirSync, readdirSync, readFileSync, rmSync, statSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import { buildTemplateRuntime, TEMPLATE_RUNTIMES, type Kind } from "./template-runtimes";
 
@@ -171,6 +171,12 @@ function main() {
   if (existsSync(OUT)) rmSync(OUT, { recursive: true });
   mkdirSync(OUT, { recursive: true });
   if (kept) writeFileSync(keepFile, kept);
+  // WP FastY builder registries (r/<latte|twig>/wpfasty/, own format wpfasty-catalog@2, immutable versions) are not
+  // built here: their source of truth is builder-registry/ (scripts/wpfasty-registry.sh); keep them in r/.
+  for (const rt of ["latte", "twig"]) {
+    const src = path.join(repoRoot, "builder-registry", rt, "wpfasty");
+    if (existsSync(src)) cpSync(src, path.join(OUT, rt, "wpfasty"), { recursive: true });
+  }
   const meta = blockMeta();
   const manifest: any = { contractVersion: "2.0.0", version: VERSION, source: { repo: "private source monorepo", commit, dirty, commitDate }, runtimes: {} };
   const site: Record<string, any> = {};
