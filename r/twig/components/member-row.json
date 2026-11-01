@@ -1,5 +1,5 @@
 {
-  "$schema": "https://ui.buildy.tw/schema/registry-item.json",
+  "$schema": "https://registry.buildy.tw/schema/registry-item.json",
   "dependencies": [],
   "description": "One member of TeamGrid beside a small portrait: the name, the role, then the department and the place (detailed, directory), the bio (detailed) and the skills (detailed, list).",
   "devDependencies": [],

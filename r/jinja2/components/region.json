@@ -1,5 +1,5 @@
 {
-  "$schema": "https://ui.buildy.tw/schema/registry-item.json",
+  "$schema": "https://registry.buildy.tw/schema/registry-item.json",
   "dependencies": [],
   "description": "A landmark region (header, nav, section, aside, footer, article, figure) inside another file: one Block, never nested, so a nested landmark is its own component.",
   "devDependencies": [],

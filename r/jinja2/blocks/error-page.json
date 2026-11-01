@@ -1,5 +1,5 @@
 {
-  "$schema": "https://ui.buildy.tw/schema/registry-item.json",
+  "$schema": "https://registry.buildy.tw/schema/registry-item.json",
   "dependencies": [],
   "description": "A page for something that went wrong, such as a missing page: a code, a heading, a sentence and the way back.",
   "devDependencies": [],

@@ -1,5 +1,5 @@
 {
-  "$schema": "https://ui.buildy.tw/schema/registry-item.json",
+  "$schema": "https://registry.buildy.tw/schema/registry-item.json",
   "dependencies": [],
   "description": "The head of an inner page: the heading, one sentence and an optional action.",
   "devDependencies": [],

@@ -1,5 +1,5 @@
 {
-  "$schema": "https://ui.buildy.tw/schema/registry-item.json",
+  "$schema": "https://registry.buildy.tw/schema/registry-item.json",
   "dependencies": [],
   "description": "The proof of CtaProof. Shapes: logos (six names with a glyph), features (small features in two columns), stats (three figures), rows (four icon rows), zones (delivery zones: name and areas, price and time).",
   "devDependencies": [],

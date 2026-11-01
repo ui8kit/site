@@ -1,5 +1,5 @@
 {
-  "$schema": "https://ui.buildy.tw/schema/registry-item.json",
+  "$schema": "https://registry.buildy.tw/schema/registry-item.json",
   "dependencies": [],
   "description": "ButtonPlain is a bare button element: no styling beyond Class. Patterns (tabs, tree rows, menu items) style it themselves.",
   "devDependencies": [],

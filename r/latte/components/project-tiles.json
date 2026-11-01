@@ -1,5 +1,5 @@
 {
-  "$schema": "https://ui.buildy.tw/schema/registry-item.json",
+  "$schema": "https://registry.buildy.tw/schema/registry-item.json",
   "dependencies": [],
   "description": "The projects of ProjectGrid as tiles: cards (picture, featured badge, category and year, title, summary, tags, two links), compact cards in four columns, captions over the pictures, or a bento where the first project takes a big tile.",
   "devDependencies": [],

@@ -1,5 +1,5 @@
 {
-  "$schema": "https://ui.buildy.tw/schema/registry-item.json",
+  "$schema": "https://registry.buildy.tw/schema/registry-item.json",
   "dependencies": [],
   "description": "An editor file tab (40 px high): a file icon, the label and a close button. `preview` marks a tab that is not pinned yet. Keyboard (Enter and Space activate, Delete closes) is the programmer's behind the click and close events.",
   "devDependencies": [],

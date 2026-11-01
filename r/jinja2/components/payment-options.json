@@ -1,5 +1,5 @@
 {
-  "$schema": "https://ui.buildy.tw/schema/registry-item.json",
+  "$schema": "https://registry.buildy.tw/schema/registry-item.json",
   "dependencies": [],
   "description": "Ways to pay as radio cards: icon, name and a line of text; `checked` is the chosen one. Static markup.",
   "devDependencies": [],

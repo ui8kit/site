@@ -1,5 +1,5 @@
 {
-  "$schema": "https://ui.buildy.tw/schema/registry-item.json",
+  "$schema": "https://registry.buildy.tw/schema/registry-item.json",
   "dependencies": [],
   "description": "Block is the one semantic root of a file (div, section, article, aside, header, footer, main, nav, figure, search, hgroup). Any file (block, composite, screen) may open on one Block; never nest Block inside Block in one file, never repeat it in a loop.",
   "devDependencies": [],

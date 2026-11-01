@@ -1,5 +1,5 @@
 {
-  "$schema": "https://ui.buildy.tw/schema/registry-item.json",
+  "$schema": "https://registry.buildy.tw/schema/registry-item.json",
   "dependencies": [],
   "description": "The row inside NavItem: the icon and the label on the left, the right slot (or an empty 20 by 20 frame) on the right.",
   "devDependencies": [],

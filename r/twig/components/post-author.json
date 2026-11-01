@@ -1,5 +1,5 @@
 {
-  "$schema": "https://ui.buildy.tw/schema/registry-item.json",
+  "$schema": "https://registry.buildy.tw/schema/registry-item.json",
   "dependencies": [],
   "description": "The author of a post: the portrait, the name and role, and the date or the share and save buttons; as a line, a card, or a card with the bio.",
   "devDependencies": [],

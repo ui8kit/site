@@ -1,5 +1,5 @@
 {
-  "$schema": "https://ui.buildy.tw/schema/registry-item.json",
+  "$schema": "https://registry.buildy.tw/schema/registry-item.json",
   "dependencies": [],
   "description": "A call to action with logos, features, figures, icon rows or delivery zones; centered or beside a picture.",
   "devDependencies": [],

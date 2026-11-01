@@ -1,5 +1,5 @@
 {
-  "$schema": "https://ui.buildy.tw/schema/registry-item.json",
+  "$schema": "https://registry.buildy.tw/schema/registry-item.json",
   "dependencies": [],
   "description": "A picture that stays in view beside a list of features. Following the section being read is a port contract (ScrollSpy).",
   "devDependencies": [],

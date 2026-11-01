@@ -1,5 +1,5 @@
 {
-  "$schema": "https://ui.buildy.tw/schema/registry-item.json",
+  "$schema": "https://registry.buildy.tw/schema/registry-item.json",
   "dependencies": [],
   "description": "The actions of a call to action: one or two links (ActionGroup), or an email field with a button (actions form).",
   "devDependencies": [],

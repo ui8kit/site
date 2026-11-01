@@ -1,5 +1,5 @@
 {
-  "$schema": "https://ui.buildy.tw/schema/registry-item.json",
+  "$schema": "https://registry.buildy.tw/schema/registry-item.json",
   "dependencies": [],
   "description": "A narrow number field between a minus and a plus ghost icon button, drawn as one control (4px inside its ring). Static markup: the buttons carry no logic; the page wires them.",
   "devDependencies": [],

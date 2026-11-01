@@ -107,7 +107,7 @@ The templ files keep the module path <code>github.com/codegen-x/ui8kit/packages/
 <h2 id="pick-the-framework-not-a-file-filter">Pick the framework, not a file filter</h2>
 <p>Pass <code>--framework &lt;runtime&gt;</code> (<code>svelte</code>, <code>react</code>, <code>vue</code>, <code>solid</code>, <code>templ</code>, <code>twig</code>, <code>latte</code> or <code>jinja2</code>) together with the matching registry URL. The registry is
 already split per runtime, and ui8kit 2.0.3 or later installs every file of an item (the <code>*.types.ts</code> files that blocks import, Solid views, templ and
-template helpers), so <code>add --all</code> leaves no unresolved import or missing template. Use ui8kit 2.0.4 or later (<code>npx ui8kit</code> runs the latest).</p>
+template helpers), so <code>add --all</code> leaves no unresolved import or missing template. Use ui8kit 3.3.0 or later (<code>npx ui8kit</code> runs the latest): it also lets <code>add -y --framework &lt;runtime&gt;</code> run <code>init</code> for you in a fresh project.</p>
 <pre tabindex="0"><code class="language-bash">npx ui8kit init --yes --framework react --dir src --registry-url https://registry.buildy.tw/react --strict-cdn
 npx ui8kit add button card hero-split
 </code></pre>

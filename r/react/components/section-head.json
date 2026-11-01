@@ -1,5 +1,5 @@
 {
-  "$schema": "https://ui.buildy.tw/schema/registry-item.json",
+  "$schema": "https://registry.buildy.tw/schema/registry-item.json",
   "dependencies": [],
   "description": "A sidebar section heading with optional right actions. Set `expanded` and it becomes a disclosure button (aria-expanded, the toggle event).",
   "devDependencies": [],

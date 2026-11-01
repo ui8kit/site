@@ -1,5 +1,5 @@
 {
-  "$schema": "https://ui.buildy.tw/schema/registry-item.json",
+  "$schema": "https://registry.buildy.tw/schema/registry-item.json",
   "dependencies": [],
   "description": "The order summary card of the cart page and the checkout: the lines in short (optional), a promo code field with ready codes, the free-delivery progress, the totals, the button and a note. Static markup.",
   "devDependencies": [],

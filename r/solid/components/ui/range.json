@@ -1,5 +1,5 @@
 {
-  "$schema": "https://ui.buildy.tw/schema/registry-item.json",
+  "$schema": "https://registry.buildy.tw/schema/registry-item.json",
   "dependencies": [],
   "description": "Range renders a styled input[type=range] (single thumb slider). The value is controlled from outside: Value in, an input event out (canary used a bindable prop).",
   "devDependencies": [],

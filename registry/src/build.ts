@@ -34,6 +34,10 @@ const SRC = path.resolve(arg("src", "UI8KIT_SRC", path.join(repoRoot, "..", "sou
 const OUT = path.resolve(arg("out", "UI8KIT_OUT", path.join(repoRoot, "r")));
 const VERSION = arg("version", "UI8KIT_REGISTRY_VERSION", JSON.parse(readFileSync(path.join(repoRoot, "package.json"), "utf8")).version);
 
+// JSON Schemas served at https://registry.buildy.tw/schema/ (r/schema/, copied from registry/schema/)
+export const SCHEMA_BASE = "https://registry.buildy.tw/schema";
+const SCHEMA_SRC = path.join(repoRoot, "registry", "schema");
+
 const sha = (s: string | Buffer) => createHash("sha256").update(s).digest("hex");
 const sortKeys = (v: unknown): unknown =>
   Array.isArray(v) ? v.map(sortKeys)
@@ -211,14 +215,14 @@ function main() {
       counts[it.meta.kind] = (counts[it.meta.kind] ?? 0) + 1;
       const dir = path.join(OUT, rt, folderOf(it.type));
       mkdirSync(dir, { recursive: true });
-      writeFileSync(path.join(dir, `${it.name}.json`), json({ $schema: "https://ui.buildy.tw/schema/registry-item.json", ...it }));
+      writeFileSync(path.join(dir, `${it.name}.json`), json({ $schema: `${SCHEMA_BASE}/registry-item.json`, ...it }));
       mItems[it.name] = { type: it.type, files: Object.fromEntries(it.files.map((f) => [f.target, { sha256: sha(f.content), bytes: Buffer.byteLength(f.content) }])) };
       const s = (site[it.name] ??= { name: it.name, title: it.title, kind: it.meta.kind, category: it.meta.category, group: it.meta.group ?? "", description: it.description, type: it.type, runtimes: {} });
       s.runtimes[rt] = { path: `${rt}/${folderOf(it.type)}/${it.name}.json`, files: it.files.map((f) => f.target), registryDependencies: it.registryDependencies, dependencies: it.dependencies };
     }
     // CLI index: GET {base}/index.json, base = r/<runtime>
     const index = {
-      $schema: "https://ui.buildy.tw/schema/registry.json",
+      $schema: `${SCHEMA_BASE}/registry.json`,
       components: items.map((i) => ({ name: i.name, type: i.type, title: i.title, description: i.description, dependencies: i.dependencies, registryDependencies: i.registryDependencies })),
       categories: ["lib", "utils", "ui", "components", "blocks"],
       version: VERSION, lastUpdated: commitDate, registry: "ui",
@@ -227,9 +231,11 @@ function main() {
     manifest.runtimes[rt] = { items: items.length, counts, entries: mItems };
   }
   writeFileSync(path.join(OUT, "manifest.json"), json(manifest));
+  mkdirSync(path.join(OUT, "schema"), { recursive: true });
+  for (const f of readdirSync(SCHEMA_SRC).sort(cmp)) cpSync(path.join(SCHEMA_SRC, f), path.join(OUT, "schema", f));
   const list = Object.values(site).sort((a: any, b: any) => cmp(a.name, b.name));
   writeFileSync(path.join(OUT, "registry.json"), json({
-    $schema: "https://ui.buildy.tw/schema/registry.json", contractVersion: "2.0.0", version: VERSION, sourceCommit: commit, lastUpdated: commitDate,
+    $schema: `${SCHEMA_BASE}/registry.json`, contractVersion: "2.0.0", version: VERSION, sourceCommit: commit, lastUpdated: commitDate,
     runtimes: [...RUNTIMES], layout: "<runtime>/index.json + <runtime>/{components/ui,components,blocks,utils,lib}/<name>.json; use r/<runtime> as registryUrl",
     items: list,
   }));

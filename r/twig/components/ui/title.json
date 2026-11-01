@@ -1,5 +1,5 @@
 {
-  "$schema": "https://ui.buildy.tw/schema/registry-item.json",
+  "$schema": "https://registry.buildy.tw/schema/registry-item.json",
   "dependencies": [],
   "description": "Title renders a heading (h1–h6) from As (1–6). Defaults to h2 when As is 0 or out of range.",
   "devDependencies": [],

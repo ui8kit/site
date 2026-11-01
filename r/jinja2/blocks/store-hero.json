@@ -1,5 +1,5 @@
 {
-  "$schema": "https://ui.buildy.tw/schema/registry-item.json",
+  "$schema": "https://registry.buildy.tw/schema/registry-item.json",
   "dependencies": [],
   "description": "The hero of a store with promises under the actions, beside a picture with an offer card or over a faint picture.",
   "devDependencies": [],

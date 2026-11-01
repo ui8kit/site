@@ -1,5 +1,5 @@
 {
-  "$schema": "https://ui.buildy.tw/schema/registry-item.json",
+  "$schema": "https://registry.buildy.tw/schema/registry-item.json",
   "dependencies": [],
   "description": "Twelve frames of a signed-in app around empty cards: a top bar across the shell or over the content, with or without search; a wide, rail, collapsed, two-level or no sidebar, at the start or the end; a footer across the shell, under the content or none.",
   "devDependencies": [],

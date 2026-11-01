@@ -1,5 +1,5 @@
 {
-  "$schema": "https://ui.buildy.tw/schema/registry-item.json",
+  "$schema": "https://registry.buildy.tw/schema/registry-item.json",
   "dependencies": [],
   "description": "Four customer names with their glyphs in tiles of two columns, under the quote of QuoteSplit.",
   "devDependencies": [],

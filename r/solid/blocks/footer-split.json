@@ -1,5 +1,5 @@
 {
-  "$schema": "https://ui.buildy.tw/schema/registry-item.json",
+  "$schema": "https://registry.buildy.tw/schema/registry-item.json",
   "dependencies": [],
   "description": "The brand with figures and a sitemap link over link-group cards; or a split beside a picture with points, link columns, a newsletter card, the contacts or the community channels.",
   "devDependencies": [],

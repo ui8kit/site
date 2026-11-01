@@ -1,5 +1,5 @@
 {
-  "$schema": "https://ui.buildy.tw/schema/registry-item.json",
+  "$schema": "https://registry.buildy.tw/schema/registry-item.json",
   "dependencies": [],
   "description": "The body of a SectionFrame: inside a card when `boxed`, else the children as they are (no wrapper).",
   "devDependencies": [],

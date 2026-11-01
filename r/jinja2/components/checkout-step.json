@@ -1,5 +1,5 @@
 {
-  "$schema": "https://ui.buildy.tw/schema/registry-item.json",
+  "$schema": "https://registry.buildy.tw/schema/registry-item.json",
   "dependencies": [],
   "description": "One step of a long form: an optional number, a heading (h2) and a line of text over the fields (`children`). Axes: layout (cards: the step in a card, numbered: a number beside the heading and a line between steps).",
   "devDependencies": [],

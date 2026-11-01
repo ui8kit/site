@@ -1,5 +1,5 @@
 {
-  "$schema": "https://ui.buildy.tw/schema/registry-item.json",
+  "$schema": "https://registry.buildy.tw/schema/registry-item.json",
   "dependencies": [],
   "description": "Dialog renders a native dialog root with an optional behavior hook. The data-ui8kit hook defaults off; the registry ships no client JS.",
   "devDependencies": [],

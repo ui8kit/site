@@ -1,5 +1,5 @@
 {
-  "$schema": "https://ui.buildy.tw/schema/registry-item.json",
+  "$schema": "https://registry.buildy.tw/schema/registry-item.json",
   "dependencies": [],
   "description": "The calls to action of a post header: share and save side by side, one wide read button, or a wide read button with share and save as icons.",
   "devDependencies": [],

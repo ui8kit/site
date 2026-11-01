@@ -1,5 +1,5 @@
 {
-  "$schema": "https://ui.buildy.tw/schema/registry.json",
+  "$schema": "https://registry.buildy.tw/schema/registry.json",
   "categories": [
     "lib",
     "utils",

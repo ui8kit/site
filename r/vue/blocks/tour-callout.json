@@ -1,5 +1,5 @@
 {
-  "$schema": "https://ui.buildy.tw/schema/registry-item.json",
+  "$schema": "https://registry.buildy.tw/schema/registry-item.json",
   "dependencies": [],
   "description": "One stop of a product tour: the explained element and a callout with the step, a sentence and buttons. Placing it on the real element is a port contract.",
   "devDependencies": [],

@@ -1,5 +1,5 @@
 {
-  "$schema": "https://ui.buildy.tw/schema/registry-item.json",
+  "$schema": "https://registry.buildy.tw/schema/registry-item.json",
   "dependencies": [],
   "description": "Cards with a picture on top and a read link, or with a muted glyph panel on top like an index of categories, in three or four columns.",
   "devDependencies": [],

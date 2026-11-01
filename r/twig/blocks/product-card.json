@@ -1,5 +1,5 @@
 {
-  "$schema": "https://ui.buildy.tw/schema/registry-item.json",
+  "$schema": "https://registry.buildy.tw/schema/registry-item.json",
   "dependencies": [],
   "description": "A product as a card: picture, optional badge, category, name, rating, summary, price and an add button. Axes: layout (vertical, horizontal), media (image, none), ratio, rating (show, hide), action (button, none), density.",
   "devDependencies": [],

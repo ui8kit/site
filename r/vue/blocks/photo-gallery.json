@@ -1,5 +1,5 @@
 {
-  "$schema": "https://ui.buildy.tw/schema/registry-item.json",
+  "$schema": "https://registry.buildy.tw/schema/registry-item.json",
   "dependencies": [],
   "description": "Photos in a grid, a masonry, a mosaic, a featured picture with thumbnails, or cards.",
   "devDependencies": [],

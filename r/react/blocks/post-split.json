@@ -1,5 +1,5 @@
 {
-  "$schema": "https://ui.buildy.tw/schema/registry-item.json",
+  "$schema": "https://registry.buildy.tw/schema/registry-item.json",
   "dependencies": [],
   "description": "Tags, reading figures and an author card with share and save over a wide cover; the author, figures, tags and actions beside the cover; or the facts and related reading beside it.",
   "devDependencies": [],

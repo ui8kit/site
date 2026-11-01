@@ -1,5 +1,5 @@
 {
-  "$schema": "https://ui.buildy.tw/schema/registry-item.json",
+  "$schema": "https://registry.buildy.tw/schema/registry-item.json",
   "dependencies": [],
   "description": "Slot accepts arbitrary props and merges them onto its single child. Props are intentionally permissive (string-keyed) because Slot is a composition primitive — the parent component decides what to forward.",
   "devDependencies": [],

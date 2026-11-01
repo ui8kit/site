@@ -47,7 +47,7 @@ The templ files keep the module path `github.com/codegen-x/ui8kit/packages/templ
 
 Pass `--framework <runtime>` (`svelte`, `react`, `vue`, `solid`, `templ`, `twig`, `latte` or `jinja2`) together with the matching registry URL. The registry is
 already split per runtime, and ui8kit 2.0.3 or later installs every file of an item (the `*.types.ts` files that blocks import, Solid views, templ and
-template helpers), so `add --all` leaves no unresolved import or missing template. Use ui8kit 2.0.4 or later (`npx ui8kit` runs the latest).
+template helpers), so `add --all` leaves no unresolved import or missing template. Use ui8kit 3.3.0 or later (`npx ui8kit` runs the latest): it also lets `add -y --framework <runtime>` run `init` for you in a fresh project.
 
 ```bash
 npx ui8kit init --yes --framework react --dir src --registry-url {{REGISTRY_URL}}/react --strict-cdn

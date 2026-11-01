@@ -1,5 +1,5 @@
 {
-  "$schema": "https://ui.buildy.tw/schema/registry-item.json",
+  "$schema": "https://registry.buildy.tw/schema/registry-item.json",
   "dependencies": [],
   "description": "The placeholder content of DashboardShell: the page heading beside a grey action, then empty cards on the 8px grid. Shapes: grid (four small cards over a big one), split (a wide card beside a narrow one over a low one), list (a toolbar over a card of rows). The cards are hidden f",
   "devDependencies": [],

@@ -1,0 +1,78 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://registry.buildy.tw/schema/config.json",
+  "title": "UI8Kit CLI Config",
+  "type": "object",
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "contractVersion": {
+      "type": "string"
+    },
+    "framework": {
+      "type": "string",
+      "enum": [
+        "react",
+        "svelte",
+        "vue",
+        "solid",
+        "templ",
+        "latte",
+        "twig",
+        "jinja2",
+        "none"
+      ]
+    },
+    "runtime": {
+      "type": "string"
+    },
+    "typescript": {
+      "type": "boolean"
+    },
+    "globalCss": {
+      "type": "string"
+    },
+    "dir": {
+      "type": "string"
+    },
+    "paths": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "aliases": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "registry": {
+      "type": "string"
+    },
+    "registryUrl": {
+      "type": "string",
+      "format": "uri"
+    },
+    "registryVersion": {
+      "type": "string"
+    },
+    "cdnBaseUrls": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "strictCdn": {
+      "type": "boolean"
+    },
+    "importStyle": {
+      "type": "string",
+      "enum": [
+        "alias",
+        "package"
+      ]
+    }
+  }
+}

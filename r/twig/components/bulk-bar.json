@@ -1,5 +1,5 @@
 {
-  "$schema": "https://ui.buildy.tw/schema/registry-item.json",
+  "$schema": "https://registry.buildy.tw/schema/registry-item.json",
   "dependencies": [],
   "description": "The \"N selected\" bar of a list: a count, a clear button and the bulk actions (children). All text comes in through props.",
   "devDependencies": [],

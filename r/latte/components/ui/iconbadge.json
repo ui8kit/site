@@ -1,5 +1,5 @@
 {
-  "$schema": "https://ui.buildy.tw/schema/registry-item.json",
+  "$schema": "https://registry.buildy.tw/schema/registry-item.json",
   "dependencies": [],
   "description": "IconBadge renders a small icon surface for nav rows, cards, and status blocks. Pass the letter, glyph, or Icon node as children.",
   "devDependencies": [],

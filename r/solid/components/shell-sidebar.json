@@ -1,5 +1,5 @@
 {
-  "$schema": "https://ui.buildy.tw/schema/registry-item.json",
+  "$schema": "https://registry.buildy.tw/schema/registry-item.json",
   "dependencies": [],
   "description": "The sidebar of DashboardShell. Shapes: wide (icon and name), rail (icons only, the names still read), collapsed (the static collapsed state of a wide sidebar, with its expand button), twolevel (a rail beside a panel of the current section's links). side puts it at the start or th",
   "devDependencies": [],

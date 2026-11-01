@@ -1,5 +1,5 @@
 {
-  "$schema": "https://ui.buildy.tw/schema/registry-item.json",
+  "$schema": "https://registry.buildy.tw/schema/registry-item.json",
   "dependencies": [],
   "description": "A row of vertical bars (sales by day, orders by week) with a caption under each bar. The chart is one image for assistive technology: `label` carries the summary, the bar values are in the captions and titles.",
   "devDependencies": [],

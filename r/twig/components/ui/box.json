@@ -1,5 +1,5 @@
 {
-  "$schema": "https://ui.buildy.tw/schema/registry-item.json",
+  "$schema": "https://registry.buildy.tw/schema/registry-item.json",
   "dependencies": [],
   "description": "Box is a generic layout wrapper for internal sections. Not for top-level landmarks — use Block for page regions.",
   "devDependencies": [],

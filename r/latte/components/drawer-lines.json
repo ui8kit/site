@@ -1,5 +1,5 @@
 {
-  "$schema": "https://ui.buildy.tw/schema/registry-item.json",
+  "$schema": "https://registry.buildy.tw/schema/registry-item.json",
   "dependencies": [],
   "description": "The filled body of the CartDrawer: the lines with a quantity field, then the free-delivery bar, the subtotal and total and the button.",
   "devDependencies": [],

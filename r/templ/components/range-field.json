@@ -1,5 +1,5 @@
 {
-  "$schema": "https://ui.buildy.tw/schema/registry-item.json",
+  "$schema": "https://registry.buildy.tw/schema/registry-item.json",
   "dependencies": [],
   "description": "A from–to pair for numbers or dates (price range, period). Empty means an open end. With numeric bounds two sliders sit above the inputs. Each control has its own accessible name; every change reports both ends.",
   "devDependencies": [],

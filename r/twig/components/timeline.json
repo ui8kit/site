@@ -1,5 +1,5 @@
 {
-  "$schema": "https://ui.buildy.tw/schema/registry-item.json",
+  "$schema": "https://registry.buildy.tw/schema/registry-item.json",
   "dependencies": [],
   "description": "A vertical list of events (an order's history): a dot on a line, the title, an optional text and the time. Newest first or oldest first is the caller's order.",
   "devDependencies": [],

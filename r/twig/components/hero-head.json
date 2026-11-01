@@ -1,5 +1,5 @@
 {
-  "$schema": "https://ui.buildy.tw/schema/registry-item.json",
+  "$schema": "https://registry.buildy.tw/schema/registry-item.json",
   "dependencies": [],
   "description": "The head row of a hero band: skip link, brand, menu links (the current one carries aria-current), login and a call to action.",
   "devDependencies": [],

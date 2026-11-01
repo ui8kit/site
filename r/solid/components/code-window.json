@@ -1,5 +1,5 @@
 {
-  "$schema": "https://ui.buildy.tw/schema/registry-item.json",
+  "$schema": "https://registry.buildy.tw/schema/registry-item.json",
   "dependencies": [],
   "description": "A terminal or code window: a title bar with three round marks, then the lines. A `command` line starts with the prompt, an `output` line is muted. Static: the typing animation belongs to the port (TypingText contract).",
   "devDependencies": [],

@@ -1,5 +1,5 @@
 {
-  "$schema": "https://ui.buildy.tw/schema/registry-item.json",
+  "$schema": "https://registry.buildy.tw/schema/registry-item.json",
   "dependencies": [],
   "description": "A small post card of PostShowcase: the picture, the category, the title and the author with the reading time.",
   "devDependencies": [],

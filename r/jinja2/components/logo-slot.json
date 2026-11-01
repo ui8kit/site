@@ -1,5 +1,5 @@
 {
-  "$schema": "https://ui.buildy.tw/schema/registry-item.json",
+  "$schema": "https://registry.buildy.tw/schema/registry-item.json",
   "dependencies": [],
   "description": "One logo of a logo ribbon: a fixed-size slot with a Lucide glyph; the name is read by screen readers only.",
   "devDependencies": [],

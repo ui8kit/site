@@ -1,5 +1,5 @@
 {
-  "$schema": "https://ui.buildy.tw/schema/registry-item.json",
+  "$schema": "https://registry.buildy.tw/schema/registry-item.json",
   "dependencies": [],
   "description": "The form of AuthCard: the fields of the mode (sign-in, sign-up, reset, magic link), remember me and the forgot link, the terms, the submit button.",
   "devDependencies": [],

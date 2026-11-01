@@ -1,5 +1,5 @@
 {
-  "$schema": "https://ui.buildy.tw/schema/registry-item.json",
+  "$schema": "https://registry.buildy.tw/schema/registry-item.json",
   "dependencies": [],
   "description": "Default layout preset: the sizes of the landing blocks as Tailwind classes. Blocks combine these with token classes; swap the preset to resize every block at once. Numbers: ui8kit default sizes (Tailwind scale, no arbitrary values)",
   "devDependencies": [],

@@ -1,5 +1,5 @@
 {
-  "$schema": "https://ui.buildy.tw/schema/registry-item.json",
+  "$schema": "https://registry.buildy.tw/schema/registry-item.json",
   "dependencies": [],
   "description": "The top bar of DashboardShell: the brand (when no sidebar carries it), the links (when there is no sidebar), an optional search field, and the signed-in person.",
   "devDependencies": [],

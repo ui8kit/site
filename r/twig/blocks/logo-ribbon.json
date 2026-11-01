@@ -1,5 +1,5 @@
 {
-  "$schema": "https://ui.buildy.tw/schema/registry-item.json",
+  "$schema": "https://registry.buildy.tw/schema/registry-item.json",
   "dependencies": [],
   "description": "A heading over one centered row of logo slots (LogoSlot); the row and slot sizes come from the default preset.",
   "devDependencies": [],

@@ -1,5 +1,5 @@
 {
-  "$schema": "https://ui.buildy.tw/schema/registry-item.json",
+  "$schema": "https://registry.buildy.tw/schema/registry-item.json",
   "dependencies": [],
   "description": "Text renders body copy: a paragraph by default; Tag picks another text element (blockquote, figcaption, address, pre, or an inline element). Title (as 1–6) is for headings.",
   "devDependencies": [],

@@ -1,5 +1,5 @@
 {
-  "$schema": "https://ui.buildy.tw/schema/registry-item.json",
+  "$schema": "https://registry.buildy.tw/schema/registry-item.json",
   "dependencies": [],
   "description": "The stacked body of a SectionFrame: the heading, the children and the media in one column; a narrow measure (xs to 3xl) holds the column at that width, centred.",
   "devDependencies": [],

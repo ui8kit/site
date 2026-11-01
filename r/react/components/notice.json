@@ -1,5 +1,5 @@
 {
-  "$schema": "https://ui.buildy.tw/schema/registry-item.json",
+  "$schema": "https://registry.buildy.tw/schema/registry-item.json",
   "dependencies": [],
   "description": "A short confirmation toast: fixed bottom right, read out by screen readers through role status. Empty text renders nothing visible.",
   "devDependencies": [],

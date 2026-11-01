@@ -1,5 +1,5 @@
 {
-  "$schema": "https://ui.buildy.tw/schema/registry-item.json",
+  "$schema": "https://registry.buildy.tw/schema/registry-item.json",
   "dependencies": [],
   "description": "A post as a card: cover picture, category, title, excerpt, author line and a read link. Axes: layout (vertical, horizontal), media (image, none), meta (full, short: the date only, news: date and title only), density.",
   "devDependencies": [],

@@ -1,5 +1,5 @@
 {
-  "$schema": "https://ui.buildy.tw/schema/registry-item.json",
+  "$schema": "https://registry.buildy.tw/schema/registry-item.json",
   "dependencies": [],
   "description": "Work items in lanes with a count; cards with a tag and a person. Moving cards is a port contract (SortableList).",
   "devDependencies": [],

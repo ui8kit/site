@@ -1,5 +1,5 @@
 {
-  "$schema": "https://ui.buildy.tw/schema/registry-item.json",
+  "$schema": "https://registry.buildy.tw/schema/registry-item.json",
   "dependencies": [],
   "description": "A whole sign-in page: the card beside a picture panel, on a tinted page, or alone; with any mode of the card.",
   "devDependencies": [],

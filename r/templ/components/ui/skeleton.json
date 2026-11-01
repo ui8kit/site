@@ -1,5 +1,5 @@
 {
-  "$schema": "https://ui.buildy.tw/schema/registry-item.json",
+  "$schema": "https://registry.buildy.tw/schema/registry-item.json",
   "dependencies": [],
   "description": "Skeleton renders a pulsing placeholder box (loading state). It is decorative: aria-hidden; the loading state is announced by the container (aria-busy).",
   "devDependencies": [],

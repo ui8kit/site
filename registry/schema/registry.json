@@ -1,0 +1,144 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://registry.buildy.tw/schema/registry.json",
+  "title": "UI8Kit Registry",
+  "type": "object",
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "anyOf": [
+          {
+            "$ref": "registry-item.json"
+          },
+          {
+            "$ref": "#/definitions/catalogEntry"
+          }
+        ]
+      }
+    },
+    "version": {
+      "type": "string"
+    },
+    "lastUpdated": {
+      "type": "string"
+    },
+    "registry": {
+      "type": "string"
+    },
+    "components": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/indexEntry"
+      }
+    },
+    "categories": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "meta": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "contractVersion": {
+      "type": "string"
+    },
+    "sourceCommit": {
+      "type": "string"
+    },
+    "layout": {
+      "type": "string"
+    },
+    "runtimes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "description": "UI8Kit registry document. Three shapes: a built registry ({items: registry-item[]}), a per-runtime CLI index r/<runtime>/index.json ({components: index entry[]}) and the cross-runtime catalog r/registry.json ({items: catalog entry[], runtimes}).",
+  "anyOf": [
+    {
+      "required": [
+        "items"
+      ]
+    },
+    {
+      "required": [
+        "components"
+      ]
+    }
+  ],
+  "definitions": {
+    "indexEntry": {
+      "type": "object",
+      "required": [
+        "name",
+        "type"
+      ],
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string",
+          "pattern": "^registry:"
+        },
+        "title": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "dependencies": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "registryDependencies": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "catalogEntry": {
+      "type": "object",
+      "required": [
+        "name",
+        "type",
+        "runtimes"
+      ],
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string",
+          "pattern": "^registry:"
+        },
+        "runtimes": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "object",
+            "required": [
+              "path"
+            ],
+            "properties": {
+              "path": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,5 +1,5 @@
 {
-  "$schema": "https://ui.buildy.tw/schema/registry-item.json",
+  "$schema": "https://registry.buildy.tw/schema/registry-item.json",
   "dependencies": [],
   "description": "The breadcrumbs of an inner page: links to the parent pages separated by chevrons; the last entry is the current page and is not a link.",
   "devDependencies": [],

@@ -1,5 +1,5 @@
 {
-  "$schema": "https://ui.buildy.tw/schema/registry-item.json",
+  "$schema": "https://registry.buildy.tw/schema/registry-item.json",
   "dependencies": [],
   "description": "A centered closing card: heading, one sentence and a pill button. Sizes from the default preset.",
   "devDependencies": [],

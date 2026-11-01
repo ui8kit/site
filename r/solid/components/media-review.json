@@ -1,5 +1,5 @@
 {
-  "$schema": "https://ui.buildy.tw/schema/registry-item.json",
+  "$schema": "https://registry.buildy.tw/schema/registry-item.json",
   "dependencies": [],
   "description": "The featured review of MediaList in a muted card: a label with the stars, the text in quotes and the author.",
   "devDependencies": [],

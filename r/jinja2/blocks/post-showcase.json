@@ -1,5 +1,5 @@
 {
-  "$schema": "https://ui.buildy.tw/schema/registry-item.json",
+  "$schema": "https://registry.buildy.tw/schema/registry-item.json",
   "dependencies": [],
   "description": "Four small post cards beside an intro with a view-all link; the first post in detail beside its picture; or cards with the text on a panel over the picture, in two or three columns.",
   "devDependencies": [],

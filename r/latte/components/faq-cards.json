@@ -1,5 +1,5 @@
 {
-  "$schema": "https://ui.buildy.tw/schema/registry-item.json",
+  "$schema": "https://registry.buildy.tw/schema/registry-item.json",
   "dependencies": [],
   "description": "The questions of FaqSplit as cards: the topic, the question, the answer and a read-more link; with an icon square on top in the icons shape. Shapes: grid3, grid4, icons (three columns).",
   "devDependencies": [],

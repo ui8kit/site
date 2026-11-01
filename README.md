@@ -66,6 +66,9 @@ WP FastY builder registries (separate format `wpfasty-catalog@2`, one per runtim
 and `blocks.zip`. Source of truth is `builder-registry/` (committed; copied into `r/` by `registry:build`); publish a new
 version with `WPFASTY=<wp-fasty checkout> bun run registry:wpfasty [--version x.y.z]`; `registry:validate` checks it
 (spec: wp-fasty `docs/agent/builder-registry.md`).
+JSON Schemas: `https://registry.buildy.tw/schema/{registry,registry-item,config}.json` (source `registry/schema/`, copied to `r/schema/` by `registry:build`;
+every `$schema` in `r/` points there; ui8kit CLI >= 3.3.0 writes `…/schema/config.json` into `ui8kit.config.json`). Not schema.buildy.tw (that is the Codex contract).
+Web Components: no `r/webcomponent/` yet (experimental, the CLI rejects that framework); 8 runtimes are published.
 Solid, Jinja2 and the full templ/Twig/Latte items need ui8kit CLI >= 2.0.3 (see docs/PLAN.md, "Registry shape").
 
 ## Gates
