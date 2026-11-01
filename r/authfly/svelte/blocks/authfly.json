@@ -1,0 +1,27 @@
+{
+  "$schema": "https://registry.buildy.tw/schema/registry-item.json",
+  "name": "authfly",
+  "type": "registry:block",
+  "description": "Authfly package entry (exports every widget).",
+  "runtime": "svelte",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [
+    "authfly-lib",
+    "authfly-components",
+    "authfly-sign-in",
+    "authfly-sign-up",
+    "authfly-request",
+    "authfly-notice",
+    "authfly-consent",
+    "authfly-account",
+    "https://unpkg.com/@ui8kit/registry@3.3.0/r/svelte/utils/utils.json"
+  ],
+  "files": [
+    {
+      "path": "src/authfly.ts",
+      "content": "// @authfly/svelte: Authfly widgets on UI8Kit 3 primitives (installed by `npx ui8kit@3`, see ui8kit.lock.json).\nexport { default as AuthflySignIn } from \"./blocks/AuthflySignIn.svelte\";\nexport { default as AuthflySignUp } from \"./blocks/AuthflySignUp.svelte\";\nexport { default as AuthflyRequest } from \"./blocks/AuthflyRequest.svelte\";\nexport { default as AuthflyNotice } from \"./blocks/AuthflyNotice.svelte\";\nexport { default as AuthflyConsent } from \"./blocks/AuthflyConsent.svelte\";\nexport { default as AuthflyAccount } from \"./blocks/AuthflyAccount.svelte\";\nexport type * from \"./blocks/props\";\nexport type * from \"./blocks/authfly-sign-in.types\";\nexport type * from \"./blocks/authfly-sign-up.types\";\nexport type * from \"./blocks/authfly-request.types\";\nexport type * from \"./blocks/authfly-notice.types\";\nexport type * from \"./blocks/authfly-consent.types\";\nexport type * from \"./blocks/authfly-account.types\";\nexport type * from \"./blocks/feature-grid.types\";\nexport * from \"./components\";\nexport * from \"./skin/skin\";\n",
+      "target": "authfly.ts"
+    }
+  ]
+}

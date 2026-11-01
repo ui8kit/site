@@ -1,0 +1,22 @@
+{
+  "$schema": "https://registry.buildy.tw/schema/registry-item.json",
+  "name": "authfly-account",
+  "type": "registry:block",
+  "description": "Authfly account widget.",
+  "runtime": "twig",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [
+    "authfly-lib",
+    "authfly-components",
+    "https://unpkg.com/@ui8kit/registry@3.3.0/r/twig/components/ui/separator.json",
+    "https://unpkg.com/@ui8kit/registry@3.3.0/r/twig/utils/utils.json"
+  ],
+  "files": [
+    {
+      "path": "blocks/authfly-account.html.twig",
+      "content": "{#- Authfly account on UI8Kit 3 primitives. Props (p): id, title, text, name, email, verified, methods, labels,\n    signoutUrl, csrf, landmarkLabel. -#}\n{%- import 'authfly/components.html.twig' as af -%}\n{%- set id = p.id ?? '' -%}{%- set l = p.labels ?? {} -%}{%- set verified = p.verified ?? false -%}\n{%- set nameRow -%}{{ af.box('dt', af_text('muted'), {}, af_esc(l.name ?? '')) }}{{ af.box('dd', 'm-0 font-semibold text-foreground', {'data-testid': 'profile-name'}, af_esc(p.name ?? '')) }}{%- endset -%}\n{%- set emailVal -%}{{ p.email ?? '' }}{{ af.badge(verified ? 'default' : 'secondary', 'verified', verified ? (l.verified ?? '') : (l.unverified ?? '')) }}{%- endset -%}\n{%- set emailRow -%}{{ af.box('dt', af_text('muted'), {}, af_esc(l.email ?? '')) }}{{ af.box('dd', 'm-0 flex flex-wrap items-center gap-2 font-semibold text-foreground', {'data-testid': 'profile-email'}, emailVal) }}{%- endset -%}\n{%- set profile -%}{{ af.box('', 'grid gap-2', {}, nameRow) }}{{ af.box('', 'grid gap-2', {}, emailRow) }}{%- endset -%}\n{%- set items -%}\n{%- for m in p.methods ?? [] -%}\n{%- set lead -%}{{ af.icon((m.icon ?? '') ?: 'shield') }}{{ m.title ?? '' }}{%- endset -%}\n{%- set li -%}{{ af.text('span', 'flex items-center gap-2', {}, lead) }}{{ af.badge('outline', '', m.text ?? '') }}{%- endset -%}\n{{ af.box('li', 'flex items-center justify-between gap-4 text-sm text-foreground', {'data-method': m.id ?? null}, li) }}\n{%- endfor -%}\n{%- endset -%}\n{%- set methods -%}{{ af.title(2, id ~ '-methods', '', l.security ?? '') }}{{ af.box('ul', 'm-0 flex list-none flex-col gap-2 p-0', {'aria-labelledby': id ~ '-methods', 'data-testid': 'methods'}, items) }}{%- endset -%}\n{%- set out -%}{{ af.icon('log-out') }}{{ l.signout ?? '' }}{%- endset -%}\n{%- set signout -%}{{ af.hidden('csrf', p.csrf ?? '') }}{{ af.button('', 'submit', af_skin('button', 'outline', 'w-full'), {'data-testid': 'signout'}, out) }}{%- endset -%}\n{%- set body -%}\n{{ af.head(id, p.title ?? '', p.text ?? '') }}\n{{- af.box('dl', 'm-0 grid gap-4', {'data-testid': 'profile'}, profile) }}\n{{- include('ui/separator/Separator.html.twig', {decorative: true, class: 'w-full border-border'}, with_context = false) }}\n{{- af.stack('2', '', '', '', {}, methods) }}\n{{- af.form(p.signoutUrl ?? '', '', {'data-testid': 'signout-form'}, signout) }}\n{%- endset -%}\n{{ af.card(af_skin('widgetCard', 'max-w-lg'), {'data-testid': 'authfly-account'}|merge({'aria-labelledby': (p.landmarkLabel ?? '') ? null : id ~ '-title', 'aria-label': p.landmarkLabel ?? null}), body) }}\n",
+      "target": "blocks/authfly-account.html.twig"
+    }
+  ]
+}

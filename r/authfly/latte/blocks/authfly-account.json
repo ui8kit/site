@@ -1,0 +1,22 @@
+{
+  "$schema": "https://registry.buildy.tw/schema/registry-item.json",
+  "name": "authfly-account",
+  "type": "registry:block",
+  "description": "Authfly account widget.",
+  "runtime": "latte",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [
+    "authfly-lib",
+    "authfly-components",
+    "https://unpkg.com/@ui8kit/registry@3.3.0/r/latte/components/ui/separator.json",
+    "https://unpkg.com/@ui8kit/registry@3.3.0/r/latte/utils/utils.json"
+  ],
+  "files": [
+    {
+      "path": "blocks/authfly-account.latte",
+      "content": "{* Authfly account on UI8Kit 3 primitives. Props ($p): id, title, text, name, email, verified, methods, labels,\n   signoutUrl, csrf, landmarkLabel. *}\n{import '../authfly/components.latte'}\n{var $id = $p['id'] ?? ''}{var $l = $p['labels'] ?? []}{var $error = $p['error'] ?? ''}\n{var $formError = $error ? $id . '-error' : null}\n{var $lm = ['aria-labelledby' => ($p['landmarkLabel'] ?? '') ? null : $id . '-title', 'aria-label' => $p['landmarkLabel'] ?? null]}\n{var $verified = (bool) ($p['verified'] ?? false)}\n{capture $nameRow}{include box, 'dt', afText('muted'), [], afEsc($l['name'] ?? '')}{include box, 'dd', 'm-0 font-semibold text-foreground', ['data-testid' => 'profile-name'], afEsc($p['name'] ?? '')}{/capture}\n{capture $emailVal}{$p['email'] ?? ''}{include badge, $verified ? 'default' : 'secondary', 'verified', $verified ? ($l['verified'] ?? '') : ($l['unverified'] ?? '')}{/capture}\n{capture $emailRow}{include box, 'dt', afText('muted'), [], afEsc($l['email'] ?? '')}{include box, 'dd', 'm-0 flex flex-wrap items-center gap-2 font-semibold text-foreground', ['data-testid' => 'profile-email'], $emailVal}{/capture}\n{capture $profile}{include box, '', 'grid gap-2', [], $nameRow}{include box, '', 'grid gap-2', [], $emailRow}{/capture}\n{capture $items}{foreach $p['methods'] ?? [] as $m}{capture $lead}{include icon, ($m['icon'] ?? '') ?: 'shield'}{$m['title'] ?? ''}{/capture}{capture $li}{include text, 'span', 'flex items-center gap-2', [], $lead}{include badge, 'outline', '', $m['text'] ?? ''}{/capture}{include box, 'li', 'flex items-center justify-between gap-4 text-sm text-foreground', ['data-method' => $m['id'] ?? null], $li}{/foreach}{/capture}\n{capture $methods}{include title, 2, $id . '-methods', null, $l['security'] ?? ''}{include box, 'ul', 'm-0 flex list-none flex-col gap-2 p-0', ['aria-labelledby' => $id . '-methods', 'data-testid' => 'methods'], $items}{/capture}\n{capture $out}{include icon, 'log-out'}{$l['signout'] ?? ''}{/capture}\n{capture $signout}{include hidden, 'csrf', $p['csrf'] ?? ''}{include button, '', 'submit', afSkin('button', 'outline', 'w-full'), ['data-testid' => 'signout'], $out}{/capture}\n{capture $body}\n{include head, $id, $p['title'] ?? '', $p['text'] ?? ''}\n{include box, 'dl', 'm-0 grid gap-4', ['data-testid' => 'profile'], $profile}\n{include '../ui/separator/Separator.latte', decorative: true, class: 'w-full border-border'}\n{include stack, '2', '', '', '', [], $methods}\n{include form, $p['signoutUrl'] ?? '', '', ['data-testid' => 'signout-form'], $signout}\n{/capture}\n{include card, afSkin('widgetCard', 'max-w-lg'), ['data-testid' => 'authfly-account'] + $lm, $body}\n",
+      "target": "blocks/authfly-account.latte"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "$schema": "https://registry.buildy.tw/schema/registry-item.json",
+  "name": "authfly-sign-in",
+  "type": "registry:block",
+  "description": "Authfly sign-in widget.",
+  "runtime": "jinja2",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [
+    "authfly-lib",
+    "authfly-components",
+    "https://unpkg.com/@ui8kit/registry@3.3.0/r/jinja2/utils/utils.json"
+  ],
+  "files": [
+    {
+      "path": "blocks/authfly-sign-in.html.j2",
+      "content": "{#- Authfly sign-in on UI8Kit 3 primitives. Props (p): id, title, text, action, csrf, error, labels, providers,\n    method (password|magic), identifier (any|email|username), social (none|show), landmarkLabel. -#}\n{%- import 'authfly/components.html.j2' as af -%}\n{%- set id = p.id or '' -%}{%- set l = p.labels or {} -%}{%- set error = p.error or '' -%}\n{%- set email = (p.identifier or 'any') == 'email' -%}\n{%- set formError = id ~ '-error' if error else none -%}\n{%- set providers -%}\n{%- for pr in p.providers or [] -%}\n{%- set c -%}{{ af.icon(pr.icon or '') }}{{ pr.title or '' }}{%- endset -%}\n{{ af.button((l.socialUrl or '') ~ '/' ~ (pr.id or ''), '', af_skin('button', 'outline', 'w-full'), {'data-provider': pr.id or none}, c) }}\n{%- endfor -%}\n{%- endset -%}\n{%- set form -%}\n{{ af.hidden('csrf', p.csrf or '') }}\n{{- af.field({'label': l.identifier or '', 'for': id ~ '-identifier', 'formError': formError, 'input': {'type': 'email' if email else 'text', 'name': 'identifier', 'required': true, 'attrs': {'autocomplete': 'email' if email else 'username'}}}) }}\n{%- if (p.method or 'password') == 'password' -%}\n{{ af.field({'label': l.password or '', 'for': id ~ '-password', 'formError': formError, 'input': {'type': 'password', 'name': 'password', 'required': true, 'attrs': {'autocomplete': 'current-password'}}}) }}\n{%- if l.forgot or '' %}{{ af.link(l.forgotHref or '', af_skin('link', 'w-fit text-sm'), 'forgot', l.forgot) }}{% endif -%}\n{%- endif -%}\n{{ af.button('', 'submit', af_skin('button', 'default', 'w-full'), {'data-testid': 'submit'}, af_esc(l.submit or '')) }}\n{%- endset -%}\n{%- set body -%}\n{{ af.head(id, p.title or '', p.text or '') }}\n{{- af.messages(id, error, '') }}\n{%- if (p.social or 'none') == 'show' %}{{ af.stack('2', '', '', '', {'role': 'group', 'aria-label': l.providers or none, 'data-testid': 'authfly-providers'}, providers) }}{% endif -%}\n{{ af.form(p.action or '', '', {'data-testid': 'authfly-form'}, form) }}\n{%- if l.magic or '' %}{{ af.button(l.magicHref or '', '', af_skin('button', 'outline', 'w-full'), {'data-testid': 'switch-method'}, af_esc(l.magic)) }}{% endif -%}\n{%- if l.signupLink or '' -%}\n{%- set foot -%}{{ l.signupText or '' }} {{ af.link(l.signupHref or '', af_skin('link'), 'signup-link', l.signupLink) }}{%- endset -%}\n{{ af.text('', af_text('muted'), {}, foot) }}\n{%- endif -%}\n{%- endset -%}\n{{ af.card(af_skin('widgetCard'), {'data-testid': 'authfly-sign-in', 'aria-labelledby': none if p.landmarkLabel else id ~ '-title', 'aria-label': p.landmarkLabel or none}, body) }}\n",
+      "target": "blocks/authfly-sign-in.html.j2"
+    }
+  ]
+}

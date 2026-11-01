@@ -1,0 +1,23 @@
+{
+  "$schema": "https://registry.buildy.tw/schema/registry-item.json",
+  "name": "authfly-sign-up",
+  "type": "registry:block",
+  "description": "Authfly sign-up widget.",
+  "runtime": "jinja2",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [
+    "authfly-lib",
+    "authfly-components",
+    "https://unpkg.com/@ui8kit/registry@3.3.0/r/jinja2/components/ui/checkbox.json",
+    "https://unpkg.com/@ui8kit/registry@3.3.0/r/jinja2/components/ui/label.json",
+    "https://unpkg.com/@ui8kit/registry@3.3.0/r/jinja2/utils/utils.json"
+  ],
+  "files": [
+    {
+      "path": "blocks/authfly-sign-up.html.j2",
+      "content": "{#- Authfly sign-up on UI8Kit 3 primitives. Props (p): id, title, text, action, csrf, error, info, labels,\n    terms (show|none), landmarkLabel. -#}\n{%- import 'authfly/components.html.j2' as af -%}\n{%- set id = p.id or '' -%}{%- set l = p.labels or {} -%}{%- set error = p.error or '' -%}\n{%- set formError = id ~ '-error' if error else none -%}\n{%- set domain = l.domain or '' -%}\n{%- set suffix -%}{% if domain %}{{ af.text('span', af_text('muted'), {'id': id ~ '-domain', 'data-testid': 'domain'}, af_esc(domain)) }}{% endif %}{%- endset -%}\n{%- set form -%}\n{{ af.hidden('csrf', p.csrf or '') }}\n{{- af.field({'label': l.name or '', 'for': id ~ '-name', 'formError': formError, 'input': {'type': 'text', 'name': 'name', 'attrs': {'autocomplete': 'name'}}}) }}\n{{- af.field({'label': l.username or '', 'for': id ~ '-username', 'formError': formError, 'describe': id ~ '-domain' if domain else none, 'suffix': suffix, 'input': {'type': 'text', 'name': 'username', 'required': true, 'attrs': {'autocomplete': 'username'}}}) }}\n{{- af.field({'label': l.password or '', 'for': id ~ '-password', 'hint': l.hint or '', 'formError': formError, 'input': {'type': 'password', 'name': 'password', 'required': true, 'attrs': {'autocomplete': 'new-password'}}}) }}\n{%- if (p.terms or 'show') == 'show' -%}\n{%- set t -%}\n{{ af.prim('ui/checkbox/checkbox.html.j2', {'Name': 'terms', 'Required': true, 'ID': id ~ '-terms', 'AriaDescribedBy': formError, 'AriaInvalid': 'true' if formError else none, 'Class': af_skin('checkbox')}) }}\n{{- af.prim('ui/label/label.html.j2', {'For': id ~ '-terms', 'Class': af_skin('label', 'font-normal')}, af_esc(l.terms or '')) }}\n{%- endset -%}\n{{ af.group('2', '', '', 'w-fit', {}, t) }}\n{%- endif -%}\n{{ af.button('', 'submit', af_skin('button', 'default', 'w-full'), {'data-testid': 'submit'}, af_esc(l.submit or '')) }}\n{%- endset -%}\n{%- set body -%}\n{{ af.head(id, p.title or '', p.text or '') }}\n{{- af.messages(id, error, p.info or '') }}\n{{- af.form(p.action or '', '', {'data-testid': 'authfly-form'}, form) }}\n{%- if l.signinLink or '' -%}\n{%- set foot -%}{{ l.signinText or '' }} {{ af.link(l.signinHref or '', af_skin('link'), 'signin-link', l.signinLink) }}{%- endset -%}\n{{ af.text('', af_text('muted'), {}, foot) }}\n{%- endif -%}\n{%- endset -%}\n{{ af.card(af_skin('widgetCard'), {'data-testid': 'authfly-sign-up', 'aria-labelledby': none if p.landmarkLabel else id ~ '-title', 'aria-label': p.landmarkLabel or none}, body) }}\n",
+      "target": "blocks/authfly-sign-up.html.j2"
+    }
+  ]
+}

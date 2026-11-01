@@ -1,0 +1,21 @@
+{
+  "$schema": "https://registry.buildy.tw/schema/registry-item.json",
+  "name": "authfly-notice",
+  "type": "registry:block",
+  "description": "Authfly notice widget.",
+  "runtime": "latte",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [
+    "authfly-lib",
+    "authfly-components",
+    "https://unpkg.com/@ui8kit/registry@3.3.0/r/latte/utils/utils.json"
+  ],
+  "files": [
+    {
+      "path": "blocks/authfly-notice.latte",
+      "content": "{* Authfly notice on UI8Kit 3 primitives. Props ($p): id, title, text, detail, icon, labels, actionUrl, csrf,\n   tone (default|success|error), action (link|form), landmarkLabel. *}\n{import '../authfly/components.latte'}\n{var $id = $p['id'] ?? ''}{var $l = $p['labels'] ?? []}{var $error = $p['error'] ?? ''}\n{var $formError = $error ? $id . '-error' : null}\n{var $lm = ['aria-labelledby' => ($p['landmarkLabel'] ?? '') ? null : $id . '-title', 'aria-label' => $p['landmarkLabel'] ?? null]}\n{var $tone = $p['tone'] ?? 'default'}{var $isError = $tone === 'error'}\n{capture $detail}{if $p['detail'] ?? ''}{include text, '', 'text-sm font-semibold text-foreground', ['data-testid' => 'detail'], afEsc($p['detail'])}{/if}{/capture}\n{capture $body}\n{include iconBadge, $p['icon'] ?? 'mail-check', $isError ? 'destructive' : 'default'}\n{include head, $id, $p['title'] ?? '', $p['text'] ?? '', 'center', $isError ? 'alert' : 'status', $detail}\n{if ($p['action'] ?? 'link') === 'form'}\n{capture $f}{include hidden, 'csrf', $p['csrf'] ?? ''}{include button, '', 'submit', afSkin('button', 'default', 'w-full'), ['data-testid' => 'submit'], afEsc($l['cta'] ?? '')}{/capture}\n{include form, $p['actionUrl'] ?? '', 'w-full', ['data-testid' => 'authfly-form'], $f}\n{else}\n{include button, $l['ctaHref'] ?? '', '', afSkin('button', 'default', 'w-full'), ['data-testid' => 'cta'], afEsc($l['cta'] ?? '')}\n{/if}\n{if $l['secondary'] ?? ''}{include link, $l['secondaryHref'] ?? '', afSkin('link', 'text-sm'), 'secondary', $l['secondary']}{/if}\n{/capture}\n{include card, afSkin('widgetCard', 'items-center text-center'), ['data-testid' => 'authfly-notice', 'data-tone' => $tone] + $lm, $body}\n",
+      "target": "blocks/authfly-notice.latte"
+    }
+  ]
+}

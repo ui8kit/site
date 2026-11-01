@@ -1,0 +1,21 @@
+{
+  "$schema": "https://registry.buildy.tw/schema/registry-item.json",
+  "name": "authfly-request",
+  "type": "registry:block",
+  "description": "Authfly request widget.",
+  "runtime": "jinja2",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [
+    "authfly-lib",
+    "authfly-components",
+    "https://unpkg.com/@ui8kit/registry@3.3.0/r/jinja2/utils/utils.json"
+  ],
+  "files": [
+    {
+      "path": "blocks/authfly-request.html.j2",
+      "content": "{#- Authfly request on UI8Kit 3 primitives: kind email (forgot) | password (reset, token hidden) | code.\n    Props (p): id, title, text, action, csrf, error, info, labels, token, kind, landmarkLabel. -#}\n{%- import 'authfly/components.html.j2' as af -%}\n{%- set id = p.id or '' -%}{%- set l = p.labels or {} -%}{%- set error = p.error or '' -%}\n{%- set formError = id ~ '-error' if error else none -%}\n{%- set kind = p.kind or 'email' -%}\n{%- set form -%}\n{{ af.hidden('csrf', p.csrf or '') }}\n{%- if kind == 'email' -%}\n{{ af.field({'label': l.field or '', 'for': id ~ '-email', 'formError': formError, 'input': {'type': 'email', 'name': 'email', 'required': true, 'attrs': {'autocomplete': 'email'}}}) }}\n{%- elif kind == 'password' -%}\n{{ af.hidden('token', p.token or '') }}\n{{- af.field({'label': l.field or '', 'for': id ~ '-password', 'formError': formError, 'input': {'type': 'password', 'name': 'password', 'required': true, 'attrs': {'autocomplete': 'new-password'}}}) }}\n{{- af.field({'label': l.confirm or '', 'for': id ~ '-confirm', 'formError': formError, 'input': {'type': 'password', 'name': 'confirm', 'required': true, 'attrs': {'autocomplete': 'new-password'}}}) }}\n{%- elif kind == 'code' -%}\n{{ af.field({'label': l.field or '', 'for': id ~ '-code', 'formError': formError, 'input': {'type': 'text', 'name': 'code', 'required': true, 'attrs': {'inputmode': 'numeric', 'autocomplete': 'one-time-code'}}}) }}\n{%- endif -%}\n{{ af.button('', 'submit', af_skin('button', 'default', 'w-full'), {'data-testid': 'submit'}, af_esc(l.submit or '')) }}\n{%- endset -%}\n{%- set body -%}\n{{ af.head(id, p.title or '', p.text or '') }}\n{{- af.messages(id, error, p.info or '') }}\n{{- af.form(p.action or '', '', {'data-testid': 'authfly-form'}, form) }}\n{%- if l.back or '' %}{{ af.link(l.backHref or '', af_skin('link', 'w-fit text-sm'), 'back', l.back) }}{% endif -%}\n{%- endset -%}\n{{ af.card(af_skin('widgetCard'), {'data-testid': 'authfly-request', 'aria-labelledby': none if p.landmarkLabel else id ~ '-title', 'aria-label': p.landmarkLabel or none}, body) }}\n",
+      "target": "blocks/authfly-request.html.j2"
+    }
+  ]
+}

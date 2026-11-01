@@ -1,0 +1,21 @@
+{
+  "$schema": "https://registry.buildy.tw/schema/registry-item.json",
+  "name": "authfly-notice",
+  "type": "registry:block",
+  "description": "Authfly notice widget.",
+  "runtime": "jinja2",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [
+    "authfly-lib",
+    "authfly-components",
+    "https://unpkg.com/@ui8kit/registry@3.3.0/r/jinja2/utils/utils.json"
+  ],
+  "files": [
+    {
+      "path": "blocks/authfly-notice.html.j2",
+      "content": "{#- Authfly notice on UI8Kit 3 primitives. Props (p): id, title, text, detail, icon, labels, actionUrl, csrf,\n    tone (default|success|error), action (link|form), landmarkLabel. -#}\n{%- import 'authfly/components.html.j2' as af -%}\n{%- set id = p.id or '' -%}{%- set l = p.labels or {} -%}\n{%- set tone = p.tone or 'default' -%}{%- set isError = tone == 'error' -%}\n{%- set detail -%}{% if p.detail or '' %}{{ af.text('', 'text-sm font-semibold text-foreground', {'data-testid': 'detail'}, af_esc(p.detail)) }}{% endif %}{%- endset -%}\n{%- set body -%}\n{{ af.icon_badge(p.icon or 'mail-check', 'destructive' if isError else 'default') }}\n{{- af.head(id, p.title or '', p.text or '', 'center', 'alert' if isError else 'status', detail) }}\n{%- if (p.action or 'link') == 'form' -%}\n{%- set f -%}{{ af.hidden('csrf', p.csrf or '') }}{{ af.button('', 'submit', af_skin('button', 'default', 'w-full'), {'data-testid': 'submit'}, af_esc(l.cta or '')) }}{%- endset -%}\n{{ af.form(p.actionUrl or '', 'w-full', {'data-testid': 'authfly-form'}, f) }}\n{%- else -%}\n{{ af.button(l.ctaHref or '', '', af_skin('button', 'default', 'w-full'), {'data-testid': 'cta'}, af_esc(l.cta or '')) }}\n{%- endif -%}\n{%- if l.secondary or '' %}{{ af.link(l.secondaryHref or '', af_skin('link', 'text-sm'), 'secondary', l.secondary) }}{% endif -%}\n{%- endset -%}\n{{ af.card(af_skin('widgetCard', 'items-center text-center'), {'data-testid': 'authfly-notice', 'data-tone': tone, 'aria-labelledby': none if p.landmarkLabel else id ~ '-title', 'aria-label': p.landmarkLabel or none}, body) }}\n",
+      "target": "blocks/authfly-notice.html.j2"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "$schema": "https://registry.buildy.tw/schema/registry-item.json",
+  "name": "authfly-sign-in",
+  "type": "registry:block",
+  "description": "Authfly sign-in widget.",
+  "runtime": "latte",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [
+    "authfly-lib",
+    "authfly-components",
+    "https://unpkg.com/@ui8kit/registry@3.3.0/r/latte/utils/utils.json"
+  ],
+  "files": [
+    {
+      "path": "blocks/authfly-sign-in.latte",
+      "content": "{* Authfly sign-in on UI8Kit 3 primitives. Props ($p): id, title, text, action, csrf, error, labels, providers,\n   method (password|magic), identifier (any|email|username), social (none|show), landmarkLabel. *}\n{import '../authfly/components.latte'}\n{var $id = $p['id'] ?? ''}{var $l = $p['labels'] ?? []}{var $error = $p['error'] ?? ''}\n{var $formError = $error ? $id . '-error' : null}\n{var $lm = ['aria-labelledby' => ($p['landmarkLabel'] ?? '') ? null : $id . '-title', 'aria-label' => $p['landmarkLabel'] ?? null]}\n{var $email = ($p['identifier'] ?? 'any') === 'email'}\n{capture $providers}{foreach $p['providers'] ?? [] as $pr}{capture $c}{include icon, $pr['icon'] ?? ''}{$pr['title'] ?? ''}{/capture}{include button, ($l['socialUrl'] ?? '') . '/' . ($pr['id'] ?? ''), '', afSkin('button', 'outline', 'w-full'), ['data-provider' => $pr['id'] ?? null], $c}{/foreach}{/capture}\n{capture $form}\n{include hidden, 'csrf', $p['csrf'] ?? ''}\n{include field, ['label' => $l['identifier'] ?? '', 'for' => $id . '-identifier', 'formError' => $formError, 'input' => ['type' => $email ? 'email' : 'text', 'name' => 'identifier', 'required' => true, 'attrs' => ['autocomplete' => $email ? 'email' : 'username']]]}\n{if ($p['method'] ?? 'password') === 'password'}\n{include field, ['label' => $l['password'] ?? '', 'for' => $id . '-password', 'formError' => $formError, 'input' => ['type' => 'password', 'name' => 'password', 'required' => true, 'attrs' => ['autocomplete' => 'current-password']]]}\n{if $l['forgot'] ?? ''}{include link, $l['forgotHref'] ?? '', afSkin('link', 'w-fit text-sm'), 'forgot', $l['forgot']}{/if}\n{/if}\n{include button, '', 'submit', afSkin('button', 'default', 'w-full'), ['data-testid' => 'submit'], afEsc($l['submit'] ?? '')}\n{/capture}\n{capture $body}\n{include head, $id, $p['title'] ?? '', $p['text'] ?? ''}\n{include messages, $id, $error, ''}\n{if ($p['social'] ?? 'none') === 'show'}{include stack, '2', '', '', '', ['role' => 'group', 'aria-label' => $l['providers'] ?? null, 'data-testid' => 'authfly-providers'], $providers}{/if}\n{include form, $p['action'] ?? '', '', ['data-testid' => 'authfly-form'], $form}\n{if $l['magic'] ?? ''}{include button, $l['magicHref'] ?? '', '', afSkin('button', 'outline', 'w-full'), ['data-testid' => 'switch-method'], afEsc($l['magic'])}{/if}\n{if $l['signupLink'] ?? ''}{capture $foot}{$l['signupText'] ?? ''} {include link, $l['signupHref'] ?? '', afSkin('link'), 'signup-link', $l['signupLink']}{/capture}{include text, '', afText('muted'), [], $foot}{/if}\n{/capture}\n{include card, afSkin('widgetCard'), ['data-testid' => 'authfly-sign-in'] + $lm, $body}\n",
+      "target": "blocks/authfly-sign-in.latte"
+    }
+  ]
+}

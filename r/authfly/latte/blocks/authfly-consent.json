@@ -1,0 +1,21 @@
+{
+  "$schema": "https://registry.buildy.tw/schema/registry-item.json",
+  "name": "authfly-consent",
+  "type": "registry:block",
+  "description": "Authfly consent widget.",
+  "runtime": "latte",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [
+    "authfly-lib",
+    "authfly-components",
+    "https://unpkg.com/@ui8kit/registry@3.3.0/r/latte/utils/utils.json"
+  ],
+  "files": [
+    {
+      "path": "blocks/authfly-consent.latte",
+      "content": "{* Authfly OIDC consent on UI8Kit 3 primitives. Props ($p): id, title, text, action, csrf, error, info, client,\n   account, scopes, labels, landmarkLabel. *}\n{import '../authfly/components.latte'}\n{var $id = $p['id'] ?? ''}{var $l = $p['labels'] ?? []}{var $error = $p['error'] ?? ''}\n{var $formError = $error ? $id . '-error' : null}\n{var $lm = ['aria-labelledby' => ($p['landmarkLabel'] ?? '') ? null : $id . '-title', 'aria-label' => $p['landmarkLabel'] ?? null]}\n{capture $acc}{$l['account'] ?? ''} {include text, 'strong', 'font-semibold', [], afEsc($p['account'] ?? '')}{/capture}\n{capture $items}{foreach $p['scopes'] ?? [] as $s}{capture $c}{include icon, 'check'}{$s['title'] ?? ''}{/capture}{include box, 'li', 'flex items-center gap-2 text-sm text-foreground', ['data-scope' => $s['id'] ?? null], $c}{/foreach}{/capture}\n{capture $scopes}{include title, 2, $id . '-scopes', null, $l['scopes'] ?? ''}{include box, 'ul', 'm-0 flex list-none flex-col gap-2 p-0', ['aria-labelledby' => $id . '-scopes', 'data-testid' => 'scopes'], $items}{/capture}\n{capture $deny}{include hidden, 'csrf', $p['csrf'] ?? ''}{include hidden, 'decision', 'deny'}{include button, '', 'submit', afSkin('button', 'outline', 'w-full'), [], afEsc($l['deny'] ?? '')}{/capture}\n{capture $approve}{include hidden, 'csrf', $p['csrf'] ?? ''}{include hidden, 'decision', 'approve'}{include button, '', 'submit', afSkin('button', 'default', 'w-full'), [], afEsc($l['approve'] ?? '')}{/capture}\n{capture $row}{include form, $p['action'] ?? '', 'flex-1', ['data-testid' => 'deny'], $deny}{include form, $p['action'] ?? '', 'flex-1', ['data-testid' => 'approve'], $approve}{/capture}\n{capture $body}\n{include head, $id, $p['title'] ?? '', $p['text'] ?? ''}\n{include messages, $id, $error, $p['info'] ?? ''}\n{include text, '', 'text-sm text-foreground', ['data-testid' => 'account'], $acc}\n{include stack, '2', '', '', '', [], $scopes}\n{include group, '2', '', 'between', '', [], $row}\n{/capture}\n{include card, afSkin('widgetCard'), ['data-testid' => 'authfly-consent', 'data-client' => $p['client'] ?? null] + $lm, $body}\n",
+      "target": "blocks/authfly-consent.latte"
+    }
+  ]
+}
