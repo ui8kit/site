@@ -30,6 +30,12 @@ jobs:
           git status --porcelain -- builder-registry r
           git diff --exit-code -- builder-registry r
           test -z "$(git status --porcelain -- builder-registry r)"
+      - name: r/schema is a copy of registry/schema
+        run: diff -r registry/schema r/schema
+      - name: Every r/**/*.json validates against its registry.buildy.tw $schema (ajv, draft-07)
+        run: |
+          npm i --no-save --prefix /tmp/ajv ajv@8
+          NODE_PATH=/tmp/ajv/node_modules node scripts/check-schemas.mjs
       - name: shadcn-style registry untouched by the builder registries (copy step of registry:build keeps r/<rt>/index.json)
         run: |
           for rt in latte twig; do test -f "r/$rt/index.json"; test -d "r/$rt/wpfasty"; done

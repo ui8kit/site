@@ -1,0 +1,39 @@
+# Post-deploy smoke for registry.buildy.tw (Vercel deploys r/ on push to main): the JSON Schemas and the
+# 8 per-runtime CLI indexes must answer 200 with JSON. Retries while the deployment propagates.
+name: smoke-live
+on:
+  push:
+    branches: [main]
+    paths: ["r/**", "registry/schema/**", ".github/workflows/smoke-live.yml"]
+  workflow_dispatch:
+concurrency:
+  group: smoke-live
+  cancel-in-progress: true
+jobs:
+  registry:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Wait for the Vercel deployment, then check every URL
+        env:
+          BASE: https://registry.buildy.tw
+        run: |
+          urls="$BASE/schema/registry.json $BASE/schema/registry-item.json $BASE/schema/config.json"
+          for rt in react vue svelte solid templ twig latte jinja2; do urls="$urls $BASE/$rt/index.json"; done
+          sleep 60
+          for attempt in $(seq 1 10); do
+            fail=0
+            for u in $urls; do
+              code=$(curl -s -o /tmp/body.json -w '%{http_code}' "$u")
+              if [ "$code" != 200 ] || ! jq -e . /tmp/body.json >/dev/null 2>&1; then echo "attempt $attempt: $code $u"; fail=1; fi
+            done
+            # the deployed schemas must match the committed ones
+            for f in registry/schema/*.json; do
+              curl -s "$BASE/schema/$(basename "$f")" | jq -S . > /tmp/live.json
+              jq -S . "$f" | cmp -s - /tmp/live.json || { echo "attempt $attempt: $f differs from live"; fail=1; }
+            done
+            [ "$fail" = 0 ] && { echo "all $(echo $urls | wc -w) URLs ok"; exit 0; }
+            sleep 30
+          done
+          exit 1
