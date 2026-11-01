@@ -74,6 +74,7 @@
   <url><loc>https://ui.buildy.tw/blocks/proof-band/</loc></url>
   <url><loc>https://ui.buildy.tw/blocks/quote-split/</loc></url>
   <url><loc>https://ui.buildy.tw/blocks/review-list/</loc></url>
+  <url><loc>https://ui.buildy.tw/blocks/rich-text/</loc></url>
   <url><loc>https://ui.buildy.tw/blocks/shopping-cart/</loc></url>
   <url><loc>https://ui.buildy.tw/blocks/sidebar-nav/</loc></url>
   <url><loc>https://ui.buildy.tw/blocks/signup-wizard/</loc></url>
@@ -142,6 +143,7 @@
   <url><loc>https://ui.buildy.tw/components/footer-link-columns/</loc></url>
   <url><loc>https://ui.buildy.tw/components/footer-points/</loc></url>
   <url><loc>https://ui.buildy.tw/components/footer-signup-card/</loc></url>
+  <url><loc>https://ui.buildy.tw/components/footer-sitemap/</loc></url>
   <url><loc>https://ui.buildy.tw/components/hero-badge/</loc></url>
   <url><loc>https://ui.buildy.tw/components/hero-head/</loc></url>
   <url><loc>https://ui.buildy.tw/components/hero-split-extras/</loc></url>
@@ -159,8 +161,10 @@
   <url><loc>https://ui.buildy.tw/components/media-steps/</loc></url>
   <url><loc>https://ui.buildy.tw/components/media-topics/</loc></url>
   <url><loc>https://ui.buildy.tw/components/member-row/</loc></url>
+  <url><loc>https://ui.buildy.tw/components/menu-entry/</loc></url>
   <url><loc>https://ui.buildy.tw/components/meter-row/</loc></url>
   <url><loc>https://ui.buildy.tw/components/nav-actions/</loc></url>
+  <url><loc>https://ui.buildy.tw/components/nav-bar-menu/</loc></url>
   <url><loc>https://ui.buildy.tw/components/nav-block/</loc></url>
   <url><loc>https://ui.buildy.tw/components/nav-item-row/</loc></url>
   <url><loc>https://ui.buildy.tw/components/nav-item/</loc></url>
@@ -185,6 +189,8 @@
   <url><loc>https://ui.buildy.tw/components/post-overlay-card/</loc></url>
   <url><loc>https://ui.buildy.tw/components/post-stats/</loc></url>
   <url><loc>https://ui.buildy.tw/components/post-tags/</loc></url>
+  <url><loc>https://ui.buildy.tw/components/product-gallery/</loc></url>
+  <url><loc>https://ui.buildy.tw/components/product-price/</loc></url>
   <url><loc>https://ui.buildy.tw/components/project-tiles/</loc></url>
   <url><loc>https://ui.buildy.tw/components/prompt-composer/</loc></url>
   <url><loc>https://ui.buildy.tw/components/quote-card/</loc></url>
@@ -238,6 +244,7 @@
   <url><loc>https://ui.buildy.tw/docs/installation/</loc></url>
   <url><loc>https://ui.buildy.tw/docs/theming-skins/</loc></url>
   <url><loc>https://ui.buildy.tw/lib/presets/</loc></url>
+  <url><loc>https://ui.buildy.tw/lib/recipes/</loc></url>
   <url><loc>https://ui.buildy.tw/lib/utils/</loc></url>
   <url><loc>https://ui.buildy.tw/primitives/alert/</loc></url>
   <url><loc>https://ui.buildy.tw/primitives/badge/</loc></url>
@@ -246,36 +253,86 @@
   <url><loc>https://ui.buildy.tw/primitives/breadcrumb/</loc></url>
   <url><loc>https://ui.buildy.tw/primitives/button-plain/</loc></url>
   <url><loc>https://ui.buildy.tw/primitives/button/</loc></url>
+  <url><loc>https://ui.buildy.tw/primitives/card-content/</loc></url>
+  <url><loc>https://ui.buildy.tw/primitives/card-description/</loc></url>
+  <url><loc>https://ui.buildy.tw/primitives/card-footer/</loc></url>
+  <url><loc>https://ui.buildy.tw/primitives/card-header/</loc></url>
+  <url><loc>https://ui.buildy.tw/primitives/card-title/</loc></url>
   <url><loc>https://ui.buildy.tw/primitives/card/</loc></url>
   <url><loc>https://ui.buildy.tw/primitives/checkbox/</loc></url>
+  <url><loc>https://ui.buildy.tw/primitives/compose/</loc></url>
   <url><loc>https://ui.buildy.tw/primitives/container/</loc></url>
   <url><loc>https://ui.buildy.tw/primitives/dialog/</loc></url>
   <url><loc>https://ui.buildy.tw/primitives/disclosure/</loc></url>
+  <url><loc>https://ui.buildy.tw/primitives/fieldset/</loc></url>
+  <url><loc>https://ui.buildy.tw/primitives/form-description/</loc></url>
+  <url><loc>https://ui.buildy.tw/primitives/form-item/</loc></url>
+  <url><loc>https://ui.buildy.tw/primitives/form-message/</loc></url>
   <url><loc>https://ui.buildy.tw/primitives/form/</loc></url>
+  <url><loc>https://ui.buildy.tw/primitives/grid-col/</loc></url>
   <url><loc>https://ui.buildy.tw/primitives/grid/</loc></url>
   <url><loc>https://ui.buildy.tw/primitives/group/</loc></url>
+  <url><loc>https://ui.buildy.tw/primitives/icon-badge/</loc></url>
   <url><loc>https://ui.buildy.tw/primitives/icon/</loc></url>
-  <url><loc>https://ui.buildy.tw/primitives/iconbadge/</loc></url>
   <url><loc>https://ui.buildy.tw/primitives/image/</loc></url>
   <url><loc>https://ui.buildy.tw/primitives/inline/</loc></url>
   <url><loc>https://ui.buildy.tw/primitives/input/</loc></url>
+  <url><loc>https://ui.buildy.tw/primitives/kit-box/</loc></url>
+  <url><loc>https://ui.buildy.tw/primitives/kit-button/</loc></url>
+  <url><loc>https://ui.buildy.tw/primitives/kit-checkbox/</loc></url>
+  <url><loc>https://ui.buildy.tw/primitives/kit-dialog/</loc></url>
+  <url><loc>https://ui.buildy.tw/primitives/kit-disclosure/</loc></url>
+  <url><loc>https://ui.buildy.tw/primitives/kit-form/</loc></url>
+  <url><loc>https://ui.buildy.tw/primitives/kit-icon/</loc></url>
+  <url><loc>https://ui.buildy.tw/primitives/kit-image/</loc></url>
+  <url><loc>https://ui.buildy.tw/primitives/kit-input/</loc></url>
+  <url><loc>https://ui.buildy.tw/primitives/kit-label/</loc></url>
+  <url><loc>https://ui.buildy.tw/primitives/kit-link/</loc></url>
+  <url><loc>https://ui.buildy.tw/primitives/kit-meter/</loc></url>
+  <url><loc>https://ui.buildy.tw/primitives/kit-progress/</loc></url>
+  <url><loc>https://ui.buildy.tw/primitives/kit-radio/</loc></url>
+  <url><loc>https://ui.buildy.tw/primitives/kit-select/</loc></url>
+  <url><loc>https://ui.buildy.tw/primitives/kit-separator/</loc></url>
+  <url><loc>https://ui.buildy.tw/primitives/kit-slot/</loc></url>
+  <url><loc>https://ui.buildy.tw/primitives/kit-switch/</loc></url>
+  <url><loc>https://ui.buildy.tw/primitives/kit-text/</loc></url>
+  <url><loc>https://ui.buildy.tw/primitives/kit-textarea/</loc></url>
   <url><loc>https://ui.buildy.tw/primitives/label/</loc></url>
-  <url><loc>https://ui.buildy.tw/primitives/linebreak/</loc></url>
+  <url><loc>https://ui.buildy.tw/primitives/legend/</loc></url>
   <url><loc>https://ui.buildy.tw/primitives/link-plain/</loc></url>
   <url><loc>https://ui.buildy.tw/primitives/link/</loc></url>
+  <url><loc>https://ui.buildy.tw/primitives/list-item/</loc></url>
   <url><loc>https://ui.buildy.tw/primitives/list/</loc></url>
   <url><loc>https://ui.buildy.tw/primitives/lucide-icon/</loc></url>
+  <url><loc>https://ui.buildy.tw/primitives/meter/</loc></url>
+  <url><loc>https://ui.buildy.tw/primitives/opt-group/</loc></url>
+  <url><loc>https://ui.buildy.tw/primitives/progress/</loc></url>
+  <url><loc>https://ui.buildy.tw/primitives/prose/</loc></url>
   <url><loc>https://ui.buildy.tw/primitives/radio/</loc></url>
   <url><loc>https://ui.buildy.tw/primitives/range/</loc></url>
+  <url><loc>https://ui.buildy.tw/primitives/select-option/</loc></url>
   <url><loc>https://ui.buildy.tw/primitives/select/</loc></url>
   <url><loc>https://ui.buildy.tw/primitives/separator/</loc></url>
+  <url><loc>https://ui.buildy.tw/primitives/sheet-close/</loc></url>
+  <url><loc>https://ui.buildy.tw/primitives/sheet-trigger/</loc></url>
+  <url><loc>https://ui.buildy.tw/primitives/sheet/</loc></url>
   <url><loc>https://ui.buildy.tw/primitives/skeleton/</loc></url>
-  <url><loc>https://ui.buildy.tw/primitives/slot/</loc></url>
   <url><loc>https://ui.buildy.tw/primitives/stack/</loc></url>
+  <url><loc>https://ui.buildy.tw/primitives/summary/</loc></url>
   <url><loc>https://ui.buildy.tw/primitives/switch/</loc></url>
+  <url><loc>https://ui.buildy.tw/primitives/table-body/</loc></url>
+  <url><loc>https://ui.buildy.tw/primitives/table-caption/</loc></url>
+  <url><loc>https://ui.buildy.tw/primitives/table-cell/</loc></url>
+  <url><loc>https://ui.buildy.tw/primitives/table-col-group/</loc></url>
+  <url><loc>https://ui.buildy.tw/primitives/table-col/</loc></url>
+  <url><loc>https://ui.buildy.tw/primitives/table-foot/</loc></url>
+  <url><loc>https://ui.buildy.tw/primitives/table-head-cell/</loc></url>
+  <url><loc>https://ui.buildy.tw/primitives/table-head/</loc></url>
+  <url><loc>https://ui.buildy.tw/primitives/table-row/</loc></url>
   <url><loc>https://ui.buildy.tw/primitives/table/</loc></url>
   <url><loc>https://ui.buildy.tw/primitives/text/</loc></url>
   <url><loc>https://ui.buildy.tw/primitives/textarea/</loc></url>
+  <url><loc>https://ui.buildy.tw/primitives/theme-toggle/</loc></url>
   <url><loc>https://ui.buildy.tw/primitives/title/</loc></url>
   <url><loc>https://ui.buildy.tw/templates/</loc></url>
   <url><loc>https://ui.buildy.tw/templates/account-portal/</loc></url>

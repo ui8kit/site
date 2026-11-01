@@ -16,6 +16,8 @@
         "box",
         "grid",
         "group",
+        "kit-box",
+        "kit-text",
         "lucide-icon",
         "media-frame",
         "section-frame",
@@ -32,10 +34,14 @@
       "name": "about-me",
       "registryDependencies": [
         "action-group",
-        "form",
         "group",
+        "kit-box",
+        "kit-progress",
+        "kit-text",
         "list",
+        "list-item",
         "media-frame",
+        "progress",
         "section-frame",
         "stack",
         "text",
@@ -51,6 +57,8 @@
       "registryDependencies": [
         "button",
         "group",
+        "kit-box",
+        "kit-button",
         "utils"
       ],
       "title": "Action Group",
@@ -63,7 +71,11 @@
       "registryDependencies": [
         "block",
         "container",
+        "empty-state",
+        "kit-box",
+        "kit-text",
         "list",
+        "list-item",
         "panel",
         "stack",
         "text",
@@ -75,9 +87,11 @@
     },
     {
       "dependencies": [],
-      "description": "Alert displays a static status or informational message. Renders a live region with role=status by default; children carry the message body.",
+      "description": "Alert: Box <div> + recipe alert.",
       "name": "alert",
       "registryDependencies": [
+        "kit-box",
+        "recipes",
         "utils"
       ],
       "title": "Alert",
@@ -93,6 +107,10 @@
         "container",
         "group",
         "inline",
+        "kit-box",
+        "kit-button",
+        "kit-link",
+        "kit-text",
         "link-plain",
         "lucide-icon",
         "text",
@@ -109,6 +127,8 @@
         "bar-chart",
         "box",
         "grid",
+        "kit-box",
+        "kit-text",
         "panel",
         "stack",
         "stat-tile",
@@ -128,7 +148,10 @@
         "block",
         "container",
         "grid",
+        "kit-box",
+        "kit-text",
         "list",
+        "list-item",
         "nav-bar",
         "panel",
         "sidebar-nav",
@@ -145,6 +168,7 @@
       "name": "article-block",
       "registryDependencies": [
         "block",
+        "kit-box",
         "utils"
       ],
       "title": "Article Block",
@@ -156,9 +180,14 @@
       "name": "article-body",
       "registryDependencies": [
         "box",
+        "empty-state",
         "grid",
+        "kit-box",
+        "kit-link",
+        "kit-text",
         "link",
         "list",
+        "list-item",
         "nav-block",
         "section-frame",
         "stack",
@@ -178,6 +207,11 @@
         "block",
         "button",
         "group",
+        "kit-box",
+        "kit-button",
+        "kit-link",
+        "kit-separator",
+        "kit-text",
         "link",
         "lucide-icon",
         "separator",
@@ -200,8 +234,13 @@
         "form",
         "group",
         "input",
+        "kit-box",
+        "kit-button",
+        "kit-checkbox",
+        "kit-form",
+        "kit-input",
+        "kit-label",
         "label",
-        "link",
         "utils"
       ],
       "title": "Auth Form",
@@ -217,6 +256,8 @@
         "box",
         "container",
         "grid",
+        "kit-box",
+        "kit-text",
         "media-frame",
         "stack",
         "text",
@@ -233,6 +274,8 @@
       "registryDependencies": [
         "image",
         "inline",
+        "kit-image",
+        "kit-text",
         "presets",
         "utils"
       ],
@@ -245,6 +288,7 @@
       "name": "backdrop",
       "registryDependencies": [
         "box",
+        "kit-box",
         "media-frame",
         "utils"
       ],
@@ -253,9 +297,11 @@
     },
     {
       "dependencies": [],
-      "description": "Badge shows a short status label. Badge uses variant and size presets.",
+      "description": "Badge: Text <span> + recipe badge.",
       "name": "badge",
       "registryDependencies": [
+        "kit-text",
+        "recipes",
         "utils"
       ],
       "title": "Badge",
@@ -267,6 +313,7 @@
       "name": "badge-square",
       "registryDependencies": [
         "inline",
+        "kit-text",
         "presets",
         "utils"
       ],
@@ -279,6 +326,8 @@
       "name": "bar-chart",
       "registryDependencies": [
         "box",
+        "kit-box",
+        "kit-text",
         "text",
         "utils"
       ],
@@ -291,9 +340,14 @@
       "name": "before-after",
       "registryDependencies": [
         "card",
+        "card-content",
+        "empty-state",
         "grid",
         "group",
+        "kit-box",
+        "kit-text",
         "list",
+        "list-item",
         "lucide-icon",
         "section-frame",
         "stack",
@@ -310,7 +364,11 @@
       "name": "bento-grid",
       "registryDependencies": [
         "card",
+        "card-content",
+        "empty-state",
         "grid",
+        "kit-box",
+        "kit-text",
         "lucide-icon",
         "media-frame",
         "section-frame",
@@ -323,9 +381,11 @@
     },
     {
       "dependencies": [],
-      "description": "Block is the one semantic root of a file (div, section, article, aside, header, footer, main, nav, figure, search, hgroup). Any file (block, composite, screen) may open on one Block; never nest Block inside Block in one file, never repeat it in a loop.",
+      "description": "Block: Box + recipe block.",
       "name": "block",
       "registryDependencies": [
+        "kit-box",
+        "recipes",
         "utils"
       ],
       "title": "Block",
@@ -338,9 +398,12 @@
       "registryDependencies": [
         "block",
         "inline",
-        "link",
+        "kit-box",
+        "kit-text",
         "list",
+        "list-item",
         "lucide-icon",
+        "menu-entry",
         "utils"
       ],
       "title": "Bottom Nav",
@@ -348,9 +411,11 @@
     },
     {
       "dependencies": [],
-      "description": "Box is a generic layout wrapper for internal sections. Not for top-level landmarks — use Block for page regions.",
+      "description": "Box: Box + recipe box.",
       "name": "box",
       "registryDependencies": [
+        "kit-box",
+        "recipes",
         "utils"
       ],
       "title": "Box",
@@ -358,9 +423,13 @@
     },
     {
       "dependencies": [],
-      "description": "Breadcrumb shows the current page location within a hierarchy. Renders nav with ordered links and aria-current on the active item.",
+      "description": "Breadcrumb: Box nav > ol > li, Link (href, not disabled) or Text span; aria-current=\"page\" on the current item.",
       "name": "breadcrumb",
       "registryDependencies": [
+        "kit-box",
+        "kit-link",
+        "kit-text",
+        "recipes",
         "utils"
       ],
       "title": "Breadcrumb",
@@ -374,6 +443,9 @@
         "box",
         "button",
         "inline",
+        "kit-box",
+        "kit-button",
+        "kit-text",
         "lucide-icon",
         "utils"
       ],
@@ -382,9 +454,11 @@
     },
     {
       "dependencies": [],
-      "description": "Button triggers an action on click. Optional Href renders an anchor with button appearance (CTA navigation). For exotic roots, use ButtonClasses (Templ/Svelte/Vue/Solid) or asChild (React). Prefer Link for prose/semantic navigation.",
+      "description": "Button: Button + recipe button.",
       "name": "button",
       "registryDependencies": [
+        "kit-button",
+        "recipes",
         "utils"
       ],
       "title": "Button",
@@ -392,9 +466,11 @@
     },
     {
       "dependencies": [],
-      "description": "ButtonPlain is a bare button element: no styling beyond Class. Patterns (tabs, tree rows, menu items) style it themselves.",
+      "description": "ButtonPlain: Button + recipe button-plain.",
       "name": "button-plain",
       "registryDependencies": [
+        "kit-button",
+        "recipes",
         "utils"
       ],
       "title": "Button Plain",
@@ -402,12 +478,74 @@
     },
     {
       "dependencies": [],
-      "description": "CardContent: one part of Card (one file per part, as in the Svelte package).",
+      "description": "Card: Box <div> + recipe card.",
       "name": "card",
       "registryDependencies": [
+        "kit-box",
+        "recipes",
         "utils"
       ],
       "title": "Card",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "CardContent: Box <div>.",
+      "name": "card-content",
+      "registryDependencies": [
+        "kit-box",
+        "recipes",
+        "utils"
+      ],
+      "title": "Card Content",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "CardDescription: Text <p>.",
+      "name": "card-description",
+      "registryDependencies": [
+        "kit-text",
+        "recipes",
+        "utils"
+      ],
+      "title": "Card Description",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "CardFooter: Box <div>.",
+      "name": "card-footer",
+      "registryDependencies": [
+        "kit-box",
+        "recipes",
+        "utils"
+      ],
+      "title": "Card Footer",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "CardHeader: Box <div>.",
+      "name": "card-header",
+      "registryDependencies": [
+        "kit-box",
+        "recipes",
+        "utils"
+      ],
+      "title": "Card Header",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "CardTitle: Text.",
+      "name": "card-title",
+      "registryDependencies": [
+        "kit-text",
+        "recipes",
+        "utils"
+      ],
+      "title": "Card Title",
       "type": "registry:ui"
     },
     {
@@ -420,10 +558,12 @@
         "button",
         "container",
         "drawer-lines",
+        "empty-state",
         "group",
+        "kit-box",
+        "kit-button",
+        "kit-text",
         "lucide-icon",
-        "stack",
-        "text",
         "title",
         "utils"
       ],
@@ -437,7 +577,12 @@
       "registryDependencies": [
         "button",
         "card",
+        "card-content",
         "cart-table",
+        "empty-state",
+        "kit-box",
+        "kit-button",
+        "kit-text",
         "lucide-icon",
         "media-frame",
         "number-field",
@@ -456,12 +601,18 @@
       "registryDependencies": [
         "badge",
         "button",
-        "form",
         "group",
         "inline",
         "input",
+        "kit-box",
+        "kit-button",
+        "kit-input",
+        "kit-progress",
+        "kit-text",
         "list",
+        "list-item",
         "media-frame",
+        "progress",
         "stack",
         "text",
         "title",
@@ -479,11 +630,20 @@
         "button",
         "group",
         "inline",
+        "kit-box",
+        "kit-button",
+        "kit-text",
         "lucide-icon",
         "media-frame",
         "number-field",
         "stack",
         "table",
+        "table-body",
+        "table-caption",
+        "table-cell",
+        "table-head",
+        "table-head-cell",
+        "table-row",
         "text",
         "utils"
       ],
@@ -499,9 +659,13 @@
         "container",
         "group",
         "inline",
-        "link",
+        "kit-box",
+        "kit-select",
+        "kit-text",
         "list",
+        "list-item",
         "lucide-icon",
+        "menu-entry",
         "search-field",
         "select",
         "text",
@@ -518,6 +682,8 @@
         "bar-chart",
         "block",
         "container",
+        "empty-state",
+        "kit-box",
         "meter-row",
         "panel",
         "stack",
@@ -528,9 +694,11 @@
     },
     {
       "dependencies": [],
-      "description": "Checkbox is a native boolean form control. Wireframe styling via Variant and Size; supports standard ARIA attrs.",
+      "description": "Checkbox: Checkbox + recipe checkbox.",
       "name": "checkbox",
       "registryDependencies": [
+        "kit-checkbox",
+        "recipes",
         "utils"
       ],
       "title": "Checkbox",
@@ -542,12 +710,19 @@
       "name": "checklist",
       "registryDependencies": [
         "disclosure",
-        "form",
-        "iconbadge",
+        "empty-state",
+        "icon-badge",
+        "kit-box",
+        "kit-disclosure",
+        "kit-progress",
+        "kit-text",
         "list",
+        "list-item",
         "lucide-icon",
+        "progress",
         "section-frame",
         "stack",
+        "summary",
         "text",
         "utils"
       ],
@@ -567,6 +742,10 @@
         "form",
         "grid",
         "input",
+        "kit-box",
+        "kit-form",
+        "kit-input",
+        "kit-textarea",
         "payment-options",
         "section-frame",
         "slot-grid",
@@ -583,6 +762,8 @@
       "registryDependencies": [
         "box",
         "group",
+        "kit-box",
+        "kit-text",
         "stack",
         "text",
         "title",
@@ -599,6 +780,11 @@
         "button",
         "checkbox",
         "group",
+        "kit-box",
+        "kit-button",
+        "kit-checkbox",
+        "kit-label",
+        "kit-text",
         "label",
         "stack",
         "text",
@@ -614,7 +800,10 @@
       "registryDependencies": [
         "box",
         "inline",
+        "kit-box",
+        "kit-text",
         "list",
+        "list-item",
         "text",
         "utils"
       ],
@@ -627,6 +816,7 @@
       "name": "compare-mark",
       "registryDependencies": [
         "inline",
+        "kit-text",
         "lucide-icon",
         "utils"
       ],
@@ -640,8 +830,16 @@
       "registryDependencies": [
         "box",
         "compare-mark",
+        "empty-state",
+        "kit-box",
         "section-frame",
         "table",
+        "table-body",
+        "table-caption",
+        "table-cell",
+        "table-head",
+        "table-head-cell",
+        "table-row",
         "utils"
       ],
       "title": "Comparison Table",
@@ -659,6 +857,14 @@
         "grid",
         "group",
         "input",
+        "kit-box",
+        "kit-button",
+        "kit-checkbox",
+        "kit-form",
+        "kit-input",
+        "kit-label",
+        "kit-text",
+        "kit-textarea",
         "label",
         "lucide-icon",
         "section-frame",
@@ -672,9 +878,11 @@
     },
     {
       "dependencies": [],
-      "description": "Container wraps page content with a constrained width shell. Optional main or section tag for inner layout regions.",
+      "description": "Container: Box + recipe container.",
       "name": "container",
       "registryDependencies": [
+        "kit-box",
+        "recipes",
         "utils"
       ],
       "title": "Container",
@@ -690,6 +898,9 @@
         "button",
         "container",
         "group",
+        "kit-box",
+        "kit-button",
+        "kit-text",
         "lucide-icon",
         "stack",
         "text",
@@ -708,7 +919,12 @@
         "box",
         "button",
         "card",
+        "card-content",
+        "empty-state",
         "grid",
+        "kit-box",
+        "kit-button",
+        "kit-text",
         "section-frame",
         "stack",
         "text",
@@ -728,6 +944,11 @@
         "form",
         "group",
         "input",
+        "kit-box",
+        "kit-button",
+        "kit-form",
+        "kit-input",
+        "kit-label",
         "label",
         "utils"
       ],
@@ -741,9 +962,12 @@
       "registryDependencies": [
         "block",
         "card",
+        "card-content",
         "container",
         "cta-actions",
         "cta-banner",
+        "kit-box",
+        "kit-text",
         "media-frame",
         "quote-proof",
         "section-frame",
@@ -763,6 +987,9 @@
         "block",
         "box",
         "button",
+        "kit-box",
+        "kit-button",
+        "kit-text",
         "presets",
         "text",
         "title",
@@ -778,6 +1005,7 @@
       "registryDependencies": [
         "action-group",
         "cta-proof-items",
+        "kit-text",
         "media-frame",
         "section-frame",
         "text",
@@ -793,7 +1021,10 @@
       "registryDependencies": [
         "box",
         "group",
+        "kit-box",
+        "kit-text",
         "list",
+        "list-item",
         "lucide-icon",
         "stack",
         "text",
@@ -810,6 +1041,7 @@
         "bar-chart",
         "box",
         "grid",
+        "kit-box",
         "panel",
         "section-frame",
         "stack",
@@ -827,6 +1059,7 @@
       "registryDependencies": [
         "block",
         "box",
+        "kit-box",
         "shell-content",
         "shell-footer",
         "shell-sidebar",
@@ -845,6 +1078,8 @@
         "box",
         "grid",
         "group",
+        "kit-box",
+        "kit-text",
         "lucide-icon",
         "section-frame",
         "stack",
@@ -857,9 +1092,11 @@
     },
     {
       "dependencies": [],
-      "description": "Dialog renders a native dialog root with an optional behavior hook. The data-ui8kit hook defaults off; the registry ships no client JS.",
+      "description": "Dialog: Dialog + recipe dialog.",
       "name": "dialog",
       "registryDependencies": [
+        "kit-dialog",
+        "recipes",
         "utils"
       ],
       "title": "Dialog",
@@ -867,9 +1104,11 @@
     },
     {
       "dependencies": [],
-      "description": "Disclosure renders native details and summary elements. Open is a static attribute only — no controlled-state contract.",
+      "description": "Disclosure: Disclosure + recipe disclosure.",
       "name": "disclosure",
       "registryDependencies": [
+        "kit-disclosure",
+        "recipes",
         "utils"
       ],
       "title": "Disclosure",
@@ -881,12 +1120,17 @@
       "name": "drawer-lines",
       "registryDependencies": [
         "button",
-        "form",
         "group",
         "inline",
+        "kit-box",
+        "kit-button",
+        "kit-progress",
+        "kit-text",
         "list",
+        "list-item",
         "media-frame",
         "number-field",
+        "progress",
         "stack",
         "text",
         "utils"
@@ -901,6 +1145,8 @@
       "registryDependencies": [
         "button-plain",
         "inline",
+        "kit-button",
+        "kit-text",
         "utils"
       ],
       "title": "Dropdown Item",
@@ -914,6 +1160,9 @@
         "box",
         "button",
         "inline",
+        "kit-box",
+        "kit-button",
+        "kit-text",
         "lucide-icon",
         "utils"
       ],
@@ -929,6 +1178,9 @@
         "button",
         "container",
         "empty-state",
+        "kit-box",
+        "kit-button",
+        "kit-text",
         "media-frame",
         "stack",
         "text",
@@ -944,7 +1196,9 @@
       "name": "empty-state",
       "registryDependencies": [
         "box",
-        "iconbadge",
+        "icon-badge",
+        "kit-box",
+        "kit-text",
         "lucide-icon",
         "text",
         "utils"
@@ -958,6 +1212,7 @@
       "name": "error-page",
       "registryDependencies": [
         "action-group",
+        "kit-text",
         "media-frame",
         "section-frame",
         "text",
@@ -974,7 +1229,10 @@
         "article-block",
         "badge",
         "box",
-        "link",
+        "button",
+        "kit-box",
+        "kit-button",
+        "kit-text",
         "lucide-icon",
         "stack",
         "text",
@@ -990,7 +1248,11 @@
       "name": "faq-disclosures",
       "registryDependencies": [
         "disclosure",
+        "kit-box",
+        "kit-disclosure",
+        "kit-text",
         "stack",
+        "summary",
         "text",
         "utils"
       ],
@@ -1004,8 +1266,12 @@
       "registryDependencies": [
         "button",
         "group",
-        "link",
+        "kit-box",
+        "kit-button",
+        "kit-text",
         "list",
+        "list-item",
+        "menu-entry",
         "search-field",
         "stack",
         "text",
@@ -1021,8 +1287,12 @@
       "registryDependencies": [
         "block",
         "box",
-        "link",
+        "button",
+        "kit-box",
+        "kit-button",
+        "kit-text",
         "list",
+        "list-item",
         "lucide-icon",
         "stack",
         "text",
@@ -1038,10 +1308,15 @@
       "registryDependencies": [
         "box",
         "disclosure",
+        "empty-state",
         "grid",
+        "kit-box",
+        "kit-disclosure",
+        "kit-text",
         "search-field",
         "section-frame",
         "stack",
+        "summary",
         "switcher",
         "switcher-item",
         "text",
@@ -1061,6 +1336,8 @@
         "faq-disclosures",
         "faq-finder",
         "faq-help",
+        "kit-box",
+        "kit-button",
         "media-frame",
         "section-frame",
         "utils"
@@ -1074,11 +1351,16 @@
       "name": "feature-accordion",
       "registryDependencies": [
         "disclosure",
+        "empty-state",
         "inline",
+        "kit-box",
+        "kit-disclosure",
+        "kit-text",
         "lucide-icon",
         "media-frame",
         "section-frame",
         "stack",
+        "summary",
         "text",
         "utils"
       ],
@@ -1091,9 +1373,14 @@
       "name": "feature-cards",
       "registryDependencies": [
         "card",
+        "card-content",
+        "card-header",
+        "card-title",
         "grid",
         "group",
-        "iconbadge",
+        "icon-badge",
+        "kit-box",
+        "kit-text",
         "lucide-icon",
         "presets",
         "stack",
@@ -1109,9 +1396,13 @@
       "description": "Features as cards, tiles or rows with a picture.",
       "name": "feature-grid",
       "registryDependencies": [
+        "empty-state",
         "feature-cards",
         "feature-rows",
         "group",
+        "kit-box",
+        "kit-link",
+        "kit-text",
         "link",
         "presets",
         "section-frame",
@@ -1129,6 +1420,8 @@
         "box",
         "group",
         "inline",
+        "kit-box",
+        "kit-text",
         "lucide-icon",
         "stack",
         "text",
@@ -1145,6 +1438,8 @@
         "box",
         "group",
         "inline",
+        "kit-box",
+        "kit-text",
         "lucide-icon",
         "stack",
         "text",
@@ -1161,6 +1456,8 @@
       "registryDependencies": [
         "box",
         "grid",
+        "kit-box",
+        "kit-text",
         "lucide-icon",
         "media-frame",
         "stack",
@@ -1178,9 +1475,13 @@
       "registryDependencies": [
         "box",
         "card",
-        "link",
+        "card-content",
+        "empty-state",
+        "kit-box",
+        "kit-text",
         "lucide-icon",
         "media-frame",
+        "menu-entry",
         "section-frame",
         "text",
         "title",
@@ -1214,6 +1515,8 @@
         "box",
         "group",
         "inline",
+        "kit-box",
+        "kit-text",
         "lucide-icon",
         "stack",
         "text",
@@ -1229,7 +1532,10 @@
       "name": "feature-sticky",
       "registryDependencies": [
         "box",
+        "empty-state",
         "grid",
+        "kit-box",
+        "kit-text",
         "lucide-icon",
         "media-frame",
         "section-frame",
@@ -1246,7 +1552,10 @@
       "description": "Features as tabs; the chosen one fills the panel beside or below the tab list.",
       "name": "feature-tabs",
       "registryDependencies": [
+        "empty-state",
         "grid",
+        "kit-box",
+        "kit-text",
         "lucide-icon",
         "media-frame",
         "section-frame",
@@ -1266,6 +1575,9 @@
       "name": "field",
       "registryDependencies": [
         "box",
+        "kit-box",
+        "kit-label",
+        "kit-text",
         "label",
         "text",
         "utils"
@@ -1275,10 +1587,23 @@
     },
     {
       "dependencies": [],
+      "description": "Fieldset: Box <fieldset> + recipe fieldset.",
+      "name": "fieldset",
+      "registryDependencies": [
+        "kit-box",
+        "recipes",
+        "utils"
+      ],
+      "title": "Fieldset",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
       "description": "Self-contained content with an optional caption (a quote, a picture, a stat) in its own file: Block tag figure.",
       "name": "figure-block",
       "registryDependencies": [
         "block",
+        "kit-box",
         "utils"
       ],
       "title": "Figure Block",
@@ -1290,6 +1615,7 @@
       "name": "file-tree",
       "registryDependencies": [
         "box",
+        "kit-box",
         "utils"
       ],
       "title": "File Tree",
@@ -1302,6 +1628,8 @@
       "registryDependencies": [
         "button-plain",
         "inline",
+        "kit-button",
+        "kit-text",
         "lucide-icon",
         "presets",
         "utils"
@@ -1316,6 +1644,8 @@
       "registryDependencies": [
         "group",
         "inline",
+        "kit-box",
+        "kit-text",
         "lucide-icon",
         "stack",
         "text",
@@ -1334,9 +1664,12 @@
         "container",
         "group",
         "inline",
-        "link",
+        "kit-box",
+        "kit-text",
         "list",
+        "list-item",
         "lucide-icon",
+        "menu-entry",
         "nav-block",
         "presets",
         "stack",
@@ -1353,6 +1686,8 @@
       "registryDependencies": [
         "box",
         "inline",
+        "kit-box",
+        "kit-text",
         "lucide-icon",
         "stack",
         "text",
@@ -1368,8 +1703,11 @@
       "registryDependencies": [
         "block",
         "grid",
-        "link",
+        "kit-box",
+        "kit-text",
         "list",
+        "list-item",
+        "menu-entry",
         "stack",
         "text",
         "utils"
@@ -1384,6 +1722,8 @@
       "registryDependencies": [
         "group",
         "inline",
+        "kit-box",
+        "kit-text",
         "lucide-icon",
         "stack",
         "text",
@@ -1398,6 +1738,8 @@
       "name": "footer-figures",
       "registryDependencies": [
         "group",
+        "kit-box",
+        "kit-text",
         "stack",
         "text",
         "utils"
@@ -1414,9 +1756,12 @@
         "box",
         "group",
         "inline",
-        "link",
+        "kit-box",
+        "kit-text",
         "list",
+        "list-item",
         "lucide-icon",
+        "menu-entry",
         "stack",
         "text",
         "utils"
@@ -1431,8 +1776,11 @@
       "registryDependencies": [
         "block",
         "box",
-        "link",
+        "kit-box",
+        "kit-text",
         "list",
+        "list-item",
+        "menu-entry",
         "stack",
         "text",
         "utils"
@@ -1446,6 +1794,8 @@
       "name": "footer-points",
       "registryDependencies": [
         "group",
+        "kit-box",
+        "kit-text",
         "lucide-icon",
         "stack",
         "text",
@@ -1463,6 +1813,12 @@
         "form",
         "group",
         "input",
+        "kit-box",
+        "kit-button",
+        "kit-form",
+        "kit-input",
+        "kit-label",
+        "kit-text",
         "label",
         "lucide-icon",
         "stack",
@@ -1470,6 +1826,19 @@
         "utils"
       ],
       "title": "Footer Signup Card",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "The sitemap link of FooterSplit: an arrow and the word, only where the app gives the address (no address, no link).",
+      "name": "footer-sitemap",
+      "registryDependencies": [
+        "kit-link",
+        "link",
+        "lucide-icon",
+        "utils"
+      ],
+      "title": "Footer Sitemap",
       "type": "registry:component"
     },
     {
@@ -1489,9 +1858,10 @@
         "footer-link-columns",
         "footer-points",
         "footer-signup-card",
+        "footer-sitemap",
         "group",
-        "link",
-        "lucide-icon",
+        "kit-box",
+        "kit-text",
         "media-frame",
         "stack",
         "text",
@@ -1502,9 +1872,11 @@
     },
     {
       "dependencies": [],
-      "description": "DataList: one part of Fieldset (one file per part, as in the Svelte package).",
+      "description": "Form: Form + recipe form.",
       "name": "form",
       "registryDependencies": [
+        "kit-form",
+        "recipes",
         "utils"
       ],
       "title": "Form",
@@ -1512,9 +1884,47 @@
     },
     {
       "dependencies": [],
-      "description": "GridCol: one part of Grid (one file per part, as in the Svelte package).",
+      "description": "FormDescription: Text <p> + recipe form-description.",
+      "name": "form-description",
+      "registryDependencies": [
+        "kit-text",
+        "recipes",
+        "utils"
+      ],
+      "title": "Form Description",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "FormItem: Box <div> + recipe form-item.",
+      "name": "form-item",
+      "registryDependencies": [
+        "kit-box",
+        "recipes",
+        "utils"
+      ],
+      "title": "Form Item",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "FormMessage: Text <p> + recipe form-message.",
+      "name": "form-message",
+      "registryDependencies": [
+        "kit-text",
+        "recipes",
+        "utils"
+      ],
+      "title": "Form Message",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "Grid: Box + recipe grid.",
       "name": "grid",
       "registryDependencies": [
+        "kit-box",
+        "recipes",
         "utils"
       ],
       "title": "Grid",
@@ -1522,9 +1932,23 @@
     },
     {
       "dependencies": [],
-      "description": "Group arranges children in a horizontal flex row. Supports fieldset for related form controls.",
+      "description": "GridCol: Box <div>.",
+      "name": "grid-col",
+      "registryDependencies": [
+        "kit-box",
+        "recipes",
+        "utils"
+      ],
+      "title": "Grid Col",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "Group: Box + recipe group.",
       "name": "group",
       "registryDependencies": [
+        "kit-box",
+        "recipes",
         "utils"
       ],
       "title": "Group",
@@ -1537,6 +1961,8 @@
       "registryDependencies": [
         "badge",
         "group",
+        "kit-box",
+        "kit-text",
         "presets",
         "text",
         "utils"
@@ -1557,6 +1983,10 @@
         "grid",
         "group",
         "input",
+        "kit-box",
+        "kit-button",
+        "kit-input",
+        "kit-label",
         "label",
         "media-frame",
         "section-frame",
@@ -1574,8 +2004,14 @@
         "block",
         "button",
         "group",
+        "inline",
+        "kit-box",
+        "kit-button",
+        "kit-link",
+        "kit-text",
         "link",
         "link-plain",
+        "menu-entry",
         "nav-block",
         "presets",
         "utils"
@@ -1593,6 +2029,7 @@
         "container",
         "hero-badge",
         "hero-head",
+        "kit-box",
         "presets",
         "prompt-composer",
         "stack",
@@ -1625,6 +2062,8 @@
         "box",
         "figure-block",
         "group",
+        "kit-box",
+        "kit-text",
         "lucide-icon",
         "media-frame",
         "stack",
@@ -1642,6 +2081,8 @@
         "box",
         "figure-block",
         "group",
+        "kit-box",
+        "kit-text",
         "lucide-icon",
         "media-frame",
         "offer-media",
@@ -1654,12 +2095,26 @@
     },
     {
       "dependencies": [],
-      "description": "Icon renders a class-based span, svg use reference, or text fallback. Decorative icons are hidden from assistive technology by default.",
+      "description": "Icon: Icon + recipe icon.",
       "name": "icon",
       "registryDependencies": [
+        "kit-icon",
+        "recipes",
         "utils"
       ],
       "title": "Icon",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "IconBadge: Text <span> + recipe iconbadge.",
+      "name": "icon-badge",
+      "registryDependencies": [
+        "kit-text",
+        "recipes",
+        "utils"
+      ],
+      "title": "Icon Badge",
       "type": "registry:ui"
     },
     {
@@ -1668,6 +2123,7 @@
       "name": "icon-tab",
       "registryDependencies": [
         "button-plain",
+        "kit-button",
         "presets",
         "utils"
       ],
@@ -1680,6 +2136,7 @@
       "name": "icon-tabs",
       "registryDependencies": [
         "box",
+        "kit-box",
         "utils"
       ],
       "title": "Icon Tabs",
@@ -1691,7 +2148,10 @@
       "name": "icon-wall",
       "registryDependencies": [
         "box",
+        "empty-state",
         "grid",
+        "kit-box",
+        "kit-text",
         "lucide-icon",
         "section-frame",
         "text",
@@ -1702,19 +2162,11 @@
     },
     {
       "dependencies": [],
-      "description": "IconBadge renders a small icon surface for nav rows, cards, and status blocks. Pass the letter, glyph, or Icon node as children.",
-      "name": "iconbadge",
-      "registryDependencies": [
-        "utils"
-      ],
-      "title": "Iconbadge",
-      "type": "registry:ui"
-    },
-    {
-      "dependencies": [],
-      "description": "Image renders accessible img, picture, and source primitives. Use Decorative for purely visual images so alt stays empty.",
+      "description": "Image: Image + recipe image.",
       "name": "image",
       "registryDependencies": [
+        "kit-image",
+        "recipes",
         "utils"
       ],
       "title": "Image",
@@ -1722,9 +2174,11 @@
     },
     {
       "dependencies": [],
-      "description": "Inline renders inline copy as a span. Use Text for paragraph blocks and Title (as 1–6) for headings.",
+      "description": "Inline: Text <span> + recipe inline.",
       "name": "inline",
       "registryDependencies": [
+        "kit-text",
+        "recipes",
         "utils"
       ],
       "title": "Inline",
@@ -1732,9 +2186,11 @@
     },
     {
       "dependencies": [],
-      "description": "Input is a single-line native text field. Supports types, validation attrs, and wireframe variant/size classes.",
+      "description": "Input: Input + recipe input.",
       "name": "input",
       "registryDependencies": [
+        "kit-input",
+        "recipes",
         "utils"
       ],
       "title": "Input",
@@ -1746,10 +2202,14 @@
       "name": "job-board",
       "registryDependencies": [
         "badge",
+        "empty-state",
         "group",
         "job-cards",
-        "link",
+        "kit-box",
+        "kit-text",
         "list",
+        "list-item",
+        "menu-entry",
         "section-frame",
         "stack",
         "text",
@@ -1769,10 +2229,18 @@
         "grid",
         "group",
         "inline",
-        "link",
+        "kit-box",
+        "kit-text",
         "lucide-icon",
+        "menu-entry",
         "stack",
         "table",
+        "table-body",
+        "table-caption",
+        "table-cell",
+        "table-head",
+        "table-head-cell",
+        "table-row",
         "text",
         "utils"
       ],
@@ -1784,9 +2252,13 @@
       "description": "Work items in lanes with a count; cards with a tag and a person. Moving cards is a port contract (SortableList).",
       "name": "kanban-board",
       "registryDependencies": [
+        "empty-state",
         "grid",
         "group",
+        "kit-box",
+        "kit-text",
         "list",
+        "list-item",
         "pill",
         "section-frame",
         "stack",
@@ -1799,9 +2271,201 @@
     },
     {
       "dependencies": [],
-      "description": "Label associates visible text with a form control via the for attribute.",
+      "description": "UI8Kit 3 Box primitive (unstyled), from @ui8kit/registry",
+      "name": "kit-box",
+      "registryDependencies": [
+        "utils"
+      ],
+      "title": "Kit Box",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "UI8Kit 3 Button primitive (unstyled), from @ui8kit/registry",
+      "name": "kit-button",
+      "registryDependencies": [
+        "utils"
+      ],
+      "title": "Kit Button",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "UI8Kit 3 Checkbox primitive (unstyled), from @ui8kit/registry",
+      "name": "kit-checkbox",
+      "registryDependencies": [
+        "utils"
+      ],
+      "title": "Kit Checkbox",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "UI8Kit 3 Dialog primitive (unstyled), from @ui8kit/registry",
+      "name": "kit-dialog",
+      "registryDependencies": [
+        "utils"
+      ],
+      "title": "Kit Dialog",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "UI8Kit 3 Disclosure primitive (unstyled), from @ui8kit/registry",
+      "name": "kit-disclosure",
+      "registryDependencies": [
+        "utils"
+      ],
+      "title": "Kit Disclosure",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "UI8Kit 3 Form primitive (unstyled), from @ui8kit/registry",
+      "name": "kit-form",
+      "registryDependencies": [
+        "utils"
+      ],
+      "title": "Kit Form",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "UI8Kit 3 Icon primitive (unstyled), from @ui8kit/registry",
+      "name": "kit-icon",
+      "registryDependencies": [
+        "utils"
+      ],
+      "title": "Kit Icon",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "UI8Kit 3 Image primitive (unstyled), from @ui8kit/registry",
+      "name": "kit-image",
+      "registryDependencies": [
+        "utils"
+      ],
+      "title": "Kit Image",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "UI8Kit 3 Input primitive (unstyled), from @ui8kit/registry",
+      "name": "kit-input",
+      "registryDependencies": [
+        "utils"
+      ],
+      "title": "Kit Input",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "UI8Kit 3 Label primitive (unstyled), from @ui8kit/registry",
+      "name": "kit-label",
+      "registryDependencies": [
+        "utils"
+      ],
+      "title": "Kit Label",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "UI8Kit 3 Link primitive (unstyled), from @ui8kit/registry",
+      "name": "kit-link",
+      "registryDependencies": [
+        "utils"
+      ],
+      "title": "Kit Link",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "UI8Kit 3 Meter primitive (unstyled), from @ui8kit/registry",
+      "name": "kit-meter",
+      "registryDependencies": [
+        "utils"
+      ],
+      "title": "Kit Meter",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "UI8Kit 3 Progress primitive (unstyled), from @ui8kit/registry",
+      "name": "kit-progress",
+      "registryDependencies": [
+        "utils"
+      ],
+      "title": "Kit Progress",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "UI8Kit 3 Radio primitive (unstyled), from @ui8kit/registry",
+      "name": "kit-radio",
+      "registryDependencies": [
+        "utils"
+      ],
+      "title": "Kit Radio",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "UI8Kit 3 Select primitive (unstyled), from @ui8kit/registry",
+      "name": "kit-select",
+      "registryDependencies": [
+        "utils"
+      ],
+      "title": "Kit Select",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "UI8Kit 3 Separator primitive (unstyled), from @ui8kit/registry",
+      "name": "kit-separator",
+      "registryDependencies": [
+        "utils"
+      ],
+      "title": "Kit Separator",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "UI8Kit 3 Switch primitive (unstyled), from @ui8kit/registry",
+      "name": "kit-switch",
+      "registryDependencies": [
+        "utils"
+      ],
+      "title": "Kit Switch",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "UI8Kit 3 Text primitive (unstyled), from @ui8kit/registry",
+      "name": "kit-text",
+      "registryDependencies": [
+        "utils"
+      ],
+      "title": "Kit Text",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "UI8Kit 3 Textarea primitive (unstyled), from @ui8kit/registry",
+      "name": "kit-textarea",
+      "registryDependencies": [
+        "utils"
+      ],
+      "title": "Kit Textarea",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "Label: Label + recipe label.",
       "name": "label",
       "registryDependencies": [
+        "kit-label",
+        "recipes",
         "utils"
       ],
       "title": "Label",
@@ -1809,19 +2473,23 @@
     },
     {
       "dependencies": [],
-      "description": "Break renders br or wbr for controlled inline wrapping.",
-      "name": "linebreak",
+      "description": "Legend: Text <legend> + recipe legend.",
+      "name": "legend",
       "registryDependencies": [
+        "kit-text",
+        "recipes",
         "utils"
       ],
-      "title": "Linebreak",
+      "title": "Legend",
       "type": "registry:ui"
     },
     {
       "dependencies": [],
-      "description": "Link renders a semantic anchor for navigation and prose. Use Button for actions; use Link for destinations.",
+      "description": "Link: Link + recipe link.",
       "name": "link",
       "registryDependencies": [
+        "kit-link",
+        "recipes",
         "utils"
       ],
       "title": "Link",
@@ -1829,9 +2497,11 @@
     },
     {
       "dependencies": [],
-      "description": "LinkPlain is a bare anchor: no styling beyond Class.",
+      "description": "LinkPlain: Link + recipe link-plain.",
       "name": "link-plain",
       "registryDependencies": [
+        "kit-link",
+        "recipes",
         "utils"
       ],
       "title": "Link Plain",
@@ -1839,9 +2509,11 @@
     },
     {
       "dependencies": [],
-      "description": "ListItem: one part of List (one file per part, as in the Svelte package).",
+      "description": "List: Box + recipe list.",
       "name": "list",
       "registryDependencies": [
+        "kit-box",
+        "recipes",
         "utils"
       ],
       "title": "List",
@@ -1849,11 +2521,26 @@
     },
     {
       "dependencies": [],
+      "description": "ListItem: Box <li>.",
+      "name": "list-item",
+      "registryDependencies": [
+        "kit-box",
+        "recipes",
+        "utils"
+      ],
+      "title": "List Item",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
       "description": "Customers and partners as glyphs with names.",
       "name": "logo-cloud",
       "registryDependencies": [
+        "empty-state",
         "grid",
         "group",
+        "kit-box",
+        "kit-text",
         "logo-ribbon",
         "lucide-icon",
         "section-frame",
@@ -1869,6 +2556,8 @@
       "name": "logo-ribbon",
       "registryDependencies": [
         "group",
+        "kit-box",
+        "kit-text",
         "logo-slot",
         "presets",
         "section-frame",
@@ -1886,6 +2575,8 @@
       "registryDependencies": [
         "box",
         "inline",
+        "kit-box",
+        "kit-text",
         "presets",
         "utils"
       ],
@@ -1898,6 +2589,8 @@
       "name": "logo-slot",
       "registryDependencies": [
         "box",
+        "kit-box",
+        "kit-text",
         "lucide-icon",
         "presets",
         "text",
@@ -1908,9 +2601,11 @@
     },
     {
       "dependencies": [],
-      "description": "LucideIcon: a Lucide glyph (ISC license) by kebab-case name, drawn from the registry next to this file. Decorative (aria-hidden) unless a `label` is given.",
+      "description": "LucideIcon: Icon + recipe lucide-icon.",
       "name": "lucide-icon",
       "registryDependencies": [
+        "kit-icon",
+        "recipes",
         "utils"
       ],
       "title": "Lucide Icon",
@@ -1923,6 +2618,9 @@
       "registryDependencies": [
         "button",
         "group",
+        "kit-box",
+        "kit-button",
+        "kit-text",
         "lucide-icon",
         "stack",
         "text",
@@ -1937,6 +2635,8 @@
       "name": "media-figures",
       "registryDependencies": [
         "box",
+        "kit-box",
+        "kit-text",
         "stack",
         "text",
         "utils"
@@ -1951,6 +2651,8 @@
       "registryDependencies": [
         "box",
         "image",
+        "kit-box",
+        "kit-image",
         "presets",
         "utils"
       ],
@@ -1983,7 +2685,9 @@
       "registryDependencies": [
         "group",
         "inline",
-        "link",
+        "kit-box",
+        "kit-text",
+        "menu-entry",
         "stack",
         "text",
         "utils"
@@ -1997,6 +2701,8 @@
       "name": "media-review",
       "registryDependencies": [
         "group",
+        "kit-box",
+        "kit-text",
         "rating",
         "stack",
         "text",
@@ -2012,6 +2718,8 @@
       "registryDependencies": [
         "group",
         "inline",
+        "kit-box",
+        "kit-text",
         "lucide-icon",
         "stack",
         "text",
@@ -2026,8 +2734,10 @@
       "name": "media-topics",
       "registryDependencies": [
         "inline",
-        "link",
+        "kit-box",
+        "kit-text",
         "lucide-icon",
+        "menu-entry",
         "stack",
         "text",
         "utils"
@@ -2046,10 +2756,14 @@
         "container",
         "grid",
         "group",
-        "link",
+        "kit-box",
+        "kit-button",
+        "kit-text",
         "list",
+        "list-item",
         "lucide-icon",
         "media-frame",
+        "menu-entry",
         "nav-block",
         "stack",
         "text",
@@ -2066,6 +2780,8 @@
         "badge",
         "group",
         "inline",
+        "kit-box",
+        "kit-text",
         "lucide-icon",
         "media-frame",
         "stack",
@@ -2077,12 +2793,44 @@
     },
     {
       "dependencies": [],
+      "description": "One entry of a menu: a link to its address, or, without one, its content as text in the same box (the magazine routes nothing, so it shows text). current marks the page the entry stands for (aria-current) either way.",
+      "name": "menu-entry",
+      "registryDependencies": [
+        "box",
+        "inline",
+        "kit-box",
+        "kit-link",
+        "kit-text",
+        "link",
+        "utils"
+      ],
+      "title": "Menu Entry",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "Meter: Meter + recipe meter.",
+      "name": "meter",
+      "registryDependencies": [
+        "kit-meter",
+        "recipes",
+        "utils"
+      ],
+      "title": "Meter",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
       "description": "A name, a value caption and a progress bar (completeness by section, issues by rule, stock by warehouse). With `href` the whole row is a link.",
       "name": "meter-row",
       "registryDependencies": [
         "box",
-        "form",
+        "kit-box",
+        "kit-link",
+        "kit-progress",
+        "kit-text",
         "link",
+        "progress",
         "text",
         "utils"
       ],
@@ -2095,8 +2843,11 @@
       "name": "metric-row",
       "registryDependencies": [
         "box",
+        "empty-state",
         "grid",
         "group",
+        "kit-box",
+        "kit-text",
         "lucide-icon",
         "section-frame",
         "stack",
@@ -2113,9 +2864,13 @@
       "name": "milestone-timeline",
       "registryDependencies": [
         "badge",
+        "empty-state",
         "group",
         "inline",
+        "kit-box",
+        "kit-text",
         "list",
+        "list-item",
         "media-frame",
         "section-frame",
         "text",
@@ -2131,6 +2886,7 @@
       "name": "nav-actions",
       "registryDependencies": [
         "button",
+        "kit-button",
         "utils"
       ],
       "title": "Nav Actions",
@@ -2146,9 +2902,12 @@
         "container",
         "grid",
         "group",
-        "link",
+        "kit-box",
+        "kit-link",
         "link-plain",
+        "menu-entry",
         "nav-actions",
+        "nav-bar-menu",
         "nav-block",
         "nav-links",
         "over-media",
@@ -2160,10 +2919,23 @@
     },
     {
       "dependencies": [],
+      "description": "The links of NavBar in a nav landmark; left out when there are no links.",
+      "name": "nav-bar-menu",
+      "registryDependencies": [
+        "nav-block",
+        "nav-links",
+        "utils"
+      ],
+      "title": "Nav Bar Menu",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
       "description": "A navigation region in its own file: Block tag nav named by `label`.",
       "name": "nav-block",
       "registryDependencies": [
         "block",
+        "kit-box",
         "utils"
       ],
       "title": "Nav Block",
@@ -2176,6 +2948,9 @@
       "registryDependencies": [
         "box",
         "button-plain",
+        "kit-box",
+        "kit-button",
+        "kit-link",
         "link-plain",
         "nav-item-row",
         "presets",
@@ -2190,6 +2965,7 @@
       "name": "nav-item-row",
       "registryDependencies": [
         "inline",
+        "kit-text",
         "utils"
       ],
       "title": "Nav Item Row",
@@ -2201,7 +2977,8 @@
       "name": "nav-links",
       "registryDependencies": [
         "group",
-        "link",
+        "kit-box",
+        "menu-entry",
         "utils"
       ],
       "title": "Nav Links",
@@ -2216,6 +2993,12 @@
         "form",
         "group",
         "input",
+        "kit-box",
+        "kit-button",
+        "kit-form",
+        "kit-input",
+        "kit-label",
+        "kit-text",
         "label",
         "media-frame",
         "section-frame",
@@ -2231,6 +3014,8 @@
       "name": "notice",
       "registryDependencies": [
         "box",
+        "kit-box",
+        "kit-text",
         "lucide-icon",
         "text",
         "utils"
@@ -2246,6 +3031,9 @@
         "box",
         "button",
         "input",
+        "kit-box",
+        "kit-button",
+        "kit-input",
         "lucide-icon",
         "utils"
       ],
@@ -2259,6 +3047,8 @@
       "registryDependencies": [
         "box",
         "group",
+        "kit-box",
+        "kit-text",
         "lucide-icon",
         "media-frame",
         "stack",
@@ -2274,8 +3064,15 @@
       "name": "order-rows",
       "registryDependencies": [
         "box",
+        "kit-box",
         "pill",
         "table",
+        "table-body",
+        "table-caption",
+        "table-cell",
+        "table-head",
+        "table-head-cell",
+        "table-row",
         "utils"
       ],
       "title": "Order Rows",
@@ -2288,8 +3085,13 @@
       "registryDependencies": [
         "box",
         "button",
+        "empty-state",
         "inline",
+        "kit-box",
+        "kit-button",
+        "kit-text",
         "list",
+        "list-item",
         "section-frame",
         "stack",
         "text",
@@ -2304,6 +3106,10 @@
       "name": "order-table",
       "registryDependencies": [
         "card",
+        "card-content",
+        "empty-state",
+        "kit-box",
+        "kit-text",
         "order-rows",
         "pager",
         "pill",
@@ -2321,6 +3127,7 @@
       "name": "over-media",
       "registryDependencies": [
         "box",
+        "kit-box",
         "media-frame",
         "utils"
       ],
@@ -2334,6 +3141,8 @@
       "registryDependencies": [
         "box",
         "group",
+        "kit-box",
+        "kit-text",
         "lucide-icon",
         "stack",
         "text",
@@ -2344,13 +3153,17 @@
     },
     {
       "dependencies": [],
-      "description": "The breadcrumbs of an inner page: links to the parent pages separated by chevrons; the last entry is the current page and is not a link.",
+      "description": "The breadcrumbs of an inner page: the parent pages (links where they have an href) separated by chevrons; the last entry is the current page and is not a link.",
       "name": "page-crumbs",
       "registryDependencies": [
         "block",
         "inline",
+        "kit-box",
+        "kit-link",
+        "kit-text",
         "link",
         "list",
+        "list-item",
         "lucide-icon",
         "utils"
       ],
@@ -2363,6 +3176,8 @@
       "name": "page-header",
       "registryDependencies": [
         "box",
+        "kit-box",
+        "kit-text",
         "text",
         "title",
         "utils"
@@ -2390,6 +3205,7 @@
         "block",
         "box",
         "container",
+        "kit-box",
         "page-aside",
         "page-crumbs",
         "section-header",
@@ -2401,12 +3217,15 @@
     },
     {
       "dependencies": [],
-      "description": "The list footer: a summary line and previous / next page buttons. With `numbered` it shows page numbers (1 … 4 5 6 … 21), with `moreLabel` a \"Load more\" button. The current page is a plain element marked aria-current=\"page\"; the others are buttons. All text comes in through props",
+      "description": "The list footer: a summary line and previous / next page buttons. With `numbered` it shows page numbers (1 … 4 5 6 … 21), with `moreLabel` a \"Load more\" button. The current page is a plain element marked aria-current=\"page\"; the others are buttons, or links with `pageUrl` (the ad",
       "name": "pager",
       "registryDependencies": [
         "box",
         "button",
         "inline",
+        "kit-box",
+        "kit-button",
+        "kit-text",
         "lucide-icon",
         "utils"
       ],
@@ -2419,6 +3238,8 @@
       "name": "panel",
       "registryDependencies": [
         "box",
+        "kit-box",
+        "kit-text",
         "text",
         "title",
         "utils"
@@ -2433,6 +3254,10 @@
       "registryDependencies": [
         "grid",
         "inline",
+        "kit-box",
+        "kit-label",
+        "kit-radio",
+        "kit-text",
         "label",
         "lucide-icon",
         "radio",
@@ -2449,8 +3274,12 @@
         "badge",
         "box",
         "button",
+        "empty-state",
         "figure-block",
         "group",
+        "kit-box",
+        "kit-button",
+        "kit-text",
         "lucide-icon",
         "media-frame",
         "section-frame",
@@ -2468,6 +3297,8 @@
       "registryDependencies": [
         "box",
         "inline",
+        "kit-box",
+        "kit-text",
         "lucide-icon",
         "utils"
       ],
@@ -2481,6 +3312,8 @@
       "registryDependencies": [
         "button",
         "group",
+        "kit-box",
+        "kit-button",
         "lucide-icon",
         "utils"
       ],
@@ -2495,6 +3328,9 @@
         "box",
         "button",
         "group",
+        "kit-box",
+        "kit-button",
+        "kit-text",
         "lucide-icon",
         "media-frame",
         "stack",
@@ -2511,8 +3347,11 @@
       "registryDependencies": [
         "block",
         "box",
-        "card",
+        "card-content",
         "group",
+        "kit-box",
+        "kit-link",
+        "kit-text",
         "link",
         "lucide-icon",
         "media-frame",
@@ -2532,6 +3371,9 @@
         "badge",
         "button",
         "group",
+        "kit-box",
+        "kit-button",
+        "kit-text",
         "lucide-icon",
         "media-frame",
         "stack",
@@ -2547,7 +3389,10 @@
       "description": "Posts as a grid, a list or a magazine.",
       "name": "post-grid",
       "registryDependencies": [
+        "block",
         "grid",
+        "kit-box",
+        "pager",
         "post-card",
         "section-frame",
         "stack",
@@ -2563,7 +3408,10 @@
       "description": "Category, title, excerpt, author line and a wide cover.",
       "name": "post-header",
       "registryDependencies": [
+        "empty-state",
         "group",
+        "kit-box",
+        "kit-text",
         "media-frame",
         "pill",
         "section-frame",
@@ -2579,6 +3427,8 @@
       "name": "post-mini-card",
       "registryDependencies": [
         "badge",
+        "kit-box",
+        "kit-text",
         "media-frame",
         "stack",
         "text",
@@ -2594,8 +3444,10 @@
       "name": "post-outline",
       "registryDependencies": [
         "group",
-        "link",
+        "kit-box",
+        "kit-text",
         "lucide-icon",
+        "menu-entry",
         "stack",
         "text",
         "utils"
@@ -2611,9 +3463,11 @@
         "badge",
         "box",
         "group",
-        "link",
+        "kit-box",
+        "kit-text",
         "lucide-icon",
         "media-frame",
+        "menu-entry",
         "stack",
         "text",
         "title",
@@ -2628,6 +3482,9 @@
       "name": "post-showcase",
       "registryDependencies": [
         "box",
+        "empty-state",
+        "kit-box",
+        "kit-link",
         "link",
         "lucide-icon",
         "media-frame",
@@ -2663,6 +3520,8 @@
       "name": "post-stats",
       "registryDependencies": [
         "group",
+        "kit-box",
+        "kit-text",
         "lucide-icon",
         "text",
         "utils"
@@ -2677,6 +3536,8 @@
       "registryDependencies": [
         "badge",
         "group",
+        "kit-box",
+        "kit-text",
         "utils"
       ],
       "title": "Post Tags",
@@ -2701,9 +3562,17 @@
         "block",
         "box",
         "button",
-        "card",
+        "card-content",
+        "card-description",
+        "card-footer",
+        "card-header",
+        "card-title",
         "group",
+        "kit-box",
+        "kit-button",
+        "kit-text",
         "list",
+        "list-item",
         "text",
         "title",
         "utils"
@@ -2717,8 +3586,11 @@
       "name": "pricing-tiers",
       "registryDependencies": [
         "badge",
+        "empty-state",
         "grid",
         "group",
+        "kit-box",
+        "kit-text",
         "pricing-card",
         "section-frame",
         "switcher",
@@ -2730,15 +3602,21 @@
     },
     {
       "dependencies": [],
-      "description": "A product as a card: picture, optional badge, category, name, rating, summary, price and an add button. Axes: layout (vertical, horizontal), media (image, none), ratio, rating (show, hide), action (button, none), density.",
+      "description": "A product as a card: picture, optional badge, category, name, rating, summary, price (and the old price struck through when `compareAt` is higher) and an add button. Axes: layout (vertical, horizontal), media (image, none), ratio, rating (show, hide), action (button, none), densi",
       "name": "product-card",
       "registryDependencies": [
         "badge",
         "block",
         "box",
         "button",
-        "card",
+        "card-content",
         "group",
+        "inline",
+        "kit-box",
+        "kit-button",
+        "kit-link",
+        "kit-text",
+        "link",
         "media-frame",
         "rating",
         "text",
@@ -2753,15 +3631,19 @@
       "description": "The gallery and the buy box of one product.",
       "name": "product-detail",
       "registryDependencies": [
-        "badge",
         "button",
-        "grid",
+        "empty-state",
         "group",
         "inline",
+        "kit-box",
+        "kit-button",
+        "kit-text",
         "list",
+        "list-item",
         "lucide-icon",
-        "media-frame",
         "number-field",
+        "product-gallery",
+        "product-price",
         "rating",
         "section-frame",
         "stack",
@@ -2773,11 +3655,27 @@
     },
     {
       "dependencies": [],
+      "description": "The gallery of a product page: the picture (the file of the product's featured media, a placeholder without one) and optional thumbnails below.",
+      "name": "product-gallery",
+      "registryDependencies": [
+        "grid",
+        "kit-box",
+        "media-frame",
+        "stack",
+        "utils"
+      ],
+      "title": "Product Gallery",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
       "description": "Products as cards in a grid, a list or a rail that scrolls sideways.",
       "name": "product-grid",
       "registryDependencies": [
         "box",
+        "empty-state",
         "grid",
+        "kit-box",
         "product-card",
         "section-frame",
         "utils"
@@ -2793,15 +3691,36 @@
         "box",
         "disclosure",
         "inline",
+        "kit-box",
+        "kit-disclosure",
+        "kit-text",
         "list",
+        "list-item",
         "section-frame",
         "stack",
+        "summary",
         "text",
         "title",
         "utils"
       ],
       "title": "Product Info",
       "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "The price line of a product page: the price (integer minor units in the currency), the old price (compare_at) struck through when higher, and the badge.",
+      "name": "product-price",
+      "registryDependencies": [
+        "badge",
+        "group",
+        "inline",
+        "kit-box",
+        "kit-text",
+        "text",
+        "utils"
+      ],
+      "title": "Product Price",
+      "type": "registry:component"
     },
     {
       "dependencies": [],
@@ -2816,6 +3735,14 @@
         "grid",
         "group",
         "input",
+        "kit-box",
+        "kit-button",
+        "kit-form",
+        "kit-input",
+        "kit-label",
+        "kit-switch",
+        "kit-text",
+        "kit-textarea",
         "label",
         "media-frame",
         "panel",
@@ -2830,11 +3757,26 @@
     },
     {
       "dependencies": [],
+      "description": "Progress: Progress + recipe progress.",
+      "name": "progress",
+      "registryDependencies": [
+        "kit-progress",
+        "recipes",
+        "utils"
+      ],
+      "title": "Progress",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
       "description": "Projects as cards, a compact grid, captions over pictures, a bento or a list beside a collage.",
       "name": "project-grid",
       "registryDependencies": [
         "box",
+        "empty-state",
         "group",
+        "kit-box",
+        "kit-text",
         "media-frame",
         "project-tiles",
         "section-frame",
@@ -2854,9 +3796,11 @@
         "badge",
         "box",
         "group",
-        "link",
+        "kit-box",
+        "kit-text",
         "lucide-icon",
         "media-frame",
+        "menu-entry",
         "stack",
         "text",
         "title",
@@ -2873,6 +3817,9 @@
         "box",
         "button",
         "group",
+        "kit-box",
+        "kit-button",
+        "kit-text",
         "lucide-icon",
         "presets",
         "text",
@@ -2886,8 +3833,11 @@
       "description": "A bar of customer logos and a row of key figures together.",
       "name": "proof-band",
       "registryDependencies": [
+        "empty-state",
         "grid",
         "group",
+        "kit-box",
+        "kit-text",
         "lucide-icon",
         "section-frame",
         "stack",
@@ -2899,12 +3849,26 @@
     },
     {
       "dependencies": [],
+      "description": "Prose: Box <div> + recipe prose.",
+      "name": "prose",
+      "registryDependencies": [
+        "kit-box",
+        "recipes",
+        "utils"
+      ],
+      "title": "Prose",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
       "description": "One customer quote of TestimonialGrid: a card, a plain figure or a social post, with the author's picture, the stars and a company glyph as `item` says.",
       "name": "quote-card",
       "registryDependencies": [
         "figure-block",
         "group",
         "inline",
+        "kit-box",
+        "kit-text",
         "lucide-icon",
         "media-frame",
         "rating",
@@ -2921,6 +3885,8 @@
       "name": "quote-figures",
       "registryDependencies": [
         "box",
+        "kit-box",
+        "kit-text",
         "stack",
         "text",
         "utils"
@@ -2935,6 +3901,8 @@
       "registryDependencies": [
         "box",
         "group",
+        "kit-box",
+        "kit-text",
         "lucide-icon",
         "text",
         "utils"
@@ -2948,6 +3916,8 @@
       "name": "quote-proof",
       "registryDependencies": [
         "block",
+        "kit-box",
+        "kit-text",
         "text",
         "utils"
       ],
@@ -2960,6 +3930,8 @@
       "name": "quote-rating-panel",
       "registryDependencies": [
         "box",
+        "kit-box",
+        "kit-text",
         "rating",
         "stack",
         "text",
@@ -2974,6 +3946,7 @@
       "name": "quote-slot",
       "registryDependencies": [
         "box",
+        "kit-box",
         "quote-card",
         "utils"
       ],
@@ -2987,6 +3960,8 @@
       "registryDependencies": [
         "action-group",
         "box",
+        "empty-state",
+        "kit-box",
         "media-frame",
         "quote-figures",
         "quote-logo-tiles",
@@ -3001,9 +3976,11 @@
     },
     {
       "dependencies": [],
-      "description": "Radio is a native single-choice control within a named group.",
+      "description": "Radio: Radio + recipe radio.",
       "name": "radio",
       "registryDependencies": [
+        "kit-radio",
+        "recipes",
         "utils"
       ],
       "title": "Radio",
@@ -3011,9 +3988,11 @@
     },
     {
       "dependencies": [],
-      "description": "Range renders a styled input[type=range] (single thumb slider). The value is controlled from outside: Value in, an input event out (canary used a bindable prop).",
+      "description": "Range: Input + recipe range.",
       "name": "range",
       "registryDependencies": [
+        "kit-input",
+        "recipes",
         "utils"
       ],
       "title": "Range",
@@ -3027,6 +4006,9 @@
         "box",
         "inline",
         "input",
+        "kit-box",
+        "kit-input",
+        "kit-text",
         "range",
         "utils"
       ],
@@ -3039,6 +4021,7 @@
       "name": "rating",
       "registryDependencies": [
         "box",
+        "kit-box",
         "lucide-icon",
         "utils"
       ],
@@ -3047,10 +4030,21 @@
     },
     {
       "dependencies": [],
+      "description": "Recipes (Tailwind classes per variant/size/state) of the composed primitives",
+      "name": "recipes",
+      "registryDependencies": [
+        "utils"
+      ],
+      "title": "Recipes",
+      "type": "registry:lib"
+    },
+    {
+      "dependencies": [],
       "description": "A landmark region (header, nav, section, aside, footer, article, figure) inside another file: one Block, never nested, so a nested landmark is its own component.",
       "name": "region",
       "registryDependencies": [
         "block",
+        "kit-box",
         "utils"
       ],
       "title": "Region",
@@ -3062,8 +4056,11 @@
       "name": "review-list",
       "registryDependencies": [
         "article-block",
+        "empty-state",
         "grid",
         "group",
+        "kit-box",
+        "kit-text",
         "media-frame",
         "rating",
         "section-frame",
@@ -3077,11 +4074,35 @@
     },
     {
       "dependencies": [],
+      "description": "The body of the current page or post as rich text (headings, lists, quotes, pictures, code, tables) under its title and a meta line; in a reading column, wide, beside a side note, under a cover, in a card, or as the page heading over a wide cover.",
+      "name": "rich-text",
+      "registryDependencies": [
+        "box",
+        "card",
+        "grid",
+        "group",
+        "kit-box",
+        "kit-text",
+        "media-frame",
+        "pill",
+        "prose",
+        "section-frame",
+        "text",
+        "title",
+        "utils"
+      ],
+      "title": "Rich Text",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
       "description": "A search input with a magnifier. `value` fires on every keystroke with the new text.",
       "name": "search-field",
       "registryDependencies": [
         "box",
         "input",
+        "kit-box",
+        "kit-input",
         "lucide-icon",
         "utils"
       ],
@@ -3096,6 +4117,9 @@
         "box",
         "inline",
         "input",
+        "kit-box",
+        "kit-input",
+        "kit-text",
         "lucide-icon",
         "utils"
       ],
@@ -3108,6 +4132,7 @@
       "name": "section-box",
       "registryDependencies": [
         "card",
+        "kit-box",
         "utils"
       ],
       "title": "Section Box",
@@ -3118,6 +4143,7 @@
       "description": "The stacked body of a SectionFrame: the heading, the children and the media in one column; a narrow measure (xs to 3xl) holds the column at that width, centred.",
       "name": "section-column",
       "registryDependencies": [
+        "kit-box",
         "presets",
         "stack",
         "utils"
@@ -3134,6 +4160,7 @@
         "box",
         "container",
         "grid",
+        "kit-box",
         "presets",
         "section-box",
         "section-column",
@@ -3152,6 +4179,9 @@
         "box",
         "button-plain",
         "inline",
+        "kit-box",
+        "kit-button",
+        "kit-text",
         "presets",
         "utils"
       ],
@@ -3165,6 +4195,9 @@
       "registryDependencies": [
         "badge",
         "group",
+        "kit-box",
+        "kit-link",
+        "kit-text",
         "link",
         "presets",
         "text",
@@ -3176,9 +4209,11 @@
     },
     {
       "dependencies": [],
-      "description": "OptGroup: one part of Select (one file per part, as in the Svelte package).",
+      "description": "Select: Select + recipe select.",
       "name": "select",
       "registryDependencies": [
+        "kit-select",
+        "recipes",
         "utils"
       ],
       "title": "Select",
@@ -3186,12 +4221,52 @@
     },
     {
       "dependencies": [],
-      "description": "Separator renders a semantic or decorative hr.",
+      "description": "Separator: Separator + recipe separator.",
       "name": "separator",
       "registryDependencies": [
+        "kit-separator",
+        "recipes",
         "utils"
       ],
       "title": "Separator",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "Sheet: Dialog + recipe sheet.",
+      "name": "sheet",
+      "registryDependencies": [
+        "kit-dialog",
+        "recipes",
+        "utils"
+      ],
+      "title": "Sheet",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "SheetClose: Button + Lucide icons (data-ui8kit=\"sheet-close\" behaviour).",
+      "name": "sheet-close",
+      "registryDependencies": [
+        "kit-button",
+        "kit-icon",
+        "recipes",
+        "utils"
+      ],
+      "title": "Sheet Close",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "SheetTrigger: Button + Lucide icons (data-ui8kit=\"sheet-trigger\" behaviour).",
+      "name": "sheet-trigger",
+      "registryDependencies": [
+        "kit-button",
+        "kit-icon",
+        "recipes",
+        "utils"
+      ],
+      "title": "Sheet Trigger",
       "type": "registry:ui"
     },
     {
@@ -3201,6 +4276,8 @@
       "registryDependencies": [
         "box",
         "group",
+        "kit-box",
+        "kit-text",
         "stack",
         "title",
         "utils"
@@ -3214,8 +4291,11 @@
       "name": "shell-footer",
       "registryDependencies": [
         "block",
-        "link",
+        "kit-box",
+        "kit-text",
         "list",
+        "list-item",
+        "menu-entry",
         "nav-block",
         "text",
         "utils"
@@ -3233,9 +4313,13 @@
         "button-plain",
         "group",
         "inline",
-        "link",
+        "kit-box",
+        "kit-button",
+        "kit-text",
         "list",
+        "list-item",
         "lucide-icon",
+        "menu-entry",
         "nav-block",
         "text",
         "utils"
@@ -3252,10 +4336,13 @@
         "box",
         "group",
         "inline",
-        "link",
+        "kit-box",
+        "kit-text",
         "list",
+        "list-item",
         "lucide-icon",
         "media-frame",
+        "menu-entry",
         "nav-block",
         "search-palette",
         "text",
@@ -3272,7 +4359,11 @@
         "box",
         "button",
         "cart-summary-card",
+        "empty-state",
         "group",
+        "kit-box",
+        "kit-button",
+        "kit-text",
         "lucide-icon",
         "media-frame",
         "number-field",
@@ -3292,10 +4383,13 @@
         "block",
         "group",
         "inline",
-        "link",
+        "kit-box",
+        "kit-text",
         "list",
+        "list-item",
         "lucide-icon",
         "media-frame",
+        "menu-entry",
         "nav-block",
         "stack",
         "text",
@@ -3310,6 +4404,7 @@
       "name": "sidebar-panel",
       "registryDependencies": [
         "block",
+        "kit-box",
         "presets",
         "utils"
       ],
@@ -3325,11 +4420,17 @@
         "box",
         "button",
         "field",
-        "form",
         "group",
         "input",
+        "kit-box",
+        "kit-button",
+        "kit-input",
+        "kit-progress",
+        "kit-text",
         "list",
+        "list-item",
         "lucide-icon",
+        "progress",
         "stack",
         "text",
         "title",
@@ -3346,7 +4447,9 @@
         "block",
         "container",
         "group",
-        "link",
+        "kit-box",
+        "kit-text",
+        "menu-entry",
         "nav-block",
         "text",
         "utils"
@@ -3363,8 +4466,11 @@
         "button",
         "container",
         "group",
-        "link",
+        "kit-box",
+        "kit-button",
+        "kit-link",
         "link-plain",
+        "menu-entry",
         "nav-block",
         "utils"
       ],
@@ -3385,8 +4491,14 @@
         "form",
         "group",
         "input",
+        "kit-box",
+        "kit-button",
+        "kit-form",
+        "kit-input",
+        "kit-label",
+        "kit-text",
         "label",
-        "link",
+        "menu-entry",
         "nav-block",
         "pill",
         "stack",
@@ -3399,9 +4511,11 @@
     },
     {
       "dependencies": [],
-      "description": "Skeleton renders a pulsing placeholder box (loading state). It is decorative: aria-hidden; the loading state is announced by the container (aria-busy).",
+      "description": "Skeleton: Box <div> + recipe skeleton.",
       "name": "skeleton",
       "registryDependencies": [
+        "kit-box",
+        "recipes",
         "utils"
       ],
       "title": "Skeleton",
@@ -3415,6 +4529,7 @@
         "block",
         "grid",
         "group",
+        "kit-box",
         "section-frame",
         "skeleton",
         "stack",
@@ -3430,9 +4545,15 @@
       "registryDependencies": [
         "box",
         "button",
+        "empty-state",
         "field",
         "inline",
+        "kit-box",
+        "kit-button",
+        "kit-select",
+        "kit-text",
         "list",
+        "list-item",
         "section-frame",
         "select",
         "slot-grid",
@@ -3451,6 +4572,10 @@
         "box",
         "group",
         "inline",
+        "kit-box",
+        "kit-label",
+        "kit-radio",
+        "kit-text",
         "label",
         "radio",
         "stack",
@@ -3462,9 +4587,11 @@
     },
     {
       "dependencies": [],
-      "description": "Stack arranges children vertically in a flex column. Default layout primitive for spacing sections and form fields.",
+      "description": "Stack: Box + recipe stack.",
       "name": "stack",
       "registryDependencies": [
+        "kit-box",
+        "recipes",
         "utils"
       ],
       "title": "Stack",
@@ -3475,6 +4602,8 @@
       "description": "One key number of StatsBand: a card (StatTile), or the value over its label, optionally under a Lucide icon.",
       "name": "stat-figure",
       "registryDependencies": [
+        "kit-box",
+        "kit-text",
         "lucide-icon",
         "presets",
         "stack",
@@ -3491,7 +4620,10 @@
       "name": "stat-tile",
       "registryDependencies": [
         "box",
-        "iconbadge",
+        "icon-badge",
+        "kit-box",
+        "kit-link",
+        "kit-text",
         "link",
         "lucide-icon",
         "text",
@@ -3506,7 +4638,9 @@
       "name": "stats-band",
       "registryDependencies": [
         "backdrop",
+        "empty-state",
         "grid",
+        "kit-box",
         "presets",
         "section-frame",
         "stat-figure",
@@ -3522,9 +4656,13 @@
       "registryDependencies": [
         "button",
         "group",
-        "iconbadge",
+        "icon-badge",
         "inline",
+        "kit-box",
+        "kit-button",
+        "kit-text",
         "list",
+        "list-item",
         "lucide-icon",
         "section-frame",
         "stack",
@@ -3540,9 +4678,13 @@
       "description": "Numbered or icon steps in a row or a column.",
       "name": "steps-list",
       "registryDependencies": [
-        "iconbadge",
+        "empty-state",
+        "icon-badge",
         "inline",
+        "kit-box",
+        "kit-text",
         "list",
+        "list-item",
         "lucide-icon",
         "section-frame",
         "stack",
@@ -3563,6 +4705,8 @@
         "box",
         "grid",
         "group",
+        "kit-box",
+        "kit-text",
         "lucide-icon",
         "offer-media",
         "section-frame",
@@ -3580,10 +4724,15 @@
       "registryDependencies": [
         "badge",
         "box",
+        "empty-state",
         "group",
         "inline",
+        "kit-box",
+        "kit-link",
+        "kit-text",
         "link",
         "list",
+        "list-item",
         "lucide-icon",
         "media-frame",
         "section-frame",
@@ -3602,6 +4751,8 @@
       "registryDependencies": [
         "group",
         "inline",
+        "kit-box",
+        "kit-text",
         "utils"
       ],
       "title": "Story Dots",
@@ -3615,6 +4766,8 @@
         "badge",
         "box",
         "group",
+        "kit-box",
+        "kit-text",
         "stack",
         "text",
         "title",
@@ -3630,8 +4783,12 @@
       "registryDependencies": [
         "box",
         "button",
+        "empty-state",
         "group",
         "inline",
+        "kit-box",
+        "kit-button",
+        "kit-text",
         "lucide-icon",
         "media-frame",
         "section-frame",
@@ -3645,13 +4802,30 @@
     },
     {
       "dependencies": [],
+      "description": "Summary: Summary + recipe summary.",
+      "name": "summary",
+      "registryDependencies": [
+        "kit-disclosure",
+        "kit-text",
+        "recipes",
+        "utils"
+      ],
+      "title": "Summary",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
       "description": "Ways to get help: email, chat, docs.",
       "name": "support-channels",
       "registryDependencies": [
         "card",
+        "card-content",
+        "empty-state",
         "grid",
-        "link",
+        "kit-box",
+        "kit-text",
         "lucide-icon",
+        "menu-entry",
         "section-frame",
         "stack",
         "text",
@@ -3663,9 +4837,11 @@
     },
     {
       "dependencies": [],
-      "description": "Switch is a toggle control (checkbox with switch ARIA semantics). Use for on/off settings; wireframe uses native checkbox styling.",
+      "description": "Switch: Switch + recipe switch.",
       "name": "switch",
       "registryDependencies": [
+        "kit-switch",
+        "recipes",
         "utils"
       ],
       "title": "Switch",
@@ -3677,6 +4853,7 @@
       "name": "switcher",
       "registryDependencies": [
         "box",
+        "kit-box",
         "presets",
         "utils"
       ],
@@ -3689,6 +4866,7 @@
       "name": "switcher-item",
       "registryDependencies": [
         "button-plain",
+        "kit-button",
         "presets",
         "utils"
       ],
@@ -3697,12 +4875,122 @@
     },
     {
       "dependencies": [],
-      "description": "TableBody: one part of Table (one file per part, as in the Svelte package).",
+      "description": "Table: Box <table> + recipe table.",
       "name": "table",
       "registryDependencies": [
+        "kit-box",
+        "recipes",
         "utils"
       ],
       "title": "Table",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "TableBody: Box <tbody>.",
+      "name": "table-body",
+      "registryDependencies": [
+        "kit-box",
+        "recipes",
+        "utils"
+      ],
+      "title": "Table Body",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "TableCaption: Box <caption>.",
+      "name": "table-caption",
+      "registryDependencies": [
+        "kit-box",
+        "recipes",
+        "utils"
+      ],
+      "title": "Table Caption",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "TableCell: Box <td> + recipe table-cell.",
+      "name": "table-cell",
+      "registryDependencies": [
+        "kit-box",
+        "recipes",
+        "utils"
+      ],
+      "title": "Table Cell",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "TableCol: Box <col>.",
+      "name": "table-col",
+      "registryDependencies": [
+        "kit-box",
+        "recipes",
+        "utils"
+      ],
+      "title": "Table Col",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "TableColGroup: Box <colgroup>.",
+      "name": "table-col-group",
+      "registryDependencies": [
+        "kit-box",
+        "recipes",
+        "utils"
+      ],
+      "title": "Table Col Group",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "TableFoot: Box <tfoot>.",
+      "name": "table-foot",
+      "registryDependencies": [
+        "kit-box",
+        "recipes",
+        "utils"
+      ],
+      "title": "Table Foot",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "TableHead: Box <thead>.",
+      "name": "table-head",
+      "registryDependencies": [
+        "kit-box",
+        "recipes",
+        "utils"
+      ],
+      "title": "Table Head",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "TableHeadCell: Box <th> + recipe table-head-cell.",
+      "name": "table-head-cell",
+      "registryDependencies": [
+        "kit-box",
+        "recipes",
+        "utils"
+      ],
+      "title": "Table Head Cell",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "TableRow: Box <tr>.",
+      "name": "table-row",
+      "registryDependencies": [
+        "kit-box",
+        "recipes",
+        "utils"
+      ],
+      "title": "Table Row",
       "type": "registry:ui"
     },
     {
@@ -3712,6 +5000,8 @@
       "registryDependencies": [
         "box",
         "inline",
+        "kit-box",
+        "kit-text",
         "utils"
       ],
       "title": "Table Toolbar",
@@ -3723,6 +5013,9 @@
       "name": "team-grid",
       "registryDependencies": [
         "box",
+        "empty-state",
+        "kit-box",
+        "kit-text",
         "media-frame",
         "member-row",
         "section-frame",
@@ -3740,10 +5033,14 @@
       "registryDependencies": [
         "box",
         "button",
+        "empty-state",
         "grid",
         "group",
-        "iconbadge",
+        "icon-badge",
         "inline",
+        "kit-box",
+        "kit-button",
+        "kit-text",
         "lucide-icon",
         "media-frame",
         "presets",
@@ -3762,7 +5059,9 @@
       "name": "testimonial-grid",
       "registryDependencies": [
         "block",
+        "empty-state",
         "grid",
+        "kit-box",
         "quote-card",
         "section-frame",
         "utils"
@@ -3772,9 +5071,11 @@
     },
     {
       "dependencies": [],
-      "description": "Text renders body copy: a paragraph by default; Tag picks another text element (blockquote, figcaption, address, pre, or an inline element). Title (as 1–6) is for headings.",
+      "description": "Text: Text + recipe text.",
       "name": "text",
       "registryDependencies": [
+        "kit-text",
+        "recipes",
         "utils"
       ],
       "title": "Text",
@@ -3782,12 +5083,27 @@
     },
     {
       "dependencies": [],
-      "description": "Textarea is a multi-line native text field with row sizing.",
+      "description": "Textarea: Textarea + recipe textarea.",
       "name": "textarea",
       "registryDependencies": [
+        "kit-textarea",
+        "recipes",
         "utils"
       ],
       "title": "Textarea",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "ThemeToggle: Button + Lucide icons (data-ui8kit=\"theme-toggle\" behaviour).",
+      "name": "theme-toggle",
+      "registryDependencies": [
+        "kit-button",
+        "kit-icon",
+        "recipes",
+        "utils"
+      ],
+      "title": "Theme Toggle",
       "type": "registry:ui"
     },
     {
@@ -3797,7 +5113,10 @@
       "registryDependencies": [
         "box",
         "inline",
+        "kit-box",
+        "kit-text",
         "list",
+        "list-item",
         "text",
         "utils"
       ],
@@ -3806,9 +5125,11 @@
     },
     {
       "dependencies": [],
-      "description": "Title renders a heading (h1–h6) from As (1–6). Defaults to h2 when As is 0 or out of range.",
+      "description": "Title: Text + recipe title.",
       "name": "title",
       "registryDependencies": [
+        "kit-text",
+        "recipes",
         "utils"
       ],
       "title": "Title",
@@ -3816,11 +5137,13 @@
     },
     {
       "dependencies": [],
-      "description": "A centered row of topic pills (static links). tone inverse: on a dark band with an icon per topic; default: outlined.",
+      "description": "A centered row of topic pills: links where a topic has an address, else buttons. tone inverse: on a dark band with an icon per topic; default: outlined.",
       "name": "topic-chips",
       "registryDependencies": [
         "button",
         "group",
+        "kit-box",
+        "kit-button",
         "lucide-icon",
         "utils"
       ],
@@ -3835,6 +5158,9 @@
         "block",
         "button",
         "group",
+        "kit-box",
+        "kit-button",
+        "kit-text",
         "section-frame",
         "stack",
         "text",
@@ -3850,6 +5176,10 @@
       "registryDependencies": [
         "button",
         "group",
+        "kit-box",
+        "kit-button",
+        "kit-input",
+        "kit-text",
         "range",
         "section-frame",
         "stack",
@@ -3865,9 +5195,13 @@
       "name": "usp-strip",
       "registryDependencies": [
         "box",
+        "empty-state",
         "grid",
         "inline",
+        "kit-box",
+        "kit-text",
         "list",
+        "list-item",
         "lucide-icon",
         "section-frame",
         "stack",
@@ -3892,8 +5226,12 @@
       "registryDependencies": [
         "box",
         "button",
+        "empty-state",
         "figure-block",
         "grid",
+        "kit-box",
+        "kit-button",
+        "kit-text",
         "lucide-icon",
         "media-frame",
         "section-frame",
@@ -3911,7 +5249,11 @@
         "box",
         "button",
         "group",
+        "kit-box",
+        "kit-button",
+        "kit-text",
         "list",
+        "list-item",
         "lucide-icon",
         "media-frame",
         "section-frame",
@@ -3929,6 +5271,7 @@
       "name": "weighted-title",
       "registryDependencies": [
         "inline",
+        "kit-text",
         "presets",
         "title",
         "utils"
@@ -3943,8 +5286,16 @@
       "registryDependencies": [
         "badge",
         "box",
+        "kit-box",
+        "kit-text",
         "stack",
         "table",
+        "table-body",
+        "table-caption",
+        "table-cell",
+        "table-head",
+        "table-head-cell",
+        "table-row",
         "text",
         "utils"
       ],
@@ -3957,9 +5308,13 @@
       "name": "zone-table",
       "registryDependencies": [
         "badge",
+        "empty-state",
         "grid",
         "inline",
+        "kit-box",
+        "kit-text",
         "list",
+        "list-item",
         "section-frame",
         "stack",
         "text",
@@ -3971,7 +5326,7 @@
       "type": "registry:block"
     }
   ],
-  "lastUpdated": "2026-10-14T00:45:47+03:00",
+  "lastUpdated": "2026-11-02T01:32:07+03:00",
   "registry": "ui",
   "version": "0.1.0"
 }

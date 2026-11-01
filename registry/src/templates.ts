@@ -1,3 +1,4 @@
+// FROZEN since source fe2874f (xgen theme screens and host apps removed); outputs kept from b0bcb9e, see docs/PIPELINE.md.
 // Builds previews/templates/ (the Templates tab) from the private source monorepo at the commit of the registry (r/registry.json sourceCommit):
 //
 //   bun run templates:build -- --src /path/to/source      # or UI8KIT_SRC; the monorepo needs `bun install` once

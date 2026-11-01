@@ -6,7 +6,8 @@ const files = [];
 (function walk(d) { for (const e of readdirSync(d)) { const p = path.join(d, e); statSync(p).isDirectory() ? walk(p) : files.push(p); } })(root);
 let bad = 0;
 for (const f of files.filter((f) => /\.(ts|tsx|svelte|vue)$/.test(f))) {
-  const src = readFileSync(f, "utf8");
+  // block comments (JSDoc usage examples) are not imports
+  const src = readFileSync(f, "utf8").replace(/\/\*[\s\S]*?\*\//g, "");
   for (const m of src.matchAll(/(?:from|import)\s+["'](\.[^"']*)["']/g)) {
     const b = path.resolve(path.dirname(f), m[1]);
     const ok = [b, ...[".ts", ".tsx", ".svelte", ".vue"].map((e) => b + e), path.join(b, "index.ts")].some((c) => existsSync(c) && statSync(c).isFile());

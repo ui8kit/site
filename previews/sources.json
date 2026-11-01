@@ -54,8 +54,10 @@
   "media-steps",
   "media-topics",
   "member-row",
+  "menu-entry",
   "meter-row",
   "nav-actions",
+  "nav-bar-menu",
   "nav-block",
   "nav-links",
   "number-field",
@@ -78,6 +80,8 @@
   "post-stats",
   "post-tags",
   "product-card",
+  "product-gallery",
+  "product-price",
   "project-tiles",
   "quote-card",
   "quote-figures",
@@ -107,14 +111,5 @@
   "topic-chips",
   "zone-rows"
  ],
- "primitivesCaptured": [
-  "card",
-  "disclosure",
-  "form",
-  "grid",
-  "image",
-  "list",
-  "select",
-  "table"
- ]
+ "primitivesCaptured": []
 }

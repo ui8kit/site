@@ -2,10 +2,11 @@
 //
 //   bun run previews:build -- --src /path/to/source      # or UI8KIT_SRC; the monorepo needs `bun install` once
 //
-// Route: the React package of the monorepo (@ui8kit/react-ui) is rendered with react-dom/server (renderToStaticMarkup) on the placeholder
-// content of the monorepo (xgen block samples + fixtures + content dictionary). The result is plain HTML with Tailwind class names; the site
+// Route: the composed React package of the monorepo (packages/kit-compose/react/src: compose wrappers + organisms on the CLI-installed kit)
+// is rendered with react-dom/server (renderToStaticMarkup) on the placeholder content of the monorepo (compose-gen block samples + fixtures
+// of packages/shared/app + content dictionary). The result is plain HTML with Tailwind class names; the site
 // CSS (Tailwind scans previews/*.html) styles it, so there is no iframe, no runtime and no extra stylesheet. Props tables come from the xgen specs
-// (specs/ui, parts, patterns, organisms, *.variants.json), not from hand-written text. Deterministic output.
+// (packages/compose-gen/specs: primitives.json, parts, patterns, organisms; packages/kit-compose/variants/*.variants.json), not from hand-written text. Deterministic output.
 import { createHash } from "node:crypto";
 import { existsSync, mkdirSync, readdirSync, readFileSync, rmSync, writeFileSync } from "node:fs";
 import { createRequire } from "node:module";
@@ -18,7 +19,8 @@ const arg = (n: string, env: string, d: string) => {
 const repoRoot = path.resolve(import.meta.dir, "../..");
 const SRC = path.resolve(arg("src", "UI8KIT_SRC", path.join(repoRoot, "..", "source")));
 const OUT = path.resolve(arg("out", "UI8KIT_PREVIEWS", path.join(repoRoot, "previews")));
-const XG = path.join(SRC, "xgen");
+const XG = path.join(SRC, "packages/compose-gen");
+const VARIANTS = path.join(SRC, "packages/kit-compose/variants");
 
 const rj = (...p: string[]) => JSON.parse(readFileSync(path.join(...p), "utf8"));
 const kebab = (s: string) => s.replace(/([a-z0-9])([A-Z])/g, "$1-$2").toLowerCase();
@@ -43,7 +45,7 @@ for (const rt of ["react/jsx-runtime", "react/jsx-dev-runtime"]) {
     };
   }
 }
-const ui8: any = await import(path.join(SRC, "packages/react/ui/src/index.ts"));
+const ui8: any = await import(path.join(SRC, "packages/kit-compose/react/src/index.ts"));
 const { ui } = (await import(path.join(SRC, "packages/shared/app/src/content.ts"))) as any;
 const { fromCodex } = (await import(path.join(SRC, "packages/shared/app/src/runtime/core.ts"))) as any;
 
@@ -53,7 +55,21 @@ const reg = JSON.parse(readFileSync(path.join(repoRoot, "r/registry.json"), "utf
 // ---------- specs
 const specDir = (d: string) => path.join(XG, "specs", d);
 const load = (d: string) => Object.fromEntries(readdirSync(specDir(d)).filter((f) => f.endsWith(".json") && !f.endsWith(".variants.json")).map((f) => [f.slice(0, -5), rj(specDir(d), f)]));
-const S = { ui: load("ui"), parts: load("parts"), patterns: load("patterns"), organisms: load("organisms") };
+// primitive (compose wrapper) items: one spec per part of specs/primitives.json, named like the registry item (kebab of the part),
+// with the recipe of packages/kit-compose/variants (<name>.variants.json, or without dashes: sheettrigger, iconbadge)
+const pascal = (n: string) => n.split("-").map((w) => w[0]!.toUpperCase() + w.slice(1)).join("");
+const PRIMS = rj(specDir(""), "primitives.json").primitives as any[];
+const partSpec = new Map<string, any>();
+for (const pr of PRIMS) for (const part of pr.parts) partSpec.set(part.name, { ...part, docs: part.docs ?? pr.docs });
+function uiSpec(n: string): any {
+  const name = pascal(n);
+  const vf = [n, n.replace(/-/g, "")].map((x) => x + ".variants.json").find((f) => existsSync(path.join(VARIANTS, f)));
+  const part = partSpec.get(name) ?? partSpec.get(name.replace(/^Select(?=Option|OptGroup)/, "Select")) ?? { name, props: [] };
+  const vr = vf ? rj(VARIANTS, vf) : null;
+  if (!ui8[name]) return null;
+  return { parts: [{ ...part, name, recipeId: vr ? "r" : undefined }], variants: vr ? { r: vf } : {}, examples: [] };
+}
+const S = { ui: new Proxy({} as Record<string, any>, { get: (_, n: string) => uiSpec(n) }), parts: load("parts"), patterns: load("patterns"), organisms: load("organisms") };
 const blocksByOrg: Record<string, any> = {};
 for (const f of readdirSync(specDir("blocks"))) { const b = rj(specDir("blocks"), f); blocksByOrg[kebab(b.organism)] = b; }
 
@@ -153,7 +169,7 @@ const strDef = (v: any) => v === undefined || v === null ? undefined : typeof v 
 function primitiveTables(spec: any): Table[] {
   const variantsOf = (recipe: string) => {
     const f = spec.variants?.[recipe];
-    return f ? rj(specDir("ui"), f) : null;
+    return f ? rj(VARIANTS, f) : null;
   };
   return spec.parts.map((p: any) => {
     const vr = p.recipeId ? variantsOf(p.recipeId) : null;
@@ -205,7 +221,7 @@ function primitivePreview(name: string, spec: any): string | null {
   const cells: string[] = [];
   const add = (cap: string, p: any) => cells.push(`<figure class="flex flex-col items-start gap-2"><figcaption class="text-xs text-muted-foreground">${cap}</figcaption>${render(C, children || main.name === "Break" ? p : { "aria-label": cap, ...p }, children)}</figure>`);
   const examples: any[] = spec.examples ?? [];
-  const vr = main.recipeId && spec.variants?.[main.recipeId] ? rj(specDir("ui"), spec.variants[main.recipeId]) : null;
+  const vr = main.recipeId && spec.variants?.[main.recipeId] ? rj(VARIANTS, spec.variants[main.recipeId]) : null;
   const seen = new Set<string>();
   const pushEx = (id: string, p: any) => { const k = JSON.stringify(p); if (!seen.has(k)) { seen.add(k); add(id, p); } };
   if (vr) {
@@ -225,12 +241,14 @@ const ORDER: Record<string, number> = { block: 0, component: 1, primitive: 2 };
 for (const it of [...(reg.items as any[])].sort((a, b) => (ORDER[a.kind] ?? 9) - (ORDER[b.kind] ?? 9))) {
   if (it.kind === "lib" || it.kind === "utils") continue;
   const n: string = it.name;
+  // kit-* items are the bare kit primitives under the compose wrappers: their page shows the wrapper's preview
+  if (n.startsWith("kit-")) continue;
   try {
     if (it.kind === "block") {
       const org = S.organisms[n];
       props[n] = organismTable(org);
       const b = blocksByOrg[n];
-      if (!b) { problems.push(`${n}: no xgen block sample`); continue; }
+      if (!b) { problems.push(`${n}: no compose-gen block sample`); continue; }
       const sets = dataSets(b);
       const v0 = b.variants[0];
       const p = resolve(merge(merge(b.sample.props, v0.set ?? {}), v0.props ?? {}), sets);
@@ -276,7 +294,8 @@ for (const it of reg.items as any[]) {
 }
 
 // ---------- write
-rmSync(OUT, { recursive: true, force: true });
+// only the outputs of this script: previews/templates and static-code.json belong to templates:build (frozen, see docs/PIPELINE.md)
+for (const d of ["html", "ph"]) rmSync(path.join(OUT, d), { recursive: true, force: true });
 mkdirSync(path.join(OUT, "html"), { recursive: true });
 mkdirSync(path.join(OUT, "ph"), { recursive: true });
 for (const [n, h] of Object.entries(previews).sort()) writeFileSync(path.join(OUT, "html", n + ".html"), h + "\n");

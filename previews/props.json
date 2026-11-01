@@ -216,6 +216,12 @@
      "type": "Event[]"
     },
     {
+     "default": "\"\"",
+     "desc": "the text of the empty state (no records), from the dictionary",
+     "name": "empty",
+     "type": "string"
+    },
+    {
      "default": "\"timeline\"",
      "name": "layout",
      "type": "\"timeline\" | \"list\"",
@@ -252,41 +258,8 @@
  ],
  "alert": [
   {
-   "docs": "Alert renders a div with alert or status semantics.",
    "part": "Alert",
-   "rows": [
-    {
-     "desc": "adds Tailwind utilities",
-     "name": "class",
-     "type": "string"
-    },
-    {
-     "default": "\"default\"",
-     "desc": "default, destructive, or wireframe preset",
-     "name": "variant",
-     "type": "\"default\" | \"destructive\" | \"success\" | \"warning\"",
-     "values": [
-      "default",
-      "destructive",
-      "success",
-      "warning"
-     ]
-    },
-    {
-     "desc": "status or alert (defaults to status)",
-     "name": "role",
-     "type": "string"
-    },
-    {
-     "desc": "polite or assertive (defaults to polite)",
-     "name": "ariaLive",
-     "type": "string"
-    },
-    {
-     "name": "children",
-     "type": "children"
-    }
-   ]
+   "rows": []
   }
  ],
  "announcement-bar": [
@@ -544,6 +517,12 @@
      "name": "sections",
      "required": true,
      "type": "Section[]"
+    },
+    {
+     "default": "\"\"",
+     "desc": "the text of the empty state (no records), from the dictionary",
+     "name": "empty",
+     "type": "string"
     },
     {
      "name": "tocTitle",
@@ -871,42 +850,8 @@
  ],
  "badge": [
   {
-   "docs": "Badge renders label text in a div wrapper.",
    "part": "Badge",
-   "rows": [
-    {
-     "default": "\"default\"",
-     "desc": "color preset: default, secondary, destructive, outline",
-     "name": "variant",
-     "type": "\"default\" | \"secondary\" | \"outline\" | \"destructive\"",
-     "values": [
-      "default",
-      "secondary",
-      "outline",
-      "destructive"
-     ]
-    },
-    {
-     "default": "\"default\"",
-     "desc": "density preset: default, sm, lg",
-     "name": "size",
-     "type": "\"sm\" | \"default\" | \"lg\"",
-     "values": [
-      "sm",
-      "default",
-      "lg"
-     ]
-    },
-    {
-     "desc": "adds Tailwind utilities",
-     "name": "class",
-     "type": "string"
-    },
-    {
-     "name": "children",
-     "type": "children"
-    }
-   ]
+   "rows": []
   }
  ],
  "badge-square": [
@@ -979,6 +924,12 @@
      "type": "Contrast[]"
     },
     {
+     "default": "\"\"",
+     "desc": "the text of the empty state (no records), from the dictionary",
+     "name": "empty",
+     "type": "string"
+    },
+    {
      "name": "labels",
      "required": true,
      "type": "BeforeAfterLabels"
@@ -1048,6 +999,12 @@
      "type": "Tile[]"
     },
     {
+     "default": "\"\"",
+     "desc": "the text of the empty state (no records), from the dictionary",
+     "name": "empty",
+     "type": "string"
+    },
+    {
      "default": "\"bento\"",
      "name": "layout",
      "type": "\"bento\" | \"even\"",
@@ -1093,24 +1050,8 @@
  ],
  "block": [
   {
-   "docs": "Block renders a resolved landmark element with children.",
    "part": "Block",
-   "rows": [
-    {
-     "desc": "adds Tailwind utilities",
-     "name": "class",
-     "type": "string"
-    },
-    {
-     "desc": "semantic tag: div (default), section, article, aside, header, footer, main, nav, figure, search, hgroup",
-     "name": "tag",
-     "type": "string"
-    },
-    {
-     "name": "children",
-     "type": "children"
-    }
-   ]
+   "rows": []
   }
  ],
  "bottom-nav": [
@@ -1170,41 +1111,21 @@
  ],
  "box": [
   {
-   "docs": "Box renders a div layout wrapper.",
+   "docs": "Box renders the requested structural HTML element (default div).",
    "part": "Box",
    "rows": [
     {
-     "desc": "adds Tailwind utilities",
-     "name": "class",
-     "type": "string"
-    },
-    {
-     "desc": "div only. Use Block for landmarks (aside, section, header, nav).",
+     "desc": "HTML5 structural tag (default div)",
      "name": "tag",
      "type": "string"
-    },
-    {
-     "name": "children",
-     "type": "children"
     }
    ]
   }
  ],
  "breadcrumb": [
   {
-   "docs": "Breadcrumb renders the full navigation trail.",
    "part": "Breadcrumb",
-   "rows": [
-    {
-     "desc": "adds Tailwind utilities",
-     "name": "class",
-     "type": "string"
-    },
-    {
-     "name": "items",
-     "type": "items"
-    }
-   ]
+   "rows": []
   }
  ],
  "bulk-bar": [
@@ -1233,216 +1154,63 @@
    "part": "Button",
    "rows": [
     {
-     "default": "\"default\"",
-     "desc": "appearance preset: default, secondary, destructive, outline, ghost, link",
-     "name": "variant",
-     "type": "\"default\" | \"outline\" | \"ghost\" | \"secondary\" | \"destructive\" | \"link\"",
-     "values": [
-      "default",
-      "outline",
-      "ghost",
-      "secondary",
-      "destructive",
-      "link"
-     ]
-    },
-    {
-     "default": "\"default\"",
-     "desc": "density preset: default, sm, lg, icon",
-     "name": "size",
-     "type": "\"sm\" | \"default\" | \"lg\"",
-     "values": [
-      "sm",
-      "default",
-      "lg"
-     ]
-    },
-    {
-     "default": "\"default\"",
-     "desc": "sets layout",
-     "name": "layout",
-     "type": "\"default\" | \"icon\"",
-     "values": [
-      "default",
-      "icon"
-     ]
-    },
-    {
-     "desc": "adds Tailwind utilities",
-     "name": "class",
-     "type": "string"
-    },
-    {
-     "desc": "button type: button, submit, reset (ignored when Href is set)",
+     "desc": "button type (default button)",
      "name": "type",
      "type": "string"
     },
     {
-     "desc": "when set, renders an anchor with button appearance",
+     "desc": "renders an anchor when set",
      "name": "href",
      "type": "string"
-    },
-    {
-     "desc": "explicit target; External implies _blank (anchor mode)",
-     "name": "target",
-     "type": "string"
-    },
-    {
-     "desc": "explicit rel; external links default to noopener noreferrer (anchor mode)",
-     "name": "rel",
-     "type": "string"
-    },
-    {
-     "desc": "opens in a new tab with safe rel defaults (anchor mode)",
-     "name": "external",
-     "type": "boolean"
     },
     {
      "desc": "blocks interaction",
      "name": "disabled",
      "type": "boolean"
-    },
-    {
-     "name": "children",
-     "type": "children"
     }
    ]
   }
  ],
  "button-plain": [
   {
-   "docs": "ButtonPlain is a bare button element: no styling beyond Class. Patterns (tabs, tree rows, menu items) style it themselves.",
    "part": "ButtonPlain",
-   "rows": [
-    {
-     "desc": "adds Tailwind utilities",
-     "name": "class",
-     "type": "string"
-    },
-    {
-     "desc": "button type: button, submit, reset (ignored when Href is set)",
-     "name": "type",
-     "type": "string"
-    },
-    {
-     "desc": "blocks interaction",
-     "name": "disabled",
-     "type": "boolean"
-    },
-    {
-     "name": "children",
-     "type": "children"
-    }
-   ]
+   "rows": []
   }
  ],
  "card": [
   {
-   "docs": "Card renders the bordered surface wrapper.",
    "part": "Card",
-   "rows": [
-    {
-     "desc": "adds Tailwind utilities",
-     "name": "class",
-     "type": "string"
-    },
-    {
-     "default": "\"default\"",
-     "desc": "surface: default, muted, ghost, compact",
-     "name": "variant",
-     "type": "\"default\" | \"muted\" | \"ghost\" | \"compact\"",
-     "values": [
-      "default",
-      "muted",
-      "ghost",
-      "compact"
-     ]
-    },
-    {
-     "name": "children",
-     "type": "children"
-    }
-   ]
-  },
+   "rows": []
+  }
+ ],
+ "card-content": [
   {
-   "docs": "CardHeader renders the top slot.",
-   "part": "CardHeader",
-   "rows": [
-    {
-     "desc": "adds Tailwind utilities",
-     "name": "class",
-     "type": "string"
-    },
-    {
-     "name": "children",
-     "type": "children"
-    }
-   ]
-  },
-  {
-   "docs": "CardTitle renders heading text at the As level (default h2).",
-   "part": "CardTitle",
-   "rows": [
-    {
-     "desc": "adds Tailwind utilities",
-     "name": "class",
-     "type": "string"
-    },
-    {
-     "desc": "maps to h1-h6 (default h2)",
-     "name": "as",
-     "type": "int"
-    },
-    {
-     "name": "children",
-     "type": "children"
-    }
-   ]
-  },
-  {
-   "docs": "CardDescription renders a muted subtitle in a p element.",
-   "part": "CardDescription",
-   "rows": [
-    {
-     "desc": "adds Tailwind utilities",
-     "name": "class",
-     "type": "string"
-    },
-    {
-     "name": "children",
-     "type": "children"
-    }
-   ]
-  },
-  {
-   "docs": "CardContent renders the padded main body slot.",
    "part": "CardContent",
-   "rows": [
-    {
-     "desc": "adds Tailwind utilities",
-     "name": "class",
-     "type": "string"
-    },
-    {
-     "name": "children",
-     "type": "children"
-    }
-   ]
-  },
+   "rows": []
+  }
+ ],
+ "card-description": [
   {
-   "docs": "CardFooter renders the bottom action slot.",
+   "part": "CardDescription",
+   "rows": []
+  }
+ ],
+ "card-footer": [
+  {
    "part": "CardFooter",
-   "rows": [
-    {
-     "desc": "adds Tailwind utilities",
-     "name": "class",
-     "type": "string"
-    },
-    {
-     "name": "children",
-     "type": "children"
-    }
-   ]
+   "rows": []
+  }
+ ],
+ "card-header": [
+  {
+   "part": "CardHeader",
+   "rows": []
+  }
+ ],
+ "card-title": [
+  {
+   "part": "CardTitle",
+   "rows": []
   }
  ],
  "cart-drawer": [
@@ -1521,6 +1289,12 @@
      "name": "lines",
      "required": true,
      "type": "CartLine[]"
+    },
+    {
+     "default": "\"\"",
+     "desc": "the text of the empty state (no records), from the dictionary",
+     "name": "empty",
+     "type": "string"
     },
     {
      "name": "labels",
@@ -1782,6 +1556,12 @@
      "type": "Point[]"
     },
     {
+     "default": "\"\"",
+     "desc": "the text of the empty state (no records), from the dictionary",
+     "name": "empty",
+     "type": "string"
+    },
+    {
      "desc": "the chart's accessible summary",
      "name": "summary",
      "required": true,
@@ -1830,44 +1610,19 @@
  ],
  "checkbox": [
   {
-   "docs": "Checkbox renders a styled input[type=checkbox].",
+   "docs": "Checkbox renders input[type=checkbox].",
    "part": "Checkbox",
    "rows": [
-    {
-     "default": "\"default\"",
-     "desc": "sets appearance preset",
-     "name": "variant",
-     "type": "\"default\" | \"ghost\"",
-     "values": [
-      "default",
-      "ghost"
-     ]
-    },
-    {
-     "default": "\"default\"",
-     "desc": "sets density preset",
-     "name": "size",
-     "type": "\"default\" | \"sm\"",
-     "values": [
-      "default",
-      "sm"
-     ]
-    },
-    {
-     "desc": "adds Tailwind utilities",
-     "name": "class",
-     "type": "string"
-    },
     {
      "name": "checked",
      "type": "boolean"
     },
     {
-     "name": "disabled",
+     "name": "required",
      "type": "boolean"
     },
     {
-     "name": "required",
+     "name": "disabled",
      "type": "boolean"
     }
    ]
@@ -1892,6 +1647,12 @@
      "name": "tasks",
      "required": true,
      "type": "Task[]"
+    },
+    {
+     "default": "\"\"",
+     "desc": "the text of the empty state (no records), from the dictionary",
+     "name": "empty",
+     "type": "string"
     },
     {
      "desc": "template of the count, e.g. `{0} of {1} done`",
@@ -2175,6 +1936,12 @@
      "type": "CompareRow[]"
     },
     {
+     "default": "\"\"",
+     "desc": "the text of the empty state (no records), from the dictionary",
+     "name": "empty",
+     "type": "string"
+    },
+    {
      "name": "labels",
      "required": true,
      "type": "CompareLabels"
@@ -2311,24 +2078,8 @@
  ],
  "container": [
   {
-   "docs": "Container renders the outer content shell.",
    "part": "Container",
-   "rows": [
-    {
-     "desc": "adds Tailwind utilities",
-     "name": "class",
-     "type": "string"
-    },
-    {
-     "desc": "div, main, or section",
-     "name": "tag",
-     "type": "string"
-    },
-    {
-     "name": "children",
-     "type": "children"
-    }
-   ]
+   "rows": []
   }
  ],
  "cookie-banner": [
@@ -2420,6 +2171,12 @@
      "name": "packs",
      "required": true,
      "type": "Pack[]"
+    },
+    {
+     "default": "\"\"",
+     "desc": "the text of the empty state (no records), from the dictionary",
+     "name": "empty",
+     "type": "string"
     },
     {
      "desc": "badge word by pack badge (popular, best)",
@@ -2604,8 +2361,8 @@
      "type": "string"
     },
     {
+     "desc": "the address; none: a button, not a link",
      "name": "href",
-     "required": true,
      "type": "string"
     },
     {
@@ -3003,102 +2760,22 @@
    "part": "Dialog",
    "rows": [
     {
-     "default": "\"default\"",
-     "desc": "sets appearance preset",
-     "name": "variant",
-     "type": "\"card\" | \"default\" | \"sheet\"",
-     "values": [
-      "card",
-      "default",
-      "sheet"
-     ]
-    },
-    {
-     "default": "\"default\"",
-     "desc": "sets density preset",
-     "name": "size",
-     "type": "\"default\" | \"full\" | \"lg\" | \"xl\"",
-     "values": [
-      "default",
-      "full",
-      "lg",
-      "xl"
-     ]
-    },
-    {
-     "desc": "adds Tailwind utilities",
-     "name": "class",
-     "type": "string"
-    },
-    {
-     "desc": "initial open state (static attribute only)",
+     "desc": "initial open state",
      "name": "open",
      "type": "boolean"
-    },
-    {
-     "name": "children",
-     "type": "children"
     }
    ]
   }
  ],
  "disclosure": [
   {
-   "docs": "Disclosure renders native details.",
+   "docs": "Disclosure renders a native details element.",
    "part": "Disclosure",
    "rows": [
     {
-     "default": "\"default\"",
-     "desc": "sets appearance preset",
-     "name": "variant",
-     "type": "\"card\" | \"default\" | \"ghost\" | \"item\"",
-     "values": [
-      "card",
-      "default",
-      "ghost",
-      "item"
-     ]
-    },
-    {
-     "desc": "adds Tailwind utilities",
-     "name": "class",
-     "type": "string"
-    },
-    {
-     "desc": "initial open state (static attribute only)",
+     "desc": "initial open state",
      "name": "open",
      "type": "boolean"
-    },
-    {
-     "name": "children",
-     "type": "children"
-    }
-   ]
-  },
-  {
-   "docs": "Summary renders native summary, followed by a Lucide chevron-down indicator that turns over when the details open (CSS only: group-open:rotate-180 on the Disclosure group).",
-   "part": "Summary",
-   "rows": [
-    {
-     "default": "\"default\"",
-     "desc": "sets appearance preset",
-     "name": "variant",
-     "type": "\"card\" | \"default\" | \"ghost\" | \"item\"",
-     "values": [
-      "card",
-      "default",
-      "ghost",
-      "item"
-     ]
-    },
-    {
-     "desc": "adds Tailwind utilities",
-     "name": "class",
-     "type": "string"
-    },
-    {
-     "name": "children",
-     "type": "children"
     }
    ]
   }
@@ -3513,6 +3190,12 @@
      ]
     },
     {
+     "default": "\"\"",
+     "desc": "the text of the empty state (no question, or none matches the search or tab), from the dictionary",
+     "name": "empty",
+     "type": "string"
+    },
+    {
      "default": "false",
      "desc": "true: several can be open at once; false: opening one closes the others (native details name)",
      "name": "multiple",
@@ -3662,6 +3345,12 @@
      "type": "Feature[]"
     },
     {
+     "default": "\"\"",
+     "desc": "the text of the empty state (no records), from the dictionary",
+     "name": "empty",
+     "type": "string"
+    },
+    {
      "default": "\"first\"",
      "name": "expand",
      "type": "\"first\" | \"none\"",
@@ -3765,6 +3454,12 @@
      "name": "features",
      "required": true,
      "type": "Feature[]"
+    },
+    {
+     "default": "\"\"",
+     "desc": "the text of the empty state (no records), from the dictionary",
+     "name": "empty",
+     "type": "string"
     },
     {
      "desc": "optional link opposite the heading",
@@ -3914,6 +3609,12 @@
      "name": "features",
      "required": true,
      "type": "Feature[]"
+    },
+    {
+     "default": "\"\"",
+     "desc": "the text of the empty state (no records), from the dictionary",
+     "name": "empty",
+     "type": "string"
     },
     {
      "desc": "the word of the read link of the picture cards",
@@ -4084,6 +3785,12 @@
     },
     {
      "default": "\"\"",
+     "desc": "the text of the empty state (no records), from the dictionary",
+     "name": "empty",
+     "type": "string"
+    },
+    {
+     "default": "\"\"",
      "desc": "id of the current feature",
      "name": "active",
      "type": "string"
@@ -4151,6 +3858,12 @@
      "name": "features",
      "required": true,
      "type": "Feature[]"
+    },
+    {
+     "default": "\"\"",
+     "desc": "the text of the empty state (no records), from the dictionary",
+     "name": "empty",
+     "type": "string"
     },
     {
      "name": "tabsLabel",
@@ -4224,6 +3937,12 @@
      "type": "string"
     }
    ]
+  }
+ ],
+ "fieldset": [
+  {
+   "part": "Fieldset",
+   "rows": []
   }
  ],
  "figure-block": [
@@ -4486,6 +4205,24 @@
    ]
   }
  ],
+ "footer-sitemap": [
+  {
+   "docs": "The sitemap link of FooterSplit: an arrow and the word, only where the app gives the address (no address, no link).",
+   "part": "FooterSitemap",
+   "rows": [
+    {
+     "desc": "the address of the sitemap; none: nothing",
+     "name": "href",
+     "type": "string"
+    },
+    {
+     "name": "label",
+     "required": true,
+     "type": "string"
+    }
+   ]
+  }
+ ],
  "footer-split": [
   {
    "docs": "A footer with more than links. Axes: layout (stats: the brand with three figures and a sitemap link over the link groups as cards; points, links, newsletter, contacts, channels: a split beside a picture with the brand and four points, the brand and small link columns, a newsletter card and link columns, the contacts and two actions, or the community channels and figures), mediaSide, tone.",
@@ -4574,188 +4311,56 @@
  ],
  "form": [
   {
-   "docs": "Form renders a vertical grid form container.",
+   "docs": "Form renders a native form element; method is whitelisted (get|post|dialog).",
    "part": "Form",
    "rows": [
     {
-     "desc": "adds Tailwind utilities",
-     "name": "class",
+     "desc": "HTTP method: get | post | dialog (omitted when empty)",
+     "name": "method",
      "type": "string"
     },
     {
+     "desc": "skip native constraint validation",
      "name": "noValidate",
      "type": "boolean"
-    },
-    {
-     "name": "children",
-     "type": "children"
     }
    ]
-  },
+  }
+ ],
+ "form-description": [
   {
-   "docs": "FormItem groups a single field with spacing for label and control.",
-   "part": "FormItem",
-   "rows": [
-    {
-     "desc": "adds Tailwind utilities",
-     "name": "class",
-     "type": "string"
-    },
-    {
-     "name": "children",
-     "type": "children"
-    }
-   ]
-  },
-  {
-   "docs": "FormDescription renders muted helper copy below a control.",
    "part": "FormDescription",
-   "rows": [
-    {
-     "desc": "adds Tailwind utilities",
-     "name": "class",
-     "type": "string"
-    },
-    {
-     "name": "children",
-     "type": "children"
-    }
-   ]
-  },
+   "rows": []
+  }
+ ],
+ "form-item": [
   {
-   "docs": "FormMessage renders destructive validation feedback.",
+   "part": "FormItem",
+   "rows": []
+  }
+ ],
+ "form-message": [
+  {
    "part": "FormMessage",
-   "rows": [
-    {
-     "desc": "adds Tailwind utilities",
-     "name": "class",
-     "type": "string"
-    },
-    {
-     "name": "children",
-     "type": "children"
-    }
-   ]
+   "rows": []
   }
  ],
  "grid": [
   {
-   "docs": "Grid renders a display:grid container.",
    "part": "Grid",
-   "rows": [
-    {
-     "desc": "adds Tailwind utilities",
-     "name": "class",
-     "type": "string"
-    },
-    {
-     "desc": "column preset: 1–12 or responsive 1-2, 1-3, 1-4",
-     "name": "cols",
-     "type": "string"
-    },
-    {
-     "name": "children",
-     "type": "children"
-    }
-   ]
-  },
+   "rows": []
+  }
+ ],
+ "grid-col": [
   {
-   "docs": "GridCol renders one grid column child.",
    "part": "GridCol",
-   "rows": [
-    {
-     "desc": "adds Tailwind utilities",
-     "name": "class",
-     "type": "string"
-    },
-    {
-     "desc": "col-span-1..12",
-     "name": "span",
-     "type": "int"
-    },
-    {
-     "desc": "col-start-1..12",
-     "name": "start",
-     "type": "int"
-    },
-    {
-     "desc": "col-end-1..12",
-     "name": "end",
-     "type": "int"
-    },
-    {
-     "desc": "order-1..12",
-     "name": "order",
-     "type": "int"
-    },
-    {
-     "name": "children",
-     "type": "children"
-    }
-   ]
+   "rows": []
   }
  ],
  "group": [
   {
-   "docs": "Group renders a horizontal flex container.",
    "part": "Group",
-   "rows": [
-    {
-     "default": "\"auto\"",
-     "desc": "sets gap: a Tailwind spacing step (0, 2, 4, 6, 8, 10, 12 = gap-N) or auto",
-     "name": "gap",
-     "type": "\"0\" | \"2\" | \"4\" | \"6\" | \"8\" | \"10\" | \"12\" | \"auto\"",
-     "values": [
-      "0",
-      "2",
-      "4",
-      "6",
-      "8",
-      "10",
-      "12",
-      "auto"
-     ]
-    },
-    {
-     "default": "\"center\"",
-     "desc": "sets align",
-     "name": "align",
-     "type": "\"start\" | \"center\" | \"end\" | \"stretch\" | \"baseline\"",
-     "values": [
-      "start",
-      "center",
-      "end",
-      "stretch",
-      "baseline"
-     ]
-    },
-    {
-     "default": "\"start\"",
-     "desc": "sets justify",
-     "name": "justify",
-     "type": "\"start\" | \"center\" | \"end\" | \"between\"",
-     "values": [
-      "start",
-      "center",
-      "end",
-      "between"
-     ]
-    },
-    {
-     "desc": "adds Tailwind utilities",
-     "name": "class",
-     "type": "string"
-    },
-    {
-     "desc": "div, fieldset, or dl. Use fieldset for related form controls.",
-     "name": "tag",
-     "type": "string"
-    },
-    {
-     "name": "children",
-     "type": "children"
-    }
-   ]
+   "rows": []
   }
  ],
  "hero-badge": [
@@ -4878,6 +4483,11 @@
      "type": "string"
     },
     {
+     "desc": "the address of the home page; none: the brand is text",
+     "name": "brandHref",
+     "type": "string"
+    },
+    {
      "desc": "menu links",
      "name": "links",
      "type": "NavLink[]"
@@ -4892,7 +4502,7 @@
      "type": "string"
     },
     {
-     "default": "\"#/login\"",
+     "desc": "the address of the login page; none: a button",
      "name": "loginHref",
      "type": "string"
     },
@@ -5142,71 +4752,27 @@
  ],
  "icon": [
   {
-   "docs": "Icon renders a class-based span, svg use, or text fallback host.",
+   "docs": "Icon renders span[data-slot=icon]; Label switches to role=img + aria-label.",
    "part": "Icon",
    "rows": [
     {
-     "desc": "icon name appended to Prefix in class mode",
-     "name": "name",
-     "type": "string"
-    },
-    {
-     "desc": "svg, text, or class (default)",
-     "name": "type",
-     "type": "string"
-    },
-    {
-     "desc": "base icon font class in class mode",
-     "name": "baseClass",
-     "type": "string"
-    },
-    {
-     "desc": "icon font prefix in class mode",
-     "name": "prefix",
-     "type": "string"
-    },
-    {
-     "default": "\"default\"",
-     "desc": "sets density preset",
+     "default": "\"sm\"",
+     "desc": "size token: xs, sm, md, lg, xl (default sm)",
      "name": "size",
-     "type": "\"xs\" | \"default\" | \"md\" | \"lg\"",
-     "values": [
-      "xs",
-      "default",
-      "md",
-      "lg"
-     ]
-    },
-    {
-     "desc": "adds Tailwind utilities",
-     "name": "class",
      "type": "string"
     },
     {
-     "desc": "svg use href in svg mode",
-     "name": "href",
+     "desc": "accessible name; omitted = decorative (aria-hidden)",
+     "name": "label",
      "type": "string"
-    },
-    {
-     "desc": "svg title / accessible name",
-     "name": "title",
-     "type": "string"
-    },
-    {
-     "desc": "accessible name for non-decorative icons",
-     "name": "ariaLabel",
-     "type": "string"
-    },
-    {
-     "desc": "hides the icon from assistive technology",
-     "name": "decorative",
-     "type": "boolean"
-    },
-    {
-     "name": "children",
-     "type": "children"
     }
    ]
+  }
+ ],
+ "icon-badge": [
+  {
+   "part": "IconBadge",
+   "rows": []
   }
  ],
  "icon-tab": [
@@ -5263,6 +4829,12 @@
      "type": "Feature[]"
     },
     {
+     "default": "\"\"",
+     "desc": "the text of the empty state (no records), from the dictionary",
+     "name": "empty",
+     "type": "string"
+    },
+    {
      "default": "\"4\"",
      "name": "cols",
      "type": "\"3\" | \"4\" | \"6\"",
@@ -5307,229 +4879,46 @@
    ]
   }
  ],
- "iconbadge": [
-  {
-   "docs": "IconBadge renders children as the badge content.",
-   "part": "IconBadge",
-   "rows": [
-    {
-     "default": "\"default\"",
-     "desc": "sets appearance preset",
-     "name": "variant",
-     "type": "\"default\" | \"primary\" | \"accent\" | \"secondary\" | \"outline\" | \"destructive\"",
-     "values": [
-      "default",
-      "primary",
-      "accent",
-      "secondary",
-      "outline",
-      "destructive"
-     ]
-    },
-    {
-     "default": "\"default\"",
-     "desc": "sets density preset",
-     "name": "size",
-     "type": "\"xs\" | \"sm\" | \"default\" | \"lg\" | \"xl\"",
-     "values": [
-      "xs",
-      "sm",
-      "default",
-      "lg",
-      "xl"
-     ]
-    },
-    {
-     "desc": "adds Tailwind utilities",
-     "name": "class",
-     "type": "string"
-    },
-    {
-     "name": "children",
-     "type": "children"
-    }
-   ]
-  }
- ],
  "image": [
   {
-   "docs": "Image renders an accessible img element.",
+   "docs": "Image renders an img element; alt is always emitted.",
    "part": "Image",
    "rows": [
     {
-     "default": "\"default\"",
-     "desc": "sets appearance preset",
-     "name": "variant",
-     "type": "\"default\" | \"logo\"",
-     "values": [
-      "default",
-      "logo"
-     ]
-    },
-    {
-     "default": "\"auto\"",
-     "desc": "sets density preset",
-     "name": "size",
-     "type": "\"auto\" | \"default\" | \"full\" | \"xs\" | \"sm\" | \"md\" | \"lg\" | \"xl\"",
-     "values": [
-      "auto",
-      "default",
-      "full",
-      "xs",
-      "sm",
-      "md",
-      "lg",
-      "xl"
-     ]
-    },
-    {
-     "desc": "adds Tailwind utilities",
-     "name": "class",
-     "type": "string"
-    },
-    {
-     "desc": "alternative text; ignored when Decorative",
+     "desc": "alternative text; empty string for decorative images",
      "name": "alt",
+     "required": true,
      "type": "string"
-    },
-    {
-     "default": "\"cover\"",
-     "desc": "object-fit preset",
-     "name": "fit",
-     "type": "\"contain\" | \"cover\" | \"fill\" | \"none\" | \"scale-down\"",
-     "values": [
-      "contain",
-      "cover",
-      "fill",
-      "none",
-      "scale-down"
-     ]
-    },
-    {
-     "default": "\"center\"",
-     "desc": "object-position preset",
-     "name": "position",
-     "type": "\"bottom\" | \"center\" | \"left\" | \"left-bottom\" | \"left-top\" | \"right\" | \"right-bottom\" | \"right-top\" | \"top\"",
-     "values": [
-      "bottom",
-      "center",
-      "left",
-      "left-bottom",
-      "left-top",
-      "right",
-      "right-bottom",
-      "right-top",
-      "top"
-     ]
-    },
-    {
-     "default": "\"auto\"",
-     "desc": "aspect-ratio preset",
-     "name": "aspect",
-     "type": "\"auto\" | \"square\" | \"video\"",
-     "values": [
-      "auto",
-      "square",
-      "video"
-     ]
-    },
-    {
-     "desc": "eager or lazy (default lazy)",
-     "name": "loading",
-     "type": "string"
-    },
-    {
-     "desc": "sync, auto, or async (default async)",
-     "name": "decoding",
-     "type": "string"
-    },
-    {
-     "desc": "marks the image as purely presentational",
-     "name": "decorative",
-     "type": "boolean"
     }
    ]
-  },
-  {
-   "docs": "Picture renders a responsive image wrapper.",
-   "part": "Picture",
-   "rows": [
-    {
-     "desc": "adds Tailwind utilities",
-     "name": "class",
-     "type": "string"
-    },
-    {
-     "name": "children",
-     "type": "children"
-    }
-   ]
-  },
-  {
-   "docs": "Source renders a source candidate for picture, video, or audio.",
-   "part": "Source",
-   "rows": []
   }
  ],
  "inline": [
   {
-   "docs": "Inline renders a span element with inline copy classes.",
    "part": "Inline",
-   "rows": [
-    {
-     "desc": "adds Tailwind utilities",
-     "name": "class",
-     "type": "string"
-    },
-    {
-     "name": "children",
-     "type": "children"
-    }
-   ]
+   "rows": []
   }
  ],
  "input": [
   {
-   "docs": "Input renders a styled single-line form control.",
+   "docs": "Input renders a native input element (default type text).",
    "part": "Input",
    "rows": [
     {
-     "default": "\"default\"",
-     "desc": "sets appearance preset",
-     "name": "variant",
-     "type": "\"default\" | \"ghost\"",
-     "values": [
-      "default",
-      "ghost"
-     ]
-    },
-    {
-     "default": "\"default\"",
-     "desc": "sets density preset",
-     "name": "size",
-     "type": "\"sm\" | \"default\" | \"lg\"",
-     "values": [
-      "sm",
-      "default",
-      "lg"
-     ]
-    },
-    {
-     "desc": "adds Tailwind utilities",
-     "name": "class",
-     "type": "string"
-    },
-    {
-     "desc": "input type; defaults to text",
+     "desc": "input type (default text)",
      "name": "type",
      "type": "string"
+    },
+    {
+     "name": "required",
+     "type": "boolean"
     },
     {
      "name": "disabled",
      "type": "boolean"
     },
     {
-     "name": "required",
+     "name": "readOnly",
      "type": "boolean"
     }
    ]
@@ -5597,6 +4986,12 @@
       "default",
       "muted"
      ]
+    },
+    {
+     "default": "\"\"",
+     "desc": "the text of the empty state (no records), from the dictionary",
+     "name": "empty",
+     "type": "string"
     },
     {
      "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
@@ -5669,6 +5064,12 @@
      "type": "Lane[]"
     },
     {
+     "default": "\"\"",
+     "desc": "the text of the empty state (no records), from the dictionary",
+     "name": "empty",
+     "type": "string"
+    },
+    {
      "name": "cards",
      "required": true,
      "type": "BoardCard[]"
@@ -5725,81 +5126,29 @@
  ],
  "label": [
   {
-   "docs": "Label renders accessible text linked to a control.",
+   "docs": "Label renders a native label element.",
    "part": "Label",
-   "rows": [
-    {
-     "desc": "adds Tailwind utilities",
-     "name": "class",
-     "type": "string"
-    },
-    {
-     "name": "children",
-     "type": "children"
-    }
-   ]
+   "rows": []
   }
  ],
- "linebreak": [
+ "legend": [
   {
-   "docs": "Break renders br by default, or wbr when Type is wbr/word.",
-   "part": "Break",
-   "rows": [
-    {
-     "desc": "br (default) or wbr/word",
-     "name": "type",
-     "type": "string"
-    },
-    {
-     "desc": "adds Tailwind utilities",
-     "name": "class",
-     "type": "string"
-    }
-   ]
+   "part": "Legend",
+   "rows": []
   }
  ],
  "link": [
   {
-   "docs": "Link renders a semantic anchor element.",
+   "docs": "Link renders an anchor; External opens a new tab with rel=noopener noreferrer.",
    "part": "Link",
    "rows": [
-    {
-     "default": "\"default\"",
-     "desc": "sets appearance preset",
-     "name": "variant",
-     "type": "\"block\" | \"default\" | \"external\" | \"muted\" | \"nav\"",
-     "values": [
-      "block",
-      "default",
-      "external",
-      "muted",
-      "nav"
-     ]
-    },
-    {
-     "default": "\"default\"",
-     "desc": "sets density preset",
-     "name": "size",
-     "type": "\"sm\" | \"default\" | \"md\" | \"lg\"",
-     "values": [
-      "sm",
-      "default",
-      "md",
-      "lg"
-     ]
-    },
-    {
-     "desc": "adds Tailwind utilities",
-     "name": "class",
-     "type": "string"
-    },
     {
      "desc": "explicit target; External implies _blank",
      "name": "target",
      "type": "string"
     },
     {
-     "desc": "explicit rel; external links default to noopener noreferrer",
+     "desc": "explicit rel; External defaults to noopener noreferrer",
      "name": "rel",
      "type": "string"
     },
@@ -5807,101 +5156,26 @@
      "desc": "opens in a new tab with safe rel defaults",
      "name": "external",
      "type": "boolean"
-    },
-    {
-     "desc": "visually and semantically disables the link",
-     "name": "disabled",
-     "type": "boolean"
-    },
-    {
-     "name": "children",
-     "type": "children"
     }
    ]
   }
  ],
  "link-plain": [
   {
-   "docs": "LinkPlain is a bare anchor: no styling beyond Class.",
    "part": "LinkPlain",
-   "rows": [
-    {
-     "desc": "adds Tailwind utilities",
-     "name": "class",
-     "type": "string"
-    },
-    {
-     "desc": "explicit target; External implies _blank",
-     "name": "target",
-     "type": "string"
-    },
-    {
-     "desc": "explicit rel; external links default to noopener noreferrer",
-     "name": "rel",
-     "type": "string"
-    },
-    {
-     "desc": "opens in a new tab with safe rel defaults",
-     "name": "external",
-     "type": "boolean"
-    },
-    {
-     "desc": "visually and semantically disables the link",
-     "name": "disabled",
-     "type": "boolean"
-    },
-    {
-     "name": "children",
-     "type": "children"
-    }
-   ]
+   "rows": []
   }
  ],
  "list": [
   {
-   "docs": "List renders a list container (ul, ol, dl, or menu).",
    "part": "List",
-   "rows": [
-    {
-     "desc": "adds Tailwind utilities",
-     "name": "class",
-     "type": "string"
-    },
-    {
-     "desc": "ul, ol, dl, or menu",
-     "name": "tag",
-     "type": "string"
-    },
-    {
-     "name": "children",
-     "type": "children"
-    }
-   ]
-  },
+   "rows": []
+  }
+ ],
+ "list-item": [
   {
-   "docs": "ListItem renders one li with optional value attribute.",
    "part": "ListItem",
-   "rows": [
-    {
-     "desc": "adds Tailwind utilities",
-     "name": "class",
-     "type": "string"
-    },
-    {
-     "desc": "li, dt, or dd; defaults to li",
-     "name": "tag",
-     "type": "string"
-    },
-    {
-     "desc": "optional li value for ordered contexts",
-     "name": "value",
-     "type": "int"
-    },
-    {
-     "name": "children",
-     "type": "children"
-    }
-   ]
+   "rows": []
   }
  ],
  "logo-cloud": [
@@ -5923,6 +5197,12 @@
      "name": "logos",
      "required": true,
      "type": "Logo[]"
+    },
+    {
+     "default": "\"\"",
+     "desc": "the text of the empty state (no records), from the dictionary",
+     "name": "empty",
+     "type": "string"
     },
     {
      "default": "\"grid\"",
@@ -6071,35 +5351,8 @@
  ],
  "lucide-icon": [
   {
-   "docs": "LucideIcon renders an svg glyph by name.",
    "part": "LucideIcon",
-   "rows": [
-    {
-     "desc": "kebab-case Lucide name; an unknown name draws a circle",
-     "name": "name",
-     "type": "string"
-    },
-    {
-     "desc": "width and height in px, 16 by default",
-     "name": "size",
-     "type": "int"
-    },
-    {
-     "desc": "stroke width, 2 by default",
-     "name": "strokeWidth",
-     "type": "int"
-    },
-    {
-     "desc": "accessible name; without it the icon is decorative",
-     "name": "label",
-     "type": "string"
-    },
-    {
-     "desc": "adds Tailwind utilities",
-     "name": "class",
-     "type": "string"
-    }
-   ]
+   "rows": []
   }
  ],
  "media-contacts": [
@@ -6349,6 +5602,11 @@
      "type": "string"
     },
     {
+     "desc": "the address of the home page; none: the brand is text",
+     "name": "brandHref",
+     "type": "string"
+    },
+    {
      "desc": "text of the item that opens the panel",
      "name": "trigger",
      "required": true,
@@ -6439,6 +5697,63 @@
    ]
   }
  ],
+ "menu-entry": [
+  {
+   "docs": "One entry of a menu: a link to its address, or, without one, its content as text in the same box (the magazine routes nothing, so it shows text). current marks the page the entry stands for (aria-current) either way.",
+   "part": "MenuEntry",
+   "rows": [
+    {
+     "desc": "the address; none: text, not a link",
+     "name": "href",
+     "type": "string"
+    },
+    {
+     "default": "false",
+     "desc": "the entry of the current page",
+     "name": "current",
+     "type": "boolean"
+    },
+    {
+     "default": "\"default\"",
+     "desc": "the look of the link",
+     "name": "variant",
+     "type": "\"default\" | \"muted\" | \"block\"",
+     "values": [
+      "default",
+      "muted",
+      "block"
+     ]
+    },
+    {
+     "default": "\"default\"",
+     "name": "size",
+     "type": "\"default\" | \"sm\"",
+     "values": [
+      "default",
+      "sm"
+     ]
+    },
+    {
+     "desc": "the test id of the entry",
+     "name": "testid",
+     "type": "string"
+    },
+    {
+     "default": "false",
+     "desc": "the content holds block elements: without an address it sits in a div, not a span",
+     "name": "block",
+     "type": "boolean"
+    }
+   ]
+  }
+ ],
+ "meter": [
+  {
+   "docs": "Meter renders a native meter; children are the fallback text.",
+   "part": "Meter",
+   "rows": []
+  }
+ ],
  "meter-row": [
   {
    "docs": "A name, a value caption and a progress bar (completeness by section, issues by rule, stock by warehouse). With `href` the whole row is a link.",
@@ -6491,6 +5806,12 @@
      "name": "metrics",
      "required": true,
      "type": "Metric[]"
+    },
+    {
+     "default": "\"\"",
+     "desc": "the text of the empty state (no records), from the dictionary",
+     "name": "empty",
+     "type": "string"
     },
     {
      "default": "\"4\"",
@@ -6562,6 +5883,12 @@
      "type": "Milestone[]"
     },
     {
+     "default": "\"\"",
+     "desc": "the text of the empty state (no records), from the dictionary",
+     "name": "empty",
+     "type": "string"
+    },
+    {
      "default": "\"split\"",
      "name": "layout",
      "type": "\"split\" | \"stacked\" | \"row\"",
@@ -6608,7 +5935,7 @@
      "type": "string"
     },
     {
-     "default": "\"#/login\"",
+     "desc": "the address of the login page; none: the login is a button with no address",
      "name": "loginHref",
      "type": "string"
     },
@@ -6660,6 +5987,11 @@
     {
      "name": "brand",
      "required": true,
+     "type": "string"
+    },
+    {
+     "desc": "the address of the home page; none: the brand is text, not a link",
+     "name": "brandHref",
      "type": "string"
     },
     {
@@ -6716,6 +6048,36 @@
     {
      "desc": "text of the skip link to the main content; none: no link",
      "name": "skip",
+     "type": "string"
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
+    }
+   ]
+  }
+ ],
+ "nav-bar-menu": [
+  {
+   "docs": "The links of NavBar in a nav landmark; left out when there are no links.",
+   "part": "NavBarMenu",
+   "rows": [
+    {
+     "desc": "accessible name of the navigation",
+     "name": "label",
+     "required": true,
+     "type": "string"
+    },
+    {
+     "name": "links",
+     "required": true,
+     "type": "NavLink[]"
+    },
+    {
+     "default": "\"\"",
+     "desc": "id of the current link",
+     "name": "current",
      "type": "string"
     },
     {
@@ -6997,6 +6359,12 @@
    ]
   }
  ],
+ "opt-group": [
+  {
+   "part": "OptGroup",
+   "rows": []
+  }
+ ],
  "order-rows": [
   {
    "docs": "The orders as a table (the table layout of OrderTable): number, date, items, total and a status pill.",
@@ -7049,6 +6417,12 @@
      "name": "rows",
      "required": true,
      "type": "SummaryRow[]"
+    },
+    {
+     "default": "\"\"",
+     "desc": "the text of the empty state (no records), from the dictionary",
+     "name": "empty",
+     "type": "string"
     },
     {
      "name": "labels",
@@ -7127,6 +6501,12 @@
      "name": "orders",
      "required": true,
      "type": "Order[]"
+    },
+    {
+     "default": "\"\"",
+     "desc": "the text of the empty state (no records), from the dictionary",
+     "name": "empty",
+     "type": "string"
     },
     {
      "desc": "word by order status",
@@ -7228,7 +6608,7 @@
  ],
  "page-crumbs": [
   {
-   "docs": "The breadcrumbs of an inner page: links to the parent pages separated by chevrons; the last entry is the current page and is not a link.",
+   "docs": "The breadcrumbs of an inner page: the parent pages (links where they have an href) separated by chevrons; the last entry is the current page and is not a link.",
    "part": "PageCrumbs",
    "rows": [
     {
@@ -7377,7 +6757,7 @@
      "type": "string"
     },
     {
-     "desc": "the parent pages, then the current page",
+     "desc": "the trail of pages (a parent_id chain): the parent pages, then the current page; empty: no breadcrumbs",
      "name": "crumbs",
      "required": true,
      "type": "NavLink[]"
@@ -7427,7 +6807,7 @@
  ],
  "pager": [
   {
-   "docs": "The list footer: a summary line and previous / next page buttons. With `numbered` it shows page numbers (1 … 4 5 6 … 21), with `moreLabel` a \"Load more\" button. The current page is a plain element marked aria-current=\"page\"; the others are buttons. All text comes in through props.",
+   "docs": "The list footer: a summary line and previous / next page buttons. With `numbered` it shows page numbers (1 … 4 5 6 … 21), with `moreLabel` a \"Load more\" button. The current page is a plain element marked aria-current=\"page\"; the others are buttons, or links with `pageUrl` (the address of page {0}; `firstUrl` for page 1): a disabled previous / next stays a disabled button, without an address. All text comes in through props.",
    "part": "Pager",
    "rows": [
     {
@@ -7471,6 +6851,16 @@
     {
      "desc": "label of the \"Load more\" button; no button without it",
      "name": "moreLabel",
+     "type": "string"
+    },
+    {
+     "desc": "address of page {0} (/blog/page/{0}/, ?paged={0}, #/posts/{0}); with it every page and previous / next is a link",
+     "name": "pageUrl",
+     "type": "string"
+    },
+    {
+     "desc": "address of page 1 when it is not pageUrl with 1 (the list's own address)",
+     "name": "firstUrl",
      "type": "string"
     }
    ]
@@ -7546,6 +6936,12 @@
      "name": "photos",
      "required": true,
      "type": "Photo[]"
+    },
+    {
+     "default": "\"\"",
+     "desc": "the text of the empty state (no records), from the dictionary",
+     "name": "empty",
+     "type": "string"
     },
     {
      "name": "labels",
@@ -7769,7 +7165,7 @@
  ],
  "post-grid": [
   {
-   "docs": "A section with a heading and the posts as cards: a grid, a list of horizontal cards, or a magazine (the first post wide, the rest in a grid). Axes: layout (grid, list, magazine), columns, media, meta (full, short, news), filter mode (none, topics), tone, density.",
+   "docs": "A section with a heading and the posts as cards: a grid, a list of horizontal cards, or a magazine (the first post wide, the rest in a grid). Axes: layout (grid, list, magazine), columns, media, meta (full, short, news), filter mode (none, topics), pager (none, pages), tone, density.",
    "part": "PostGrid",
    "rows": [
     {
@@ -7801,6 +7197,11 @@
      "desc": "the topic tabs and the chosen topic",
      "name": "filter",
      "type": "PostFilter"
+    },
+    {
+     "desc": "the pager under the posts (as OrderTable's): mode, page, pages and its texts",
+     "name": "pager",
+     "type": "PostPager"
     },
     {
      "default": "\"grid\"",
@@ -7878,8 +7279,8 @@
      "type": "string"
     },
     {
+     "desc": "the post; without one: the empty state",
      "name": "post",
-     "required": true,
      "type": "Post"
     },
     {
@@ -8089,6 +7490,12 @@
       "default",
       "muted"
      ]
+    },
+    {
+     "default": "\"\"",
+     "desc": "the text of the empty state (no records), from the dictionary",
+     "name": "empty",
+     "type": "string"
     },
     {
      "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
@@ -8308,7 +7715,7 @@
  ],
  "pricing-tiers": [
   {
-   "docs": "A section with a heading and one PricingCard per plan. Axes: layout (grid, stack), columns, emphasis, billing (off: no toggle; monthly or annual: a toggle with that choice selected, and the prices of that period), density, tone.",
+   "docs": "A section with a heading and one PricingCard per plan; an empty state when there are none. Axes: layout (grid, stack), columns, emphasis, billing (off: no toggle; monthly or annual: a toggle with that choice selected, and the prices of that period), density, tone.",
    "part": "PricingTiers",
    "rows": [
     {
@@ -8405,7 +7812,7 @@
  ],
  "product-card": [
   {
-   "docs": "A product as a card: picture, optional badge, category, name, rating, summary, price and an add button. Axes: layout (vertical, horizontal), media (image, none), ratio, rating (show, hide), action (button, none), density.",
+   "docs": "A product as a card: picture, optional badge, category, name, rating, summary, price (and the old price struck through when `compareAt` is higher) and an add button. Axes: layout (vertical, horizontal), media (image, none), ratio, rating (show, hide), action (button, none), density.",
    "part": "ProductCard",
    "rows": [
     {
@@ -8493,8 +7900,8 @@
      "type": "string"
     },
     {
+     "desc": "the product; without one, the empty state (labels.empty)",
      "name": "product",
-     "required": true,
      "type": "Product"
     },
     {
@@ -8578,9 +7985,37 @@
    ]
   }
  ],
+ "product-gallery": [
+  {
+   "docs": "The gallery of a product page: the picture (the file of the product's featured media, a placeholder without one) and optional thumbnails below.",
+   "part": "ProductGallery",
+   "rows": [
+    {
+     "desc": "the product name: the alternative text",
+     "name": "name",
+     "required": true,
+     "type": "string"
+    },
+    {
+     "desc": "the file of the featured media; none: the placeholder",
+     "name": "image",
+     "type": "string"
+    },
+    {
+     "default": "\"below\"",
+     "name": "thumbs",
+     "type": "\"none\" | \"below\"",
+     "values": [
+      "none",
+      "below"
+     ]
+    }
+   ]
+  }
+ ],
  "product-grid": [
   {
-   "docs": "A section with a heading and the products as cards in a grid, as a list of horizontal cards, or as a rail that scrolls sideways. Axes: layout (grid, list, rail), columns, ratio, rating, action, tone, density.",
+   "docs": "A section with a heading and the products as cards in a grid, as a list of horizontal cards, or as a rail that scrolls sideways; an empty state when there are none. Axes: layout (grid, list, rail), columns, ratio, rating, action, tone, density.",
    "part": "ProductGrid",
    "rows": [
     {
@@ -8748,6 +8183,42 @@
    ]
   }
  ],
+ "product-price": [
+  {
+   "docs": "The price line of a product page: the price (integer minor units in the currency), the old price (compare_at) struck through when higher, and the badge.",
+   "part": "ProductPrice",
+   "rows": [
+    {
+     "desc": "integer minor units",
+     "name": "price",
+     "required": true,
+     "type": "number"
+    },
+    {
+     "desc": "the old price, same currency; shown only when higher than the price",
+     "name": "compareAt",
+     "type": "number"
+    },
+    {
+     "name": "currency",
+     "required": true,
+     "type": "string"
+    },
+    {
+     "default": "\"\"",
+     "desc": "the label of the badge; empty: none",
+     "name": "badge",
+     "type": "string"
+    },
+    {
+     "desc": "the screen reader word before the old price",
+     "name": "was",
+     "required": true,
+     "type": "string"
+    }
+   ]
+  }
+ ],
  "profile-form": [
   {
    "docs": "An account settings form: a picture with a change button, name, email, bio and two notification switches, with save and cancel. Axes: layout (stacked, split), avatar (show, hide), prefs (show, hide), tone (default, muted).",
@@ -8817,6 +8288,13 @@
    ]
   }
  ],
+ "progress": [
+  {
+   "docs": "Progress renders a native progress element; children are the fallback text.",
+   "part": "Progress",
+   "rows": []
+  }
+ ],
  "project-grid": [
   {
    "docs": "Projects of a studio or a person: cards with tags and links, a compact grid, tiles with the caption over the picture, a bento with one big project, or a list beside a collage. Axes: layout (cards, compact, overlay, bento, list), tone, density.",
@@ -8841,6 +8319,12 @@
      "name": "projects",
      "required": true,
      "type": "Project[]"
+    },
+    {
+     "default": "\"\"",
+     "desc": "the text of the empty state (no records), from the dictionary",
+     "name": "empty",
+     "type": "string"
     },
     {
      "name": "labels",
@@ -8968,6 +8452,12 @@
      "type": "Logo[]"
     },
     {
+     "default": "\"\"",
+     "desc": "the text of the empty state (no records), from the dictionary",
+     "name": "empty",
+     "type": "string"
+    },
+    {
      "name": "stats",
      "required": true,
      "type": "Stat[]"
@@ -9014,6 +8504,12 @@
      "type": "string"
     }
    ]
+  }
+ ],
+ "prose": [
+  {
+   "part": "Prose",
+   "rows": []
   }
  ],
  "quote-card": [
@@ -9236,6 +8732,12 @@
      ]
     },
     {
+     "default": "\"\"",
+     "desc": "the text of the empty state (no records), from the dictionary",
+     "name": "empty",
+     "type": "string"
+    },
+    {
      "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
      "name": "landmarkLabel",
      "type": "string"
@@ -9245,44 +8747,19 @@
  ],
  "radio": [
   {
-   "docs": "Radio renders input[type=radio] with shared Name for grouping.",
+   "docs": "Radio renders input[type=radio].",
    "part": "Radio",
    "rows": [
-    {
-     "default": "\"default\"",
-     "desc": "sets appearance preset",
-     "name": "variant",
-     "type": "\"default\" | \"ghost\"",
-     "values": [
-      "default",
-      "ghost"
-     ]
-    },
-    {
-     "default": "\"default\"",
-     "desc": "sets density preset",
-     "name": "size",
-     "type": "\"default\" | \"sm\"",
-     "values": [
-      "default",
-      "sm"
-     ]
-    },
-    {
-     "desc": "adds Tailwind utilities",
-     "name": "class",
-     "type": "string"
-    },
     {
      "name": "checked",
      "type": "boolean"
     },
     {
-     "name": "disabled",
+     "name": "required",
      "type": "boolean"
     },
     {
-     "name": "required",
+     "name": "disabled",
      "type": "boolean"
     }
    ]
@@ -9290,40 +8767,8 @@
  ],
  "range": [
   {
-   "docs": "Range renders input type=range.",
    "part": "Range",
-   "rows": [
-    {
-     "desc": "lowest value, 0 by default",
-     "name": "min",
-     "type": "int"
-    },
-    {
-     "desc": "highest value, 100 by default",
-     "name": "max",
-     "type": "int"
-    },
-    {
-     "desc": "step, 1 by default",
-     "name": "step",
-     "type": "int"
-    },
-    {
-     "desc": "disables the slider",
-     "name": "disabled",
-     "type": "boolean"
-    },
-    {
-     "desc": "accessible name",
-     "name": "ariaLabel",
-     "type": "string"
-    },
-    {
-     "desc": "adds Tailwind utilities",
-     "name": "class",
-     "type": "string"
-    }
-   ]
+   "rows": []
   }
  ],
  "range-field": [
@@ -9502,6 +8947,95 @@
      "values": [
       "default",
       "roomy"
+     ]
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
+    }
+   ]
+  }
+ ],
+ "rich-text": [
+  {
+   "docs": "Rich text: the body of the current page or post (trusted markup from the content source) styled by Prose, under its title and a meta line (date, author, category). Axes: layout (narrow: one reading column; wide: a wider column; sidebar: the body and a side note; media: a cover above the body; card: the body in a card; hero: the title as the page heading over a wide cover), tone, density.",
+   "part": "RichText",
+   "rows": [
+    {
+     "desc": "ties the heading to the section: the heading id is `<id>-title`",
+     "name": "id",
+     "required": true,
+     "type": "string"
+    },
+    {
+     "default": "\"\"",
+     "desc": "the title of the page; empty string: no heading",
+     "name": "title",
+     "type": "string"
+    },
+    {
+     "desc": "the body: trusted markup (`content|html` of the source), printed without escaping; a plain string is escaped",
+     "name": "content",
+     "type": "TrustedHtml"
+    },
+    {
+     "desc": "the cover of the media and hero layouts",
+     "name": "media",
+     "type": "RichMedia"
+    },
+    {
+     "desc": "the meta line under the title: date, author, category",
+     "name": "meta",
+     "type": "RichMeta"
+    },
+    {
+     "desc": "the side note of the sidebar layout",
+     "name": "aside",
+     "type": "RichAside"
+    },
+    {
+     "default": "2",
+     "desc": "heading level of the title: 1 when the block is the page heading",
+     "name": "level",
+     "type": "1 | 2",
+     "values": [
+      "1",
+      "2"
+     ]
+    },
+    {
+     "default": "\"narrow\"",
+     "desc": "how the body is laid out",
+     "name": "layout",
+     "type": "\"narrow\" | \"wide\" | \"sidebar\" | \"media\" | \"card\" | \"hero\"",
+     "values": [
+      "narrow",
+      "wide",
+      "sidebar",
+      "media",
+      "card",
+      "hero"
+     ]
+    },
+    {
+     "default": "\"default\"",
+     "desc": "background",
+     "name": "tone",
+     "type": "\"default\" | \"muted\"",
+     "values": [
+      "default",
+      "muted"
+     ]
+    },
+    {
+     "default": "\"default\"",
+     "desc": "vertical padding",
+     "name": "density",
+     "type": "\"default\" | \"compact\"",
+     "values": [
+      "default",
+      "compact"
      ]
     },
     {
@@ -9777,42 +9311,16 @@
  ],
  "select": [
   {
-   "docs": "Select renders option children from the Options list plus manual children.",
+   "docs": "Select renders option children from Options, then manual children.",
    "part": "Select",
    "rows": [
     {
-     "default": "\"default\"",
-     "desc": "sets appearance preset",
-     "name": "variant",
-     "type": "\"default\" | \"ghost\"",
-     "values": [
-      "default",
-      "ghost"
-     ]
-    },
-    {
-     "default": "\"default\"",
-     "desc": "sets density preset",
-     "name": "size",
-     "type": "\"sm\" | \"default\" | \"lg\"",
-     "values": [
-      "sm",
-      "default",
-      "lg"
-     ]
-    },
-    {
-     "desc": "adds Tailwind utilities",
-     "name": "class",
-     "type": "string"
-    },
-    {
-     "desc": "currently selected option value",
+     "desc": "selected option value",
      "name": "value",
      "type": "string"
     },
     {
-     "name": "disabled",
+     "name": "multiple",
      "type": "boolean"
     },
     {
@@ -9820,17 +9328,19 @@
      "type": "boolean"
     },
     {
-     "name": "options",
-     "type": "items"
+     "name": "disabled",
+     "type": "boolean"
     },
     {
-     "name": "children",
-     "type": "children"
+     "name": "options",
+     "type": "items"
     }
    ]
-  },
+  }
+ ],
+ "select-option": [
   {
-   "docs": "SelectOption renders an option for custom Select children.",
+   "docs": "SelectOption renders a native option.",
    "part": "SelectOption",
    "rows": [
     {
@@ -9840,69 +9350,44 @@
     {
      "name": "disabled",
      "type": "boolean"
-    },
-    {
-     "name": "children",
-     "type": "children"
-    }
-   ]
-  },
-  {
-   "docs": "OptGroup renders a native optgroup around option children.",
-   "part": "OptGroup",
-   "rows": [
-    {
-     "desc": "adds Tailwind utilities",
-     "name": "class",
-     "type": "string"
-    },
-    {
-     "name": "disabled",
-     "type": "boolean"
-    },
-    {
-     "name": "children",
-     "type": "children"
     }
    ]
   }
  ],
  "separator": [
   {
-   "docs": "Separator renders hr with optional decorative semantics.",
+   "docs": "Separator renders a void hr; no children.",
    "part": "Separator",
    "rows": [
     {
-     "default": "\"default\"",
-     "desc": "sets appearance preset",
-     "name": "variant",
-     "type": "\"default\" | \"spaced\"",
-     "values": [
-      "default",
-      "spaced"
-     ]
-    },
-    {
-     "default": "\"horizontal\"",
-     "desc": "horizontal or vertical",
+     "desc": "horizontal (default) | vertical",
      "name": "orientation",
-     "type": "\"horizontal\" | \"vertical\"",
-     "values": [
-      "horizontal",
-      "vertical"
-     ]
-    },
-    {
-     "desc": "adds Tailwind utilities",
-     "name": "class",
      "type": "string"
     },
     {
-     "desc": "hides the rule from assistive technology",
+     "desc": "purely visual: role=none, no separator semantics",
      "name": "decorative",
      "type": "boolean"
     }
    ]
+  }
+ ],
+ "sheet": [
+  {
+   "part": "Sheet",
+   "rows": []
+  }
+ ],
+ "sheet-close": [
+  {
+   "part": "SheetClose",
+   "rows": []
+  }
+ ],
+ "sheet-trigger": [
+  {
+   "part": "SheetTrigger",
+   "rows": []
   }
  ],
  "shell-content": [
@@ -10108,7 +9593,7 @@
      "type": "CartSummaryLabels"
     },
     {
-     "desc": "labels of the buttons under the lines",
+     "desc": "labels of the buttons under the lines, and the empty-cart title",
      "name": "actions",
      "required": true,
      "type": "ShoppingCartLabels"
@@ -10325,6 +9810,11 @@
      "type": "SiteFooterLabels"
     },
     {
+     "desc": "the addresses of the two pages, from the app; none: text, not links",
+     "name": "routes",
+     "type": "SiteRoutes"
+    },
+    {
      "default": "\"minimal\"",
      "desc": "minimal: one row; centered: stacked and centered",
      "name": "layout",
@@ -10360,6 +9850,11 @@
      "name": "labels",
      "required": true,
      "type": "SiteHeaderLabels"
+    },
+    {
+     "desc": "the addresses of the two pages, from the app; none: the brand and the menu are text, not links",
+     "name": "routes",
+     "type": "SiteRoutes"
     },
     {
      "desc": "the area of the current route: home or pricing",
@@ -10490,25 +9985,8 @@
  ],
  "skeleton": [
   {
-   "docs": "Skeleton renders a decorative placeholder.",
    "part": "Skeleton",
-   "rows": [
-    {
-     "default": "\"line\"",
-     "desc": "line, block or circle",
-     "name": "shape",
-     "type": "\"line\" | \"block\"",
-     "values": [
-      "line",
-      "block"
-     ]
-    },
-    {
-     "desc": "adds Tailwind utilities",
-     "name": "class",
-     "type": "string"
-    }
-   ]
+   "rows": []
   }
  ],
  "skeleton-layout": [
@@ -10591,6 +10069,12 @@
      "type": "Day[]"
     },
     {
+     "default": "\"\"",
+     "desc": "the text of the empty state (no records), from the dictionary",
+     "name": "empty",
+     "type": "string"
+    },
+    {
      "desc": "the zone of the address",
      "name": "zone",
      "required": true,
@@ -10667,65 +10151,8 @@
  ],
  "stack": [
   {
-   "docs": "Stack renders a vertical flex container.",
    "part": "Stack",
-   "rows": [
-    {
-     "default": "\"auto\"",
-     "desc": "sets gap: a Tailwind spacing step (0, 2, 4, 6, 8, 10, 12 = gap-N) or auto",
-     "name": "gap",
-     "type": "\"0\" | \"2\" | \"4\" | \"6\" | \"8\" | \"10\" | \"12\" | \"auto\"",
-     "values": [
-      "0",
-      "2",
-      "4",
-      "6",
-      "8",
-      "10",
-      "12",
-      "auto"
-     ]
-    },
-    {
-     "default": "\"start\"",
-     "desc": "sets align",
-     "name": "align",
-     "type": "\"start\" | \"center\" | \"end\" | \"stretch\" | \"baseline\"",
-     "values": [
-      "start",
-      "center",
-      "end",
-      "stretch",
-      "baseline"
-     ]
-    },
-    {
-     "default": "\"start\"",
-     "desc": "sets justify",
-     "name": "justify",
-     "type": "\"start\" | \"center\" | \"end\" | \"between\"",
-     "values": [
-      "start",
-      "center",
-      "end",
-      "between"
-     ]
-    },
-    {
-     "desc": "adds Tailwind utilities",
-     "name": "class",
-     "type": "string"
-    },
-    {
-     "desc": "div, ul, or ol. Use Block for landmarks (aside, section, header, nav).",
-     "name": "tag",
-     "type": "string"
-    },
-    {
-     "name": "children",
-     "type": "children"
-    }
-   ]
+   "rows": []
   }
  ],
  "stat-figure": [
@@ -10811,6 +10238,12 @@
      "name": "stats",
      "required": true,
      "type": "Stat[]"
+    },
+    {
+     "default": "\"\"",
+     "desc": "the text of the empty state (no figures), from the dictionary",
+     "name": "empty",
+     "type": "string"
     },
     {
      "default": "\"4\"",
@@ -10987,6 +10420,12 @@
      "type": "Step[]"
     },
     {
+     "default": "\"\"",
+     "desc": "the text of the empty state (no records), from the dictionary",
+     "name": "empty",
+     "type": "string"
+    },
+    {
      "default": "\"row\"",
      "name": "layout",
      "type": "\"row\" | \"column\"",
@@ -11153,6 +10592,12 @@
      "type": "Store[]"
     },
     {
+     "default": "\"\"",
+     "desc": "the text of the empty state (no records), from the dictionary",
+     "name": "empty",
+     "type": "string"
+    },
+    {
      "desc": "word by store kind (pickup, store only)",
      "name": "kinds",
      "required": true,
@@ -11269,6 +10714,12 @@
      "type": "Milestone[]"
     },
     {
+     "default": "\"\"",
+     "desc": "the text of the empty state (no records), from the dictionary",
+     "name": "empty",
+     "type": "string"
+    },
+    {
      "desc": "the id of the step shown",
      "name": "active",
      "required": true,
@@ -11306,6 +10757,13 @@
    ]
   }
  ],
+ "summary": [
+  {
+   "docs": "Summary renders the native summary (the disclosure trigger).",
+   "part": "Summary",
+   "rows": []
+  }
+ ],
  "support-channels": [
   {
    "docs": "Ways to get help as cards or rows, each with an icon, a title, a sentence and an open link. Axes: layout (grid, list), columns, action (link, none), tone (default, muted).",
@@ -11325,6 +10783,12 @@
      "name": "channels",
      "required": true,
      "type": "Feature[]"
+    },
+    {
+     "default": "\"\"",
+     "desc": "the text of the empty state (no records), from the dictionary",
+     "name": "empty",
+     "type": "string"
     },
     {
      "desc": "text of the link of each channel",
@@ -11378,34 +10842,15 @@
  ],
  "switch": [
   {
-   "docs": "Switch renders input[type=checkbox] with switch role attrs.",
+   "docs": "Switch renders button[type=button][role=switch]; children render the thumb.",
    "part": "Switch",
    "rows": [
-    {
-     "default": "\"default\"",
-     "desc": "sets density preset",
-     "name": "size",
-     "type": "\"default\" | \"sm\"",
-     "values": [
-      "default",
-      "sm"
-     ]
-    },
-    {
-     "desc": "adds Tailwind utilities",
-     "name": "class",
-     "type": "string"
-    },
     {
      "name": "checked",
      "type": "boolean"
     },
     {
      "name": "disabled",
-     "type": "boolean"
-    },
-    {
-     "name": "required",
      "type": "boolean"
     }
    ]
@@ -11482,194 +10927,62 @@
  ],
  "table": [
   {
-   "docs": "Table renders the root table element.",
    "part": "Table",
-   "rows": [
-    {
-     "desc": "adds Tailwind utilities",
-     "name": "class",
-     "type": "string"
-    },
-    {
-     "name": "children",
-     "type": "children"
-    }
-   ]
-  },
+   "rows": []
+  }
+ ],
+ "table-body": [
   {
-   "docs": "TableCaption renders the table caption.",
-   "part": "TableCaption",
-   "rows": [
-    {
-     "desc": "adds Tailwind utilities",
-     "name": "class",
-     "type": "string"
-    },
-    {
-     "name": "children",
-     "type": "children"
-    }
-   ]
-  },
-  {
-   "docs": "TableHead renders the thead section.",
-   "part": "TableHead",
-   "rows": [
-    {
-     "desc": "adds Tailwind utilities",
-     "name": "class",
-     "type": "string"
-    },
-    {
-     "name": "children",
-     "type": "children"
-    }
-   ]
-  },
-  {
-   "docs": "TableBody renders the tbody section.",
    "part": "TableBody",
-   "rows": [
-    {
-     "desc": "adds Tailwind utilities",
-     "name": "class",
-     "type": "string"
-    },
-    {
-     "name": "children",
-     "type": "children"
-    }
-   ]
-  },
+   "rows": []
+  }
+ ],
+ "table-caption": [
   {
-   "docs": "TableFoot renders the tfoot section.",
-   "part": "TableFoot",
-   "rows": [
-    {
-     "desc": "adds Tailwind utilities",
-     "name": "class",
-     "type": "string"
-    },
-    {
-     "name": "children",
-     "type": "children"
-    }
-   ]
-  },
+   "part": "TableCaption",
+   "rows": []
+  }
+ ],
+ "table-cell": [
   {
-   "docs": "TableRow renders one tr row.",
-   "part": "TableRow",
-   "rows": [
-    {
-     "desc": "adds Tailwind utilities",
-     "name": "class",
-     "type": "string"
-    },
-    {
-     "name": "children",
-     "type": "children"
-    }
-   ]
-  },
-  {
-   "docs": "TableHeadCell renders th with optional scope and abbr.",
-   "part": "TableHeadCell",
-   "rows": [
-    {
-     "desc": "adds Tailwind utilities",
-     "name": "class",
-     "type": "string"
-    },
-    {
-     "desc": "th scope: col, row, colgroup, rowgroup",
-     "name": "scope",
-     "type": "string"
-    },
-    {
-     "name": "colSpan",
-     "type": "int"
-    },
-    {
-     "name": "rowSpan",
-     "type": "int"
-    },
-    {
-     "desc": "abbreviated header text for th",
-     "name": "abbr",
-     "type": "string"
-    },
-    {
-     "name": "children",
-     "type": "children"
-    }
-   ]
-  },
-  {
-   "docs": "TableCell renders td with colspan and rowspan.",
    "part": "TableCell",
-   "rows": [
-    {
-     "desc": "adds Tailwind utilities",
-     "name": "class",
-     "type": "string"
-    },
-    {
-     "desc": "th scope: col, row, colgroup, rowgroup",
-     "name": "scope",
-     "type": "string"
-    },
-    {
-     "name": "colSpan",
-     "type": "int"
-    },
-    {
-     "name": "rowSpan",
-     "type": "int"
-    },
-    {
-     "desc": "abbreviated header text for th",
-     "name": "abbr",
-     "type": "string"
-    },
-    {
-     "name": "children",
-     "type": "children"
-    }
-   ]
-  },
+   "rows": []
+  }
+ ],
+ "table-col": [
   {
-   "docs": "TableColGroup renders colgroup with optional span.",
-   "part": "TableColGroup",
-   "rows": [
-    {
-     "desc": "adds Tailwind utilities",
-     "name": "class",
-     "type": "string"
-    },
-    {
-     "name": "span",
-     "type": "int"
-    },
-    {
-     "name": "children",
-     "type": "children"
-    }
-   ]
-  },
-  {
-   "docs": "TableCol renders a single col definition.",
    "part": "TableCol",
-   "rows": [
-    {
-     "desc": "adds Tailwind utilities",
-     "name": "class",
-     "type": "string"
-    },
-    {
-     "name": "span",
-     "type": "int"
-    }
-   ]
+   "rows": []
+  }
+ ],
+ "table-col-group": [
+  {
+   "part": "TableColGroup",
+   "rows": []
+  }
+ ],
+ "table-foot": [
+  {
+   "part": "TableFoot",
+   "rows": []
+  }
+ ],
+ "table-head": [
+  {
+   "part": "TableHead",
+   "rows": []
+  }
+ ],
+ "table-head-cell": [
+  {
+   "part": "TableHeadCell",
+   "rows": []
+  }
+ ],
+ "table-row": [
+  {
+   "part": "TableRow",
+   "rows": []
   }
  ],
  "table-toolbar": [
@@ -11710,6 +11023,12 @@
      "name": "members",
      "required": true,
      "type": "Member[]"
+    },
+    {
+     "default": "\"\"",
+     "desc": "the text of the empty state (no records), from the dictionary",
+     "name": "empty",
+     "type": "string"
     },
     {
      "desc": "the name of each department",
@@ -11790,33 +11109,15 @@
      "type": "Filter[]"
     },
     {
-     "desc": "accessible name of the filter row",
-     "name": "filtersLabel",
-     "required": true,
-     "type": "string"
-    },
-    {
-     "desc": "Browse All label",
-     "name": "browse",
-     "required": true,
-     "type": "string"
-    },
-    {
-     "default": "\"#/\"",
+     "desc": "the address of the full list; none: a button",
      "name": "browseHref",
      "type": "string"
     },
     {
-     "desc": "accessible name for the views count",
-     "name": "viewsLabel",
+     "desc": "the name of the filter row, the browse-all text, the hidden names of the counts",
+     "name": "labels",
      "required": true,
-     "type": "string"
-    },
-    {
-     "desc": "accessible name for the likes count",
-     "name": "likesLabel",
-     "required": true,
-     "type": "string"
+     "type": "TemplateLabels"
     },
     {
      "default": "\"1-4\"",
@@ -11847,6 +11148,12 @@
      ]
     },
     {
+     "default": "\"\"",
+     "desc": "the text of the empty state (no records), from the dictionary",
+     "name": "empty",
+     "type": "string"
+    },
+    {
      "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
      "name": "landmarkLabel",
      "type": "string"
@@ -11873,6 +11180,12 @@
      "name": "quotes",
      "required": true,
      "type": "Quote[]"
+    },
+    {
+     "default": "\"\"",
+     "desc": "the text of the empty state (no records), from the dictionary",
+     "name": "empty",
+     "type": "string"
     },
     {
      "desc": "the templates of the lines around a quote",
@@ -11936,107 +11249,46 @@
  ],
  "text": [
   {
-   "docs": "Text renders a p element with body copy classes, or the block or inline text element of `Tag`.",
+   "docs": "Text renders the requested text element (default p).",
    "part": "Text",
    "rows": [
     {
-     "default": "\"inherit\"",
-     "desc": "sets size",
-     "name": "size",
-     "type": "\"xs\" | \"sm\" | \"base\" | \"lg\" | \"xl\" | \"2xl\" | \"3xl\" | \"4xl\" | \"5xl\" | \"inherit\"",
-     "values": [
-      "xs",
-      "sm",
-      "base",
-      "lg",
-      "xl",
-      "2xl",
-      "3xl",
-      "4xl",
-      "5xl",
-      "inherit"
-     ]
-    },
-    {
-     "default": "\"inherit\"",
-     "desc": "sets weight",
-     "name": "weight",
-     "type": "\"regular\" | \"medium\" | \"semibold\" | \"bold\" | \"inherit\"",
-     "values": [
-      "regular",
-      "medium",
-      "semibold",
-      "bold",
-      "inherit"
-     ]
-    },
-    {
-     "desc": "adds Tailwind utilities",
-     "name": "class",
-     "type": "string"
-    },
-    {
-     "desc": "p (default), blockquote, figcaption, address, pre, or an inline element (span, strong, em, ...)",
+     "desc": "HTML5 text tag (default p)",
      "name": "tag",
      "type": "string"
-    },
-    {
-     "name": "children",
-     "type": "children"
     }
    ]
   }
  ],
  "textarea": [
   {
-   "docs": "Textarea renders a styled multi-line form control.",
+   "docs": "Textarea renders a native textarea; Value is the initial content.",
    "part": "Textarea",
    "rows": [
     {
-     "default": "\"default\"",
-     "desc": "sets appearance preset",
-     "name": "variant",
-     "type": "\"default\" | \"ghost\"",
-     "values": [
-      "default",
-      "ghost"
-     ]
-    },
-    {
-     "default": "\"default\"",
-     "desc": "sets density preset",
-     "name": "size",
-     "type": "\"sm\" | \"default\" | \"lg\"",
-     "values": [
-      "sm",
-      "default",
-      "lg"
-     ]
-    },
-    {
-     "desc": "adds Tailwind utilities",
-     "name": "class",
-     "type": "string"
-    },
-    {
-     "desc": "initial textarea content",
+     "desc": "initial content",
      "name": "value",
      "type": "string"
     },
     {
-     "desc": "visible line count; defaults to 4 when zero",
-     "name": "rows",
-     "type": "int"
+     "name": "required",
+     "type": "boolean"
     },
     {
      "name": "disabled",
      "type": "boolean"
     },
     {
-     "name": "required",
+     "name": "readOnly",
      "type": "boolean"
     }
    ]
+  }
+ ],
+ "theme-toggle": [
+  {
+   "part": "ThemeToggle",
+   "rows": []
   }
  ],
  "timeline": [
@@ -12055,59 +11307,13 @@
  ],
  "title": [
   {
-   "docs": "Title renders the resolved heading element.",
    "part": "Title",
-   "rows": [
-    {
-     "default": "\"inherit\"",
-     "desc": "sets size",
-     "name": "size",
-     "type": "\"xs\" | \"sm\" | \"base\" | \"lg\" | \"xl\" | \"2xl\" | \"3xl\" | \"4xl\" | \"5xl\" | \"inherit\"",
-     "values": [
-      "xs",
-      "sm",
-      "base",
-      "lg",
-      "xl",
-      "2xl",
-      "3xl",
-      "4xl",
-      "5xl",
-      "inherit"
-     ]
-    },
-    {
-     "default": "\"semibold\"",
-     "desc": "sets weight",
-     "name": "weight",
-     "type": "\"regular\" | \"medium\" | \"semibold\" | \"bold\"",
-     "values": [
-      "regular",
-      "medium",
-      "semibold",
-      "bold"
-     ]
-    },
-    {
-     "desc": "adds Tailwind utilities",
-     "name": "class",
-     "type": "string"
-    },
-    {
-     "desc": "maps to h1–h6; 0 and 2 default to h2",
-     "name": "as",
-     "type": "int"
-    },
-    {
-     "name": "children",
-     "type": "children"
-    }
-   ]
+   "rows": []
   }
  ],
  "topic-chips": [
   {
-   "docs": "A centered row of topic pills (static links). tone inverse: on a dark band with an icon per topic; default: outlined.",
+   "docs": "A centered row of topic pills: links where a topic has an address, else buttons. tone inverse: on a dark band with an icon per topic; default: outlined.",
    "part": "TopicChips",
    "rows": [
     {
@@ -12309,6 +11515,12 @@
      "type": "Feature[]"
     },
     {
+     "default": "\"\"",
+     "desc": "the text of the empty state (no records), from the dictionary",
+     "name": "empty",
+     "type": "string"
+    },
+    {
      "default": "\"strip\"",
      "name": "layout",
      "type": "\"strip\" | \"cards\" | \"bar\"",
@@ -12363,6 +11575,12 @@
      "name": "quotes",
      "required": true,
      "type": "Quote[]"
+    },
+    {
+     "default": "\"\"",
+     "desc": "the text of the empty state (no records), from the dictionary",
+     "name": "empty",
+     "type": "string"
     },
     {
      "desc": "template of the play button's name, e.g. `Play the video from {0}`",
@@ -12573,6 +11791,12 @@
      "name": "zones",
      "required": true,
      "type": "Zone[]"
+    },
+    {
+     "default": "\"\"",
+     "desc": "the text of the empty state (no records), from the dictionary",
+     "name": "empty",
+     "type": "string"
     },
     {
      "name": "labels",

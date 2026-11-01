@@ -1,947 +1,114 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Select (primitive) | ui8kit</title><meta name="description" content="Select primitive"><link rel="canonical" href="https://ui.buildy.tw/primitives/select/"><script src="/assets/theme.js"></script><link rel="stylesheet" href="/assets/site.css"><link rel="stylesheet" href="/assets/skins.css"><script src="/assets/app.js" defer></script></head><body class="min-h-screen bg-background text-foreground font-sans"><a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:left-2 focus:top-2 focus:bg-background focus:px-4 focus:py-2 focus:z-50">Skip to content</a><header class="border-b border-border"><div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-4 py-4"><a href="/" class="text-lg font-semibold">ui8kit</a><nav class="flex items-center gap-4 text-sm" aria-label="Main"><a href="/docs/" class="hover:underline">Docs</a><a href="/docs/categories/blocks-marketing/" class="hover:underline">Blocks</a><a href="/docs/categories/primitives/" class="hover:underline">Primitives</a><a href="/templates/" class="hover:underline">Templates</a><a href="/docs/cli/" class="hover:underline">CLI</a></nav><form id="search" class="grid gap-4 relative w-full sm:w-72" data-index="/search-index.json" role="search"><label class="text-xs font-bold text-foreground sr-only" for="search-input">Search components and blocks</label><input id="search-input" type="search" placeholder="Search, press /" autocomplete="off" class="w-full min-w-0 text-foreground inset-ring inset-ring-input outline-none placeholder:text-muted-foreground disabled:cursor-not-allowed disabled:opacity-50 focus-visible:inset-ring-ring rounded h-10 bg-card px-4 text-sm md:text-sm"><ul class="absolute left-0 right-0 top-12 z-40 rounded border border-border bg-popover text-popover-foreground shadow-md" aria-live="polite" hidden id="search-results"></ul></form><div class="theme-ctl items-center gap-2 text-sm"><label class="text-xs font-bold text-foreground sr-only" for="theme-select">Colour mode</label><select id="theme-select" class="min-w-0 inset-ring inset-ring-input outline-none placeholder:text-muted-foreground disabled:cursor-not-allowed disabled:opacity-50 focus-visible:inset-ring-ring rounded h-10 text-sm w-auto bg-card px-2 text-card-foreground"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select><label class="text-xs font-bold text-foreground sr-only" for="skin-select">Skin</label><select id="skin-select" class="min-w-0 inset-ring inset-ring-input outline-none placeholder:text-muted-foreground disabled:cursor-not-allowed disabled:opacity-50 focus-visible:inset-ring-ring rounded h-10 text-sm w-auto bg-card px-2 text-card-foreground"><option value="" selected>Default</option><option value="sky">Sky</option><option value="modern-minimal">Modern Minimal</option><option value="violet-bloom">Violet Bloom</option><option value="t3-chat">T3 Chat</option><option value="bubblegum">Bubblegum</option><option value="doom-64">Doom 64</option><option value="amber-minimal">Amber Minimal</option><option value="supabase">Supabase</option><option value="kodama-grove">Kodama Grove</option><option value="perpetuity">Perpetuity</option><option value="cosmic-night">Cosmic Night</option><option value="claude">Claude</option><option value="mocha-mousse">Mocha Mousse</option><option value="neo-brutalism">Neo Brutalism</option><option value="notebook">Notebook</option></select></div></div></header><div class="mx-auto flex max-w-6xl flex-col gap-8 px-4 py-8 md:flex-row"><nav class="md:w-64 md:shrink-0" aria-label="Docs"><h2 class="text-foreground text-sm font-semibold mb-2">Guides</h2><ul class="mb-6 flex flex-col gap-1"><li class=""><a href="/docs/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Overview</a></li><li class=""><a href="/docs/getting-started/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Getting started</a></li><li class=""><a href="/docs/installation/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Installation</a></li><li class=""><a href="/docs/cli/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">CLI</a></li><li class=""><a href="/docs/theming-skins/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Theming and skins</a></li><li class=""><a href="/docs/grid-8px/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">The 8px grid</a></li></ul><h2 class="text-foreground text-sm font-semibold mb-2">Categories</h2><ul class="mb-6 flex flex-col gap-1"><li class=""><a href="/docs/categories/primitives/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Primitives</a></li><li class=""><a href="/docs/categories/components/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Components</a></li><li class=""><a href="/docs/categories/blocks-marketing/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: marketing</a></li><li class=""><a href="/docs/categories/blocks-commerce/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: commerce</a></li><li class=""><a href="/docs/categories/blocks-dashboard/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: dashboard</a></li><li class=""><a href="/docs/categories/blocks-content/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: content</a></li><li class=""><a href="/docs/categories/blocks-account/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: account</a></li><li class=""><a href="/docs/categories/blocks-promo/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: promo</a></li><li class=""><a href="/docs/categories/blocks-support/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: support</a></li><li class=""><a href="/docs/categories/blocks-onboarding/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: onboarding</a></li><li class=""><a href="/docs/categories/blocks-general/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: general</a></li></ul></nav> <main class="min-w-0 flex-1" id="main"><article class=""><p class="text-sm text-muted-foreground"><a href="/docs/categories/primitives/" class="underline">primitive / primitives</a></p><h1 class="text-foreground text-3xl font-semibold mb-2 tracking-tight">Select</h1><p class="mb-6 max-w-3xl text-muted-foreground">Select primitive</p><h2 class="text-foreground text-xl font-semibold mb-2">Install</h2><div class="mb-6 max-w-xl"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code class="overflow-x-auto whitespace-nowrap font-mono text-sm" id="install-select" tabindex="0">npx ui8kit add select</code><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="install-select" hidden>Copy</button></div></div><p class="text-sm mb-6 text-muted-foreground">Pulls in:   <a href="/lib/utils/" class="underline">utils</a></p> <h2 class="text-foreground text-xl font-semibold mb-2">Preview</h2><div class="preview mb-8 rounded border border-border bg-background p-6" aria-label="Select preview" role="group" tabindex="0"><select aria-label="Sample" class="w-full min-w-0 bg-background text-foreground inset-ring inset-ring-input outline-none placeholder:text-muted-foreground disabled:cursor-not-allowed disabled:opacity-50 focus-visible:inset-ring-ring rounded h-10 px-3 text-sm" name="slots-zone" id="slots-zone"><option value="zone-central" label="Central zone" selected=""></option></select>
-</div><h2 class="text-foreground text-xl font-semibold mb-2">Code</h2><div class="rt mb-8"><div class="rt-bar" aria-label="Runtime" role="radiogroup"><input id="rt-svelte" type="radio" name="rt" value="svelte" class="shrink-0 appearance-none rounded-full bg-background inset-ring inset-ring-input checked:bg-primary checked:inset-ring-primary radio-glyph disabled:cursor-not-allowed disabled:opacity-50 [--dot:10px] sr-only size-px" checked><label class="text-xs font-bold text-foreground" for="rt-svelte">Svelte</label><input id="rt-react" type="radio" name="rt" value="react" class="shrink-0 appearance-none rounded-full bg-background inset-ring inset-ring-input checked:bg-primary checked:inset-ring-primary radio-glyph disabled:cursor-not-allowed disabled:opacity-50 [--dot:10px] sr-only size-px"><label class="text-xs font-bold text-foreground" for="rt-react">React</label><input id="rt-vue" type="radio" name="rt" value="vue" class="shrink-0 appearance-none rounded-full bg-background inset-ring inset-ring-input checked:bg-primary checked:inset-ring-primary radio-glyph disabled:cursor-not-allowed disabled:opacity-50 [--dot:10px] sr-only size-px"><label class="text-xs font-bold text-foreground" for="rt-vue">Vue</label><input id="rt-solid" type="radio" name="rt" value="solid" class="shrink-0 appearance-none rounded-full bg-background inset-ring inset-ring-input checked:bg-primary checked:inset-ring-primary radio-glyph disabled:cursor-not-allowed disabled:opacity-50 [--dot:10px] sr-only size-px"><label class="text-xs font-bold text-foreground" for="rt-solid">Solid</label><input id="rt-templ" type="radio" name="rt" value="templ" class="shrink-0 appearance-none rounded-full bg-background inset-ring inset-ring-input checked:bg-primary checked:inset-ring-primary radio-glyph disabled:cursor-not-allowed disabled:opacity-50 [--dot:10px] sr-only size-px"><label class="text-xs font-bold text-foreground" for="rt-templ">templ</label><input id="rt-twig" type="radio" name="rt" value="twig" class="shrink-0 appearance-none rounded-full bg-background inset-ring inset-ring-input checked:bg-primary checked:inset-ring-primary radio-glyph disabled:cursor-not-allowed disabled:opacity-50 [--dot:10px] sr-only size-px"><label class="text-xs font-bold text-foreground" for="rt-twig">Twig</label><input id="rt-latte" type="radio" name="rt" value="latte" class="shrink-0 appearance-none rounded-full bg-background inset-ring inset-ring-input checked:bg-primary checked:inset-ring-primary radio-glyph disabled:cursor-not-allowed disabled:opacity-50 [--dot:10px] sr-only size-px"><label class="text-xs font-bold text-foreground" for="rt-latte">Latte</label><input id="rt-jinja2" type="radio" name="rt" value="jinja2" class="shrink-0 appearance-none rounded-full bg-background inset-ring inset-ring-input checked:bg-primary checked:inset-ring-primary radio-glyph disabled:cursor-not-allowed disabled:opacity-50 [--dot:10px] sr-only size-px"><label class="text-xs font-bold text-foreground" for="rt-jinja2">Jinja2</label></div><section class="rt-panel" id="panel-svelte" aria-label="Svelte code" data-runtime="svelte"><p class="text-sm mb-2 text-muted-foreground">Point the CLI at this runtime once, then add the item:</p> <div class="mb-2"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code class="overflow-x-auto whitespace-nowrap font-mono text-sm" id="panel-svelte-init" tabindex="0">npx ui8kit init --yes --framework svelte --dir src --registry-url https://registry.buildy.tw/svelte --strict-cdn</code><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="panel-svelte-init" hidden>Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code class="overflow-x-auto whitespace-nowrap font-mono text-sm" id="panel-svelte-add" tabindex="0">npx ui8kit add select</code><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="panel-svelte-add" hidden>Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/select/opt-group.svelte</span><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="code-svelte-0" hidden>Copy</button></div><pre class="hl max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6" tabindex="0"><code class="font-mono" id="code-svelte-0"><span class="c">&lt;!-- Code generated by xgen. DO NOT EDIT. --&gt;</span>
-<span class="c">&lt;!-- Source: xgen/specs/ui/select.json --&gt;</span>
-<span class="c">&lt;!--
-</span><span class="c">  OptGroup renders a native optgroup around option children.
-</span><span class="c">--&gt;</span>
-&lt;<span class="nt">script</span> <span class="na">lang</span>=<span class="s">&#34;ts&#34;</span> <span class="na">module</span>&gt;
-  <span class="kr">import</span> <span class="kr">type</span> { Snippet } <span class="kr">from</span> <span class="s2">&#34;svelte&#34;</span>;
-
-  <span class="kr">export</span> <span class="kr">type</span> OptGroupProps = {
-    disabled?: <span class="kt">boolean</span>;
-    <span class="kr">class</span>?: <span class="kt">string</span>;
-    children?: <span class="kt">Snippet</span>;
-    [key: <span class="kt">string</span>]: <span class="kt">unknown</span>;
-  };
-&lt;/<span class="nt">script</span>&gt;
-
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Select (primitive) | ui8kit</title><meta name="description" content="Select primitive"><link rel="canonical" href="https://ui.buildy.tw/primitives/select/"><script src="/assets/theme.js"></script><link rel="stylesheet" href="/assets/site.css"><link rel="stylesheet" href="/assets/skins.css"><script src="/assets/app.js" defer></script></head><body class="min-h-screen bg-background text-foreground font-sans"><a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:left-2 focus:top-2 focus:bg-background focus:px-4 focus:py-2 focus:z-50">Skip to content</a><header class="border-b border-border"><div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-4 py-4"><a href="/" class="text-lg font-semibold">ui8kit</a><nav class="flex items-center gap-4 text-sm" aria-label="Main"><a href="/docs/" class="hover:underline">Docs</a><a href="/docs/categories/blocks-marketing/" class="hover:underline">Blocks</a><a href="/docs/categories/primitives/" class="hover:underline">Primitives</a><a href="/templates/" class="hover:underline">Templates</a><a href="/docs/cli/" class="hover:underline">CLI</a></nav><form id="search" class="grid gap-4 relative w-full sm:w-72" data-index="/search-index.json" role="search"><label class="text-xs font-bold text-foreground sr-only" for="search-input">Search components and blocks</label><input id="search-input" type="search" placeholder="Search, press /" autocomplete="off" class="w-full min-w-0 text-foreground inset-ring inset-ring-input outline-none placeholder:text-muted-foreground disabled:cursor-not-allowed disabled:opacity-50 focus-visible:inset-ring-ring rounded h-10 bg-card px-4 text-sm md:text-sm"><ul class="absolute left-0 right-0 top-12 z-40 rounded border border-border bg-popover text-popover-foreground shadow-md" aria-live="polite" hidden id="search-results"></ul></form><div class="theme-ctl items-center gap-2 text-sm"><label class="text-xs font-bold text-foreground sr-only" for="theme-select">Colour mode</label><select id="theme-select" class="min-w-0 inset-ring inset-ring-input outline-none placeholder:text-muted-foreground disabled:cursor-not-allowed disabled:opacity-50 focus-visible:inset-ring-ring rounded h-10 text-sm w-auto bg-card px-2 text-card-foreground"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select><label class="text-xs font-bold text-foreground sr-only" for="skin-select">Skin</label><select id="skin-select" class="min-w-0 inset-ring inset-ring-input outline-none placeholder:text-muted-foreground disabled:cursor-not-allowed disabled:opacity-50 focus-visible:inset-ring-ring rounded h-10 text-sm w-auto bg-card px-2 text-card-foreground"><option value="" selected>Default</option><option value="sky">Sky</option><option value="modern-minimal">Modern Minimal</option><option value="violet-bloom">Violet Bloom</option><option value="t3-chat">T3 Chat</option><option value="bubblegum">Bubblegum</option><option value="doom-64">Doom 64</option><option value="amber-minimal">Amber Minimal</option><option value="supabase">Supabase</option><option value="kodama-grove">Kodama Grove</option><option value="perpetuity">Perpetuity</option><option value="cosmic-night">Cosmic Night</option><option value="claude">Claude</option><option value="mocha-mousse">Mocha Mousse</option><option value="neo-brutalism">Neo Brutalism</option><option value="notebook">Notebook</option></select></div></div></header><div class="mx-auto flex max-w-6xl flex-col gap-8 px-4 py-8 md:flex-row"><nav class="md:w-64 md:shrink-0" aria-label="Docs"><h2 class="text-foreground text-sm font-semibold mb-2">Guides</h2><ul class="mb-6 flex flex-col gap-1"><li class=""><a href="/docs/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Overview</a></li><li class=""><a href="/docs/getting-started/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Getting started</a></li><li class=""><a href="/docs/installation/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Installation</a></li><li class=""><a href="/docs/cli/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">CLI</a></li><li class=""><a href="/docs/theming-skins/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Theming and skins</a></li><li class=""><a href="/docs/grid-8px/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">The 8px grid</a></li></ul><h2 class="text-foreground text-sm font-semibold mb-2">Categories</h2><ul class="mb-6 flex flex-col gap-1"><li class=""><a href="/docs/categories/primitives/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Primitives</a></li><li class=""><a href="/docs/categories/components/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Components</a></li><li class=""><a href="/docs/categories/blocks-marketing/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: marketing</a></li><li class=""><a href="/docs/categories/blocks-commerce/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: commerce</a></li><li class=""><a href="/docs/categories/blocks-dashboard/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: dashboard</a></li><li class=""><a href="/docs/categories/blocks-content/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: content</a></li><li class=""><a href="/docs/categories/blocks-account/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: account</a></li><li class=""><a href="/docs/categories/blocks-promo/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: promo</a></li><li class=""><a href="/docs/categories/blocks-support/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: support</a></li><li class=""><a href="/docs/categories/blocks-onboarding/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: onboarding</a></li><li class=""><a href="/docs/categories/blocks-general/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: general</a></li></ul></nav> <main class="min-w-0 flex-1" id="main"><article class=""><p class="text-sm text-muted-foreground"><a href="/docs/categories/primitives/" class="underline">primitive / primitives</a></p><h1 class="text-foreground text-3xl font-semibold mb-2 tracking-tight">Select</h1><p class="mb-6 max-w-3xl text-muted-foreground">Select primitive</p><h2 class="text-foreground text-xl font-semibold mb-2">Install</h2><div class="mb-6 max-w-xl"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code class="overflow-x-auto whitespace-nowrap font-mono text-sm" id="install-select" tabindex="0">npx ui8kit add select</code><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="install-select" hidden>Copy</button></div></div><p class="text-sm mb-6 text-muted-foreground">Pulls in:   <a href="/primitives/kit-select/" class="underline">kit-select</a><span class="">, </span> <a href="/lib/recipes/" class="underline">recipes</a><span class="">, </span> <a href="/lib/utils/" class="underline">utils</a></p> <h2 class="text-foreground text-xl font-semibold mb-2">Preview</h2><div class="preview mb-8 rounded border border-border bg-background p-6" aria-label="Select preview" role="group" tabindex="0"><div class="flex flex-wrap items-end gap-6"><figure class="flex flex-col items-start gap-2"><figcaption class="text-xs text-muted-foreground">size: sm</figcaption><select class="w-full min-w-0 bg-background text-foreground inset-ring inset-ring-input outline-none placeholder:text-muted-foreground disabled:cursor-not-allowed disabled:opacity-50 focus-visible:inset-ring-ring rounded aria-invalid:inset-ring-destructive h-8 pl-3 pr-2 text-sm" aria-label="size: sm"></select></figure><figure class="flex flex-col items-start gap-2"><figcaption class="text-xs text-muted-foreground">size: default</figcaption><select class="w-full min-w-0 bg-background text-foreground inset-ring inset-ring-input outline-none placeholder:text-muted-foreground disabled:cursor-not-allowed disabled:opacity-50 focus-visible:inset-ring-ring rounded aria-invalid:inset-ring-destructive h-10 pl-3 pr-2 text-sm" aria-label="size: default"></select></figure><figure class="flex flex-col items-start gap-2"><figcaption class="text-xs text-muted-foreground">size: lg</figcaption><select class="w-full min-w-0 bg-background text-foreground inset-ring inset-ring-input outline-none placeholder:text-muted-foreground disabled:cursor-not-allowed disabled:opacity-50 focus-visible:inset-ring-ring rounded aria-invalid:inset-ring-destructive h-12 pl-4 pr-2 text-base" aria-label="size: lg"></select></figure><figure class="flex flex-col items-start gap-2"><figcaption class="text-xs text-muted-foreground">variant: default</figcaption><select class="w-full min-w-0 bg-background text-foreground inset-ring inset-ring-input outline-none placeholder:text-muted-foreground disabled:cursor-not-allowed disabled:opacity-50 focus-visible:inset-ring-ring rounded aria-invalid:inset-ring-destructive h-10 pl-3 pr-2 text-sm" aria-label="variant: default"></select></figure><figure class="flex flex-col items-start gap-2"><figcaption class="text-xs text-muted-foreground">variant: ghost</figcaption><select class="w-full min-w-0 text-foreground inset-ring outline-none placeholder:text-muted-foreground disabled:cursor-not-allowed disabled:opacity-50 focus-visible:inset-ring-ring rounded aria-invalid:inset-ring-destructive h-10 pl-3 pr-2 text-sm bg-muted inset-ring-transparent" aria-label="variant: ghost"></select></figure></div>
+</div><h2 class="text-foreground text-xl font-semibold mb-2">Code</h2><div class="rt mb-8"><div class="rt-bar" aria-label="Runtime" role="radiogroup"><input id="rt-svelte" type="radio" name="rt" value="svelte" class="shrink-0 appearance-none rounded-full bg-background inset-ring inset-ring-input checked:bg-primary checked:inset-ring-primary radio-glyph disabled:cursor-not-allowed disabled:opacity-50 [--dot:10px] sr-only size-px" checked><label class="text-xs font-bold text-foreground" for="rt-svelte">Svelte</label><input id="rt-react" type="radio" name="rt" value="react" class="shrink-0 appearance-none rounded-full bg-background inset-ring inset-ring-input checked:bg-primary checked:inset-ring-primary radio-glyph disabled:cursor-not-allowed disabled:opacity-50 [--dot:10px] sr-only size-px"><label class="text-xs font-bold text-foreground" for="rt-react">React</label><input id="rt-vue" type="radio" name="rt" value="vue" class="shrink-0 appearance-none rounded-full bg-background inset-ring inset-ring-input checked:bg-primary checked:inset-ring-primary radio-glyph disabled:cursor-not-allowed disabled:opacity-50 [--dot:10px] sr-only size-px"><label class="text-xs font-bold text-foreground" for="rt-vue">Vue</label><input id="rt-solid" type="radio" name="rt" value="solid" class="shrink-0 appearance-none rounded-full bg-background inset-ring inset-ring-input checked:bg-primary checked:inset-ring-primary radio-glyph disabled:cursor-not-allowed disabled:opacity-50 [--dot:10px] sr-only size-px"><label class="text-xs font-bold text-foreground" for="rt-solid">Solid</label><input id="rt-templ" type="radio" name="rt" value="templ" class="shrink-0 appearance-none rounded-full bg-background inset-ring inset-ring-input checked:bg-primary checked:inset-ring-primary radio-glyph disabled:cursor-not-allowed disabled:opacity-50 [--dot:10px] sr-only size-px"><label class="text-xs font-bold text-foreground" for="rt-templ">templ</label><input id="rt-twig" type="radio" name="rt" value="twig" class="shrink-0 appearance-none rounded-full bg-background inset-ring inset-ring-input checked:bg-primary checked:inset-ring-primary radio-glyph disabled:cursor-not-allowed disabled:opacity-50 [--dot:10px] sr-only size-px"><label class="text-xs font-bold text-foreground" for="rt-twig">Twig</label><input id="rt-latte" type="radio" name="rt" value="latte" class="shrink-0 appearance-none rounded-full bg-background inset-ring inset-ring-input checked:bg-primary checked:inset-ring-primary radio-glyph disabled:cursor-not-allowed disabled:opacity-50 [--dot:10px] sr-only size-px"><label class="text-xs font-bold text-foreground" for="rt-latte">Latte</label><input id="rt-jinja2" type="radio" name="rt" value="jinja2" class="shrink-0 appearance-none rounded-full bg-background inset-ring inset-ring-input checked:bg-primary checked:inset-ring-primary radio-glyph disabled:cursor-not-allowed disabled:opacity-50 [--dot:10px] sr-only size-px"><label class="text-xs font-bold text-foreground" for="rt-jinja2">Jinja2</label></div><section class="rt-panel" id="panel-svelte" aria-label="Svelte code" data-runtime="svelte"><p class="text-sm mb-2 text-muted-foreground">Point the CLI at this runtime once, then add the item:</p> <div class="mb-2"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code class="overflow-x-auto whitespace-nowrap font-mono text-sm" id="panel-svelte-init" tabindex="0">npx ui8kit init --yes --framework svelte --dir src --registry-url https://registry.buildy.tw/svelte --strict-cdn</code><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="panel-svelte-init" hidden>Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code class="overflow-x-auto whitespace-nowrap font-mono text-sm" id="panel-svelte-add" tabindex="0">npx ui8kit add select</code><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="panel-svelte-add" hidden>Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">compose/Select.svelte</span><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="code-svelte-0" hidden>Copy</button></div><pre class="hl max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6" tabindex="0"><code class="font-mono" id="code-svelte-0"><span class="c">&lt;!-- Code generated by packages/kit-compose/src/build.ts from src/map.ts + variants/. DO NOT EDIT. --&gt;</span>
+<span class="c">&lt;!-- Select: Select + recipe select. --&gt;</span>
 &lt;<span class="nt">script</span> <span class="na">lang</span>=<span class="s">&#34;ts&#34;</span>&gt;
-  <span class="kr">import</span> { cn } <span class="kr">from</span> <span class="s2">&#34;../../utils&#34;</span>;
+  <span class="kr">import</span> <span class="kr">type</span> { ComponentProps, Snippet } <span class="kr">from</span> <span class="s2">&#34;svelte&#34;</span>;
+  <span class="kr">import</span> Prim <span class="kr">from</span> <span class="s2">&#34;../kit/ui/select/Select.svelte&#34;</span>;
+  <span class="kr">import</span> { cn } <span class="kr">from</span> <span class="s2">&#34;../kit/utils&#34;</span>;
+  <span class="kr">import</span> { rc } <span class="kr">from</span> <span class="s2">&#34;./recipes&#34;</span>;
 
-  <span class="kd">let</span> {
-    disabled,
-    <span class="kr">class</span>: className,
-    children,
-    ...rest
-  }: OptGroupProps = $props();
-
-  <span class="kr">const</span> cls = $derived(cn(className));
+  <span class="kd">let</span> { <span class="s2">&#34;size&#34;</span>: v_size, <span class="s2">&#34;variant&#34;</span>: v_variant, <span class="s2">&#34;state&#34;</span>: v_state, <span class="kr">class</span>: className, children, ...rest }: ComponentProps&lt;<span class="nt">typeof</span> <span class="na">Prim</span>&gt; &amp; { <span class="s2">&#34;size&#34;</span>?: <span class="kt">string</span> | <span class="kt">number</span>; <span class="s2">&#34;variant&#34;</span>?: <span class="kt">string</span> | <span class="kt">number</span>; <span class="s2">&#34;state&#34;</span>?: <span class="kt">string</span> | <span class="kt">number</span>; <span class="kr">class</span>?: <span class="kt">string</span>; children?: <span class="kt">Snippet</span> } = $props();
+  <span class="kr">const</span> cls = $derived(cn(rc(<span class="s2">&#34;select&#34;</span>, { <span class="s2">&#34;size&#34;</span>: v_size, <span class="s2">&#34;variant&#34;</span>: v_variant, <span class="s2">&#34;state&#34;</span>: v_state }), className));
 &lt;/<span class="nt">script</span>&gt;
 
-&lt;<span class="nt">optgroup</span> {...(cls ? { <span class="kr">class</span>: cls } : {})} <span class="na">disabled</span>={disabled || <span class="kc">undefined</span>} {...rest}<span class="err">&gt;</span>
-  {<span class="kd">@render</span> children?.()}
-&lt;/<span class="nt">optgroup</span>&gt;
-</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/select/select-option.svelte</span><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="code-svelte-1" hidden>Copy</button></div><pre class="hl max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6" tabindex="0"><code class="font-mono" id="code-svelte-1"><span class="c">&lt;!-- Code generated by xgen. DO NOT EDIT. --&gt;</span>
-<span class="c">&lt;!-- Source: xgen/specs/ui/select.json --&gt;</span>
-<span class="c">&lt;!--
-</span><span class="c">  SelectOption renders an option for custom Select children.
-</span><span class="c">--&gt;</span>
-&lt;<span class="nt">script</span> <span class="na">lang</span>=<span class="s">&#34;ts&#34;</span> <span class="na">module</span>&gt;
-  <span class="kr">import</span> <span class="kr">type</span> { Snippet } <span class="kr">from</span> <span class="s2">&#34;svelte&#34;</span>;
+&lt;<span class="nt">Prim</span> <span class="na">class</span>={cls} <span class="s">aria-invalid=</span>{v_state === <span class="s2">&#34;error&#34;</span> ? <span class="s2">&#34;true&#34;</span> : <span class="kc">undefined</span>} {...rest}&gt;{<span class="kd">@render</span> children?.()}&lt;/<span class="nt">Prim</span>&gt;
+</code></pre></div> <p class="text-sm"><a href="https://registry.buildy.tw/svelte/components/ui/select.json" class="underline">Svelte registry item (JSON)</a></p></section><section class="rt-panel" id="panel-react" aria-label="React code" data-runtime="react"><p class="text-sm mb-2 text-muted-foreground">Point the CLI at this runtime once, then add the item:</p> <div class="mb-2"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code class="overflow-x-auto whitespace-nowrap font-mono text-sm" id="panel-react-init" tabindex="0">npx ui8kit init --yes --framework react --dir src --registry-url https://registry.buildy.tw/react --strict-cdn</code><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="panel-react-init" hidden>Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code class="overflow-x-auto whitespace-nowrap font-mono text-sm" id="panel-react-add" tabindex="0">npx ui8kit add select</code><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="panel-react-add" hidden>Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">compose/select.tsx</span><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="code-react-0" hidden>Copy</button></div><pre class="hl max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6" tabindex="0"><code class="font-mono" id="code-react-0"><span class="c1">// Code generated by packages/kit-compose/src/build.ts from src/map.ts + variants/. DO NOT EDIT.
+</span><span class="kr">import</span> <span class="kr">type</span> { ComponentProps } <span class="kr">from</span> <span class="s2">&#34;react&#34;</span>;
+<span class="kr">import</span> { Select <span class="kr">as</span> Prim } <span class="kr">from</span> <span class="s2">&#34;../kit/ui/select/select&#34;</span>;
+<span class="kr">import</span> { cn } <span class="kr">from</span> <span class="s2">&#34;../kit/utils&#34;</span>;
+<span class="kr">import</span> { rc } <span class="kr">from</span> <span class="s2">&#34;./recipes&#34;</span>;
 
-  <span class="kr">export</span> <span class="kr">type</span> SelectOptionProps = {
-    selected?: <span class="kt">boolean</span>;
-    disabled?: <span class="kt">boolean</span>;
-    <span class="kr">class</span>?: <span class="kt">string</span>;
-    children?: <span class="kt">Snippet</span>;
-    [key: <span class="kt">string</span>]: <span class="kt">unknown</span>;
-  };
-&lt;/<span class="nt">script</span>&gt;
+<span class="kr">export</span> <span class="kr">type</span> SelectProps = Omit&lt;<span class="nt">ComponentProps</span>&lt;<span class="nt">typeof</span> <span class="na">Prim</span>&gt;, <span class="s2">&#34;tag&#34;</span> <span class="err">|</span> <span class="s2">&#34;size&#34;</span> <span class="err">|</span> <span class="s2">&#34;variant&#34;</span> <span class="err">|</span> <span class="s2">&#34;state&#34;</span>&gt; &amp; { <span class="s2">&#34;size&#34;</span>?: <span class="kt">string</span> | <span class="kt">number</span>; <span class="s2">&#34;variant&#34;</span>?: <span class="kt">string</span> | <span class="kt">number</span>; <span class="s2">&#34;state&#34;</span>?: <span class="kt">string</span> | <span class="kt">number</span>; className?: <span class="kt">string</span> };
 
-&lt;<span class="nt">script</span> <span class="na">lang</span>=<span class="s">&#34;ts&#34;</span>&gt;
-  <span class="kd">let</span> {
-    selected,
-    disabled,
-    <span class="kr">class</span>: className,
-    children,
-    ...rest
-  }: SelectOptionProps = $props();
-&lt;/<span class="nt">script</span>&gt;
-
-&lt;<span class="nt">option</span> <span class="na">selected</span>={selected || <span class="kc">undefined</span>} <span class="s">disabled=</span>{disabled || <span class="kc">undefined</span>} {...rest}&gt;
-  {<span class="kd">@render</span> children?.()}
-&lt;/<span class="nt">option</span>&gt;
-</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/select/select.svelte</span><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="code-svelte-2" hidden>Copy</button></div><pre class="hl max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6" tabindex="0"><code class="font-mono" id="code-svelte-2"><span class="c">&lt;!-- Code generated by xgen. DO NOT EDIT. --&gt;</span>
-<span class="c">&lt;!-- Source: xgen/specs/ui/select.json --&gt;</span>
-<span class="c">&lt;!--
-</span><span class="c">  Select renders option children from the Options list plus manual children.
-</span><span class="c">--&gt;</span>
-&lt;<span class="nt">script</span> <span class="na">lang</span>=<span class="s">&#34;ts&#34;</span> <span class="na">module</span>&gt;
-  <span class="kr">import</span> <span class="kr">type</span> { Snippet } <span class="kr">from</span> <span class="s2">&#34;svelte&#34;</span>;
-  <span class="kr">import</span> { variants, <span class="kr">type</span> VariantKey } <span class="kr">from</span> <span class="s2">&#34;../../utils&#34;</span>;
-
-  <span class="cm">/** Select: the classes of each value of each prop (shadcn/cva style). */</span>
-  <span class="kr">export</span> <span class="kr">const</span> selectVariants = variants({
-    base:
-      <span class="s2">&#34;w-full min-w-0 bg-background text-foreground inset-ring inset-ring-input outline-none &#34;</span> +
-      <span class="s2">&#34;placeholder:text-muted-foreground disabled:cursor-not-allowed disabled:opacity-50 &#34;</span> +
-      <span class="s2">&#34;focus-visible:inset-ring-ring rounded&#34;</span>,
-    variants: {
-      size: {
-        sm: <span class="s2">&#34;h-8 px-3 text-sm&#34;</span>,
-        <span class="k">default</span>: <span class="s2">&#34;h-10 px-3 text-sm&#34;</span>,
-        lg: <span class="s2">&#34;h-12 px-4 text-base&#34;</span>,
-      },
-      variant: {
-        <span class="k">default</span>: <span class="s2">&#34;&#34;</span>,
-        ghost: <span class="s2">&#34;bg-muted inset-ring-transparent&#34;</span>,
-      },
-    },
-    defaultVariants: { size: <span class="s2">&#34;default&#34;</span>, variant: <span class="s2">&#34;default&#34;</span> },
-  });
-
-  <span class="kr">export</span> <span class="kr">type</span> SelectOptionItem = {
-    value?: <span class="kt">string</span>;
-    label?: <span class="kt">string</span>;
-  };
-
-  <span class="kr">export</span> <span class="kr">type</span> SelectVariant = VariantKey&lt;<span class="nt">typeof</span> <span class="na">selectVariants</span>, <span class="s2">&#34;variant&#34;</span>&gt;;
-  <span class="kr">export</span> <span class="kr">type</span> SelectSize = VariantKey&lt;<span class="nt">typeof</span> <span class="na">selectVariants</span>, <span class="s2">&#34;size&#34;</span>&gt;;
-
-  <span class="kr">export</span> <span class="kr">type</span> SelectProps = {
-    variant?: <span class="kt">SelectVariant</span>;
-    size?: <span class="kt">SelectSize</span>;
-    value?: <span class="kt">string</span>;
-    disabled?: <span class="kt">boolean</span>;
-    required?: <span class="kt">boolean</span>;
-    options?: <span class="kt">SelectOptionItem</span>[];
-    <span class="kr">class</span>?: <span class="kt">string</span>;
-    children?: <span class="kt">Snippet</span>;
-    [key: <span class="kt">string</span>]: <span class="kt">unknown</span>;
-  };
-&lt;/<span class="nt">script</span>&gt;
-
-&lt;<span class="nt">script</span> <span class="na">lang</span>=<span class="s">&#34;ts&#34;</span>&gt;
-  <span class="kr">import</span> { cn } <span class="kr">from</span> <span class="s2">&#34;../../utils&#34;</span>;
-  <span class="kr">import</span> { eqStr, orUndef } <span class="kr">from</span> <span class="s2">&#34;../../utils/expr&#34;</span>;
-
-  <span class="kd">let</span> {
-    variant,
-    size,
-    value,
-    disabled,
-    required,
-    options,
-    <span class="kr">class</span>: className,
-    children,
-    ...rest
-  }: SelectProps = $props();
-
-  <span class="kr">const</span> cls = $derived(cn(selectVariants({ size, variant }), className));
-&lt;/<span class="nt">script</span>&gt;
-
-&lt;<span class="nt">select</span>
-  {...(cls ? { <span class="kr">class</span>: cls } : {})}
-  <span class="na">disabled</span>={disabled || <span class="kc">undefined</span>}
-  <span class="s">required=</span>{required || <span class="kc">undefined</span>}
-  {...rest}
-&gt;
-  {<span class="k">#each</span> options ?? [] <span class="kr">as</span> item}
-    &lt;<span class="nt">option</span>
-      {...({ <span class="s2">&#34;value&#34;</span>: orUndef(item.value) } <span class="kr">as</span> Record&lt;<span class="nt">string</span>, <span class="na">unknown</span>&gt;)}
-      <span class="na">selected</span>={eqStr(item.value, value) || <span class="kc">undefined</span>}
-    <span class="err">&gt;</span>{item.label}<span class="s">&lt;/option</span>&gt;
-  {<span class="k">/each</span>}
-  {<span class="kd">@render</span> children?.()}
-&lt;/<span class="nt">select</span>&gt;
-</code></pre></div> <p class="text-sm"><a href="https://registry.buildy.tw/svelte/components/ui/select.json" class="underline">Svelte registry item (JSON)</a></p></section><section class="rt-panel" id="panel-react" aria-label="React code" data-runtime="react"><p class="text-sm mb-2 text-muted-foreground">Point the CLI at this runtime once, then add the item:</p> <div class="mb-2"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code class="overflow-x-auto whitespace-nowrap font-mono text-sm" id="panel-react-init" tabindex="0">npx ui8kit init --yes --framework react --dir src --registry-url https://registry.buildy.tw/react --strict-cdn</code><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="panel-react-init" hidden>Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code class="overflow-x-auto whitespace-nowrap font-mono text-sm" id="panel-react-add" tabindex="0">npx ui8kit add select</code><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="panel-react-add" hidden>Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/select/opt-group.tsx</span><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="code-react-0" hidden>Copy</button></div><pre class="hl max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6" tabindex="0"><code class="font-mono" id="code-react-0"><span class="c1">// Code generated by xgen. DO NOT EDIT.
-</span><span class="c1">// Source: xgen/specs/ui/select.json
-</span><span class="cm">/**
-</span><span class="cm"> * OptGroup: one part of Select (one file per part, as in the Svelte package).
-</span><span class="cm"> */</span>
-
-<span class="kr">import</span> { forwardRef, <span class="kr">type</span> ReactNode, <span class="kr">type</span> OptgroupHTMLAttributes } <span class="kr">from</span> <span class="s2">&#34;react&#34;</span>;
-<span class="kr">import</span> { cn } <span class="kr">from</span> <span class="s2">&#34;../../utils&#34;</span>;
-
-<span class="cm">/**
-</span><span class="cm"> * OptGroup renders a native optgroup around option children.
-</span><span class="cm"> */</span>
-<span class="kr">export</span> <span class="kr">type</span> OptGroupProps = Omit&lt;
-  OptgroupHTMLAttributes&lt;<span class="nt">HTMLOptGroupElement</span>&gt;,
-  | <span class="s2">&#34;className&#34;</span> | <span class="s2">&#34;children&#34;</span> | <span class="s2">&#34;disabled&#34;</span>
-&gt; &amp; {
-  disabled?: <span class="kt">boolean</span>;
-  className?: <span class="kt">string</span>;
-  children?: <span class="kt">ReactNode</span>;
-};
-
-<span class="kr">export</span> <span class="kr">const</span> OptGroup = forwardRef&lt;<span class="nt">HTMLOptGroupElement</span>, <span class="na">OptGroupProps</span>&gt;(<span class="kd">function</span> OptGroup(
-  { disabled, className, children, ...rest },
-  ref
-) {
-  <span class="kr">const</span> cls = cn(className);
-  <span class="k">return</span> (
-    &lt;<span class="nt">optgroup</span> <span class="na">ref</span>={ref} <span class="na">className</span>={cls || <span class="kc">undefined</span>} <span class="na">disabled</span>={disabled || <span class="kc">undefined</span>} {<span class="na">...rest</span>}&gt;
-      {children}
-    &lt;/<span class="nt">optgroup</span>&gt;
-  );
-});
-OptGroup.displayName = <span class="s2">&#34;OptGroup&#34;</span>;
-</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/select/select-option.tsx</span><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="code-react-1" hidden>Copy</button></div><pre class="hl max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6" tabindex="0"><code class="font-mono" id="code-react-1"><span class="c1">// Code generated by xgen. DO NOT EDIT.
-</span><span class="c1">// Source: xgen/specs/ui/select.json
-</span><span class="cm">/**
-</span><span class="cm"> * SelectOption: one part of Select (one file per part, as in the Svelte package).
-</span><span class="cm"> */</span>
-
-<span class="kr">import</span> { forwardRef, <span class="kr">type</span> ReactNode, <span class="kr">type</span> OptionHTMLAttributes } <span class="kr">from</span> <span class="s2">&#34;react&#34;</span>;
-
-<span class="cm">/**
-</span><span class="cm"> * SelectOption renders an option for custom Select children.
-</span><span class="cm"> */</span>
-<span class="kr">export</span> <span class="kr">type</span> SelectOptionProps = Omit&lt;
-  OptionHTMLAttributes&lt;<span class="nt">HTMLOptionElement</span>&gt;,
-  | <span class="s2">&#34;className&#34;</span> | <span class="s2">&#34;children&#34;</span> | <span class="s2">&#34;selected&#34;</span> | <span class="s2">&#34;disabled&#34;</span>
-&gt; &amp; {
-  selected?: <span class="kt">boolean</span>;
-  disabled?: <span class="kt">boolean</span>;
-  className?: <span class="kt">string</span>;
-  children?: <span class="kt">ReactNode</span>;
-};
-
-<span class="kr">export</span> <span class="kr">const</span> SelectOption = forwardRef&lt;<span class="nt">HTMLOptionElement</span>, <span class="na">SelectOptionProps</span>&gt;(<span class="kd">function</span> SelectOption(
-  { selected, disabled, className, children, ...rest },
-  ref
-) {
-  <span class="k">return</span> (
-    &lt;<span class="nt">option</span> <span class="na">ref</span>={ref} <span class="na">selected</span>={selected || <span class="kc">undefined</span>} <span class="na">disabled</span>={disabled || <span class="kc">undefined</span>} {<span class="na">...rest</span>}&gt;
-      {children}
-    &lt;/<span class="nt">option</span>&gt;
-  );
-});
-SelectOption.displayName = <span class="s2">&#34;SelectOption&#34;</span>;
-</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/select/select.tsx</span><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="code-react-2" hidden>Copy</button></div><pre class="hl max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6" tabindex="0"><code class="font-mono" id="code-react-2"><span class="c1">// Code generated by xgen. DO NOT EDIT.
-</span><span class="c1">// Source: xgen/specs/ui/select.json
-</span><span class="cm">/**
-</span><span class="cm"> * Select is a native dropdown built from Option items.
-</span><span class="cm"> */</span>
-
-<span class="kr">import</span> { forwardRef, <span class="kr">type</span> ReactNode, <span class="kr">type</span> SelectHTMLAttributes } <span class="kr">from</span> <span class="s2">&#34;react&#34;</span>;
-<span class="kr">import</span> { cn, variants, <span class="kr">type</span> VariantKey } <span class="kr">from</span> <span class="s2">&#34;../../utils&#34;</span>;
-<span class="kr">import</span> { eqStr } <span class="kr">from</span> <span class="s2">&#34;../../utils/expr&#34;</span>;
-
-<span class="cm">/** Select: the classes of each value of each prop (shadcn/cva style). */</span>
-<span class="kr">export</span> <span class="kr">const</span> selectVariants = variants({
-  base:
-    <span class="s2">&#34;w-full min-w-0 bg-background text-foreground inset-ring inset-ring-input outline-none &#34;</span> +
-    <span class="s2">&#34;placeholder:text-muted-foreground disabled:cursor-not-allowed disabled:opacity-50 &#34;</span> +
-    <span class="s2">&#34;focus-visible:inset-ring-ring rounded&#34;</span>,
-  variants: {
-    size: {
-      sm: <span class="s2">&#34;h-8 px-3 text-sm&#34;</span>,
-      <span class="k">default</span>: <span class="s2">&#34;h-10 px-3 text-sm&#34;</span>,
-      lg: <span class="s2">&#34;h-12 px-4 text-base&#34;</span>,
-    },
-    variant: {
-      <span class="k">default</span>: <span class="s2">&#34;&#34;</span>,
-      ghost: <span class="s2">&#34;bg-muted inset-ring-transparent&#34;</span>,
-    },
-  },
-  defaultVariants: { size: <span class="s2">&#34;default&#34;</span>, variant: <span class="s2">&#34;default&#34;</span> },
-});
-
-<span class="kr">export</span> <span class="kr">type</span> SelectOptionItem = {
-  value?: <span class="kt">string</span>;
-  label?: <span class="kt">string</span>;
-};
-
-<span class="kr">export</span> <span class="kr">type</span> SelectVariant = VariantKey&lt;<span class="nt">typeof</span> <span class="na">selectVariants</span>, <span class="s2">&#34;variant&#34;</span>&gt;;
-<span class="kr">export</span> <span class="kr">type</span> SelectSize = VariantKey&lt;<span class="nt">typeof</span> <span class="na">selectVariants</span>, <span class="s2">&#34;size&#34;</span>&gt;;
-
-<span class="cm">/**
-</span><span class="cm"> * Select renders option children from the Options list plus manual children.
-</span><span class="cm"> */</span>
-<span class="kr">export</span> <span class="kr">type</span> SelectProps = Omit&lt;
-  SelectHTMLAttributes&lt;<span class="nt">HTMLSelectElement</span>&gt;,
-  | <span class="s2">&#34;className&#34;</span> | <span class="s2">&#34;children&#34;</span> | <span class="s2">&#34;variant&#34;</span> | <span class="s2">&#34;size&#34;</span> | <span class="s2">&#34;value&#34;</span> | <span class="s2">&#34;disabled&#34;</span> | <span class="s2">&#34;required&#34;</span> | <span class="s2">&#34;options&#34;</span>
-&gt; &amp; {
-  variant?: <span class="kt">SelectVariant</span>;
-  size?: <span class="kt">SelectSize</span>;
-  value?: <span class="kt">string</span>;
-  disabled?: <span class="kt">boolean</span>;
-  required?: <span class="kt">boolean</span>;
-  options?: <span class="kt">SelectOptionItem</span>[];
-  className?: <span class="kt">string</span>;
-  children?: <span class="kt">ReactNode</span>;
-};
-
-<span class="kr">export</span> <span class="kr">const</span> Select = forwardRef&lt;<span class="nt">HTMLSelectElement</span>, <span class="na">SelectProps</span>&gt;(<span class="kd">function</span> Select(
-  { variant, size, value, disabled, required, options, className, children, ...rest },
-  ref
-) {
-  <span class="kr">const</span> cls = cn(selectVariants({ size, variant }), className);
-  <span class="k">return</span> (
-    &lt;<span class="nt">select</span>
-      <span class="na">ref</span>={ref}
-      <span class="na">className</span>={cls || <span class="kc">undefined</span>}
-      <span class="na">disabled</span>={disabled || <span class="kc">undefined</span>}
-      <span class="na">required</span>={required || <span class="kc">undefined</span>}
-      {<span class="na">...rest</span>}
-    &gt;
-      {(options ?? []).map((item, index) =&gt; (
-        &lt;<span class="nt">option</span> <span class="na">key</span>={index} <span class="na">value</span>={(item.value) ?? <span class="s2">&#34;&#34;</span>} <span class="na">selected</span>={eqStr(item.value, value) || <span class="kc">undefined</span>}&gt;
-          {item.label}
-        &lt;/<span class="nt">option</span>&gt;
-      ))}
-      {children}
-    &lt;/<span class="nt">select</span>&gt;
-  );
-});
-Select.displayName = <span class="s2">&#34;Select&#34;</span>;
-</code></pre></div> <p class="text-sm"><a href="https://registry.buildy.tw/react/components/ui/select.json" class="underline">React registry item (JSON)</a></p></section><section class="rt-panel" id="panel-vue" aria-label="Vue code" data-runtime="vue"><p class="text-sm mb-2 text-muted-foreground">Point the CLI at this runtime once, then add the item:</p> <div class="mb-2"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code class="overflow-x-auto whitespace-nowrap font-mono text-sm" id="panel-vue-init" tabindex="0">npx ui8kit init --yes --framework vue --dir src --registry-url https://registry.buildy.tw/vue --strict-cdn</code><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="panel-vue-init" hidden>Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code class="overflow-x-auto whitespace-nowrap font-mono text-sm" id="panel-vue-add" tabindex="0">npx ui8kit add select</code><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="panel-vue-add" hidden>Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/select/opt-group.vue</span><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="code-vue-0" hidden>Copy</button></div><pre class="hl max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6" tabindex="0"><code class="font-mono" id="code-vue-0"><span class="c">&lt;!--</span> Code generated by xgen. DO NOT EDIT. --&gt;
-<span class="c">&lt;!--</span> Source: xgen/specs/ui/select.json --&gt;
-<span class="c">&lt;!--</span>
-  OptGroup renders a <span class="kr">native</span> optgroup around option children.
---&gt;
-&lt;<span class="nt">script</span> <span class="na">lang</span>=<span class="s">&#34;ts&#34;</span>&gt;
-<span class="kr">export</span> type OptGroupProps = {
-  disabled?: <span class="kr">boolean</span>;
-  <span class="kr">class</span>?: string;
-};
-&lt;/<span class="nt">script</span>&gt;
-
-&lt;<span class="nt">script</span> <span class="na">setup</span> <span class="na">lang</span>=<span class="s">&#34;ts&#34;</span>&gt;
-<span class="kr">import</span> { computed, useAttrs } from <span class="s2">&#34;vue&#34;</span>;
-<span class="kr">import</span> { cn } from <span class="s2">&#34;../../utils&#34;</span>;
-
-defineOptions({ inheritAttrs: <span class="kc">false</span> });
-defineSlots&lt;{ <span class="k">default</span>?(): unknown }&gt;();
-<span class="kr">const</span> { disabled, <span class="kr">class</span>: className } = defineProps&lt;<span class="nt">OptGroupProps</span>&gt;();
-<span class="kr">const</span> attrs = useAttrs();
-<span class="kr">const</span> cls = computed(() =&gt; cn(className));
-&lt;/<span class="nt">script</span>&gt;
-
-&lt;<span class="nt">template</span>&gt;
-  &lt;<span class="nt">optgroup</span> :<span class="na">class</span>=<span class="s">&#34;cls || undefined&#34;</span> :<span class="na">disabled</span>=<span class="s">&#34;disabled || undefined&#34;</span> <span class="nt">v-bind</span>=<span class="s">&#34;attrs&#34;</span>&gt;
-    &lt;<span class="nt">slot</span> /&gt;
-  &lt;/<span class="nt">optgroup</span>&gt;
-&lt;/<span class="nt">template</span>&gt;
-</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/select/select-option.vue</span><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="code-vue-1" hidden>Copy</button></div><pre class="hl max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6" tabindex="0"><code class="font-mono" id="code-vue-1"><span class="c">&lt;!--</span> Code generated by xgen. DO NOT EDIT. --&gt;
-<span class="c">&lt;!--</span> Source: xgen/specs/ui/select.json --&gt;
-<span class="c">&lt;!--</span>
-  SelectOption renders an option <span class="k">for</span> custom Select children.
---&gt;
-&lt;<span class="nt">script</span> <span class="na">lang</span>=<span class="s">&#34;ts&#34;</span>&gt;
-<span class="kr">export</span> type SelectOptionProps = {
-  selected?: <span class="kr">boolean</span>;
-  disabled?: <span class="kr">boolean</span>;
-  <span class="kr">class</span>?: string;
-};
-&lt;/<span class="nt">script</span>&gt;
-
-&lt;<span class="nt">script</span> <span class="na">setup</span> <span class="na">lang</span>=<span class="s">&#34;ts&#34;</span>&gt;
-<span class="kr">import</span> { useAttrs } from <span class="s2">&#34;vue&#34;</span>;
-
-defineOptions({ inheritAttrs: <span class="kc">false</span> });
-defineSlots&lt;{ <span class="k">default</span>?(): unknown }&gt;();
-<span class="kr">const</span> { selected, disabled, <span class="kr">class</span>: className } = defineProps&lt;<span class="nt">SelectOptionProps</span>&gt;();
-<span class="kr">const</span> attrs = useAttrs();
-&lt;/<span class="nt">script</span>&gt;
-
-&lt;<span class="nt">template</span>&gt;
-  &lt;<span class="nt">option</span> :<span class="na">selected</span>=<span class="s">&#34;selected || undefined&#34;</span> :<span class="na">disabled</span>=<span class="s">&#34;disabled || undefined&#34;</span> <span class="nt">v-bind</span>=<span class="s">&#34;attrs&#34;</span>&gt;
-    &lt;<span class="nt">slot</span> /&gt;
-  &lt;/<span class="nt">option</span>&gt;
-&lt;/<span class="nt">template</span>&gt;
-</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/select/select.vue</span><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="code-vue-2" hidden>Copy</button></div><pre class="hl max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6" tabindex="0"><code class="font-mono" id="code-vue-2"><span class="c">&lt;!--</span> Code generated by xgen. DO NOT EDIT. --&gt;
-<span class="c">&lt;!--</span> Source: xgen/specs/ui/select.json --&gt;
-<span class="c">&lt;!--</span>
-  Select renders option children from the Options list plus manual children.
---&gt;
-&lt;<span class="nt">script</span> <span class="na">lang</span>=<span class="s">&#34;ts&#34;</span>&gt;
-<span class="kr">import</span> { variants, type VariantKey } from <span class="s2">&#34;../../utils&#34;</span>;
-
-<span class="cm">/** Select: the classes of each value of each prop (shadcn/cva style). */</span>
-<span class="kr">export</span> <span class="kr">const</span> selectVariants = variants({
-  base:
-    <span class="s2">&#34;w-full min-w-0 bg-background text-foreground inset-ring inset-ring-input outline-none &#34;</span> +
-    <span class="s2">&#34;placeholder:text-muted-foreground disabled:cursor-not-allowed disabled:opacity-50 &#34;</span> +
-    <span class="s2">&#34;focus-visible:inset-ring-ring rounded&#34;</span>,
-  variants: {
-    size: {
-      sm: <span class="s2">&#34;h-8 px-3 text-sm&#34;</span>,
-      <span class="k">default</span>: <span class="s2">&#34;h-10 px-3 text-sm&#34;</span>,
-      lg: <span class="s2">&#34;h-12 px-4 text-base&#34;</span>,
-    },
-    variant: {
-      <span class="k">default</span>: <span class="s2">&#34;&#34;</span>,
-      ghost: <span class="s2">&#34;bg-muted inset-ring-transparent&#34;</span>,
-    },
-  },
-  defaultVariants: { size: <span class="s2">&#34;default&#34;</span>, variant: <span class="s2">&#34;default&#34;</span> },
-});
-
-<span class="kr">export</span> type SelectOptionItem = {
-  value?: string;
-  label?: string;
-};
-
-<span class="kr">export</span> type SelectVariant = VariantKey&lt;<span class="nt">typeof</span> <span class="na">selectVariants</span><span class="err">,</span> <span class="err">&#34;</span><span class="na">variant</span><span class="err">&#34;</span>&gt;;
-<span class="kr">export</span> type SelectSize = VariantKey&lt;<span class="nt">typeof</span> <span class="na">selectVariants</span><span class="err">,</span> <span class="err">&#34;</span><span class="na">size</span><span class="err">&#34;</span>&gt;;
-
-<span class="kr">export</span> type SelectProps = {
-  variant?: SelectVariant;
-  size?: SelectSize;
-  value?: string;
-  disabled?: <span class="kr">boolean</span>;
-  required?: <span class="kr">boolean</span>;
-  options?: SelectOptionItem[];
-  <span class="kr">class</span>?: string;
-};
-&lt;/<span class="nt">script</span>&gt;
-
-&lt;<span class="nt">script</span> <span class="na">setup</span> <span class="na">lang</span>=<span class="s">&#34;ts&#34;</span>&gt;
-<span class="kr">import</span> { computed, useAttrs } from <span class="s2">&#34;vue&#34;</span>;
-<span class="kr">import</span> { cn } from <span class="s2">&#34;../../utils&#34;</span>;
-<span class="kr">import</span> { eqStr } from <span class="s2">&#34;../../utils/expr&#34;</span>;
-
-defineOptions({ inheritAttrs: <span class="kc">false</span> });
-defineSlots&lt;{ <span class="k">default</span>?(): unknown }&gt;();
-<span class="kr">const</span> { variant, size, value, disabled, required, options, <span class="kr">class</span>: className } = defineProps&lt;<span class="nt">SelectProps</span>&gt;();
-<span class="kr">const</span> attrs = useAttrs();
-<span class="kr">const</span> cls = computed(() =&gt; cn(selectVariants({ size, variant }), className));
-&lt;/<span class="nt">script</span>&gt;
-
-&lt;<span class="nt">template</span>&gt;
-  &lt;<span class="nt">select</span>
-    :<span class="na">class</span>=<span class="s">&#34;cls || undefined&#34;</span>
-    :<span class="na">disabled</span>=<span class="s">&#34;disabled || undefined&#34;</span>
-    :<span class="na">required</span>=<span class="s">&#34;required || undefined&#34;</span>
-    <span class="nt">v-bind</span>=<span class="s">&#34;attrs&#34;</span>
-  &gt;
-    &lt;<span class="nt">option</span>
-      <span class="nt">v-for</span>=<span class="s">&#34;(item, i) in options ?? []&#34;</span>
-      <span class="nt">:key</span>=<span class="s">&#34;i&#34;</span>
-      :<span class="na">value</span>=<span class="s">&#34;(item.value) ?? &#39;&#39;&#34;</span>
-      :<span class="na">selected</span>=<span class="s">&#34;eqStr(item.value, value) || undefined&#34;</span>&gt;{{
-      item.label
-      }}&lt;<span class="err">/option</span>
-    &gt;
-    &lt;<span class="nt">slot</span> /&gt;
-  &lt;/<span class="nt">select</span>&gt;
-&lt;/<span class="nt">template</span>&gt;
-</code></pre></div> <p class="text-sm"><a href="https://registry.buildy.tw/vue/components/ui/select.json" class="underline">Vue registry item (JSON)</a></p></section><section class="rt-panel" id="panel-solid" aria-label="Solid code" data-runtime="solid"><p class="text-sm mb-2 text-muted-foreground">Point the CLI at this runtime once, then add the item:</p> <div class="mb-2"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code class="overflow-x-auto whitespace-nowrap font-mono text-sm" id="panel-solid-init" tabindex="0">npx ui8kit init --yes --framework solid --dir src --registry-url https://registry.buildy.tw/solid --strict-cdn</code><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="panel-solid-init" hidden>Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code class="overflow-x-auto whitespace-nowrap font-mono text-sm" id="panel-solid-add" tabindex="0">npx ui8kit add select</code><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="panel-solid-add" hidden>Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/select/opt-group.tsx</span><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="code-solid-0" hidden>Copy</button></div><pre class="hl max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6" tabindex="0"><code class="font-mono" id="code-solid-0"><span class="c1">// Code generated by xgen. DO NOT EDIT.
-</span><span class="c1">// Source: xgen/specs/ui/select.json
-</span><span class="cm">/**
-</span><span class="cm"> * OptGroup: one part of Select (one file per part, as in the Svelte package).
-</span><span class="cm"> */</span>
-
-<span class="kr">import</span> { splitProps, <span class="kr">type</span> Component, <span class="kr">type</span> JSX } <span class="kr">from</span> <span class="s2">&#34;solid-js&#34;</span>;
-<span class="kr">import</span> { cn } <span class="kr">from</span> <span class="s2">&#34;../../utils&#34;</span>;
-
-<span class="cm">/**
-</span><span class="cm"> * OptGroup renders a native optgroup around option children.
-</span><span class="cm"> */</span>
-<span class="kr">export</span> <span class="kr">type</span> OptGroupProps = Omit&lt;
-  JSX.OptgroupHTMLAttributes&lt;<span class="nt">HTMLOptGroupElement</span>&gt;,
-  <span class="s2">&#34;class&#34;</span> | <span class="s2">&#34;children&#34;</span> | <span class="s2">&#34;disabled&#34;</span>
-&gt; &amp; {
-  disabled?: <span class="kt">boolean</span>;
-  <span class="kr">class</span>?: <span class="kt">string</span>;
-  children?: <span class="kt">JSX.Element</span>;
-};
-
-<span class="kr">export</span> <span class="kr">const</span> OptGroup: <span class="kt">Component</span>&lt;<span class="nt">OptGroupProps</span>&gt; = (props) =&gt; {
-  <span class="kr">const</span> [local, rest] = splitProps(props, [<span class="s2">&#34;disabled&#34;</span>, <span class="s2">&#34;class&#34;</span>, <span class="s2">&#34;children&#34;</span>]);
-  <span class="kr">const</span> cls = () =&gt; cn(local.<span class="kr">class</span>);
-  <span class="k">return</span> (
-    &lt;<span class="nt">optgroup</span> <span class="na">class</span>={cls() || <span class="kc">undefined</span>} <span class="na">disabled</span>={local.disabled || <span class="kc">undefined</span>} {<span class="na">...rest</span>}&gt;
-      {local.children}
-    &lt;/<span class="nt">optgroup</span>&gt;
-  );
-};
-</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/select/select-option.tsx</span><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="code-solid-1" hidden>Copy</button></div><pre class="hl max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6" tabindex="0"><code class="font-mono" id="code-solid-1"><span class="c1">// Code generated by xgen. DO NOT EDIT.
-</span><span class="c1">// Source: xgen/specs/ui/select.json
-</span><span class="cm">/**
-</span><span class="cm"> * SelectOption: one part of Select (one file per part, as in the Svelte package).
-</span><span class="cm"> */</span>
-
-<span class="kr">import</span> { splitProps, <span class="kr">type</span> Component, <span class="kr">type</span> JSX } <span class="kr">from</span> <span class="s2">&#34;solid-js&#34;</span>;
-
-<span class="cm">/**
-</span><span class="cm"> * SelectOption renders an option for custom Select children.
-</span><span class="cm"> */</span>
-<span class="kr">export</span> <span class="kr">type</span> SelectOptionProps = Omit&lt;
-  JSX.OptionHTMLAttributes&lt;<span class="nt">HTMLOptionElement</span>&gt;,
-  <span class="s2">&#34;class&#34;</span> | <span class="s2">&#34;children&#34;</span> | <span class="s2">&#34;selected&#34;</span> | <span class="s2">&#34;disabled&#34;</span>
-&gt; &amp; {
-  selected?: <span class="kt">boolean</span>;
-  disabled?: <span class="kt">boolean</span>;
-  <span class="kr">class</span>?: <span class="kt">string</span>;
-  children?: <span class="kt">JSX.Element</span>;
-};
-
-<span class="kr">export</span> <span class="kr">const</span> SelectOption: <span class="kt">Component</span>&lt;<span class="nt">SelectOptionProps</span>&gt; = (props) =&gt; {
-  <span class="kr">const</span> [local, rest] = splitProps(props, [<span class="s2">&#34;selected&#34;</span>, <span class="s2">&#34;disabled&#34;</span>, <span class="s2">&#34;class&#34;</span>, <span class="s2">&#34;children&#34;</span>]);
-  <span class="k">return</span> (
-    &lt;<span class="nt">option</span> <span class="na">selected</span>={local.selected || <span class="kc">undefined</span>} <span class="na">disabled</span>={local.disabled || <span class="kc">undefined</span>} {<span class="na">...rest</span>}&gt;
-      {local.children}
-    &lt;/<span class="nt">option</span>&gt;
-  );
-};
-</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">primitives/select/select.tsx</span><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="code-solid-2" hidden>Copy</button></div><pre class="hl max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6" tabindex="0"><code class="font-mono" id="code-solid-2"><span class="c1">// Code generated by xgen. DO NOT EDIT.
-</span><span class="c1">// Source: xgen/specs/ui/select.json
-</span><span class="cm">/**
-</span><span class="cm"> * Select is a native dropdown built from Option items.
-</span><span class="cm"> */</span>
-
-<span class="kr">import</span> { splitProps, For, <span class="kr">type</span> Component, <span class="kr">type</span> JSX } <span class="kr">from</span> <span class="s2">&#34;solid-js&#34;</span>;
-<span class="kr">import</span> { cn, variants, <span class="kr">type</span> VariantKey } <span class="kr">from</span> <span class="s2">&#34;../../utils&#34;</span>;
-<span class="kr">import</span> { eqStr } <span class="kr">from</span> <span class="s2">&#34;../../utils/expr&#34;</span>;
-
-<span class="cm">/** Select: the classes of each value of each prop (shadcn/cva style). */</span>
-<span class="kr">export</span> <span class="kr">const</span> selectVariants = variants({
-  base:
-    <span class="s2">&#34;w-full min-w-0 bg-background text-foreground inset-ring inset-ring-input outline-none &#34;</span> +
-    <span class="s2">&#34;placeholder:text-muted-foreground disabled:cursor-not-allowed disabled:opacity-50 &#34;</span> +
-    <span class="s2">&#34;focus-visible:inset-ring-ring rounded&#34;</span>,
-  variants: {
-    size: {
-      sm: <span class="s2">&#34;h-8 px-3 text-sm&#34;</span>,
-      <span class="k">default</span>: <span class="s2">&#34;h-10 px-3 text-sm&#34;</span>,
-      lg: <span class="s2">&#34;h-12 px-4 text-base&#34;</span>,
-    },
-    variant: {
-      <span class="k">default</span>: <span class="s2">&#34;&#34;</span>,
-      ghost: <span class="s2">&#34;bg-muted inset-ring-transparent&#34;</span>,
-    },
-  },
-  defaultVariants: { size: <span class="s2">&#34;default&#34;</span>, variant: <span class="s2">&#34;default&#34;</span> },
-});
-
-<span class="kr">export</span> <span class="kr">type</span> SelectOptionItem = {
-  value?: <span class="kt">string</span>;
-  label?: <span class="kt">string</span>;
-};
-
-<span class="kr">export</span> <span class="kr">type</span> SelectVariant = VariantKey&lt;<span class="nt">typeof</span> <span class="na">selectVariants</span>, <span class="s2">&#34;variant&#34;</span>&gt;;
-<span class="kr">export</span> <span class="kr">type</span> SelectSize = VariantKey&lt;<span class="nt">typeof</span> <span class="na">selectVariants</span>, <span class="s2">&#34;size&#34;</span>&gt;;
-
-<span class="cm">/**
-</span><span class="cm"> * Select renders option children from the Options list plus manual children.
-</span><span class="cm"> */</span>
-<span class="kr">export</span> <span class="kr">type</span> SelectProps = Omit&lt;
-  JSX.SelectHTMLAttributes&lt;<span class="nt">HTMLSelectElement</span>&gt;,
-  <span class="s2">&#34;class&#34;</span> | <span class="s2">&#34;children&#34;</span> | <span class="s2">&#34;variant&#34;</span> | <span class="s2">&#34;size&#34;</span> | <span class="s2">&#34;value&#34;</span> | <span class="s2">&#34;disabled&#34;</span> | <span class="s2">&#34;required&#34;</span> | <span class="s2">&#34;options&#34;</span>
-&gt; &amp; {
-  variant?: <span class="kt">SelectVariant</span>;
-  size?: <span class="kt">SelectSize</span>;
-  value?: <span class="kt">string</span>;
-  disabled?: <span class="kt">boolean</span>;
-  required?: <span class="kt">boolean</span>;
-  options?: <span class="kt">SelectOptionItem</span>[];
-  <span class="kr">class</span>?: <span class="kt">string</span>;
-  children?: <span class="kt">JSX.Element</span>;
-};
-
-<span class="kr">export</span> <span class="kr">const</span> Select: <span class="kt">Component</span>&lt;<span class="nt">SelectProps</span>&gt; = (props) =&gt; {
-  <span class="kr">const</span> [local, rest] = splitProps(props, [<span class="s2">&#34;variant&#34;</span>, <span class="s2">&#34;size&#34;</span>, <span class="s2">&#34;value&#34;</span>, <span class="s2">&#34;disabled&#34;</span>, <span class="s2">&#34;required&#34;</span>, <span class="s2">&#34;options&#34;</span>, <span class="s2">&#34;class&#34;</span>, <span class="s2">&#34;children&#34;</span>]);
-  <span class="kr">const</span> cls = () =&gt; cn(selectVariants({ size: <span class="kt">local.size</span>, variant: <span class="kt">local.variant</span> }), local.<span class="kr">class</span>);
-  <span class="k">return</span> (
-    &lt;<span class="nt">select</span>
-      <span class="na">class</span>={cls() || <span class="kc">undefined</span>}
-      <span class="na">disabled</span>={local.disabled || <span class="kc">undefined</span>}
-      <span class="na">required</span>={local.required || <span class="kc">undefined</span>}
-      {<span class="na">...rest</span>}
-    &gt;
-      &lt;<span class="nt">For</span> <span class="na">each</span>={local.options ?? []}&gt;
-        {(item) =&gt; (
-          &lt;<span class="nt">option</span> <span class="na">value</span>={(item.value) ?? <span class="s2">&#34;&#34;</span>} <span class="na">selected</span>={eqStr(item.value, local.value) || <span class="kc">undefined</span>}&gt;
-            {item.label}
-          &lt;/<span class="nt">option</span>&gt;
-        )}
-      &lt;/<span class="nt">For</span>&gt;
-      {local.children}
-    &lt;/<span class="nt">select</span>&gt;
-  );
-};
-</code></pre></div> <p class="text-sm"><a href="https://registry.buildy.tw/solid/components/ui/select.json" class="underline">Solid registry item (JSON)</a></p></section><section class="rt-panel" id="panel-templ" aria-label="templ code" data-runtime="templ"><p class="text-sm mb-2 text-muted-foreground">Point the CLI at this runtime once, then add the item:</p> <div class="mb-2"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code class="overflow-x-auto whitespace-nowrap font-mono text-sm" id="panel-templ-init" tabindex="0">npx ui8kit init --yes --framework templ --dir src --registry-url https://registry.buildy.tw/templ --strict-cdn</code><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="panel-templ-init" hidden>Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code class="overflow-x-auto whitespace-nowrap font-mono text-sm" id="panel-templ-add" tabindex="0">npx ui8kit add select</code><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="panel-templ-add" hidden>Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">ui/select/select.templ</span><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="code-templ-0" hidden>Copy</button></div><pre class="hl max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6" tabindex="0"><code class="font-mono" id="code-templ-0"><span class="c1">// Code generated by xgen. DO NOT EDIT.</span>
-<span class="c1">// Source: xgen/specs/ui/select.json</span>
-
-<span class="cm">/*
-</span><span class="cm">Select is a native dropdown built from Option items.
-</span><span class="cm">*/</span>
-
-<span class="kn">package</span> selectfield
-
-<span class="kn">import</span> (
-	uiutils &#34;github.com/codegen-x/ui8kit/packages/templ/ui/utils&#34;
-)
-
-<span class="c1">// SelectOptionItem is one SelectOptionItem entry.</span>
-<span class="kd">type</span> SelectOptionItem <span class="kd">struct</span> {
-	Value string
-	Label string
+<span class="cm">/** Select: Select + recipe select. */</span>
+<span class="kr">export</span> <span class="kd">function</span> Select({ <span class="s2">&#34;size&#34;</span>: v_size, <span class="s2">&#34;variant&#34;</span>: v_variant, <span class="s2">&#34;state&#34;</span>: v_state, className, ...rest }: SelectProps) {
+  <span class="k">return</span> &lt;<span class="nt">Prim</span> <span class="na">className</span>={cn(rc(<span class="s2">&#34;select&#34;</span>, { <span class="s2">&#34;size&#34;</span>: v_size, <span class="s2">&#34;variant&#34;</span>: v_variant, <span class="s2">&#34;state&#34;</span>: v_state }), className)} <span class="na">aria-invalid</span>={v_state === <span class="s2">&#34;error&#34;</span> ? <span class="s2">&#34;true&#34;</span> : <span class="kc">undefined</span>} {<span class="na">...rest</span>} /&gt;;
 }
+</code></pre></div> <p class="text-sm"><a href="https://registry.buildy.tw/react/components/ui/select.json" class="underline">React registry item (JSON)</a></p></section><section class="rt-panel" id="panel-vue" aria-label="Vue code" data-runtime="vue"><p class="text-sm mb-2 text-muted-foreground">Point the CLI at this runtime once, then add the item:</p> <div class="mb-2"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code class="overflow-x-auto whitespace-nowrap font-mono text-sm" id="panel-vue-init" tabindex="0">npx ui8kit init --yes --framework vue --dir src --registry-url https://registry.buildy.tw/vue --strict-cdn</code><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="panel-vue-init" hidden>Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code class="overflow-x-auto whitespace-nowrap font-mono text-sm" id="panel-vue-add" tabindex="0">npx ui8kit add select</code><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="panel-vue-add" hidden>Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">compose/Select.vue</span><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="code-vue-0" hidden>Copy</button></div><pre class="hl max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6" tabindex="0"><code class="font-mono" id="code-vue-0"><span class="c">&lt;!--</span> Code generated by packages/kit-compose/src/build.ts from src/map.ts + variants/. DO NOT EDIT. --&gt;
+<span class="c">&lt;!--</span> Select: Select + recipe select. --&gt;
+&lt;<span class="nt">script</span> <span class="na">setup</span> <span class="na">lang</span>=<span class="s">&#34;ts&#34;</span>&gt;
+<span class="kr">import</span> { computed, useAttrs } from <span class="s2">&#34;vue&#34;</span>;
+<span class="kr">import</span> Prim from <span class="s2">&#34;../kit/ui/select/Select.vue&#34;</span>;
+<span class="kr">import</span> { cn } from <span class="s2">&#34;../kit/utils&#34;</span>;
+<span class="kr">import</span> { rc } from <span class="s2">&#34;./recipes&#34;</span>;
 
-<span class="c1">// SelectProps configures Select.</span>
+defineOptions({ name: <span class="s2">&#34;Select&#34;</span>, inheritAttrs: <span class="kc">false</span> });
+<span class="kr">const</span> props = defineProps&lt;{ <span class="s2">&#34;size&#34;</span>?: string | number; <span class="s2">&#34;variant&#34;</span>?: string | number; <span class="s2">&#34;state&#34;</span>?: string | number }&gt;();
+<span class="kr">const</span> attrs = useAttrs();
+<span class="kr">const</span> rest = computed(() =&gt; {
+  <span class="kr">const</span> { <span class="kr">class</span>: _class, ...r } = attrs;
+  <span class="k">return</span> r;
+});
+<span class="kr">const</span> cls = computed(() =&gt; cn(rc(<span class="s2">&#34;select&#34;</span>, { <span class="s2">&#34;size&#34;</span>: props[<span class="s2">&#34;size&#34;</span>], <span class="s2">&#34;variant&#34;</span>: props[<span class="s2">&#34;variant&#34;</span>], <span class="s2">&#34;state&#34;</span>: props[<span class="s2">&#34;state&#34;</span>] }), attrs.<span class="kr">class</span> as string | <span class="kc">undefined</span>));
+<span class="kr">const</span> tagValue = computed(() =&gt; <span class="s2">&#34;&#34;</span>);
+&lt;/<span class="nt">script</span>&gt;
+
+&lt;<span class="nt">template</span>&gt;
+  &lt;<span class="nt">Prim</span> <span class="nt">:class</span>=<span class="s">&#34;cls&#34;</span> :<span class="na">aria</span><span class="nt">-invalid</span><span class="err">=&#34;</span><span class="na">props.state</span> <span class="err">===</span> <span class="err">&#39;</span><span class="na">error</span><span class="err">&#39;</span> <span class="err">?</span> <span class="err">&#39;</span><span class="na">true</span><span class="err">&#39;</span> : <span class="na">undefined</span><span class="err">&#34;</span> <span class="nt">v-bind</span>=<span class="s">&#34;rest&#34;</span>&gt;&lt;<span class="nt">slot</span> /&gt;&lt;/<span class="nt">Prim</span>&gt;
+&lt;/<span class="nt">template</span>&gt;
+</code></pre></div> <p class="text-sm"><a href="https://registry.buildy.tw/vue/components/ui/select.json" class="underline">Vue registry item (JSON)</a></p></section><section class="rt-panel" id="panel-solid" aria-label="Solid code" data-runtime="solid"><p class="text-sm mb-2 text-muted-foreground">Point the CLI at this runtime once, then add the item:</p> <div class="mb-2"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code class="overflow-x-auto whitespace-nowrap font-mono text-sm" id="panel-solid-init" tabindex="0">npx ui8kit init --yes --framework solid --dir src --registry-url https://registry.buildy.tw/solid --strict-cdn</code><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="panel-solid-init" hidden>Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code class="overflow-x-auto whitespace-nowrap font-mono text-sm" id="panel-solid-add" tabindex="0">npx ui8kit add select</code><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="panel-solid-add" hidden>Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">compose/select.solid.tsx</span><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="code-solid-0" hidden>Copy</button></div><pre class="hl max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6" tabindex="0"><code class="font-mono" id="code-solid-0"><span class="c1">// Code generated by packages/kit-compose/src/build.ts from src/map.ts + variants/. DO NOT EDIT.
+</span><span class="kr">import</span> { splitProps, <span class="kr">type</span> ComponentProps } <span class="kr">from</span> <span class="s2">&#34;solid-js&#34;</span>;
+<span class="kr">import</span> { Select <span class="kr">as</span> Prim } <span class="kr">from</span> <span class="s2">&#34;../kit/ui/select/select.solid&#34;</span>;
+<span class="kr">import</span> { cn } <span class="kr">from</span> <span class="s2">&#34;../kit/utils&#34;</span>;
+<span class="kr">import</span> { rc } <span class="kr">from</span> <span class="s2">&#34;./recipes&#34;</span>;
+
+<span class="kr">export</span> <span class="kr">type</span> SelectProps = Omit&lt;<span class="nt">ComponentProps</span>&lt;<span class="nt">typeof</span> <span class="na">Prim</span>&gt;, <span class="s2">&#34;tag&#34;</span> <span class="err">|</span> <span class="s2">&#34;class&#34;</span> <span class="err">|</span> <span class="s2">&#34;className&#34;</span> <span class="err">|</span> <span class="s2">&#34;size&#34;</span> <span class="err">|</span> <span class="s2">&#34;variant&#34;</span> <span class="err">|</span> <span class="s2">&#34;state&#34;</span>&gt; &amp; { <span class="s2">&#34;size&#34;</span>?: <span class="kt">string</span> | <span class="kt">number</span>; <span class="s2">&#34;variant&#34;</span>?: <span class="kt">string</span> | <span class="kt">number</span>; <span class="s2">&#34;state&#34;</span>?: <span class="kt">string</span> | <span class="kt">number</span>; <span class="kr">class</span>?: <span class="kt">string</span>; className?: <span class="kt">string</span> };
+
+<span class="cm">/** Select: Select + recipe select. */</span>
+<span class="kr">export</span> <span class="kd">function</span> Select(props: <span class="kt">SelectProps</span>) {
+  <span class="kr">const</span> [local, rest] = splitProps(props, [<span class="s2">&#34;size&#34;</span>, <span class="s2">&#34;variant&#34;</span>, <span class="s2">&#34;state&#34;</span>, <span class="s2">&#34;class&#34;</span>, <span class="s2">&#34;className&#34;</span>]);
+  <span class="k">return</span> &lt;<span class="nt">Prim</span> <span class="na">class</span>={cn(rc(<span class="s2">&#34;select&#34;</span>, { <span class="s2">&#34;size&#34;</span>: local[<span class="s2">&#34;size&#34;</span>], <span class="s2">&#34;variant&#34;</span>: local[<span class="s2">&#34;variant&#34;</span>], <span class="s2">&#34;state&#34;</span>: local[<span class="s2">&#34;state&#34;</span>] }), local.<span class="kr">class</span> ?? local.className)} <span class="na">aria-invalid</span>={local[<span class="s2">&#34;state&#34;</span>] === <span class="s2">&#34;error&#34;</span> ? <span class="s2">&#34;true&#34;</span> : <span class="kc">undefined</span>} {<span class="na">...rest</span>} /&gt;;
+}
+</code></pre></div> <p class="text-sm"><a href="https://registry.buildy.tw/solid/components/ui/select.json" class="underline">Solid registry item (JSON)</a></p></section><section class="rt-panel" id="panel-templ" aria-label="templ code" data-runtime="templ"><p class="text-sm mb-2 text-muted-foreground">Point the CLI at this runtime once, then add the item:</p> <div class="mb-2"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code class="overflow-x-auto whitespace-nowrap font-mono text-sm" id="panel-templ-init" tabindex="0">npx ui8kit init --yes --framework templ --dir src --registry-url https://registry.buildy.tw/templ --strict-cdn</code><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="panel-templ-init" hidden>Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code class="overflow-x-auto whitespace-nowrap font-mono text-sm" id="panel-templ-add" tabindex="0">npx ui8kit add select</code><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="panel-templ-add" hidden>Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">compose/select.templ</span><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="code-templ-0" hidden>Copy</button></div><pre class="hl max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6" tabindex="0"><code class="font-mono" id="code-templ-0"><span class="c1">// Code generated by packages/kit-compose/src/build.ts from src/map.ts + variants/. DO NOT EDIT.</span>
+
+<span class="kn">package</span> compose
+
+<span class="kn">import</span> <span class="s">&#34;github.com/ui8kit/codegen/generated/templ/ui/select&#34;</span>
+
+<span class="c1">// SelectProps: Select: Select + recipe select.</span>
 <span class="kd">type</span> SelectProps <span class="kd">struct</span> {
-	<span class="c1">// Variant — sets appearance preset</span>
-	Variant string
-	<span class="c1">// Size — sets density preset</span>
 	Size string
-	<span class="c1">// Class — adds Tailwind utilities</span>
-	Class string
-	Name string
-	<span class="c1">// Value — currently selected option value</span>
-	Value string
-	Disabled bool
-	Required bool
-	Options []SelectOptionItem
-	<span class="c1">// ID — element id</span>
-	ID string
-	<span class="c1">// Role — ARIA role override</span>
-	Role string
-	<span class="c1">// TabIndex — tab order override</span>
-	TabIndex string
-	<span class="c1">// AriaLabel — accessible name for unlabeled controls</span>
-	AriaLabel string
-	Attrs templ.Attributes
+	Variant string
+	State string
+	selectfield.SelectProps
 }
 
-<span class="c1">// SelectClasses composes Select classes without rendering —</span>
-<span class="c1">// the server-composition escape hatch for custom root elements.</span>
-<span class="kd">func</span> <span class="nf">SelectClasses</span>(p SelectProps) <span class="kt">string</span> {
-	return uiutils.Compose(SelectVariants, map[string]string{
-		&#34;size&#34;: p.Size,
-		&#34;variant&#34;: p.Variant,
-	}, p.Class)
+<span class="kd">func</span> <span class="nf">selectInner</span>(p SelectProps) selectfield.SelectProps {
+	in := p.SelectProps
+	in.Class = Join(Rc(&#34;select&#34;, map[string]string{<span class="s">&#34;size&#34;</span>: p.Size, <span class="s">&#34;variant&#34;</span>: p.Variant, <span class="s">&#34;state&#34;</span>: p.State}), p.SelectProps.Class)
+	if p.State == &#34;error&#34; {
+		in.AriaInvalid = Or(in.AriaInvalid, &#34;true&#34;)
+	}
+	return in
 }
 
-<span class="c1">// Select renders the Select contract.</span>
+<span class="c1">// Select renders Select with the composition classes.</span>
 <span class="kd">templ</span> <span class="nf">Select</span>(p SelectProps) {
-	&lt;<span class="nt">select</span>
-		<span class="k">if</span> uiutils.<span class="nf">IsSetStr</span>(p.ID) {
-			<span class="na">id</span>={ p.ID }
-		}
-		<span class="k">if</span> uiutils.<span class="nf">IsSetStr</span>(p.Name) {
-			<span class="na">name</span>={ p.Name }
-		}
-		<span class="na">class</span>={ <span class="nf">SelectClasses</span>(p) }
-		<span class="na">disabled?</span>={ p.Disabled }
-		<span class="na">required?</span>={ p.Required }
-		<span class="k">if</span> uiutils.<span class="nf">IsSetStr</span>(p.Role) {
-			<span class="na">role</span>={ p.Role }
-		}
-		<span class="k">if</span> uiutils.<span class="nf">IsSetStr</span>(p.TabIndex) {
-			<span class="na">tabindex</span>={ p.TabIndex }
-		}
-		<span class="k">if</span> uiutils.<span class="nf">IsSetStr</span>(p.AriaLabel) {
-			<span class="na">aria-label</span>={ p.AriaLabel }
-		}
-		{ p.Attrs... }
-	&gt;
-		for _, item := range p.Options {
-			&lt;<span class="nt">option</span>
-				<span class="na">value</span>={ item.Value }
-				<span class="na">selected?</span>={ item.Value == p.Value }
-			&gt;
-				{ item.Label }
-			&lt;/<span class="nt">option</span>&gt;
-		}
+	<span class="nf">@selectfield.Select(selectInner(p)) {</span>
 		{ children... }
-	&lt;/<span class="nt">select</span>&gt;
+	}
 }
-
-<span class="c1">// SelectOptionProps configures SelectOption.</span>
-<span class="kd">type</span> SelectOptionProps <span class="kd">struct</span> {
-	Value string
-	Label string
-	Selected bool
-	Disabled bool
-	Attrs templ.Attributes
-}
-
-<span class="c1">// SelectOption renders the SelectOption contract.</span>
-<span class="kd">templ</span> <span class="nf">SelectOption</span>(p SelectOptionProps) {
-	&lt;<span class="nt">option</span>
-		<span class="k">if</span> uiutils.<span class="nf">IsSetStr</span>(p.Value) {
-			<span class="na">value</span>={ p.Value }
-		}
-		<span class="k">if</span> uiutils.<span class="nf">IsSetStr</span>(p.Label) {
-			<span class="na">label</span>={ p.Label }
-		}
-		<span class="na">selected?</span>={ p.Selected }
-		<span class="na">disabled?</span>={ p.Disabled }
-		{ p.Attrs... }
-	&gt;
-		{ children... }
-	&lt;/<span class="nt">option</span>&gt;
-}
-
-<span class="c1">// OptGroupProps configures OptGroup.</span>
-<span class="kd">type</span> OptGroupProps <span class="kd">struct</span> {
-	<span class="c1">// Class — adds Tailwind utilities</span>
-	Class string
-	Label string
-	Disabled bool
-	Attrs templ.Attributes
-}
-
-<span class="c1">// OptGroupClasses composes OptGroup classes without rendering —</span>
-<span class="c1">// the server-composition escape hatch for custom root elements.</span>
-<span class="kd">func</span> <span class="nf">OptGroupClasses</span>(p OptGroupProps) <span class="kt">string</span> {
-	return uiutils.Cn(p.Class)
-}
-
-<span class="c1">// OptGroup renders the OptGroup contract.</span>
-<span class="kd">templ</span> <span class="nf">OptGroup</span>(p OptGroupProps) {
-	&lt;<span class="nt">optgroup</span>
-		<span class="na">class</span>={ <span class="nf">OptGroupClasses</span>(p) }
-		<span class="k">if</span> uiutils.<span class="nf">IsSetStr</span>(p.Label) {
-			<span class="na">label</span>={ p.Label }
-		}
-		<span class="na">disabled?</span>={ p.Disabled }
-		{ p.Attrs... }
-	&gt;
-		{ children... }
-	&lt;/<span class="nt">optgroup</span>&gt;
-}
-</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">ui/select/select.variants.json</span><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="code-templ-1" hidden>Copy</button></div><pre class="hl max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6" tabindex="0"><code class="font-mono" id="code-templ-1">{
-  <span class="nt">&#34;//&#34;</span>: <span class="s2">&#34;Code generated by xgen. DO NOT EDIT.&#34;</span>,
-  <span class="nt">&#34;id&#34;</span>: <span class="s2">&#34;ui.select&#34;</span>,
-  <span class="nt">&#34;base&#34;</span>: <span class="s2">&#34;w-full min-w-0 bg-background text-foreground inset-ring inset-ring-input outline-none placeholder:text-muted-foreground disabled:cursor-not-allowed disabled:opacity-50 focus-visible:inset-ring-ring rounded&#34;</span>,
-  <span class="nt">&#34;keys&#34;</span>: [
-    <span class="s2">&#34;size&#34;</span>,
-    <span class="s2">&#34;variant&#34;</span>
-  ],
-  <span class="nt">&#34;defaults&#34;</span>: {
-    <span class="nt">&#34;size&#34;</span>: <span class="s2">&#34;default&#34;</span>,
-    <span class="nt">&#34;variant&#34;</span>: <span class="s2">&#34;default&#34;</span>
-  },
-  <span class="nt">&#34;byKey&#34;</span>: {
-    <span class="nt">&#34;size&#34;</span>: {
-      <span class="nt">&#34;sm&#34;</span>: <span class="s2">&#34;h-8 px-3 text-sm&#34;</span>,
-      <span class="nt">&#34;default&#34;</span>: <span class="s2">&#34;h-10 px-3 text-sm&#34;</span>,
-      <span class="nt">&#34;lg&#34;</span>: <span class="s2">&#34;h-12 px-4 text-base&#34;</span>
-    },
-    <span class="nt">&#34;variant&#34;</span>: {
-      <span class="nt">&#34;default&#34;</span>: <span class="s2">&#34;&#34;</span>,
-      <span class="nt">&#34;ghost&#34;</span>: <span class="s2">&#34;bg-muted inset-ring-transparent&#34;</span>
-    }
-  },
-  <span class="nt">&#34;compound&#34;</span>: []
-}
-</code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">ui/select/select_gen.go</span><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="code-templ-2" hidden>Copy</button></div><pre class="hl max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6" tabindex="0"><code class="font-mono" id="code-templ-2"><span class="c1">// Code generated by xgen. DO NOT EDIT.</span>
-<span class="c1">// Source: xgen/specs/ui/select.json</span>
-
-<span class="kn">package</span> selectfield
-
-<span class="kn">import</span> (
-	_ <span class="s">&#34;embed&#34;</span>
-
-	uiutils <span class="s">&#34;github.com/codegen-x/ui8kit/packages/templ/ui/utils&#34;</span>
-)
-
-<span class="cp">//go:embed select.variants.json</span>
-<span class="kd">var</span> selectVariantsJSON []<span class="kt">byte</span>
-
-<span class="c1">// SelectVariants is the CVA recipe shared verbatim by all runtimes.</span>
-<span class="kd">var</span> SelectVariants = uiutils.<span class="nf">MustParseVariantRecipe</span>(selectVariantsJSON).<span class="nf">ToVariants</span>()
-</code></pre></div> <p class="text-sm"><a href="https://registry.buildy.tw/templ/components/ui/select.json" class="underline">templ registry item (JSON)</a></p></section><section class="rt-panel" id="panel-twig" aria-label="Twig code" data-runtime="twig"><p class="text-sm mb-2 text-muted-foreground">Point the CLI at this runtime once, then add the item:</p> <div class="mb-2"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code class="overflow-x-auto whitespace-nowrap font-mono text-sm" id="panel-twig-init" tabindex="0">npx ui8kit init --yes --framework twig --dir src --registry-url https://registry.buildy.tw/twig --strict-cdn</code><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="panel-twig-init" hidden>Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code class="overflow-x-auto whitespace-nowrap font-mono text-sm" id="panel-twig-add" tabindex="0">npx ui8kit add select</code><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="panel-twig-add" hidden>Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">ui/select/opt-group.html.twig</span><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="code-twig-0" hidden>Copy</button></div><pre class="hl max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6" tabindex="0"><code class="font-mono" id="code-twig-0"><span class="c">{#- Code generated by xgen. DO NOT EDIT.
-</span><span class="c">    Source: xgen/specs/ui/select.json
-</span><span class="c">    OptGroup: OptGroup renders a native optgroup around option children.
-</span><span class="c">    Props (p): Class (string), Label (string), Disabled (bool), Attrs (attrs); children: markup. -#}</span><span class="x">
-</span><span class="x">&lt;optgroup
-</span><span class="x">  class=&#34;</span><span class="cp">{{</span> <span class="nv">ui_cn</span>([(<span class="nv">p</span><span class="err">.C</span><span class="nv">lass</span> ?? <span class="s1">&#39;&#39;</span>)]) <span class="cp">}}</span><span class="x">&#34;
-</span><span class="x">  </span><span class="cp">{%</span>- <span class="k">if</span> <span class="nv">ui_is_set_str</span>((<span class="nv">p</span>.L<span class="nv">abel</span> ?? <span class="s1">&#39;&#39;</span>)) <span class="cp">%}</span><span class="x"> label=&#34;</span><span class="cp">{{</span> (<span class="nv">p</span><span class="err">.L</span><span class="nv">abel</span> ?? <span class="s1">&#39;&#39;</span>) <span class="cp">}}</span><span class="x">&#34;</span><span class="cp">{%</span>- <span class="k">endif</span> <span class="cp">%}</span><span class="x">
-</span><span class="x">  </span><span class="cp">{%</span>- <span class="k">if</span> (<span class="nv">p</span>.D<span class="nv">isabled</span> ?? <span class="kp">false</span>) <span class="cp">%}</span><span class="x"> disabled</span><span class="cp">{%</span>- <span class="k">endif</span> <span class="cp">%}</span><span class="x">
-</span><span class="x">  </span><span class="cp">{{</span> <span class="nv">ui_attr_html</span>((<span class="nv">p</span><span class="err">.A</span><span class="nv">ttrs</span> ?? {})) <span class="cp">}}</span><span class="x">
-</span><span class="x">&gt;</span><span class="cp">{{</span> (<span class="nv">children</span> ?? <span class="s1">&#39;&#39;</span>)|<span class="nf">raw</span> <span class="cp">}}</span><span class="x">&lt;/optgroup&gt;
-</span></code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">ui/select/select-option.html.twig</span><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="code-twig-1" hidden>Copy</button></div><pre class="hl max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6" tabindex="0"><code class="font-mono" id="code-twig-1"><span class="c">{#- Code generated by xgen. DO NOT EDIT.
-</span><span class="c">    Source: xgen/specs/ui/select.json
-</span><span class="c">    SelectOption: SelectOption renders an option for custom Select children.
-</span><span class="c">    Props (p): Value (string), Label (string), Selected (bool), Disabled (bool), Attrs (attrs); children: markup. -#}</span><span class="x">
-</span><span class="x">&lt;option
-</span><span class="x">  </span><span class="cp">{%</span>- <span class="k">if</span> <span class="nv">ui_is_set_str</span>((<span class="nv">p</span>.V<span class="nv">alue</span> ?? <span class="s1">&#39;&#39;</span>)) <span class="cp">%}</span><span class="x"> value=&#34;</span><span class="cp">{{</span> (<span class="nv">p</span><span class="err">.V</span><span class="nv">alue</span> ?? <span class="s1">&#39;&#39;</span>) <span class="cp">}}</span><span class="x">&#34;</span><span class="cp">{%</span>- <span class="k">endif</span> <span class="cp">%}</span><span class="x">
-</span><span class="x">  </span><span class="cp">{%</span>- <span class="k">if</span> <span class="nv">ui_is_set_str</span>((<span class="nv">p</span>.L<span class="nv">abel</span> ?? <span class="s1">&#39;&#39;</span>)) <span class="cp">%}</span><span class="x"> label=&#34;</span><span class="cp">{{</span> (<span class="nv">p</span><span class="err">.L</span><span class="nv">abel</span> ?? <span class="s1">&#39;&#39;</span>) <span class="cp">}}</span><span class="x">&#34;</span><span class="cp">{%</span>- <span class="k">endif</span> <span class="cp">%}</span><span class="x">
-</span><span class="x">  </span><span class="cp">{%</span>- <span class="k">if</span> (<span class="nv">p</span>.S<span class="nv">elected</span> ?? <span class="kp">false</span>) <span class="cp">%}</span><span class="x"> selected</span><span class="cp">{%</span>- <span class="k">endif</span> <span class="cp">%}</span><span class="x">
-</span><span class="x">  </span><span class="cp">{%</span>- <span class="k">if</span> (<span class="nv">p</span>.D<span class="nv">isabled</span> ?? <span class="kp">false</span>) <span class="cp">%}</span><span class="x"> disabled</span><span class="cp">{%</span>- <span class="k">endif</span> <span class="cp">%}</span><span class="x">
-</span><span class="x">  </span><span class="cp">{{</span> <span class="nv">ui_attr_html</span>((<span class="nv">p</span><span class="err">.A</span><span class="nv">ttrs</span> ?? {})) <span class="cp">}}</span><span class="x">
-</span><span class="x">&gt;</span><span class="cp">{{</span> (<span class="nv">children</span> ?? <span class="s1">&#39;&#39;</span>)|<span class="nf">raw</span> <span class="cp">}}</span><span class="x">&lt;/option&gt;
-</span></code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">ui/select/select.html.twig</span><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="code-twig-2" hidden>Copy</button></div><pre class="hl max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6" tabindex="0"><code class="font-mono" id="code-twig-2"><span class="c">{#- Code generated by xgen. DO NOT EDIT.
-</span><span class="c">    Source: xgen/specs/ui/select.json
-</span><span class="c">    Select: Select renders option children from the Options list plus manual children.
-</span><span class="c">    Props (p): Variant (string), Size (string), Class (string), Name (string), Value (string), Disabled (bool), Required (bool), Options (SelectOptionItem[]), ID (string), Role (string), TabIndex (string), AriaLabel (string), Attrs (attrs); children: markup. -#}</span><span class="x">
-</span><span class="x">&lt;select
-</span><span class="x">  </span><span class="cp">{%</span>- <span class="k">if</span> <span class="nv">ui_is_set_str</span>((<span class="nv">p</span>.ID ?? <span class="s1">&#39;&#39;</span>)) <span class="cp">%}</span><span class="x"> id=&#34;</span><span class="cp">{{</span> (<span class="nv">p</span><span class="err">.ID</span> ?? <span class="s1">&#39;&#39;</span>) <span class="cp">}}</span><span class="x">&#34;</span><span class="cp">{%</span>- <span class="k">endif</span> <span class="cp">%}</span><span class="x">
-</span><span class="x">  </span><span class="cp">{%</span>- <span class="k">if</span> <span class="nv">ui_is_set_str</span>((<span class="nv">p</span>.N<span class="nv">ame</span> ?? <span class="s1">&#39;&#39;</span>)) <span class="cp">%}</span><span class="x"> name=&#34;</span><span class="cp">{{</span> (<span class="nv">p</span><span class="err">.N</span><span class="nv">ame</span> ?? <span class="s1">&#39;&#39;</span>) <span class="cp">}}</span><span class="x">&#34;</span><span class="cp">{%</span>- <span class="k">endif</span> <span class="cp">%}</span><span class="x">
-</span><span class="x">  class=&#34;</span><span class="cp">{{</span> <span class="nv">ui_compose</span>(<span class="s1">&#39;ui/select/select.variants.json&#39;</span>, {<span class="s1">&#39;size&#39;</span>: (<span class="nv">p</span><span class="err">.S</span><span class="nv">ize</span> ?? <span class="s1">&#39;&#39;</span>), <span class="s1">&#39;variant&#39;</span>: (<span class="nv">p</span><span class="err">.V</span><span class="nv">ariant</span> ?? <span class="s1">&#39;&#39;</span>)}, [(<span class="nv">p</span><span class="err">.C</span><span class="nv">lass</span> ?? <span class="s1">&#39;&#39;</span>)]) <span class="cp">}}</span><span class="x">&#34;
-</span><span class="x">  </span><span class="cp">{%</span>- <span class="k">if</span> (<span class="nv">p</span>.D<span class="nv">isabled</span> ?? <span class="kp">false</span>) <span class="cp">%}</span><span class="x"> disabled</span><span class="cp">{%</span>- <span class="k">endif</span> <span class="cp">%}</span><span class="x">
-</span><span class="x">  </span><span class="cp">{%</span>- <span class="k">if</span> (<span class="nv">p</span>.R<span class="nv">equired</span> ?? <span class="kp">false</span>) <span class="cp">%}</span><span class="x"> required</span><span class="cp">{%</span>- <span class="k">endif</span> <span class="cp">%}</span><span class="x">
-</span><span class="x">  </span><span class="cp">{%</span>- <span class="k">if</span> <span class="nv">ui_is_set_str</span>((<span class="nv">p</span>.R<span class="nv">ole</span> ?? <span class="s1">&#39;&#39;</span>)) <span class="cp">%}</span><span class="x"> role=&#34;</span><span class="cp">{{</span> (<span class="nv">p</span><span class="err">.R</span><span class="nv">ole</span> ?? <span class="s1">&#39;&#39;</span>) <span class="cp">}}</span><span class="x">&#34;</span><span class="cp">{%</span>- <span class="k">endif</span> <span class="cp">%}</span><span class="x">
-</span><span class="x">  </span><span class="cp">{%</span>- <span class="k">if</span> <span class="nv">ui_is_set_str</span>((<span class="nv">p</span>.T<span class="nv">abIndex</span> ?? <span class="s1">&#39;&#39;</span>)) <span class="cp">%}</span><span class="x"> tabindex=&#34;</span><span class="cp">{{</span> (<span class="nv">p</span><span class="err">.T</span><span class="nv">abIndex</span> ?? <span class="s1">&#39;&#39;</span>) <span class="cp">}}</span><span class="x">&#34;</span><span class="cp">{%</span>- <span class="k">endif</span> <span class="cp">%}</span><span class="x">
-</span><span class="x">  </span><span class="cp">{%</span>- <span class="k">if</span> <span class="nv">ui_is_set_str</span>((<span class="nv">p</span>.A<span class="nv">riaLabel</span> ?? <span class="s1">&#39;&#39;</span>)) <span class="cp">%}</span><span class="x"> aria-label=&#34;</span><span class="cp">{{</span> (<span class="nv">p</span><span class="err">.A</span><span class="nv">riaLabel</span> ?? <span class="s1">&#39;&#39;</span>) <span class="cp">}}</span><span class="x">&#34;</span><span class="cp">{%</span>- <span class="k">endif</span> <span class="cp">%}</span><span class="x">
-</span><span class="x">  </span><span class="cp">{{</span> <span class="nv">ui_attr_html</span>((<span class="nv">p</span><span class="err">.A</span><span class="nv">ttrs</span> ?? {})) <span class="cp">}}</span><span class="x">
-</span><span class="x">&gt;
-</span><span class="x">  </span><span class="cp">{%</span>- <span class="k">for</span> <span class="nv">item</span> <span class="k">in</span> (<span class="nv">p</span>.O<span class="nv">ptions</span> ?? []) <span class="cp">%}</span><span class="x">
-</span><span class="x">    &lt;option
-</span><span class="x">      value=&#34;</span><span class="cp">{{</span> <span class="nv">ui_field</span>(<span class="nv">item</span>, <span class="s1">&#39;Value&#39;</span>, <span class="s1">&#39;&#39;</span>) <span class="cp">}}</span><span class="x">&#34;
-</span><span class="x">      </span><span class="cp">{%</span>- <span class="k">if</span> <span class="nv">ui_eq</span>(<span class="nv">ui_field</span>(<span class="nv">item</span>, <span class="s1">&#39;Value&#39;</span>, <span class="s1">&#39;&#39;</span>), (<span class="nv">p</span>.V<span class="nv">alue</span> ?? <span class="s1">&#39;&#39;</span>)) <span class="cp">%}</span><span class="x"> selected</span><span class="cp">{%</span>- <span class="k">endif</span> <span class="cp">%}</span><span class="x">
-</span><span class="x">    &gt;</span><span class="cp">{{</span> <span class="nv">ui_field</span>(<span class="nv">item</span>, <span class="s1">&#39;Label&#39;</span>, <span class="s1">&#39;&#39;</span>) <span class="cp">}}</span><span class="x">&lt;/option&gt;
-</span><span class="x">  </span><span class="cp">{%</span>- <span class="k">endfor</span> <span class="cp">%}</span><span class="x">
-</span><span class="x">  </span><span class="cp">{{</span> (<span class="nv">children</span> ?? <span class="s1">&#39;&#39;</span>)|<span class="nf">raw</span> <span class="cp">}}</span><span class="x">
-</span><span class="x">&lt;/select&gt;
-</span></code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">ui/select/select.variants.json</span><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="code-twig-3" hidden>Copy</button></div><pre class="hl max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6" tabindex="0"><code class="font-mono" id="code-twig-3">{
-  <span class="nt">&#34;//&#34;</span>: <span class="s2">&#34;Code generated by xgen. DO NOT EDIT.&#34;</span>,
-  <span class="nt">&#34;id&#34;</span>: <span class="s2">&#34;ui.select&#34;</span>,
-  <span class="nt">&#34;base&#34;</span>: <span class="s2">&#34;w-full min-w-0 bg-background text-foreground inset-ring inset-ring-input outline-none placeholder:text-muted-foreground disabled:cursor-not-allowed disabled:opacity-50 focus-visible:inset-ring-ring rounded&#34;</span>,
-  <span class="nt">&#34;keys&#34;</span>: [
-    <span class="s2">&#34;size&#34;</span>,
-    <span class="s2">&#34;variant&#34;</span>
-  ],
-  <span class="nt">&#34;defaults&#34;</span>: {
-    <span class="nt">&#34;size&#34;</span>: <span class="s2">&#34;default&#34;</span>,
-    <span class="nt">&#34;variant&#34;</span>: <span class="s2">&#34;default&#34;</span>
-  },
-  <span class="nt">&#34;byKey&#34;</span>: {
-    <span class="nt">&#34;size&#34;</span>: {
-      <span class="nt">&#34;sm&#34;</span>: <span class="s2">&#34;h-8 px-3 text-sm&#34;</span>,
-      <span class="nt">&#34;default&#34;</span>: <span class="s2">&#34;h-10 px-3 text-sm&#34;</span>,
-      <span class="nt">&#34;lg&#34;</span>: <span class="s2">&#34;h-12 px-4 text-base&#34;</span>
-    },
-    <span class="nt">&#34;variant&#34;</span>: {
-      <span class="nt">&#34;default&#34;</span>: <span class="s2">&#34;&#34;</span>,
-      <span class="nt">&#34;ghost&#34;</span>: <span class="s2">&#34;bg-muted inset-ring-transparent&#34;</span>
-    }
-  },
-  <span class="nt">&#34;compound&#34;</span>: []
-}
-</code></pre></div> <p class="text-sm"><a href="https://registry.buildy.tw/twig/components/ui/select.json" class="underline">Twig registry item (JSON)</a></p></section><section class="rt-panel" id="panel-latte" aria-label="Latte code" data-runtime="latte"><p class="text-sm mb-2 text-muted-foreground">Point the CLI at this runtime once, then add the item:</p> <div class="mb-2"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code class="overflow-x-auto whitespace-nowrap font-mono text-sm" id="panel-latte-init" tabindex="0">npx ui8kit init --yes --framework latte --dir src --registry-url https://registry.buildy.tw/latte --strict-cdn</code><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="panel-latte-init" hidden>Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code class="overflow-x-auto whitespace-nowrap font-mono text-sm" id="panel-latte-add" tabindex="0">npx ui8kit add select</code><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="panel-latte-add" hidden>Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">ui/select/opt-group.latte</span><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="code-latte-0" hidden>Copy</button></div><pre class="hl max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6" tabindex="0"><code class="font-mono" id="code-latte-0"><span class="cp">{</span><span class="c">* Code generated by xgen. DO NOT EDIT.
-</span><span class="c">    Source: xgen/specs/ui/select.json
-</span><span class="c">    OptGroup: OptGroup renders a native optgroup around option children.
-</span><span class="c">    Props (p): Class (string), Label (string), Disabled (bool), Attrs (attrs); children: markup. *</span><span class="cp">}</span><span class="x">
-</span><span class="x">&lt;optgroup
-</span><span class="x">  class=&#34;</span><span class="cp">{</span>=<span class="na">ui_cn</span>([(<span class="nv">$p</span>[<span class="s1">&#39;Class&#39;</span>] ?? <span class="s1">&#39;&#39;</span>)])<span class="cp">}</span><span class="x">&#34;
-</span><span class="x">  </span><span class="cp">{</span><span class="nf">if</span> <span class="na">ui_is_set_str</span>((<span class="nv">$p</span>[<span class="s1">&#39;Label&#39;</span>] ?? <span class="s1">&#39;&#39;</span>))<span class="cp">}</span><span class="x"> label=&#34;</span><span class="cp">{</span>=(<span class="nv">$p</span>[<span class="s1">&#39;Label&#39;</span>] ?? <span class="s1">&#39;&#39;</span>)<span class="cp">}</span><span class="x">&#34;</span><span class="cp">{</span><span class="nf">/if</span><span class="cp">}</span><span class="x">
-</span><span class="x">  </span><span class="cp">{</span><span class="nf">if</span> (<span class="nv">$p</span>[<span class="s1">&#39;Disabled&#39;</span>] ?? <span class="kc">false</span>)<span class="cp">}</span><span class="x"> disabled</span><span class="cp">{</span><span class="nf">/if</span><span class="cp">}</span><span class="x">
-</span><span class="x">  </span><span class="cp">{</span>=<span class="na">ui_attr_html</span>((<span class="nv">$p</span>[<span class="s1">&#39;Attrs&#39;</span>] ?? []))|<span class="na">noescape</span><span class="cp">}</span><span class="x">
-</span><span class="x">&gt;</span><span class="cp">{</span>=(<span class="nv">$children</span> ?? <span class="s1">&#39;&#39;</span>)|<span class="na">noescape</span><span class="cp">}</span><span class="x">&lt;/optgroup&gt;
-</span></code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">ui/select/select-option.latte</span><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="code-latte-1" hidden>Copy</button></div><pre class="hl max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6" tabindex="0"><code class="font-mono" id="code-latte-1"><span class="cp">{</span><span class="c">* Code generated by xgen. DO NOT EDIT.
-</span><span class="c">    Source: xgen/specs/ui/select.json
-</span><span class="c">    SelectOption: SelectOption renders an option for custom Select children.
-</span><span class="c">    Props (p): Value (string), Label (string), Selected (bool), Disabled (bool), Attrs (attrs); children: markup. *</span><span class="cp">}</span><span class="x">
-</span><span class="x">&lt;option
-</span><span class="x">  </span><span class="cp">{</span><span class="nf">if</span> <span class="na">ui_is_set_str</span>((<span class="nv">$p</span>[<span class="s1">&#39;Value&#39;</span>] ?? <span class="s1">&#39;&#39;</span>))<span class="cp">}</span><span class="x"> value=&#34;</span><span class="cp">{</span>=(<span class="nv">$p</span>[<span class="s1">&#39;Value&#39;</span>] ?? <span class="s1">&#39;&#39;</span>)<span class="cp">}</span><span class="x">&#34;</span><span class="cp">{</span><span class="nf">/if</span><span class="cp">}</span><span class="x">
-</span><span class="x">  </span><span class="cp">{</span><span class="nf">if</span> <span class="na">ui_is_set_str</span>((<span class="nv">$p</span>[<span class="s1">&#39;Label&#39;</span>] ?? <span class="s1">&#39;&#39;</span>))<span class="cp">}</span><span class="x"> label=&#34;</span><span class="cp">{</span>=(<span class="nv">$p</span>[<span class="s1">&#39;Label&#39;</span>] ?? <span class="s1">&#39;&#39;</span>)<span class="cp">}</span><span class="x">&#34;</span><span class="cp">{</span><span class="nf">/if</span><span class="cp">}</span><span class="x">
-</span><span class="x">  </span><span class="cp">{</span><span class="nf">if</span> (<span class="nv">$p</span>[<span class="s1">&#39;Selected&#39;</span>] ?? <span class="kc">false</span>)<span class="cp">}</span><span class="x"> selected</span><span class="cp">{</span><span class="nf">/if</span><span class="cp">}</span><span class="x">
-</span><span class="x">  </span><span class="cp">{</span><span class="nf">if</span> (<span class="nv">$p</span>[<span class="s1">&#39;Disabled&#39;</span>] ?? <span class="kc">false</span>)<span class="cp">}</span><span class="x"> disabled</span><span class="cp">{</span><span class="nf">/if</span><span class="cp">}</span><span class="x">
-</span><span class="x">  </span><span class="cp">{</span>=<span class="na">ui_attr_html</span>((<span class="nv">$p</span>[<span class="s1">&#39;Attrs&#39;</span>] ?? []))|<span class="na">noescape</span><span class="cp">}</span><span class="x">
-</span><span class="x">&gt;</span><span class="cp">{</span>=(<span class="nv">$children</span> ?? <span class="s1">&#39;&#39;</span>)|<span class="na">noescape</span><span class="cp">}</span><span class="x">&lt;/option&gt;
-</span></code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">ui/select/select.latte</span><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="code-latte-2" hidden>Copy</button></div><pre class="hl max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6" tabindex="0"><code class="font-mono" id="code-latte-2"><span class="cp">{</span><span class="c">* Code generated by xgen. DO NOT EDIT.
-</span><span class="c">    Source: xgen/specs/ui/select.json
-</span><span class="c">    Select: Select renders option children from the Options list plus manual children.
-</span><span class="c">    Props (p): Variant (string), Size (string), Class (string), Name (string), Value (string), Disabled (bool), Required (bool), Options (SelectOptionItem[]), ID (string), Role (string), TabIndex (string), AriaLabel (string), Attrs (attrs); children: markup. *</span><span class="cp">}</span><span class="x">
-</span><span class="x">&lt;select
-</span><span class="x">  </span><span class="cp">{</span><span class="nf">if</span> <span class="na">ui_is_set_str</span>((<span class="nv">$p</span>[<span class="s1">&#39;ID&#39;</span>] ?? <span class="s1">&#39;&#39;</span>))<span class="cp">}</span><span class="x"> id=&#34;</span><span class="cp">{</span>=(<span class="nv">$p</span>[<span class="s1">&#39;ID&#39;</span>] ?? <span class="s1">&#39;&#39;</span>)<span class="cp">}</span><span class="x">&#34;</span><span class="cp">{</span><span class="nf">/if</span><span class="cp">}</span><span class="x">
-</span><span class="x">  </span><span class="cp">{</span><span class="nf">if</span> <span class="na">ui_is_set_str</span>((<span class="nv">$p</span>[<span class="s1">&#39;Name&#39;</span>] ?? <span class="s1">&#39;&#39;</span>))<span class="cp">}</span><span class="x"> name=&#34;</span><span class="cp">{</span>=(<span class="nv">$p</span>[<span class="s1">&#39;Name&#39;</span>] ?? <span class="s1">&#39;&#39;</span>)<span class="cp">}</span><span class="x">&#34;</span><span class="cp">{</span><span class="nf">/if</span><span class="cp">}</span><span class="x">
-</span><span class="x">  class=&#34;</span><span class="cp">{</span>=<span class="na">ui_compose</span>(<span class="s1">&#39;ui/select/select.variants.json&#39;</span>, [<span class="s1">&#39;size&#39;</span> =&gt; (<span class="nv">$p</span>[<span class="s1">&#39;Size&#39;</span>] ?? <span class="s1">&#39;&#39;</span>), <span class="s1">&#39;variant&#39;</span> =&gt; (<span class="nv">$p</span>[<span class="s1">&#39;Variant&#39;</span>] ?? <span class="s1">&#39;&#39;</span>)], [(<span class="nv">$p</span>[<span class="s1">&#39;Class&#39;</span>] ?? <span class="s1">&#39;&#39;</span>)])<span class="cp">}</span><span class="x">&#34;
-</span><span class="x">  </span><span class="cp">{</span><span class="nf">if</span> (<span class="nv">$p</span>[<span class="s1">&#39;Disabled&#39;</span>] ?? <span class="kc">false</span>)<span class="cp">}</span><span class="x"> disabled</span><span class="cp">{</span><span class="nf">/if</span><span class="cp">}</span><span class="x">
-</span><span class="x">  </span><span class="cp">{</span><span class="nf">if</span> (<span class="nv">$p</span>[<span class="s1">&#39;Required&#39;</span>] ?? <span class="kc">false</span>)<span class="cp">}</span><span class="x"> required</span><span class="cp">{</span><span class="nf">/if</span><span class="cp">}</span><span class="x">
-</span><span class="x">  </span><span class="cp">{</span><span class="nf">if</span> <span class="na">ui_is_set_str</span>((<span class="nv">$p</span>[<span class="s1">&#39;Role&#39;</span>] ?? <span class="s1">&#39;&#39;</span>))<span class="cp">}</span><span class="x"> role=&#34;</span><span class="cp">{</span>=(<span class="nv">$p</span>[<span class="s1">&#39;Role&#39;</span>] ?? <span class="s1">&#39;&#39;</span>)<span class="cp">}</span><span class="x">&#34;</span><span class="cp">{</span><span class="nf">/if</span><span class="cp">}</span><span class="x">
-</span><span class="x">  </span><span class="cp">{</span><span class="nf">if</span> <span class="na">ui_is_set_str</span>((<span class="nv">$p</span>[<span class="s1">&#39;TabIndex&#39;</span>] ?? <span class="s1">&#39;&#39;</span>))<span class="cp">}</span><span class="x"> tabindex=&#34;</span><span class="cp">{</span>=(<span class="nv">$p</span>[<span class="s1">&#39;TabIndex&#39;</span>] ?? <span class="s1">&#39;&#39;</span>)<span class="cp">}</span><span class="x">&#34;</span><span class="cp">{</span><span class="nf">/if</span><span class="cp">}</span><span class="x">
-</span><span class="x">  </span><span class="cp">{</span><span class="nf">if</span> <span class="na">ui_is_set_str</span>((<span class="nv">$p</span>[<span class="s1">&#39;AriaLabel&#39;</span>] ?? <span class="s1">&#39;&#39;</span>))<span class="cp">}</span><span class="x"> aria-label=&#34;</span><span class="cp">{</span>=(<span class="nv">$p</span>[<span class="s1">&#39;AriaLabel&#39;</span>] ?? <span class="s1">&#39;&#39;</span>)<span class="cp">}</span><span class="x">&#34;</span><span class="cp">{</span><span class="nf">/if</span><span class="cp">}</span><span class="x">
-</span><span class="x">  </span><span class="cp">{</span>=<span class="na">ui_attr_html</span>((<span class="nv">$p</span>[<span class="s1">&#39;Attrs&#39;</span>] ?? []))|<span class="na">noescape</span><span class="cp">}</span><span class="x">
-</span><span class="x">&gt;
-</span><span class="x">  </span><span class="cp">{</span><span class="nf">foreach</span> (<span class="nv">$p</span>[<span class="s1">&#39;Options&#39;</span>] ?? []) <span class="na">as</span> <span class="nv">$item</span><span class="cp">}</span><span class="x">
-</span><span class="x">    &lt;option
-</span><span class="x">      value=&#34;</span><span class="cp">{</span>=<span class="na">ui_field</span>(<span class="nv">$item</span>, <span class="s1">&#39;Value&#39;</span>, <span class="s1">&#39;&#39;</span>)<span class="cp">}</span><span class="x">&#34;
-</span><span class="x">      </span><span class="cp">{</span><span class="nf">if</span> <span class="na">ui_eq</span>(<span class="na">ui_field</span>(<span class="nv">$item</span>, <span class="s1">&#39;Value&#39;</span>, <span class="s1">&#39;&#39;</span>), (<span class="nv">$p</span>[<span class="s1">&#39;Value&#39;</span>] ?? <span class="s1">&#39;&#39;</span>))<span class="cp">}</span><span class="x"> selected</span><span class="cp">{</span><span class="nf">/if</span><span class="cp">}</span><span class="x">
-</span><span class="x">    &gt;</span><span class="cp">{</span>=<span class="na">ui_field</span>(<span class="nv">$item</span>, <span class="s1">&#39;Label&#39;</span>, <span class="s1">&#39;&#39;</span>)<span class="cp">}</span><span class="x">&lt;/option&gt;
-</span><span class="x">  </span><span class="cp">{</span><span class="nf">/foreach</span><span class="cp">}</span><span class="x">
-</span><span class="x">  </span><span class="cp">{</span>=(<span class="nv">$children</span> ?? <span class="s1">&#39;&#39;</span>)|<span class="na">noescape</span><span class="cp">}</span><span class="x">
-</span><span class="x">&lt;/select&gt;
-</span></code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">ui/select/select.variants.json</span><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="code-latte-3" hidden>Copy</button></div><pre class="hl max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6" tabindex="0"><code class="font-mono" id="code-latte-3">{
-  <span class="nt">&#34;//&#34;</span>: <span class="s2">&#34;Code generated by xgen. DO NOT EDIT.&#34;</span>,
-  <span class="nt">&#34;id&#34;</span>: <span class="s2">&#34;ui.select&#34;</span>,
-  <span class="nt">&#34;base&#34;</span>: <span class="s2">&#34;w-full min-w-0 bg-background text-foreground inset-ring inset-ring-input outline-none placeholder:text-muted-foreground disabled:cursor-not-allowed disabled:opacity-50 focus-visible:inset-ring-ring rounded&#34;</span>,
-  <span class="nt">&#34;keys&#34;</span>: [
-    <span class="s2">&#34;size&#34;</span>,
-    <span class="s2">&#34;variant&#34;</span>
-  ],
-  <span class="nt">&#34;defaults&#34;</span>: {
-    <span class="nt">&#34;size&#34;</span>: <span class="s2">&#34;default&#34;</span>,
-    <span class="nt">&#34;variant&#34;</span>: <span class="s2">&#34;default&#34;</span>
-  },
-  <span class="nt">&#34;byKey&#34;</span>: {
-    <span class="nt">&#34;size&#34;</span>: {
-      <span class="nt">&#34;sm&#34;</span>: <span class="s2">&#34;h-8 px-3 text-sm&#34;</span>,
-      <span class="nt">&#34;default&#34;</span>: <span class="s2">&#34;h-10 px-3 text-sm&#34;</span>,
-      <span class="nt">&#34;lg&#34;</span>: <span class="s2">&#34;h-12 px-4 text-base&#34;</span>
-    },
-    <span class="nt">&#34;variant&#34;</span>: {
-      <span class="nt">&#34;default&#34;</span>: <span class="s2">&#34;&#34;</span>,
-      <span class="nt">&#34;ghost&#34;</span>: <span class="s2">&#34;bg-muted inset-ring-transparent&#34;</span>
-    }
-  },
-  <span class="nt">&#34;compound&#34;</span>: []
-}
-</code></pre></div> <p class="text-sm"><a href="https://registry.buildy.tw/latte/components/ui/select.json" class="underline">Latte registry item (JSON)</a></p></section><section class="rt-panel" id="panel-jinja2" aria-label="Jinja2 code" data-runtime="jinja2"><p class="text-sm mb-2 text-muted-foreground">Point the CLI at this runtime once, then add the item:</p> <div class="mb-2"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code class="overflow-x-auto whitespace-nowrap font-mono text-sm" id="panel-jinja2-init" tabindex="0">npx ui8kit init --yes --framework jinja2 --dir src --registry-url https://registry.buildy.tw/jinja2 --strict-cdn</code><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="panel-jinja2-init" hidden>Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code class="overflow-x-auto whitespace-nowrap font-mono text-sm" id="panel-jinja2-add" tabindex="0">npx ui8kit add select</code><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="panel-jinja2-add" hidden>Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">ui/select/opt-group.html.j2</span><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="code-jinja2-0" hidden>Copy</button></div><pre class="hl max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6" tabindex="0"><code class="font-mono" id="code-jinja2-0"><span class="c">{#- Code generated by xgen. DO NOT EDIT.
-</span><span class="c">    Source: xgen/specs/ui/select.json
-</span><span class="c">    OptGroup: OptGroup renders a native optgroup around option children.
-</span><span class="c">    Props (p): Class (string), Label (string), Disabled (bool), Attrs (attrs); children: markup. -#}</span><span class="x">
-</span><span class="x">&lt;optgroup
-</span><span class="x">  class=&#34;</span><span class="cp">{{</span> <span class="nv">ui_cn</span>([<span class="nv">ui_def</span>(<span class="nv">p</span>[<span class="s1">&#39;Class&#39;</span>], <span class="s1">&#39;&#39;</span>)]) <span class="cp">}}</span><span class="x">&#34;
-</span><span class="x">  </span><span class="cp">{%</span>- <span class="k">if</span> <span class="nv">ui_is_set_str</span>(<span class="nv">ui_def</span>(<span class="nv">p</span>[<span class="s1">&#39;Label&#39;</span>], <span class="s1">&#39;&#39;</span>)) <span class="cp">%}</span><span class="x"> label=&#34;</span><span class="cp">{{</span> <span class="nv">ui_def</span>(<span class="nv">p</span>[<span class="s1">&#39;Label&#39;</span>], <span class="s1">&#39;&#39;</span>) <span class="cp">}}</span><span class="x">&#34;</span><span class="cp">{%</span>- <span class="k">endif</span> <span class="cp">%}</span><span class="x">
-</span><span class="x">  </span><span class="cp">{%</span>- <span class="k">if</span> <span class="nv">ui_def</span>(<span class="nv">p</span>[<span class="s1">&#39;Disabled&#39;</span>], <span class="kp">false</span>) <span class="cp">%}</span><span class="x"> disabled</span><span class="cp">{%</span>- <span class="k">endif</span> <span class="cp">%}</span><span class="x">
-</span><span class="x">  </span><span class="cp">{{</span> <span class="nv">ui_attr_html</span>(<span class="nv">ui_def</span>(<span class="nv">p</span>[<span class="s1">&#39;Attrs&#39;</span>], {})) <span class="cp">}}</span><span class="x">
-</span><span class="x">&gt;</span><span class="cp">{{</span> <span class="nv">ui_def</span>(<span class="nv">children</span>, <span class="s1">&#39;&#39;</span>)|<span class="nf">safe</span> <span class="cp">}}</span><span class="x">&lt;/optgroup&gt;
-</span></code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">ui/select/select-option.html.j2</span><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="code-jinja2-1" hidden>Copy</button></div><pre class="hl max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6" tabindex="0"><code class="font-mono" id="code-jinja2-1"><span class="c">{#- Code generated by xgen. DO NOT EDIT.
-</span><span class="c">    Source: xgen/specs/ui/select.json
-</span><span class="c">    SelectOption: SelectOption renders an option for custom Select children.
-</span><span class="c">    Props (p): Value (string), Label (string), Selected (bool), Disabled (bool), Attrs (attrs); children: markup. -#}</span><span class="x">
-</span><span class="x">&lt;option
-</span><span class="x">  </span><span class="cp">{%</span>- <span class="k">if</span> <span class="nv">ui_is_set_str</span>(<span class="nv">ui_def</span>(<span class="nv">p</span>[<span class="s1">&#39;Value&#39;</span>], <span class="s1">&#39;&#39;</span>)) <span class="cp">%}</span><span class="x"> value=&#34;</span><span class="cp">{{</span> <span class="nv">ui_def</span>(<span class="nv">p</span>[<span class="s1">&#39;Value&#39;</span>], <span class="s1">&#39;&#39;</span>) <span class="cp">}}</span><span class="x">&#34;</span><span class="cp">{%</span>- <span class="k">endif</span> <span class="cp">%}</span><span class="x">
-</span><span class="x">  </span><span class="cp">{%</span>- <span class="k">if</span> <span class="nv">ui_is_set_str</span>(<span class="nv">ui_def</span>(<span class="nv">p</span>[<span class="s1">&#39;Label&#39;</span>], <span class="s1">&#39;&#39;</span>)) <span class="cp">%}</span><span class="x"> label=&#34;</span><span class="cp">{{</span> <span class="nv">ui_def</span>(<span class="nv">p</span>[<span class="s1">&#39;Label&#39;</span>], <span class="s1">&#39;&#39;</span>) <span class="cp">}}</span><span class="x">&#34;</span><span class="cp">{%</span>- <span class="k">endif</span> <span class="cp">%}</span><span class="x">
-</span><span class="x">  </span><span class="cp">{%</span>- <span class="k">if</span> <span class="nv">ui_def</span>(<span class="nv">p</span>[<span class="s1">&#39;Selected&#39;</span>], <span class="kp">false</span>) <span class="cp">%}</span><span class="x"> selected</span><span class="cp">{%</span>- <span class="k">endif</span> <span class="cp">%}</span><span class="x">
-</span><span class="x">  </span><span class="cp">{%</span>- <span class="k">if</span> <span class="nv">ui_def</span>(<span class="nv">p</span>[<span class="s1">&#39;Disabled&#39;</span>], <span class="kp">false</span>) <span class="cp">%}</span><span class="x"> disabled</span><span class="cp">{%</span>- <span class="k">endif</span> <span class="cp">%}</span><span class="x">
-</span><span class="x">  </span><span class="cp">{{</span> <span class="nv">ui_attr_html</span>(<span class="nv">ui_def</span>(<span class="nv">p</span>[<span class="s1">&#39;Attrs&#39;</span>], {})) <span class="cp">}}</span><span class="x">
-</span><span class="x">&gt;</span><span class="cp">{{</span> <span class="nv">ui_def</span>(<span class="nv">children</span>, <span class="s1">&#39;&#39;</span>)|<span class="nf">safe</span> <span class="cp">}}</span><span class="x">&lt;/option&gt;
-</span></code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">ui/select/select.html.j2</span><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="code-jinja2-2" hidden>Copy</button></div><pre class="hl max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6" tabindex="0"><code class="font-mono" id="code-jinja2-2"><span class="c">{#- Code generated by xgen. DO NOT EDIT.
-</span><span class="c">    Source: xgen/specs/ui/select.json
-</span><span class="c">    Select: Select renders option children from the Options list plus manual children.
-</span><span class="c">    Props (p): Variant (string), Size (string), Class (string), Name (string), Value (string), Disabled (bool), Required (bool), Options (SelectOptionItem[]), ID (string), Role (string), TabIndex (string), AriaLabel (string), Attrs (attrs); children: markup. -#}</span><span class="x">
-</span><span class="x">&lt;select
-</span><span class="x">  </span><span class="cp">{%</span>- <span class="k">if</span> <span class="nv">ui_is_set_str</span>(<span class="nv">ui_def</span>(<span class="nv">p</span>[<span class="s1">&#39;ID&#39;</span>], <span class="s1">&#39;&#39;</span>)) <span class="cp">%}</span><span class="x"> id=&#34;</span><span class="cp">{{</span> <span class="nv">ui_def</span>(<span class="nv">p</span>[<span class="s1">&#39;ID&#39;</span>], <span class="s1">&#39;&#39;</span>) <span class="cp">}}</span><span class="x">&#34;</span><span class="cp">{%</span>- <span class="k">endif</span> <span class="cp">%}</span><span class="x">
-</span><span class="x">  </span><span class="cp">{%</span>- <span class="k">if</span> <span class="nv">ui_is_set_str</span>(<span class="nv">ui_def</span>(<span class="nv">p</span>[<span class="s1">&#39;Name&#39;</span>], <span class="s1">&#39;&#39;</span>)) <span class="cp">%}</span><span class="x"> name=&#34;</span><span class="cp">{{</span> <span class="nv">ui_def</span>(<span class="nv">p</span>[<span class="s1">&#39;Name&#39;</span>], <span class="s1">&#39;&#39;</span>) <span class="cp">}}</span><span class="x">&#34;</span><span class="cp">{%</span>- <span class="k">endif</span> <span class="cp">%}</span><span class="x">
-</span><span class="x">  class=&#34;</span><span class="cp">{{</span> <span class="nv">ui_compose</span>(<span class="s1">&#39;ui/select/select.variants.json&#39;</span>, {<span class="s1">&#39;size&#39;</span>: <span class="nv">ui_def</span>(<span class="nv">p</span>[<span class="s1">&#39;Size&#39;</span>], <span class="s1">&#39;&#39;</span>), <span class="s1">&#39;variant&#39;</span>: <span class="nv">ui_def</span>(<span class="nv">p</span>[<span class="s1">&#39;Variant&#39;</span>], <span class="s1">&#39;&#39;</span>)}, [<span class="nv">ui_def</span>(<span class="nv">p</span>[<span class="s1">&#39;Class&#39;</span>], <span class="s1">&#39;&#39;</span>)]) <span class="cp">}}</span><span class="x">&#34;
-</span><span class="x">  </span><span class="cp">{%</span>- <span class="k">if</span> <span class="nv">ui_def</span>(<span class="nv">p</span>[<span class="s1">&#39;Disabled&#39;</span>], <span class="kp">false</span>) <span class="cp">%}</span><span class="x"> disabled</span><span class="cp">{%</span>- <span class="k">endif</span> <span class="cp">%}</span><span class="x">
-</span><span class="x">  </span><span class="cp">{%</span>- <span class="k">if</span> <span class="nv">ui_def</span>(<span class="nv">p</span>[<span class="s1">&#39;Required&#39;</span>], <span class="kp">false</span>) <span class="cp">%}</span><span class="x"> required</span><span class="cp">{%</span>- <span class="k">endif</span> <span class="cp">%}</span><span class="x">
-</span><span class="x">  </span><span class="cp">{%</span>- <span class="k">if</span> <span class="nv">ui_is_set_str</span>(<span class="nv">ui_def</span>(<span class="nv">p</span>[<span class="s1">&#39;Role&#39;</span>], <span class="s1">&#39;&#39;</span>)) <span class="cp">%}</span><span class="x"> role=&#34;</span><span class="cp">{{</span> <span class="nv">ui_def</span>(<span class="nv">p</span>[<span class="s1">&#39;Role&#39;</span>], <span class="s1">&#39;&#39;</span>) <span class="cp">}}</span><span class="x">&#34;</span><span class="cp">{%</span>- <span class="k">endif</span> <span class="cp">%}</span><span class="x">
-</span><span class="x">  </span><span class="cp">{%</span>- <span class="k">if</span> <span class="nv">ui_is_set_str</span>(<span class="nv">ui_def</span>(<span class="nv">p</span>[<span class="s1">&#39;TabIndex&#39;</span>], <span class="s1">&#39;&#39;</span>)) <span class="cp">%}</span><span class="x"> tabindex=&#34;</span><span class="cp">{{</span> <span class="nv">ui_def</span>(<span class="nv">p</span>[<span class="s1">&#39;TabIndex&#39;</span>], <span class="s1">&#39;&#39;</span>) <span class="cp">}}</span><span class="x">&#34;</span><span class="cp">{%</span>- <span class="k">endif</span> <span class="cp">%}</span><span class="x">
-</span><span class="x">  </span><span class="cp">{%</span>- <span class="k">if</span> <span class="nv">ui_is_set_str</span>(<span class="nv">ui_def</span>(<span class="nv">p</span>[<span class="s1">&#39;AriaLabel&#39;</span>], <span class="s1">&#39;&#39;</span>)) <span class="cp">%}</span><span class="x"> aria-label=&#34;</span><span class="cp">{{</span> <span class="nv">ui_def</span>(<span class="nv">p</span>[<span class="s1">&#39;AriaLabel&#39;</span>], <span class="s1">&#39;&#39;</span>) <span class="cp">}}</span><span class="x">&#34;</span><span class="cp">{%</span>- <span class="k">endif</span> <span class="cp">%}</span><span class="x">
-</span><span class="x">  </span><span class="cp">{{</span> <span class="nv">ui_attr_html</span>(<span class="nv">ui_def</span>(<span class="nv">p</span>[<span class="s1">&#39;Attrs&#39;</span>], {})) <span class="cp">}}</span><span class="x">
-</span><span class="x">&gt;
-</span><span class="x">  </span><span class="cp">{%</span>- <span class="k">for</span> <span class="nv">item</span> <span class="k">in</span> <span class="nv">ui_def</span>(<span class="nv">p</span>[<span class="s1">&#39;Options&#39;</span>], []) <span class="cp">%}</span><span class="x">
-</span><span class="x">    &lt;option
-</span><span class="x">      value=&#34;</span><span class="cp">{{</span> <span class="nv">ui_field</span>(<span class="nv">item</span>, <span class="s1">&#39;Value&#39;</span>, <span class="s1">&#39;&#39;</span>) <span class="cp">}}</span><span class="x">&#34;
-</span><span class="x">      </span><span class="cp">{%</span>- <span class="k">if</span> <span class="nv">ui_eq</span>(<span class="nv">ui_field</span>(<span class="nv">item</span>, <span class="s1">&#39;Value&#39;</span>, <span class="s1">&#39;&#39;</span>), <span class="nv">ui_def</span>(<span class="nv">p</span>[<span class="s1">&#39;Value&#39;</span>], <span class="s1">&#39;&#39;</span>)) <span class="cp">%}</span><span class="x"> selected</span><span class="cp">{%</span>- <span class="k">endif</span> <span class="cp">%}</span><span class="x">
-</span><span class="x">    &gt;</span><span class="cp">{{</span> <span class="nv">ui_field</span>(<span class="nv">item</span>, <span class="s1">&#39;Label&#39;</span>, <span class="s1">&#39;&#39;</span>) <span class="cp">}}</span><span class="x">&lt;/option&gt;
-</span><span class="x">  </span><span class="cp">{%</span>- <span class="k">endfor</span> <span class="cp">%}</span><span class="x">
-</span><span class="x">  </span><span class="cp">{{</span> <span class="nv">ui_def</span>(<span class="nv">children</span>, <span class="s1">&#39;&#39;</span>)|<span class="nf">safe</span> <span class="cp">}}</span><span class="x">
-</span><span class="x">&lt;/select&gt;
-</span></code></pre></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">ui/select/select.variants.json</span><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="code-jinja2-3" hidden>Copy</button></div><pre class="hl max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6" tabindex="0"><code class="font-mono" id="code-jinja2-3">{
-  <span class="nt">&#34;//&#34;</span>: <span class="s2">&#34;Code generated by xgen. DO NOT EDIT.&#34;</span>,
-  <span class="nt">&#34;id&#34;</span>: <span class="s2">&#34;ui.select&#34;</span>,
-  <span class="nt">&#34;base&#34;</span>: <span class="s2">&#34;w-full min-w-0 bg-background text-foreground inset-ring inset-ring-input outline-none placeholder:text-muted-foreground disabled:cursor-not-allowed disabled:opacity-50 focus-visible:inset-ring-ring rounded&#34;</span>,
-  <span class="nt">&#34;keys&#34;</span>: [
-    <span class="s2">&#34;size&#34;</span>,
-    <span class="s2">&#34;variant&#34;</span>
-  ],
-  <span class="nt">&#34;defaults&#34;</span>: {
-    <span class="nt">&#34;size&#34;</span>: <span class="s2">&#34;default&#34;</span>,
-    <span class="nt">&#34;variant&#34;</span>: <span class="s2">&#34;default&#34;</span>
-  },
-  <span class="nt">&#34;byKey&#34;</span>: {
-    <span class="nt">&#34;size&#34;</span>: {
-      <span class="nt">&#34;sm&#34;</span>: <span class="s2">&#34;h-8 px-3 text-sm&#34;</span>,
-      <span class="nt">&#34;default&#34;</span>: <span class="s2">&#34;h-10 px-3 text-sm&#34;</span>,
-      <span class="nt">&#34;lg&#34;</span>: <span class="s2">&#34;h-12 px-4 text-base&#34;</span>
-    },
-    <span class="nt">&#34;variant&#34;</span>: {
-      <span class="nt">&#34;default&#34;</span>: <span class="s2">&#34;&#34;</span>,
-      <span class="nt">&#34;ghost&#34;</span>: <span class="s2">&#34;bg-muted inset-ring-transparent&#34;</span>
-    }
-  },
-  <span class="nt">&#34;compound&#34;</span>: []
-}
-</code></pre></div> <p class="text-sm"><a href="https://registry.buildy.tw/jinja2/components/ui/select.json" class="underline">Jinja2 registry item (JSON)</a></p></section></div><h2 class="text-foreground text-xl font-semibold mb-2">Props</h2><p class="text-sm mb-4 max-w-3xl text-muted-foreground">Names and types come from the xgen specs of the source. Standard HTML attributes (id, role, tabIndex, aria-*) pass through to the root element; the class prop is className in React.</p><div class="mb-8"><h3 class="text-foreground text-base font-semibold mb-2 font-mono">Select</h3> <p class="text-sm mb-2 max-w-3xl whitespace-pre-line text-muted-foreground">Select renders option children from the Options list plus manual children.</p> <div class="overflow-x-auto" aria-label="Props of Select" role="region" tabindex="0"><table class="w-full min-w-[40rem] text-left text-sm"><caption class="sr-only">Props of Select</caption><thead class=""><tr class="border-b border-border"><th class="text-left align-middle px-0 py-2 pr-4 font-medium" scope="col">Prop</th><th class="text-left align-middle px-0 py-2 pr-4 font-medium" scope="col">Type</th><th class="text-left align-middle px-0 py-2 pr-4 font-medium" scope="col">Default</th> <th class="text-left align-middle px-0 py-2 font-medium" scope="col">Description</th></tr></thead><tbody class=""><tr class="border-b border-border align-top"><th class="text-left align-middle px-0 py-2 pr-4 align-top font-mono text-xs font-medium" scope="row">variant </th><td class="align-middle px-0 py-2 pr-4 align-top font-mono text-xs">&#34;default&#34; | &#34;ghost&#34;</td><td class="align-middle px-0 py-2 pr-4 align-top font-mono text-xs">&#34;default&#34;</td><td class="align-middle px-0 py-2 align-top text-muted-foreground">sets appearance preset</td></tr><tr class="border-b border-border align-top"><th class="text-left align-middle px-0 py-2 pr-4 align-top font-mono text-xs font-medium" scope="row">size </th><td class="align-middle px-0 py-2 pr-4 align-top font-mono text-xs">&#34;sm&#34; | &#34;default&#34; | &#34;lg&#34;</td><td class="align-middle px-0 py-2 pr-4 align-top font-mono text-xs">&#34;default&#34;</td><td class="align-middle px-0 py-2 align-top text-muted-foreground">sets density preset</td></tr><tr class="border-b border-border align-top"><th class="text-left align-middle px-0 py-2 pr-4 align-top font-mono text-xs font-medium" scope="row">class </th><td class="align-middle px-0 py-2 pr-4 align-top font-mono text-xs">string</td><td class="align-middle px-0 py-2 pr-4 align-top font-mono text-xs"><span class="text-muted-foreground">-</span></td><td class="align-middle px-0 py-2 align-top text-muted-foreground">adds Tailwind utilities</td></tr><tr class="border-b border-border align-top"><th class="text-left align-middle px-0 py-2 pr-4 align-top font-mono text-xs font-medium" scope="row">value </th><td class="align-middle px-0 py-2 pr-4 align-top font-mono text-xs">string</td><td class="align-middle px-0 py-2 pr-4 align-top font-mono text-xs"><span class="text-muted-foreground">-</span></td><td class="align-middle px-0 py-2 align-top text-muted-foreground">currently selected option value</td></tr><tr class="border-b border-border align-top"><th class="text-left align-middle px-0 py-2 pr-4 align-top font-mono text-xs font-medium" scope="row">disabled </th><td class="align-middle px-0 py-2 pr-4 align-top font-mono text-xs">boolean</td><td class="align-middle px-0 py-2 pr-4 align-top font-mono text-xs"><span class="text-muted-foreground">-</span></td><td class="align-middle px-0 py-2 align-top text-muted-foreground"></td></tr><tr class="border-b border-border align-top"><th class="text-left align-middle px-0 py-2 pr-4 align-top font-mono text-xs font-medium" scope="row">required </th><td class="align-middle px-0 py-2 pr-4 align-top font-mono text-xs">boolean</td><td class="align-middle px-0 py-2 pr-4 align-top font-mono text-xs"><span class="text-muted-foreground">-</span></td><td class="align-middle px-0 py-2 align-top text-muted-foreground"></td></tr><tr class="border-b border-border align-top"><th class="text-left align-middle px-0 py-2 pr-4 align-top font-mono text-xs font-medium" scope="row">options </th><td class="align-middle px-0 py-2 pr-4 align-top font-mono text-xs">items</td><td class="align-middle px-0 py-2 pr-4 align-top font-mono text-xs"><span class="text-muted-foreground">-</span></td><td class="align-middle px-0 py-2 align-top text-muted-foreground"></td></tr><tr class="border-b border-border align-top"><th class="text-left align-middle px-0 py-2 pr-4 align-top font-mono text-xs font-medium" scope="row">children </th><td class="align-middle px-0 py-2 pr-4 align-top font-mono text-xs">children</td><td class="align-middle px-0 py-2 pr-4 align-top font-mono text-xs"><span class="text-muted-foreground">-</span></td><td class="align-middle px-0 py-2 align-top text-muted-foreground"></td></tr></tbody></table></div></div><div class="mb-8"><h3 class="text-foreground text-base font-semibold mb-2 font-mono">SelectOption</h3> <p class="text-sm mb-2 max-w-3xl whitespace-pre-line text-muted-foreground">SelectOption renders an option for custom Select children.</p> <div class="overflow-x-auto" aria-label="Props of SelectOption" role="region" tabindex="0"><table class="w-full min-w-[40rem] text-left text-sm"><caption class="sr-only">Props of SelectOption</caption><thead class=""><tr class="border-b border-border"><th class="text-left align-middle px-0 py-2 pr-4 font-medium" scope="col">Prop</th><th class="text-left align-middle px-0 py-2 pr-4 font-medium" scope="col">Type</th><th class="text-left align-middle px-0 py-2 pr-4 font-medium" scope="col">Default</th> <th class="text-left align-middle px-0 py-2 font-medium" scope="col">Description</th></tr></thead><tbody class=""><tr class="border-b border-border align-top"><th class="text-left align-middle px-0 py-2 pr-4 align-top font-mono text-xs font-medium" scope="row">selected </th><td class="align-middle px-0 py-2 pr-4 align-top font-mono text-xs">boolean</td><td class="align-middle px-0 py-2 pr-4 align-top font-mono text-xs"><span class="text-muted-foreground">-</span></td><td class="align-middle px-0 py-2 align-top text-muted-foreground"></td></tr><tr class="border-b border-border align-top"><th class="text-left align-middle px-0 py-2 pr-4 align-top font-mono text-xs font-medium" scope="row">disabled </th><td class="align-middle px-0 py-2 pr-4 align-top font-mono text-xs">boolean</td><td class="align-middle px-0 py-2 pr-4 align-top font-mono text-xs"><span class="text-muted-foreground">-</span></td><td class="align-middle px-0 py-2 align-top text-muted-foreground"></td></tr><tr class="border-b border-border align-top"><th class="text-left align-middle px-0 py-2 pr-4 align-top font-mono text-xs font-medium" scope="row">children </th><td class="align-middle px-0 py-2 pr-4 align-top font-mono text-xs">children</td><td class="align-middle px-0 py-2 pr-4 align-top font-mono text-xs"><span class="text-muted-foreground">-</span></td><td class="align-middle px-0 py-2 align-top text-muted-foreground"></td></tr></tbody></table></div></div><div class="mb-8"><h3 class="text-foreground text-base font-semibold mb-2 font-mono">OptGroup</h3> <p class="text-sm mb-2 max-w-3xl whitespace-pre-line text-muted-foreground">OptGroup renders a native optgroup around option children.</p> <div class="overflow-x-auto" aria-label="Props of OptGroup" role="region" tabindex="0"><table class="w-full min-w-[40rem] text-left text-sm"><caption class="sr-only">Props of OptGroup</caption><thead class=""><tr class="border-b border-border"><th class="text-left align-middle px-0 py-2 pr-4 font-medium" scope="col">Prop</th><th class="text-left align-middle px-0 py-2 pr-4 font-medium" scope="col">Type</th><th class="text-left align-middle px-0 py-2 pr-4 font-medium" scope="col">Default</th> <th class="text-left align-middle px-0 py-2 font-medium" scope="col">Description</th></tr></thead><tbody class=""><tr class="border-b border-border align-top"><th class="text-left align-middle px-0 py-2 pr-4 align-top font-mono text-xs font-medium" scope="row">class </th><td class="align-middle px-0 py-2 pr-4 align-top font-mono text-xs">string</td><td class="align-middle px-0 py-2 pr-4 align-top font-mono text-xs"><span class="text-muted-foreground">-</span></td><td class="align-middle px-0 py-2 align-top text-muted-foreground">adds Tailwind utilities</td></tr><tr class="border-b border-border align-top"><th class="text-left align-middle px-0 py-2 pr-4 align-top font-mono text-xs font-medium" scope="row">disabled </th><td class="align-middle px-0 py-2 pr-4 align-top font-mono text-xs">boolean</td><td class="align-middle px-0 py-2 pr-4 align-top font-mono text-xs"><span class="text-muted-foreground">-</span></td><td class="align-middle px-0 py-2 align-top text-muted-foreground"></td></tr><tr class="border-b border-border align-top"><th class="text-left align-middle px-0 py-2 pr-4 align-top font-mono text-xs font-medium" scope="row">children </th><td class="align-middle px-0 py-2 pr-4 align-top font-mono text-xs">children</td><td class="align-middle px-0 py-2 pr-4 align-top font-mono text-xs"><span class="text-muted-foreground">-</span></td><td class="align-middle px-0 py-2 align-top text-muted-foreground"></td></tr></tbody></table></div></div> <h2 class="text-foreground text-xl font-semibold mb-2">Used in</h2><ul class="flex flex-wrap gap-x-4 gap-y-1 text-sm"><li class=""><a href="/blocks/category-nav/" class="underline">category-nav</a></li><li class=""><a href="/blocks/slot-board/" class="underline">slot-board</a></li></ul></article></main></div><footer class="border-t border-border"><div class="mx-auto max-w-6xl px-4 py-8 text-sm text-muted-foreground">ui8kit, MIT licence. Static docs generated from markdown and the registry (<a href="https://registry.buildy.tw/registry.json" class="underline">registry.json</a>).</div></footer></body></html>
+</code></pre></div> <p class="text-sm"><a href="https://registry.buildy.tw/templ/components/ui/select.json" class="underline">templ registry item (JSON)</a></p></section><section class="rt-panel" id="panel-twig" aria-label="Twig code" data-runtime="twig"><p class="text-sm mb-2 text-muted-foreground">Point the CLI at this runtime once, then add the item:</p> <div class="mb-2"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code class="overflow-x-auto whitespace-nowrap font-mono text-sm" id="panel-twig-init" tabindex="0">npx ui8kit init --yes --framework twig --dir src --registry-url https://registry.buildy.tw/twig --strict-cdn</code><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="panel-twig-init" hidden>Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code class="overflow-x-auto whitespace-nowrap font-mono text-sm" id="panel-twig-add" tabindex="0">npx ui8kit add select</code><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="panel-twig-add" hidden>Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">compose/Select.html.twig</span><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="code-twig-0" hidden>Copy</button></div><pre class="hl max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6" tabindex="0"><code class="font-mono" id="code-twig-0"><span class="c">{# Code generated by packages/kit-compose/src/build.ts from src/map.ts + variants/. DO NOT EDIT. #}</span><span class="x">
+</span><span class="c">{# Select: Select + recipe select. Params: size, variant, state, class, attrs + the params of Select. #}</span><span class="x">
+</span><span class="cp">{%</span> <span class="k">include</span> <span class="s1">&#39;ui/select/Select.html.twig&#39;</span> <span class="nv">with</span> <span class="nv">compose_props</span>(<span class="s1">&#39;Select&#39;</span>, <span class="nv">_context</span>) <span class="nv">only</span> <span class="cp">%}</span></code></pre></div> <p class="text-sm"><a href="https://registry.buildy.tw/twig/components/ui/select.json" class="underline">Twig registry item (JSON)</a></p></section><section class="rt-panel" id="panel-latte" aria-label="Latte code" data-runtime="latte"><p class="text-sm mb-2 text-muted-foreground">Point the CLI at this runtime once, then add the item:</p> <div class="mb-2"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code class="overflow-x-auto whitespace-nowrap font-mono text-sm" id="panel-latte-init" tabindex="0">npx ui8kit init --yes --framework latte --dir src --registry-url https://registry.buildy.tw/latte --strict-cdn</code><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="panel-latte-init" hidden>Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code class="overflow-x-auto whitespace-nowrap font-mono text-sm" id="panel-latte-add" tabindex="0">npx ui8kit add select</code><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="panel-latte-add" hidden>Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">compose/Select.latte</span><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="code-latte-0" hidden>Copy</button></div><pre class="hl max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6" tabindex="0"><code class="font-mono" id="code-latte-0"><span class="cp">{</span><span class="c">* Code generated by packages/kit-compose/src/build.ts from src/map.ts + variants/. DO NOT EDIT. *</span><span class="cp">}</span><span class="x">
+</span><span class="cp">{</span><span class="c">* Select: Select + recipe select. *</span><span class="cp">}</span><span class="x">
+</span><span class="cp">{</span><span class="nf">parameters</span>
+  <span class="na">string</span> <span class="nv">$class</span> = <span class="s1">&#39;&#39;</span>,
+  ?<span class="na">string</span> <span class="nv">$id</span> = <span class="kc">null</span>,
+  ?<span class="na">string</span> <span class="nv">$name</span> = <span class="kc">null</span>,
+  <span class="na">string</span> <span class="nv">$value</span> = <span class="s1">&#39;&#39;</span>,
+  <span class="na">bool</span> <span class="nv">$multiple</span> = <span class="kc">false</span>,
+  <span class="na">bool</span> <span class="nv">$required</span> = <span class="kc">false</span>,
+  <span class="na">bool</span> <span class="nv">$disabled</span> = <span class="kc">false</span>,
+  <span class="na">array</span> <span class="nv">$options</span> = [],
+  ?<span class="na">string</span> <span class="nv">$ariaInvalid</span> = <span class="kc">null</span>,
+  ?<span class="na">string</span> <span class="nv">$ariaDescribedBy</span> = <span class="kc">null</span>,
+  <span class="na">array</span> <span class="nv">$attrs</span> = [],
+  <span class="na">string</span> <span class="nv">$children</span> = <span class="s1">&#39;&#39;</span>,
+  <span class="nv">$size</span> = <span class="kc">null</span>,
+  <span class="nv">$variant</span> = <span class="kc">null</span>,
+  <span class="nv">$state</span> = <span class="kc">null</span>,
+<span class="cp">}</span><span class="x">
+</span><span class="cp">{</span><span class="nf">include</span> <span class="s1">&#39;../ui/select/Select.latte&#39;</span>, ...<span class="err">\</span><span class="na">CodegenX</span><span class="err">\</span><span class="na">Compose</span><span class="err">\</span><span class="na">Latte</span><span class="err">\</span><span class="na">Compose</span>::<span class="na">props</span>(<span class="s1">&#39;Select&#39;</span>, [<span class="s1">&#39;class&#39;</span> =&gt; <span class="nv">$class</span>, <span class="s1">&#39;id&#39;</span> =&gt; <span class="nv">$id</span>, <span class="s1">&#39;name&#39;</span> =&gt; <span class="nv">$name</span>, <span class="s1">&#39;value&#39;</span> =&gt; <span class="nv">$value</span>, <span class="s1">&#39;multiple&#39;</span> =&gt; <span class="nv">$multiple</span>, <span class="s1">&#39;required&#39;</span> =&gt; <span class="nv">$required</span>, <span class="s1">&#39;disabled&#39;</span> =&gt; <span class="nv">$disabled</span>, <span class="s1">&#39;options&#39;</span> =&gt; <span class="nv">$options</span>, <span class="s1">&#39;ariaInvalid&#39;</span> =&gt; <span class="nv">$ariaInvalid</span>, <span class="s1">&#39;ariaDescribedBy&#39;</span> =&gt; <span class="nv">$ariaDescribedBy</span>, <span class="s1">&#39;attrs&#39;</span> =&gt; <span class="nv">$attrs</span>, <span class="s1">&#39;children&#39;</span> =&gt; <span class="nv">$children</span>, <span class="s1">&#39;size&#39;</span> =&gt; <span class="nv">$size</span>, <span class="s1">&#39;variant&#39;</span> =&gt; <span class="nv">$variant</span>, <span class="s1">&#39;state&#39;</span> =&gt; <span class="nv">$state</span>])<span class="cp">}</span></code></pre></div> <p class="text-sm"><a href="https://registry.buildy.tw/latte/components/ui/select.json" class="underline">Latte registry item (JSON)</a></p></section><section class="rt-panel" id="panel-jinja2" aria-label="Jinja2 code" data-runtime="jinja2"><p class="text-sm mb-2 text-muted-foreground">Point the CLI at this runtime once, then add the item:</p> <div class="mb-2"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code class="overflow-x-auto whitespace-nowrap font-mono text-sm" id="panel-jinja2-init" tabindex="0">npx ui8kit init --yes --framework jinja2 --dir src --registry-url https://registry.buildy.tw/jinja2 --strict-cdn</code><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="panel-jinja2-init" hidden>Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code class="overflow-x-auto whitespace-nowrap font-mono text-sm" id="panel-jinja2-add" tabindex="0">npx ui8kit add select</code><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="panel-jinja2-add" hidden>Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">compose/select.html.j2</span><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="code-jinja2-0" hidden>Copy</button></div><pre class="hl max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6" tabindex="0"><code class="font-mono" id="code-jinja2-0"><span class="c">{#- Code generated by packages/kit-compose/src/build.ts from src/map.ts + variants/. DO NOT EDIT.
+</span><span class="c">    Select: Select + recipe select. Props (p): Size, Variant, State, Class, Attrs + the props of Select. -#}</span><span class="x">
+</span><span class="cp">{%</span>- <span class="k">with</span> <span class="nv">p</span> = <span class="nv">compose_props</span>(<span class="s1">&#39;Select&#39;</span>, <span class="nv">p</span>) <span class="cp">%}{%</span> <span class="k">include</span> <span class="s1">&#39;ui/select/select.html.j2&#39;</span> <span class="cp">%}{%</span> <span class="k">endwith</span> <span class="cp">%}</span></code></pre></div> <p class="text-sm"><a href="https://registry.buildy.tw/jinja2/components/ui/select.json" class="underline">Jinja2 registry item (JSON)</a></p></section></div><h2 class="text-foreground text-xl font-semibold mb-2">Props</h2><p class="text-sm mb-4 max-w-3xl text-muted-foreground">Names and types come from the xgen specs of the source. Standard HTML attributes (id, role, tabIndex, aria-*) pass through to the root element; the class prop is className in React.</p><div class="mb-8"> <p class="text-sm mb-2 max-w-3xl whitespace-pre-line text-muted-foreground">Select renders option children from Options, then manual children.</p> <div class="overflow-x-auto" aria-label="Props of Select" role="region" tabindex="0"><table class="w-full min-w-[40rem] text-left text-sm"><caption class="sr-only">Props of Select</caption><thead class=""><tr class="border-b border-border"><th class="text-left align-middle px-0 py-2 pr-4 font-medium" scope="col">Prop</th><th class="text-left align-middle px-0 py-2 pr-4 font-medium" scope="col">Type</th><th class="text-left align-middle px-0 py-2 pr-4 font-medium" scope="col">Default</th> <th class="text-left align-middle px-0 py-2 font-medium" scope="col">Description</th></tr></thead><tbody class=""><tr class="border-b border-border align-top"><th class="text-left align-middle px-0 py-2 pr-4 align-top font-mono text-xs font-medium" scope="row">value </th><td class="align-middle px-0 py-2 pr-4 align-top font-mono text-xs">string</td><td class="align-middle px-0 py-2 pr-4 align-top font-mono text-xs"><span class="text-muted-foreground">-</span></td><td class="align-middle px-0 py-2 align-top text-muted-foreground">selected option value</td></tr><tr class="border-b border-border align-top"><th class="text-left align-middle px-0 py-2 pr-4 align-top font-mono text-xs font-medium" scope="row">multiple </th><td class="align-middle px-0 py-2 pr-4 align-top font-mono text-xs">boolean</td><td class="align-middle px-0 py-2 pr-4 align-top font-mono text-xs"><span class="text-muted-foreground">-</span></td><td class="align-middle px-0 py-2 align-top text-muted-foreground"></td></tr><tr class="border-b border-border align-top"><th class="text-left align-middle px-0 py-2 pr-4 align-top font-mono text-xs font-medium" scope="row">required </th><td class="align-middle px-0 py-2 pr-4 align-top font-mono text-xs">boolean</td><td class="align-middle px-0 py-2 pr-4 align-top font-mono text-xs"><span class="text-muted-foreground">-</span></td><td class="align-middle px-0 py-2 align-top text-muted-foreground"></td></tr><tr class="border-b border-border align-top"><th class="text-left align-middle px-0 py-2 pr-4 align-top font-mono text-xs font-medium" scope="row">disabled </th><td class="align-middle px-0 py-2 pr-4 align-top font-mono text-xs">boolean</td><td class="align-middle px-0 py-2 pr-4 align-top font-mono text-xs"><span class="text-muted-foreground">-</span></td><td class="align-middle px-0 py-2 align-top text-muted-foreground"></td></tr><tr class="border-b border-border align-top"><th class="text-left align-middle px-0 py-2 pr-4 align-top font-mono text-xs font-medium" scope="row">options </th><td class="align-middle px-0 py-2 pr-4 align-top font-mono text-xs">items</td><td class="align-middle px-0 py-2 pr-4 align-top font-mono text-xs"><span class="text-muted-foreground">-</span></td><td class="align-middle px-0 py-2 align-top text-muted-foreground"></td></tr></tbody></table></div></div> </article></main></div><footer class="border-t border-border"><div class="mx-auto max-w-6xl px-4 py-8 text-sm text-muted-foreground">ui8kit, MIT licence. Static docs generated from markdown and the registry (<a href="https://registry.buildy.tw/registry.json" class="underline">registry.json</a>).</div></footer></body></html>

@@ -68,11 +68,11 @@ function describe(src: string, fallback: string): string {
   return text ? text.slice(0, 280) : fallback;
 }
 
-/** block name -> {theme, group, docs} from xgen/specs/blocks */
+/** block name -> {theme, group, docs} from packages/compose-gen/specs/blocks */
 function blockMeta(): Map<string, { theme: string; group: string; docs: string }> {
-  const dir = path.join(SRC, "xgen/specs/blocks");
+  const dir = path.join(SRC, "packages/compose-gen/specs/blocks");
   const map = new Map<string, { theme: string; group: string; docs: string }>();
-  if (!existsSync(dir)) return map;
+  if (!existsSync(dir)) throw new Error(`missing ${dir}`);
   for (const f of readdirSync(dir).sort(cmp)) {
     if (!f.endsWith(".json")) continue;
     const j = JSON.parse(readFileSync(path.join(dir, f), "utf8"));
@@ -84,81 +84,120 @@ function blockMeta(): Map<string, { theme: string; group: string; docs: string }
 
 const EXT: Record<TsRuntime, string[]> = { svelte: [".svelte"], react: [".tsx"], vue: [".vue"], solid: [".tsx"] };
 
-function buildRuntime(rt: TsRuntime, meta: ReturnType<typeof blockMeta>): Item[] {
-  const root = path.join(SRC, "packages", rt, "ui/src");
-  if (!existsSync(root)) throw new Error(`missing ${root}`);
-  const pkg = JSON.parse(readFileSync(path.join(root, "../package.json"), "utf8"));
-  const files = walk(root).filter((f) => /^(primitives|components|blocks|utils|presets)\//.test(f));
+/**
+ * Source layout (source monorepo after the xgen exit):
+ *   packages/kit/<rt>/src/{ui,utils}                     UI8Kit 3 primitives, installed there by the ui8kit CLI from @ui8kit/registry
+ *   packages/kit-compose/<rt>/src/{compose,components,blocks,icons,presets,utils,styles}   compositions (recipes + organisms)
+ * Installed layout under the app `dir` (file targets):
+ *   kit/ui/<name>/*, kit/utils/*      the primitives, verbatim
+ *   compose/*, components/*, blocks/*, icons/*, presets/*, utils/*, styles/*   the compositions; their imports of
+ *   `../../../../kit/<rt>/src/…` are rewritten to the relative path of the installed kit/ folder.
+ * Items: `utils` (kit utils + compose utils + styles), `presets` (lib), `recipes` (lib, compose/recipes.ts), `compose` (lib, the
+ * compose/index.ts barrel the organisms import), one `kit-<name>` per primitive folder, one item per compose wrapper (registry:ui,
+ * `add select`), per component and per block (with their *.types.ts / *.assets.ts).
+ */
+export function tsSourceFiles(rt: TsRuntime): { files: { src: string; target: string }[]; read: (src: string) => string } {
+  const kit = path.join(SRC, "packages/kit", rt, "src");
+  const comp = path.join(SRC, "packages/kit-compose", rt, "src");
+  for (const d of [kit, comp]) if (!existsSync(d)) throw new Error(`missing ${d}`);
+  const files: { src: string; target: string }[] = [];
+  for (const f of walk(kit)) if (/^(ui|utils)\//.test(f)) files.push({ src: path.join(kit, f), target: `kit/${f}` });
+  for (const f of walk(comp)) if (/^(compose|components|blocks|icons|presets|utils|styles)\//.test(f)) files.push({ src: path.join(comp, f), target: f });
+  const kitRe = new RegExp(`(["'])((?:\\.\\./)+)kit/${rt}/src/`, "g");
+  const read = (src: string) => {
+    const c = readFileSync(src, "utf8");
+    if (!src.startsWith(comp + path.sep)) return c;
+    const rel = path.relative(comp, src).split(path.sep).join("/");
+    const up = path.posix.relative(path.posix.dirname(rel), "kit") || ".";
+    return c.replace(kitRe, (_m, q) => `${q}${up.startsWith(".") ? up : "./" + up}/`);
+  };
+  return { files: files.sort((a, b) => cmp(a.target, b.target)), read };
+}
 
-  // group source files into items: file (relative to src) -> item key
+function buildRuntime(rt: TsRuntime, meta: ReturnType<typeof blockMeta>): Item[] {
+  const { files: srcFiles, read } = tsSourceFiles(rt);
+  const pkg = JSON.parse(readFileSync(path.join(SRC, "packages/kit-compose", rt, "package.json"), "utf8"));
+  const files = srcFiles.map((f) => f.target);
+  const srcOf = new Map(srcFiles.map((f) => [f.target, f.src]));
+
+  // group files into items: target -> item key
   const groupOf = (f: string): { key: string; kind: Kind } => {
     const [top, ...rest] = f.split("/");
-    if (top === "utils") return { key: "utils", kind: "utils" };
+    if (top === "kit") return rest[0] === "utils" ? { key: "utils", kind: "utils" } : { key: `kit-${rest[1]!}`, kind: "primitive" };
+    if (top === "utils" || top === "styles") return { key: "utils", kind: "utils" };
     if (top === "presets") return { key: "presets", kind: "lib" };
-    if (top === "primitives") return { key: rest[0]!, kind: "primitive" };
+    if (top === "icons") return { key: "lucide-icon", kind: "primitive" };
+    if (top === "compose") {
+      const n = kebab(rest.join("/").split(".")[0]!);
+      if (n === "recipes") return { key: "recipes", kind: "lib" };
+      if (n === "index") return { key: "compose", kind: "primitive" };
+      return { key: n, kind: "primitive" };
+    }
     return { key: rest.join("/").split(".")[0]!, kind: top === "blocks" ? "block" : "component" };
   };
   const groups = new Map<string, { kind: Kind; files: string[] }>();
   const fileToKey = new Map<string, string>();
   for (const f of files) {
     const g = groupOf(f);
-    const k = `${g.kind}:${g.key}`;
-    if (!groups.has(k)) groups.set(k, { kind: g.kind, files: [] });
-    groups.get(k)!.files.push(f);
+    const prev = groups.get(g.key);
+    if (prev && prev.kind !== g.kind) throw new Error(`${rt}: item name collision: ${g.key} (${prev.kind} vs ${g.kind})`);
+    if (!prev) groups.set(g.key, { kind: g.kind, files: [] });
+    groups.get(g.key)!.files.push(f);
     fileToKey.set(f, g.key);
-  }
-  // unique item names across kinds (verified once; fail loudly otherwise)
-  const names = new Map<string, string>();
-  for (const [k, g] of groups) {
-    const n = k.split(":")[1]!;
-    if (names.has(n)) throw new Error(`item name collision: ${n} (${names.get(n)} vs ${g.kind})`);
-    names.set(n, g.kind);
   }
 
   const resolveImport = (from: string, spec: string): string | null => {
     if (!spec.startsWith(".")) return null;
     const base = path.posix.normalize(path.posix.join(path.posix.dirname(from), spec));
-    const cands = [base, ...[".ts", ".tsx", ".svelte", ".vue", ".types.ts"].map((e) => base + e), base + "/index.ts"];
+    const cands = [base, ...[".ts", ".tsx", ".svelte", ".vue", ".types.ts", ".js"].map((e) => base + e), base + "/index.ts"];
     return cands.find((c) => fileToKey.has(c)) ?? null;
   };
 
   const typeOf: Record<Kind, RegType> = { utils: "registry:utils", lib: "registry:lib", primitive: "registry:ui", component: "registry:component", block: "registry:block" };
   const items: Item[] = [];
-  for (const [k, g] of [...groups].sort((a, b) => cmp(a[0], b[0]))) {
-    const name = k.split(":")[1]!;
+  const problems: string[] = [];
+  for (const [name, g] of [...groups].sort((a, b) => cmp(a[0], b[0]))) {
     const fl: File[] = [];
     const deps = new Set<string>();
     const npm = new Set<string>();
     let main = "";
     for (const f of g.files.sort(cmp)) {
-      const content = readFileSync(path.join(root, f), "utf8");
+      const content = read(srcOf.get(f)!);
       fl.push({ path: f, target: f, content });
-      if (EXT[rt].some((e) => f.endsWith(e)) && !main) main = content;
+      if (EXT[rt].some((e) => f.endsWith(e)) && !main && !f.startsWith("kit/")) main = content;
+      if (f.endsWith(".css")) continue;
       for (const m of content.matchAll(/(?:from|import)\s+["']([^"']+)["']/g)) {
         const spec = m[1]!;
         if (spec.startsWith(".")) {
           const hit = resolveImport(f, spec);
-          const dep = hit ? fileToKey.get(hit) : null;
-          if (dep && dep !== name) deps.add(dep);
-        } else if (!["svelte", "react", "vue", "react/jsx-runtime", "solid-js"].includes(spec) && !spec.startsWith("svelte/") && !spec.startsWith("vue/") && !spec.startsWith("solid-js/")) {
+          if (!hit) { if (!f.startsWith("kit/")) problems.push(`${rt}: ${f}: unresolved import ${spec}`); continue; }
+          const dep = fileToKey.get(hit)!;
+          if (dep !== name) deps.add(dep);
+        } else if (!["svelte", "react", "vue", "react/jsx-runtime", "solid-js"].includes(spec) && !spec.startsWith("svelte/") && !spec.startsWith("vue/") && !spec.startsWith("solid-js/") && !spec.startsWith("@/")) {
           npm.add(spec.startsWith("@") ? spec.split("/").slice(0, 2).join("/") : spec.split("/")[0]!);
         }
       }
     }
     if (g.kind === "utils") for (const d of Object.keys(pkg.dependencies ?? {})) npm.add(d);
     const bm = g.kind === "block" ? meta.get(name) : undefined;
-    const fallback = g.kind === "utils" ? "cn, variants, expr and shared helpers used by every primitive" : `${titleOf(name)} ${g.kind}`;
-    const category = g.kind === "block" ? bm?.theme ?? "general" : g.kind === "primitive" ? "primitives" : g.kind === "component" ? "components" : g.kind;
+    const fallback =
+      g.kind === "utils" ? "cn, variants, expr, safe URLs and the shared helpers of the primitives and compositions (plus the theme CSS in styles/)"
+      : name === "recipes" ? "Recipes (Tailwind classes per variant/size/state) of the composed primitives"
+      : name === "compose" ? "Barrel of the composed primitives (compose/index), imported by components and blocks"
+      : name.startsWith("kit-") ? `UI8Kit 3 ${titleOf(name.slice(4))} primitive (unstyled), from @ui8kit/registry`
+      : `${titleOf(name)} ${g.kind}`;
+    const category = g.kind === "block" ? bm?.theme ?? "general" : g.kind === "primitive" ? (name.startsWith("kit-") ? "kit" : "primitives") : g.kind === "component" ? "components" : g.kind;
     items.push({
       name, type: typeOf[g.kind], title: titleOf(name),
-      description: (bm?.docs || describe(main || fl[0]!.content, fallback)),
+      description: (bm?.docs || (name.startsWith("kit-") || g.kind === "lib" || g.kind === "utils" ? fallback : describe(main || fl[0]!.content, fallback))),
       runtime: rt, digest: VERSION,
       dependencies: [...npm].sort(cmp), devDependencies: [],
-      registryDependencies: [...new Set([...deps, ...(g.kind === "utils" || name === "presets" ? [] : ["utils"])])].filter((d) => d !== name).sort(cmp),
+      registryDependencies: [...new Set([...deps, ...(g.kind === "utils" ? [] : ["utils"])])].filter((d) => d !== name).sort(cmp),
       files: fl,
       meta: { kind: g.kind, category, ...(bm ? { group: bm.group } : {}), tags: [rt, g.kind] },
     });
   }
+  if (problems.length) { console.error(problems.join("\n")); throw new Error(`${rt}: ${problems.length} problem(s)`); }
   return items;
 }
 
@@ -168,7 +207,7 @@ const folderOf = (t: RegType) => ({ "registry:ui": "components/ui", "registry:co
 function main() {
   const commit = git(["rev-parse", "HEAD"]);
   const commitDate = git(["show", "-s", "--format=%cI", "HEAD"]) || "1970-01-01T00:00:00.000Z";
-  const dirty = git(["status", "--porcelain", "--", "packages", "xgen/specs"]) !== "";
+  const dirty = git(["status", "--porcelain", "--", "packages/kit", "packages/kit-compose", "packages/compose-gen/specs"]) !== "";
   // r/vercel.json (deploy config of the registry project) is hand-written: keep it across rebuilds
   const keepFile = path.join(OUT, "vercel.json");
   const kept = existsSync(keepFile) ? readFileSync(keepFile) : null;

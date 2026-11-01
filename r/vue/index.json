@@ -35,11 +35,12 @@
       "registryDependencies": [
         "action-group",
         "error-page",
-        "form",
         "group",
         "list",
+        "list-item",
         "media-frame",
         "product-info",
+        "progress",
         "section-frame",
         "stack",
         "text",
@@ -50,12 +51,26 @@
     },
     {
       "dependencies": [],
+      "description": "Action Group component",
+      "name": "action-group",
+      "registryDependencies": [
+        "button",
+        "group",
+        "utils"
+      ],
+      "title": "Action Group",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
       "description": "Recent events as a timeline or a list.",
       "name": "activity-feed",
       "registryDependencies": [
         "block",
         "container",
+        "empty-state",
         "list",
+        "list-item",
         "panel",
         "stack",
         "text",
@@ -64,6 +79,18 @@
       ],
       "title": "Activity Feed",
       "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "Alert primitive",
+      "name": "alert",
+      "registryDependencies": [
+        "kit-box",
+        "recipes",
+        "utils"
+      ],
+      "title": "Alert",
+      "type": "registry:ui"
     },
     {
       "dependencies": [],
@@ -85,6 +112,28 @@
     },
     {
       "dependencies": [],
+      "description": "App Main component",
+      "name": "app-main",
+      "registryDependencies": [
+        "activity-feed",
+        "bar-chart",
+        "box",
+        "chart-panel",
+        "dashboard-overview",
+        "grid",
+        "metric-row",
+        "panel",
+        "stack",
+        "stat-tile",
+        "timeline",
+        "title",
+        "utils"
+      ],
+      "title": "App Main",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
       "description": "The frame of a signed-in app with a first screen: a sidebar, a top bar, or three panes.",
       "name": "app-shell",
       "registryDependencies": [
@@ -96,6 +145,7 @@
         "dashboard-overview",
         "grid",
         "list",
+        "list-item",
         "metric-row",
         "nav-bar",
         "panel",
@@ -109,13 +159,26 @@
     },
     {
       "dependencies": [],
+      "description": "Article Block component",
+      "name": "article-block",
+      "registryDependencies": [
+        "block",
+        "utils"
+      ],
+      "title": "Article Block",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
       "description": "A long read in one reading column, or beside a table of contents that links to the sections.",
       "name": "article-body",
       "registryDependencies": [
         "box",
+        "empty-state",
         "grid",
         "link",
         "list",
+        "list-item",
         "nav-block",
         "section-frame",
         "stack",
@@ -148,6 +211,24 @@
     },
     {
       "dependencies": [],
+      "description": "Auth Form component",
+      "name": "auth-form",
+      "registryDependencies": [
+        "auth-card",
+        "button",
+        "checkbox",
+        "field",
+        "form",
+        "group",
+        "input",
+        "label",
+        "utils"
+      ],
+      "title": "Auth Form",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
       "description": "A whole sign-in page: the card beside a picture panel, on a tinted page, or alone; with any mode of the card.",
       "name": "auth-layout",
       "registryDependencies": [
@@ -167,13 +248,75 @@
     },
     {
       "dependencies": [],
+      "description": "Avatar component",
+      "name": "avatar",
+      "registryDependencies": [
+        "image",
+        "inline",
+        "utils"
+      ],
+      "title": "Avatar",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "Backdrop component",
+      "name": "backdrop",
+      "registryDependencies": [
+        "box",
+        "media-frame",
+        "utils"
+      ],
+      "title": "Backdrop",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "Badge primitive",
+      "name": "badge",
+      "registryDependencies": [
+        "kit-text",
+        "recipes",
+        "utils"
+      ],
+      "title": "Badge",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "Badge Square component",
+      "name": "badge-square",
+      "registryDependencies": [
+        "inline",
+        "utils"
+      ],
+      "title": "Badge Square",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "Bar Chart component",
+      "name": "bar-chart",
+      "registryDependencies": [
+        "box",
+        "text",
+        "utils"
+      ],
+      "title": "Bar Chart",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
       "description": "Two sides of the same points: how it was and how it is, as two cards or as rows.",
       "name": "before-after",
       "registryDependencies": [
         "card",
+        "card-content",
+        "empty-state",
         "grid",
         "group",
         "list",
+        "list-item",
         "lucide-icon",
         "section-frame",
         "stack",
@@ -190,6 +333,8 @@
       "name": "bento-grid",
       "registryDependencies": [
         "card",
+        "card-content",
+        "empty-state",
         "grid",
         "lucide-icon",
         "media-frame",
@@ -203,19 +348,167 @@
     },
     {
       "dependencies": [],
+      "description": "Block primitive",
+      "name": "block",
+      "registryDependencies": [
+        "kit-box",
+        "recipes",
+        "utils"
+      ],
+      "title": "Block",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
       "description": "An app-style tab bar for a phone: an icon over a name, the current tab marked.",
       "name": "bottom-nav",
       "registryDependencies": [
         "block",
         "inline",
-        "link",
         "list",
+        "list-item",
         "lucide-icon",
+        "menu-entry",
         "nav-bar",
         "utils"
       ],
       "title": "Bottom Nav",
       "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "Box primitive",
+      "name": "box",
+      "registryDependencies": [
+        "kit-box",
+        "recipes",
+        "utils"
+      ],
+      "title": "Box",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "Breadcrumb primitive",
+      "name": "breadcrumb",
+      "registryDependencies": [
+        "kit-box",
+        "kit-link",
+        "kit-text",
+        "utils"
+      ],
+      "title": "Breadcrumb",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "Bulk Bar component",
+      "name": "bulk-bar",
+      "registryDependencies": [
+        "box",
+        "button",
+        "inline",
+        "lucide-icon",
+        "utils"
+      ],
+      "title": "Bulk Bar",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "Button primitive",
+      "name": "button",
+      "registryDependencies": [
+        "kit-button",
+        "recipes",
+        "utils"
+      ],
+      "title": "Button",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "Button Plain primitive",
+      "name": "button-plain",
+      "registryDependencies": [
+        "kit-button",
+        "recipes",
+        "utils"
+      ],
+      "title": "Button Plain",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "Card primitive",
+      "name": "card",
+      "registryDependencies": [
+        "kit-box",
+        "recipes",
+        "utils"
+      ],
+      "title": "Card",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "Card Content primitive",
+      "name": "card-content",
+      "registryDependencies": [
+        "kit-box",
+        "recipes",
+        "utils"
+      ],
+      "title": "Card Content",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "Card Description primitive",
+      "name": "card-description",
+      "registryDependencies": [
+        "kit-text",
+        "recipes",
+        "utils"
+      ],
+      "title": "Card Description",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "Card Footer primitive",
+      "name": "card-footer",
+      "registryDependencies": [
+        "kit-box",
+        "recipes",
+        "utils"
+      ],
+      "title": "Card Footer",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "Card Header primitive",
+      "name": "card-header",
+      "registryDependencies": [
+        "kit-box",
+        "recipes",
+        "utils"
+      ],
+      "title": "Card Header",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "Card Title primitive",
+      "name": "card-title",
+      "registryDependencies": [
+        "kit-text",
+        "recipes",
+        "utils"
+      ],
+      "title": "Card Title",
+      "type": "registry:ui"
     },
     {
       "dependencies": [],
@@ -228,11 +521,10 @@
         "cart-list",
         "container",
         "drawer-lines",
+        "empty-state",
         "group",
         "lucide-icon",
         "order-summary",
-        "stack",
-        "text",
         "title",
         "utils"
       ],
@@ -246,7 +538,9 @@
       "registryDependencies": [
         "button",
         "card",
+        "card-content",
         "cart-table",
+        "empty-state",
         "lucide-icon",
         "media-frame",
         "number-field",
@@ -260,6 +554,57 @@
     },
     {
       "dependencies": [],
+      "description": "Cart Summary Card component",
+      "name": "cart-summary-card",
+      "registryDependencies": [
+        "badge",
+        "button",
+        "cart-list",
+        "group",
+        "inline",
+        "input",
+        "list",
+        "list-item",
+        "media-frame",
+        "order-summary",
+        "progress",
+        "stack",
+        "text",
+        "title",
+        "utils"
+      ],
+      "title": "Cart Summary Card",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "Cart Table component",
+      "name": "cart-table",
+      "registryDependencies": [
+        "box",
+        "button",
+        "cart-list",
+        "group",
+        "inline",
+        "lucide-icon",
+        "media-frame",
+        "number-field",
+        "stack",
+        "table",
+        "table-body",
+        "table-caption",
+        "table-cell",
+        "table-head",
+        "table-head-cell",
+        "table-row",
+        "text",
+        "utils"
+      ],
+      "title": "Cart Table",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
       "description": "Categories as chips, a bar, a side list, tiles, or chips under a toolbar.",
       "name": "category-nav",
       "registryDependencies": [
@@ -267,11 +612,13 @@
         "container",
         "group",
         "inline",
-        "link",
         "list",
+        "list-item",
         "lucide-icon",
+        "menu-entry",
         "search-field",
         "select",
+        "select-option",
         "text",
         "utils"
       ],
@@ -286,6 +633,7 @@
         "bar-chart",
         "block",
         "container",
+        "empty-state",
         "meter-row",
         "panel",
         "stack",
@@ -296,16 +644,31 @@
     },
     {
       "dependencies": [],
+      "description": "Checkbox primitive",
+      "name": "checkbox",
+      "registryDependencies": [
+        "kit-checkbox",
+        "recipes",
+        "utils"
+      ],
+      "title": "Checkbox",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
       "description": "Tasks to finish after sign-up, with progress.",
       "name": "checklist",
       "registryDependencies": [
         "disclosure",
-        "form",
-        "iconbadge",
+        "empty-state",
+        "icon-badge",
         "list",
+        "list-item",
         "lucide-icon",
+        "progress",
         "section-frame",
         "stack",
+        "summary",
         "text",
         "utils"
       ],
@@ -338,17 +701,160 @@
     },
     {
       "dependencies": [],
+      "description": "Checkout Step component",
+      "name": "checkout-step",
+      "registryDependencies": [
+        "box",
+        "group",
+        "stack",
+        "text",
+        "title",
+        "utils"
+      ],
+      "title": "Checkout Step",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "Checkout Submit component",
+      "name": "checkout-submit",
+      "registryDependencies": [
+        "button",
+        "checkbox",
+        "group",
+        "label",
+        "stack",
+        "text",
+        "utils"
+      ],
+      "title": "Checkout Submit",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "Code Window component",
+      "name": "code-window",
+      "registryDependencies": [
+        "box",
+        "inline",
+        "list",
+        "list-item",
+        "text",
+        "utils"
+      ],
+      "title": "Code Window",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "Compare Mark component",
+      "name": "compare-mark",
+      "registryDependencies": [
+        "inline",
+        "lucide-icon",
+        "utils"
+      ],
+      "title": "Compare Mark",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
       "description": "Plans, or a product and its rivals, in columns, and the features in rows; yes and no as marks.",
       "name": "comparison-table",
       "registryDependencies": [
         "box",
         "compare-mark",
+        "empty-state",
         "section-frame",
         "table",
+        "table-body",
+        "table-caption",
+        "table-cell",
+        "table-head",
+        "table-head-cell",
+        "table-row",
         "utils"
       ],
       "title": "Comparison Table",
       "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "Barrel of the composed primitives (compose/index), imported by components and blocks",
+      "name": "compose",
+      "registryDependencies": [
+        "alert",
+        "badge",
+        "block",
+        "box",
+        "breadcrumb",
+        "button",
+        "button-plain",
+        "card",
+        "card-content",
+        "card-description",
+        "card-footer",
+        "card-header",
+        "card-title",
+        "checkbox",
+        "container",
+        "dialog",
+        "disclosure",
+        "fieldset",
+        "form",
+        "form-description",
+        "form-item",
+        "form-message",
+        "grid",
+        "grid-col",
+        "group",
+        "icon",
+        "icon-badge",
+        "image",
+        "inline",
+        "input",
+        "label",
+        "legend",
+        "link",
+        "link-plain",
+        "list",
+        "list-item",
+        "lucide-icon",
+        "meter",
+        "opt-group",
+        "progress",
+        "prose",
+        "radio",
+        "range",
+        "recipes",
+        "select",
+        "select-option",
+        "separator",
+        "sheet",
+        "sheet-close",
+        "sheet-trigger",
+        "skeleton",
+        "stack",
+        "summary",
+        "switch",
+        "table",
+        "table-body",
+        "table-caption",
+        "table-cell",
+        "table-col",
+        "table-col-group",
+        "table-foot",
+        "table-head",
+        "table-head-cell",
+        "table-row",
+        "text",
+        "textarea",
+        "theme-toggle",
+        "title",
+        "utils"
+      ],
+      "title": "Compose",
+      "type": "registry:ui"
     },
     {
       "dependencies": [],
@@ -373,6 +879,18 @@
       ],
       "title": "Contact Form",
       "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "Container primitive",
+      "name": "container",
+      "registryDependencies": [
+        "kit-box",
+        "recipes",
+        "utils"
+      ],
+      "title": "Container",
+      "type": "registry:ui"
     },
     {
       "dependencies": [],
@@ -402,6 +920,8 @@
         "box",
         "button",
         "card",
+        "card-content",
+        "empty-state",
         "grid",
         "section-frame",
         "stack",
@@ -414,11 +934,28 @@
     },
     {
       "dependencies": [],
+      "description": "Cta Actions component",
+      "name": "cta-actions",
+      "registryDependencies": [
+        "action-group",
+        "button",
+        "form",
+        "group",
+        "input",
+        "label",
+        "utils"
+      ],
+      "title": "Cta Actions",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
       "description": "A closing call to action.",
       "name": "cta-band",
       "registryDependencies": [
         "block",
         "card",
+        "card-content",
         "container",
         "cta-actions",
         "cta-banner",
@@ -468,6 +1005,24 @@
       ],
       "title": "Cta Proof",
       "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "Cta Proof Items component",
+      "name": "cta-proof-items",
+      "registryDependencies": [
+        "box",
+        "cta-proof",
+        "group",
+        "list",
+        "list-item",
+        "lucide-icon",
+        "stack",
+        "text",
+        "utils"
+      ],
+      "title": "Cta Proof Items",
+      "type": "registry:component"
     },
     {
       "dependencies": [],
@@ -530,1605 +1085,27 @@
     },
     {
       "dependencies": [],
-      "description": "A list with nothing in it, with an optional action.",
-      "name": "empty-panel",
+      "description": "Dialog primitive",
+      "name": "dialog",
       "registryDependencies": [
-        "block",
-        "button",
-        "container",
-        "empty-state",
-        "media-frame",
-        "stack",
-        "text",
-        "title",
+        "kit-dialog",
+        "recipes",
         "utils"
       ],
-      "title": "Empty Panel",
-      "type": "registry:block"
+      "title": "Dialog",
+      "type": "registry:ui"
     },
     {
       "dependencies": [],
-      "description": "A page for something that went wrong, such as a missing page: a code, a heading, a sentence and the way back.",
-      "name": "error-page",
+      "description": "Disclosure primitive",
+      "name": "disclosure",
       "registryDependencies": [
-        "action-group",
-        "media-frame",
-        "section-frame",
-        "text",
+        "kit-disclosure",
+        "recipes",
         "utils"
       ],
-      "title": "Error Page",
-      "type": "registry:block"
-    },
-    {
-      "dependencies": [],
-      "description": "Questions as native disclosures.",
-      "name": "faq-list",
-      "registryDependencies": [
-        "box",
-        "disclosure",
-        "grid",
-        "search-field",
-        "section-frame",
-        "stack",
-        "switcher",
-        "switcher-item",
-        "text",
-        "utils"
-      ],
-      "title": "Faq List",
-      "type": "registry:block"
-    },
-    {
-      "dependencies": [],
-      "description": "Questions beside the heading, a help card, a picture or a finder, or as cards in three or four columns.",
-      "name": "faq-split",
-      "registryDependencies": [
-        "box",
-        "button",
-        "faq-cards",
-        "faq-disclosures",
-        "faq-finder",
-        "faq-help",
-        "faq-list",
-        "feature-grid",
-        "media-frame",
-        "section-frame",
-        "utils"
-      ],
-      "title": "Faq Split",
-      "type": "registry:block"
-    },
-    {
-      "dependencies": [],
-      "description": "Features as a list of disclosures, the first one open, with an optional picture.",
-      "name": "feature-accordion",
-      "registryDependencies": [
-        "disclosure",
-        "feature-grid",
-        "inline",
-        "lucide-icon",
-        "media-frame",
-        "section-frame",
-        "stack",
-        "text",
-        "utils"
-      ],
-      "title": "Feature Accordion",
-      "type": "registry:block"
-    },
-    {
-      "dependencies": [],
-      "description": "Features as cards, tiles or rows with a picture.",
-      "name": "feature-grid",
-      "registryDependencies": [
-        "feature-cards",
-        "feature-rows",
-        "group",
-        "link",
-        "presets",
-        "section-frame",
-        "title",
-        "utils"
-      ],
-      "title": "Feature Grid",
-      "type": "registry:block"
-    },
-    {
-      "dependencies": [],
-      "description": "Cards with a picture on top and a read link, or with a muted glyph panel on top like an index of categories, in three or four columns.",
-      "name": "feature-showcase",
-      "registryDependencies": [
-        "box",
-        "card",
-        "feature-grid",
-        "link",
-        "lucide-icon",
-        "media-frame",
-        "section-frame",
-        "text",
-        "title",
-        "utils"
-      ],
-      "title": "Feature Showcase",
-      "type": "registry:block"
-    },
-    {
-      "dependencies": [],
-      "description": "Features beside a picture: plain in two columns, as cards with actions, two figures over checked rows, or four metric cards with actions.",
-      "name": "feature-split",
-      "registryDependencies": [
-        "action-group",
-        "error-page",
-        "feature-cards",
-        "feature-grid",
-        "feature-metric-cards",
-        "feature-pairs",
-        "feature-stat-rows",
-        "media-frame",
-        "section-frame",
-        "stats-band",
-        "utils"
-      ],
-      "title": "Feature Split",
-      "type": "registry:block"
-    },
-    {
-      "dependencies": [],
-      "description": "A picture that stays in view beside a list of features. Following the section being read is a port contract (ScrollSpy).",
-      "name": "feature-sticky",
-      "registryDependencies": [
-        "box",
-        "feature-grid",
-        "grid",
-        "lucide-icon",
-        "media-frame",
-        "section-frame",
-        "stack",
-        "text",
-        "title",
-        "utils"
-      ],
-      "title": "Feature Sticky",
-      "type": "registry:block"
-    },
-    {
-      "dependencies": [],
-      "description": "Features as tabs; the chosen one fills the panel beside or below the tab list.",
-      "name": "feature-tabs",
-      "registryDependencies": [
-        "feature-grid",
-        "grid",
-        "lucide-icon",
-        "media-frame",
-        "section-frame",
-        "stack",
-        "switcher",
-        "switcher-item",
-        "text",
-        "title",
-        "utils"
-      ],
-      "title": "Feature Tabs",
-      "type": "registry:block"
-    },
-    {
-      "dependencies": [],
-      "description": "The brand with figures and a sitemap link over link-group cards; or a split beside a picture with points, link columns, a newsletter card, the contacts or the community channels.",
-      "name": "footer-split",
-      "registryDependencies": [
-        "action-group",
-        "block",
-        "box",
-        "container",
-        "feature-grid",
-        "footer-brand",
-        "footer-channels",
-        "footer-contacts",
-        "footer-figures",
-        "footer-group-cards",
-        "footer-link-columns",
-        "footer-points",
-        "footer-signup-card",
-        "group",
-        "link",
-        "lucide-icon",
-        "media-frame",
-        "mega-menu",
-        "stack",
-        "stats-band",
-        "text",
-        "utils"
-      ],
-      "title": "Footer Split",
-      "type": "registry:block"
-    },
-    {
-      "dependencies": [],
-      "description": "Heading, lead, one or two actions and optional media.",
-      "name": "hero-classic",
-      "registryDependencies": [
-        "action-group",
-        "backdrop",
-        "box",
-        "button",
-        "code-window",
-        "cta-actions",
-        "grid",
-        "group",
-        "input",
-        "label",
-        "media-frame",
-        "section-frame",
-        "topic-chips",
-        "utils"
-      ],
-      "title": "Hero Classic",
-      "type": "registry:block"
-    },
-    {
-      "dependencies": [],
-      "description": "Heading, lead, one or two actions and optional media.",
-      "name": "hero-prompt",
-      "registryDependencies": [
-        "action-group",
-        "block",
-        "container",
-        "cta-actions",
-        "hero-badge",
-        "hero-head",
-        "nav-bar",
-        "presets",
-        "prompt-composer",
-        "stack",
-        "topic-chips",
-        "utils",
-        "weighted-title"
-      ],
-      "title": "Hero Prompt",
-      "type": "registry:block"
-    },
-    {
-      "dependencies": [],
-      "description": "A split hero with figures, faces, small cards or a quote under the lead, beside a picture, a floating card, a picture grid or plan cards.",
-      "name": "hero-split",
-      "registryDependencies": [
-        "action-group",
-        "error-page",
-        "feature-grid",
-        "hero-split-extras",
-        "hero-split-media",
-        "pricing-card",
-        "section-frame",
-        "stats-band",
-        "store-hero",
-        "testimonial-grid",
-        "utils"
-      ],
-      "title": "Hero Split",
-      "type": "registry:block"
-    },
-    {
-      "dependencies": [],
-      "description": "Many small features as icons with a name: tiles or chips in three to six columns.",
-      "name": "icon-wall",
-      "registryDependencies": [
-        "box",
-        "feature-grid",
-        "grid",
-        "lucide-icon",
-        "section-frame",
-        "text",
-        "utils"
-      ],
-      "title": "Icon Wall",
-      "type": "registry:block"
-    },
-    {
-      "dependencies": [],
-      "description": "Open jobs as cards, grouped by department, or as a table.",
-      "name": "job-board",
-      "registryDependencies": [
-        "badge",
-        "group",
-        "job-cards",
-        "link",
-        "list",
-        "section-frame",
-        "stack",
-        "text",
-        "title",
-        "utils"
-      ],
-      "title": "Job Board",
-      "type": "registry:block"
-    },
-    {
-      "dependencies": [],
-      "description": "Work items in lanes with a count; cards with a tag and a person. Moving cards is a port contract (SortableList).",
-      "name": "kanban-board",
-      "registryDependencies": [
-        "grid",
-        "group",
-        "list",
-        "pill",
-        "section-frame",
-        "stack",
-        "text",
-        "title",
-        "utils"
-      ],
-      "title": "Kanban Board",
-      "type": "registry:block"
-    },
-    {
-      "dependencies": [],
-      "description": "Customers and partners as glyphs with names.",
-      "name": "logo-cloud",
-      "registryDependencies": [
-        "grid",
-        "group",
-        "logo-ribbon",
-        "lucide-icon",
-        "section-frame",
-        "text",
-        "utils"
-      ],
-      "title": "Logo Cloud",
-      "type": "registry:block"
-    },
-    {
-      "dependencies": [],
-      "description": "Logo Ribbon block",
-      "name": "logo-ribbon",
-      "registryDependencies": [
-        "group",
-        "logo-cloud",
-        "logo-slot",
-        "presets",
-        "section-frame",
-        "stack",
-        "title",
-        "utils"
-      ],
-      "title": "Logo Ribbon",
-      "type": "registry:block"
-    },
-    {
-      "dependencies": [],
-      "description": "Four figures, figures with a featured review, numbered steps, the latest posts, topic rows, or contact buttons with support figures, beside a picture.",
-      "name": "media-list",
-      "registryDependencies": [
-        "action-group",
-        "category-nav",
-        "error-page",
-        "feature-grid",
-        "media-contacts",
-        "media-figures",
-        "media-frame",
-        "media-posts",
-        "media-review",
-        "media-steps",
-        "media-topics",
-        "post-card",
-        "review-list",
-        "section-frame",
-        "stats-band",
-        "steps-list",
-        "utils"
-      ],
-      "title": "Media List",
-      "type": "registry:block"
-    },
-    {
-      "dependencies": [],
-      "description": "A top bar whose first item opens a wide panel of link groups, with an optional promo card.",
-      "name": "mega-menu",
-      "registryDependencies": [
-        "block",
-        "box",
-        "button-plain",
-        "container",
-        "grid",
-        "group",
-        "link",
-        "list",
-        "lucide-icon",
-        "media-frame",
-        "nav-bar",
-        "nav-block",
-        "stack",
-        "text",
-        "utils"
-      ],
-      "title": "Mega Menu",
-      "type": "registry:block"
-    },
-    {
-      "dependencies": [],
-      "description": "Key counters of a dashboard.",
-      "name": "metric-row",
-      "registryDependencies": [
-        "box",
-        "grid",
-        "group",
-        "lucide-icon",
-        "section-frame",
-        "stack",
-        "stat-tile",
-        "text",
-        "utils"
-      ],
-      "title": "Metric Row",
-      "type": "registry:block"
-    },
-    {
-      "dependencies": [],
-      "description": "Milestones on a vertical line beside a picture, in a narrow column, or in a row.",
-      "name": "milestone-timeline",
-      "registryDependencies": [
-        "badge",
-        "group",
-        "inline",
-        "list",
-        "media-frame",
-        "section-frame",
-        "text",
-        "title",
-        "utils"
-      ],
-      "title": "Milestone Timeline",
-      "type": "registry:block"
-    },
-    {
-      "dependencies": [],
-      "description": "A top bar in four shapes: inline, split around the brand, with a search field, and transparent over a picture.",
-      "name": "nav-bar",
-      "registryDependencies": [
-        "block",
-        "box",
-        "container",
-        "grid",
-        "group",
-        "link",
-        "link-plain",
-        "nav-actions",
-        "nav-block",
-        "nav-links",
-        "over-media",
-        "search-palette",
-        "utils"
-      ],
-      "title": "Nav Bar",
-      "type": "registry:block"
-    },
-    {
-      "dependencies": [],
-      "description": "An email field and a button, inline, stacked or beside a picture.",
-      "name": "newsletter-form",
-      "registryDependencies": [
-        "button",
-        "form",
-        "group",
-        "input",
-        "label",
-        "media-frame",
-        "section-frame",
-        "text",
-        "utils"
-      ],
-      "title": "Newsletter Form",
-      "type": "registry:block"
-    },
-    {
-      "dependencies": [],
-      "description": "Subtotal, shipping, tax and the total.",
-      "name": "order-summary",
-      "registryDependencies": [
-        "box",
-        "button",
-        "inline",
-        "list",
-        "section-frame",
-        "stack",
-        "text",
-        "utils"
-      ],
-      "title": "Order Summary",
-      "type": "registry:block"
-    },
-    {
-      "dependencies": [],
-      "description": "Past orders with status.",
-      "name": "order-table",
-      "registryDependencies": [
-        "card",
-        "order-rows",
-        "pager",
-        "pill",
-        "section-frame",
-        "stack",
-        "text",
-        "utils"
-      ],
-      "title": "Order Table",
-      "type": "registry:block"
-    },
-    {
-      "dependencies": [],
-      "description": "The head of an inner page: the heading, one sentence and an optional action.",
-      "name": "page-intro",
-      "registryDependencies": [
-        "action-group",
-        "section-frame",
-        "utils"
-      ],
-      "title": "Page Intro",
-      "type": "registry:block"
-    },
-    {
-      "dependencies": [],
-      "description": "Breadcrumbs over the badge, the heading and the lead; with one large figure, a note card or four key facts at the end.",
-      "name": "page-trail",
-      "registryDependencies": [
-        "block",
-        "box",
-        "container",
-        "nav-bar",
-        "page-aside",
-        "page-crumbs",
-        "section-header",
-        "stack",
-        "stats-band",
-        "utils"
-      ],
-      "title": "Page Trail",
-      "type": "registry:block"
-    },
-    {
-      "dependencies": [],
-      "description": "Photos in a grid, a masonry, a mosaic, a featured picture with thumbnails, or cards.",
-      "name": "photo-gallery",
-      "registryDependencies": [
-        "badge",
-        "box",
-        "button",
-        "figure-block",
-        "group",
-        "lucide-icon",
-        "media-frame",
-        "section-frame",
-        "stack",
-        "text",
-        "utils"
-      ],
-      "title": "Photo Gallery",
-      "type": "registry:block"
-    },
-    {
-      "dependencies": [],
-      "description": "Post Card block",
-      "name": "post-card",
-      "registryDependencies": [
-        "block",
-        "box",
-        "card",
-        "group",
-        "link",
-        "lucide-icon",
-        "media-frame",
-        "presets",
-        "text",
-        "title",
-        "utils"
-      ],
-      "title": "Post Card",
-      "type": "registry:block"
-    },
-    {
-      "dependencies": [],
-      "description": "Posts as a grid, a list or a magazine.",
-      "name": "post-grid",
-      "registryDependencies": [
-        "grid",
-        "post-card",
-        "section-frame",
-        "stack",
-        "switcher",
-        "switcher-item",
-        "utils"
-      ],
-      "title": "Post Grid",
-      "type": "registry:block"
-    },
-    {
-      "dependencies": [],
-      "description": "Category, title, excerpt, author line and a wide cover.",
-      "name": "post-header",
-      "registryDependencies": [
-        "group",
-        "media-frame",
-        "pill",
-        "post-card",
-        "section-frame",
-        "text",
-        "utils"
-      ],
-      "title": "Post Header",
-      "type": "registry:block"
-    },
-    {
-      "dependencies": [],
-      "description": "Four small post cards beside an intro with a view-all link; the first post in detail beside its picture; or cards with the text on a panel over the picture, in two or three columns.",
-      "name": "post-showcase",
-      "registryDependencies": [
-        "box",
-        "link",
-        "lucide-icon",
-        "media-frame",
-        "post-card",
-        "post-feature",
-        "post-mini-card",
-        "post-overlay-card",
-        "section-frame",
-        "utils"
-      ],
-      "title": "Post Showcase",
-      "type": "registry:block"
-    },
-    {
-      "dependencies": [],
-      "description": "Tags, reading figures and an author card with share and save over a wide cover; the author, figures, tags and actions beside the cover; or the facts and related reading beside it.",
-      "name": "post-split",
-      "registryDependencies": [
-        "media-frame",
-        "nav-bar",
-        "post-actions",
-        "post-author",
-        "post-card",
-        "post-outline",
-        "post-stats",
-        "post-tags",
-        "section-frame",
-        "utils"
-      ],
-      "title": "Post Split",
-      "type": "registry:block"
-    },
-    {
-      "dependencies": [],
-      "description": "One plan as a card.",
-      "name": "pricing-card",
-      "registryDependencies": [
-        "badge",
-        "block",
-        "box",
-        "button",
-        "card",
-        "group",
-        "list",
-        "text",
-        "title",
-        "utils"
-      ],
-      "title": "Pricing Card",
-      "type": "registry:block"
-    },
-    {
-      "dependencies": [],
-      "description": "Plans as a grid or a stack of cards.",
-      "name": "pricing-tiers",
-      "registryDependencies": [
-        "badge",
-        "grid",
-        "group",
-        "pricing-card",
-        "section-frame",
-        "switcher",
-        "switcher-item",
-        "utils"
-      ],
-      "title": "Pricing Tiers",
-      "type": "registry:block"
-    },
-    {
-      "dependencies": [],
-      "description": "Product Card block",
-      "name": "product-card",
-      "registryDependencies": [
-        "badge",
-        "block",
-        "box",
-        "button",
-        "card",
-        "group",
-        "media-frame",
-        "rating",
-        "text",
-        "title",
-        "utils"
-      ],
-      "title": "Product Card",
-      "type": "registry:block"
-    },
-    {
-      "dependencies": [],
-      "description": "The gallery and the buy box of one product.",
-      "name": "product-detail",
-      "registryDependencies": [
-        "badge",
-        "button",
-        "grid",
-        "group",
-        "inline",
-        "list",
-        "lucide-icon",
-        "media-frame",
-        "number-field",
-        "product-card",
-        "rating",
-        "section-frame",
-        "stack",
-        "text",
-        "utils"
-      ],
-      "title": "Product Detail",
-      "type": "registry:block"
-    },
-    {
-      "dependencies": [],
-      "description": "Products as cards in a grid, a list or a rail that scrolls sideways.",
-      "name": "product-grid",
-      "registryDependencies": [
-        "box",
-        "grid",
-        "product-card",
-        "section-frame",
-        "utils"
-      ],
-      "title": "Product Grid",
-      "type": "registry:block"
-    },
-    {
-      "dependencies": [],
-      "description": "Texts in an accordion beside a card of specs.",
-      "name": "product-info",
-      "registryDependencies": [
-        "box",
-        "disclosure",
-        "inline",
-        "list",
-        "section-frame",
-        "stack",
-        "text",
-        "title",
-        "utils"
-      ],
-      "title": "Product Info",
-      "type": "registry:block"
-    },
-    {
-      "dependencies": [],
-      "description": "Account settings: picture, name, email, bio and notifications.",
-      "name": "profile-form",
-      "registryDependencies": [
-        "block",
-        "button",
-        "container",
-        "field",
-        "form",
-        "grid",
-        "group",
-        "input",
-        "label",
-        "media-frame",
-        "panel",
-        "stack",
-        "switch",
-        "textarea",
-        "title",
-        "utils"
-      ],
-      "title": "Profile Form",
-      "type": "registry:block"
-    },
-    {
-      "dependencies": [],
-      "description": "Projects as cards, a compact grid, captions over pictures, a bento or a list beside a collage.",
-      "name": "project-grid",
-      "registryDependencies": [
-        "box",
-        "group",
-        "media-frame",
-        "project-tiles",
-        "section-frame",
-        "stack",
-        "text",
-        "utils"
-      ],
-      "title": "Project Grid",
-      "type": "registry:block"
-    },
-    {
-      "dependencies": [],
-      "description": "A bar of customer logos and a row of key figures together.",
-      "name": "proof-band",
-      "registryDependencies": [
-        "grid",
-        "group",
-        "logo-cloud",
-        "lucide-icon",
-        "section-frame",
-        "stack",
-        "stats-band",
-        "text",
-        "utils"
-      ],
-      "title": "Proof Band",
-      "type": "registry:block"
-    },
-    {
-      "dependencies": [],
-      "description": "One quote beside a picture, a rating panel or over logo tiles; stacked quotes beside a picture; four compact quotes; figures over a featured quote and a stack.",
-      "name": "quote-split",
-      "registryDependencies": [
-        "action-group",
-        "box",
-        "error-page",
-        "logo-cloud",
-        "media-frame",
-        "quote-figures",
-        "quote-logo-tiles",
-        "quote-rating-panel",
-        "quote-slot",
-        "section-frame",
-        "stack",
-        "stats-band",
-        "testimonial-grid",
-        "utils"
-      ],
-      "title": "Quote Split",
-      "type": "registry:block"
-    },
-    {
-      "dependencies": [],
-      "description": "Customer reviews with ratings.",
-      "name": "review-list",
-      "registryDependencies": [
-        "article-block",
-        "grid",
-        "group",
-        "media-frame",
-        "rating",
-        "section-frame",
-        "stack",
-        "text",
-        "title",
-        "utils"
-      ],
-      "title": "Review List",
-      "type": "registry:block"
-    },
-    {
-      "dependencies": [],
-      "description": "The cart lines beside a summary with a promo code and a free-delivery bar.",
-      "name": "shopping-cart",
-      "registryDependencies": [
-        "box",
-        "button",
-        "cart-list",
-        "cart-summary-card",
-        "group",
-        "lucide-icon",
-        "media-frame",
-        "number-field",
-        "order-summary",
-        "section-frame",
-        "stack",
-        "text",
-        "utils"
-      ],
-      "title": "Shopping Cart",
-      "type": "registry:block"
-    },
-    {
-      "dependencies": [],
-      "description": "A vertical navigation with the brand on top and the user at the bottom: full, or icons only.",
-      "name": "sidebar-nav",
-      "registryDependencies": [
-        "block",
-        "group",
-        "inline",
-        "link",
-        "list",
-        "lucide-icon",
-        "media-frame",
-        "nav-bar",
-        "nav-block",
-        "stack",
-        "text",
-        "utils"
-      ],
-      "title": "Sidebar Nav",
-      "type": "registry:block"
-    },
-    {
-      "dependencies": [],
-      "description": "A sign-up in steps with a progress bar or a list of steps; back and next move between them.",
-      "name": "signup-wizard",
-      "registryDependencies": [
-        "block",
-        "box",
-        "button",
-        "field",
-        "form",
-        "group",
-        "input",
-        "list",
-        "lucide-icon",
-        "stack",
-        "text",
-        "title",
-        "utils"
-      ],
-      "title": "Signup Wizard",
-      "type": "registry:block"
-    },
-    {
-      "dependencies": [],
-      "description": "Copyright and links.",
-      "name": "site-footer",
-      "registryDependencies": [
-        "block",
-        "container",
-        "group",
-        "link",
-        "nav-block",
-        "text",
-        "utils"
-      ],
-      "title": "Site Footer",
-      "type": "registry:block"
-    },
-    {
-      "dependencies": [],
-      "description": "Skip link, brand, navigation, theme button and an optional call to action.",
-      "name": "site-header",
-      "registryDependencies": [
-        "block",
-        "button",
-        "container",
-        "group",
-        "link",
-        "link-plain",
-        "nav-block",
-        "utils"
-      ],
-      "title": "Site Header",
-      "type": "registry:block"
-    },
-    {
-      "dependencies": [],
-      "description": "A footer with the brand, groups of links and the copyright; a single row, a sign-up first or a status pill.",
-      "name": "sitemap-footer",
-      "registryDependencies": [
-        "block",
-        "box",
-        "button",
-        "container",
-        "footer-card",
-        "footer-columns",
-        "form",
-        "group",
-        "input",
-        "label",
-        "link",
-        "mega-menu",
-        "nav-block",
-        "pill",
-        "stack",
-        "text",
-        "title",
-        "utils"
-      ],
-      "title": "Sitemap Footer",
-      "type": "registry:block"
-    },
-    {
-      "dependencies": [],
-      "description": "Grey blocks in the shape of what is coming: cards, a list or an article.",
-      "name": "skeleton-layout",
-      "registryDependencies": [
-        "block",
-        "grid",
-        "group",
-        "section-frame",
-        "skeleton",
-        "stack",
-        "utils"
-      ],
-      "title": "Skeleton Layout",
-      "type": "registry:block"
-    },
-    {
-      "dependencies": [],
-      "description": "Days with their delivery windows as radio chips, beside the zone card.",
-      "name": "slot-board",
-      "registryDependencies": [
-        "box",
-        "button",
-        "field",
-        "inline",
-        "list",
-        "section-frame",
-        "select",
-        "slot-grid",
-        "stack",
-        "text",
-        "utils",
-        "zone-table"
-      ],
-      "title": "Slot Board",
-      "type": "registry:block"
-    },
-    {
-      "dependencies": [],
-      "description": "Key numbers as figures, cards or figures with icons.",
-      "name": "stats-band",
-      "registryDependencies": [
-        "backdrop",
-        "grid",
-        "presets",
-        "section-frame",
-        "stat-figure",
-        "utils"
-      ],
-      "title": "Stats Band",
-      "type": "registry:block"
-    },
-    {
-      "dependencies": [],
-      "description": "A multi-step form header with the current step.",
-      "name": "stepper",
-      "registryDependencies": [
-        "button",
-        "group",
-        "iconbadge",
-        "inline",
-        "list",
-        "lucide-icon",
-        "section-frame",
-        "stack",
-        "steps-list",
-        "text",
-        "title",
-        "utils"
-      ],
-      "title": "Stepper",
-      "type": "registry:block"
-    },
-    {
-      "dependencies": [],
-      "description": "Numbered or icon steps in a row or a column.",
-      "name": "steps-list",
-      "registryDependencies": [
-        "iconbadge",
-        "inline",
-        "list",
-        "lucide-icon",
-        "section-frame",
-        "stack",
-        "text",
-        "title",
-        "utils"
-      ],
-      "title": "Steps List",
-      "type": "registry:block"
-    },
-    {
-      "dependencies": [],
-      "description": "The hero of a store with promises under the actions, beside a picture with an offer card or over a faint picture.",
-      "name": "store-hero",
-      "registryDependencies": [
-        "action-group",
-        "backdrop",
-        "box",
-        "error-page",
-        "feature-grid",
-        "grid",
-        "group",
-        "lucide-icon",
-        "offer-media",
-        "section-frame",
-        "stack",
-        "text",
-        "utils"
-      ],
-      "title": "Store Hero",
-      "type": "registry:block"
-    },
-    {
-      "dependencies": [],
-      "description": "The stores with address, hours, phone and services.",
-      "name": "store-locations",
-      "registryDependencies": [
-        "badge",
-        "box",
-        "group",
-        "inline",
-        "link",
-        "list",
-        "lucide-icon",
-        "media-frame",
-        "section-frame",
-        "stack",
-        "text",
-        "title",
-        "utils"
-      ],
-      "title": "Store Locations",
-      "type": "registry:block"
-    },
-    {
-      "dependencies": [],
-      "description": "Year tabs over the panel of the chosen year, or the heading beside a picture with arrows and one dot per step. Choosing a step is an event.",
-      "name": "story-tabs",
-      "registryDependencies": [
-        "box",
-        "button",
-        "group",
-        "inline",
-        "lucide-icon",
-        "media-frame",
-        "milestone-timeline",
-        "section-frame",
-        "stack",
-        "story-dots",
-        "story-panel",
-        "utils"
-      ],
-      "title": "Story Tabs",
-      "type": "registry:block"
-    },
-    {
-      "dependencies": [],
-      "description": "Ways to get help: email, chat, docs.",
-      "name": "support-channels",
-      "registryDependencies": [
-        "card",
-        "feature-grid",
-        "grid",
-        "link",
-        "lucide-icon",
-        "section-frame",
-        "stack",
-        "text",
-        "title",
-        "utils"
-      ],
-      "title": "Support Channels",
-      "type": "registry:block"
-    },
-    {
-      "dependencies": [],
-      "description": "The people of a team as cards, a minimal grid, detailed cards, rows beside a picture or a directory.",
-      "name": "team-grid",
-      "registryDependencies": [
-        "box",
-        "media-frame",
-        "member-row",
-        "section-frame",
-        "stack",
-        "text",
-        "utils"
-      ],
-      "title": "Team Grid",
-      "type": "registry:block"
-    },
-    {
-      "dependencies": [],
-      "description": "Template gallery: filters, a browse-all button and an 8-card MediaFrame grid.",
-      "name": "template-grid",
-      "registryDependencies": [
-        "box",
-        "button",
-        "grid",
-        "group",
-        "iconbadge",
-        "inline",
-        "lucide-icon",
-        "media-frame",
-        "presets",
-        "section-frame",
-        "stack",
-        "text",
-        "title",
-        "utils"
-      ],
-      "title": "Template Grid",
-      "type": "registry:block"
-    },
-    {
-      "dependencies": [],
-      "description": "Customer quotes as cards or plain figures.",
-      "name": "testimonial-grid",
-      "registryDependencies": [
-        "block",
-        "grid",
-        "quote-card",
-        "section-frame",
-        "utils"
-      ],
-      "title": "Testimonial Grid",
-      "type": "registry:block"
-    },
-    {
-      "dependencies": [],
-      "description": "One stop of a product tour: the explained element and a callout with the step, a sentence and buttons. Placing it on the real element is a port contract.",
-      "name": "tour-callout",
-      "registryDependencies": [
-        "block",
-        "button",
-        "group",
-        "section-frame",
-        "stack",
-        "text",
-        "utils"
-      ],
-      "title": "Tour Callout",
-      "type": "registry:block"
-    },
-    {
-      "dependencies": [],
-      "description": "A slider for how much is used and the price it gives. The estimate follows the slider; the page keeps the value.",
-      "name": "usage-calculator",
-      "registryDependencies": [
-        "button",
-        "group",
-        "range",
-        "section-frame",
-        "stack",
-        "text",
-        "utils"
-      ],
-      "title": "Usage Calculator",
-      "type": "registry:block"
-    },
-    {
-      "dependencies": [],
-      "description": "Free delivery, returns, warranty and help in one band.",
-      "name": "usp-strip",
-      "registryDependencies": [
-        "box",
-        "feature-grid",
-        "grid",
-        "inline",
-        "list",
-        "lucide-icon",
-        "section-frame",
-        "stack",
-        "text",
-        "utils"
-      ],
-      "title": "Usp Strip",
-      "type": "registry:block"
-    },
-    {
-      "dependencies": [],
-      "description": "Customer videos as thumbnails with a play button. Playing is a port contract (VideoEmbed).",
-      "name": "video-grid",
-      "registryDependencies": [
-        "box",
-        "button",
-        "figure-block",
-        "grid",
-        "lucide-icon",
-        "media-frame",
-        "section-frame",
-        "testimonial-grid",
-        "text",
-        "utils"
-      ],
-      "title": "Video Grid",
-      "type": "registry:block"
-    },
-    {
-      "dependencies": [],
-      "description": "A dialog with a walkthrough video and an optional list of chapters. Opening and playing are port contracts.",
-      "name": "video-modal",
-      "registryDependencies": [
-        "box",
-        "button",
-        "group",
-        "list",
-        "lucide-icon",
-        "media-frame",
-        "section-frame",
-        "stack",
-        "text",
-        "title",
-        "utils"
-      ],
-      "title": "Video Modal",
-      "type": "registry:block"
-    },
-    {
-      "dependencies": [],
-      "description": "Delivery zones and their prices as a table or as cards.",
-      "name": "zone-table",
-      "registryDependencies": [
-        "badge",
-        "grid",
-        "inline",
-        "list",
-        "section-frame",
-        "stack",
-        "text",
-        "title",
-        "utils",
-        "zone-rows"
-      ],
-      "title": "Zone Table",
-      "type": "registry:block"
-    },
-    {
-      "dependencies": [],
-      "description": "Action Group component",
-      "name": "action-group",
-      "registryDependencies": [
-        "button",
-        "group",
-        "utils"
-      ],
-      "title": "Action Group",
-      "type": "registry:component"
-    },
-    {
-      "dependencies": [],
-      "description": "App Main component",
-      "name": "app-main",
-      "registryDependencies": [
-        "activity-feed",
-        "bar-chart",
-        "box",
-        "chart-panel",
-        "dashboard-overview",
-        "grid",
-        "metric-row",
-        "panel",
-        "stack",
-        "stat-tile",
-        "timeline",
-        "title",
-        "utils"
-      ],
-      "title": "App Main",
-      "type": "registry:component"
-    },
-    {
-      "dependencies": [],
-      "description": "Article Block component",
-      "name": "article-block",
-      "registryDependencies": [
-        "block",
-        "utils"
-      ],
-      "title": "Article Block",
-      "type": "registry:component"
-    },
-    {
-      "dependencies": [],
-      "description": "Auth Form component",
-      "name": "auth-form",
-      "registryDependencies": [
-        "auth-card",
-        "button",
-        "checkbox",
-        "field",
-        "form",
-        "group",
-        "input",
-        "label",
-        "link",
-        "utils"
-      ],
-      "title": "Auth Form",
-      "type": "registry:component"
-    },
-    {
-      "dependencies": [],
-      "description": "Avatar component",
-      "name": "avatar",
-      "registryDependencies": [
-        "image",
-        "inline",
-        "utils"
-      ],
-      "title": "Avatar",
-      "type": "registry:component"
-    },
-    {
-      "dependencies": [],
-      "description": "Backdrop component",
-      "name": "backdrop",
-      "registryDependencies": [
-        "box",
-        "media-frame",
-        "utils"
-      ],
-      "title": "Backdrop",
-      "type": "registry:component"
-    },
-    {
-      "dependencies": [],
-      "description": "Badge Square component",
-      "name": "badge-square",
-      "registryDependencies": [
-        "inline",
-        "utils"
-      ],
-      "title": "Badge Square",
-      "type": "registry:component"
-    },
-    {
-      "dependencies": [],
-      "description": "Bar Chart component",
-      "name": "bar-chart",
-      "registryDependencies": [
-        "box",
-        "text",
-        "utils"
-      ],
-      "title": "Bar Chart",
-      "type": "registry:component"
-    },
-    {
-      "dependencies": [],
-      "description": "Bulk Bar component",
-      "name": "bulk-bar",
-      "registryDependencies": [
-        "box",
-        "button",
-        "inline",
-        "lucide-icon",
-        "utils"
-      ],
-      "title": "Bulk Bar",
-      "type": "registry:component"
-    },
-    {
-      "dependencies": [],
-      "description": "Cart Summary Card component",
-      "name": "cart-summary-card",
-      "registryDependencies": [
-        "badge",
-        "button",
-        "cart-list",
-        "form",
-        "group",
-        "inline",
-        "input",
-        "list",
-        "media-frame",
-        "order-summary",
-        "stack",
-        "text",
-        "title",
-        "utils"
-      ],
-      "title": "Cart Summary Card",
-      "type": "registry:component"
-    },
-    {
-      "dependencies": [],
-      "description": "Cart Table component",
-      "name": "cart-table",
-      "registryDependencies": [
-        "box",
-        "button",
-        "cart-list",
-        "group",
-        "inline",
-        "lucide-icon",
-        "media-frame",
-        "number-field",
-        "stack",
-        "table",
-        "text",
-        "utils"
-      ],
-      "title": "Cart Table",
-      "type": "registry:component"
-    },
-    {
-      "dependencies": [],
-      "description": "Checkout Step component",
-      "name": "checkout-step",
-      "registryDependencies": [
-        "box",
-        "group",
-        "stack",
-        "text",
-        "title",
-        "utils"
-      ],
-      "title": "Checkout Step",
-      "type": "registry:component"
-    },
-    {
-      "dependencies": [],
-      "description": "Checkout Submit component",
-      "name": "checkout-submit",
-      "registryDependencies": [
-        "button",
-        "checkbox",
-        "group",
-        "label",
-        "stack",
-        "text",
-        "utils"
-      ],
-      "title": "Checkout Submit",
-      "type": "registry:component"
-    },
-    {
-      "dependencies": [],
-      "description": "Code Window component",
-      "name": "code-window",
-      "registryDependencies": [
-        "box",
-        "inline",
-        "list",
-        "text",
-        "utils"
-      ],
-      "title": "Code Window",
-      "type": "registry:component"
-    },
-    {
-      "dependencies": [],
-      "description": "Compare Mark component",
-      "name": "compare-mark",
-      "registryDependencies": [
-        "inline",
-        "lucide-icon",
-        "utils"
-      ],
-      "title": "Compare Mark",
-      "type": "registry:component"
-    },
-    {
-      "dependencies": [],
-      "description": "Cta Actions component",
-      "name": "cta-actions",
-      "registryDependencies": [
-        "action-group",
-        "button",
-        "form",
-        "group",
-        "input",
-        "label",
-        "utils"
-      ],
-      "title": "Cta Actions",
-      "type": "registry:component"
-    },
-    {
-      "dependencies": [],
-      "description": "Cta Proof Items component",
-      "name": "cta-proof-items",
-      "registryDependencies": [
-        "box",
-        "cta-proof",
-        "group",
-        "list",
-        "lucide-icon",
-        "stack",
-        "text",
-        "utils"
-      ],
-      "title": "Cta Proof Items",
-      "type": "registry:component"
+      "title": "Disclosure",
+      "type": "registry:ui"
     },
     {
       "dependencies": [],
@@ -2138,13 +1115,14 @@
         "button",
         "cart-drawer",
         "cart-list",
-        "form",
         "group",
         "inline",
         "list",
+        "list-item",
         "media-frame",
         "number-field",
         "order-summary",
+        "progress",
         "stack",
         "text",
         "utils"
@@ -2180,11 +1158,29 @@
     },
     {
       "dependencies": [],
+      "description": "A list with nothing in it, with an optional action.",
+      "name": "empty-panel",
+      "registryDependencies": [
+        "block",
+        "button",
+        "container",
+        "empty-state",
+        "media-frame",
+        "stack",
+        "text",
+        "title",
+        "utils"
+      ],
+      "title": "Empty Panel",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
       "description": "Empty State component",
       "name": "empty-state",
       "registryDependencies": [
         "box",
-        "iconbadge",
+        "icon-badge",
         "lucide-icon",
         "text",
         "utils"
@@ -2194,14 +1190,28 @@
     },
     {
       "dependencies": [],
+      "description": "A page for something that went wrong, such as a missing page: a code, a heading, a sentence and the way back.",
+      "name": "error-page",
+      "registryDependencies": [
+        "action-group",
+        "media-frame",
+        "section-frame",
+        "text",
+        "utils"
+      ],
+      "title": "Error Page",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
       "description": "Faq Cards component",
       "name": "faq-cards",
       "registryDependencies": [
         "article-block",
         "badge",
         "box",
+        "button",
         "faq-split",
-        "link",
         "lucide-icon",
         "stack",
         "text",
@@ -2219,6 +1229,7 @@
         "disclosure",
         "faq-split",
         "stack",
+        "summary",
         "text",
         "utils"
       ],
@@ -2234,8 +1245,9 @@
         "faq-list",
         "faq-split",
         "group",
-        "link",
         "list",
+        "list-item",
+        "menu-entry",
         "search-field",
         "stack",
         "text",
@@ -2251,10 +1263,11 @@
       "registryDependencies": [
         "block",
         "box",
+        "button",
         "faq-split",
         "feature-grid",
-        "link",
         "list",
+        "list-item",
         "lucide-icon",
         "stack",
         "text",
@@ -2265,14 +1278,78 @@
     },
     {
       "dependencies": [],
+      "description": "Questions as native disclosures.",
+      "name": "faq-list",
+      "registryDependencies": [
+        "box",
+        "disclosure",
+        "empty-state",
+        "grid",
+        "search-field",
+        "section-frame",
+        "stack",
+        "summary",
+        "switcher",
+        "switcher-item",
+        "text",
+        "utils"
+      ],
+      "title": "Faq List",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "Questions beside the heading, a help card, a picture or a finder, or as cards in three or four columns.",
+      "name": "faq-split",
+      "registryDependencies": [
+        "box",
+        "button",
+        "faq-cards",
+        "faq-disclosures",
+        "faq-finder",
+        "faq-help",
+        "faq-list",
+        "feature-grid",
+        "media-frame",
+        "section-frame",
+        "utils"
+      ],
+      "title": "Faq Split",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "Features as a list of disclosures, the first one open, with an optional picture.",
+      "name": "feature-accordion",
+      "registryDependencies": [
+        "disclosure",
+        "empty-state",
+        "feature-grid",
+        "inline",
+        "lucide-icon",
+        "media-frame",
+        "section-frame",
+        "stack",
+        "summary",
+        "text",
+        "utils"
+      ],
+      "title": "Feature Accordion",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
       "description": "Feature Cards component",
       "name": "feature-cards",
       "registryDependencies": [
         "card",
+        "card-content",
+        "card-header",
+        "card-title",
         "feature-grid",
         "grid",
         "group",
-        "iconbadge",
+        "icon-badge",
         "lucide-icon",
         "presets",
         "stack",
@@ -2282,6 +1359,24 @@
       ],
       "title": "Feature Cards",
       "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "Features as cards, tiles or rows with a picture.",
+      "name": "feature-grid",
+      "registryDependencies": [
+        "empty-state",
+        "feature-cards",
+        "feature-rows",
+        "group",
+        "link",
+        "presets",
+        "section-frame",
+        "title",
+        "utils"
+      ],
+      "title": "Feature Grid",
+      "type": "registry:block"
     },
     {
       "dependencies": [],
@@ -2338,6 +1433,47 @@
     },
     {
       "dependencies": [],
+      "description": "Cards with a picture on top and a read link, or with a muted glyph panel on top like an index of categories, in three or four columns.",
+      "name": "feature-showcase",
+      "registryDependencies": [
+        "box",
+        "card",
+        "card-content",
+        "empty-state",
+        "feature-grid",
+        "lucide-icon",
+        "media-frame",
+        "menu-entry",
+        "section-frame",
+        "text",
+        "title",
+        "utils"
+      ],
+      "title": "Feature Showcase",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "Features beside a picture: plain in two columns, as cards with actions, two figures over checked rows, or four metric cards with actions.",
+      "name": "feature-split",
+      "registryDependencies": [
+        "action-group",
+        "error-page",
+        "feature-cards",
+        "feature-grid",
+        "feature-metric-cards",
+        "feature-pairs",
+        "feature-stat-rows",
+        "media-frame",
+        "section-frame",
+        "stats-band",
+        "utils"
+      ],
+      "title": "Feature Split",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
       "description": "Feature Stat Rows component",
       "name": "feature-stat-rows",
       "registryDependencies": [
@@ -2357,6 +1493,47 @@
     },
     {
       "dependencies": [],
+      "description": "A picture that stays in view beside a list of features. Following the section being read is a port contract (ScrollSpy).",
+      "name": "feature-sticky",
+      "registryDependencies": [
+        "box",
+        "empty-state",
+        "feature-grid",
+        "grid",
+        "lucide-icon",
+        "media-frame",
+        "section-frame",
+        "stack",
+        "text",
+        "title",
+        "utils"
+      ],
+      "title": "Feature Sticky",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "Features as tabs; the chosen one fills the panel beside or below the tab list.",
+      "name": "feature-tabs",
+      "registryDependencies": [
+        "empty-state",
+        "feature-grid",
+        "grid",
+        "lucide-icon",
+        "media-frame",
+        "section-frame",
+        "stack",
+        "switcher",
+        "switcher-item",
+        "text",
+        "title",
+        "utils"
+      ],
+      "title": "Feature Tabs",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
       "description": "Field component",
       "name": "field",
       "registryDependencies": [
@@ -2367,6 +1544,18 @@
       ],
       "title": "Field",
       "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "Fieldset primitive",
+      "name": "fieldset",
+      "registryDependencies": [
+        "kit-box",
+        "recipes",
+        "utils"
+      ],
+      "title": "Fieldset",
+      "type": "registry:ui"
     },
     {
       "dependencies": [],
@@ -2428,10 +1617,11 @@
         "container",
         "group",
         "inline",
-        "link",
         "list",
+        "list-item",
         "lucide-icon",
         "mega-menu",
+        "menu-entry",
         "nav-block",
         "presets",
         "stack",
@@ -2464,9 +1654,10 @@
       "registryDependencies": [
         "block",
         "grid",
-        "link",
         "list",
+        "list-item",
         "mega-menu",
+        "menu-entry",
         "stack",
         "text",
         "utils"
@@ -2513,10 +1704,11 @@
         "box",
         "group",
         "inline",
-        "link",
         "list",
+        "list-item",
         "lucide-icon",
         "mega-menu",
+        "menu-entry",
         "stack",
         "text",
         "utils"
@@ -2531,9 +1723,10 @@
       "registryDependencies": [
         "block",
         "box",
-        "link",
         "list",
+        "list-item",
         "mega-menu",
+        "menu-entry",
         "stack",
         "text",
         "utils"
@@ -2577,6 +1770,132 @@
     },
     {
       "dependencies": [],
+      "description": "Footer Sitemap component",
+      "name": "footer-sitemap",
+      "registryDependencies": [
+        "link",
+        "lucide-icon",
+        "utils"
+      ],
+      "title": "Footer Sitemap",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "The brand with figures and a sitemap link over link-group cards; or a split beside a picture with points, link columns, a newsletter card, the contacts or the community channels.",
+      "name": "footer-split",
+      "registryDependencies": [
+        "action-group",
+        "block",
+        "box",
+        "container",
+        "feature-grid",
+        "footer-brand",
+        "footer-channels",
+        "footer-contacts",
+        "footer-figures",
+        "footer-group-cards",
+        "footer-link-columns",
+        "footer-points",
+        "footer-signup-card",
+        "footer-sitemap",
+        "group",
+        "media-frame",
+        "mega-menu",
+        "stack",
+        "stats-band",
+        "text",
+        "utils"
+      ],
+      "title": "Footer Split",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "Form primitive",
+      "name": "form",
+      "registryDependencies": [
+        "kit-form",
+        "recipes",
+        "utils"
+      ],
+      "title": "Form",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "Form Description primitive",
+      "name": "form-description",
+      "registryDependencies": [
+        "kit-text",
+        "recipes",
+        "utils"
+      ],
+      "title": "Form Description",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "Form Item primitive",
+      "name": "form-item",
+      "registryDependencies": [
+        "kit-box",
+        "recipes",
+        "utils"
+      ],
+      "title": "Form Item",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "Form Message primitive",
+      "name": "form-message",
+      "registryDependencies": [
+        "kit-text",
+        "recipes",
+        "utils"
+      ],
+      "title": "Form Message",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "Grid primitive",
+      "name": "grid",
+      "registryDependencies": [
+        "kit-box",
+        "recipes",
+        "utils"
+      ],
+      "title": "Grid",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "Grid Col primitive",
+      "name": "grid-col",
+      "registryDependencies": [
+        "kit-box",
+        "recipes",
+        "utils"
+      ],
+      "title": "Grid Col",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "Group primitive",
+      "name": "group",
+      "registryDependencies": [
+        "kit-box",
+        "recipes",
+        "utils"
+      ],
+      "title": "Group",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
       "description": "Hero Badge component",
       "name": "hero-badge",
       "registryDependencies": [
@@ -2591,14 +1910,39 @@
     },
     {
       "dependencies": [],
+      "description": "Heading, lead, one or two actions and optional media.",
+      "name": "hero-classic",
+      "registryDependencies": [
+        "action-group",
+        "backdrop",
+        "box",
+        "button",
+        "code-window",
+        "cta-actions",
+        "grid",
+        "group",
+        "input",
+        "label",
+        "media-frame",
+        "section-frame",
+        "topic-chips",
+        "utils"
+      ],
+      "title": "Hero Classic",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
       "description": "Hero Head component",
       "name": "hero-head",
       "registryDependencies": [
         "block",
         "button",
         "group",
+        "inline",
         "link",
         "link-plain",
+        "menu-entry",
         "nav-bar",
         "nav-block",
         "presets",
@@ -2606,6 +1950,48 @@
       ],
       "title": "Hero Head",
       "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "Heading, lead, one or two actions and optional media.",
+      "name": "hero-prompt",
+      "registryDependencies": [
+        "action-group",
+        "block",
+        "container",
+        "cta-actions",
+        "hero-badge",
+        "hero-head",
+        "nav-bar",
+        "presets",
+        "prompt-composer",
+        "stack",
+        "topic-chips",
+        "utils",
+        "weighted-title"
+      ],
+      "title": "Hero Prompt",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "A split hero with figures, faces, small cards or a quote under the lead, beside a picture, a floating card, a picture grid or plan cards.",
+      "name": "hero-split",
+      "registryDependencies": [
+        "action-group",
+        "error-page",
+        "feature-grid",
+        "hero-split-extras",
+        "hero-split-media",
+        "pricing-card",
+        "section-frame",
+        "stats-band",
+        "store-hero",
+        "testimonial-grid",
+        "utils"
+      ],
+      "title": "Hero Split",
+      "type": "registry:block"
     },
     {
       "dependencies": [],
@@ -2646,6 +2032,30 @@
     },
     {
       "dependencies": [],
+      "description": "Icon primitive",
+      "name": "icon",
+      "registryDependencies": [
+        "kit-icon",
+        "recipes",
+        "utils"
+      ],
+      "title": "Icon",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "Icon Badge primitive",
+      "name": "icon-badge",
+      "registryDependencies": [
+        "kit-text",
+        "recipes",
+        "utils"
+      ],
+      "title": "Icon Badge",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
       "description": "Icon Tab component",
       "name": "icon-tab",
       "registryDependencies": [
@@ -2668,6 +2078,80 @@
     },
     {
       "dependencies": [],
+      "description": "Many small features as icons with a name: tiles or chips in three to six columns.",
+      "name": "icon-wall",
+      "registryDependencies": [
+        "box",
+        "empty-state",
+        "feature-grid",
+        "grid",
+        "lucide-icon",
+        "section-frame",
+        "text",
+        "utils"
+      ],
+      "title": "Icon Wall",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "Image primitive",
+      "name": "image",
+      "registryDependencies": [
+        "kit-image",
+        "recipes",
+        "utils"
+      ],
+      "title": "Image",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "Inline primitive",
+      "name": "inline",
+      "registryDependencies": [
+        "kit-text",
+        "recipes",
+        "utils"
+      ],
+      "title": "Inline",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "Input primitive",
+      "name": "input",
+      "registryDependencies": [
+        "kit-input",
+        "recipes",
+        "utils"
+      ],
+      "title": "Input",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "Open jobs as cards, grouped by department, or as a table.",
+      "name": "job-board",
+      "registryDependencies": [
+        "badge",
+        "empty-state",
+        "group",
+        "job-cards",
+        "list",
+        "list-item",
+        "menu-entry",
+        "section-frame",
+        "stack",
+        "text",
+        "title",
+        "utils"
+      ],
+      "title": "Job Board",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
       "description": "Job Cards component",
       "name": "job-cards",
       "registryDependencies": [
@@ -2677,15 +2161,337 @@
         "group",
         "inline",
         "job-board",
-        "link",
         "lucide-icon",
+        "menu-entry",
         "stack",
         "table",
+        "table-body",
+        "table-caption",
+        "table-cell",
+        "table-head",
+        "table-head-cell",
+        "table-row",
         "text",
         "utils"
       ],
       "title": "Job Cards",
       "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "Work items in lanes with a count; cards with a tag and a person. Moving cards is a port contract (SortableList).",
+      "name": "kanban-board",
+      "registryDependencies": [
+        "empty-state",
+        "grid",
+        "group",
+        "list",
+        "list-item",
+        "pill",
+        "section-frame",
+        "stack",
+        "text",
+        "title",
+        "utils"
+      ],
+      "title": "Kanban Board",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "UI8Kit 3 Box primitive (unstyled), from @ui8kit/registry",
+      "name": "kit-box",
+      "registryDependencies": [
+        "utils"
+      ],
+      "title": "Kit Box",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "UI8Kit 3 Button primitive (unstyled), from @ui8kit/registry",
+      "name": "kit-button",
+      "registryDependencies": [
+        "utils"
+      ],
+      "title": "Kit Button",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "UI8Kit 3 Checkbox primitive (unstyled), from @ui8kit/registry",
+      "name": "kit-checkbox",
+      "registryDependencies": [
+        "utils"
+      ],
+      "title": "Kit Checkbox",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "UI8Kit 3 Dialog primitive (unstyled), from @ui8kit/registry",
+      "name": "kit-dialog",
+      "registryDependencies": [
+        "utils"
+      ],
+      "title": "Kit Dialog",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "UI8Kit 3 Disclosure primitive (unstyled), from @ui8kit/registry",
+      "name": "kit-disclosure",
+      "registryDependencies": [
+        "utils"
+      ],
+      "title": "Kit Disclosure",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "UI8Kit 3 Form primitive (unstyled), from @ui8kit/registry",
+      "name": "kit-form",
+      "registryDependencies": [
+        "utils"
+      ],
+      "title": "Kit Form",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "UI8Kit 3 Icon primitive (unstyled), from @ui8kit/registry",
+      "name": "kit-icon",
+      "registryDependencies": [
+        "utils"
+      ],
+      "title": "Kit Icon",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "UI8Kit 3 Image primitive (unstyled), from @ui8kit/registry",
+      "name": "kit-image",
+      "registryDependencies": [
+        "utils"
+      ],
+      "title": "Kit Image",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "UI8Kit 3 Input primitive (unstyled), from @ui8kit/registry",
+      "name": "kit-input",
+      "registryDependencies": [
+        "utils"
+      ],
+      "title": "Kit Input",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "UI8Kit 3 Label primitive (unstyled), from @ui8kit/registry",
+      "name": "kit-label",
+      "registryDependencies": [
+        "utils"
+      ],
+      "title": "Kit Label",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "UI8Kit 3 Link primitive (unstyled), from @ui8kit/registry",
+      "name": "kit-link",
+      "registryDependencies": [
+        "utils"
+      ],
+      "title": "Kit Link",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "UI8Kit 3 Meter primitive (unstyled), from @ui8kit/registry",
+      "name": "kit-meter",
+      "registryDependencies": [
+        "utils"
+      ],
+      "title": "Kit Meter",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "UI8Kit 3 Progress primitive (unstyled), from @ui8kit/registry",
+      "name": "kit-progress",
+      "registryDependencies": [
+        "utils"
+      ],
+      "title": "Kit Progress",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "UI8Kit 3 Radio primitive (unstyled), from @ui8kit/registry",
+      "name": "kit-radio",
+      "registryDependencies": [
+        "utils"
+      ],
+      "title": "Kit Radio",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "UI8Kit 3 Select primitive (unstyled), from @ui8kit/registry",
+      "name": "kit-select",
+      "registryDependencies": [
+        "utils"
+      ],
+      "title": "Kit Select",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "UI8Kit 3 Separator primitive (unstyled), from @ui8kit/registry",
+      "name": "kit-separator",
+      "registryDependencies": [
+        "utils"
+      ],
+      "title": "Kit Separator",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "UI8Kit 3 Switch primitive (unstyled), from @ui8kit/registry",
+      "name": "kit-switch",
+      "registryDependencies": [
+        "utils"
+      ],
+      "title": "Kit Switch",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "UI8Kit 3 Text primitive (unstyled), from @ui8kit/registry",
+      "name": "kit-text",
+      "registryDependencies": [
+        "utils"
+      ],
+      "title": "Kit Text",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "UI8Kit 3 Textarea primitive (unstyled), from @ui8kit/registry",
+      "name": "kit-textarea",
+      "registryDependencies": [
+        "utils"
+      ],
+      "title": "Kit Textarea",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "Label primitive",
+      "name": "label",
+      "registryDependencies": [
+        "kit-label",
+        "recipes",
+        "utils"
+      ],
+      "title": "Label",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "Legend primitive",
+      "name": "legend",
+      "registryDependencies": [
+        "kit-text",
+        "recipes",
+        "utils"
+      ],
+      "title": "Legend",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "Link primitive",
+      "name": "link",
+      "registryDependencies": [
+        "kit-link",
+        "recipes",
+        "utils"
+      ],
+      "title": "Link",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "Link Plain primitive",
+      "name": "link-plain",
+      "registryDependencies": [
+        "kit-link",
+        "recipes",
+        "utils"
+      ],
+      "title": "Link Plain",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "List primitive",
+      "name": "list",
+      "registryDependencies": [
+        "kit-box",
+        "recipes",
+        "utils"
+      ],
+      "title": "List",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "List Item primitive",
+      "name": "list-item",
+      "registryDependencies": [
+        "kit-box",
+        "recipes",
+        "utils"
+      ],
+      "title": "List Item",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "Customers and partners as glyphs with names.",
+      "name": "logo-cloud",
+      "registryDependencies": [
+        "empty-state",
+        "grid",
+        "group",
+        "logo-ribbon",
+        "lucide-icon",
+        "section-frame",
+        "text",
+        "utils"
+      ],
+      "title": "Logo Cloud",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "Logo Ribbon block",
+      "name": "logo-ribbon",
+      "registryDependencies": [
+        "group",
+        "logo-cloud",
+        "logo-slot",
+        "presets",
+        "section-frame",
+        "stack",
+        "title",
+        "utils"
+      ],
+      "title": "Logo Ribbon",
+      "type": "registry:block"
     },
     {
       "dependencies": [],
@@ -2712,6 +2518,18 @@
       ],
       "title": "Logo Slot",
       "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "Lucide Icon primitive",
+      "name": "lucide-icon",
+      "registryDependencies": [
+        "kit-icon",
+        "recipes",
+        "utils"
+      ],
+      "title": "Lucide Icon",
+      "type": "registry:ui"
     },
     {
       "dependencies": [],
@@ -2757,13 +2575,39 @@
     },
     {
       "dependencies": [],
+      "description": "Four figures, figures with a featured review, numbered steps, the latest posts, topic rows, or contact buttons with support figures, beside a picture.",
+      "name": "media-list",
+      "registryDependencies": [
+        "action-group",
+        "category-nav",
+        "error-page",
+        "feature-grid",
+        "media-contacts",
+        "media-figures",
+        "media-frame",
+        "media-posts",
+        "media-review",
+        "media-steps",
+        "media-topics",
+        "post-card",
+        "review-list",
+        "section-frame",
+        "stats-band",
+        "steps-list",
+        "utils"
+      ],
+      "title": "Media List",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
       "description": "Media Posts component",
       "name": "media-posts",
       "registryDependencies": [
         "group",
         "inline",
-        "link",
         "media-list",
+        "menu-entry",
         "stack",
         "text",
         "utils"
@@ -2808,15 +2652,40 @@
       "name": "media-topics",
       "registryDependencies": [
         "inline",
-        "link",
         "lucide-icon",
         "media-list",
+        "menu-entry",
         "stack",
         "text",
         "utils"
       ],
       "title": "Media Topics",
       "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "A top bar whose first item opens a wide panel of link groups, with an optional promo card.",
+      "name": "mega-menu",
+      "registryDependencies": [
+        "block",
+        "box",
+        "button-plain",
+        "container",
+        "grid",
+        "group",
+        "list",
+        "list-item",
+        "lucide-icon",
+        "media-frame",
+        "menu-entry",
+        "nav-bar",
+        "nav-block",
+        "stack",
+        "text",
+        "utils"
+      ],
+      "title": "Mega Menu",
+      "type": "registry:block"
     },
     {
       "dependencies": [],
@@ -2838,17 +2707,81 @@
     },
     {
       "dependencies": [],
+      "description": "Menu Entry component",
+      "name": "menu-entry",
+      "registryDependencies": [
+        "box",
+        "inline",
+        "link",
+        "utils"
+      ],
+      "title": "Menu Entry",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "Meter primitive",
+      "name": "meter",
+      "registryDependencies": [
+        "kit-meter",
+        "recipes",
+        "utils"
+      ],
+      "title": "Meter",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
       "description": "Meter Row component",
       "name": "meter-row",
       "registryDependencies": [
         "box",
-        "form",
         "link",
+        "progress",
         "text",
         "utils"
       ],
       "title": "Meter Row",
       "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "Key counters of a dashboard.",
+      "name": "metric-row",
+      "registryDependencies": [
+        "box",
+        "empty-state",
+        "grid",
+        "group",
+        "lucide-icon",
+        "section-frame",
+        "stack",
+        "stat-tile",
+        "text",
+        "utils"
+      ],
+      "title": "Metric Row",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "Milestones on a vertical line beside a picture, in a narrow column, or in a row.",
+      "name": "milestone-timeline",
+      "registryDependencies": [
+        "badge",
+        "empty-state",
+        "group",
+        "inline",
+        "list",
+        "list-item",
+        "media-frame",
+        "section-frame",
+        "text",
+        "title",
+        "utils"
+      ],
+      "title": "Milestone Timeline",
+      "type": "registry:block"
     },
     {
       "dependencies": [],
@@ -2859,6 +2792,42 @@
         "utils"
       ],
       "title": "Nav Actions",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "A top bar in four shapes: inline, split around the brand, with a search field, and transparent over a picture.",
+      "name": "nav-bar",
+      "registryDependencies": [
+        "block",
+        "box",
+        "container",
+        "grid",
+        "group",
+        "link-plain",
+        "menu-entry",
+        "nav-actions",
+        "nav-bar-menu",
+        "nav-block",
+        "nav-links",
+        "over-media",
+        "search-palette",
+        "utils"
+      ],
+      "title": "Nav Bar",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "Nav Bar Menu component",
+      "name": "nav-bar-menu",
+      "registryDependencies": [
+        "nav-bar",
+        "nav-block",
+        "nav-links",
+        "utils"
+      ],
+      "title": "Nav Bar Menu",
       "type": "registry:component"
     },
     {
@@ -2903,12 +2872,30 @@
       "name": "nav-links",
       "registryDependencies": [
         "group",
-        "link",
+        "menu-entry",
         "nav-bar",
         "utils"
       ],
       "title": "Nav Links",
       "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "An email field and a button, inline, stacked or beside a picture.",
+      "name": "newsletter-form",
+      "registryDependencies": [
+        "button",
+        "form",
+        "group",
+        "input",
+        "label",
+        "media-frame",
+        "section-frame",
+        "text",
+        "utils"
+      ],
+      "title": "Newsletter Form",
+      "type": "registry:block"
     },
     {
       "dependencies": [],
@@ -2956,6 +2943,18 @@
     },
     {
       "dependencies": [],
+      "description": "Opt Group primitive",
+      "name": "opt-group",
+      "registryDependencies": [
+        "kit-select",
+        "recipes",
+        "utils"
+      ],
+      "title": "Opt Group",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
       "description": "Order Rows component",
       "name": "order-rows",
       "registryDependencies": [
@@ -2963,10 +2962,54 @@
         "order-table",
         "pill",
         "table",
+        "table-body",
+        "table-caption",
+        "table-cell",
+        "table-head",
+        "table-head-cell",
+        "table-row",
         "utils"
       ],
       "title": "Order Rows",
       "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "Subtotal, shipping, tax and the total.",
+      "name": "order-summary",
+      "registryDependencies": [
+        "box",
+        "button",
+        "empty-state",
+        "inline",
+        "list",
+        "list-item",
+        "section-frame",
+        "stack",
+        "text",
+        "utils"
+      ],
+      "title": "Order Summary",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "Past orders with status.",
+      "name": "order-table",
+      "registryDependencies": [
+        "card",
+        "card-content",
+        "empty-state",
+        "order-rows",
+        "pager",
+        "pill",
+        "section-frame",
+        "stack",
+        "text",
+        "utils"
+      ],
+      "title": "Order Table",
+      "type": "registry:block"
     },
     {
       "dependencies": [],
@@ -3005,6 +3048,7 @@
         "inline",
         "link",
         "list",
+        "list-item",
         "lucide-icon",
         "nav-bar",
         "utils"
@@ -3024,6 +3068,37 @@
       ],
       "title": "Page Header",
       "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "The head of an inner page: the heading, one sentence and an optional action.",
+      "name": "page-intro",
+      "registryDependencies": [
+        "action-group",
+        "section-frame",
+        "utils"
+      ],
+      "title": "Page Intro",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "Breadcrumbs over the badge, the heading and the lead; with one large figure, a note card or four key facts at the end.",
+      "name": "page-trail",
+      "registryDependencies": [
+        "block",
+        "box",
+        "container",
+        "nav-bar",
+        "page-aside",
+        "page-crumbs",
+        "section-header",
+        "stack",
+        "stats-band",
+        "utils"
+      ],
+      "title": "Page Trail",
+      "type": "registry:block"
     },
     {
       "dependencies": [],
@@ -3066,6 +3141,27 @@
       ],
       "title": "Payment Options",
       "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "Photos in a grid, a masonry, a mosaic, a featured picture with thumbnails, or cards.",
+      "name": "photo-gallery",
+      "registryDependencies": [
+        "badge",
+        "box",
+        "button",
+        "empty-state",
+        "figure-block",
+        "group",
+        "lucide-icon",
+        "media-frame",
+        "section-frame",
+        "stack",
+        "text",
+        "utils"
+      ],
+      "title": "Photo Gallery",
+      "type": "registry:block"
     },
     {
       "dependencies": [],
@@ -3116,6 +3212,26 @@
     },
     {
       "dependencies": [],
+      "description": "Post Card block",
+      "name": "post-card",
+      "registryDependencies": [
+        "block",
+        "box",
+        "card-content",
+        "group",
+        "link",
+        "lucide-icon",
+        "media-frame",
+        "presets",
+        "text",
+        "title",
+        "utils"
+      ],
+      "title": "Post Card",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
       "description": "Post Feature component",
       "name": "post-feature",
       "registryDependencies": [
@@ -3132,6 +3248,41 @@
       ],
       "title": "Post Feature",
       "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "Posts as a grid, a list or a magazine.",
+      "name": "post-grid",
+      "registryDependencies": [
+        "block",
+        "grid",
+        "pager",
+        "post-card",
+        "section-frame",
+        "stack",
+        "switcher",
+        "switcher-item",
+        "utils"
+      ],
+      "title": "Post Grid",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "Category, title, excerpt, author line and a wide cover.",
+      "name": "post-header",
+      "registryDependencies": [
+        "empty-state",
+        "group",
+        "media-frame",
+        "pill",
+        "post-card",
+        "section-frame",
+        "text",
+        "utils"
+      ],
+      "title": "Post Header",
+      "type": "registry:block"
     },
     {
       "dependencies": [],
@@ -3155,8 +3306,8 @@
       "name": "post-outline",
       "registryDependencies": [
         "group",
-        "link",
         "lucide-icon",
+        "menu-entry",
         "post-card",
         "post-split",
         "stack",
@@ -3174,9 +3325,9 @@
         "badge",
         "box",
         "group",
-        "link",
         "lucide-icon",
         "media-frame",
+        "menu-entry",
         "post-card",
         "stack",
         "text",
@@ -3185,6 +3336,45 @@
       ],
       "title": "Post Overlay Card",
       "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "Four small post cards beside an intro with a view-all link; the first post in detail beside its picture; or cards with the text on a panel over the picture, in two or three columns.",
+      "name": "post-showcase",
+      "registryDependencies": [
+        "box",
+        "empty-state",
+        "link",
+        "lucide-icon",
+        "media-frame",
+        "post-card",
+        "post-feature",
+        "post-mini-card",
+        "post-overlay-card",
+        "section-frame",
+        "utils"
+      ],
+      "title": "Post Showcase",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "Tags, reading figures and an author card with share and save over a wide cover; the author, figures, tags and actions beside the cover; or the facts and related reading beside it.",
+      "name": "post-split",
+      "registryDependencies": [
+        "media-frame",
+        "nav-bar",
+        "post-actions",
+        "post-author",
+        "post-card",
+        "post-outline",
+        "post-stats",
+        "post-tags",
+        "section-frame",
+        "utils"
+      ],
+      "title": "Post Split",
+      "type": "registry:block"
     },
     {
       "dependencies": [],
@@ -3216,6 +3406,222 @@
     },
     {
       "dependencies": [],
+      "description": "Presets lib",
+      "name": "presets",
+      "registryDependencies": [
+        "utils"
+      ],
+      "title": "Presets",
+      "type": "registry:lib"
+    },
+    {
+      "dependencies": [],
+      "description": "One plan as a card.",
+      "name": "pricing-card",
+      "registryDependencies": [
+        "badge",
+        "block",
+        "box",
+        "button",
+        "card-content",
+        "card-description",
+        "card-footer",
+        "card-header",
+        "card-title",
+        "group",
+        "list",
+        "list-item",
+        "text",
+        "title",
+        "utils"
+      ],
+      "title": "Pricing Card",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "Plans as a grid or a stack of cards.",
+      "name": "pricing-tiers",
+      "registryDependencies": [
+        "badge",
+        "empty-state",
+        "grid",
+        "group",
+        "pricing-card",
+        "section-frame",
+        "switcher",
+        "switcher-item",
+        "utils"
+      ],
+      "title": "Pricing Tiers",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "Product Card block",
+      "name": "product-card",
+      "registryDependencies": [
+        "badge",
+        "block",
+        "box",
+        "button",
+        "card-content",
+        "group",
+        "inline",
+        "link",
+        "media-frame",
+        "rating",
+        "text",
+        "title",
+        "utils"
+      ],
+      "title": "Product Card",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "The gallery and the buy box of one product.",
+      "name": "product-detail",
+      "registryDependencies": [
+        "button",
+        "empty-state",
+        "group",
+        "inline",
+        "list",
+        "list-item",
+        "lucide-icon",
+        "number-field",
+        "product-card",
+        "product-gallery",
+        "product-price",
+        "rating",
+        "section-frame",
+        "stack",
+        "text",
+        "utils"
+      ],
+      "title": "Product Detail",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "Product Gallery component",
+      "name": "product-gallery",
+      "registryDependencies": [
+        "grid",
+        "media-frame",
+        "stack",
+        "utils"
+      ],
+      "title": "Product Gallery",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "Products as cards in a grid, a list or a rail that scrolls sideways.",
+      "name": "product-grid",
+      "registryDependencies": [
+        "box",
+        "empty-state",
+        "grid",
+        "product-card",
+        "section-frame",
+        "utils"
+      ],
+      "title": "Product Grid",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "Texts in an accordion beside a card of specs.",
+      "name": "product-info",
+      "registryDependencies": [
+        "box",
+        "disclosure",
+        "inline",
+        "list",
+        "list-item",
+        "section-frame",
+        "stack",
+        "summary",
+        "text",
+        "title",
+        "utils"
+      ],
+      "title": "Product Info",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "Product Price component",
+      "name": "product-price",
+      "registryDependencies": [
+        "badge",
+        "group",
+        "inline",
+        "text",
+        "utils"
+      ],
+      "title": "Product Price",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "Account settings: picture, name, email, bio and notifications.",
+      "name": "profile-form",
+      "registryDependencies": [
+        "block",
+        "button",
+        "container",
+        "field",
+        "form",
+        "grid",
+        "group",
+        "input",
+        "label",
+        "media-frame",
+        "panel",
+        "stack",
+        "switch",
+        "textarea",
+        "title",
+        "utils"
+      ],
+      "title": "Profile Form",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "Progress primitive",
+      "name": "progress",
+      "registryDependencies": [
+        "kit-progress",
+        "recipes",
+        "utils"
+      ],
+      "title": "Progress",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "Projects as cards, a compact grid, captions over pictures, a bento or a list beside a collage.",
+      "name": "project-grid",
+      "registryDependencies": [
+        "box",
+        "empty-state",
+        "group",
+        "media-frame",
+        "project-tiles",
+        "section-frame",
+        "stack",
+        "text",
+        "utils"
+      ],
+      "title": "Project Grid",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
       "description": "Project Tiles component",
       "name": "project-tiles",
       "registryDependencies": [
@@ -3223,9 +3629,9 @@
         "badge",
         "box",
         "group",
-        "link",
         "lucide-icon",
         "media-frame",
+        "menu-entry",
         "project-grid",
         "stack",
         "text",
@@ -3250,6 +3656,37 @@
       ],
       "title": "Prompt Composer",
       "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "A bar of customer logos and a row of key figures together.",
+      "name": "proof-band",
+      "registryDependencies": [
+        "empty-state",
+        "grid",
+        "group",
+        "logo-cloud",
+        "lucide-icon",
+        "section-frame",
+        "stack",
+        "stats-band",
+        "text",
+        "utils"
+      ],
+      "title": "Proof Band",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "Prose primitive",
+      "name": "prose",
+      "registryDependencies": [
+        "kit-box",
+        "recipes",
+        "utils"
+      ],
+      "title": "Prose",
+      "type": "registry:ui"
     },
     {
       "dependencies": [],
@@ -3344,6 +3781,54 @@
     },
     {
       "dependencies": [],
+      "description": "One quote beside a picture, a rating panel or over logo tiles; stacked quotes beside a picture; four compact quotes; figures over a featured quote and a stack.",
+      "name": "quote-split",
+      "registryDependencies": [
+        "action-group",
+        "box",
+        "empty-state",
+        "error-page",
+        "logo-cloud",
+        "media-frame",
+        "quote-figures",
+        "quote-logo-tiles",
+        "quote-rating-panel",
+        "quote-slot",
+        "section-frame",
+        "stack",
+        "stats-band",
+        "testimonial-grid",
+        "utils"
+      ],
+      "title": "Quote Split",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "Radio primitive",
+      "name": "radio",
+      "registryDependencies": [
+        "kit-radio",
+        "recipes",
+        "utils"
+      ],
+      "title": "Radio",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "Range primitive",
+      "name": "range",
+      "registryDependencies": [
+        "kit-input",
+        "recipes",
+        "utils"
+      ],
+      "title": "Range",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
       "description": "Range Field component",
       "name": "range-field",
       "registryDependencies": [
@@ -3370,6 +3855,16 @@
     },
     {
       "dependencies": [],
+      "description": "Recipes (Tailwind classes per variant/size/state) of the composed primitives",
+      "name": "recipes",
+      "registryDependencies": [
+        "utils"
+      ],
+      "title": "Recipes",
+      "type": "registry:lib"
+    },
+    {
+      "dependencies": [],
       "description": "Region component",
       "name": "region",
       "registryDependencies": [
@@ -3378,6 +3873,46 @@
       ],
       "title": "Region",
       "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "Customer reviews with ratings.",
+      "name": "review-list",
+      "registryDependencies": [
+        "article-block",
+        "empty-state",
+        "grid",
+        "group",
+        "media-frame",
+        "rating",
+        "section-frame",
+        "stack",
+        "text",
+        "title",
+        "utils"
+      ],
+      "title": "Review List",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "The body of the current page or post as rich text (headings, lists, quotes, pictures, code, tables) under its title and a meta line; in a reading column, wide, beside a side note, under a cover, in a card, or as the page heading over a wide cover.",
+      "name": "rich-text",
+      "registryDependencies": [
+        "box",
+        "card",
+        "grid",
+        "group",
+        "media-frame",
+        "pill",
+        "prose",
+        "section-frame",
+        "text",
+        "title",
+        "utils"
+      ],
+      "title": "Rich Text",
+      "type": "registry:block"
     },
     {
       "dependencies": [],
@@ -3479,6 +4014,80 @@
     },
     {
       "dependencies": [],
+      "description": "Select primitive",
+      "name": "select",
+      "registryDependencies": [
+        "kit-select",
+        "recipes",
+        "utils"
+      ],
+      "title": "Select",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "Select Option primitive",
+      "name": "select-option",
+      "registryDependencies": [
+        "kit-select",
+        "recipes",
+        "utils"
+      ],
+      "title": "Select Option",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "Separator primitive",
+      "name": "separator",
+      "registryDependencies": [
+        "kit-separator",
+        "recipes",
+        "utils"
+      ],
+      "title": "Separator",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "Sheet primitive",
+      "name": "sheet",
+      "registryDependencies": [
+        "kit-dialog",
+        "recipes",
+        "utils"
+      ],
+      "title": "Sheet",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "Sheet Close primitive",
+      "name": "sheet-close",
+      "registryDependencies": [
+        "kit-button",
+        "kit-icon",
+        "recipes",
+        "utils"
+      ],
+      "title": "Sheet Close",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "Sheet Trigger primitive",
+      "name": "sheet-trigger",
+      "registryDependencies": [
+        "kit-button",
+        "kit-icon",
+        "recipes",
+        "utils"
+      ],
+      "title": "Sheet Trigger",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
       "description": "Shell Content component",
       "name": "shell-content",
       "registryDependencies": [
@@ -3498,8 +4107,9 @@
       "registryDependencies": [
         "block",
         "dashboard-shell",
-        "link",
         "list",
+        "list-item",
+        "menu-entry",
         "nav-block",
         "text",
         "utils"
@@ -3518,9 +4128,10 @@
         "dashboard-shell",
         "group",
         "inline",
-        "link",
         "list",
+        "list-item",
         "lucide-icon",
+        "menu-entry",
         "nav-block",
         "text",
         "utils"
@@ -3538,10 +4149,11 @@
         "dashboard-shell",
         "group",
         "inline",
-        "link",
         "list",
+        "list-item",
         "lucide-icon",
         "media-frame",
+        "menu-entry",
         "nav-block",
         "search-palette",
         "text",
@@ -3549,6 +4161,51 @@
       ],
       "title": "Shell Topbar",
       "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "The cart lines beside a summary with a promo code and a free-delivery bar.",
+      "name": "shopping-cart",
+      "registryDependencies": [
+        "box",
+        "button",
+        "cart-list",
+        "cart-summary-card",
+        "empty-state",
+        "group",
+        "lucide-icon",
+        "media-frame",
+        "number-field",
+        "order-summary",
+        "section-frame",
+        "stack",
+        "text",
+        "utils"
+      ],
+      "title": "Shopping Cart",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "A vertical navigation with the brand on top and the user at the bottom: full, or icons only.",
+      "name": "sidebar-nav",
+      "registryDependencies": [
+        "block",
+        "group",
+        "inline",
+        "list",
+        "list-item",
+        "lucide-icon",
+        "media-frame",
+        "menu-entry",
+        "nav-bar",
+        "nav-block",
+        "stack",
+        "text",
+        "utils"
+      ],
+      "title": "Sidebar Nav",
+      "type": "registry:block"
     },
     {
       "dependencies": [],
@@ -3560,6 +4217,142 @@
       ],
       "title": "Sidebar Panel",
       "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "A sign-up in steps with a progress bar or a list of steps; back and next move between them.",
+      "name": "signup-wizard",
+      "registryDependencies": [
+        "block",
+        "box",
+        "button",
+        "field",
+        "group",
+        "input",
+        "list",
+        "list-item",
+        "lucide-icon",
+        "progress",
+        "stack",
+        "text",
+        "title",
+        "utils"
+      ],
+      "title": "Signup Wizard",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "Copyright and links.",
+      "name": "site-footer",
+      "registryDependencies": [
+        "block",
+        "container",
+        "group",
+        "menu-entry",
+        "nav-block",
+        "site-header",
+        "text",
+        "utils"
+      ],
+      "title": "Site Footer",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "Skip link, brand, navigation, theme button and an optional call to action.",
+      "name": "site-header",
+      "registryDependencies": [
+        "block",
+        "button",
+        "container",
+        "group",
+        "link-plain",
+        "menu-entry",
+        "nav-block",
+        "utils"
+      ],
+      "title": "Site Header",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "A footer with the brand, groups of links and the copyright; a single row, a sign-up first or a status pill.",
+      "name": "sitemap-footer",
+      "registryDependencies": [
+        "block",
+        "box",
+        "button",
+        "container",
+        "footer-card",
+        "footer-columns",
+        "form",
+        "group",
+        "input",
+        "label",
+        "mega-menu",
+        "menu-entry",
+        "nav-block",
+        "pill",
+        "stack",
+        "text",
+        "title",
+        "utils"
+      ],
+      "title": "Sitemap Footer",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "Skeleton primitive",
+      "name": "skeleton",
+      "registryDependencies": [
+        "kit-box",
+        "recipes",
+        "utils"
+      ],
+      "title": "Skeleton",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "Grey blocks in the shape of what is coming: cards, a list or an article.",
+      "name": "skeleton-layout",
+      "registryDependencies": [
+        "block",
+        "grid",
+        "group",
+        "section-frame",
+        "skeleton",
+        "stack",
+        "utils"
+      ],
+      "title": "Skeleton Layout",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "Days with their delivery windows as radio chips, beside the zone card.",
+      "name": "slot-board",
+      "registryDependencies": [
+        "box",
+        "button",
+        "empty-state",
+        "field",
+        "inline",
+        "list",
+        "list-item",
+        "section-frame",
+        "select",
+        "select-option",
+        "slot-grid",
+        "stack",
+        "text",
+        "utils",
+        "zone-table"
+      ],
+      "title": "Slot Board",
+      "type": "registry:block"
     },
     {
       "dependencies": [],
@@ -3577,6 +4370,18 @@
       ],
       "title": "Slot Grid",
       "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "Stack primitive",
+      "name": "stack",
+      "registryDependencies": [
+        "kit-box",
+        "recipes",
+        "utils"
+      ],
+      "title": "Stack",
+      "type": "registry:ui"
     },
     {
       "dependencies": [],
@@ -3600,7 +4405,7 @@
       "name": "stat-tile",
       "registryDependencies": [
         "box",
-        "iconbadge",
+        "icon-badge",
         "link",
         "lucide-icon",
         "text",
@@ -3608,6 +4413,110 @@
       ],
       "title": "Stat Tile",
       "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "Key numbers as figures, cards or figures with icons.",
+      "name": "stats-band",
+      "registryDependencies": [
+        "backdrop",
+        "empty-state",
+        "grid",
+        "presets",
+        "section-frame",
+        "stat-figure",
+        "utils"
+      ],
+      "title": "Stats Band",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "A multi-step form header with the current step.",
+      "name": "stepper",
+      "registryDependencies": [
+        "button",
+        "group",
+        "icon-badge",
+        "inline",
+        "list",
+        "list-item",
+        "lucide-icon",
+        "section-frame",
+        "stack",
+        "steps-list",
+        "text",
+        "title",
+        "utils"
+      ],
+      "title": "Stepper",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "Numbered or icon steps in a row or a column.",
+      "name": "steps-list",
+      "registryDependencies": [
+        "empty-state",
+        "icon-badge",
+        "inline",
+        "list",
+        "list-item",
+        "lucide-icon",
+        "section-frame",
+        "stack",
+        "text",
+        "title",
+        "utils"
+      ],
+      "title": "Steps List",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "The hero of a store with promises under the actions, beside a picture with an offer card or over a faint picture.",
+      "name": "store-hero",
+      "registryDependencies": [
+        "action-group",
+        "backdrop",
+        "box",
+        "error-page",
+        "feature-grid",
+        "grid",
+        "group",
+        "lucide-icon",
+        "offer-media",
+        "section-frame",
+        "stack",
+        "text",
+        "utils"
+      ],
+      "title": "Store Hero",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "The stores with address, hours, phone and services.",
+      "name": "store-locations",
+      "registryDependencies": [
+        "badge",
+        "box",
+        "empty-state",
+        "group",
+        "inline",
+        "link",
+        "list",
+        "list-item",
+        "lucide-icon",
+        "media-frame",
+        "section-frame",
+        "stack",
+        "text",
+        "title",
+        "utils"
+      ],
+      "title": "Store Locations",
+      "type": "registry:block"
     },
     {
       "dependencies": [],
@@ -3643,6 +4552,74 @@
     },
     {
       "dependencies": [],
+      "description": "Year tabs over the panel of the chosen year, or the heading beside a picture with arrows and one dot per step. Choosing a step is an event.",
+      "name": "story-tabs",
+      "registryDependencies": [
+        "box",
+        "button",
+        "empty-state",
+        "group",
+        "inline",
+        "lucide-icon",
+        "media-frame",
+        "milestone-timeline",
+        "section-frame",
+        "stack",
+        "story-dots",
+        "story-panel",
+        "utils"
+      ],
+      "title": "Story Tabs",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "Summary primitive",
+      "name": "summary",
+      "registryDependencies": [
+        "kit-disclosure",
+        "kit-text",
+        "recipes",
+        "utils"
+      ],
+      "title": "Summary",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "Ways to get help: email, chat, docs.",
+      "name": "support-channels",
+      "registryDependencies": [
+        "card",
+        "card-content",
+        "empty-state",
+        "feature-grid",
+        "grid",
+        "lucide-icon",
+        "menu-entry",
+        "section-frame",
+        "stack",
+        "text",
+        "title",
+        "utils"
+      ],
+      "title": "Support Channels",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "Switch primitive",
+      "name": "switch",
+      "registryDependencies": [
+        "kit-switch",
+        "recipes",
+        "utils"
+      ],
+      "title": "Switch",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
       "description": "Switcher component",
       "name": "switcher",
       "registryDependencies": [
@@ -3665,6 +4642,126 @@
     },
     {
       "dependencies": [],
+      "description": "Table primitive",
+      "name": "table",
+      "registryDependencies": [
+        "kit-box",
+        "recipes",
+        "utils"
+      ],
+      "title": "Table",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "Table Body primitive",
+      "name": "table-body",
+      "registryDependencies": [
+        "kit-box",
+        "recipes",
+        "utils"
+      ],
+      "title": "Table Body",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "Table Caption primitive",
+      "name": "table-caption",
+      "registryDependencies": [
+        "kit-box",
+        "recipes",
+        "utils"
+      ],
+      "title": "Table Caption",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "Table Cell primitive",
+      "name": "table-cell",
+      "registryDependencies": [
+        "kit-box",
+        "recipes",
+        "utils"
+      ],
+      "title": "Table Cell",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "Table Col primitive",
+      "name": "table-col",
+      "registryDependencies": [
+        "kit-box",
+        "recipes",
+        "utils"
+      ],
+      "title": "Table Col",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "Table Col Group primitive",
+      "name": "table-col-group",
+      "registryDependencies": [
+        "kit-box",
+        "recipes",
+        "utils"
+      ],
+      "title": "Table Col Group",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "Table Foot primitive",
+      "name": "table-foot",
+      "registryDependencies": [
+        "kit-box",
+        "recipes",
+        "utils"
+      ],
+      "title": "Table Foot",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "Table Head primitive",
+      "name": "table-head",
+      "registryDependencies": [
+        "kit-box",
+        "recipes",
+        "utils"
+      ],
+      "title": "Table Head",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "Table Head Cell primitive",
+      "name": "table-head-cell",
+      "registryDependencies": [
+        "kit-box",
+        "recipes",
+        "utils"
+      ],
+      "title": "Table Head Cell",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "Table Row primitive",
+      "name": "table-row",
+      "registryDependencies": [
+        "kit-box",
+        "recipes",
+        "utils"
+      ],
+      "title": "Table Row",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
       "description": "Table Toolbar component",
       "name": "table-toolbar",
       "registryDependencies": [
@@ -3677,17 +4774,123 @@
     },
     {
       "dependencies": [],
+      "description": "The people of a team as cards, a minimal grid, detailed cards, rows beside a picture or a directory.",
+      "name": "team-grid",
+      "registryDependencies": [
+        "box",
+        "empty-state",
+        "media-frame",
+        "member-row",
+        "section-frame",
+        "stack",
+        "text",
+        "utils"
+      ],
+      "title": "Team Grid",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "Template gallery: filters, a browse-all button and an 8-card MediaFrame grid.",
+      "name": "template-grid",
+      "registryDependencies": [
+        "box",
+        "button",
+        "empty-state",
+        "grid",
+        "group",
+        "icon-badge",
+        "inline",
+        "lucide-icon",
+        "media-frame",
+        "presets",
+        "section-frame",
+        "stack",
+        "text",
+        "title",
+        "utils"
+      ],
+      "title": "Template Grid",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "Customer quotes as cards or plain figures.",
+      "name": "testimonial-grid",
+      "registryDependencies": [
+        "block",
+        "empty-state",
+        "grid",
+        "quote-card",
+        "section-frame",
+        "utils"
+      ],
+      "title": "Testimonial Grid",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "Text primitive",
+      "name": "text",
+      "registryDependencies": [
+        "kit-text",
+        "recipes",
+        "utils"
+      ],
+      "title": "Text",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "Textarea primitive",
+      "name": "textarea",
+      "registryDependencies": [
+        "kit-textarea",
+        "recipes",
+        "utils"
+      ],
+      "title": "Textarea",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "Theme Toggle primitive",
+      "name": "theme-toggle",
+      "registryDependencies": [
+        "kit-button",
+        "kit-icon",
+        "recipes",
+        "utils"
+      ],
+      "title": "Theme Toggle",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
       "description": "Timeline component",
       "name": "timeline",
       "registryDependencies": [
         "box",
         "inline",
         "list",
+        "list-item",
         "text",
         "utils"
       ],
       "title": "Timeline",
       "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "Title primitive",
+      "name": "title",
+      "registryDependencies": [
+        "kit-text",
+        "recipes",
+        "utils"
+      ],
+      "title": "Title",
+      "type": "registry:ui"
     },
     {
       "dependencies": [],
@@ -3701,6 +4904,111 @@
       ],
       "title": "Topic Chips",
       "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "One stop of a product tour: the explained element and a callout with the step, a sentence and buttons. Placing it on the real element is a port contract.",
+      "name": "tour-callout",
+      "registryDependencies": [
+        "block",
+        "button",
+        "group",
+        "section-frame",
+        "stack",
+        "text",
+        "utils"
+      ],
+      "title": "Tour Callout",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "A slider for how much is used and the price it gives. The estimate follows the slider; the page keeps the value.",
+      "name": "usage-calculator",
+      "registryDependencies": [
+        "button",
+        "group",
+        "range",
+        "section-frame",
+        "stack",
+        "text",
+        "utils"
+      ],
+      "title": "Usage Calculator",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "Free delivery, returns, warranty and help in one band.",
+      "name": "usp-strip",
+      "registryDependencies": [
+        "box",
+        "empty-state",
+        "feature-grid",
+        "grid",
+        "inline",
+        "list",
+        "list-item",
+        "lucide-icon",
+        "section-frame",
+        "stack",
+        "text",
+        "utils"
+      ],
+      "title": "Usp Strip",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [
+        "clsx",
+        "tailwind-merge"
+      ],
+      "description": "cn, variants, expr, safe URLs and the shared helpers of the primitives and compositions (plus the theme CSS in styles/)",
+      "name": "utils",
+      "registryDependencies": [],
+      "title": "Utils",
+      "type": "registry:utils"
+    },
+    {
+      "dependencies": [],
+      "description": "Customer videos as thumbnails with a play button. Playing is a port contract (VideoEmbed).",
+      "name": "video-grid",
+      "registryDependencies": [
+        "box",
+        "button",
+        "empty-state",
+        "figure-block",
+        "grid",
+        "lucide-icon",
+        "media-frame",
+        "section-frame",
+        "testimonial-grid",
+        "text",
+        "utils"
+      ],
+      "title": "Video Grid",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "A dialog with a walkthrough video and an optional list of chapters. Opening and playing are port contracts.",
+      "name": "video-modal",
+      "registryDependencies": [
+        "box",
+        "button",
+        "group",
+        "list",
+        "list-item",
+        "lucide-icon",
+        "media-frame",
+        "section-frame",
+        "stack",
+        "text",
+        "title",
+        "utils"
+      ],
+      "title": "Video Modal",
+      "type": "registry:block"
     },
     {
       "dependencies": [],
@@ -3724,6 +5032,12 @@
         "box",
         "stack",
         "table",
+        "table-body",
+        "table-caption",
+        "table-cell",
+        "table-head",
+        "table-head-cell",
+        "table-row",
         "text",
         "utils",
         "zone-table"
@@ -3733,395 +5047,27 @@
     },
     {
       "dependencies": [],
-      "description": "Default layout preset: the sizes of the landing blocks as Tailwind classes. Blocks combine these with token classes; swap the preset to resize every block at once. Numbers: ui8kit default sizes (Tailwind scale, no arbitrary values)",
-      "name": "presets",
-      "registryDependencies": [],
-      "title": "Presets",
-      "type": "registry:lib"
-    },
-    {
-      "dependencies": [],
-      "description": "Alert primitive",
-      "name": "alert",
+      "description": "Delivery zones and their prices as a table or as cards.",
+      "name": "zone-table",
       "registryDependencies": [
-        "utils"
+        "badge",
+        "empty-state",
+        "grid",
+        "inline",
+        "list",
+        "list-item",
+        "section-frame",
+        "stack",
+        "text",
+        "title",
+        "utils",
+        "zone-rows"
       ],
-      "title": "Alert",
-      "type": "registry:ui"
-    },
-    {
-      "dependencies": [],
-      "description": "Badge primitive",
-      "name": "badge",
-      "registryDependencies": [
-        "utils"
-      ],
-      "title": "Badge",
-      "type": "registry:ui"
-    },
-    {
-      "dependencies": [],
-      "description": "Block primitive",
-      "name": "block",
-      "registryDependencies": [
-        "utils"
-      ],
-      "title": "Block",
-      "type": "registry:ui"
-    },
-    {
-      "dependencies": [],
-      "description": "Box primitive",
-      "name": "box",
-      "registryDependencies": [
-        "utils"
-      ],
-      "title": "Box",
-      "type": "registry:ui"
-    },
-    {
-      "dependencies": [],
-      "description": "Breadcrumb primitive",
-      "name": "breadcrumb",
-      "registryDependencies": [
-        "utils"
-      ],
-      "title": "Breadcrumb",
-      "type": "registry:ui"
-    },
-    {
-      "dependencies": [],
-      "description": "Button primitive",
-      "name": "button",
-      "registryDependencies": [
-        "utils"
-      ],
-      "title": "Button",
-      "type": "registry:ui"
-    },
-    {
-      "dependencies": [],
-      "description": "Button Plain primitive",
-      "name": "button-plain",
-      "registryDependencies": [
-        "utils"
-      ],
-      "title": "Button Plain",
-      "type": "registry:ui"
-    },
-    {
-      "dependencies": [],
-      "description": "Card primitive",
-      "name": "card",
-      "registryDependencies": [
-        "utils"
-      ],
-      "title": "Card",
-      "type": "registry:ui"
-    },
-    {
-      "dependencies": [],
-      "description": "Checkbox primitive",
-      "name": "checkbox",
-      "registryDependencies": [
-        "utils"
-      ],
-      "title": "Checkbox",
-      "type": "registry:ui"
-    },
-    {
-      "dependencies": [],
-      "description": "Container primitive",
-      "name": "container",
-      "registryDependencies": [
-        "utils"
-      ],
-      "title": "Container",
-      "type": "registry:ui"
-    },
-    {
-      "dependencies": [],
-      "description": "Dialog primitive",
-      "name": "dialog",
-      "registryDependencies": [
-        "utils"
-      ],
-      "title": "Dialog",
-      "type": "registry:ui"
-    },
-    {
-      "dependencies": [],
-      "description": "Disclosure primitive",
-      "name": "disclosure",
-      "registryDependencies": [
-        "utils"
-      ],
-      "title": "Disclosure",
-      "type": "registry:ui"
-    },
-    {
-      "dependencies": [],
-      "description": "Form primitive",
-      "name": "form",
-      "registryDependencies": [
-        "utils"
-      ],
-      "title": "Form",
-      "type": "registry:ui"
-    },
-    {
-      "dependencies": [],
-      "description": "Grid primitive",
-      "name": "grid",
-      "registryDependencies": [
-        "utils"
-      ],
-      "title": "Grid",
-      "type": "registry:ui"
-    },
-    {
-      "dependencies": [],
-      "description": "Group primitive",
-      "name": "group",
-      "registryDependencies": [
-        "utils"
-      ],
-      "title": "Group",
-      "type": "registry:ui"
-    },
-    {
-      "dependencies": [],
-      "description": "Icon primitive",
-      "name": "icon",
-      "registryDependencies": [
-        "utils"
-      ],
-      "title": "Icon",
-      "type": "registry:ui"
-    },
-    {
-      "dependencies": [],
-      "description": "Iconbadge primitive",
-      "name": "iconbadge",
-      "registryDependencies": [
-        "utils"
-      ],
-      "title": "Iconbadge",
-      "type": "registry:ui"
-    },
-    {
-      "dependencies": [],
-      "description": "Image primitive",
-      "name": "image",
-      "registryDependencies": [
-        "utils"
-      ],
-      "title": "Image",
-      "type": "registry:ui"
-    },
-    {
-      "dependencies": [],
-      "description": "Inline primitive",
-      "name": "inline",
-      "registryDependencies": [
-        "utils"
-      ],
-      "title": "Inline",
-      "type": "registry:ui"
-    },
-    {
-      "dependencies": [],
-      "description": "Input primitive",
-      "name": "input",
-      "registryDependencies": [
-        "utils"
-      ],
-      "title": "Input",
-      "type": "registry:ui"
-    },
-    {
-      "dependencies": [],
-      "description": "Label primitive",
-      "name": "label",
-      "registryDependencies": [
-        "utils"
-      ],
-      "title": "Label",
-      "type": "registry:ui"
-    },
-    {
-      "dependencies": [],
-      "description": "Linebreak primitive",
-      "name": "linebreak",
-      "registryDependencies": [
-        "utils"
-      ],
-      "title": "Linebreak",
-      "type": "registry:ui"
-    },
-    {
-      "dependencies": [],
-      "description": "Link primitive",
-      "name": "link",
-      "registryDependencies": [
-        "utils"
-      ],
-      "title": "Link",
-      "type": "registry:ui"
-    },
-    {
-      "dependencies": [],
-      "description": "Link Plain primitive",
-      "name": "link-plain",
-      "registryDependencies": [
-        "utils"
-      ],
-      "title": "Link Plain",
-      "type": "registry:ui"
-    },
-    {
-      "dependencies": [],
-      "description": "List primitive",
-      "name": "list",
-      "registryDependencies": [
-        "utils"
-      ],
-      "title": "List",
-      "type": "registry:ui"
-    },
-    {
-      "dependencies": [],
-      "description": "Lucide Icon primitive",
-      "name": "lucide-icon",
-      "registryDependencies": [
-        "utils"
-      ],
-      "title": "Lucide Icon",
-      "type": "registry:ui"
-    },
-    {
-      "dependencies": [],
-      "description": "Radio primitive",
-      "name": "radio",
-      "registryDependencies": [
-        "utils"
-      ],
-      "title": "Radio",
-      "type": "registry:ui"
-    },
-    {
-      "dependencies": [],
-      "description": "Range primitive",
-      "name": "range",
-      "registryDependencies": [
-        "utils"
-      ],
-      "title": "Range",
-      "type": "registry:ui"
-    },
-    {
-      "dependencies": [],
-      "description": "Select primitive",
-      "name": "select",
-      "registryDependencies": [
-        "utils"
-      ],
-      "title": "Select",
-      "type": "registry:ui"
-    },
-    {
-      "dependencies": [],
-      "description": "Separator primitive",
-      "name": "separator",
-      "registryDependencies": [
-        "utils"
-      ],
-      "title": "Separator",
-      "type": "registry:ui"
-    },
-    {
-      "dependencies": [],
-      "description": "Skeleton primitive",
-      "name": "skeleton",
-      "registryDependencies": [
-        "utils"
-      ],
-      "title": "Skeleton",
-      "type": "registry:ui"
-    },
-    {
-      "dependencies": [],
-      "description": "Stack primitive",
-      "name": "stack",
-      "registryDependencies": [
-        "utils"
-      ],
-      "title": "Stack",
-      "type": "registry:ui"
-    },
-    {
-      "dependencies": [],
-      "description": "Switch primitive",
-      "name": "switch",
-      "registryDependencies": [
-        "utils"
-      ],
-      "title": "Switch",
-      "type": "registry:ui"
-    },
-    {
-      "dependencies": [],
-      "description": "Table primitive",
-      "name": "table",
-      "registryDependencies": [
-        "utils"
-      ],
-      "title": "Table",
-      "type": "registry:ui"
-    },
-    {
-      "dependencies": [],
-      "description": "Text primitive",
-      "name": "text",
-      "registryDependencies": [
-        "utils"
-      ],
-      "title": "Text",
-      "type": "registry:ui"
-    },
-    {
-      "dependencies": [],
-      "description": "Textarea primitive",
-      "name": "textarea",
-      "registryDependencies": [
-        "utils"
-      ],
-      "title": "Textarea",
-      "type": "registry:ui"
-    },
-    {
-      "dependencies": [],
-      "description": "Title primitive",
-      "name": "title",
-      "registryDependencies": [
-        "utils"
-      ],
-      "title": "Title",
-      "type": "registry:ui"
-    },
-    {
-      "dependencies": [
-        "clsx",
-        "tailwind-merge"
-      ],
-      "description": "Escape and pointer-down outside the node call onDismiss. Returns the cleanup.",
-      "name": "utils",
-      "registryDependencies": [],
-      "title": "Utils",
-      "type": "registry:utils"
+      "title": "Zone Table",
+      "type": "registry:block"
     }
   ],
-  "lastUpdated": "2026-10-14T00:45:47+03:00",
+  "lastUpdated": "2026-11-02T01:32:07+03:00",
   "registry": "ui",
   "version": "0.1.0"
 }
