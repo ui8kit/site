@@ -2,8 +2,7 @@
 Each item exists for <strong>Svelte, React, Vue and Solid</strong> and as server templates for <strong>Go templ, Twig, Latte and Jinja2</strong>; this site only shows the code and the install command.</p>
 <h2 id="1-point-the-cli-at-a-runtime">1. Point the CLI at a runtime</h2>
 <p>Every runtime has its own registry root: <code>https://registry.buildy.tw/&lt;runtime&gt;</code> with <code>svelte</code>, <code>react</code>, <code>vue</code>, <code>solid</code>, <code>templ</code>, <code>twig</code>, <code>latte</code> or <code>jinja2</code> (see <a href="/docs/installation/">Installation</a>).</p>
-<pre tabindex="0"><code class="language-bash">npx ui8kit init --yes --framework svelte --dir src \
-  --registry-url https://registry.buildy.tw/svelte --strict-cdn
+<pre tabindex="0"><code class="language-bash">npx ui8kit init --yes --framework svelte --dir src
 </code></pre>
 <p><code>init</code> writes <code>ui8kit.config.json</code> and installs the shared helpers (<code>utils/</code>, <code>presets/</code>).</p>
 <h2 id="2-add-an-item">2. Add an item</h2>

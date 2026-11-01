@@ -11,8 +11,7 @@ Each item exists for **Svelte, React, Vue and Solid** and as server templates fo
 Every runtime has its own registry root: `{{REGISTRY_URL}}/<runtime>` with `svelte`, `react`, `vue`, `solid`, `templ`, `twig`, `latte` or `jinja2` (see [Installation](/docs/installation/)).
 
 ```bash
-npx ui8kit init --yes --framework svelte --dir src \
-  --registry-url {{REGISTRY_URL}}/svelte --strict-cdn
+npx ui8kit init --yes --framework svelte --dir src
 ```
 
 `init` writes `ui8kit.config.json` and installs the shared helpers (`utils/`, `presets/`).

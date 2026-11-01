@@ -3,7 +3,7 @@ title: CLI
 description: "The ui8kit CLI commands and how they map to the r/ registry."
 order: 3
 ---
-The CLI is `ui8kit` on npm (current version 3.3.0, config contract 2.0.0; `npx ui8kit` runs the latest). Runtimes published in this registry (8): `svelte`, `react`, `vue`, `solid`, `templ`, `twig`, `latte`, `jinja2`. Web Components (`webcomponent`) are experimental and not published yet: the CLI rejects that framework with a clear message. Source: [github.com/ui8kit/cli](https://github.com/ui8kit/cli).
+The CLI is `ui8kit` on npm (current version 3.4.0, config contract 2.0.0; `npx ui8kit` runs the latest). Since 3.4.0 this registry is the CLI default: `{{REGISTRY_URL}}/<runtime>` is used without `--registry-url` (the npm mirror `@ui8kit/registry` is opt-in). Runtimes published in this registry (8): `svelte`, `react`, `vue`, `solid`, `templ`, `twig`, `latte`, `jinja2`. Web Components (`webcomponent`) are experimental and not published yet: the CLI rejects that framework with a clear message. Source: [github.com/ui8kit/cli](https://github.com/ui8kit/cli).
 
 | Command | What it does |
 |---|---|
@@ -23,8 +23,6 @@ The CLI is `ui8kit` on npm (current version 3.3.0, config contract 2.0.0; `npx u
   "framework": "react",
   "runtime": "react",
   "dir": "src",
-  "registryUrl": "{{REGISTRY_URL}}/react",
-  "strictCdn": true,
   "importStyle": "alias"
 }
 ```

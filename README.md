@@ -67,7 +67,7 @@ and `blocks.zip`. Source of truth is `builder-registry/` (committed; copied into
 version with `WPFASTY=<wp-fasty checkout> bun run registry:wpfasty [--version x.y.z]`; `registry:validate` checks it
 (spec: wp-fasty `docs/agent/builder-registry.md`).
 JSON Schemas: `https://registry.buildy.tw/schema/{registry,registry-item,config}.json` (source `registry/schema/`, copied to `r/schema/` by `registry:build`;
-every `$schema` in `r/` points there; ui8kit CLI >= 3.3.0 writes `…/schema/config.json` into `ui8kit.config.json`). Not schema.buildy.tw (that is the Codex contract).
+every `$schema` in `r/` points there; ui8kit CLI >= 3.4.0 uses `https://registry.buildy.tw/<runtime>` as its default registry and writes `…/schema/config.json` into `ui8kit.config.json`). Not schema.buildy.tw (that is the Codex contract).
 Web Components: no `r/webcomponent/` yet (experimental, the CLI rejects that framework); 8 runtimes are published.
 Solid, Jinja2 and the full templ/Twig/Latte items need ui8kit CLI >= 2.0.3 (see docs/PLAN.md, "Registry shape").
 

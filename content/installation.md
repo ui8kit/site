@@ -16,7 +16,7 @@ order: 2
 | Latte | `{{REGISTRY_URL}}/latte` |
 | Jinja2 | `{{REGISTRY_URL}}/jinja2` |
 
-The URL is the **base** the CLI appends `index.json` and `components/ui/<name>.json` to. Use `--strict-cdn` so the CLI never falls back to the public CDN.
+The URL is the **base** the CLI appends `index.json` and `components/ui/<name>.json` to. ui8kit 3.4.0+ uses these roots by default (`--framework <runtime>` picks the root), so `--registry-url` is only needed for another registry.
 
 ## What lands where
 
@@ -47,14 +47,16 @@ The templ files keep the module path `github.com/codegen-x/ui8kit/packages/templ
 
 Pass `--framework <runtime>` (`svelte`, `react`, `vue`, `solid`, `templ`, `twig`, `latte` or `jinja2`) together with the matching registry URL. The registry is
 already split per runtime, and ui8kit 2.0.3 or later installs every file of an item (the `*.types.ts` files that blocks import, Solid views, templ and
-template helpers), so `add --all` leaves no unresolved import or missing template. Use ui8kit 3.3.0 or later (`npx ui8kit` runs the latest): it also lets `add -y --framework <runtime>` run `init` for you in a fresh project.
+template helpers), so `add --all` leaves no unresolved import or missing template. Use ui8kit 3.4.0 or later (`npx ui8kit` runs the latest): this registry is its default, and `add -y --framework <runtime>` runs `init` for you in a fresh project.
 
 ```bash
-npx ui8kit init --yes --framework react --dir src --registry-url {{REGISTRY_URL}}/react --strict-cdn
+npx ui8kit init --yes --framework react --dir src
 npx ui8kit add button card hero-split
+# or in one step, without init:
+npx ui8kit add button -y --framework react
 ```
 
 ```bash
-npx ui8kit init --yes --framework twig --dir templates --registry-url {{REGISTRY_URL}}/twig --strict-cdn
+npx ui8kit init --yes --framework twig --dir templates
 npx ui8kit add hero-split
 ```
