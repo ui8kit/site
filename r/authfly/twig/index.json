@@ -109,7 +109,7 @@
     "widgets"
   ],
   "version": "1.0.0",
-  "lastUpdated": "2026-11-01T23:26:19.386Z",
+  "lastUpdated": "2026-11-02T15:14:01.304Z",
   "registry": "ui",
   "meta": {
     "primitives": {
@@ -119,6 +119,6 @@
       "url": "https://unpkg.com/@ui8kit/registry@3.3.0/r/twig"
     },
     "source": "packages/ui/twig",
-    "generatedBy": "tools/gen-registry.ts"
+    "generatedBy": "authfly/codegen (registry)"
   }
 }

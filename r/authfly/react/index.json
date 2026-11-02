@@ -144,7 +144,7 @@
     "widgets"
   ],
   "version": "1.0.0",
-  "lastUpdated": "2026-11-01T23:26:16.943Z",
+  "lastUpdated": "2026-11-02T15:13:58.661Z",
   "registry": "ui",
   "meta": {
     "primitives": {
@@ -154,6 +154,6 @@
       "url": "https://unpkg.com/@ui8kit/registry@3.3.0/r/react"
     },
     "source": "packages/ui/react",
-    "generatedBy": "tools/gen-registry.ts"
+    "generatedBy": "authfly/codegen (registry)"
   }
 }

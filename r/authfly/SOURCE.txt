@@ -1,1 +1,1 @@
-Authfly brand registry, built from https://github.com/authfly/authkit/tree/d7bb0010c029f33312ae2a268ceee2fd43bd374d/packages/registry by tools/publish-registry.sh. Do not edit here.
+Authfly brand registry, built from https://github.com/authfly/authkit/tree/4b531fd94e2a80053d79918e515e787b361ac894/packages/registry by authfly/codegen scripts/publish-registry.sh. Do not edit here.

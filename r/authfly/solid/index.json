@@ -144,7 +144,7 @@
     "widgets"
   ],
   "version": "1.0.0",
-  "lastUpdated": "2026-11-01T23:26:18.283Z",
+  "lastUpdated": "2026-11-02T15:14:00.078Z",
   "registry": "ui",
   "meta": {
     "primitives": {
@@ -154,6 +154,6 @@
       "url": "https://unpkg.com/@ui8kit/registry@3.3.0/r/solid"
     },
     "source": "packages/ui/solid",
-    "generatedBy": "tools/gen-registry.ts"
+    "generatedBy": "authfly/codegen (registry)"
   }
 }

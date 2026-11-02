@@ -18,8 +18,10 @@
       "registryDependencies": [
         "authfly-lib",
         "https://unpkg.com/@ui8kit/registry@3.3.0/r/webcomponent/components/ui/box.json",
+        "https://unpkg.com/@ui8kit/registry@3.3.0/r/webcomponent/components/ui/button.json",
         "https://unpkg.com/@ui8kit/registry@3.3.0/r/webcomponent/components/ui/form.json",
         "https://unpkg.com/@ui8kit/registry@3.3.0/r/webcomponent/components/ui/icon.json",
+        "https://unpkg.com/@ui8kit/registry@3.3.0/r/webcomponent/components/ui/input.json",
         "https://unpkg.com/@ui8kit/registry@3.3.0/r/webcomponent/components/ui/label.json",
         "https://unpkg.com/@ui8kit/registry@3.3.0/r/webcomponent/components/ui/text.json",
         "https://unpkg.com/@ui8kit/registry@3.3.0/r/webcomponent/utils/utils.json"
@@ -68,7 +70,7 @@
     "widgets"
   ],
   "version": "1.0.0",
-  "lastUpdated": "2026-11-01T23:26:18.641Z",
+  "lastUpdated": "2026-11-02T15:14:00.491Z",
   "registry": "ui",
   "meta": {
     "primitives": {
@@ -78,6 +80,6 @@
       "url": "https://unpkg.com/@ui8kit/registry@3.3.0/r/webcomponent"
     },
     "source": "packages/ui/webcomponent",
-    "generatedBy": "tools/gen-registry.ts"
+    "generatedBy": "authfly/codegen (registry)"
   }
 }
