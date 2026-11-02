@@ -11,6 +11,7 @@ import { execFileSync } from "node:child_process";
 import { cpSync, existsSync, mkdirSync, readdirSync, readFileSync, rmSync, statSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import { buildTemplateRuntime, TEMPLATE_RUNTIMES, type Kind } from "./template-runtimes";
+import { rewriteKitRefs } from "./kit-paths";
 
 export const TS_RUNTIMES = ["svelte", "react", "vue", "solid"] as const;
 export const RUNTIMES = [...TS_RUNTIMES, ...TEMPLATE_RUNTIMES] as const;
@@ -103,13 +104,10 @@ export function tsSourceFiles(rt: TsRuntime): { files: { src: string; target: st
   const files: { src: string; target: string }[] = [];
   for (const f of walk(kit)) if (/^(ui|utils)\//.test(f)) files.push({ src: path.join(kit, f), target: `kit/${f}` });
   for (const f of walk(comp)) if (/^(compose|components|blocks|icons|presets|utils|styles)\//.test(f)) files.push({ src: path.join(comp, f), target: f });
-  const kitRe = new RegExp(`(["'])((?:\\.\\./)+)kit/${rt}/src/`, "g");
   const read = (src: string) => {
     const c = readFileSync(src, "utf8");
     if (!src.startsWith(comp + path.sep)) return c;
-    const rel = path.relative(comp, src).split(path.sep).join("/");
-    const up = path.posix.relative(path.posix.dirname(rel), "kit") || ".";
-    return c.replace(kitRe, (_m, q) => `${q}${up.startsWith(".") ? up : "./" + up}/`);
+    return rewriteKitRefs(c, path.relative(comp, src).split(path.sep).join("/"), rt);
   };
   return { files: files.sort((a, b) => cmp(a.target, b.target)), read };
 }
