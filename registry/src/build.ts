@@ -8,10 +8,11 @@
 // Deterministic: sorted keys and items, no timestamps (lastUpdated = commit date of the source), sha256 per file.
 import { createHash } from "node:crypto";
 import { execFileSync } from "node:child_process";
-import { cpSync, existsSync, mkdirSync, readdirSync, readFileSync, rmSync, statSync, writeFileSync } from "node:fs";
+import { cpSync, existsSync, mkdirSync, readdirSync, readFileSync, statSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import { buildTemplateRuntime, TEMPLATE_RUNTIMES, type Kind } from "./template-runtimes";
 import { rewriteKitRefs } from "./kit-paths";
+import { cleanGenerated } from "./clean-out";
 
 export const TS_RUNTIMES = ["svelte", "react", "vue", "solid"] as const;
 export const RUNTIMES = [...TS_RUNTIMES, ...TEMPLATE_RUNTIMES] as const;
@@ -206,12 +207,9 @@ function main() {
   const commit = git(["rev-parse", "HEAD"]);
   const commitDate = git(["show", "-s", "--format=%cI", "HEAD"]) || "1970-01-01T00:00:00.000Z";
   const dirty = git(["status", "--porcelain", "--", "packages/kit", "packages/kit-compose", "packages/compose-gen/specs"]) !== "";
-  // r/vercel.json (deploy config of the registry project) is hand-written: keep it across rebuilds
-  const keepFile = path.join(OUT, "vercel.json");
-  const kept = existsSync(keepFile) ? readFileSync(keepFile) : null;
-  if (existsSync(OUT)) rmSync(OUT, { recursive: true });
-  mkdirSync(OUT, { recursive: true });
-  if (kept) writeFileSync(keepFile, kept);
+  // clean only what this build writes (runtime dirs, schema/, manifest.json, registry.json); foreign entries
+  // such as r/authfly (separate Authfly registry) and the hand-written r/vercel.json stay untouched
+  cleanGenerated(OUT, RUNTIMES);
   // WP FastY builder registries (r/<latte|twig>/wpfasty/, own format wpfasty-catalog@2, immutable versions) are not
   // built here: their source of truth is builder-registry/ (scripts/wpfasty-registry.sh); keep them in r/.
   for (const rt of ["latte", "twig"]) {
