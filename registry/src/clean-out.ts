@@ -1,5 +1,6 @@
 // Cleans only what registry:build generates under the output root (r/): the runtime dirs, schema/ and the
-// top-level manifest.json / registry.json. Anything else (r/authfly, r/vercel.json, other foreign dirs) is left untouched.
+// top-level manifest.json / registry.json. r/ is SHARED with other registries (r/authfly, r/app, r/dashboard, ...):
+// this is an explicit allowlist of what this build owns; never delete anything outside it.
 import { mkdirSync, rmSync } from "node:fs";
 import path from "node:path";
 

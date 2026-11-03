@@ -14,12 +14,12 @@ test("cleanGenerated removes stale generated runtimes, keeps foreign dirs", () =
     put("manifest.json");
     put("registry.json");
     put("authfly/react/index.json", "authfly");
-    put("other/x.json", "foreign");
+    for (const d of ["app", "dashboard", "messanger"]) put(`${d}/react/index.json`, d);
     put("vercel.json", "{}");
     cleanGenerated(out, ["react", "twig", "vue"]);
     for (const p of ["react", "twig", "schema", "manifest.json", "registry.json"]) expect(existsSync(path.join(out, p))).toBe(false);
     expect(readFileSync(path.join(out, "authfly/react/index.json"), "utf8")).toBe("authfly");
-    expect(readFileSync(path.join(out, "other/x.json"), "utf8")).toBe("foreign");
+    for (const d of ["app", "dashboard", "messanger"]) expect(readFileSync(path.join(out, `${d}/react/index.json`), "utf8")).toBe(d);
     expect(readFileSync(path.join(out, "vercel.json"), "utf8")).toBe("{}");
   } finally { rmSync(out, { recursive: true, force: true }); }
 });
