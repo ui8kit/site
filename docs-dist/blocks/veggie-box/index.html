@@ -1,0 +1,773 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Veggie Box (block) | ui8kit</title><meta name="description" content="Fill a box by weight: produce tiles beside the box with a meter."><link rel="canonical" href="https://ui.buildy.tw/blocks/veggie-box/"><script src="/assets/theme.js"></script><link rel="stylesheet" href="/assets/site.css"><link rel="stylesheet" href="/assets/skins.css"><script src="/assets/app.js" defer></script></head><body class="min-h-screen bg-background text-foreground font-sans"><a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:left-2 focus:top-2 focus:bg-background focus:px-4 focus:py-2 focus:z-50">Skip to content</a><header class="border-b border-border"><div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-4 py-4"><a href="/" class="text-lg font-semibold">ui8kit</a><nav class="flex items-center gap-4 text-sm" aria-label="Main"><a href="/docs/" class="hover:underline">Docs</a><a href="/docs/categories/blocks-marketing/" class="hover:underline">Blocks</a><a href="/docs/categories/primitives/" class="hover:underline">Primitives</a><a href="/templates/" class="hover:underline">Templates</a><a href="/docs/cli/" class="hover:underline">CLI</a></nav><form id="search" class="grid gap-4 relative w-full sm:w-72" data-index="/search-index.json" role="search"><label class="text-xs font-bold text-foreground sr-only" for="search-input">Search components and blocks</label><input id="search-input" type="search" placeholder="Search, press /" autocomplete="off" class="w-full min-w-0 text-foreground inset-ring inset-ring-input outline-none placeholder:text-muted-foreground disabled:cursor-not-allowed disabled:opacity-50 focus-visible:inset-ring-ring rounded h-10 bg-card px-4 text-sm md:text-sm"><ul class="absolute left-0 right-0 top-12 z-40 rounded border border-border bg-popover text-popover-foreground shadow-md" aria-live="polite" hidden id="search-results"></ul></form><div class="theme-ctl items-center gap-2 text-sm"><label class="text-xs font-bold text-foreground sr-only" for="theme-select">Colour mode</label><select id="theme-select" class="min-w-0 inset-ring inset-ring-input outline-none placeholder:text-muted-foreground disabled:cursor-not-allowed disabled:opacity-50 focus-visible:inset-ring-ring rounded h-10 text-sm w-auto bg-card px-2 text-card-foreground"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select><label class="text-xs font-bold text-foreground sr-only" for="skin-select">Skin</label><select id="skin-select" class="min-w-0 inset-ring inset-ring-input outline-none placeholder:text-muted-foreground disabled:cursor-not-allowed disabled:opacity-50 focus-visible:inset-ring-ring rounded h-10 text-sm w-auto bg-card px-2 text-card-foreground"><option value="" selected>Default</option><option value="sky">Sky</option><option value="modern-minimal">Modern Minimal</option><option value="violet-bloom">Violet Bloom</option><option value="t3-chat">T3 Chat</option><option value="bubblegum">Bubblegum</option><option value="doom-64">Doom 64</option><option value="amber-minimal">Amber Minimal</option><option value="supabase">Supabase</option><option value="kodama-grove">Kodama Grove</option><option value="perpetuity">Perpetuity</option><option value="cosmic-night">Cosmic Night</option><option value="claude">Claude</option><option value="mocha-mousse">Mocha Mousse</option><option value="neo-brutalism">Neo Brutalism</option><option value="notebook">Notebook</option></select></div></div></header><div class="mx-auto flex max-w-6xl flex-col gap-8 px-4 py-8 md:flex-row"><nav class="md:w-64 md:shrink-0" aria-label="Docs"><h2 class="text-foreground text-sm font-semibold mb-2">Guides</h2><ul class="mb-6 flex flex-col gap-1"><li class=""><a href="/docs/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Overview</a></li><li class=""><a href="/docs/getting-started/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Getting started</a></li><li class=""><a href="/docs/installation/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Installation</a></li><li class=""><a href="/docs/cli/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">CLI</a></li><li class=""><a href="/docs/theming-skins/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Theming and skins</a></li><li class=""><a href="/docs/grid-8px/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">The 8px grid</a></li></ul><h2 class="text-foreground text-sm font-semibold mb-2">Categories</h2><ul class="mb-6 flex flex-col gap-1"><li class=""><a href="/docs/categories/primitives/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Primitives</a></li><li class=""><a href="/docs/categories/components/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Components</a></li><li class=""><a href="/docs/categories/blocks-marketing/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: marketing</a></li><li class=""><a href="/docs/categories/blocks-commerce/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: commerce</a></li><li class=""><a href="/docs/categories/blocks-dashboard/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: dashboard</a></li><li class=""><a href="/docs/categories/blocks-content/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: content</a></li><li class=""><a href="/docs/categories/blocks-account/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: account</a></li><li class=""><a href="/docs/categories/blocks-promo/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: promo</a></li><li class=""><a href="/docs/categories/blocks-support/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: support</a></li><li class=""><a href="/docs/categories/blocks-onboarding/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: onboarding</a></li><li class=""><a href="/docs/categories/blocks-general/" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">Blocks: general</a></li></ul></nav> <main class="min-w-0 flex-1" id="main"><article class=""><p class="text-sm text-muted-foreground"><a href="/docs/categories/blocks-commerce/" class="underline">block / commerce</a></p><h1 class="text-foreground text-3xl font-semibold mb-2 tracking-tight">Veggie Box</h1><p class="mb-6 max-w-3xl text-muted-foreground">Fill a box by weight: produce tiles beside the box with a meter.</p><h2 class="text-foreground text-xl font-semibold mb-2">Install</h2><div class="mb-6 max-w-xl"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code class="overflow-x-auto whitespace-nowrap font-mono text-sm" id="install-veggie-box" tabindex="0">npx ui8kit add veggie-box</code><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="install-veggie-box" hidden>Copy</button></div></div><p class="text-sm mb-6 text-muted-foreground">Pulls in:   <a href="/primitives/box/" class="underline">box</a><span class="">, </span> <a href="/primitives/button/" class="underline">button</a><span class="">, </span> <a href="/primitives/compose/" class="underline">compose</a><span class="">, </span> <a href="/blocks/dish-showcase/" class="underline">dish-showcase</a><span class="">, </span> <a href="/components/empty-state/" class="underline">empty-state</a><span class="">, </span> <a href="/primitives/group/" class="underline">group</a><span class="">, </span> <a href="/primitives/inline/" class="underline">inline</a><span class="">, </span> <a href="/primitives/kit-box/" class="underline">kit-box</a><span class="">, </span> <a href="/primitives/kit-button/" class="underline">kit-button</a><span class="">, </span> <a href="/primitives/kit-label/" class="underline">kit-label</a><span class="">, </span> <a href="/primitives/kit-meter/" class="underline">kit-meter</a><span class="">, </span> <a href="/primitives/kit-text/" class="underline">kit-text</a><span class="">, </span> <a href="/primitives/label/" class="underline">label</a><span class="">, </span> <a href="/primitives/lucide-icon/" class="underline">lucide-icon</a><span class="">, </span> <a href="/components/media-frame/" class="underline">media-frame</a><span class="">, </span> <a href="/primitives/meter/" class="underline">meter</a><span class="">, </span> <a href="/components/number-field/" class="underline">number-field</a><span class="">, </span> <a href="/components/section-frame/" class="underline">section-frame</a><span class="">, </span> <a href="/primitives/stack/" class="underline">stack</a><span class="">, </span> <a href="/primitives/text/" class="underline">text</a><span class="">, </span> <a href="/lib/utils/" class="underline">utils</a></p> <h2 class="text-foreground text-xl font-semibold mb-2">Preview</h2><p class="text-sm mb-8 text-muted-foreground">No static preview for this item: it needs content or a parent that this page cannot supply. The code is below.</p><h2 class="text-foreground text-xl font-semibold mb-2">Code</h2><div class="rt mb-8"><div class="rt-bar" aria-label="Runtime" role="radiogroup"><input id="rt-svelte" type="radio" name="rt" value="svelte" class="shrink-0 appearance-none rounded-full bg-background inset-ring inset-ring-input checked:bg-primary checked:inset-ring-primary radio-glyph disabled:cursor-not-allowed disabled:opacity-50 [--dot:10px] sr-only size-px" checked><label class="text-xs font-bold text-foreground" for="rt-svelte">Svelte</label><input id="rt-react" type="radio" name="rt" value="react" class="shrink-0 appearance-none rounded-full bg-background inset-ring inset-ring-input checked:bg-primary checked:inset-ring-primary radio-glyph disabled:cursor-not-allowed disabled:opacity-50 [--dot:10px] sr-only size-px"><label class="text-xs font-bold text-foreground" for="rt-react">React</label><input id="rt-vue" type="radio" name="rt" value="vue" class="shrink-0 appearance-none rounded-full bg-background inset-ring inset-ring-input checked:bg-primary checked:inset-ring-primary radio-glyph disabled:cursor-not-allowed disabled:opacity-50 [--dot:10px] sr-only size-px"><label class="text-xs font-bold text-foreground" for="rt-vue">Vue</label><input id="rt-solid" type="radio" name="rt" value="solid" class="shrink-0 appearance-none rounded-full bg-background inset-ring inset-ring-input checked:bg-primary checked:inset-ring-primary radio-glyph disabled:cursor-not-allowed disabled:opacity-50 [--dot:10px] sr-only size-px"><label class="text-xs font-bold text-foreground" for="rt-solid">Solid</label><input id="rt-templ" type="radio" name="rt" value="templ" class="shrink-0 appearance-none rounded-full bg-background inset-ring inset-ring-input checked:bg-primary checked:inset-ring-primary radio-glyph disabled:cursor-not-allowed disabled:opacity-50 [--dot:10px] sr-only size-px"><label class="text-xs font-bold text-foreground" for="rt-templ">templ</label><input id="rt-twig" type="radio" name="rt" value="twig" class="shrink-0 appearance-none rounded-full bg-background inset-ring inset-ring-input checked:bg-primary checked:inset-ring-primary radio-glyph disabled:cursor-not-allowed disabled:opacity-50 [--dot:10px] sr-only size-px"><label class="text-xs font-bold text-foreground" for="rt-twig">Twig</label><input id="rt-latte" type="radio" name="rt" value="latte" class="shrink-0 appearance-none rounded-full bg-background inset-ring inset-ring-input checked:bg-primary checked:inset-ring-primary radio-glyph disabled:cursor-not-allowed disabled:opacity-50 [--dot:10px] sr-only size-px"><label class="text-xs font-bold text-foreground" for="rt-latte">Latte</label><input id="rt-jinja2" type="radio" name="rt" value="jinja2" class="shrink-0 appearance-none rounded-full bg-background inset-ring inset-ring-input checked:bg-primary checked:inset-ring-primary radio-glyph disabled:cursor-not-allowed disabled:opacity-50 [--dot:10px] sr-only size-px"><label class="text-xs font-bold text-foreground" for="rt-jinja2">Jinja2</label></div><section class="rt-panel" id="panel-svelte" aria-label="Svelte code" data-runtime="svelte"><p class="text-sm mb-2 text-muted-foreground">Point the CLI at this runtime once, then add the item:</p> <div class="mb-2"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code class="overflow-x-auto whitespace-nowrap font-mono text-sm" id="panel-svelte-init" tabindex="0">npx ui8kit init --yes --framework svelte --dir src --registry-url https://registry.buildy.tw/svelte --strict-cdn</code><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="panel-svelte-init" hidden>Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code class="overflow-x-auto whitespace-nowrap font-mono text-sm" id="panel-svelte-add" tabindex="0">npx ui8kit add veggie-box</code><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="panel-svelte-add" hidden>Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">blocks/veggie-box.svelte</span><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="code-svelte-0" hidden>Copy</button></div><pre class="hl max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6" tabindex="0"><code class="font-mono" id="code-svelte-0"><span class="c">&lt;!-- Code generated by packages/kit-compose/src/organisms.ts from packages/compose-gen/specs (compose-gen organism emitters on kit-compose). DO NOT EDIT. --&gt;</span>
+<span class="c">&lt;!--
+</span><span class="c">  A vegetable box by weight: produce tiles (picture, name, price per kg, a weight field in kg named after the
+</span><span class="c">  item) beside the box card with a meter of how full the box is, the total and the order button. Axes: layout
+</span><span class="c">  (split, stacked), tone.
+</span><span class="c">--&gt;</span>
+&lt;<span class="nt">script</span> <span class="na">lang</span>=<span class="s">&#34;ts&#34;</span> <span class="na">module</span>&gt;
+  <span class="kr">import</span> <span class="kr">type</span> { Snippet } <span class="kr">from</span> <span class="s2">&#34;svelte&#34;</span>;
+  <span class="kr">import</span> <span class="kr">type</span> { Dish, FoodLabels } <span class="kr">from</span> <span class="s2">&#34;./dish-showcase.types&#34;</span>;
+
+  <span class="kr">export</span> <span class="kr">type</span> VeggieBoxProps = {
+    id: <span class="kt">string</span>;
+    title: <span class="kt">string</span>;
+    lead?: <span class="kt">string</span>;
+    dishes: <span class="kt">Dish</span>[];
+    empty?: <span class="kt">string</span>;
+    labels: <span class="kt">FoodLabels</span>;
+    fill?: <span class="kt">number</span>;
+    total: <span class="kt">number</span>;
+    currency: <span class="kt">string</span>;
+    layout?: <span class="s2">&#34;split&#34;</span> | <span class="s2">&#34;stacked&#34;</span>;
+    tone?: <span class="s2">&#34;default&#34;</span> | <span class="s2">&#34;muted&#34;</span>;
+    landmarkLabel?: <span class="kt">string</span>;
+  };
+&lt;/<span class="nt">script</span>&gt;
+
+&lt;<span class="nt">script</span> <span class="na">lang</span>=<span class="s">&#34;ts&#34;</span>&gt;
+  <span class="kr">import</span> Box <span class="kr">from</span> <span class="s2">&#34;../compose/Box.svelte&#34;</span>;
+  <span class="kr">import</span> Button <span class="kr">from</span> <span class="s2">&#34;../compose/Button.svelte&#34;</span>;
+  <span class="kr">import</span> Group <span class="kr">from</span> <span class="s2">&#34;../compose/Group.svelte&#34;</span>;
+  <span class="kr">import</span> Inline <span class="kr">from</span> <span class="s2">&#34;../compose/Inline.svelte&#34;</span>;
+  <span class="kr">import</span> Label <span class="kr">from</span> <span class="s2">&#34;../compose/Label.svelte&#34;</span>;
+  <span class="kr">import</span> LucideIcon <span class="kr">from</span> <span class="s2">&#34;../icons/LucideIcon.svelte&#34;</span>;
+  <span class="kr">import</span> Meter <span class="kr">from</span> <span class="s2">&#34;../compose/Meter.svelte&#34;</span>;
+  <span class="kr">import</span> Stack <span class="kr">from</span> <span class="s2">&#34;../compose/Stack.svelte&#34;</span>;
+  <span class="kr">import</span> Text <span class="kr">from</span> <span class="s2">&#34;../compose/Text.svelte&#34;</span>;
+  <span class="kr">import</span> EmptyState <span class="kr">from</span> <span class="s2">&#34;../components/empty-state.svelte&#34;</span>;
+  <span class="kr">import</span> MediaFrame <span class="kr">from</span> <span class="s2">&#34;../components/media-frame.svelte&#34;</span>;
+  <span class="kr">import</span> NumberField <span class="kr">from</span> <span class="s2">&#34;../components/number-field.svelte&#34;</span>;
+  <span class="kr">import</span> SectionFrame <span class="kr">from</span> <span class="s2">&#34;../components/section-frame.svelte&#34;</span>;
+  <span class="kr">import</span> { fmtMoney, tpl } <span class="kr">from</span> <span class="s2">&#34;../utils&#34;</span>;
+
+  <span class="kd">let</span> {
+    id,
+    title,
+    lead = <span class="s2">&#34;&#34;</span>,
+    dishes,
+    empty = <span class="s2">&#34;&#34;</span>,
+    labels,
+    fill = <span class="mi">60</span>,
+    total,
+    currency,
+    layout = <span class="s2">&#34;split&#34;</span>,
+    tone = <span class="s2">&#34;default&#34;</span>,
+    landmarkLabel,
+  }: VeggieBoxProps = $props();
+&lt;/<span class="nt">script</span>&gt;
+
+&lt;<span class="nt">SectionFrame</span> <span class="na">id</span>={id} <span class="s">title=</span>{title} <span class="na">lead</span>={lead} <span class="s">tone=</span>{tone} <span class="na">landmarkLabel</span>={landmarkLabel}<span class="err">&gt;</span>
+  {<span class="k">#if</span> ((dishes?.length ?? <span class="mi">0</span>) === <span class="mi">0</span>)}
+    &lt;<span class="nt">EmptyState</span> <span class="na">icon</span>=<span class="s">&#34;package&#34;</span> <span class="na">title</span>={empty} <span class="s">/</span>&gt;
+  {:<span class="k">else</span>}
+    &lt;<span class="nt">Box</span> <span class="na">class</span>=<span class="s">&#34;grid grid-cols-1 items-start gap-8 lg:grid-cols-3&#34;</span>&gt;
+      &lt;<span class="nt">Box</span>
+        <span class="na">class</span>={
+          (layout <span class="kr">as</span> <span class="kt">string</span>) === <span class="s2">&#34;split&#34;</span> ? <span class="s2">&#34;grid grid-cols-2 gap-4 md:grid-cols-3 lg:col-span-2&#34;</span>
+          : <span class="s2">&#34;grid grid-cols-2 gap-4 md:grid-cols-3 lg:col-span-3 lg:grid-cols-6&#34;</span>
+        }
+        <span class="s">data-testid=&#34;items&#34;</span>
+      &gt;
+        {<span class="k">#each</span> dishes <span class="kr">as</span> d (d.id)}
+          &lt;<span class="nt">Stack</span> <span class="na">gap</span>=<span class="s">&#34;2&#34;</span> <span class="na">class</span>=<span class="s">&#34;rounded bg-card inset-ring inset-ring-border p-4&#34;</span> <span class="na">data-testid</span>=<span class="s">&#34;item&#34;</span>&gt;
+            &lt;<span class="nt">MediaFrame</span> <span class="na">alt</span>={d.name} <span class="s">ratio=&#34;1/1&#34;</span> /&gt;
+            &lt;<span class="nt">Text</span> <span class="na">size</span>=<span class="s">&#34;sm&#34;</span> <span class="na">weight</span>=<span class="s">&#34;semibold&#34;</span>&gt;
+              {d.name}
+            &lt;/<span class="nt">Text</span>&gt;
+            &lt;<span class="nt">Text</span> <span class="na">size</span>=<span class="s">&#34;xs&#34;</span> <span class="na">class</span>=<span class="s">&#34;text-muted-foreground&#34;</span>&gt;
+              {tpl(labels.perKg, fmtMoney(d.price, d.currency))}
+            &lt;/<span class="nt">Text</span>&gt;
+            &lt;<span class="nt">NumberField</span>
+              <span class="na">value</span>=<span class="s">&#34;1&#34;</span>
+              <span class="na">name</span>={tpl(<span class="err">&#34;</span>{<span class="mi">0</span>}-kg-{<span class="mi">1</span>}<span class="s2">&#34;, id, d.id)}
+</span><span class="s2">              min=&#34;</span><span class="mi">0</span><span class="err">&#34;</span>
+              label={tpl(labels.weightOf, d.name)}
+              decrease={tpl(labels.decreaseOf, d.name)}
+              increase={tpl(labels.increaseOf, d.name)}
+            <span class="err">/&gt;</span>
+          &lt;/<span class="nt">Stack</span>&gt;
+        {<span class="k">/each</span>}
+      &lt;/<span class="nt">Box</span>&gt;
+      &lt;<span class="nt">Stack</span>
+        <span class="na">gap</span>=<span class="s">&#34;4&#34;</span>
+        <span class="na">class</span>={
+          (layout <span class="kr">as</span> <span class="kt">string</span>) === <span class="s2">&#34;split&#34;</span> ? <span class="s2">&#34;rounded bg-card inset-ring inset-ring-border p-6 lg:sticky lg:top-8&#34;</span>
+          : <span class="s2">&#34;rounded bg-card inset-ring inset-ring-border p-6 lg:col-span-3&#34;</span>
+        }
+        data-testid=<span class="s2">&#34;summary&#34;</span>
+      &gt;
+        &lt;<span class="nt">Text</span> <span class="na">size</span>=<span class="s">&#34;lg&#34;</span> <span class="na">weight</span>=<span class="s">&#34;semibold&#34;</span>&gt;
+          {labels.summary}
+        &lt;/<span class="nt">Text</span>&gt;
+        &lt;<span class="nt">Label</span> <span class="na">for</span>={tpl(<span class="err">&#34;</span>{<span class="mi">0</span>}-fill<span class="err">&#34;</span>, id)} <span class="kr">class</span>=<span class="s2">&#34;text-sm text-muted-foreground&#34;</span>&gt;
+          {labels.boxFill}
+        &lt;/<span class="nt">Label</span>&gt;
+        &lt;<span class="nt">Meter</span> <span class="na">value</span>={fill} min={<span class="mi">0</span>} max={<span class="mi">100</span>} id={tpl(<span class="err">&#34;</span>{<span class="mi">0</span>}-fill<span class="err">&#34;</span>, id)} <span class="err">/&gt;</span>
+        &lt;<span class="nt">Group</span> <span class="na">gap</span>=<span class="s">&#34;2&#34;</span> <span class="na">align</span>=<span class="s">&#34;baseline&#34;</span> <span class="na">justify</span>=<span class="s">&#34;between&#34;</span>&gt;
+          &lt;<span class="nt">Text</span> <span class="na">size</span>=<span class="s">&#34;sm&#34;</span> <span class="na">class</span>=<span class="s">&#34;text-muted-foreground&#34;</span>&gt;
+            {labels.total}
+          &lt;/<span class="nt">Text</span>&gt;
+          &lt;<span class="nt">Inline</span> <span class="na">class</span>=<span class="s">&#34;text-2xl font-bold&#34;</span> <span class="na">role</span>=<span class="s">&#34;status&#34;</span> <span class="na">aria-live</span>=<span class="s">&#34;polite&#34;</span> <span class="na">data-testid</span>=<span class="s">&#34;total&#34;</span>&gt;
+            {fmtMoney(total, currency)}
+          &lt;/<span class="nt">Inline</span>&gt;
+        &lt;/<span class="nt">Group</span>&gt;
+        &lt;<span class="nt">Button</span> <span class="na">variant</span>=<span class="s">&#34;default&#34;</span> <span class="na">size</span>=<span class="s">&#34;lg&#34;</span> <span class="na">type</span>=<span class="s">&#34;button&#34;</span> <span class="na">class</span>=<span class="s">&#34;w-full&#34;</span>&gt;
+          &lt;<span class="nt">LucideIcon</span> <span class="na">name</span>=<span class="s">&#34;shopping-bag&#34;</span> <span class="na">size</span>={<span class="mi">16</span>} <span class="err">/&gt;</span>
+          {labels.order}
+        &lt;/<span class="nt">Button</span>&gt;
+      &lt;/<span class="nt">Stack</span>&gt;
+    &lt;/<span class="nt">Box</span>&gt;
+  {<span class="k">/if</span>}
+&lt;/<span class="nt">SectionFrame</span>&gt;
+</code></pre></div> <p class="text-sm"><a href="https://registry.buildy.tw/svelte/blocks/veggie-box.json" class="underline">Svelte registry item (JSON)</a></p></section><section class="rt-panel" id="panel-react" aria-label="React code" data-runtime="react"><p class="text-sm mb-2 text-muted-foreground">Point the CLI at this runtime once, then add the item:</p> <div class="mb-2"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code class="overflow-x-auto whitespace-nowrap font-mono text-sm" id="panel-react-init" tabindex="0">npx ui8kit init --yes --framework react --dir src --registry-url https://registry.buildy.tw/react --strict-cdn</code><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="panel-react-init" hidden>Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code class="overflow-x-auto whitespace-nowrap font-mono text-sm" id="panel-react-add" tabindex="0">npx ui8kit add veggie-box</code><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="panel-react-add" hidden>Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">blocks/veggie-box.tsx</span><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="code-react-0" hidden>Copy</button></div><pre class="hl max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6" tabindex="0"><code class="font-mono" id="code-react-0"><span class="c1">// Code generated by packages/kit-compose/src/organisms.ts from packages/compose-gen/specs (compose-gen organism emitters on kit-compose). DO NOT EDIT.
+</span><span class="cm">/**
+</span><span class="cm"> * A vegetable box by weight: produce tiles (picture, name, price per kg, a weight field in kg named after the
+</span><span class="cm"> * item) beside the box card with a meter of how full the box is, the total and the order button. Axes: layout
+</span><span class="cm"> * (split, stacked), tone.
+</span><span class="cm"> */</span>
+<span class="kr">import</span> { <span class="kr">type</span> ReactNode } <span class="kr">from</span> <span class="s2">&#34;react&#34;</span>;
+<span class="kr">import</span> { Box, Button, Group, Inline, Label, Meter, Stack, Text } <span class="kr">from</span> <span class="s2">&#34;../compose&#34;</span>;
+<span class="kr">import</span> { LucideIcon } <span class="kr">from</span> <span class="s2">&#34;../icons/LucideIcon&#34;</span>;
+<span class="kr">import</span> { EmptyState } <span class="kr">from</span> <span class="s2">&#34;../components/empty-state&#34;</span>;
+<span class="kr">import</span> { MediaFrame } <span class="kr">from</span> <span class="s2">&#34;../components/media-frame&#34;</span>;
+<span class="kr">import</span> { NumberField } <span class="kr">from</span> <span class="s2">&#34;../components/number-field&#34;</span>;
+<span class="kr">import</span> { SectionFrame } <span class="kr">from</span> <span class="s2">&#34;../components/section-frame&#34;</span>;
+<span class="kr">import</span> { fmtMoney, tpl } <span class="kr">from</span> <span class="s2">&#34;../utils&#34;</span>;
+<span class="kr">import</span> <span class="kr">type</span> { Dish, FoodLabels } <span class="kr">from</span> <span class="s2">&#34;./dish-showcase.types&#34;</span>;
+
+<span class="kr">export</span> <span class="kr">type</span> VeggieBoxProps = {
+  id: <span class="kt">string</span>;
+  title: <span class="kt">string</span>;
+  lead?: <span class="kt">string</span>;
+  dishes: <span class="kt">Dish</span>[];
+  empty?: <span class="kt">string</span>;
+  labels: <span class="kt">FoodLabels</span>;
+  fill?: <span class="kt">number</span>;
+  total: <span class="kt">number</span>;
+  currency: <span class="kt">string</span>;
+  layout?: <span class="s2">&#34;split&#34;</span> | <span class="s2">&#34;stacked&#34;</span>;
+  tone?: <span class="s2">&#34;default&#34;</span> | <span class="s2">&#34;muted&#34;</span>;
+  landmarkLabel?: <span class="kt">string</span>;
+};
+
+<span class="kr">export</span> <span class="kd">function</span> VeggieBox({
+  id,
+  title,
+  lead = <span class="s2">&#34;&#34;</span>,
+  dishes,
+  empty = <span class="s2">&#34;&#34;</span>,
+  labels,
+  fill = <span class="mi">60</span>,
+  total,
+  currency,
+  layout = <span class="s2">&#34;split&#34;</span>,
+  tone = <span class="s2">&#34;default&#34;</span>,
+  landmarkLabel,
+}: VeggieBoxProps) {
+  <span class="k">return</span> (
+    &lt;<span class="nt">SectionFrame</span> <span class="na">id</span>={id} <span class="na">title</span>={title} <span class="na">lead</span>={lead} <span class="na">tone</span>={tone} <span class="na">landmarkLabel</span>={landmarkLabel}&gt;
+      {((dishes?.length ?? <span class="mi">0</span>) === <span class="mi">0</span>) ? (
+        &lt;<span class="nt">EmptyState</span> <span class="na">icon</span>=<span class="s">&#34;package&#34;</span> <span class="na">title</span>={empty} /&gt;
+      ) : (
+        &lt;<span class="nt">Box</span> <span class="na">className</span>=<span class="s">&#34;grid grid-cols-1 items-start gap-8 lg:grid-cols-3&#34;</span>&gt;
+          &lt;<span class="nt">Box</span>
+            <span class="na">className</span>={
+              (layout <span class="kr">as</span> <span class="kt">string</span>) === <span class="s2">&#34;split&#34;</span> ? <span class="s2">&#34;grid grid-cols-2 gap-4 md:grid-cols-3 lg:col-span-2&#34;</span>
+              : <span class="s2">&#34;grid grid-cols-2 gap-4 md:grid-cols-3 lg:col-span-3 lg:grid-cols-6&#34;</span>
+            }
+            <span class="na">data-testid</span>=<span class="s">&#34;items&#34;</span>
+          &gt;
+            {(dishes ?? []).map((d) =&gt; (
+              &lt;<span class="nt">Stack</span> <span class="na">key</span>={d.id} <span class="na">gap</span>=<span class="s">&#34;2&#34;</span> <span class="na">className</span>=<span class="s">&#34;rounded bg-card inset-ring inset-ring-border p-4&#34;</span> <span class="na">data-testid</span>=<span class="s">&#34;item&#34;</span>&gt;
+                &lt;<span class="nt">MediaFrame</span> <span class="na">alt</span>={d.name} <span class="na">ratio</span>=<span class="s">&#34;1/1&#34;</span> /&gt;
+                &lt;<span class="nt">Text</span> <span class="na">size</span>=<span class="s">&#34;sm&#34;</span> <span class="na">weight</span>=<span class="s">&#34;semibold&#34;</span>&gt;
+                  {d.name}
+                &lt;/<span class="nt">Text</span>&gt;
+                &lt;<span class="nt">Text</span> <span class="na">size</span>=<span class="s">&#34;xs&#34;</span> <span class="na">className</span>=<span class="s">&#34;text-muted-foreground&#34;</span>&gt;
+                  {tpl(labels.perKg, fmtMoney(d.price, d.currency))}
+                &lt;/<span class="nt">Text</span>&gt;
+                &lt;<span class="nt">NumberField</span>
+                  <span class="na">value</span>=<span class="s">&#34;1&#34;</span>
+                  <span class="na">name</span>={tpl(<span class="s2">&#34;{0}-kg-{1}&#34;</span>, id, d.id)}
+                  <span class="na">min</span>=<span class="s">&#34;0&#34;</span>
+                  <span class="na">label</span>={tpl(labels.weightOf, d.name)}
+                  <span class="na">decrease</span>={tpl(labels.decreaseOf, d.name)}
+                  <span class="na">increase</span>={tpl(labels.increaseOf, d.name)}
+                /&gt;
+              &lt;/<span class="nt">Stack</span>&gt;
+            ))}
+          &lt;/<span class="nt">Box</span>&gt;
+          &lt;<span class="nt">Stack</span>
+            <span class="na">gap</span>=<span class="s">&#34;4&#34;</span>
+            <span class="na">className</span>={
+              (layout <span class="kr">as</span> <span class="kt">string</span>) === <span class="s2">&#34;split&#34;</span> ? <span class="s2">&#34;rounded bg-card inset-ring inset-ring-border p-6 lg:sticky lg:top-8&#34;</span>
+              : <span class="s2">&#34;rounded bg-card inset-ring inset-ring-border p-6 lg:col-span-3&#34;</span>
+            }
+            <span class="na">data-testid</span>=<span class="s">&#34;summary&#34;</span>
+          &gt;
+            &lt;<span class="nt">Text</span> <span class="na">size</span>=<span class="s">&#34;lg&#34;</span> <span class="na">weight</span>=<span class="s">&#34;semibold&#34;</span>&gt;
+              {labels.summary}
+            &lt;/<span class="nt">Text</span>&gt;
+            &lt;<span class="nt">Label</span> <span class="na">htmlFor</span>={tpl(<span class="s2">&#34;{0}-fill&#34;</span>, id)} <span class="na">className</span>=<span class="s">&#34;text-sm text-muted-foreground&#34;</span>&gt;
+              {labels.boxFill}
+            &lt;/<span class="nt">Label</span>&gt;
+            &lt;<span class="nt">Meter</span> <span class="na">value</span>={fill} <span class="na">min</span>={<span class="mi">0</span>} <span class="na">max</span>={<span class="mi">100</span>} <span class="na">id</span>={tpl(<span class="s2">&#34;{0}-fill&#34;</span>, id)} /&gt;
+            &lt;<span class="nt">Group</span> <span class="na">gap</span>=<span class="s">&#34;2&#34;</span> <span class="na">align</span>=<span class="s">&#34;baseline&#34;</span> <span class="na">justify</span>=<span class="s">&#34;between&#34;</span>&gt;
+              &lt;<span class="nt">Text</span> <span class="na">size</span>=<span class="s">&#34;sm&#34;</span> <span class="na">className</span>=<span class="s">&#34;text-muted-foreground&#34;</span>&gt;
+                {labels.total}
+              &lt;/<span class="nt">Text</span>&gt;
+              &lt;<span class="nt">Inline</span> <span class="na">className</span>=<span class="s">&#34;text-2xl font-bold&#34;</span> <span class="na">role</span>=<span class="s">&#34;status&#34;</span> <span class="na">aria-live</span>=<span class="s">&#34;polite&#34;</span> <span class="na">data-testid</span>=<span class="s">&#34;total&#34;</span>&gt;
+                {fmtMoney(total, currency)}
+              &lt;/<span class="nt">Inline</span>&gt;
+            &lt;/<span class="nt">Group</span>&gt;
+            &lt;<span class="nt">Button</span> <span class="na">variant</span>=<span class="s">&#34;default&#34;</span> <span class="na">size</span>=<span class="s">&#34;lg&#34;</span> <span class="na">type</span>=<span class="s">&#34;button&#34;</span> <span class="na">className</span>=<span class="s">&#34;w-full&#34;</span>&gt;
+              &lt;<span class="nt">LucideIcon</span> <span class="na">name</span>=<span class="s">&#34;shopping-bag&#34;</span> <span class="na">size</span>={<span class="mi">16</span>} /&gt;
+              {labels.order}
+            &lt;/<span class="nt">Button</span>&gt;
+          &lt;/<span class="nt">Stack</span>&gt;
+        &lt;/<span class="nt">Box</span>&gt;
+      )}
+    &lt;/<span class="nt">SectionFrame</span>&gt;
+  );
+}
+</code></pre></div> <p class="text-sm"><a href="https://registry.buildy.tw/react/blocks/veggie-box.json" class="underline">React registry item (JSON)</a></p></section><section class="rt-panel" id="panel-vue" aria-label="Vue code" data-runtime="vue"><p class="text-sm mb-2 text-muted-foreground">Point the CLI at this runtime once, then add the item:</p> <div class="mb-2"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code class="overflow-x-auto whitespace-nowrap font-mono text-sm" id="panel-vue-init" tabindex="0">npx ui8kit init --yes --framework vue --dir src --registry-url https://registry.buildy.tw/vue --strict-cdn</code><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="panel-vue-init" hidden>Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code class="overflow-x-auto whitespace-nowrap font-mono text-sm" id="panel-vue-add" tabindex="0">npx ui8kit add veggie-box</code><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="panel-vue-add" hidden>Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">blocks/veggie-box.vue</span><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="code-vue-0" hidden>Copy</button></div><pre class="hl max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6" tabindex="0"><code class="font-mono" id="code-vue-0"><span class="c">&lt;!--</span> Code generated by packages/kit-compose/src/organisms.ts from packages/compose-gen/specs (compose-gen organism emitters on kit-compose). DO NOT EDIT. --&gt;
+<span class="c">&lt;!--</span>
+  A vegetable box by weight: produce tiles (picture, name, price per kg, a weight field <span class="k">in</span> kg named after the
+  item) beside the box card <span class="kd">with</span> a meter <span class="k">of</span> how full the box is, the total and the order button. Axes: layout
+  (split, stacked), tone.
+--&gt;
+&lt;<span class="nt">script</span> <span class="na">lang</span>=<span class="s">&#34;ts&#34;</span>&gt;
+<span class="kr">import</span> type { Dish, FoodLabels } from <span class="s2">&#34;./dish-showcase.types&#34;</span>;
+
+<span class="kr">export</span> type VeggieBoxProps = {
+  id: string;
+  title: string;
+  lead?: string;
+  dishes: Dish[];
+  empty?: string;
+  labels: FoodLabels;
+  fill?: number;
+  total: number;
+  currency: string;
+  layout?: <span class="s2">&#34;split&#34;</span> | <span class="s2">&#34;stacked&#34;</span>;
+  tone?: <span class="s2">&#34;default&#34;</span> | <span class="s2">&#34;muted&#34;</span>;
+  landmarkLabel?: string;
+};
+&lt;/<span class="nt">script</span>&gt;
+
+&lt;<span class="nt">script</span> <span class="na">setup</span> <span class="na">lang</span>=<span class="s">&#34;ts&#34;</span>&gt;
+<span class="kr">import</span> Box from <span class="s2">&#34;../compose/Box.vue&#34;</span>;
+<span class="kr">import</span> Button from <span class="s2">&#34;../compose/Button.vue&#34;</span>;
+<span class="kr">import</span> Group from <span class="s2">&#34;../compose/Group.vue&#34;</span>;
+<span class="kr">import</span> Inline from <span class="s2">&#34;../compose/Inline.vue&#34;</span>;
+<span class="kr">import</span> Label from <span class="s2">&#34;../compose/Label.vue&#34;</span>;
+<span class="kr">import</span> LucideIcon from <span class="s2">&#34;../icons/LucideIcon.vue&#34;</span>;
+<span class="kr">import</span> Meter from <span class="s2">&#34;../compose/Meter.vue&#34;</span>;
+<span class="kr">import</span> Stack from <span class="s2">&#34;../compose/Stack.vue&#34;</span>;
+<span class="kr">import</span> Text from <span class="s2">&#34;../compose/Text.vue&#34;</span>;
+<span class="kr">import</span> EmptyState from <span class="s2">&#34;../components/empty-state.vue&#34;</span>;
+<span class="kr">import</span> MediaFrame from <span class="s2">&#34;../components/media-frame.vue&#34;</span>;
+<span class="kr">import</span> NumberField from <span class="s2">&#34;../components/number-field.vue&#34;</span>;
+<span class="kr">import</span> SectionFrame from <span class="s2">&#34;../components/section-frame.vue&#34;</span>;
+<span class="kr">import</span> { fmtMoney, tpl } from <span class="s2">&#34;../utils&#34;</span>;
+
+<span class="kr">const</span> {
+  id,
+  title,
+  lead = <span class="s2">&#34;&#34;</span>,
+  dishes,
+  empty = <span class="s2">&#34;&#34;</span>,
+  labels,
+  fill = <span class="mi">60</span>,
+  total,
+  currency,
+  layout = <span class="s2">&#34;split&#34;</span>,
+  tone = <span class="s2">&#34;default&#34;</span>,
+  landmarkLabel,
+} = defineProps&lt;<span class="nt">VeggieBoxProps</span>&gt;();
+&lt;/<span class="nt">script</span>&gt;
+
+&lt;<span class="nt">template</span>&gt;
+  &lt;<span class="nt">SectionFrame</span> <span class="nt">:id</span>=<span class="s">&#34;id&#34;</span> <span class="nt">:title</span>=<span class="s">&#34;title&#34;</span> <span class="nt">:lead</span>=<span class="s">&#34;lead&#34;</span> <span class="nt">:tone</span>=<span class="s">&#34;tone&#34;</span> <span class="nt">:landmarkLabel</span>=<span class="s">&#34;landmarkLabel&#34;</span>&gt;
+    &lt;<span class="nt">EmptyState</span> <span class="nt">v-if</span>=<span class="s">&#34;((dishes?.length ?? 0) === 0)&#34; icon=&#34;package&#34; :title=&#34;empty&#34;</span> /&gt;
+    &lt;<span class="nt">Box</span> <span class="nt">v-else</span> <span class="na">class</span>=<span class="s">&#34;grid grid-cols-1 items-start gap-8 lg:grid-cols-3&#34;</span>&gt;
+      &lt;<span class="nt">Box</span>
+        :<span class="na">class</span>=<span class="s">&#34;
+</span><span class="s">          (layout as string) === &#39;split&#39; ? &#39;grid grid-cols-2 gap-4 md:grid-cols-3 lg:col-span-2&#39;
+</span><span class="s">          : &#39;grid grid-cols-2 gap-4 md:grid-cols-3 lg:col-span-3 lg:grid-cols-6&#39;
+</span><span class="s">        &#34;</span>
+        <span class="na">data</span><span class="nt">-testid</span><span class="err">=&#34;</span><span class="na">items</span><span class="err">&#34;</span>
+      &gt;
+        &lt;<span class="nt">Stack</span>
+          <span class="nt">v-for</span>=<span class="s">&#34;d in dishes&#34;</span>
+          <span class="nt">:key</span>=<span class="s">&#34;d.id&#34;</span>
+          <span class="na">gap</span>=<span class="s">&#34;2&#34;</span>
+          <span class="na">class</span>=<span class="s">&#34;rounded bg-card inset-ring inset-ring-border p-4&#34;</span>
+          <span class="na">data</span><span class="nt">-testid</span><span class="err">=&#34;</span><span class="na">item</span><span class="err">&#34;</span>
+        &gt;
+          &lt;<span class="nt">MediaFrame</span> <span class="nt">:alt</span>=<span class="s">&#34;d.name&#34;</span> <span class="na">ratio</span>=<span class="s">&#34;1/1&#34;</span> /&gt;
+          &lt;<span class="nt">Text</span> <span class="na">size</span>=<span class="s">&#34;sm&#34;</span> <span class="na">weight</span>=<span class="s">&#34;semibold&#34;</span>&gt;
+            {{ d.name }}
+          &lt;/<span class="nt">Text</span>&gt;
+          &lt;<span class="nt">Text</span> <span class="na">size</span>=<span class="s">&#34;xs&#34;</span> <span class="na">class</span>=<span class="s">&#34;text-muted-foreground&#34;</span>&gt;
+            {{ tpl(labels.perKg, fmtMoney(d.price, d.currency)) }}
+          &lt;/<span class="nt">Text</span>&gt;
+          &lt;<span class="nt">NumberField</span>
+            <span class="na">value</span>=<span class="s">&#34;1&#34;</span>
+            :<span class="na">name</span>=<span class="s">&#34;tpl(&#39;{0}-kg-{1}&#39;, id, d.id)&#34;</span>
+            <span class="na">min</span>=<span class="s">&#34;0&#34;</span>
+            :<span class="na">label</span>=<span class="s">&#34;tpl(labels.weightOf, d.name)&#34;</span>
+            :<span class="na">decrease</span>=<span class="s">&#34;tpl(labels.decreaseOf, d.name)&#34;</span>
+            :<span class="na">increase</span>=<span class="s">&#34;tpl(labels.increaseOf, d.name)&#34;</span>
+          /&gt;
+        &lt;/<span class="nt">Stack</span>&gt;
+      &lt;/<span class="nt">Box</span>&gt;
+      &lt;<span class="nt">Stack</span>
+        <span class="na">gap</span>=<span class="s">&#34;4&#34;</span>
+        :<span class="na">class</span>=<span class="s">&#34;
+</span><span class="s">          (layout as string) === &#39;split&#39; ? &#39;rounded bg-card inset-ring inset-ring-border p-6 lg:sticky lg:top-8&#39;
+</span><span class="s">          : &#39;rounded bg-card inset-ring inset-ring-border p-6 lg:col-span-3&#39;
+</span><span class="s">        &#34;</span>
+        <span class="na">data</span><span class="nt">-testid</span><span class="err">=&#34;</span><span class="na">summary</span><span class="err">&#34;</span>
+      &gt;
+        &lt;<span class="nt">Text</span> <span class="na">size</span>=<span class="s">&#34;lg&#34;</span> <span class="na">weight</span>=<span class="s">&#34;semibold&#34;</span>&gt;
+          {{ labels.summary }}
+        &lt;/<span class="nt">Text</span>&gt;
+        &lt;<span class="nt">Label</span> :<span class="na">for</span>=<span class="s">&#34;tpl(&#39;{0}-fill&#39;, id)&#34;</span> <span class="na">class</span>=<span class="s">&#34;text-sm text-muted-foreground&#34;</span>&gt;
+          {{ labels.boxFill }}
+        &lt;/<span class="nt">Label</span>&gt;
+        &lt;<span class="nt">Meter</span> <span class="nt">:value</span>=<span class="s">&#34;fill&#34;</span> <span class="nt">:min</span>=<span class="s">&#34;0&#34;</span> <span class="nt">:max</span>=<span class="s">&#34;100&#34;</span> :<span class="na">id</span>=<span class="s">&#34;tpl(&#39;{0}-fill&#39;, id)&#34;</span> /&gt;
+        &lt;<span class="nt">Group</span> <span class="na">gap</span>=<span class="s">&#34;2&#34;</span> <span class="na">align</span>=<span class="s">&#34;baseline&#34;</span> <span class="na">justify</span>=<span class="s">&#34;between&#34;</span>&gt;
+          &lt;<span class="nt">Text</span> <span class="na">size</span>=<span class="s">&#34;sm&#34;</span> <span class="na">class</span>=<span class="s">&#34;text-muted-foreground&#34;</span>&gt;
+            {{ labels.total }}
+          &lt;/<span class="nt">Text</span>&gt;
+          &lt;<span class="nt">Inline</span> <span class="na">class</span>=<span class="s">&#34;text-2xl font-bold&#34;</span> <span class="na">role</span>=<span class="s">&#34;status&#34;</span> <span class="na">aria</span><span class="nt">-live</span><span class="err">=&#34;</span><span class="na">polite</span><span class="err">&#34;</span> <span class="na">data</span><span class="nt">-testid</span><span class="err">=&#34;</span><span class="na">total</span><span class="err">&#34;</span>&gt;
+            {{ fmtMoney(total, currency) }}
+          &lt;/<span class="nt">Inline</span>&gt;
+        &lt;/<span class="nt">Group</span>&gt;
+        &lt;<span class="nt">Button</span> <span class="na">variant</span>=<span class="s">&#34;default&#34;</span> <span class="na">size</span>=<span class="s">&#34;lg&#34;</span> <span class="na">type</span>=<span class="s">&#34;button&#34;</span> <span class="na">class</span>=<span class="s">&#34;w-full&#34;</span>&gt;
+          &lt;<span class="nt">LucideIcon</span> <span class="na">name</span>=<span class="s">&#34;shopping-bag&#34;</span> <span class="nt">:size</span>=<span class="s">&#34;16&#34;</span> /&gt;
+          {{ labels.order }}
+        &lt;/<span class="nt">Button</span>&gt;
+      &lt;/<span class="nt">Stack</span>&gt;
+    &lt;/<span class="nt">Box</span>&gt;
+  &lt;/<span class="nt">SectionFrame</span>&gt;
+&lt;/<span class="nt">template</span>&gt;
+</code></pre></div> <p class="text-sm"><a href="https://registry.buildy.tw/vue/blocks/veggie-box.json" class="underline">Vue registry item (JSON)</a></p></section><section class="rt-panel" id="panel-solid" aria-label="Solid code" data-runtime="solid"><p class="text-sm mb-2 text-muted-foreground">Point the CLI at this runtime once, then add the item:</p> <div class="mb-2"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code class="overflow-x-auto whitespace-nowrap font-mono text-sm" id="panel-solid-init" tabindex="0">npx ui8kit init --yes --framework solid --dir src --registry-url https://registry.buildy.tw/solid --strict-cdn</code><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="panel-solid-init" hidden>Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code class="overflow-x-auto whitespace-nowrap font-mono text-sm" id="panel-solid-add" tabindex="0">npx ui8kit add veggie-box</code><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="panel-solid-add" hidden>Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">blocks/veggie-box.tsx</span><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="code-solid-0" hidden>Copy</button></div><pre class="hl max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6" tabindex="0"><code class="font-mono" id="code-solid-0"><span class="c1">// Code generated by packages/kit-compose/src/organisms.ts from packages/compose-gen/specs (compose-gen organism emitters on kit-compose). DO NOT EDIT.
+</span><span class="cm">/**
+</span><span class="cm"> * A vegetable box by weight: produce tiles (picture, name, price per kg, a weight field in kg named after the
+</span><span class="cm"> * item) beside the box card with a meter of how full the box is, the total and the order button. Axes: layout
+</span><span class="cm"> * (split, stacked), tone.
+</span><span class="cm"> */</span>
+<span class="kr">import</span> { For, <span class="kr">type</span> JSX } <span class="kr">from</span> <span class="s2">&#34;solid-js&#34;</span>;
+<span class="kr">import</span> { Box, Button, Group, Inline, Label, Meter, Stack, Text } <span class="kr">from</span> <span class="s2">&#34;../compose&#34;</span>;
+<span class="kr">import</span> { LucideIcon } <span class="kr">from</span> <span class="s2">&#34;../icons/LucideIcon&#34;</span>;
+<span class="kr">import</span> { EmptyState } <span class="kr">from</span> <span class="s2">&#34;../components/empty-state&#34;</span>;
+<span class="kr">import</span> { MediaFrame } <span class="kr">from</span> <span class="s2">&#34;../components/media-frame&#34;</span>;
+<span class="kr">import</span> { NumberField } <span class="kr">from</span> <span class="s2">&#34;../components/number-field&#34;</span>;
+<span class="kr">import</span> { SectionFrame } <span class="kr">from</span> <span class="s2">&#34;../components/section-frame&#34;</span>;
+<span class="kr">import</span> { fmtMoney, tpl } <span class="kr">from</span> <span class="s2">&#34;../utils&#34;</span>;
+<span class="kr">import</span> <span class="kr">type</span> { Dish, FoodLabels } <span class="kr">from</span> <span class="s2">&#34;./dish-showcase.types&#34;</span>;
+
+<span class="kr">export</span> <span class="kr">type</span> VeggieBoxProps = {
+  id: <span class="kt">string</span>;
+  title: <span class="kt">string</span>;
+  lead?: <span class="kt">string</span>;
+  dishes: <span class="kt">Dish</span>[];
+  empty?: <span class="kt">string</span>;
+  labels: <span class="kt">FoodLabels</span>;
+  fill?: <span class="kt">number</span>;
+  total: <span class="kt">number</span>;
+  currency: <span class="kt">string</span>;
+  layout?: <span class="s2">&#34;split&#34;</span> | <span class="s2">&#34;stacked&#34;</span>;
+  tone?: <span class="s2">&#34;default&#34;</span> | <span class="s2">&#34;muted&#34;</span>;
+  landmarkLabel?: <span class="kt">string</span>;
+};
+
+<span class="kr">export</span> <span class="kd">function</span> VeggieBox({
+  id,
+  title,
+  lead = <span class="s2">&#34;&#34;</span>,
+  dishes,
+  empty = <span class="s2">&#34;&#34;</span>,
+  labels,
+  fill = <span class="mi">60</span>,
+  total,
+  currency,
+  layout = <span class="s2">&#34;split&#34;</span>,
+  tone = <span class="s2">&#34;default&#34;</span>,
+  landmarkLabel,
+}: VeggieBoxProps) {
+  <span class="k">return</span> (
+    &lt;<span class="nt">SectionFrame</span> <span class="na">id</span>={id} <span class="na">title</span>={title} <span class="na">lead</span>={lead} <span class="na">tone</span>={tone} <span class="na">landmarkLabel</span>={landmarkLabel}&gt;
+      {((dishes?.length ?? <span class="mi">0</span>) === <span class="mi">0</span>) ? (
+        &lt;<span class="nt">EmptyState</span> <span class="na">icon</span>=<span class="s">&#34;package&#34;</span> <span class="na">title</span>={empty} /&gt;
+      ) : (
+        &lt;<span class="nt">Box</span> <span class="na">class</span>=<span class="s">&#34;grid grid-cols-1 items-start gap-8 lg:grid-cols-3&#34;</span>&gt;
+          &lt;<span class="nt">Box</span>
+            <span class="na">class</span>={
+              (layout <span class="kr">as</span> <span class="kt">string</span>) === <span class="s2">&#34;split&#34;</span> ? <span class="s2">&#34;grid grid-cols-2 gap-4 md:grid-cols-3 lg:col-span-2&#34;</span>
+              : <span class="s2">&#34;grid grid-cols-2 gap-4 md:grid-cols-3 lg:col-span-3 lg:grid-cols-6&#34;</span>
+            }
+            <span class="na">data-testid</span>=<span class="s">&#34;items&#34;</span>
+          &gt;
+            &lt;<span class="nt">For</span> <span class="na">each</span>={dishes ?? []}&gt;{(d) =&gt; (
+              &lt;<span class="nt">Stack</span> <span class="na">gap</span>=<span class="s">&#34;2&#34;</span> <span class="na">class</span>=<span class="s">&#34;rounded bg-card inset-ring inset-ring-border p-4&#34;</span> <span class="na">data-testid</span>=<span class="s">&#34;item&#34;</span>&gt;
+                &lt;<span class="nt">MediaFrame</span> <span class="na">alt</span>={d.name} <span class="na">ratio</span>=<span class="s">&#34;1/1&#34;</span> /&gt;
+                &lt;<span class="nt">Text</span> <span class="na">size</span>=<span class="s">&#34;sm&#34;</span> <span class="na">weight</span>=<span class="s">&#34;semibold&#34;</span>&gt;
+                  {d.name}
+                &lt;/<span class="nt">Text</span>&gt;
+                &lt;<span class="nt">Text</span> <span class="na">size</span>=<span class="s">&#34;xs&#34;</span> <span class="na">class</span>=<span class="s">&#34;text-muted-foreground&#34;</span>&gt;
+                  {tpl(labels.perKg, fmtMoney(d.price, d.currency))}
+                &lt;/<span class="nt">Text</span>&gt;
+                &lt;<span class="nt">NumberField</span>
+                  <span class="na">value</span>=<span class="s">&#34;1&#34;</span>
+                  <span class="na">name</span>={tpl(<span class="s2">&#34;{0}-kg-{1}&#34;</span>, id, d.id)}
+                  <span class="na">min</span>=<span class="s">&#34;0&#34;</span>
+                  <span class="na">label</span>={tpl(labels.weightOf, d.name)}
+                  <span class="na">decrease</span>={tpl(labels.decreaseOf, d.name)}
+                  <span class="na">increase</span>={tpl(labels.increaseOf, d.name)}
+                /&gt;
+              &lt;/<span class="nt">Stack</span>&gt;
+            )}&lt;/<span class="nt">For</span>&gt;
+          &lt;/<span class="nt">Box</span>&gt;
+          &lt;<span class="nt">Stack</span>
+            <span class="na">gap</span>=<span class="s">&#34;4&#34;</span>
+            <span class="na">class</span>={
+              (layout <span class="kr">as</span> <span class="kt">string</span>) === <span class="s2">&#34;split&#34;</span> ? <span class="s2">&#34;rounded bg-card inset-ring inset-ring-border p-6 lg:sticky lg:top-8&#34;</span>
+              : <span class="s2">&#34;rounded bg-card inset-ring inset-ring-border p-6 lg:col-span-3&#34;</span>
+            }
+            <span class="na">data-testid</span>=<span class="s">&#34;summary&#34;</span>
+          &gt;
+            &lt;<span class="nt">Text</span> <span class="na">size</span>=<span class="s">&#34;lg&#34;</span> <span class="na">weight</span>=<span class="s">&#34;semibold&#34;</span>&gt;
+              {labels.summary}
+            &lt;/<span class="nt">Text</span>&gt;
+            &lt;<span class="nt">Label</span> <span class="na">for</span>={tpl(<span class="s2">&#34;{0}-fill&#34;</span>, id)} <span class="na">class</span>=<span class="s">&#34;text-sm text-muted-foreground&#34;</span>&gt;
+              {labels.boxFill}
+            &lt;/<span class="nt">Label</span>&gt;
+            &lt;<span class="nt">Meter</span> <span class="na">value</span>={fill} <span class="na">min</span>={<span class="mi">0</span>} <span class="na">max</span>={<span class="mi">100</span>} <span class="na">id</span>={tpl(<span class="s2">&#34;{0}-fill&#34;</span>, id)} /&gt;
+            &lt;<span class="nt">Group</span> <span class="na">gap</span>=<span class="s">&#34;2&#34;</span> <span class="na">align</span>=<span class="s">&#34;baseline&#34;</span> <span class="na">justify</span>=<span class="s">&#34;between&#34;</span>&gt;
+              &lt;<span class="nt">Text</span> <span class="na">size</span>=<span class="s">&#34;sm&#34;</span> <span class="na">class</span>=<span class="s">&#34;text-muted-foreground&#34;</span>&gt;
+                {labels.total}
+              &lt;/<span class="nt">Text</span>&gt;
+              &lt;<span class="nt">Inline</span> <span class="na">class</span>=<span class="s">&#34;text-2xl font-bold&#34;</span> <span class="na">role</span>=<span class="s">&#34;status&#34;</span> <span class="na">aria-live</span>=<span class="s">&#34;polite&#34;</span> <span class="na">data-testid</span>=<span class="s">&#34;total&#34;</span>&gt;
+                {fmtMoney(total, currency)}
+              &lt;/<span class="nt">Inline</span>&gt;
+            &lt;/<span class="nt">Group</span>&gt;
+            &lt;<span class="nt">Button</span> <span class="na">variant</span>=<span class="s">&#34;default&#34;</span> <span class="na">size</span>=<span class="s">&#34;lg&#34;</span> <span class="na">type</span>=<span class="s">&#34;button&#34;</span> <span class="na">class</span>=<span class="s">&#34;w-full&#34;</span>&gt;
+              &lt;<span class="nt">LucideIcon</span> <span class="na">name</span>=<span class="s">&#34;shopping-bag&#34;</span> <span class="na">size</span>={<span class="mi">16</span>} /&gt;
+              {labels.order}
+            &lt;/<span class="nt">Button</span>&gt;
+          &lt;/<span class="nt">Stack</span>&gt;
+        &lt;/<span class="nt">Box</span>&gt;
+      )}
+    &lt;/<span class="nt">SectionFrame</span>&gt;
+  );
+}
+</code></pre></div> <p class="text-sm"><a href="https://registry.buildy.tw/solid/blocks/veggie-box.json" class="underline">Solid registry item (JSON)</a></p></section><section class="rt-panel" id="panel-templ" aria-label="templ code" data-runtime="templ"><p class="text-sm mb-2 text-muted-foreground">Point the CLI at this runtime once, then add the item:</p> <div class="mb-2"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code class="overflow-x-auto whitespace-nowrap font-mono text-sm" id="panel-templ-init" tabindex="0">npx ui8kit init --yes --framework templ --dir src --registry-url https://registry.buildy.tw/templ --strict-cdn</code><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="panel-templ-init" hidden>Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code class="overflow-x-auto whitespace-nowrap font-mono text-sm" id="panel-templ-add" tabindex="0">npx ui8kit add veggie-box</code><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="panel-templ-add" hidden>Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">blocks/veggie-box.templ</span><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="code-templ-0" hidden>Copy</button></div><pre class="hl max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6" tabindex="0"><code class="font-mono" id="code-templ-0"><span class="c1">// Code generated by packages/kit-compose/src/server-organisms.ts from packages/compose-gen/specs (compose-gen organism emitters on kit-compose). DO NOT EDIT.</span>
+<span class="c1">// Source: packages/compose-gen/specs/organisms/veggie-box.json</span>
+
+<span class="kn">package</span> blocks
+
+<span class="kn">import</span> (
+	&#34;github.com/ui8kit/codegen/generated/templ/ui/box&#34;
+	&#34;github.com/ui8kit/codegen/generated/templ/ui/button&#34;
+	&#34;github.com/ui8kit/codegen/generated/templ/compose&#34;
+	&#34;github.com/ui8kit/codegen/generated/templ/icons&#34;
+	&#34;github.com/ui8kit/codegen/generated/templ/ui/label&#34;
+	&#34;github.com/ui8kit/codegen/generated/templ/ui/meter&#34;
+	&#34;github.com/ui8kit/codegen/generated/templ/ui/text&#34;
+	uiutils &#34;github.com/ui8kit/codegen/generated/templ/orgutils&#34;
+)
+
+<span class="c1">// VeggieBoxProps are the props of VeggieBox; the values are the JSON shapes of the TypeScript props.</span>
+<span class="kd">type</span> VeggieBoxProps <span class="kd">struct</span> {
+	Id any <span class="sb">`json:&#34;id&#34;`</span>
+	Title any <span class="sb">`json:&#34;title&#34;`</span>
+	Lead any <span class="sb">`json:&#34;lead&#34;`</span>
+	Dishes any <span class="sb">`json:&#34;dishes&#34;`</span>
+	Empty any <span class="sb">`json:&#34;empty&#34;`</span>
+	Labels any <span class="sb">`json:&#34;labels&#34;`</span>
+	Fill any <span class="sb">`json:&#34;fill&#34;`</span>
+	Total any <span class="sb">`json:&#34;total&#34;`</span>
+	Currency any <span class="sb">`json:&#34;currency&#34;`</span>
+	Layout any <span class="sb">`json:&#34;layout&#34;`</span>
+	Tone any <span class="sb">`json:&#34;tone&#34;`</span>
+	LandmarkLabel any <span class="sb">`json:&#34;landmarkLabel&#34;`</span>
+}
+
+<span class="c1">// A vegetable box by weight: produce tiles (picture, name, price per kg, a weight field in kg named after the item) beside the box card with a meter of how full the box is, the total and the order button. Axes: layout (split, stacked), tone.</span>
+<span class="kd">templ</span> <span class="nf">VeggieBox</span>(p VeggieBoxProps) {
+	{{ vId := p.Id }}
+	{{ vTitle := p.Title }}
+	{{ vLead := uiutils.<span class="nf">Def</span>(p.Lead, <span class="s">&#34;&#34;</span>) }}
+	{{ vDishes := p.Dishes }}
+	{{ vEmpty := uiutils.<span class="nf">Def</span>(p.Empty, <span class="s">&#34;&#34;</span>) }}
+	{{ vLabels := p.Labels }}
+	{{ vFill := uiutils.<span class="nf">Def</span>(p.Fill, <span class="nb">float64</span>(<span class="mi">60</span>)) }}
+	{{ vTotal := p.Total }}
+	{{ vCurrency := p.Currency }}
+	{{ vLayout := uiutils.<span class="nf">Def</span>(p.Layout, <span class="s">&#34;split&#34;</span>) }}
+	{{ vTone := uiutils.<span class="nf">Def</span>(p.Tone, <span class="s">&#34;default&#34;</span>) }}
+	{{ vLandmarkLabel := p.LandmarkLabel }}
+	<span class="nf">@SectionFrame</span>(SectionFrameProps{Id: vId, Title: vTitle, Lead: vLead, Tone: vTone, LandmarkLabel: vLandmarkLabel}) {
+		if uiutils.Eq(uiutils.Len(vDishes), float64(0)) {
+			<span class="nf">@EmptyState</span>(EmptyStateProps{Icon: <span class="s">&#34;package&#34;</span>, Title: vEmpty})
+		} <span class="k">else</span> {
+			<span class="nf">@compose.Box</span>(compose.BoxProps{BoxProps: box.BoxProps{Class: <span class="s">&#34;grid grid-cols-1 items-start gap-8 lg:grid-cols-3&#34;</span>}}) {
+				<span class="nf">@compose.Box</span>(compose.BoxProps{BoxProps: box.BoxProps{Class: uiutils.<span class="nf">S</span>(uiutils.<span class="nf">Cond</span>(uiutils.<span class="nf">T</span>(uiutils.<span class="nf">Eq</span>(vLayout, <span class="s">&#34;split&#34;</span>)), <span class="s">&#34;grid grid-cols-2 gap-4 md:grid-cols-3 lg:col-span-2&#34;</span>, <span class="s">&#34;grid grid-cols-2 gap-4 md:grid-cols-3 lg:col-span-3 lg:grid-cols-6&#34;</span>)), Attrs: uiutils.<span class="nf">Attrs</span>(<span class="s">&#34;data-testid&#34;</span>, <span class="s">&#34;items&#34;</span>)}}) {
+					for _, vD := range uiutils.L(vDishes) {
+						<span class="nf">@compose.Stack</span>(compose.StackProps{Gap: &#34;2&#34;, BoxProps: box.BoxProps{Class: <span class="s">&#34;rounded bg-card inset-ring inset-ring-border p-4&#34;</span>, Attrs: uiutils.<span class="nf">Attrs</span>(<span class="s">&#34;data-testid&#34;</span>, <span class="s">&#34;item&#34;</span>)}}) {
+							<span class="nf">@MediaFrame</span>(MediaFrameProps{Alt: uiutils.<span class="nf">Get</span>(vD, <span class="s">&#34;name&#34;</span>), Ratio: <span class="s">&#34;1/1&#34;</span>})
+							<span class="nf">@compose.Text</span>(compose.TextProps{Size: &#34;sm&#34;, Weight: &#34;semibold&#34;, TextProps: text.TextProps{}}) {
+								{ uiutils.<span class="nf">Text</span>(uiutils.<span class="nf">Get</span>(vD, <span class="s">&#34;name&#34;</span>)) }
+							}
+							<span class="nf">@compose.Text</span>(compose.TextProps{Size: &#34;xs&#34;, TextProps: text.TextProps{Class: <span class="s">&#34;text-muted-foreground&#34;</span>}}) {
+								{ uiutils.<span class="nf">Text</span>(uiutils.<span class="nf">Tpl</span>(uiutils.<span class="nf">Get</span>(vLabels, <span class="s">&#34;perKg&#34;</span>), uiutils.<span class="nf">Money</span>(uiutils.<span class="nf">Get</span>(vD, <span class="s">&#34;price&#34;</span>), uiutils.<span class="nf">Get</span>(vD, <span class="s">&#34;currency&#34;</span>)))) }
+							}
+							<span class="nf">@NumberField</span>(NumberFieldProps{Value: &#34;1&#34;, Name: uiutils.Tpl(&#34;{<span class="mi">0</span>}-kg-{<span class="mi">1</span>}&#34;, vId, uiutils.Get(vD, &#34;id&#34;)), Min: &#34;0&#34;, Label: uiutils.Tpl(uiutils.Get(vLabels, &#34;weightOf&#34;), uiutils.Get(vD, &#34;name&#34;)), Decrease: uiutils.Tpl(uiutils.Get(vLabels, &#34;decreaseOf&#34;), uiutils.Get(vD, &#34;name&#34;)), Increase: uiutils.Tpl(uiutils.Get(vLabels, &#34;increaseOf&#34;), uiutils.Get(vD, &#34;name&#34;))})
+						}
+					}
+				}
+				<span class="nf">@compose.Stack</span>(compose.StackProps{Gap: &#34;4&#34;, BoxProps: box.BoxProps{Class: uiutils.<span class="nf">S</span>(uiutils.<span class="nf">Cond</span>(uiutils.<span class="nf">T</span>(uiutils.<span class="nf">Eq</span>(vLayout, <span class="s">&#34;split&#34;</span>)), <span class="s">&#34;rounded bg-card inset-ring inset-ring-border p-6 lg:sticky lg:top-8&#34;</span>, <span class="s">&#34;rounded bg-card inset-ring inset-ring-border p-6 lg:col-span-3&#34;</span>)), Attrs: uiutils.<span class="nf">Attrs</span>(<span class="s">&#34;data-testid&#34;</span>, <span class="s">&#34;summary&#34;</span>)}}) {
+					<span class="nf">@compose.Text</span>(compose.TextProps{Size: &#34;lg&#34;, Weight: &#34;semibold&#34;, TextProps: text.TextProps{}}) {
+						{ uiutils.<span class="nf">Text</span>(uiutils.<span class="nf">Get</span>(vLabels, <span class="s">&#34;summary&#34;</span>)) }
+					}
+					<span class="nf">@compose.Label</span>(compose.LabelProps{LabelProps: label.LabelProps{For: uiutils.S(uiutils.Tpl(&#34;{<span class="mi">0</span>}-fill&#34;, vId)), Class: &#34;text-sm text-muted-foreground&#34;}}) {
+						{ uiutils.<span class="nf">Text</span>(uiutils.<span class="nf">Get</span>(vLabels, <span class="s">&#34;boxFill&#34;</span>)) }
+					}
+					<span class="nf">@compose.Meter</span>(compose.MeterProps{MeterProps: meter.MeterProps{Value: uiutils.SP(vFill), Min: &#34;0&#34;, Max: &#34;100&#34;, Attrs: uiutils.Attrs(&#34;id&#34;, uiutils.Tpl(&#34;{<span class="mi">0</span>}-fill&#34;, vId))}})
+					<span class="nf">@compose.Group</span>(compose.GroupProps{Gap: &#34;2&#34;, Align: &#34;baseline&#34;, Justify: &#34;between&#34;, BoxProps: box.BoxProps{}}) {
+						<span class="nf">@compose.Text</span>(compose.TextProps{Size: &#34;sm&#34;, TextProps: text.TextProps{Class: <span class="s">&#34;text-muted-foreground&#34;</span>}}) {
+							{ uiutils.<span class="nf">Text</span>(uiutils.<span class="nf">Get</span>(vLabels, <span class="s">&#34;total&#34;</span>)) }
+						}
+						<span class="nf">@compose.Inline</span>(compose.InlineProps{TextProps: text.TextProps{Class: <span class="s">&#34;text-2xl font-bold&#34;</span>, Attrs: uiutils.<span class="nf">Attrs</span>(<span class="s">&#34;role&#34;</span>, <span class="s">&#34;status&#34;</span>, <span class="s">&#34;aria-live&#34;</span>, <span class="s">&#34;polite&#34;</span>, <span class="s">&#34;data-testid&#34;</span>, <span class="s">&#34;total&#34;</span>)}}) {
+							{ uiutils.<span class="nf">Text</span>(uiutils.<span class="nf">Money</span>(vTotal, vCurrency)) }
+						}
+					}
+					<span class="nf">@compose.Button</span>(compose.ButtonProps{Variant: &#34;default&#34;, Size: &#34;lg&#34;, ButtonProps: button.ButtonProps{Type: <span class="s">&#34;button&#34;</span>, Class: <span class="s">&#34;w-full&#34;</span>}}) {
+						<span class="nf">@icons.LucideIcon</span>(icons.LucideIconProps{Name: <span class="s">&#34;shopping-bag&#34;</span>, Size: <span class="mi">16</span>})
+						{ uiutils.<span class="nf">Text</span>(uiutils.<span class="nf">Get</span>(vLabels, <span class="s">&#34;order&#34;</span>)) }
+					}
+				}
+			}
+		}
+	}
+}
+</code></pre></div> <p class="text-sm"><a href="https://registry.buildy.tw/templ/blocks/veggie-box.json" class="underline">templ registry item (JSON)</a></p></section><section class="rt-panel" id="panel-twig" aria-label="Twig code" data-runtime="twig"><p class="text-sm mb-2 text-muted-foreground">Point the CLI at this runtime once, then add the item:</p> <div class="mb-2"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code class="overflow-x-auto whitespace-nowrap font-mono text-sm" id="panel-twig-init" tabindex="0">npx ui8kit init --yes --framework twig --dir src --registry-url https://registry.buildy.tw/twig --strict-cdn</code><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="panel-twig-init" hidden>Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code class="overflow-x-auto whitespace-nowrap font-mono text-sm" id="panel-twig-add" tabindex="0">npx ui8kit add veggie-box</code><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="panel-twig-add" hidden>Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">blocks/veggie-box.html.twig</span><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="code-twig-0" hidden>Copy</button></div><pre class="hl max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6" tabindex="0"><code class="font-mono" id="code-twig-0"><span class="c">{#- Code generated by packages/kit-compose/src/server-organisms.ts from packages/compose-gen/specs (compose-gen organism emitters on kit-compose). DO NOT EDIT.
+</span><span class="c">    Source: packages/compose-gen/specs/organisms/veggie-box.json
+</span><span class="c">    A vegetable box by weight: produce tiles (picture, name, price per kg, a weight field in kg named after the item) beside the box card with a meter of how full the box is, the total and the order button. Axes: layout (split, stacked), tone.
+</span><span class="c">    Props (p): id, title, lead, dishes, empty, labels, fill, total, currency, layout, tone, landmarkLabel. -#}</span><span class="x">
+</span><span class="cp">{%</span>- <span class="k">set</span> <span class="nv">v_id</span> = (<span class="nv">p.id</span> ?? <span class="kp">null</span>) -<span class="cp">%}</span><span class="x">
+</span><span class="cp">{%</span>- <span class="k">set</span> <span class="nv">v_title</span> = (<span class="nv">p.title</span> ?? <span class="kp">null</span>) -<span class="cp">%}</span><span class="x">
+</span><span class="cp">{%</span>- <span class="k">set</span> <span class="nv">v_lead</span> = (<span class="nv">p.lead</span> ?? <span class="s1">&#39;&#39;</span>) -<span class="cp">%}</span><span class="x">
+</span><span class="cp">{%</span>- <span class="k">set</span> <span class="nv">v_dishes</span> = (<span class="nv">p.dishes</span> ?? <span class="kp">null</span>) -<span class="cp">%}</span><span class="x">
+</span><span class="cp">{%</span>- <span class="k">set</span> <span class="nv">v_empty</span> = (<span class="nv">p.empty</span> ?? <span class="s1">&#39;&#39;</span>) -<span class="cp">%}</span><span class="x">
+</span><span class="cp">{%</span>- <span class="k">set</span> <span class="nv">v_labels</span> = (<span class="nv">p.labels</span> ?? <span class="kp">null</span>) -<span class="cp">%}</span><span class="x">
+</span><span class="cp">{%</span>- <span class="k">set</span> <span class="nv">v_fill</span> = (<span class="nv">p.fill</span> ?? <span class="m">60</span>) -<span class="cp">%}</span><span class="x">
+</span><span class="cp">{%</span>- <span class="k">set</span> <span class="nv">v_total</span> = (<span class="nv">p.total</span> ?? <span class="kp">null</span>) -<span class="cp">%}</span><span class="x">
+</span><span class="cp">{%</span>- <span class="k">set</span> <span class="nv">v_currency</span> = (<span class="nv">p.currency</span> ?? <span class="kp">null</span>) -<span class="cp">%}</span><span class="x">
+</span><span class="cp">{%</span>- <span class="k">set</span> <span class="nv">v_layout</span> = (<span class="nv">p.layout</span> ?? <span class="s1">&#39;split&#39;</span>) -<span class="cp">%}</span><span class="x">
+</span><span class="cp">{%</span>- <span class="k">set</span> <span class="nv">v_tone</span> = (<span class="nv">p.tone</span> ?? <span class="s1">&#39;default&#39;</span>) -<span class="cp">%}</span><span class="x">
+</span><span class="cp">{%</span>- <span class="k">set</span> <span class="nv">v_landmarkLabel</span> = (<span class="nv">p.landmarkLabel</span> ?? <span class="kp">null</span>) -<span class="cp">%}</span><span class="x">
+</span><span class="cp">{%</span>- <span class="k">set</span> <span class="nv">c_13</span> -<span class="cp">%}</span><span class="x">
+</span><span class="x">  </span><span class="cp">{%</span>- <span class="k">if</span> <span class="nv">og_t</span>(<span class="nv">og_eq</span>(<span class="nv">og_len</span>(<span class="nv">v_dishes</span>), <span class="m">0</span>)) <span class="cp">%}</span><span class="x">
+</span><span class="x">    </span><span class="cp">{{</span> <span class="nv">include</span>(<span class="s1">&#39;blocks/empty-state.html.twig&#39;</span>, {<span class="s1">&#39;p&#39;</span>: {<span class="s1">&#39;icon&#39;</span>: <span class="s1">&#39;package&#39;</span>, <span class="s1">&#39;title&#39;</span>: <span class="nv">v_empty</span><span class="cp">}}</span><span class="x">, with_context = false) }}
+</span><span class="x">  </span><span class="cp">{%</span>- <span class="k">else</span> <span class="cp">%}</span><span class="x">
+</span><span class="x">    </span><span class="cp">{%</span>- <span class="k">set</span> <span class="nv">c_12</span> -<span class="cp">%}</span><span class="x">
+</span><span class="x">      </span><span class="cp">{%</span>- <span class="k">set</span> <span class="nv">c_4</span> -<span class="cp">%}</span><span class="x">
+</span><span class="x">        </span><span class="cp">{%</span>- <span class="k">for</span> <span class="nv">v_d</span> <span class="k">in</span> <span class="nv">og_l</span>(<span class="nv">v_dishes</span>) <span class="cp">%}</span><span class="x">
+</span><span class="x">          </span><span class="cp">{%</span>- <span class="k">set</span> <span class="nv">c_3</span> -<span class="cp">%}</span><span class="x">
+</span><span class="x">            </span><span class="cp">{{</span> <span class="nv">include</span>(<span class="s1">&#39;blocks/media-frame.html.twig&#39;</span>, {<span class="s1">&#39;p&#39;</span>: {<span class="s1">&#39;alt&#39;</span>: <span class="nv">og_get</span>(<span class="nv">v_d</span>, [<span class="s1">&#39;name&#39;</span>]), <span class="s1">&#39;ratio&#39;</span>: <span class="s1">&#39;1/1&#39;</span><span class="cp">}}</span><span class="x">, with_context = false) }}
+</span><span class="x">            </span><span class="cp">{%</span>- <span class="k">set</span> <span class="nv">c_1</span> -<span class="cp">%}</span><span class="x">
+</span><span class="x">              </span><span class="cp">{{</span> <span class="nv">og_text</span>(<span class="nv">og_get</span>(<span class="nv">v_d</span>, [<span class="s1">&#39;name&#39;</span>])) <span class="cp">}}</span><span class="x">
+</span><span class="x">            </span><span class="cp">{%</span>- <span class="k">endset</span> -<span class="cp">%}</span><span class="x">
+</span><span class="x">            </span><span class="cp">{{</span> <span class="nv">include</span>(<span class="s1">&#39;compose/Text.html.twig&#39;</span>, {<span class="s1">&#39;size&#39;</span>: <span class="s1">&#39;sm&#39;</span>, <span class="s1">&#39;weight&#39;</span>: <span class="s1">&#39;semibold&#39;</span>, <span class="s1">&#39;children&#39;</span>: <span class="nv">c_1</span>}, <span class="nv">with_context</span> = <span class="kp">false</span>) <span class="cp">}}</span><span class="x">
+</span><span class="x">            </span><span class="cp">{%</span>- <span class="k">set</span> <span class="nv">c_2</span> -<span class="cp">%}</span><span class="x">
+</span><span class="x">              </span><span class="cp">{{</span> <span class="nv">og_text</span>(<span class="nv">og_tpl</span>(<span class="nv">og_get</span>(<span class="nv">v_labels</span>, [<span class="s1">&#39;perKg&#39;</span>]), [<span class="nv">og_money</span>(<span class="nv">og_get</span>(<span class="nv">v_d</span>, [<span class="s1">&#39;price&#39;</span>]), <span class="nv">og_get</span>(<span class="nv">v_d</span>, [<span class="s1">&#39;currency&#39;</span>]))])) <span class="cp">}}</span><span class="x">
+</span><span class="x">            </span><span class="cp">{%</span>- <span class="k">endset</span> -<span class="cp">%}</span><span class="x">
+</span><span class="x">            </span><span class="cp">{{</span> <span class="nv">include</span>(<span class="s1">&#39;compose/Text.html.twig&#39;</span>, {<span class="s1">&#39;size&#39;</span>: <span class="s1">&#39;xs&#39;</span>, <span class="s1">&#39;class&#39;</span>: <span class="s1">&#39;text-muted-foreground&#39;</span>, <span class="s1">&#39;children&#39;</span>: <span class="nv">c_2</span>}, <span class="nv">with_context</span> = <span class="kp">false</span>) <span class="cp">}}</span><span class="x">
+</span><span class="x">            </span><span class="cp">{{</span> <span class="nv">include</span>(<span class="s1">&#39;blocks/number-field.html.twig&#39;</span>, {<span class="s1">&#39;p&#39;</span>: {<span class="s1">&#39;value&#39;</span>: <span class="s1">&#39;1&#39;</span>, <span class="s1">&#39;name&#39;</span>: <span class="nv">og_tpl</span>(<span class="s1">&#39;{0}-kg-{1}&#39;</span>, [<span class="nv">v_id</span>, <span class="nv">og_get</span>(<span class="nv">v_d</span>, [<span class="s1">&#39;id&#39;</span>])]), <span class="s1">&#39;min&#39;</span>: <span class="s1">&#39;0&#39;</span>, <span class="s1">&#39;label&#39;</span>: <span class="nv">og_tpl</span>(<span class="nv">og_get</span>(<span class="nv">v_labels</span>, [<span class="s1">&#39;weightOf&#39;</span>]), [<span class="nv">og_get</span>(<span class="nv">v_d</span>, [<span class="s1">&#39;name&#39;</span>])]), <span class="s1">&#39;decrease&#39;</span>: <span class="nv">og_tpl</span>(<span class="nv">og_get</span>(<span class="nv">v_labels</span>, [<span class="s1">&#39;decreaseOf&#39;</span>]), [<span class="nv">og_get</span>(<span class="nv">v_d</span>, [<span class="s1">&#39;name&#39;</span>])]), <span class="s1">&#39;increase&#39;</span>: <span class="nv">og_tpl</span>(<span class="nv">og_get</span>(<span class="nv">v_labels</span>, [<span class="s1">&#39;increaseOf&#39;</span>]), [<span class="nv">og_get</span>(<span class="nv">v_d</span>, [<span class="s1">&#39;name&#39;</span>])])<span class="cp">}}</span><span class="x">, with_context = false) }}
+</span><span class="x">          </span><span class="cp">{%</span>- <span class="k">endset</span> -<span class="cp">%}</span><span class="x">
+</span><span class="x">          </span><span class="cp">{{</span> <span class="nv">include</span>(<span class="s1">&#39;compose/Stack.html.twig&#39;</span>, {<span class="s1">&#39;gap&#39;</span>: <span class="s1">&#39;2&#39;</span>, <span class="s1">&#39;class&#39;</span>: <span class="s1">&#39;rounded bg-card inset-ring inset-ring-border p-4&#39;</span>, <span class="s1">&#39;attrs&#39;</span>: <span class="nv">og_attrs</span>([<span class="s1">&#39;data-testid&#39;</span>, <span class="s1">&#39;item&#39;</span>]), <span class="s1">&#39;children&#39;</span>: <span class="nv">c_3</span>}, <span class="nv">with_context</span> = <span class="kp">false</span>) <span class="cp">}}</span><span class="x">
+</span><span class="x">        </span><span class="cp">{%</span>- <span class="k">endfor</span> <span class="cp">%}</span><span class="x">
+</span><span class="x">      </span><span class="cp">{%</span>- <span class="k">endset</span> -<span class="cp">%}</span><span class="x">
+</span><span class="x">      </span><span class="cp">{{</span> <span class="nv">include</span>(<span class="s1">&#39;compose/Box.html.twig&#39;</span>, {<span class="s1">&#39;class&#39;</span>: <span class="nv">og_s</span>((<span class="nv">og_t</span>(<span class="nv">og_eq</span>(<span class="nv">v_layout</span>, <span class="s1">&#39;split&#39;</span>)) ? <span class="s1">&#39;grid grid-cols-2 gap-4 md:grid-cols-3 lg:col-span-2&#39;</span> : <span class="s1">&#39;grid grid-cols-2 gap-4 md:grid-cols-3 lg:col-span-3 lg:grid-cols-6&#39;</span>)), <span class="s1">&#39;attrs&#39;</span>: <span class="nv">og_attrs</span>([<span class="s1">&#39;data-testid&#39;</span>, <span class="s1">&#39;items&#39;</span>]), <span class="s1">&#39;children&#39;</span>: <span class="nv">c_4</span>}, <span class="nv">with_context</span> = <span class="kp">false</span>) <span class="cp">}}</span><span class="x">
+</span><span class="x">      </span><span class="cp">{%</span>- <span class="k">set</span> <span class="nv">c_11</span> -<span class="cp">%}</span><span class="x">
+</span><span class="x">        </span><span class="cp">{%</span>- <span class="k">set</span> <span class="nv">c_5</span> -<span class="cp">%}</span><span class="x">
+</span><span class="x">          </span><span class="cp">{{</span> <span class="nv">og_text</span>(<span class="nv">og_get</span>(<span class="nv">v_labels</span>, [<span class="s1">&#39;summary&#39;</span>])) <span class="cp">}}</span><span class="x">
+</span><span class="x">        </span><span class="cp">{%</span>- <span class="k">endset</span> -<span class="cp">%}</span><span class="x">
+</span><span class="x">        </span><span class="cp">{{</span> <span class="nv">include</span>(<span class="s1">&#39;compose/Text.html.twig&#39;</span>, {<span class="s1">&#39;size&#39;</span>: <span class="s1">&#39;lg&#39;</span>, <span class="s1">&#39;weight&#39;</span>: <span class="s1">&#39;semibold&#39;</span>, <span class="s1">&#39;children&#39;</span>: <span class="nv">c_5</span>}, <span class="nv">with_context</span> = <span class="kp">false</span>) <span class="cp">}}</span><span class="x">
+</span><span class="x">        </span><span class="cp">{%</span>- <span class="k">set</span> <span class="nv">c_6</span> -<span class="cp">%}</span><span class="x">
+</span><span class="x">          </span><span class="cp">{{</span> <span class="nv">og_text</span>(<span class="nv">og_get</span>(<span class="nv">v_labels</span>, [<span class="s1">&#39;boxFill&#39;</span>])) <span class="cp">}}</span><span class="x">
+</span><span class="x">        </span><span class="cp">{%</span>- <span class="k">endset</span> -<span class="cp">%}</span><span class="x">
+</span><span class="x">        </span><span class="cp">{{</span> <span class="nv">include</span>(<span class="s1">&#39;compose/Label.html.twig&#39;</span>, {<span class="s1">&#39;htmlFor&#39;</span>: <span class="nv">og_s</span>(<span class="nv">og_tpl</span>(<span class="s1">&#39;{0}-fill&#39;</span>, [<span class="nv">v_id</span>])), <span class="s1">&#39;class&#39;</span>: <span class="s1">&#39;text-sm text-muted-foreground&#39;</span>, <span class="s1">&#39;children&#39;</span>: <span class="nv">c_6</span>}, <span class="nv">with_context</span> = <span class="kp">false</span>) <span class="cp">}}</span><span class="x">
+</span><span class="x">        </span><span class="cp">{{</span> <span class="nv">include</span>(<span class="s1">&#39;compose/Meter.html.twig&#39;</span>, {<span class="s1">&#39;value&#39;</span>: <span class="nv">og_s</span>(<span class="nv">v_fill</span>), <span class="s1">&#39;min&#39;</span>: <span class="nv">og_s</span>(<span class="m">0</span>), <span class="s1">&#39;max&#39;</span>: <span class="nv">og_s</span>(<span class="m">100</span>), <span class="s1">&#39;attrs&#39;</span>: <span class="nv">og_attrs</span>([<span class="s1">&#39;id&#39;</span>, <span class="nv">og_tpl</span>(<span class="s1">&#39;{0}-fill&#39;</span>, [<span class="nv">v_id</span>])])}, <span class="nv">with_context</span> = <span class="kp">false</span>) <span class="cp">}}</span><span class="x">
+</span><span class="x">        </span><span class="cp">{%</span>- <span class="k">set</span> <span class="nv">c_9</span> -<span class="cp">%}</span><span class="x">
+</span><span class="x">          </span><span class="cp">{%</span>- <span class="k">set</span> <span class="nv">c_7</span> -<span class="cp">%}</span><span class="x">
+</span><span class="x">            </span><span class="cp">{{</span> <span class="nv">og_text</span>(<span class="nv">og_get</span>(<span class="nv">v_labels</span>, [<span class="s1">&#39;total&#39;</span>])) <span class="cp">}}</span><span class="x">
+</span><span class="x">          </span><span class="cp">{%</span>- <span class="k">endset</span> -<span class="cp">%}</span><span class="x">
+</span><span class="x">          </span><span class="cp">{{</span> <span class="nv">include</span>(<span class="s1">&#39;compose/Text.html.twig&#39;</span>, {<span class="s1">&#39;size&#39;</span>: <span class="s1">&#39;sm&#39;</span>, <span class="s1">&#39;class&#39;</span>: <span class="s1">&#39;text-muted-foreground&#39;</span>, <span class="s1">&#39;children&#39;</span>: <span class="nv">c_7</span>}, <span class="nv">with_context</span> = <span class="kp">false</span>) <span class="cp">}}</span><span class="x">
+</span><span class="x">          </span><span class="cp">{%</span>- <span class="k">set</span> <span class="nv">c_8</span> -<span class="cp">%}</span><span class="x">
+</span><span class="x">            </span><span class="cp">{{</span> <span class="nv">og_text</span>(<span class="nv">og_money</span>(<span class="nv">v_total</span>, <span class="nv">v_currency</span>)) <span class="cp">}}</span><span class="x">
+</span><span class="x">          </span><span class="cp">{%</span>- <span class="k">endset</span> -<span class="cp">%}</span><span class="x">
+</span><span class="x">          </span><span class="cp">{{</span> <span class="nv">include</span>(<span class="s1">&#39;compose/Inline.html.twig&#39;</span>, {<span class="s1">&#39;class&#39;</span>: <span class="s1">&#39;text-2xl font-bold&#39;</span>, <span class="s1">&#39;attrs&#39;</span>: <span class="nv">og_attrs</span>([<span class="s1">&#39;role&#39;</span>, <span class="s1">&#39;status&#39;</span>, <span class="s1">&#39;aria-live&#39;</span>, <span class="s1">&#39;polite&#39;</span>, <span class="s1">&#39;data-testid&#39;</span>, <span class="s1">&#39;total&#39;</span>]), <span class="s1">&#39;children&#39;</span>: <span class="nv">c_8</span>}, <span class="nv">with_context</span> = <span class="kp">false</span>) <span class="cp">}}</span><span class="x">
+</span><span class="x">        </span><span class="cp">{%</span>- <span class="k">endset</span> -<span class="cp">%}</span><span class="x">
+</span><span class="x">        </span><span class="cp">{{</span> <span class="nv">include</span>(<span class="s1">&#39;compose/Group.html.twig&#39;</span>, {<span class="s1">&#39;gap&#39;</span>: <span class="s1">&#39;2&#39;</span>, <span class="s1">&#39;align&#39;</span>: <span class="s1">&#39;baseline&#39;</span>, <span class="s1">&#39;justify&#39;</span>: <span class="s1">&#39;between&#39;</span>, <span class="s1">&#39;children&#39;</span>: <span class="nv">c_9</span>}, <span class="nv">with_context</span> = <span class="kp">false</span>) <span class="cp">}}</span><span class="x">
+</span><span class="x">        </span><span class="cp">{%</span>- <span class="k">set</span> <span class="nv">c_10</span> -<span class="cp">%}</span><span class="x">
+</span><span class="x">          </span><span class="cp">{{</span> <span class="nv">include</span>(<span class="s1">&#39;icons/LucideIcon.html.twig&#39;</span>, {<span class="s1">&#39;name&#39;</span>: <span class="s1">&#39;shopping-bag&#39;</span>, <span class="s1">&#39;size&#39;</span>: <span class="m">16</span>}, <span class="nv">with_context</span> = <span class="kp">false</span>) <span class="cp">}}</span><span class="x">
+</span><span class="x">          </span><span class="cp">{{</span> <span class="nv">og_text</span>(<span class="nv">og_get</span>(<span class="nv">v_labels</span>, [<span class="s1">&#39;order&#39;</span>])) <span class="cp">}}</span><span class="x">
+</span><span class="x">        </span><span class="cp">{%</span>- <span class="k">endset</span> -<span class="cp">%}</span><span class="x">
+</span><span class="x">        </span><span class="cp">{{</span> <span class="nv">include</span>(<span class="s1">&#39;compose/Button.html.twig&#39;</span>, {<span class="s1">&#39;variant&#39;</span>: <span class="s1">&#39;default&#39;</span>, <span class="s1">&#39;size&#39;</span>: <span class="s1">&#39;lg&#39;</span>, <span class="s1">&#39;type&#39;</span>: <span class="s1">&#39;button&#39;</span>, <span class="s1">&#39;class&#39;</span>: <span class="s1">&#39;w-full&#39;</span>, <span class="s1">&#39;children&#39;</span>: <span class="nv">c_10</span>}, <span class="nv">with_context</span> = <span class="kp">false</span>) <span class="cp">}}</span><span class="x">
+</span><span class="x">      </span><span class="cp">{%</span>- <span class="k">endset</span> -<span class="cp">%}</span><span class="x">
+</span><span class="x">      </span><span class="cp">{{</span> <span class="nv">include</span>(<span class="s1">&#39;compose/Stack.html.twig&#39;</span>, {<span class="s1">&#39;gap&#39;</span>: <span class="s1">&#39;4&#39;</span>, <span class="s1">&#39;class&#39;</span>: <span class="nv">og_s</span>((<span class="nv">og_t</span>(<span class="nv">og_eq</span>(<span class="nv">v_layout</span>, <span class="s1">&#39;split&#39;</span>)) ? <span class="s1">&#39;rounded bg-card inset-ring inset-ring-border p-6 lg:sticky lg:top-8&#39;</span> : <span class="s1">&#39;rounded bg-card inset-ring inset-ring-border p-6 lg:col-span-3&#39;</span>)), <span class="s1">&#39;attrs&#39;</span>: <span class="nv">og_attrs</span>([<span class="s1">&#39;data-testid&#39;</span>, <span class="s1">&#39;summary&#39;</span>]), <span class="s1">&#39;children&#39;</span>: <span class="nv">c_11</span>}, <span class="nv">with_context</span> = <span class="kp">false</span>) <span class="cp">}}</span><span class="x">
+</span><span class="x">    </span><span class="cp">{%</span>- <span class="k">endset</span> -<span class="cp">%}</span><span class="x">
+</span><span class="x">    </span><span class="cp">{{</span> <span class="nv">include</span>(<span class="s1">&#39;compose/Box.html.twig&#39;</span>, {<span class="s1">&#39;class&#39;</span>: <span class="s1">&#39;grid grid-cols-1 items-start gap-8 lg:grid-cols-3&#39;</span>, <span class="s1">&#39;children&#39;</span>: <span class="nv">c_12</span>}, <span class="nv">with_context</span> = <span class="kp">false</span>) <span class="cp">}}</span><span class="x">
+</span><span class="x">  </span><span class="cp">{%</span>- <span class="k">endif</span> <span class="cp">%}</span><span class="x">
+</span><span class="cp">{%</span>- <span class="k">endset</span> -<span class="cp">%}</span><span class="x">
+</span><span class="cp">{{</span> <span class="nv">include</span>(<span class="s1">&#39;blocks/section-frame.html.twig&#39;</span>, {<span class="s1">&#39;p&#39;</span>: {<span class="s1">&#39;id&#39;</span>: <span class="nv">v_id</span>, <span class="s1">&#39;title&#39;</span>: <span class="nv">v_title</span>, <span class="s1">&#39;lead&#39;</span>: <span class="nv">v_lead</span>, <span class="s1">&#39;tone&#39;</span>: <span class="nv">v_tone</span>, <span class="s1">&#39;landmarkLabel&#39;</span>: <span class="nv">v_landmarkLabel</span>}, <span class="s1">&#39;children&#39;</span>: <span class="nv">og_markup</span>(<span class="nv">c_13</span>)}, <span class="nv">with_context</span> = <span class="kp">false</span>) <span class="cp">}}</span><span class="x">
+</span></code></pre></div> <p class="text-sm"><a href="https://registry.buildy.tw/twig/blocks/veggie-box.json" class="underline">Twig registry item (JSON)</a></p></section><section class="rt-panel" id="panel-latte" aria-label="Latte code" data-runtime="latte"><p class="text-sm mb-2 text-muted-foreground">Point the CLI at this runtime once, then add the item:</p> <div class="mb-2"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code class="overflow-x-auto whitespace-nowrap font-mono text-sm" id="panel-latte-init" tabindex="0">npx ui8kit init --yes --framework latte --dir src --registry-url https://registry.buildy.tw/latte --strict-cdn</code><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="panel-latte-init" hidden>Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code class="overflow-x-auto whitespace-nowrap font-mono text-sm" id="panel-latte-add" tabindex="0">npx ui8kit add veggie-box</code><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="panel-latte-add" hidden>Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">blocks/veggie-box.latte</span><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="code-latte-0" hidden>Copy</button></div><pre class="hl max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6" tabindex="0"><code class="font-mono" id="code-latte-0"><span class="cp">{</span><span class="c">* Code generated by packages/kit-compose/src/server-organisms.ts from packages/compose-gen/specs (compose-gen organism emitters on kit-compose). DO NOT EDIT.
+</span><span class="c">    Source: packages/compose-gen/specs/organisms/veggie-box.json
+</span><span class="c">    A vegetable box by weight: produce tiles (picture, name, price per kg, a weight field in kg named after the item) beside the box card with a meter of how full the box is, the total and the order button. Axes: layout (split, stacked), tone.
+</span><span class="c">    Props (p): id, title, lead, dishes, empty, labels, fill, total, currency, layout, tone, landmarkLabel. *</span><span class="cp">}</span><span class="x">
+</span><span class="cp">{</span><span class="nf">var</span> <span class="nv">$v_id</span> = (<span class="nv">$p</span>[<span class="s1">&#39;id&#39;</span>] ?? <span class="kc">null</span>)<span class="cp">}</span><span class="x">
+</span><span class="cp">{</span><span class="nf">var</span> <span class="nv">$v_title</span> = (<span class="nv">$p</span>[<span class="s1">&#39;title&#39;</span>] ?? <span class="kc">null</span>)<span class="cp">}</span><span class="x">
+</span><span class="cp">{</span><span class="nf">var</span> <span class="nv">$v_lead</span> = (<span class="nv">$p</span>[<span class="s1">&#39;lead&#39;</span>] ?? <span class="s1">&#39;&#39;</span>)<span class="cp">}</span><span class="x">
+</span><span class="cp">{</span><span class="nf">var</span> <span class="nv">$v_dishes</span> = (<span class="nv">$p</span>[<span class="s1">&#39;dishes&#39;</span>] ?? <span class="kc">null</span>)<span class="cp">}</span><span class="x">
+</span><span class="cp">{</span><span class="nf">var</span> <span class="nv">$v_empty</span> = (<span class="nv">$p</span>[<span class="s1">&#39;empty&#39;</span>] ?? <span class="s1">&#39;&#39;</span>)<span class="cp">}</span><span class="x">
+</span><span class="cp">{</span><span class="nf">var</span> <span class="nv">$v_labels</span> = (<span class="nv">$p</span>[<span class="s1">&#39;labels&#39;</span>] ?? <span class="kc">null</span>)<span class="cp">}</span><span class="x">
+</span><span class="cp">{</span><span class="nf">var</span> <span class="nv">$v_fill</span> = (<span class="nv">$p</span>[<span class="s1">&#39;fill&#39;</span>] ?? <span class="m">60</span>)<span class="cp">}</span><span class="x">
+</span><span class="cp">{</span><span class="nf">var</span> <span class="nv">$v_total</span> = (<span class="nv">$p</span>[<span class="s1">&#39;total&#39;</span>] ?? <span class="kc">null</span>)<span class="cp">}</span><span class="x">
+</span><span class="cp">{</span><span class="nf">var</span> <span class="nv">$v_currency</span> = (<span class="nv">$p</span>[<span class="s1">&#39;currency&#39;</span>] ?? <span class="kc">null</span>)<span class="cp">}</span><span class="x">
+</span><span class="cp">{</span><span class="nf">var</span> <span class="nv">$v_layout</span> = (<span class="nv">$p</span>[<span class="s1">&#39;layout&#39;</span>] ?? <span class="s1">&#39;split&#39;</span>)<span class="cp">}</span><span class="x">
+</span><span class="cp">{</span><span class="nf">var</span> <span class="nv">$v_tone</span> = (<span class="nv">$p</span>[<span class="s1">&#39;tone&#39;</span>] ?? <span class="s1">&#39;default&#39;</span>)<span class="cp">}</span><span class="x">
+</span><span class="cp">{</span><span class="nf">var</span> <span class="nv">$v_landmarkLabel</span> = (<span class="nv">$p</span>[<span class="s1">&#39;landmarkLabel&#39;</span>] ?? <span class="kc">null</span>)<span class="cp">}</span><span class="x">
+</span><span class="cp">{</span><span class="nf">capture</span> <span class="nv">$c_13</span><span class="cp">}</span><span class="x">
+</span><span class="x">  </span><span class="cp">{</span><span class="nf">if</span> <span class="na">og_t</span>(<span class="na">og_eq</span>(<span class="na">og_len</span>(<span class="nv">$v_dishes</span>), <span class="m">0</span>))<span class="cp">}</span><span class="x">
+</span><span class="x">    </span><span class="cp">{</span>=<span class="na">og_include</span>(<span class="s1">&#39;blocks/empty-state.latte&#39;</span>, [<span class="s1">&#39;p&#39;</span> =&gt; [<span class="s1">&#39;icon&#39;</span> =&gt; <span class="s1">&#39;package&#39;</span>, <span class="s1">&#39;title&#39;</span> =&gt; <span class="nv">$v_empty</span>]])|<span class="na">noescape</span><span class="cp">}</span><span class="x">
+</span><span class="x">  </span><span class="cp">{</span><span class="nf">else</span><span class="cp">}</span><span class="x">
+</span><span class="x">    </span><span class="cp">{</span><span class="nf">capture</span> <span class="nv">$c_12</span><span class="cp">}</span><span class="x">
+</span><span class="x">      </span><span class="cp">{</span><span class="nf">capture</span> <span class="nv">$c_4</span><span class="cp">}</span><span class="x">
+</span><span class="x">        </span><span class="cp">{</span><span class="nf">foreach</span> <span class="na">og_l</span>(<span class="nv">$v_dishes</span>) <span class="na">as</span> <span class="nv">$v_d</span><span class="cp">}</span><span class="x">
+</span><span class="x">          </span><span class="cp">{</span><span class="nf">capture</span> <span class="nv">$c_3</span><span class="cp">}</span><span class="x">
+</span><span class="x">            </span><span class="cp">{</span>=<span class="na">og_include</span>(<span class="s1">&#39;blocks/media-frame.latte&#39;</span>, [<span class="s1">&#39;p&#39;</span> =&gt; [<span class="s1">&#39;alt&#39;</span> =&gt; <span class="na">og_get</span>(<span class="nv">$v_d</span>, [<span class="s1">&#39;name&#39;</span>]), <span class="s1">&#39;ratio&#39;</span> =&gt; <span class="s1">&#39;1/1&#39;</span>]])|<span class="na">noescape</span><span class="cp">}</span><span class="x">
+</span><span class="x">            </span><span class="cp">{</span><span class="nf">capture</span> <span class="nv">$c_1</span><span class="cp">}</span><span class="x">
+</span><span class="x">              </span><span class="cp">{</span>=<span class="na">og_text</span>(<span class="na">og_get</span>(<span class="nv">$v_d</span>, [<span class="s1">&#39;name&#39;</span>]))<span class="cp">}</span><span class="x">
+</span><span class="x">            </span><span class="cp">{</span><span class="nf">/capture</span><span class="cp">}</span><span class="x">
+</span><span class="x">            </span><span class="cp">{</span>=<span class="na">og_include</span>(<span class="s1">&#39;compose/Text.latte&#39;</span>, [<span class="s1">&#39;size&#39;</span> =&gt; <span class="s1">&#39;sm&#39;</span>, <span class="s1">&#39;weight&#39;</span> =&gt; <span class="s1">&#39;semibold&#39;</span>, <span class="s1">&#39;children&#39;</span> =&gt; (<span class="na">string</span>) <span class="nv">$c_1</span>])|<span class="na">noescape</span><span class="cp">}</span><span class="x">
+</span><span class="x">            </span><span class="cp">{</span><span class="nf">capture</span> <span class="nv">$c_2</span><span class="cp">}</span><span class="x">
+</span><span class="x">              </span><span class="cp">{</span>=<span class="na">og_text</span>(<span class="na">og_tpl</span>(<span class="na">og_get</span>(<span class="nv">$v_labels</span>, [<span class="s1">&#39;perKg&#39;</span>]), [<span class="na">og_money</span>(<span class="na">og_get</span>(<span class="nv">$v_d</span>, [<span class="s1">&#39;price&#39;</span>]), <span class="na">og_get</span>(<span class="nv">$v_d</span>, [<span class="s1">&#39;currency&#39;</span>]))]))<span class="cp">}</span><span class="x">
+</span><span class="x">            </span><span class="cp">{</span><span class="nf">/capture</span><span class="cp">}</span><span class="x">
+</span><span class="x">            </span><span class="cp">{</span>=<span class="na">og_include</span>(<span class="s1">&#39;compose/Text.latte&#39;</span>, [<span class="s1">&#39;size&#39;</span> =&gt; <span class="s1">&#39;xs&#39;</span>, <span class="s1">&#39;class&#39;</span> =&gt; <span class="s1">&#39;text-muted-foreground&#39;</span>, <span class="s1">&#39;children&#39;</span> =&gt; (<span class="na">string</span>) <span class="nv">$c_2</span>])|<span class="na">noescape</span><span class="cp">}</span><span class="x">
+</span><span class="x">            </span><span class="cp">{</span>=<span class="na">og_include</span>(<span class="s1">&#39;blocks/number-field.latte&#39;</span>, [<span class="s1">&#39;p&#39;</span> =&gt; [<span class="s1">&#39;value&#39;</span> =&gt; <span class="s1">&#39;1&#39;</span>, <span class="s1">&#39;name&#39;</span> =&gt; <span class="na">og_tpl</span>(<span class="s1">&#39;{0}-kg-{1}&#39;</span>, [<span class="nv">$v_id</span>, <span class="na">og_get</span>(<span class="nv">$v_d</span>, [<span class="s1">&#39;id&#39;</span>])]), <span class="s1">&#39;min&#39;</span> =&gt; <span class="s1">&#39;0&#39;</span>, <span class="s1">&#39;label&#39;</span> =&gt; <span class="na">og_tpl</span>(<span class="na">og_get</span>(<span class="nv">$v_labels</span>, [<span class="s1">&#39;weightOf&#39;</span>]), [<span class="na">og_get</span>(<span class="nv">$v_d</span>, [<span class="s1">&#39;name&#39;</span>])]), <span class="s1">&#39;decrease&#39;</span> =&gt; <span class="na">og_tpl</span>(<span class="na">og_get</span>(<span class="nv">$v_labels</span>, [<span class="s1">&#39;decreaseOf&#39;</span>]), [<span class="na">og_get</span>(<span class="nv">$v_d</span>, [<span class="s1">&#39;name&#39;</span>])]), <span class="s1">&#39;increase&#39;</span> =&gt; <span class="na">og_tpl</span>(<span class="na">og_get</span>(<span class="nv">$v_labels</span>, [<span class="s1">&#39;increaseOf&#39;</span>]), [<span class="na">og_get</span>(<span class="nv">$v_d</span>, [<span class="s1">&#39;name&#39;</span>])])]])|<span class="na">noescape</span><span class="cp">}</span><span class="x">
+</span><span class="x">          </span><span class="cp">{</span><span class="nf">/capture</span><span class="cp">}</span><span class="x">
+</span><span class="x">          </span><span class="cp">{</span>=<span class="na">og_include</span>(<span class="s1">&#39;compose/Stack.latte&#39;</span>, [<span class="s1">&#39;gap&#39;</span> =&gt; <span class="s1">&#39;2&#39;</span>, <span class="s1">&#39;class&#39;</span> =&gt; <span class="s1">&#39;rounded bg-card inset-ring inset-ring-border p-4&#39;</span>, <span class="s1">&#39;attrs&#39;</span> =&gt; <span class="na">og_attrs</span>([<span class="s1">&#39;data-testid&#39;</span>, <span class="s1">&#39;item&#39;</span>]), <span class="s1">&#39;children&#39;</span> =&gt; (<span class="na">string</span>) <span class="nv">$c_3</span>])|<span class="na">noescape</span><span class="cp">}</span><span class="x">
+</span><span class="x">        </span><span class="cp">{</span><span class="nf">/foreach</span><span class="cp">}</span><span class="x">
+</span><span class="x">      </span><span class="cp">{</span><span class="nf">/capture</span><span class="cp">}</span><span class="x">
+</span><span class="x">      </span><span class="cp">{</span>=<span class="na">og_include</span>(<span class="s1">&#39;compose/Box.latte&#39;</span>, [<span class="s1">&#39;class&#39;</span> =&gt; <span class="na">og_s</span>((<span class="na">og_t</span>(<span class="na">og_eq</span>(<span class="nv">$v_layout</span>, <span class="s1">&#39;split&#39;</span>)) ? <span class="s1">&#39;grid grid-cols-2 gap-4 md:grid-cols-3 lg:col-span-2&#39;</span> : <span class="s1">&#39;grid grid-cols-2 gap-4 md:grid-cols-3 lg:col-span-3 lg:grid-cols-6&#39;</span>)), <span class="s1">&#39;attrs&#39;</span> =&gt; <span class="na">og_attrs</span>([<span class="s1">&#39;data-testid&#39;</span>, <span class="s1">&#39;items&#39;</span>]), <span class="s1">&#39;children&#39;</span> =&gt; (<span class="na">string</span>) <span class="nv">$c_4</span>])|<span class="na">noescape</span><span class="cp">}</span><span class="x">
+</span><span class="x">      </span><span class="cp">{</span><span class="nf">capture</span> <span class="nv">$c_11</span><span class="cp">}</span><span class="x">
+</span><span class="x">        </span><span class="cp">{</span><span class="nf">capture</span> <span class="nv">$c_5</span><span class="cp">}</span><span class="x">
+</span><span class="x">          </span><span class="cp">{</span>=<span class="na">og_text</span>(<span class="na">og_get</span>(<span class="nv">$v_labels</span>, [<span class="s1">&#39;summary&#39;</span>]))<span class="cp">}</span><span class="x">
+</span><span class="x">        </span><span class="cp">{</span><span class="nf">/capture</span><span class="cp">}</span><span class="x">
+</span><span class="x">        </span><span class="cp">{</span>=<span class="na">og_include</span>(<span class="s1">&#39;compose/Text.latte&#39;</span>, [<span class="s1">&#39;size&#39;</span> =&gt; <span class="s1">&#39;lg&#39;</span>, <span class="s1">&#39;weight&#39;</span> =&gt; <span class="s1">&#39;semibold&#39;</span>, <span class="s1">&#39;children&#39;</span> =&gt; (<span class="na">string</span>) <span class="nv">$c_5</span>])|<span class="na">noescape</span><span class="cp">}</span><span class="x">
+</span><span class="x">        </span><span class="cp">{</span><span class="nf">capture</span> <span class="nv">$c_6</span><span class="cp">}</span><span class="x">
+</span><span class="x">          </span><span class="cp">{</span>=<span class="na">og_text</span>(<span class="na">og_get</span>(<span class="nv">$v_labels</span>, [<span class="s1">&#39;boxFill&#39;</span>]))<span class="cp">}</span><span class="x">
+</span><span class="x">        </span><span class="cp">{</span><span class="nf">/capture</span><span class="cp">}</span><span class="x">
+</span><span class="x">        </span><span class="cp">{</span>=<span class="na">og_include</span>(<span class="s1">&#39;compose/Label.latte&#39;</span>, [<span class="s1">&#39;htmlFor&#39;</span> =&gt; <span class="na">og_s</span>(<span class="na">og_tpl</span>(<span class="s1">&#39;{0}-fill&#39;</span>, [<span class="nv">$v_id</span>])), <span class="s1">&#39;class&#39;</span> =&gt; <span class="s1">&#39;text-sm text-muted-foreground&#39;</span>, <span class="s1">&#39;children&#39;</span> =&gt; (<span class="na">string</span>) <span class="nv">$c_6</span>])|<span class="na">noescape</span><span class="cp">}</span><span class="x">
+</span><span class="x">        </span><span class="cp">{</span>=<span class="na">og_include</span>(<span class="s1">&#39;compose/Meter.latte&#39;</span>, [<span class="s1">&#39;value&#39;</span> =&gt; <span class="na">og_s</span>(<span class="nv">$v_fill</span>), <span class="s1">&#39;min&#39;</span> =&gt; <span class="na">og_s</span>(<span class="m">0</span>), <span class="s1">&#39;max&#39;</span> =&gt; <span class="na">og_s</span>(<span class="m">100</span>), <span class="s1">&#39;attrs&#39;</span> =&gt; <span class="na">og_attrs</span>([<span class="s1">&#39;id&#39;</span>, <span class="na">og_tpl</span>(<span class="s1">&#39;{0}-fill&#39;</span>, [<span class="nv">$v_id</span>])])])|<span class="na">noescape</span><span class="cp">}</span><span class="x">
+</span><span class="x">        </span><span class="cp">{</span><span class="nf">capture</span> <span class="nv">$c_9</span><span class="cp">}</span><span class="x">
+</span><span class="x">          </span><span class="cp">{</span><span class="nf">capture</span> <span class="nv">$c_7</span><span class="cp">}</span><span class="x">
+</span><span class="x">            </span><span class="cp">{</span>=<span class="na">og_text</span>(<span class="na">og_get</span>(<span class="nv">$v_labels</span>, [<span class="s1">&#39;total&#39;</span>]))<span class="cp">}</span><span class="x">
+</span><span class="x">          </span><span class="cp">{</span><span class="nf">/capture</span><span class="cp">}</span><span class="x">
+</span><span class="x">          </span><span class="cp">{</span>=<span class="na">og_include</span>(<span class="s1">&#39;compose/Text.latte&#39;</span>, [<span class="s1">&#39;size&#39;</span> =&gt; <span class="s1">&#39;sm&#39;</span>, <span class="s1">&#39;class&#39;</span> =&gt; <span class="s1">&#39;text-muted-foreground&#39;</span>, <span class="s1">&#39;children&#39;</span> =&gt; (<span class="na">string</span>) <span class="nv">$c_7</span>])|<span class="na">noescape</span><span class="cp">}</span><span class="x">
+</span><span class="x">          </span><span class="cp">{</span><span class="nf">capture</span> <span class="nv">$c_8</span><span class="cp">}</span><span class="x">
+</span><span class="x">            </span><span class="cp">{</span>=<span class="na">og_text</span>(<span class="na">og_money</span>(<span class="nv">$v_total</span>, <span class="nv">$v_currency</span>))<span class="cp">}</span><span class="x">
+</span><span class="x">          </span><span class="cp">{</span><span class="nf">/capture</span><span class="cp">}</span><span class="x">
+</span><span class="x">          </span><span class="cp">{</span>=<span class="na">og_include</span>(<span class="s1">&#39;compose/Inline.latte&#39;</span>, [<span class="s1">&#39;class&#39;</span> =&gt; <span class="s1">&#39;text-2xl font-bold&#39;</span>, <span class="s1">&#39;attrs&#39;</span> =&gt; <span class="na">og_attrs</span>([<span class="s1">&#39;role&#39;</span>, <span class="s1">&#39;status&#39;</span>, <span class="s1">&#39;aria-live&#39;</span>, <span class="s1">&#39;polite&#39;</span>, <span class="s1">&#39;data-testid&#39;</span>, <span class="s1">&#39;total&#39;</span>]), <span class="s1">&#39;children&#39;</span> =&gt; (<span class="na">string</span>) <span class="nv">$c_8</span>])|<span class="na">noescape</span><span class="cp">}</span><span class="x">
+</span><span class="x">        </span><span class="cp">{</span><span class="nf">/capture</span><span class="cp">}</span><span class="x">
+</span><span class="x">        </span><span class="cp">{</span>=<span class="na">og_include</span>(<span class="s1">&#39;compose/Group.latte&#39;</span>, [<span class="s1">&#39;gap&#39;</span> =&gt; <span class="s1">&#39;2&#39;</span>, <span class="s1">&#39;align&#39;</span> =&gt; <span class="s1">&#39;baseline&#39;</span>, <span class="s1">&#39;justify&#39;</span> =&gt; <span class="s1">&#39;between&#39;</span>, <span class="s1">&#39;children&#39;</span> =&gt; (<span class="na">string</span>) <span class="nv">$c_9</span>])|<span class="na">noescape</span><span class="cp">}</span><span class="x">
+</span><span class="x">        </span><span class="cp">{</span><span class="nf">capture</span> <span class="nv">$c_10</span><span class="cp">}</span><span class="x">
+</span><span class="x">          </span><span class="cp">{</span>=<span class="na">og_include</span>(<span class="s1">&#39;icons/LucideIcon.latte&#39;</span>, [<span class="s1">&#39;name&#39;</span> =&gt; <span class="s1">&#39;shopping-bag&#39;</span>, <span class="s1">&#39;size&#39;</span> =&gt; <span class="m">16</span>])|<span class="na">noescape</span><span class="cp">}</span><span class="x">
+</span><span class="x">          </span><span class="cp">{</span>=<span class="na">og_text</span>(<span class="na">og_get</span>(<span class="nv">$v_labels</span>, [<span class="s1">&#39;order&#39;</span>]))<span class="cp">}</span><span class="x">
+</span><span class="x">        </span><span class="cp">{</span><span class="nf">/capture</span><span class="cp">}</span><span class="x">
+</span><span class="x">        </span><span class="cp">{</span>=<span class="na">og_include</span>(<span class="s1">&#39;compose/Button.latte&#39;</span>, [<span class="s1">&#39;variant&#39;</span> =&gt; <span class="s1">&#39;default&#39;</span>, <span class="s1">&#39;size&#39;</span> =&gt; <span class="s1">&#39;lg&#39;</span>, <span class="s1">&#39;type&#39;</span> =&gt; <span class="s1">&#39;button&#39;</span>, <span class="s1">&#39;class&#39;</span> =&gt; <span class="s1">&#39;w-full&#39;</span>, <span class="s1">&#39;children&#39;</span> =&gt; (<span class="na">string</span>) <span class="nv">$c_10</span>])|<span class="na">noescape</span><span class="cp">}</span><span class="x">
+</span><span class="x">      </span><span class="cp">{</span><span class="nf">/capture</span><span class="cp">}</span><span class="x">
+</span><span class="x">      </span><span class="cp">{</span>=<span class="na">og_include</span>(<span class="s1">&#39;compose/Stack.latte&#39;</span>, [<span class="s1">&#39;gap&#39;</span> =&gt; <span class="s1">&#39;4&#39;</span>, <span class="s1">&#39;class&#39;</span> =&gt; <span class="na">og_s</span>((<span class="na">og_t</span>(<span class="na">og_eq</span>(<span class="nv">$v_layout</span>, <span class="s1">&#39;split&#39;</span>)) ? <span class="s1">&#39;rounded bg-card inset-ring inset-ring-border p-6 lg:sticky lg:top-8&#39;</span> : <span class="s1">&#39;rounded bg-card inset-ring inset-ring-border p-6 lg:col-span-3&#39;</span>)), <span class="s1">&#39;attrs&#39;</span> =&gt; <span class="na">og_attrs</span>([<span class="s1">&#39;data-testid&#39;</span>, <span class="s1">&#39;summary&#39;</span>]), <span class="s1">&#39;children&#39;</span> =&gt; (<span class="na">string</span>) <span class="nv">$c_11</span>])|<span class="na">noescape</span><span class="cp">}</span><span class="x">
+</span><span class="x">    </span><span class="cp">{</span><span class="nf">/capture</span><span class="cp">}</span><span class="x">
+</span><span class="x">    </span><span class="cp">{</span>=<span class="na">og_include</span>(<span class="s1">&#39;compose/Box.latte&#39;</span>, [<span class="s1">&#39;class&#39;</span> =&gt; <span class="s1">&#39;grid grid-cols-1 items-start gap-8 lg:grid-cols-3&#39;</span>, <span class="s1">&#39;children&#39;</span> =&gt; (<span class="na">string</span>) <span class="nv">$c_12</span>])|<span class="na">noescape</span><span class="cp">}</span><span class="x">
+</span><span class="x">  </span><span class="cp">{</span><span class="nf">/if</span><span class="cp">}</span><span class="x">
+</span><span class="cp">{</span><span class="nf">/capture</span><span class="cp">}</span><span class="x">
+</span><span class="cp">{</span>=<span class="na">og_include</span>(<span class="s1">&#39;blocks/section-frame.latte&#39;</span>, [<span class="s1">&#39;p&#39;</span> =&gt; [<span class="s1">&#39;id&#39;</span> =&gt; <span class="nv">$v_id</span>, <span class="s1">&#39;title&#39;</span> =&gt; <span class="nv">$v_title</span>, <span class="s1">&#39;lead&#39;</span> =&gt; <span class="nv">$v_lead</span>, <span class="s1">&#39;tone&#39;</span> =&gt; <span class="nv">$v_tone</span>, <span class="s1">&#39;landmarkLabel&#39;</span> =&gt; <span class="nv">$v_landmarkLabel</span>], <span class="s1">&#39;children&#39;</span> =&gt; <span class="na">og_markup</span>(<span class="nv">$c_13</span>)])|<span class="na">noescape</span><span class="cp">}</span><span class="x">
+</span></code></pre></div> <p class="text-sm"><a href="https://registry.buildy.tw/latte/blocks/veggie-box.json" class="underline">Latte registry item (JSON)</a></p></section><section class="rt-panel" id="panel-jinja2" aria-label="Jinja2 code" data-runtime="jinja2"><p class="text-sm mb-2 text-muted-foreground">Point the CLI at this runtime once, then add the item:</p> <div class="mb-2"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code class="overflow-x-auto whitespace-nowrap font-mono text-sm" id="panel-jinja2-init" tabindex="0">npx ui8kit init --yes --framework jinja2 --dir src --registry-url https://registry.buildy.tw/jinja2 --strict-cdn</code><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="panel-jinja2-init" hidden>Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded border border-border bg-muted px-4 py-2"><code class="overflow-x-auto whitespace-nowrap font-mono text-sm" id="panel-jinja2-add" tabindex="0">npx ui8kit add veggie-box</code><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="panel-jinja2-add" hidden>Copy</button></div></div><div class="mb-4"><div class="flex items-center justify-between gap-4 rounded-t border border-border bg-muted px-4 py-2"><span class="font-mono text-xs">blocks/veggie-box.html.j2</span><button type="button" class="inline-flex shrink-0 items-center justify-center whitespace-nowrap font-medium inset-ring transition-colors disabled:pointer-events-none disabled:opacity-50 rounded bg-card text-foreground h-8 px-3 inset-ring-input text-xs hover:bg-accent" data-slot="button" data-copy="code-jinja2-0" hidden>Copy</button></div><pre class="hl max-h-[32rem] overflow-auto rounded-b border border-t-0 border-border bg-card p-4 text-xs leading-6" tabindex="0"><code class="font-mono" id="code-jinja2-0"><span class="c">{#- Code generated by packages/kit-compose/src/server-organisms.ts from packages/compose-gen/specs (compose-gen organism emitters on kit-compose). DO NOT EDIT.
+</span><span class="c">    Source: packages/compose-gen/specs/organisms/veggie-box.json
+</span><span class="c">    A vegetable box by weight: produce tiles (picture, name, price per kg, a weight field in kg named after the item) beside the box card with a meter of how full the box is, the total and the order button. Axes: layout (split, stacked), tone.
+</span><span class="c">    Props (p): id, title, lead, dishes, empty, labels, fill, total, currency, layout, tone, landmarkLabel. -#}</span><span class="x">
+</span><span class="cp">{%</span>- <span class="k">set</span> <span class="nv">v_id</span> = <span class="nv">og_def</span>(<span class="nv">p</span>[<span class="s1">&#39;id&#39;</span>], <span class="kp">none</span>) -<span class="cp">%}</span><span class="x">
+</span><span class="cp">{%</span>- <span class="k">set</span> <span class="nv">v_title</span> = <span class="nv">og_def</span>(<span class="nv">p</span>[<span class="s1">&#39;title&#39;</span>], <span class="kp">none</span>) -<span class="cp">%}</span><span class="x">
+</span><span class="cp">{%</span>- <span class="k">set</span> <span class="nv">v_lead</span> = <span class="nv">og_def</span>(<span class="nv">p</span>[<span class="s1">&#39;lead&#39;</span>], <span class="s1">&#39;&#39;</span>) -<span class="cp">%}</span><span class="x">
+</span><span class="cp">{%</span>- <span class="k">set</span> <span class="nv">v_dishes</span> = <span class="nv">og_def</span>(<span class="nv">p</span>[<span class="s1">&#39;dishes&#39;</span>], <span class="kp">none</span>) -<span class="cp">%}</span><span class="x">
+</span><span class="cp">{%</span>- <span class="k">set</span> <span class="nv">v_empty</span> = <span class="nv">og_def</span>(<span class="nv">p</span>[<span class="s1">&#39;empty&#39;</span>], <span class="s1">&#39;&#39;</span>) -<span class="cp">%}</span><span class="x">
+</span><span class="cp">{%</span>- <span class="k">set</span> <span class="nv">v_labels</span> = <span class="nv">og_def</span>(<span class="nv">p</span>[<span class="s1">&#39;labels&#39;</span>], <span class="kp">none</span>) -<span class="cp">%}</span><span class="x">
+</span><span class="cp">{%</span>- <span class="k">set</span> <span class="nv">v_fill</span> = <span class="nv">og_def</span>(<span class="nv">p</span>[<span class="s1">&#39;fill&#39;</span>], <span class="m">60</span>) -<span class="cp">%}</span><span class="x">
+</span><span class="cp">{%</span>- <span class="k">set</span> <span class="nv">v_total</span> = <span class="nv">og_def</span>(<span class="nv">p</span>[<span class="s1">&#39;total&#39;</span>], <span class="kp">none</span>) -<span class="cp">%}</span><span class="x">
+</span><span class="cp">{%</span>- <span class="k">set</span> <span class="nv">v_currency</span> = <span class="nv">og_def</span>(<span class="nv">p</span>[<span class="s1">&#39;currency&#39;</span>], <span class="kp">none</span>) -<span class="cp">%}</span><span class="x">
+</span><span class="cp">{%</span>- <span class="k">set</span> <span class="nv">v_layout</span> = <span class="nv">og_def</span>(<span class="nv">p</span>[<span class="s1">&#39;layout&#39;</span>], <span class="s1">&#39;split&#39;</span>) -<span class="cp">%}</span><span class="x">
+</span><span class="cp">{%</span>- <span class="k">set</span> <span class="nv">v_tone</span> = <span class="nv">og_def</span>(<span class="nv">p</span>[<span class="s1">&#39;tone&#39;</span>], <span class="s1">&#39;default&#39;</span>) -<span class="cp">%}</span><span class="x">
+</span><span class="cp">{%</span>- <span class="k">set</span> <span class="nv">v_landmarkLabel</span> = <span class="nv">og_def</span>(<span class="nv">p</span>[<span class="s1">&#39;landmarkLabel&#39;</span>], <span class="kp">none</span>) -<span class="cp">%}</span><span class="x">
+</span><span class="cp">{%</span>- <span class="k">set</span> <span class="nv">c_13</span> -<span class="cp">%}</span><span class="x">
+</span><span class="x">  </span><span class="cp">{%</span>- <span class="k">if</span> <span class="nv">og_t</span>(<span class="nv">og_eq</span>(<span class="nv">og_len</span>(<span class="nv">v_dishes</span>), <span class="m">0</span>)) <span class="cp">%}</span><span class="x">
+</span><span class="x">    </span><span class="cp">{{</span> <span class="nv">og_include</span>(<span class="s1">&#39;blocks/empty-state.html.j2&#39;</span>, {<span class="s1">&#39;p&#39;</span>: {<span class="s1">&#39;icon&#39;</span>: <span class="s1">&#39;package&#39;</span>, <span class="s1">&#39;title&#39;</span>: <span class="nv">v_empty</span><span class="cp">}}</span><span class="x">) }}
+</span><span class="x">  </span><span class="cp">{%</span>- <span class="k">else</span> <span class="cp">%}</span><span class="x">
+</span><span class="x">    </span><span class="cp">{%</span>- <span class="k">set</span> <span class="nv">c_12</span> -<span class="cp">%}</span><span class="x">
+</span><span class="x">      </span><span class="cp">{%</span>- <span class="k">set</span> <span class="nv">c_4</span> -<span class="cp">%}</span><span class="x">
+</span><span class="x">        </span><span class="cp">{%</span>- <span class="k">for</span> <span class="nv">v_d</span> <span class="k">in</span> <span class="nv">og_l</span>(<span class="nv">v_dishes</span>) <span class="cp">%}</span><span class="x">
+</span><span class="x">          </span><span class="cp">{%</span>- <span class="k">set</span> <span class="nv">c_3</span> -<span class="cp">%}</span><span class="x">
+</span><span class="x">            </span><span class="cp">{{</span> <span class="nv">og_include</span>(<span class="s1">&#39;blocks/media-frame.html.j2&#39;</span>, {<span class="s1">&#39;p&#39;</span>: {<span class="s1">&#39;alt&#39;</span>: <span class="nv">og_get</span>(<span class="nv">v_d</span>, [<span class="s1">&#39;name&#39;</span>]), <span class="s1">&#39;ratio&#39;</span>: <span class="s1">&#39;1/1&#39;</span><span class="cp">}}</span><span class="x">) }}
+</span><span class="x">            </span><span class="cp">{%</span>- <span class="k">set</span> <span class="nv">c_1</span> -<span class="cp">%}</span><span class="x">
+</span><span class="x">              </span><span class="cp">{{</span> <span class="nv">og_text</span>(<span class="nv">og_get</span>(<span class="nv">v_d</span>, [<span class="s1">&#39;name&#39;</span>])) <span class="cp">}}</span><span class="x">
+</span><span class="x">            </span><span class="cp">{%</span>- <span class="k">endset</span> -<span class="cp">%}</span><span class="x">
+</span><span class="x">            </span><span class="cp">{{</span> <span class="nv">og_include</span>(<span class="s1">&#39;compose/text.html.j2&#39;</span>, {<span class="s1">&#39;p&#39;</span>: {<span class="s1">&#39;Size&#39;</span>: <span class="s1">&#39;sm&#39;</span>, <span class="s1">&#39;Weight&#39;</span>: <span class="s1">&#39;semibold&#39;</span>}, <span class="s1">&#39;children&#39;</span>: <span class="nv">c_1</span>}) <span class="cp">}}</span><span class="x">
+</span><span class="x">            </span><span class="cp">{%</span>- <span class="k">set</span> <span class="nv">c_2</span> -<span class="cp">%}</span><span class="x">
+</span><span class="x">              </span><span class="cp">{{</span> <span class="nv">og_text</span>(<span class="nv">og_tpl</span>(<span class="nv">og_get</span>(<span class="nv">v_labels</span>, [<span class="s1">&#39;perKg&#39;</span>]), [<span class="nv">og_money</span>(<span class="nv">og_get</span>(<span class="nv">v_d</span>, [<span class="s1">&#39;price&#39;</span>]), <span class="nv">og_get</span>(<span class="nv">v_d</span>, [<span class="s1">&#39;currency&#39;</span>]))])) <span class="cp">}}</span><span class="x">
+</span><span class="x">            </span><span class="cp">{%</span>- <span class="k">endset</span> -<span class="cp">%}</span><span class="x">
+</span><span class="x">            </span><span class="cp">{{</span> <span class="nv">og_include</span>(<span class="s1">&#39;compose/text.html.j2&#39;</span>, {<span class="s1">&#39;p&#39;</span>: {<span class="s1">&#39;Size&#39;</span>: <span class="s1">&#39;xs&#39;</span>, <span class="s1">&#39;Class&#39;</span>: <span class="s1">&#39;text-muted-foreground&#39;</span>}, <span class="s1">&#39;children&#39;</span>: <span class="nv">c_2</span>}) <span class="cp">}}</span><span class="x">
+</span><span class="x">            </span><span class="cp">{{</span> <span class="nv">og_include</span>(<span class="s1">&#39;blocks/number-field.html.j2&#39;</span>, {<span class="s1">&#39;p&#39;</span>: {<span class="s1">&#39;value&#39;</span>: <span class="s1">&#39;1&#39;</span>, <span class="s1">&#39;name&#39;</span>: <span class="nv">og_tpl</span>(<span class="s1">&#39;{0}-kg-{1}&#39;</span>, [<span class="nv">v_id</span>, <span class="nv">og_get</span>(<span class="nv">v_d</span>, [<span class="s1">&#39;id&#39;</span>])]), <span class="s1">&#39;min&#39;</span>: <span class="s1">&#39;0&#39;</span>, <span class="s1">&#39;label&#39;</span>: <span class="nv">og_tpl</span>(<span class="nv">og_get</span>(<span class="nv">v_labels</span>, [<span class="s1">&#39;weightOf&#39;</span>]), [<span class="nv">og_get</span>(<span class="nv">v_d</span>, [<span class="s1">&#39;name&#39;</span>])]), <span class="s1">&#39;decrease&#39;</span>: <span class="nv">og_tpl</span>(<span class="nv">og_get</span>(<span class="nv">v_labels</span>, [<span class="s1">&#39;decreaseOf&#39;</span>]), [<span class="nv">og_get</span>(<span class="nv">v_d</span>, [<span class="s1">&#39;name&#39;</span>])]), <span class="s1">&#39;increase&#39;</span>: <span class="nv">og_tpl</span>(<span class="nv">og_get</span>(<span class="nv">v_labels</span>, [<span class="s1">&#39;increaseOf&#39;</span>]), [<span class="nv">og_get</span>(<span class="nv">v_d</span>, [<span class="s1">&#39;name&#39;</span>])])<span class="cp">}}</span><span class="x">) }}
+</span><span class="x">          </span><span class="cp">{%</span>- <span class="k">endset</span> -<span class="cp">%}</span><span class="x">
+</span><span class="x">          </span><span class="cp">{{</span> <span class="nv">og_include</span>(<span class="s1">&#39;compose/stack.html.j2&#39;</span>, {<span class="s1">&#39;p&#39;</span>: {<span class="s1">&#39;Gap&#39;</span>: <span class="s1">&#39;2&#39;</span>, <span class="s1">&#39;Class&#39;</span>: <span class="s1">&#39;rounded bg-card inset-ring inset-ring-border p-4&#39;</span>, <span class="s1">&#39;Attrs&#39;</span>: <span class="nv">og_attrs</span>([<span class="s1">&#39;data-testid&#39;</span>, <span class="s1">&#39;item&#39;</span>])}, <span class="s1">&#39;children&#39;</span>: <span class="nv">c_3</span>}) <span class="cp">}}</span><span class="x">
+</span><span class="x">        </span><span class="cp">{%</span>- <span class="k">endfor</span> <span class="cp">%}</span><span class="x">
+</span><span class="x">      </span><span class="cp">{%</span>- <span class="k">endset</span> -<span class="cp">%}</span><span class="x">
+</span><span class="x">      </span><span class="cp">{{</span> <span class="nv">og_include</span>(<span class="s1">&#39;compose/box.html.j2&#39;</span>, {<span class="s1">&#39;p&#39;</span>: {<span class="s1">&#39;Class&#39;</span>: <span class="nv">og_s</span>((<span class="s1">&#39;grid grid-cols-2 gap-4 md:grid-cols-3 lg:col-span-2&#39;</span> <span class="k">if</span> <span class="nv">og_t</span>(<span class="nv">og_eq</span>(<span class="nv">v_layout</span>, <span class="s1">&#39;split&#39;</span>)) <span class="k">else</span> <span class="s1">&#39;grid grid-cols-2 gap-4 md:grid-cols-3 lg:col-span-3 lg:grid-cols-6&#39;</span>)), <span class="s1">&#39;Attrs&#39;</span>: <span class="nv">og_attrs</span>([<span class="s1">&#39;data-testid&#39;</span>, <span class="s1">&#39;items&#39;</span>])}, <span class="s1">&#39;children&#39;</span>: <span class="nv">c_4</span>}) <span class="cp">}}</span><span class="x">
+</span><span class="x">      </span><span class="cp">{%</span>- <span class="k">set</span> <span class="nv">c_11</span> -<span class="cp">%}</span><span class="x">
+</span><span class="x">        </span><span class="cp">{%</span>- <span class="k">set</span> <span class="nv">c_5</span> -<span class="cp">%}</span><span class="x">
+</span><span class="x">          </span><span class="cp">{{</span> <span class="nv">og_text</span>(<span class="nv">og_get</span>(<span class="nv">v_labels</span>, [<span class="s1">&#39;summary&#39;</span>])) <span class="cp">}}</span><span class="x">
+</span><span class="x">        </span><span class="cp">{%</span>- <span class="k">endset</span> -<span class="cp">%}</span><span class="x">
+</span><span class="x">        </span><span class="cp">{{</span> <span class="nv">og_include</span>(<span class="s1">&#39;compose/text.html.j2&#39;</span>, {<span class="s1">&#39;p&#39;</span>: {<span class="s1">&#39;Size&#39;</span>: <span class="s1">&#39;lg&#39;</span>, <span class="s1">&#39;Weight&#39;</span>: <span class="s1">&#39;semibold&#39;</span>}, <span class="s1">&#39;children&#39;</span>: <span class="nv">c_5</span>}) <span class="cp">}}</span><span class="x">
+</span><span class="x">        </span><span class="cp">{%</span>- <span class="k">set</span> <span class="nv">c_6</span> -<span class="cp">%}</span><span class="x">
+</span><span class="x">          </span><span class="cp">{{</span> <span class="nv">og_text</span>(<span class="nv">og_get</span>(<span class="nv">v_labels</span>, [<span class="s1">&#39;boxFill&#39;</span>])) <span class="cp">}}</span><span class="x">
+</span><span class="x">        </span><span class="cp">{%</span>- <span class="k">endset</span> -<span class="cp">%}</span><span class="x">
+</span><span class="x">        </span><span class="cp">{{</span> <span class="nv">og_include</span>(<span class="s1">&#39;compose/label.html.j2&#39;</span>, {<span class="s1">&#39;p&#39;</span>: {<span class="s1">&#39;For&#39;</span>: <span class="nv">og_s</span>(<span class="nv">og_tpl</span>(<span class="s1">&#39;{0}-fill&#39;</span>, [<span class="nv">v_id</span>])), <span class="s1">&#39;Class&#39;</span>: <span class="s1">&#39;text-sm text-muted-foreground&#39;</span>}, <span class="s1">&#39;children&#39;</span>: <span class="nv">c_6</span>}) <span class="cp">}}</span><span class="x">
+</span><span class="x">        </span><span class="cp">{{</span> <span class="nv">og_include</span>(<span class="s1">&#39;compose/meter.html.j2&#39;</span>, {<span class="s1">&#39;p&#39;</span>: {<span class="s1">&#39;Value&#39;</span>: <span class="nv">og_s</span>(<span class="nv">v_fill</span>), <span class="s1">&#39;Min&#39;</span>: <span class="nv">og_s</span>(<span class="m">0</span>), <span class="s1">&#39;Max&#39;</span>: <span class="nv">og_s</span>(<span class="m">100</span>), <span class="s1">&#39;Attrs&#39;</span>: <span class="nv">og_attrs</span>([<span class="s1">&#39;id&#39;</span>, <span class="nv">og_tpl</span>(<span class="s1">&#39;{0}-fill&#39;</span>, [<span class="nv">v_id</span>])])<span class="cp">}}</span><span class="x">) }}
+</span><span class="x">        </span><span class="cp">{%</span>- <span class="k">set</span> <span class="nv">c_9</span> -<span class="cp">%}</span><span class="x">
+</span><span class="x">          </span><span class="cp">{%</span>- <span class="k">set</span> <span class="nv">c_7</span> -<span class="cp">%}</span><span class="x">
+</span><span class="x">            </span><span class="cp">{{</span> <span class="nv">og_text</span>(<span class="nv">og_get</span>(<span class="nv">v_labels</span>, [<span class="s1">&#39;total&#39;</span>])) <span class="cp">}}</span><span class="x">
+</span><span class="x">          </span><span class="cp">{%</span>- <span class="k">endset</span> -<span class="cp">%}</span><span class="x">
+</span><span class="x">          </span><span class="cp">{{</span> <span class="nv">og_include</span>(<span class="s1">&#39;compose/text.html.j2&#39;</span>, {<span class="s1">&#39;p&#39;</span>: {<span class="s1">&#39;Size&#39;</span>: <span class="s1">&#39;sm&#39;</span>, <span class="s1">&#39;Class&#39;</span>: <span class="s1">&#39;text-muted-foreground&#39;</span>}, <span class="s1">&#39;children&#39;</span>: <span class="nv">c_7</span>}) <span class="cp">}}</span><span class="x">
+</span><span class="x">          </span><span class="cp">{%</span>- <span class="k">set</span> <span class="nv">c_8</span> -<span class="cp">%}</span><span class="x">
+</span><span class="x">            </span><span class="cp">{{</span> <span class="nv">og_text</span>(<span class="nv">og_money</span>(<span class="nv">v_total</span>, <span class="nv">v_currency</span>)) <span class="cp">}}</span><span class="x">
+</span><span class="x">          </span><span class="cp">{%</span>- <span class="k">endset</span> -<span class="cp">%}</span><span class="x">
+</span><span class="x">          </span><span class="cp">{{</span> <span class="nv">og_include</span>(<span class="s1">&#39;compose/inline.html.j2&#39;</span>, {<span class="s1">&#39;p&#39;</span>: {<span class="s1">&#39;Class&#39;</span>: <span class="s1">&#39;text-2xl font-bold&#39;</span>, <span class="s1">&#39;Attrs&#39;</span>: <span class="nv">og_attrs</span>([<span class="s1">&#39;role&#39;</span>, <span class="s1">&#39;status&#39;</span>, <span class="s1">&#39;aria-live&#39;</span>, <span class="s1">&#39;polite&#39;</span>, <span class="s1">&#39;data-testid&#39;</span>, <span class="s1">&#39;total&#39;</span>])}, <span class="s1">&#39;children&#39;</span>: <span class="nv">c_8</span>}) <span class="cp">}}</span><span class="x">
+</span><span class="x">        </span><span class="cp">{%</span>- <span class="k">endset</span> -<span class="cp">%}</span><span class="x">
+</span><span class="x">        </span><span class="cp">{{</span> <span class="nv">og_include</span>(<span class="s1">&#39;compose/group.html.j2&#39;</span>, {<span class="s1">&#39;p&#39;</span>: {<span class="s1">&#39;Gap&#39;</span>: <span class="s1">&#39;2&#39;</span>, <span class="s1">&#39;Align&#39;</span>: <span class="s1">&#39;baseline&#39;</span>, <span class="s1">&#39;Justify&#39;</span>: <span class="s1">&#39;between&#39;</span>}, <span class="s1">&#39;children&#39;</span>: <span class="nv">c_9</span>}) <span class="cp">}}</span><span class="x">
+</span><span class="x">        </span><span class="cp">{%</span>- <span class="k">set</span> <span class="nv">c_10</span> -<span class="cp">%}</span><span class="x">
+</span><span class="x">          </span><span class="cp">{{</span> <span class="nv">og_include</span>(<span class="s1">&#39;icons/lucide-icon.html.j2&#39;</span>, {<span class="s1">&#39;p&#39;</span>: {<span class="s1">&#39;Name&#39;</span>: <span class="s1">&#39;shopping-bag&#39;</span>, <span class="s1">&#39;Size&#39;</span>: <span class="m">16</span><span class="cp">}}</span><span class="x">) }}
+</span><span class="x">          </span><span class="cp">{{</span> <span class="nv">og_text</span>(<span class="nv">og_get</span>(<span class="nv">v_labels</span>, [<span class="s1">&#39;order&#39;</span>])) <span class="cp">}}</span><span class="x">
+</span><span class="x">        </span><span class="cp">{%</span>- <span class="k">endset</span> -<span class="cp">%}</span><span class="x">
+</span><span class="x">        </span><span class="cp">{{</span> <span class="nv">og_include</span>(<span class="s1">&#39;compose/button.html.j2&#39;</span>, {<span class="s1">&#39;p&#39;</span>: {<span class="s1">&#39;Variant&#39;</span>: <span class="s1">&#39;default&#39;</span>, <span class="s1">&#39;Size&#39;</span>: <span class="s1">&#39;lg&#39;</span>, <span class="s1">&#39;Type&#39;</span>: <span class="s1">&#39;button&#39;</span>, <span class="s1">&#39;Class&#39;</span>: <span class="s1">&#39;w-full&#39;</span>}, <span class="s1">&#39;children&#39;</span>: <span class="nv">c_10</span>}) <span class="cp">}}</span><span class="x">
+</span><span class="x">      </span><span class="cp">{%</span>- <span class="k">endset</span> -<span class="cp">%}</span><span class="x">
+</span><span class="x">      </span><span class="cp">{{</span> <span class="nv">og_include</span>(<span class="s1">&#39;compose/stack.html.j2&#39;</span>, {<span class="s1">&#39;p&#39;</span>: {<span class="s1">&#39;Gap&#39;</span>: <span class="s1">&#39;4&#39;</span>, <span class="s1">&#39;Class&#39;</span>: <span class="nv">og_s</span>((<span class="s1">&#39;rounded bg-card inset-ring inset-ring-border p-6 lg:sticky lg:top-8&#39;</span> <span class="k">if</span> <span class="nv">og_t</span>(<span class="nv">og_eq</span>(<span class="nv">v_layout</span>, <span class="s1">&#39;split&#39;</span>)) <span class="k">else</span> <span class="s1">&#39;rounded bg-card inset-ring inset-ring-border p-6 lg:col-span-3&#39;</span>)), <span class="s1">&#39;Attrs&#39;</span>: <span class="nv">og_attrs</span>([<span class="s1">&#39;data-testid&#39;</span>, <span class="s1">&#39;summary&#39;</span>])}, <span class="s1">&#39;children&#39;</span>: <span class="nv">c_11</span>}) <span class="cp">}}</span><span class="x">
+</span><span class="x">    </span><span class="cp">{%</span>- <span class="k">endset</span> -<span class="cp">%}</span><span class="x">
+</span><span class="x">    </span><span class="cp">{{</span> <span class="nv">og_include</span>(<span class="s1">&#39;compose/box.html.j2&#39;</span>, {<span class="s1">&#39;p&#39;</span>: {<span class="s1">&#39;Class&#39;</span>: <span class="s1">&#39;grid grid-cols-1 items-start gap-8 lg:grid-cols-3&#39;</span>}, <span class="s1">&#39;children&#39;</span>: <span class="nv">c_12</span>}) <span class="cp">}}</span><span class="x">
+</span><span class="x">  </span><span class="cp">{%</span>- <span class="k">endif</span> <span class="cp">%}</span><span class="x">
+</span><span class="cp">{%</span>- <span class="k">endset</span> -<span class="cp">%}</span><span class="x">
+</span><span class="cp">{{</span> <span class="nv">og_include</span>(<span class="s1">&#39;blocks/section-frame.html.j2&#39;</span>, {<span class="s1">&#39;p&#39;</span>: {<span class="s1">&#39;id&#39;</span>: <span class="nv">v_id</span>, <span class="s1">&#39;title&#39;</span>: <span class="nv">v_title</span>, <span class="s1">&#39;lead&#39;</span>: <span class="nv">v_lead</span>, <span class="s1">&#39;tone&#39;</span>: <span class="nv">v_tone</span>, <span class="s1">&#39;landmarkLabel&#39;</span>: <span class="nv">v_landmarkLabel</span>}, <span class="s1">&#39;children&#39;</span>: <span class="nv">og_markup</span>(<span class="nv">c_13</span>)}) <span class="cp">}}</span><span class="x">
+</span></code></pre></div> <p class="text-sm"><a href="https://registry.buildy.tw/jinja2/blocks/veggie-box.json" class="underline">Jinja2 registry item (JSON)</a></p></section></div><h2 class="text-foreground text-xl font-semibold mb-2">Props</h2><p class="text-sm mb-4 max-w-3xl text-muted-foreground">Names and types come from the xgen specs of the source. Standard HTML attributes (id, role, tabIndex, aria-*) pass through to the root element; the class prop is className in React.</p><p class="text-sm mb-8 text-muted-foreground">No props data for this item.</p> </article></main></div><footer class="border-t border-border"><div class="mx-auto max-w-6xl px-4 py-8 text-sm text-muted-foreground">ui8kit, MIT licence. Static docs generated from markdown and the registry (<a href="https://registry.buildy.tw/registry.json" class="underline">registry.json</a>).</div></footer></body></html>

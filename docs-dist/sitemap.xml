@@ -18,6 +18,7 @@
   <url><loc>https://ui.buildy.tw/blocks/chart-panel/</loc></url>
   <url><loc>https://ui.buildy.tw/blocks/checklist/</loc></url>
   <url><loc>https://ui.buildy.tw/blocks/checkout-form/</loc></url>
+  <url><loc>https://ui.buildy.tw/blocks/combo-builder/</loc></url>
   <url><loc>https://ui.buildy.tw/blocks/comparison-table/</loc></url>
   <url><loc>https://ui.buildy.tw/blocks/contact-form/</loc></url>
   <url><loc>https://ui.buildy.tw/blocks/cookie-banner/</loc></url>
@@ -28,6 +29,11 @@
   <url><loc>https://ui.buildy.tw/blocks/dashboard-overview/</loc></url>
   <url><loc>https://ui.buildy.tw/blocks/dashboard-shell/</loc></url>
   <url><loc>https://ui.buildy.tw/blocks/delivery-info/</loc></url>
+  <url><loc>https://ui.buildy.tw/blocks/dish-bento/</loc></url>
+  <url><loc>https://ui.buildy.tw/blocks/dish-cart-grid/</loc></url>
+  <url><loc>https://ui.buildy.tw/blocks/dish-compare/</loc></url>
+  <url><loc>https://ui.buildy.tw/blocks/dish-showcase/</loc></url>
+  <url><loc>https://ui.buildy.tw/blocks/dish-strip/</loc></url>
   <url><loc>https://ui.buildy.tw/blocks/empty-panel/</loc></url>
   <url><loc>https://ui.buildy.tw/blocks/error-page/</loc></url>
   <url><loc>https://ui.buildy.tw/blocks/faq-list/</loc></url>
@@ -39,6 +45,8 @@
   <url><loc>https://ui.buildy.tw/blocks/feature-sticky/</loc></url>
   <url><loc>https://ui.buildy.tw/blocks/feature-tabs/</loc></url>
   <url><loc>https://ui.buildy.tw/blocks/footer-split/</loc></url>
+  <url><loc>https://ui.buildy.tw/blocks/grill-builder/</loc></url>
+  <url><loc>https://ui.buildy.tw/blocks/grocery-list/</loc></url>
   <url><loc>https://ui.buildy.tw/blocks/hero-classic/</loc></url>
   <url><loc>https://ui.buildy.tw/blocks/hero-prompt/</loc></url>
   <url><loc>https://ui.buildy.tw/blocks/hero-split/</loc></url>
@@ -58,6 +66,7 @@
   <url><loc>https://ui.buildy.tw/blocks/page-intro/</loc></url>
   <url><loc>https://ui.buildy.tw/blocks/page-trail/</loc></url>
   <url><loc>https://ui.buildy.tw/blocks/photo-gallery/</loc></url>
+  <url><loc>https://ui.buildy.tw/blocks/pizza-picker/</loc></url>
   <url><loc>https://ui.buildy.tw/blocks/post-card/</loc></url>
   <url><loc>https://ui.buildy.tw/blocks/post-grid/</loc></url>
   <url><loc>https://ui.buildy.tw/blocks/post-header/</loc></url>
@@ -72,7 +81,10 @@
   <url><loc>https://ui.buildy.tw/blocks/profile-form/</loc></url>
   <url><loc>https://ui.buildy.tw/blocks/project-grid/</loc></url>
   <url><loc>https://ui.buildy.tw/blocks/proof-band/</loc></url>
+  <url><loc>https://ui.buildy.tw/blocks/quick-order/</loc></url>
   <url><loc>https://ui.buildy.tw/blocks/quote-split/</loc></url>
+  <url><loc>https://ui.buildy.tw/blocks/recipe-kits/</loc></url>
+  <url><loc>https://ui.buildy.tw/blocks/restaurant-menu/</loc></url>
   <url><loc>https://ui.buildy.tw/blocks/review-list/</loc></url>
   <url><loc>https://ui.buildy.tw/blocks/rich-text/</loc></url>
   <url><loc>https://ui.buildy.tw/blocks/shopping-cart/</loc></url>
@@ -90,16 +102,21 @@
   <url><loc>https://ui.buildy.tw/blocks/store-locations/</loc></url>
   <url><loc>https://ui.buildy.tw/blocks/story-tabs/</loc></url>
   <url><loc>https://ui.buildy.tw/blocks/support-channels/</loc></url>
+  <url><loc>https://ui.buildy.tw/blocks/sushi-sets/</loc></url>
   <url><loc>https://ui.buildy.tw/blocks/team-grid/</loc></url>
   <url><loc>https://ui.buildy.tw/blocks/template-grid/</loc></url>
   <url><loc>https://ui.buildy.tw/blocks/testimonial-grid/</loc></url>
   <url><loc>https://ui.buildy.tw/blocks/tour-callout/</loc></url>
   <url><loc>https://ui.buildy.tw/blocks/usage-calculator/</loc></url>
   <url><loc>https://ui.buildy.tw/blocks/usp-strip/</loc></url>
+  <url><loc>https://ui.buildy.tw/blocks/veggie-box/</loc></url>
   <url><loc>https://ui.buildy.tw/blocks/video-grid/</loc></url>
   <url><loc>https://ui.buildy.tw/blocks/video-modal/</loc></url>
+  <url><loc>https://ui.buildy.tw/blocks/week-menu/</loc></url>
   <url><loc>https://ui.buildy.tw/blocks/zone-table/</loc></url>
   <url><loc>https://ui.buildy.tw/components/action-group/</loc></url>
+  <url><loc>https://ui.buildy.tw/components/add-icon/</loc></url>
+  <url><loc>https://ui.buildy.tw/components/add-qty/</loc></url>
   <url><loc>https://ui.buildy.tw/components/app-main/</loc></url>
   <url><loc>https://ui.buildy.tw/components/article-block/</loc></url>
   <url><loc>https://ui.buildy.tw/components/auth-form/</loc></url>
@@ -108,6 +125,7 @@
   <url><loc>https://ui.buildy.tw/components/badge-square/</loc></url>
   <url><loc>https://ui.buildy.tw/components/bar-chart/</loc></url>
   <url><loc>https://ui.buildy.tw/components/bulk-bar/</loc></url>
+  <url><loc>https://ui.buildy.tw/components/cart-count/</loc></url>
   <url><loc>https://ui.buildy.tw/components/cart-summary-card/</loc></url>
   <url><loc>https://ui.buildy.tw/components/cart-table/</loc></url>
   <url><loc>https://ui.buildy.tw/components/checkout-step/</loc></url>
@@ -116,6 +134,7 @@
   <url><loc>https://ui.buildy.tw/components/compare-mark/</loc></url>
   <url><loc>https://ui.buildy.tw/components/cta-actions/</loc></url>
   <url><loc>https://ui.buildy.tw/components/cta-proof-items/</loc></url>
+  <url><loc>https://ui.buildy.tw/components/cut-cards/</loc></url>
   <url><loc>https://ui.buildy.tw/components/drawer-lines/</loc></url>
   <url><loc>https://ui.buildy.tw/components/dropdown-item/</loc></url>
   <url><loc>https://ui.buildy.tw/components/editor-tab/</loc></url>
@@ -153,6 +172,7 @@
   <url><loc>https://ui.buildy.tw/components/job-cards/</loc></url>
   <url><loc>https://ui.buildy.tw/components/logo-sidebar/</loc></url>
   <url><loc>https://ui.buildy.tw/components/logo-slot/</loc></url>
+  <url><loc>https://ui.buildy.tw/components/meat-cards/</loc></url>
   <url><loc>https://ui.buildy.tw/components/media-contacts/</loc></url>
   <url><loc>https://ui.buildy.tw/components/media-figures/</loc></url>
   <url><loc>https://ui.buildy.tw/components/media-frame/</loc></url>
@@ -162,6 +182,7 @@
   <url><loc>https://ui.buildy.tw/components/media-topics/</loc></url>
   <url><loc>https://ui.buildy.tw/components/member-row/</loc></url>
   <url><loc>https://ui.buildy.tw/components/menu-entry/</loc></url>
+  <url><loc>https://ui.buildy.tw/components/menu-section-nav/</loc></url>
   <url><loc>https://ui.buildy.tw/components/meter-row/</loc></url>
   <url><loc>https://ui.buildy.tw/components/nav-actions/</loc></url>
   <url><loc>https://ui.buildy.tw/components/nav-bar-menu/</loc></url>
@@ -172,6 +193,7 @@
   <url><loc>https://ui.buildy.tw/components/notice/</loc></url>
   <url><loc>https://ui.buildy.tw/components/number-field/</loc></url>
   <url><loc>https://ui.buildy.tw/components/offer-media/</loc></url>
+  <url><loc>https://ui.buildy.tw/components/option-chips/</loc></url>
   <url><loc>https://ui.buildy.tw/components/order-rows/</loc></url>
   <url><loc>https://ui.buildy.tw/components/over-media/</loc></url>
   <url><loc>https://ui.buildy.tw/components/page-aside/</loc></url>
@@ -213,6 +235,7 @@
   <url><loc>https://ui.buildy.tw/components/shell-footer/</loc></url>
   <url><loc>https://ui.buildy.tw/components/shell-sidebar/</loc></url>
   <url><loc>https://ui.buildy.tw/components/shell-topbar/</loc></url>
+  <url><loc>https://ui.buildy.tw/components/side-checks/</loc></url>
   <url><loc>https://ui.buildy.tw/components/sidebar-panel/</loc></url>
   <url><loc>https://ui.buildy.tw/components/slot-grid/</loc></url>
   <url><loc>https://ui.buildy.tw/components/stat-figure/</loc></url>
