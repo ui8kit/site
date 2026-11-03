@@ -82,6 +82,32 @@
     },
     {
       "dependencies": [],
+      "description": "Add Icon component",
+      "name": "add-icon",
+      "registryDependencies": [
+        "button",
+        "lucide-icon",
+        "utils"
+      ],
+      "title": "Add Icon",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "Add Qty component",
+      "name": "add-qty",
+      "registryDependencies": [
+        "button",
+        "group",
+        "lucide-icon",
+        "number-field",
+        "utils"
+      ],
+      "title": "Add Qty",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
       "description": "Alert primitive",
       "name": "alert",
       "registryDependencies": [
@@ -512,6 +538,18 @@
     },
     {
       "dependencies": [],
+      "description": "Cart Count component",
+      "name": "cart-count",
+      "registryDependencies": [
+        "inline",
+        "lucide-icon",
+        "utils"
+      ],
+      "title": "Cart Count",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
       "description": "The cart drawer in its open state, filled or empty.",
       "name": "cart-drawer",
       "registryDependencies": [
@@ -744,6 +782,26 @@
       ],
       "title": "Code Window",
       "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "Pick a main, a side and a drink beside the total.",
+      "name": "combo-builder",
+      "registryDependencies": [
+        "box",
+        "button",
+        "dish-showcase",
+        "group",
+        "inline",
+        "lucide-icon",
+        "option-chips",
+        "section-frame",
+        "stack",
+        "text",
+        "utils"
+      ],
+      "title": "Combo Builder",
+      "type": "registry:block"
     },
     {
       "dependencies": [],
@@ -1026,6 +1084,26 @@
     },
     {
       "dependencies": [],
+      "description": "Cut Cards component",
+      "name": "cut-cards",
+      "registryDependencies": [
+        "badge",
+        "dish-showcase",
+        "grid",
+        "inline",
+        "list",
+        "list-item",
+        "lucide-icon",
+        "media-frame",
+        "stack",
+        "text",
+        "utils"
+      ],
+      "title": "Cut Cards",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
       "description": "Counters, a chart and recent activity in one section.",
       "name": "dashboard-overview",
       "registryDependencies": [
@@ -1106,6 +1184,113 @@
       ],
       "title": "Disclosure",
       "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "One featured dish in a large tile among smaller ones.",
+      "name": "dish-bento",
+      "registryDependencies": [
+        "add-icon",
+        "badge",
+        "box",
+        "dish-showcase",
+        "empty-state",
+        "group",
+        "inline",
+        "link",
+        "lucide-icon",
+        "media-frame",
+        "section-frame",
+        "stack",
+        "text",
+        "title",
+        "utils"
+      ],
+      "title": "Dish Bento",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "Cards with a quantity field and an add button, under a live cart count.",
+      "name": "dish-cart-grid",
+      "registryDependencies": [
+        "add-qty",
+        "box",
+        "cart-count",
+        "dish-showcase",
+        "empty-state",
+        "grid",
+        "group",
+        "media-frame",
+        "section-frame",
+        "stack",
+        "text",
+        "utils"
+      ],
+      "title": "Dish Cart Grid",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "Grill cuts side by side: a table or compare cards.",
+      "name": "dish-compare",
+      "registryDependencies": [
+        "box",
+        "cut-cards",
+        "dish-showcase",
+        "empty-state",
+        "section-frame",
+        "table",
+        "table-body",
+        "table-caption",
+        "table-cell",
+        "table-head",
+        "table-head-cell",
+        "table-row",
+        "utils"
+      ],
+      "title": "Dish Compare",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "Dish cards that each open the dish page; no cart.",
+      "name": "dish-showcase",
+      "registryDependencies": [
+        "badge",
+        "empty-state",
+        "grid",
+        "group",
+        "inline",
+        "link",
+        "lucide-icon",
+        "media-frame",
+        "section-frame",
+        "stack",
+        "utils"
+      ],
+      "title": "Dish Showcase",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "A horizontal strip of small cards that scrolls sideways.",
+      "name": "dish-strip",
+      "registryDependencies": [
+        "add-icon",
+        "dish-showcase",
+        "empty-state",
+        "group",
+        "inline",
+        "list",
+        "list-item",
+        "media-frame",
+        "section-frame",
+        "text",
+        "utils"
+      ],
+      "title": "Dish Strip",
+      "type": "registry:block"
     },
     {
       "dependencies": [],
@@ -1884,6 +2069,48 @@
     },
     {
       "dependencies": [],
+      "description": "Choose the meat, the weight and the sides of a grill (mangal) dish.",
+      "name": "grill-builder",
+      "registryDependencies": [
+        "box",
+        "button",
+        "dish-showcase",
+        "group",
+        "inline",
+        "lucide-icon",
+        "meat-cards",
+        "option-chips",
+        "section-frame",
+        "side-checks",
+        "stack",
+        "text",
+        "utils"
+      ],
+      "title": "Grill Builder",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "A compact list of groceries with a small picture and an add button.",
+      "name": "grocery-list",
+      "registryDependencies": [
+        "add-icon",
+        "dish-showcase",
+        "empty-state",
+        "inline",
+        "list",
+        "list-item",
+        "media-frame",
+        "section-frame",
+        "stack",
+        "text",
+        "utils"
+      ],
+      "title": "Grocery List",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
       "description": "Group primitive",
       "name": "group",
       "registryDependencies": [
@@ -2533,6 +2760,24 @@
     },
     {
       "dependencies": [],
+      "description": "Meat Cards component",
+      "name": "meat-cards",
+      "registryDependencies": [
+        "box",
+        "fieldset",
+        "inline",
+        "label",
+        "legend",
+        "media-frame",
+        "option-chips",
+        "radio",
+        "utils"
+      ],
+      "title": "Meat Cards",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
       "description": "Media Contacts component",
       "name": "media-contacts",
       "registryDependencies": [
@@ -2716,6 +2961,20 @@
         "utils"
       ],
       "title": "Menu Entry",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "Menu Section Nav component",
+      "name": "menu-section-nav",
+      "registryDependencies": [
+        "block",
+        "link",
+        "list",
+        "list-item",
+        "utils"
+      ],
+      "title": "Menu Section Nav",
       "type": "registry:component"
     },
     {
@@ -2955,6 +3214,22 @@
     },
     {
       "dependencies": [],
+      "description": "Option Chips component",
+      "name": "option-chips",
+      "registryDependencies": [
+        "box",
+        "fieldset",
+        "inline",
+        "label",
+        "legend",
+        "radio",
+        "utils"
+      ],
+      "title": "Option Chips",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
       "description": "Order Rows component",
       "name": "order-rows",
       "registryDependencies": [
@@ -3175,6 +3450,27 @@
       ],
       "title": "Pill",
       "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "Pizza cards with a size and a crust radio group and an add button.",
+      "name": "pizza-picker",
+      "registryDependencies": [
+        "box",
+        "button",
+        "dish-showcase",
+        "empty-state",
+        "group",
+        "inline",
+        "media-frame",
+        "option-chips",
+        "section-frame",
+        "stack",
+        "text",
+        "utils"
+      ],
+      "title": "Pizza Picker",
+      "type": "registry:block"
     },
     {
       "dependencies": [],
@@ -3690,6 +3986,29 @@
     },
     {
       "dependencies": [],
+      "description": "Compact rows with a one-click order button and a phone field.",
+      "name": "quick-order",
+      "registryDependencies": [
+        "button",
+        "dish-showcase",
+        "empty-state",
+        "field",
+        "group",
+        "inline",
+        "input",
+        "list",
+        "list-item",
+        "lucide-icon",
+        "section-frame",
+        "stack",
+        "text",
+        "utils"
+      ],
+      "title": "Quick Order",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
       "description": "Quote Card component",
       "name": "quote-card",
       "registryDependencies": [
@@ -3855,6 +4174,31 @@
     },
     {
       "dependencies": [],
+      "description": "Kits with the ingredients list, the cooking time and the portions.",
+      "name": "recipe-kits",
+      "registryDependencies": [
+        "badge",
+        "box",
+        "button",
+        "dish-showcase",
+        "empty-state",
+        "group",
+        "inline",
+        "list",
+        "list-item",
+        "lucide-icon",
+        "media-frame",
+        "option-chips",
+        "section-frame",
+        "stack",
+        "text",
+        "utils"
+      ],
+      "title": "Recipe Kits",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
       "description": "Recipes (Tailwind classes per variant/size/state) of the composed primitives",
       "name": "recipes",
       "registryDependencies": [
@@ -3873,6 +4217,28 @@
       ],
       "title": "Region",
       "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "Menu sections with dotted leaders to the price; no cart.",
+      "name": "restaurant-menu",
+      "registryDependencies": [
+        "badge",
+        "box",
+        "dish-showcase",
+        "empty-state",
+        "inline",
+        "list",
+        "list-item",
+        "menu-section-nav",
+        "section-frame",
+        "stack",
+        "text",
+        "title",
+        "utils"
+      ],
+      "title": "Restaurant Menu",
+      "type": "registry:block"
     },
     {
       "dependencies": [],
@@ -4184,6 +4550,22 @@
       ],
       "title": "Shopping Cart",
       "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "Side Checks component",
+      "name": "side-checks",
+      "registryDependencies": [
+        "checkbox",
+        "fieldset",
+        "inline",
+        "label",
+        "legend",
+        "option-chips",
+        "utils"
+      ],
+      "title": "Side Checks",
+      "type": "registry:component"
     },
     {
       "dependencies": [],
@@ -4608,6 +4990,31 @@
     },
     {
       "dependencies": [],
+      "description": "A dense grid of sets with the piece count and the rolls of each.",
+      "name": "sushi-sets",
+      "registryDependencies": [
+        "add-icon",
+        "badge",
+        "box",
+        "dish-showcase",
+        "empty-state",
+        "grid",
+        "group",
+        "inline",
+        "list",
+        "list-item",
+        "lucide-icon",
+        "media-frame",
+        "section-frame",
+        "stack",
+        "text",
+        "utils"
+      ],
+      "title": "Sushi Sets",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
       "description": "Switch primitive",
       "name": "switch",
       "registryDependencies": [
@@ -4971,6 +5378,30 @@
     },
     {
       "dependencies": [],
+      "description": "Fill a box by weight: produce tiles beside the box with a meter.",
+      "name": "veggie-box",
+      "registryDependencies": [
+        "box",
+        "button",
+        "dish-showcase",
+        "empty-state",
+        "group",
+        "inline",
+        "label",
+        "lucide-icon",
+        "media-frame",
+        "meter",
+        "number-field",
+        "section-frame",
+        "stack",
+        "text",
+        "utils"
+      ],
+      "title": "Veggie Box",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
       "description": "Customer videos as thumbnails with a play button. Playing is a port contract (VideoEmbed).",
       "name": "video-grid",
       "registryDependencies": [
@@ -5008,6 +5439,26 @@
         "utils"
       ],
       "title": "Video Modal",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "Meal delivery as a week: one column per day with its meal.",
+      "name": "week-menu",
+      "registryDependencies": [
+        "box",
+        "dish-showcase",
+        "empty-state",
+        "group",
+        "inline",
+        "media-frame",
+        "restaurant-menu",
+        "section-frame",
+        "stack",
+        "text",
+        "utils"
+      ],
+      "title": "Week Menu",
       "type": "registry:block"
     },
     {
@@ -5067,7 +5518,7 @@
       "type": "registry:block"
     }
   ],
-  "lastUpdated": "2026-11-02T01:32:07+03:00",
+  "lastUpdated": "2026-11-02T21:24:41+03:00",
   "registry": "ui",
   "version": "0.1.0"
 }

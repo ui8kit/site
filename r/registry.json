@@ -594,6 +594,237 @@
       "type": "registry:block"
     },
     {
+      "category": "components",
+      "description": "Add Icon component",
+      "group": "",
+      "kind": "component",
+      "name": "add-icon",
+      "runtimes": {
+        "jinja2": {
+          "dependencies": [],
+          "files": [
+            "blocks/add-icon.html.j2"
+          ],
+          "path": "jinja2/components/add-icon.json",
+          "registryDependencies": [
+            "button",
+            "lucide-icon",
+            "utils"
+          ]
+        },
+        "latte": {
+          "dependencies": [],
+          "files": [
+            "blocks/add-icon.latte"
+          ],
+          "path": "latte/components/add-icon.json",
+          "registryDependencies": [
+            "button",
+            "lucide-icon",
+            "utils"
+          ]
+        },
+        "react": {
+          "dependencies": [],
+          "files": [
+            "components/add-icon.tsx"
+          ],
+          "path": "react/components/add-icon.json",
+          "registryDependencies": [
+            "compose",
+            "lucide-icon",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/add-icon.tsx"
+          ],
+          "path": "solid/components/add-icon.json",
+          "registryDependencies": [
+            "compose",
+            "lucide-icon",
+            "utils"
+          ]
+        },
+        "svelte": {
+          "dependencies": [],
+          "files": [
+            "components/add-icon.svelte"
+          ],
+          "path": "svelte/components/add-icon.json",
+          "registryDependencies": [
+            "button",
+            "lucide-icon",
+            "utils"
+          ]
+        },
+        "templ": {
+          "dependencies": [],
+          "files": [
+            "blocks/add-icon.templ"
+          ],
+          "path": "templ/components/add-icon.json",
+          "registryDependencies": [
+            "button",
+            "kit-button",
+            "lucide-icon",
+            "utils"
+          ]
+        },
+        "twig": {
+          "dependencies": [],
+          "files": [
+            "blocks/add-icon.html.twig"
+          ],
+          "path": "twig/components/add-icon.json",
+          "registryDependencies": [
+            "button",
+            "lucide-icon",
+            "utils"
+          ]
+        },
+        "vue": {
+          "dependencies": [],
+          "files": [
+            "components/add-icon.vue"
+          ],
+          "path": "vue/components/add-icon.json",
+          "registryDependencies": [
+            "button",
+            "lucide-icon",
+            "utils"
+          ]
+        }
+      },
+      "title": "Add Icon",
+      "type": "registry:component"
+    },
+    {
+      "category": "components",
+      "description": "Add Qty component",
+      "group": "",
+      "kind": "component",
+      "name": "add-qty",
+      "runtimes": {
+        "jinja2": {
+          "dependencies": [],
+          "files": [
+            "blocks/add-qty.html.j2"
+          ],
+          "path": "jinja2/components/add-qty.json",
+          "registryDependencies": [
+            "button",
+            "group",
+            "lucide-icon",
+            "number-field",
+            "utils"
+          ]
+        },
+        "latte": {
+          "dependencies": [],
+          "files": [
+            "blocks/add-qty.latte"
+          ],
+          "path": "latte/components/add-qty.json",
+          "registryDependencies": [
+            "button",
+            "group",
+            "lucide-icon",
+            "number-field",
+            "utils"
+          ]
+        },
+        "react": {
+          "dependencies": [],
+          "files": [
+            "components/add-qty.tsx"
+          ],
+          "path": "react/components/add-qty.json",
+          "registryDependencies": [
+            "compose",
+            "lucide-icon",
+            "number-field",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/add-qty.tsx"
+          ],
+          "path": "solid/components/add-qty.json",
+          "registryDependencies": [
+            "compose",
+            "lucide-icon",
+            "number-field",
+            "utils"
+          ]
+        },
+        "svelte": {
+          "dependencies": [],
+          "files": [
+            "components/add-qty.svelte"
+          ],
+          "path": "svelte/components/add-qty.json",
+          "registryDependencies": [
+            "button",
+            "group",
+            "lucide-icon",
+            "number-field",
+            "utils"
+          ]
+        },
+        "templ": {
+          "dependencies": [],
+          "files": [
+            "blocks/add-qty.templ"
+          ],
+          "path": "templ/components/add-qty.json",
+          "registryDependencies": [
+            "button",
+            "group",
+            "kit-box",
+            "kit-button",
+            "lucide-icon",
+            "number-field",
+            "utils"
+          ]
+        },
+        "twig": {
+          "dependencies": [],
+          "files": [
+            "blocks/add-qty.html.twig"
+          ],
+          "path": "twig/components/add-qty.json",
+          "registryDependencies": [
+            "button",
+            "group",
+            "lucide-icon",
+            "number-field",
+            "utils"
+          ]
+        },
+        "vue": {
+          "dependencies": [],
+          "files": [
+            "components/add-qty.vue"
+          ],
+          "path": "vue/components/add-qty.json",
+          "registryDependencies": [
+            "button",
+            "group",
+            "lucide-icon",
+            "number-field",
+            "utils"
+          ]
+        }
+      },
+      "title": "Add Qty",
+      "type": "registry:component"
+    },
+    {
       "category": "primitives",
       "description": "Alert primitive",
       "group": "",
@@ -4275,6 +4506,114 @@
       "type": "registry:ui"
     },
     {
+      "category": "components",
+      "description": "Cart Count component",
+      "group": "",
+      "kind": "component",
+      "name": "cart-count",
+      "runtimes": {
+        "jinja2": {
+          "dependencies": [],
+          "files": [
+            "blocks/cart-count.html.j2"
+          ],
+          "path": "jinja2/components/cart-count.json",
+          "registryDependencies": [
+            "inline",
+            "lucide-icon",
+            "utils"
+          ]
+        },
+        "latte": {
+          "dependencies": [],
+          "files": [
+            "blocks/cart-count.latte"
+          ],
+          "path": "latte/components/cart-count.json",
+          "registryDependencies": [
+            "inline",
+            "lucide-icon",
+            "utils"
+          ]
+        },
+        "react": {
+          "dependencies": [],
+          "files": [
+            "components/cart-count.tsx"
+          ],
+          "path": "react/components/cart-count.json",
+          "registryDependencies": [
+            "compose",
+            "lucide-icon",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/cart-count.tsx"
+          ],
+          "path": "solid/components/cart-count.json",
+          "registryDependencies": [
+            "compose",
+            "lucide-icon",
+            "utils"
+          ]
+        },
+        "svelte": {
+          "dependencies": [],
+          "files": [
+            "components/cart-count.svelte"
+          ],
+          "path": "svelte/components/cart-count.json",
+          "registryDependencies": [
+            "inline",
+            "lucide-icon",
+            "utils"
+          ]
+        },
+        "templ": {
+          "dependencies": [],
+          "files": [
+            "blocks/cart-count.templ"
+          ],
+          "path": "templ/components/cart-count.json",
+          "registryDependencies": [
+            "inline",
+            "kit-text",
+            "lucide-icon",
+            "utils"
+          ]
+        },
+        "twig": {
+          "dependencies": [],
+          "files": [
+            "blocks/cart-count.html.twig"
+          ],
+          "path": "twig/components/cart-count.json",
+          "registryDependencies": [
+            "inline",
+            "lucide-icon",
+            "utils"
+          ]
+        },
+        "vue": {
+          "dependencies": [],
+          "files": [
+            "components/cart-count.vue"
+          ],
+          "path": "vue/components/cart-count.json",
+          "registryDependencies": [
+            "inline",
+            "lucide-icon",
+            "utils"
+          ]
+        }
+      },
+      "title": "Cart Count",
+      "type": "registry:component"
+    },
+    {
       "category": "commerce",
       "description": "The cart drawer in its open state, filled or empty.",
       "group": "checkout",
@@ -6193,6 +6532,166 @@
       },
       "title": "Code Window",
       "type": "registry:component"
+    },
+    {
+      "category": "commerce",
+      "description": "Pick a main, a side and a drink beside the total.",
+      "group": "food",
+      "kind": "block",
+      "name": "combo-builder",
+      "runtimes": {
+        "jinja2": {
+          "dependencies": [],
+          "files": [
+            "blocks/combo-builder.html.j2"
+          ],
+          "path": "jinja2/blocks/combo-builder.json",
+          "registryDependencies": [
+            "box",
+            "button",
+            "group",
+            "inline",
+            "lucide-icon",
+            "option-chips",
+            "section-frame",
+            "stack",
+            "text",
+            "utils"
+          ]
+        },
+        "latte": {
+          "dependencies": [],
+          "files": [
+            "blocks/combo-builder.latte"
+          ],
+          "path": "latte/blocks/combo-builder.json",
+          "registryDependencies": [
+            "box",
+            "button",
+            "group",
+            "inline",
+            "lucide-icon",
+            "option-chips",
+            "section-frame",
+            "stack",
+            "text",
+            "utils"
+          ]
+        },
+        "react": {
+          "dependencies": [],
+          "files": [
+            "blocks/combo-builder.tsx"
+          ],
+          "path": "react/blocks/combo-builder.json",
+          "registryDependencies": [
+            "compose",
+            "dish-showcase",
+            "lucide-icon",
+            "option-chips",
+            "section-frame",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/combo-builder.tsx"
+          ],
+          "path": "solid/blocks/combo-builder.json",
+          "registryDependencies": [
+            "compose",
+            "dish-showcase",
+            "lucide-icon",
+            "option-chips",
+            "section-frame",
+            "utils"
+          ]
+        },
+        "svelte": {
+          "dependencies": [],
+          "files": [
+            "blocks/combo-builder.svelte"
+          ],
+          "path": "svelte/blocks/combo-builder.json",
+          "registryDependencies": [
+            "box",
+            "button",
+            "dish-showcase",
+            "group",
+            "inline",
+            "lucide-icon",
+            "option-chips",
+            "section-frame",
+            "stack",
+            "text",
+            "utils"
+          ]
+        },
+        "templ": {
+          "dependencies": [],
+          "files": [
+            "blocks/combo-builder.templ"
+          ],
+          "path": "templ/blocks/combo-builder.json",
+          "registryDependencies": [
+            "box",
+            "button",
+            "group",
+            "inline",
+            "kit-box",
+            "kit-button",
+            "kit-text",
+            "lucide-icon",
+            "option-chips",
+            "section-frame",
+            "stack",
+            "text",
+            "utils"
+          ]
+        },
+        "twig": {
+          "dependencies": [],
+          "files": [
+            "blocks/combo-builder.html.twig"
+          ],
+          "path": "twig/blocks/combo-builder.json",
+          "registryDependencies": [
+            "box",
+            "button",
+            "group",
+            "inline",
+            "lucide-icon",
+            "option-chips",
+            "section-frame",
+            "stack",
+            "text",
+            "utils"
+          ]
+        },
+        "vue": {
+          "dependencies": [],
+          "files": [
+            "blocks/combo-builder.vue"
+          ],
+          "path": "vue/blocks/combo-builder.json",
+          "registryDependencies": [
+            "box",
+            "button",
+            "dish-showcase",
+            "group",
+            "inline",
+            "lucide-icon",
+            "option-chips",
+            "section-frame",
+            "stack",
+            "text",
+            "utils"
+          ]
+        }
+      },
+      "title": "Combo Builder",
+      "type": "registry:block"
     },
     {
       "category": "components",
@@ -8172,6 +8671,163 @@
       "type": "registry:component"
     },
     {
+      "category": "components",
+      "description": "Cut Cards component",
+      "group": "",
+      "kind": "component",
+      "name": "cut-cards",
+      "runtimes": {
+        "jinja2": {
+          "dependencies": [],
+          "files": [
+            "blocks/cut-cards.html.j2"
+          ],
+          "path": "jinja2/components/cut-cards.json",
+          "registryDependencies": [
+            "badge",
+            "grid",
+            "inline",
+            "list",
+            "list-item",
+            "lucide-icon",
+            "media-frame",
+            "stack",
+            "text",
+            "utils"
+          ]
+        },
+        "latte": {
+          "dependencies": [],
+          "files": [
+            "blocks/cut-cards.latte"
+          ],
+          "path": "latte/components/cut-cards.json",
+          "registryDependencies": [
+            "badge",
+            "grid",
+            "inline",
+            "list",
+            "list-item",
+            "lucide-icon",
+            "media-frame",
+            "stack",
+            "text",
+            "utils"
+          ]
+        },
+        "react": {
+          "dependencies": [],
+          "files": [
+            "components/cut-cards.tsx"
+          ],
+          "path": "react/components/cut-cards.json",
+          "registryDependencies": [
+            "compose",
+            "dish-showcase",
+            "lucide-icon",
+            "media-frame",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/cut-cards.tsx"
+          ],
+          "path": "solid/components/cut-cards.json",
+          "registryDependencies": [
+            "compose",
+            "dish-showcase",
+            "lucide-icon",
+            "media-frame",
+            "utils"
+          ]
+        },
+        "svelte": {
+          "dependencies": [],
+          "files": [
+            "components/cut-cards.svelte"
+          ],
+          "path": "svelte/components/cut-cards.json",
+          "registryDependencies": [
+            "badge",
+            "dish-showcase",
+            "grid",
+            "inline",
+            "list",
+            "list-item",
+            "lucide-icon",
+            "media-frame",
+            "stack",
+            "text",
+            "utils"
+          ]
+        },
+        "templ": {
+          "dependencies": [],
+          "files": [
+            "blocks/cut-cards.templ"
+          ],
+          "path": "templ/components/cut-cards.json",
+          "registryDependencies": [
+            "badge",
+            "grid",
+            "inline",
+            "kit-box",
+            "kit-text",
+            "list",
+            "list-item",
+            "lucide-icon",
+            "media-frame",
+            "stack",
+            "text",
+            "utils"
+          ]
+        },
+        "twig": {
+          "dependencies": [],
+          "files": [
+            "blocks/cut-cards.html.twig"
+          ],
+          "path": "twig/components/cut-cards.json",
+          "registryDependencies": [
+            "badge",
+            "grid",
+            "inline",
+            "list",
+            "list-item",
+            "lucide-icon",
+            "media-frame",
+            "stack",
+            "text",
+            "utils"
+          ]
+        },
+        "vue": {
+          "dependencies": [],
+          "files": [
+            "components/cut-cards.vue"
+          ],
+          "path": "vue/components/cut-cards.json",
+          "registryDependencies": [
+            "badge",
+            "dish-showcase",
+            "grid",
+            "inline",
+            "list",
+            "list-item",
+            "lucide-icon",
+            "media-frame",
+            "stack",
+            "text",
+            "utils"
+          ]
+        }
+      },
+      "title": "Cut Cards",
+      "type": "registry:component"
+    },
+    {
       "category": "dashboard",
       "description": "Counters, a chart and recent activity in one section.",
       "group": "widgets",
@@ -8863,6 +9519,862 @@
       },
       "title": "Disclosure",
       "type": "registry:ui"
+    },
+    {
+      "category": "commerce",
+      "description": "One featured dish in a large tile among smaller ones.",
+      "group": "food",
+      "kind": "block",
+      "name": "dish-bento",
+      "runtimes": {
+        "jinja2": {
+          "dependencies": [],
+          "files": [
+            "blocks/dish-bento.html.j2"
+          ],
+          "path": "jinja2/blocks/dish-bento.json",
+          "registryDependencies": [
+            "add-icon",
+            "badge",
+            "box",
+            "empty-state",
+            "group",
+            "inline",
+            "link",
+            "lucide-icon",
+            "media-frame",
+            "section-frame",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "latte": {
+          "dependencies": [],
+          "files": [
+            "blocks/dish-bento.latte"
+          ],
+          "path": "latte/blocks/dish-bento.json",
+          "registryDependencies": [
+            "add-icon",
+            "badge",
+            "box",
+            "empty-state",
+            "group",
+            "inline",
+            "link",
+            "lucide-icon",
+            "media-frame",
+            "section-frame",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "react": {
+          "dependencies": [],
+          "files": [
+            "blocks/dish-bento.tsx"
+          ],
+          "path": "react/blocks/dish-bento.json",
+          "registryDependencies": [
+            "add-icon",
+            "compose",
+            "dish-showcase",
+            "empty-state",
+            "lucide-icon",
+            "media-frame",
+            "section-frame",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/dish-bento.tsx"
+          ],
+          "path": "solid/blocks/dish-bento.json",
+          "registryDependencies": [
+            "add-icon",
+            "compose",
+            "dish-showcase",
+            "empty-state",
+            "lucide-icon",
+            "media-frame",
+            "section-frame",
+            "utils"
+          ]
+        },
+        "svelte": {
+          "dependencies": [],
+          "files": [
+            "blocks/dish-bento.svelte"
+          ],
+          "path": "svelte/blocks/dish-bento.json",
+          "registryDependencies": [
+            "add-icon",
+            "badge",
+            "box",
+            "dish-showcase",
+            "empty-state",
+            "group",
+            "inline",
+            "link",
+            "lucide-icon",
+            "media-frame",
+            "section-frame",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "templ": {
+          "dependencies": [],
+          "files": [
+            "blocks/dish-bento.templ"
+          ],
+          "path": "templ/blocks/dish-bento.json",
+          "registryDependencies": [
+            "add-icon",
+            "badge",
+            "box",
+            "empty-state",
+            "group",
+            "inline",
+            "kit-box",
+            "kit-link",
+            "kit-text",
+            "link",
+            "lucide-icon",
+            "media-frame",
+            "section-frame",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "twig": {
+          "dependencies": [],
+          "files": [
+            "blocks/dish-bento.html.twig"
+          ],
+          "path": "twig/blocks/dish-bento.json",
+          "registryDependencies": [
+            "add-icon",
+            "badge",
+            "box",
+            "empty-state",
+            "group",
+            "inline",
+            "link",
+            "lucide-icon",
+            "media-frame",
+            "section-frame",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "vue": {
+          "dependencies": [],
+          "files": [
+            "blocks/dish-bento.vue"
+          ],
+          "path": "vue/blocks/dish-bento.json",
+          "registryDependencies": [
+            "add-icon",
+            "badge",
+            "box",
+            "dish-showcase",
+            "empty-state",
+            "group",
+            "inline",
+            "link",
+            "lucide-icon",
+            "media-frame",
+            "section-frame",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        }
+      },
+      "title": "Dish Bento",
+      "type": "registry:block"
+    },
+    {
+      "category": "commerce",
+      "description": "Cards with a quantity field and an add button, under a live cart count.",
+      "group": "food",
+      "kind": "block",
+      "name": "dish-cart-grid",
+      "runtimes": {
+        "jinja2": {
+          "dependencies": [],
+          "files": [
+            "blocks/dish-cart-grid.html.j2"
+          ],
+          "path": "jinja2/blocks/dish-cart-grid.json",
+          "registryDependencies": [
+            "add-qty",
+            "box",
+            "cart-count",
+            "empty-state",
+            "grid",
+            "group",
+            "media-frame",
+            "section-frame",
+            "stack",
+            "text",
+            "utils"
+          ]
+        },
+        "latte": {
+          "dependencies": [],
+          "files": [
+            "blocks/dish-cart-grid.latte"
+          ],
+          "path": "latte/blocks/dish-cart-grid.json",
+          "registryDependencies": [
+            "add-qty",
+            "box",
+            "cart-count",
+            "empty-state",
+            "grid",
+            "group",
+            "media-frame",
+            "section-frame",
+            "stack",
+            "text",
+            "utils"
+          ]
+        },
+        "react": {
+          "dependencies": [],
+          "files": [
+            "blocks/dish-cart-grid.tsx"
+          ],
+          "path": "react/blocks/dish-cart-grid.json",
+          "registryDependencies": [
+            "add-qty",
+            "cart-count",
+            "compose",
+            "dish-showcase",
+            "empty-state",
+            "media-frame",
+            "section-frame",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/dish-cart-grid.tsx"
+          ],
+          "path": "solid/blocks/dish-cart-grid.json",
+          "registryDependencies": [
+            "add-qty",
+            "cart-count",
+            "compose",
+            "dish-showcase",
+            "empty-state",
+            "media-frame",
+            "section-frame",
+            "utils"
+          ]
+        },
+        "svelte": {
+          "dependencies": [],
+          "files": [
+            "blocks/dish-cart-grid.svelte"
+          ],
+          "path": "svelte/blocks/dish-cart-grid.json",
+          "registryDependencies": [
+            "add-qty",
+            "box",
+            "cart-count",
+            "dish-showcase",
+            "empty-state",
+            "grid",
+            "group",
+            "media-frame",
+            "section-frame",
+            "stack",
+            "text",
+            "utils"
+          ]
+        },
+        "templ": {
+          "dependencies": [],
+          "files": [
+            "blocks/dish-cart-grid.templ"
+          ],
+          "path": "templ/blocks/dish-cart-grid.json",
+          "registryDependencies": [
+            "add-qty",
+            "box",
+            "cart-count",
+            "empty-state",
+            "grid",
+            "group",
+            "kit-box",
+            "kit-text",
+            "media-frame",
+            "section-frame",
+            "stack",
+            "text",
+            "utils"
+          ]
+        },
+        "twig": {
+          "dependencies": [],
+          "files": [
+            "blocks/dish-cart-grid.html.twig"
+          ],
+          "path": "twig/blocks/dish-cart-grid.json",
+          "registryDependencies": [
+            "add-qty",
+            "box",
+            "cart-count",
+            "empty-state",
+            "grid",
+            "group",
+            "media-frame",
+            "section-frame",
+            "stack",
+            "text",
+            "utils"
+          ]
+        },
+        "vue": {
+          "dependencies": [],
+          "files": [
+            "blocks/dish-cart-grid.vue"
+          ],
+          "path": "vue/blocks/dish-cart-grid.json",
+          "registryDependencies": [
+            "add-qty",
+            "box",
+            "cart-count",
+            "dish-showcase",
+            "empty-state",
+            "grid",
+            "group",
+            "media-frame",
+            "section-frame",
+            "stack",
+            "text",
+            "utils"
+          ]
+        }
+      },
+      "title": "Dish Cart Grid",
+      "type": "registry:block"
+    },
+    {
+      "category": "commerce",
+      "description": "Grill cuts side by side: a table or compare cards.",
+      "group": "food",
+      "kind": "block",
+      "name": "dish-compare",
+      "runtimes": {
+        "jinja2": {
+          "dependencies": [],
+          "files": [
+            "blocks/dish-compare.html.j2"
+          ],
+          "path": "jinja2/blocks/dish-compare.json",
+          "registryDependencies": [
+            "box",
+            "cut-cards",
+            "empty-state",
+            "section-frame",
+            "table",
+            "table-body",
+            "table-caption",
+            "table-cell",
+            "table-head",
+            "table-head-cell",
+            "table-row",
+            "utils"
+          ]
+        },
+        "latte": {
+          "dependencies": [],
+          "files": [
+            "blocks/dish-compare.latte"
+          ],
+          "path": "latte/blocks/dish-compare.json",
+          "registryDependencies": [
+            "box",
+            "cut-cards",
+            "empty-state",
+            "section-frame",
+            "table",
+            "table-body",
+            "table-caption",
+            "table-cell",
+            "table-head",
+            "table-head-cell",
+            "table-row",
+            "utils"
+          ]
+        },
+        "react": {
+          "dependencies": [],
+          "files": [
+            "blocks/dish-compare.tsx"
+          ],
+          "path": "react/blocks/dish-compare.json",
+          "registryDependencies": [
+            "compose",
+            "cut-cards",
+            "dish-showcase",
+            "empty-state",
+            "section-frame",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/dish-compare.tsx"
+          ],
+          "path": "solid/blocks/dish-compare.json",
+          "registryDependencies": [
+            "compose",
+            "cut-cards",
+            "dish-showcase",
+            "empty-state",
+            "section-frame",
+            "utils"
+          ]
+        },
+        "svelte": {
+          "dependencies": [],
+          "files": [
+            "blocks/dish-compare.svelte"
+          ],
+          "path": "svelte/blocks/dish-compare.json",
+          "registryDependencies": [
+            "box",
+            "cut-cards",
+            "dish-showcase",
+            "empty-state",
+            "section-frame",
+            "table",
+            "table-body",
+            "table-caption",
+            "table-cell",
+            "table-head",
+            "table-head-cell",
+            "table-row",
+            "utils"
+          ]
+        },
+        "templ": {
+          "dependencies": [],
+          "files": [
+            "blocks/dish-compare.templ"
+          ],
+          "path": "templ/blocks/dish-compare.json",
+          "registryDependencies": [
+            "box",
+            "cut-cards",
+            "empty-state",
+            "kit-box",
+            "section-frame",
+            "table",
+            "table-body",
+            "table-caption",
+            "table-cell",
+            "table-head",
+            "table-head-cell",
+            "table-row",
+            "utils"
+          ]
+        },
+        "twig": {
+          "dependencies": [],
+          "files": [
+            "blocks/dish-compare.html.twig"
+          ],
+          "path": "twig/blocks/dish-compare.json",
+          "registryDependencies": [
+            "box",
+            "cut-cards",
+            "empty-state",
+            "section-frame",
+            "table",
+            "table-body",
+            "table-caption",
+            "table-cell",
+            "table-head",
+            "table-head-cell",
+            "table-row",
+            "utils"
+          ]
+        },
+        "vue": {
+          "dependencies": [],
+          "files": [
+            "blocks/dish-compare.vue"
+          ],
+          "path": "vue/blocks/dish-compare.json",
+          "registryDependencies": [
+            "box",
+            "cut-cards",
+            "dish-showcase",
+            "empty-state",
+            "section-frame",
+            "table",
+            "table-body",
+            "table-caption",
+            "table-cell",
+            "table-head",
+            "table-head-cell",
+            "table-row",
+            "utils"
+          ]
+        }
+      },
+      "title": "Dish Compare",
+      "type": "registry:block"
+    },
+    {
+      "category": "commerce",
+      "description": "Dish cards that each open the dish page; no cart.",
+      "group": "food",
+      "kind": "block",
+      "name": "dish-showcase",
+      "runtimes": {
+        "jinja2": {
+          "dependencies": [],
+          "files": [
+            "blocks/dish-showcase.html.j2"
+          ],
+          "path": "jinja2/blocks/dish-showcase.json",
+          "registryDependencies": [
+            "badge",
+            "empty-state",
+            "grid",
+            "group",
+            "inline",
+            "link",
+            "lucide-icon",
+            "media-frame",
+            "section-frame",
+            "stack",
+            "utils"
+          ]
+        },
+        "latte": {
+          "dependencies": [],
+          "files": [
+            "blocks/dish-showcase.latte"
+          ],
+          "path": "latte/blocks/dish-showcase.json",
+          "registryDependencies": [
+            "badge",
+            "empty-state",
+            "grid",
+            "group",
+            "inline",
+            "link",
+            "lucide-icon",
+            "media-frame",
+            "section-frame",
+            "stack",
+            "utils"
+          ]
+        },
+        "react": {
+          "dependencies": [],
+          "files": [
+            "blocks/dish-showcase.tsx",
+            "blocks/dish-showcase.types.ts"
+          ],
+          "path": "react/blocks/dish-showcase.json",
+          "registryDependencies": [
+            "compose",
+            "empty-state",
+            "lucide-icon",
+            "media-frame",
+            "section-frame",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/dish-showcase.tsx",
+            "blocks/dish-showcase.types.ts"
+          ],
+          "path": "solid/blocks/dish-showcase.json",
+          "registryDependencies": [
+            "compose",
+            "empty-state",
+            "lucide-icon",
+            "media-frame",
+            "section-frame",
+            "utils"
+          ]
+        },
+        "svelte": {
+          "dependencies": [],
+          "files": [
+            "blocks/dish-showcase.svelte",
+            "blocks/dish-showcase.types.ts"
+          ],
+          "path": "svelte/blocks/dish-showcase.json",
+          "registryDependencies": [
+            "badge",
+            "empty-state",
+            "grid",
+            "group",
+            "inline",
+            "link",
+            "lucide-icon",
+            "media-frame",
+            "section-frame",
+            "stack",
+            "utils"
+          ]
+        },
+        "templ": {
+          "dependencies": [],
+          "files": [
+            "blocks/dish-showcase.templ"
+          ],
+          "path": "templ/blocks/dish-showcase.json",
+          "registryDependencies": [
+            "badge",
+            "empty-state",
+            "grid",
+            "group",
+            "inline",
+            "kit-box",
+            "kit-link",
+            "kit-text",
+            "link",
+            "lucide-icon",
+            "media-frame",
+            "section-frame",
+            "stack",
+            "utils"
+          ]
+        },
+        "twig": {
+          "dependencies": [],
+          "files": [
+            "blocks/dish-showcase.html.twig"
+          ],
+          "path": "twig/blocks/dish-showcase.json",
+          "registryDependencies": [
+            "badge",
+            "empty-state",
+            "grid",
+            "group",
+            "inline",
+            "link",
+            "lucide-icon",
+            "media-frame",
+            "section-frame",
+            "stack",
+            "utils"
+          ]
+        },
+        "vue": {
+          "dependencies": [],
+          "files": [
+            "blocks/dish-showcase.types.ts",
+            "blocks/dish-showcase.vue"
+          ],
+          "path": "vue/blocks/dish-showcase.json",
+          "registryDependencies": [
+            "badge",
+            "empty-state",
+            "grid",
+            "group",
+            "inline",
+            "link",
+            "lucide-icon",
+            "media-frame",
+            "section-frame",
+            "stack",
+            "utils"
+          ]
+        }
+      },
+      "title": "Dish Showcase",
+      "type": "registry:block"
+    },
+    {
+      "category": "commerce",
+      "description": "A horizontal strip of small cards that scrolls sideways.",
+      "group": "food",
+      "kind": "block",
+      "name": "dish-strip",
+      "runtimes": {
+        "jinja2": {
+          "dependencies": [],
+          "files": [
+            "blocks/dish-strip.html.j2"
+          ],
+          "path": "jinja2/blocks/dish-strip.json",
+          "registryDependencies": [
+            "add-icon",
+            "empty-state",
+            "group",
+            "inline",
+            "list",
+            "list-item",
+            "media-frame",
+            "section-frame",
+            "text",
+            "utils"
+          ]
+        },
+        "latte": {
+          "dependencies": [],
+          "files": [
+            "blocks/dish-strip.latte"
+          ],
+          "path": "latte/blocks/dish-strip.json",
+          "registryDependencies": [
+            "add-icon",
+            "empty-state",
+            "group",
+            "inline",
+            "list",
+            "list-item",
+            "media-frame",
+            "section-frame",
+            "text",
+            "utils"
+          ]
+        },
+        "react": {
+          "dependencies": [],
+          "files": [
+            "blocks/dish-strip.tsx"
+          ],
+          "path": "react/blocks/dish-strip.json",
+          "registryDependencies": [
+            "add-icon",
+            "compose",
+            "dish-showcase",
+            "empty-state",
+            "media-frame",
+            "section-frame",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/dish-strip.tsx"
+          ],
+          "path": "solid/blocks/dish-strip.json",
+          "registryDependencies": [
+            "add-icon",
+            "compose",
+            "dish-showcase",
+            "empty-state",
+            "media-frame",
+            "section-frame",
+            "utils"
+          ]
+        },
+        "svelte": {
+          "dependencies": [],
+          "files": [
+            "blocks/dish-strip.svelte"
+          ],
+          "path": "svelte/blocks/dish-strip.json",
+          "registryDependencies": [
+            "add-icon",
+            "dish-showcase",
+            "empty-state",
+            "group",
+            "inline",
+            "list",
+            "list-item",
+            "media-frame",
+            "section-frame",
+            "text",
+            "utils"
+          ]
+        },
+        "templ": {
+          "dependencies": [],
+          "files": [
+            "blocks/dish-strip.templ"
+          ],
+          "path": "templ/blocks/dish-strip.json",
+          "registryDependencies": [
+            "add-icon",
+            "empty-state",
+            "group",
+            "inline",
+            "kit-box",
+            "kit-text",
+            "list",
+            "list-item",
+            "media-frame",
+            "section-frame",
+            "text",
+            "utils"
+          ]
+        },
+        "twig": {
+          "dependencies": [],
+          "files": [
+            "blocks/dish-strip.html.twig"
+          ],
+          "path": "twig/blocks/dish-strip.json",
+          "registryDependencies": [
+            "add-icon",
+            "empty-state",
+            "group",
+            "inline",
+            "list",
+            "list-item",
+            "media-frame",
+            "section-frame",
+            "text",
+            "utils"
+          ]
+        },
+        "vue": {
+          "dependencies": [],
+          "files": [
+            "blocks/dish-strip.vue"
+          ],
+          "path": "vue/blocks/dish-strip.json",
+          "registryDependencies": [
+            "add-icon",
+            "dish-showcase",
+            "empty-state",
+            "group",
+            "inline",
+            "list",
+            "list-item",
+            "media-frame",
+            "section-frame",
+            "text",
+            "utils"
+          ]
+        }
+      },
+      "title": "Dish Strip",
+      "type": "registry:block"
     },
     {
       "category": "components",
@@ -15263,6 +16775,343 @@
       "type": "registry:ui"
     },
     {
+      "category": "commerce",
+      "description": "Choose the meat, the weight and the sides of a grill (mangal) dish.",
+      "group": "food",
+      "kind": "block",
+      "name": "grill-builder",
+      "runtimes": {
+        "jinja2": {
+          "dependencies": [],
+          "files": [
+            "blocks/grill-builder.html.j2"
+          ],
+          "path": "jinja2/blocks/grill-builder.json",
+          "registryDependencies": [
+            "box",
+            "button",
+            "group",
+            "inline",
+            "lucide-icon",
+            "meat-cards",
+            "option-chips",
+            "section-frame",
+            "side-checks",
+            "stack",
+            "text",
+            "utils"
+          ]
+        },
+        "latte": {
+          "dependencies": [],
+          "files": [
+            "blocks/grill-builder.latte"
+          ],
+          "path": "latte/blocks/grill-builder.json",
+          "registryDependencies": [
+            "box",
+            "button",
+            "group",
+            "inline",
+            "lucide-icon",
+            "meat-cards",
+            "option-chips",
+            "section-frame",
+            "side-checks",
+            "stack",
+            "text",
+            "utils"
+          ]
+        },
+        "react": {
+          "dependencies": [],
+          "files": [
+            "blocks/grill-builder.tsx"
+          ],
+          "path": "react/blocks/grill-builder.json",
+          "registryDependencies": [
+            "compose",
+            "dish-showcase",
+            "lucide-icon",
+            "meat-cards",
+            "option-chips",
+            "section-frame",
+            "side-checks",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/grill-builder.tsx"
+          ],
+          "path": "solid/blocks/grill-builder.json",
+          "registryDependencies": [
+            "compose",
+            "dish-showcase",
+            "lucide-icon",
+            "meat-cards",
+            "option-chips",
+            "section-frame",
+            "side-checks",
+            "utils"
+          ]
+        },
+        "svelte": {
+          "dependencies": [],
+          "files": [
+            "blocks/grill-builder.svelte"
+          ],
+          "path": "svelte/blocks/grill-builder.json",
+          "registryDependencies": [
+            "box",
+            "button",
+            "dish-showcase",
+            "group",
+            "inline",
+            "lucide-icon",
+            "meat-cards",
+            "option-chips",
+            "section-frame",
+            "side-checks",
+            "stack",
+            "text",
+            "utils"
+          ]
+        },
+        "templ": {
+          "dependencies": [],
+          "files": [
+            "blocks/grill-builder.templ"
+          ],
+          "path": "templ/blocks/grill-builder.json",
+          "registryDependencies": [
+            "box",
+            "button",
+            "group",
+            "inline",
+            "kit-box",
+            "kit-button",
+            "kit-text",
+            "lucide-icon",
+            "meat-cards",
+            "option-chips",
+            "section-frame",
+            "side-checks",
+            "stack",
+            "text",
+            "utils"
+          ]
+        },
+        "twig": {
+          "dependencies": [],
+          "files": [
+            "blocks/grill-builder.html.twig"
+          ],
+          "path": "twig/blocks/grill-builder.json",
+          "registryDependencies": [
+            "box",
+            "button",
+            "group",
+            "inline",
+            "lucide-icon",
+            "meat-cards",
+            "option-chips",
+            "section-frame",
+            "side-checks",
+            "stack",
+            "text",
+            "utils"
+          ]
+        },
+        "vue": {
+          "dependencies": [],
+          "files": [
+            "blocks/grill-builder.vue"
+          ],
+          "path": "vue/blocks/grill-builder.json",
+          "registryDependencies": [
+            "box",
+            "button",
+            "dish-showcase",
+            "group",
+            "inline",
+            "lucide-icon",
+            "meat-cards",
+            "option-chips",
+            "section-frame",
+            "side-checks",
+            "stack",
+            "text",
+            "utils"
+          ]
+        }
+      },
+      "title": "Grill Builder",
+      "type": "registry:block"
+    },
+    {
+      "category": "commerce",
+      "description": "A compact list of groceries with a small picture and an add button.",
+      "group": "food",
+      "kind": "block",
+      "name": "grocery-list",
+      "runtimes": {
+        "jinja2": {
+          "dependencies": [],
+          "files": [
+            "blocks/grocery-list.html.j2"
+          ],
+          "path": "jinja2/blocks/grocery-list.json",
+          "registryDependencies": [
+            "add-icon",
+            "empty-state",
+            "inline",
+            "list",
+            "list-item",
+            "media-frame",
+            "section-frame",
+            "stack",
+            "text",
+            "utils"
+          ]
+        },
+        "latte": {
+          "dependencies": [],
+          "files": [
+            "blocks/grocery-list.latte"
+          ],
+          "path": "latte/blocks/grocery-list.json",
+          "registryDependencies": [
+            "add-icon",
+            "empty-state",
+            "inline",
+            "list",
+            "list-item",
+            "media-frame",
+            "section-frame",
+            "stack",
+            "text",
+            "utils"
+          ]
+        },
+        "react": {
+          "dependencies": [],
+          "files": [
+            "blocks/grocery-list.tsx"
+          ],
+          "path": "react/blocks/grocery-list.json",
+          "registryDependencies": [
+            "add-icon",
+            "compose",
+            "dish-showcase",
+            "empty-state",
+            "media-frame",
+            "section-frame",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/grocery-list.tsx"
+          ],
+          "path": "solid/blocks/grocery-list.json",
+          "registryDependencies": [
+            "add-icon",
+            "compose",
+            "dish-showcase",
+            "empty-state",
+            "media-frame",
+            "section-frame",
+            "utils"
+          ]
+        },
+        "svelte": {
+          "dependencies": [],
+          "files": [
+            "blocks/grocery-list.svelte"
+          ],
+          "path": "svelte/blocks/grocery-list.json",
+          "registryDependencies": [
+            "add-icon",
+            "dish-showcase",
+            "empty-state",
+            "inline",
+            "list",
+            "list-item",
+            "media-frame",
+            "section-frame",
+            "stack",
+            "text",
+            "utils"
+          ]
+        },
+        "templ": {
+          "dependencies": [],
+          "files": [
+            "blocks/grocery-list.templ"
+          ],
+          "path": "templ/blocks/grocery-list.json",
+          "registryDependencies": [
+            "add-icon",
+            "empty-state",
+            "inline",
+            "kit-box",
+            "kit-text",
+            "list",
+            "list-item",
+            "media-frame",
+            "section-frame",
+            "stack",
+            "text",
+            "utils"
+          ]
+        },
+        "twig": {
+          "dependencies": [],
+          "files": [
+            "blocks/grocery-list.html.twig"
+          ],
+          "path": "twig/blocks/grocery-list.json",
+          "registryDependencies": [
+            "add-icon",
+            "empty-state",
+            "inline",
+            "list",
+            "list-item",
+            "media-frame",
+            "section-frame",
+            "stack",
+            "text",
+            "utils"
+          ]
+        },
+        "vue": {
+          "dependencies": [],
+          "files": [
+            "blocks/grocery-list.vue"
+          ],
+          "path": "vue/blocks/grocery-list.json",
+          "registryDependencies": [
+            "add-icon",
+            "dish-showcase",
+            "empty-state",
+            "inline",
+            "list",
+            "list-item",
+            "media-frame",
+            "section-frame",
+            "stack",
+            "text",
+            "utils"
+          ]
+        }
+      },
+      "title": "Grocery List",
+      "type": "registry:block"
+    },
+    {
       "category": "primitives",
       "description": "Group primitive",
       "group": "",
@@ -21044,6 +22893,151 @@
     },
     {
       "category": "components",
+      "description": "Meat Cards component",
+      "group": "",
+      "kind": "component",
+      "name": "meat-cards",
+      "runtimes": {
+        "jinja2": {
+          "dependencies": [],
+          "files": [
+            "blocks/meat-cards.html.j2"
+          ],
+          "path": "jinja2/components/meat-cards.json",
+          "registryDependencies": [
+            "box",
+            "fieldset",
+            "inline",
+            "label",
+            "legend",
+            "media-frame",
+            "radio",
+            "utils"
+          ]
+        },
+        "latte": {
+          "dependencies": [],
+          "files": [
+            "blocks/meat-cards.latte"
+          ],
+          "path": "latte/components/meat-cards.json",
+          "registryDependencies": [
+            "box",
+            "fieldset",
+            "inline",
+            "label",
+            "legend",
+            "media-frame",
+            "radio",
+            "utils"
+          ]
+        },
+        "react": {
+          "dependencies": [],
+          "files": [
+            "components/meat-cards.tsx"
+          ],
+          "path": "react/components/meat-cards.json",
+          "registryDependencies": [
+            "compose",
+            "media-frame",
+            "option-chips",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/meat-cards.tsx"
+          ],
+          "path": "solid/components/meat-cards.json",
+          "registryDependencies": [
+            "compose",
+            "media-frame",
+            "option-chips",
+            "utils"
+          ]
+        },
+        "svelte": {
+          "dependencies": [],
+          "files": [
+            "components/meat-cards.svelte"
+          ],
+          "path": "svelte/components/meat-cards.json",
+          "registryDependencies": [
+            "box",
+            "fieldset",
+            "inline",
+            "label",
+            "legend",
+            "media-frame",
+            "option-chips",
+            "radio",
+            "utils"
+          ]
+        },
+        "templ": {
+          "dependencies": [],
+          "files": [
+            "blocks/meat-cards.templ"
+          ],
+          "path": "templ/components/meat-cards.json",
+          "registryDependencies": [
+            "box",
+            "fieldset",
+            "inline",
+            "kit-box",
+            "kit-label",
+            "kit-radio",
+            "kit-text",
+            "label",
+            "legend",
+            "media-frame",
+            "radio",
+            "utils"
+          ]
+        },
+        "twig": {
+          "dependencies": [],
+          "files": [
+            "blocks/meat-cards.html.twig"
+          ],
+          "path": "twig/components/meat-cards.json",
+          "registryDependencies": [
+            "box",
+            "fieldset",
+            "inline",
+            "label",
+            "legend",
+            "media-frame",
+            "radio",
+            "utils"
+          ]
+        },
+        "vue": {
+          "dependencies": [],
+          "files": [
+            "components/meat-cards.vue"
+          ],
+          "path": "vue/components/meat-cards.json",
+          "registryDependencies": [
+            "box",
+            "fieldset",
+            "inline",
+            "label",
+            "legend",
+            "media-frame",
+            "option-chips",
+            "radio",
+            "utils"
+          ]
+        }
+      },
+      "title": "Meat Cards",
+      "type": "registry:component"
+    },
+    {
+      "category": "components",
       "description": "Media Contacts component",
       "group": "",
       "kind": "component",
@@ -22574,6 +24568,125 @@
         }
       },
       "title": "Menu Entry",
+      "type": "registry:component"
+    },
+    {
+      "category": "components",
+      "description": "Menu Section Nav component",
+      "group": "",
+      "kind": "component",
+      "name": "menu-section-nav",
+      "runtimes": {
+        "jinja2": {
+          "dependencies": [],
+          "files": [
+            "blocks/menu-section-nav.html.j2"
+          ],
+          "path": "jinja2/components/menu-section-nav.json",
+          "registryDependencies": [
+            "block",
+            "link",
+            "list",
+            "list-item",
+            "utils"
+          ]
+        },
+        "latte": {
+          "dependencies": [],
+          "files": [
+            "blocks/menu-section-nav.latte"
+          ],
+          "path": "latte/components/menu-section-nav.json",
+          "registryDependencies": [
+            "block",
+            "link",
+            "list",
+            "list-item",
+            "utils"
+          ]
+        },
+        "react": {
+          "dependencies": [],
+          "files": [
+            "components/menu-section-nav.tsx"
+          ],
+          "path": "react/components/menu-section-nav.json",
+          "registryDependencies": [
+            "compose",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/menu-section-nav.tsx"
+          ],
+          "path": "solid/components/menu-section-nav.json",
+          "registryDependencies": [
+            "compose",
+            "utils"
+          ]
+        },
+        "svelte": {
+          "dependencies": [],
+          "files": [
+            "components/menu-section-nav.svelte"
+          ],
+          "path": "svelte/components/menu-section-nav.json",
+          "registryDependencies": [
+            "block",
+            "link",
+            "list",
+            "list-item",
+            "utils"
+          ]
+        },
+        "templ": {
+          "dependencies": [],
+          "files": [
+            "blocks/menu-section-nav.templ"
+          ],
+          "path": "templ/components/menu-section-nav.json",
+          "registryDependencies": [
+            "block",
+            "kit-box",
+            "kit-link",
+            "link",
+            "list",
+            "list-item",
+            "utils"
+          ]
+        },
+        "twig": {
+          "dependencies": [],
+          "files": [
+            "blocks/menu-section-nav.html.twig"
+          ],
+          "path": "twig/components/menu-section-nav.json",
+          "registryDependencies": [
+            "block",
+            "link",
+            "list",
+            "list-item",
+            "utils"
+          ]
+        },
+        "vue": {
+          "dependencies": [],
+          "files": [
+            "components/menu-section-nav.vue"
+          ],
+          "path": "vue/components/menu-section-nav.json",
+          "registryDependencies": [
+            "block",
+            "link",
+            "list",
+            "list-item",
+            "utils"
+          ]
+        }
+      },
+      "title": "Menu Section Nav",
       "type": "registry:component"
     },
     {
@@ -24558,6 +26671,143 @@
     },
     {
       "category": "components",
+      "description": "Option Chips component",
+      "group": "",
+      "kind": "component",
+      "name": "option-chips",
+      "runtimes": {
+        "jinja2": {
+          "dependencies": [],
+          "files": [
+            "blocks/option-chips.html.j2"
+          ],
+          "path": "jinja2/components/option-chips.json",
+          "registryDependencies": [
+            "box",
+            "fieldset",
+            "inline",
+            "label",
+            "legend",
+            "radio",
+            "utils"
+          ]
+        },
+        "latte": {
+          "dependencies": [],
+          "files": [
+            "blocks/option-chips.latte"
+          ],
+          "path": "latte/components/option-chips.json",
+          "registryDependencies": [
+            "box",
+            "fieldset",
+            "inline",
+            "label",
+            "legend",
+            "radio",
+            "utils"
+          ]
+        },
+        "react": {
+          "dependencies": [],
+          "files": [
+            "components/option-chips.tsx",
+            "components/option-chips.types.ts"
+          ],
+          "path": "react/components/option-chips.json",
+          "registryDependencies": [
+            "compose",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/option-chips.tsx",
+            "components/option-chips.types.ts"
+          ],
+          "path": "solid/components/option-chips.json",
+          "registryDependencies": [
+            "compose",
+            "utils"
+          ]
+        },
+        "svelte": {
+          "dependencies": [],
+          "files": [
+            "components/option-chips.svelte",
+            "components/option-chips.types.ts"
+          ],
+          "path": "svelte/components/option-chips.json",
+          "registryDependencies": [
+            "box",
+            "fieldset",
+            "inline",
+            "label",
+            "legend",
+            "radio",
+            "utils"
+          ]
+        },
+        "templ": {
+          "dependencies": [],
+          "files": [
+            "blocks/option-chips.templ"
+          ],
+          "path": "templ/components/option-chips.json",
+          "registryDependencies": [
+            "box",
+            "fieldset",
+            "inline",
+            "kit-box",
+            "kit-label",
+            "kit-radio",
+            "kit-text",
+            "label",
+            "legend",
+            "radio",
+            "utils"
+          ]
+        },
+        "twig": {
+          "dependencies": [],
+          "files": [
+            "blocks/option-chips.html.twig"
+          ],
+          "path": "twig/components/option-chips.json",
+          "registryDependencies": [
+            "box",
+            "fieldset",
+            "inline",
+            "label",
+            "legend",
+            "radio",
+            "utils"
+          ]
+        },
+        "vue": {
+          "dependencies": [],
+          "files": [
+            "components/option-chips.types.ts",
+            "components/option-chips.vue"
+          ],
+          "path": "vue/components/option-chips.json",
+          "registryDependencies": [
+            "box",
+            "fieldset",
+            "inline",
+            "label",
+            "legend",
+            "radio",
+            "utils"
+          ]
+        }
+      },
+      "title": "Option Chips",
+      "type": "registry:component"
+    },
+    {
+      "category": "components",
       "description": "Order Rows component",
       "group": "",
       "kind": "component",
@@ -26440,6 +28690,174 @@
       },
       "title": "Pill",
       "type": "registry:component"
+    },
+    {
+      "category": "commerce",
+      "description": "Pizza cards with a size and a crust radio group and an add button.",
+      "group": "food",
+      "kind": "block",
+      "name": "pizza-picker",
+      "runtimes": {
+        "jinja2": {
+          "dependencies": [],
+          "files": [
+            "blocks/pizza-picker.html.j2"
+          ],
+          "path": "jinja2/blocks/pizza-picker.json",
+          "registryDependencies": [
+            "box",
+            "button",
+            "empty-state",
+            "group",
+            "inline",
+            "media-frame",
+            "option-chips",
+            "section-frame",
+            "stack",
+            "text",
+            "utils"
+          ]
+        },
+        "latte": {
+          "dependencies": [],
+          "files": [
+            "blocks/pizza-picker.latte"
+          ],
+          "path": "latte/blocks/pizza-picker.json",
+          "registryDependencies": [
+            "box",
+            "button",
+            "empty-state",
+            "group",
+            "inline",
+            "media-frame",
+            "option-chips",
+            "section-frame",
+            "stack",
+            "text",
+            "utils"
+          ]
+        },
+        "react": {
+          "dependencies": [],
+          "files": [
+            "blocks/pizza-picker.tsx"
+          ],
+          "path": "react/blocks/pizza-picker.json",
+          "registryDependencies": [
+            "compose",
+            "dish-showcase",
+            "empty-state",
+            "media-frame",
+            "option-chips",
+            "section-frame",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/pizza-picker.tsx"
+          ],
+          "path": "solid/blocks/pizza-picker.json",
+          "registryDependencies": [
+            "compose",
+            "dish-showcase",
+            "empty-state",
+            "media-frame",
+            "option-chips",
+            "section-frame",
+            "utils"
+          ]
+        },
+        "svelte": {
+          "dependencies": [],
+          "files": [
+            "blocks/pizza-picker.svelte"
+          ],
+          "path": "svelte/blocks/pizza-picker.json",
+          "registryDependencies": [
+            "box",
+            "button",
+            "dish-showcase",
+            "empty-state",
+            "group",
+            "inline",
+            "media-frame",
+            "option-chips",
+            "section-frame",
+            "stack",
+            "text",
+            "utils"
+          ]
+        },
+        "templ": {
+          "dependencies": [],
+          "files": [
+            "blocks/pizza-picker.templ"
+          ],
+          "path": "templ/blocks/pizza-picker.json",
+          "registryDependencies": [
+            "box",
+            "button",
+            "empty-state",
+            "group",
+            "inline",
+            "kit-box",
+            "kit-button",
+            "kit-text",
+            "media-frame",
+            "option-chips",
+            "section-frame",
+            "stack",
+            "text",
+            "utils"
+          ]
+        },
+        "twig": {
+          "dependencies": [],
+          "files": [
+            "blocks/pizza-picker.html.twig"
+          ],
+          "path": "twig/blocks/pizza-picker.json",
+          "registryDependencies": [
+            "box",
+            "button",
+            "empty-state",
+            "group",
+            "inline",
+            "media-frame",
+            "option-chips",
+            "section-frame",
+            "stack",
+            "text",
+            "utils"
+          ]
+        },
+        "vue": {
+          "dependencies": [],
+          "files": [
+            "blocks/pizza-picker.vue"
+          ],
+          "path": "vue/blocks/pizza-picker.json",
+          "registryDependencies": [
+            "box",
+            "button",
+            "dish-showcase",
+            "empty-state",
+            "group",
+            "inline",
+            "media-frame",
+            "option-chips",
+            "section-frame",
+            "stack",
+            "text",
+            "utils"
+          ]
+        }
+      },
+      "title": "Pizza Picker",
+      "type": "registry:block"
     },
     {
       "category": "components",
@@ -30736,6 +33154,187 @@
       "type": "registry:ui"
     },
     {
+      "category": "commerce",
+      "description": "Compact rows with a one-click order button and a phone field.",
+      "group": "food",
+      "kind": "block",
+      "name": "quick-order",
+      "runtimes": {
+        "jinja2": {
+          "dependencies": [],
+          "files": [
+            "blocks/quick-order.html.j2"
+          ],
+          "path": "jinja2/blocks/quick-order.json",
+          "registryDependencies": [
+            "button",
+            "empty-state",
+            "field",
+            "group",
+            "inline",
+            "input",
+            "list",
+            "list-item",
+            "lucide-icon",
+            "section-frame",
+            "stack",
+            "text",
+            "utils"
+          ]
+        },
+        "latte": {
+          "dependencies": [],
+          "files": [
+            "blocks/quick-order.latte"
+          ],
+          "path": "latte/blocks/quick-order.json",
+          "registryDependencies": [
+            "button",
+            "empty-state",
+            "field",
+            "group",
+            "inline",
+            "input",
+            "list",
+            "list-item",
+            "lucide-icon",
+            "section-frame",
+            "stack",
+            "text",
+            "utils"
+          ]
+        },
+        "react": {
+          "dependencies": [],
+          "files": [
+            "blocks/quick-order.tsx"
+          ],
+          "path": "react/blocks/quick-order.json",
+          "registryDependencies": [
+            "compose",
+            "dish-showcase",
+            "empty-state",
+            "field",
+            "lucide-icon",
+            "section-frame",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/quick-order.tsx"
+          ],
+          "path": "solid/blocks/quick-order.json",
+          "registryDependencies": [
+            "compose",
+            "dish-showcase",
+            "empty-state",
+            "field",
+            "lucide-icon",
+            "section-frame",
+            "utils"
+          ]
+        },
+        "svelte": {
+          "dependencies": [],
+          "files": [
+            "blocks/quick-order.svelte"
+          ],
+          "path": "svelte/blocks/quick-order.json",
+          "registryDependencies": [
+            "button",
+            "dish-showcase",
+            "empty-state",
+            "field",
+            "group",
+            "inline",
+            "input",
+            "list",
+            "list-item",
+            "lucide-icon",
+            "section-frame",
+            "stack",
+            "text",
+            "utils"
+          ]
+        },
+        "templ": {
+          "dependencies": [],
+          "files": [
+            "blocks/quick-order.templ"
+          ],
+          "path": "templ/blocks/quick-order.json",
+          "registryDependencies": [
+            "button",
+            "empty-state",
+            "field",
+            "group",
+            "inline",
+            "input",
+            "kit-box",
+            "kit-button",
+            "kit-input",
+            "kit-text",
+            "list",
+            "list-item",
+            "lucide-icon",
+            "section-frame",
+            "stack",
+            "text",
+            "utils"
+          ]
+        },
+        "twig": {
+          "dependencies": [],
+          "files": [
+            "blocks/quick-order.html.twig"
+          ],
+          "path": "twig/blocks/quick-order.json",
+          "registryDependencies": [
+            "button",
+            "empty-state",
+            "field",
+            "group",
+            "inline",
+            "input",
+            "list",
+            "list-item",
+            "lucide-icon",
+            "section-frame",
+            "stack",
+            "text",
+            "utils"
+          ]
+        },
+        "vue": {
+          "dependencies": [],
+          "files": [
+            "blocks/quick-order.vue"
+          ],
+          "path": "vue/blocks/quick-order.json",
+          "registryDependencies": [
+            "button",
+            "dish-showcase",
+            "empty-state",
+            "field",
+            "group",
+            "inline",
+            "input",
+            "list",
+            "list-item",
+            "lucide-icon",
+            "section-frame",
+            "stack",
+            "text",
+            "utils"
+          ]
+        }
+      },
+      "title": "Quick Order",
+      "type": "registry:block"
+    },
+    {
       "category": "components",
       "description": "Quote Card component",
       "group": "",
@@ -32121,6 +34720,200 @@
       "type": "registry:component"
     },
     {
+      "category": "commerce",
+      "description": "Kits with the ingredients list, the cooking time and the portions.",
+      "group": "food",
+      "kind": "block",
+      "name": "recipe-kits",
+      "runtimes": {
+        "jinja2": {
+          "dependencies": [],
+          "files": [
+            "blocks/recipe-kits.html.j2"
+          ],
+          "path": "jinja2/blocks/recipe-kits.json",
+          "registryDependencies": [
+            "badge",
+            "box",
+            "button",
+            "empty-state",
+            "group",
+            "inline",
+            "list",
+            "list-item",
+            "lucide-icon",
+            "media-frame",
+            "option-chips",
+            "section-frame",
+            "stack",
+            "text",
+            "utils"
+          ]
+        },
+        "latte": {
+          "dependencies": [],
+          "files": [
+            "blocks/recipe-kits.latte"
+          ],
+          "path": "latte/blocks/recipe-kits.json",
+          "registryDependencies": [
+            "badge",
+            "box",
+            "button",
+            "empty-state",
+            "group",
+            "inline",
+            "list",
+            "list-item",
+            "lucide-icon",
+            "media-frame",
+            "option-chips",
+            "section-frame",
+            "stack",
+            "text",
+            "utils"
+          ]
+        },
+        "react": {
+          "dependencies": [],
+          "files": [
+            "blocks/recipe-kits.tsx"
+          ],
+          "path": "react/blocks/recipe-kits.json",
+          "registryDependencies": [
+            "compose",
+            "dish-showcase",
+            "empty-state",
+            "lucide-icon",
+            "media-frame",
+            "option-chips",
+            "section-frame",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/recipe-kits.tsx"
+          ],
+          "path": "solid/blocks/recipe-kits.json",
+          "registryDependencies": [
+            "compose",
+            "dish-showcase",
+            "empty-state",
+            "lucide-icon",
+            "media-frame",
+            "option-chips",
+            "section-frame",
+            "utils"
+          ]
+        },
+        "svelte": {
+          "dependencies": [],
+          "files": [
+            "blocks/recipe-kits.svelte"
+          ],
+          "path": "svelte/blocks/recipe-kits.json",
+          "registryDependencies": [
+            "badge",
+            "box",
+            "button",
+            "dish-showcase",
+            "empty-state",
+            "group",
+            "inline",
+            "list",
+            "list-item",
+            "lucide-icon",
+            "media-frame",
+            "option-chips",
+            "section-frame",
+            "stack",
+            "text",
+            "utils"
+          ]
+        },
+        "templ": {
+          "dependencies": [],
+          "files": [
+            "blocks/recipe-kits.templ"
+          ],
+          "path": "templ/blocks/recipe-kits.json",
+          "registryDependencies": [
+            "badge",
+            "box",
+            "button",
+            "empty-state",
+            "group",
+            "inline",
+            "kit-box",
+            "kit-button",
+            "kit-text",
+            "list",
+            "list-item",
+            "lucide-icon",
+            "media-frame",
+            "option-chips",
+            "section-frame",
+            "stack",
+            "text",
+            "utils"
+          ]
+        },
+        "twig": {
+          "dependencies": [],
+          "files": [
+            "blocks/recipe-kits.html.twig"
+          ],
+          "path": "twig/blocks/recipe-kits.json",
+          "registryDependencies": [
+            "badge",
+            "box",
+            "button",
+            "empty-state",
+            "group",
+            "inline",
+            "list",
+            "list-item",
+            "lucide-icon",
+            "media-frame",
+            "option-chips",
+            "section-frame",
+            "stack",
+            "text",
+            "utils"
+          ]
+        },
+        "vue": {
+          "dependencies": [],
+          "files": [
+            "blocks/recipe-kits.vue"
+          ],
+          "path": "vue/blocks/recipe-kits.json",
+          "registryDependencies": [
+            "badge",
+            "box",
+            "button",
+            "dish-showcase",
+            "empty-state",
+            "group",
+            "inline",
+            "list",
+            "list-item",
+            "lucide-icon",
+            "media-frame",
+            "option-chips",
+            "section-frame",
+            "stack",
+            "text",
+            "utils"
+          ]
+        }
+      },
+      "title": "Recipe Kits",
+      "type": "registry:block"
+    },
+    {
       "category": "lib",
       "description": "Recipes (Tailwind classes per variant/size/state) of the composed primitives",
       "group": "",
@@ -32316,6 +35109,181 @@
       },
       "title": "Region",
       "type": "registry:component"
+    },
+    {
+      "category": "commerce",
+      "description": "Menu sections with dotted leaders to the price; no cart.",
+      "group": "food",
+      "kind": "block",
+      "name": "restaurant-menu",
+      "runtimes": {
+        "jinja2": {
+          "dependencies": [],
+          "files": [
+            "blocks/restaurant-menu.html.j2"
+          ],
+          "path": "jinja2/blocks/restaurant-menu.json",
+          "registryDependencies": [
+            "badge",
+            "box",
+            "empty-state",
+            "inline",
+            "list",
+            "list-item",
+            "menu-section-nav",
+            "section-frame",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "latte": {
+          "dependencies": [],
+          "files": [
+            "blocks/restaurant-menu.latte"
+          ],
+          "path": "latte/blocks/restaurant-menu.json",
+          "registryDependencies": [
+            "badge",
+            "box",
+            "empty-state",
+            "inline",
+            "list",
+            "list-item",
+            "menu-section-nav",
+            "section-frame",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "react": {
+          "dependencies": [],
+          "files": [
+            "blocks/restaurant-menu.tsx",
+            "blocks/restaurant-menu.types.ts"
+          ],
+          "path": "react/blocks/restaurant-menu.json",
+          "registryDependencies": [
+            "compose",
+            "dish-showcase",
+            "empty-state",
+            "menu-section-nav",
+            "section-frame",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/restaurant-menu.tsx",
+            "blocks/restaurant-menu.types.ts"
+          ],
+          "path": "solid/blocks/restaurant-menu.json",
+          "registryDependencies": [
+            "compose",
+            "dish-showcase",
+            "empty-state",
+            "menu-section-nav",
+            "section-frame",
+            "utils"
+          ]
+        },
+        "svelte": {
+          "dependencies": [],
+          "files": [
+            "blocks/restaurant-menu.svelte",
+            "blocks/restaurant-menu.types.ts"
+          ],
+          "path": "svelte/blocks/restaurant-menu.json",
+          "registryDependencies": [
+            "badge",
+            "box",
+            "dish-showcase",
+            "empty-state",
+            "inline",
+            "list",
+            "list-item",
+            "menu-section-nav",
+            "section-frame",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "templ": {
+          "dependencies": [],
+          "files": [
+            "blocks/restaurant-menu.templ"
+          ],
+          "path": "templ/blocks/restaurant-menu.json",
+          "registryDependencies": [
+            "badge",
+            "box",
+            "empty-state",
+            "inline",
+            "kit-box",
+            "kit-text",
+            "list",
+            "list-item",
+            "menu-section-nav",
+            "section-frame",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "twig": {
+          "dependencies": [],
+          "files": [
+            "blocks/restaurant-menu.html.twig"
+          ],
+          "path": "twig/blocks/restaurant-menu.json",
+          "registryDependencies": [
+            "badge",
+            "box",
+            "empty-state",
+            "inline",
+            "list",
+            "list-item",
+            "menu-section-nav",
+            "section-frame",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "vue": {
+          "dependencies": [],
+          "files": [
+            "blocks/restaurant-menu.types.ts",
+            "blocks/restaurant-menu.vue"
+          ],
+          "path": "vue/blocks/restaurant-menu.json",
+          "registryDependencies": [
+            "badge",
+            "box",
+            "dish-showcase",
+            "empty-state",
+            "inline",
+            "list",
+            "list-item",
+            "menu-section-nav",
+            "section-frame",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        }
+      },
+      "title": "Restaurant Menu",
+      "type": "registry:block"
     },
     {
       "category": "commerce",
@@ -34914,6 +37882,137 @@
       },
       "title": "Shopping Cart",
       "type": "registry:block"
+    },
+    {
+      "category": "components",
+      "description": "Side Checks component",
+      "group": "",
+      "kind": "component",
+      "name": "side-checks",
+      "runtimes": {
+        "jinja2": {
+          "dependencies": [],
+          "files": [
+            "blocks/side-checks.html.j2"
+          ],
+          "path": "jinja2/components/side-checks.json",
+          "registryDependencies": [
+            "checkbox",
+            "fieldset",
+            "inline",
+            "label",
+            "legend",
+            "utils"
+          ]
+        },
+        "latte": {
+          "dependencies": [],
+          "files": [
+            "blocks/side-checks.latte"
+          ],
+          "path": "latte/components/side-checks.json",
+          "registryDependencies": [
+            "checkbox",
+            "fieldset",
+            "inline",
+            "label",
+            "legend",
+            "utils"
+          ]
+        },
+        "react": {
+          "dependencies": [],
+          "files": [
+            "components/side-checks.tsx"
+          ],
+          "path": "react/components/side-checks.json",
+          "registryDependencies": [
+            "compose",
+            "option-chips",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/side-checks.tsx"
+          ],
+          "path": "solid/components/side-checks.json",
+          "registryDependencies": [
+            "compose",
+            "option-chips",
+            "utils"
+          ]
+        },
+        "svelte": {
+          "dependencies": [],
+          "files": [
+            "components/side-checks.svelte"
+          ],
+          "path": "svelte/components/side-checks.json",
+          "registryDependencies": [
+            "checkbox",
+            "fieldset",
+            "inline",
+            "label",
+            "legend",
+            "option-chips",
+            "utils"
+          ]
+        },
+        "templ": {
+          "dependencies": [],
+          "files": [
+            "blocks/side-checks.templ"
+          ],
+          "path": "templ/components/side-checks.json",
+          "registryDependencies": [
+            "checkbox",
+            "fieldset",
+            "inline",
+            "kit-box",
+            "kit-checkbox",
+            "kit-label",
+            "kit-text",
+            "label",
+            "legend",
+            "utils"
+          ]
+        },
+        "twig": {
+          "dependencies": [],
+          "files": [
+            "blocks/side-checks.html.twig"
+          ],
+          "path": "twig/components/side-checks.json",
+          "registryDependencies": [
+            "checkbox",
+            "fieldset",
+            "inline",
+            "label",
+            "legend",
+            "utils"
+          ]
+        },
+        "vue": {
+          "dependencies": [],
+          "files": [
+            "components/side-checks.vue"
+          ],
+          "path": "vue/components/side-checks.json",
+          "registryDependencies": [
+            "checkbox",
+            "fieldset",
+            "inline",
+            "label",
+            "legend",
+            "option-chips",
+            "utils"
+          ]
+        }
+      },
+      "title": "Side Checks",
+      "type": "registry:component"
     },
     {
       "category": "dashboard",
@@ -38388,6 +41487,199 @@
       "type": "registry:block"
     },
     {
+      "category": "commerce",
+      "description": "A dense grid of sets with the piece count and the rolls of each.",
+      "group": "food",
+      "kind": "block",
+      "name": "sushi-sets",
+      "runtimes": {
+        "jinja2": {
+          "dependencies": [],
+          "files": [
+            "blocks/sushi-sets.html.j2"
+          ],
+          "path": "jinja2/blocks/sushi-sets.json",
+          "registryDependencies": [
+            "add-icon",
+            "badge",
+            "box",
+            "empty-state",
+            "grid",
+            "group",
+            "inline",
+            "list",
+            "list-item",
+            "lucide-icon",
+            "media-frame",
+            "section-frame",
+            "stack",
+            "text",
+            "utils"
+          ]
+        },
+        "latte": {
+          "dependencies": [],
+          "files": [
+            "blocks/sushi-sets.latte"
+          ],
+          "path": "latte/blocks/sushi-sets.json",
+          "registryDependencies": [
+            "add-icon",
+            "badge",
+            "box",
+            "empty-state",
+            "grid",
+            "group",
+            "inline",
+            "list",
+            "list-item",
+            "lucide-icon",
+            "media-frame",
+            "section-frame",
+            "stack",
+            "text",
+            "utils"
+          ]
+        },
+        "react": {
+          "dependencies": [],
+          "files": [
+            "blocks/sushi-sets.tsx"
+          ],
+          "path": "react/blocks/sushi-sets.json",
+          "registryDependencies": [
+            "add-icon",
+            "compose",
+            "dish-showcase",
+            "empty-state",
+            "lucide-icon",
+            "media-frame",
+            "section-frame",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/sushi-sets.tsx"
+          ],
+          "path": "solid/blocks/sushi-sets.json",
+          "registryDependencies": [
+            "add-icon",
+            "compose",
+            "dish-showcase",
+            "empty-state",
+            "lucide-icon",
+            "media-frame",
+            "section-frame",
+            "utils"
+          ]
+        },
+        "svelte": {
+          "dependencies": [],
+          "files": [
+            "blocks/sushi-sets.svelte"
+          ],
+          "path": "svelte/blocks/sushi-sets.json",
+          "registryDependencies": [
+            "add-icon",
+            "badge",
+            "box",
+            "dish-showcase",
+            "empty-state",
+            "grid",
+            "group",
+            "inline",
+            "list",
+            "list-item",
+            "lucide-icon",
+            "media-frame",
+            "section-frame",
+            "stack",
+            "text",
+            "utils"
+          ]
+        },
+        "templ": {
+          "dependencies": [],
+          "files": [
+            "blocks/sushi-sets.templ"
+          ],
+          "path": "templ/blocks/sushi-sets.json",
+          "registryDependencies": [
+            "add-icon",
+            "badge",
+            "box",
+            "empty-state",
+            "grid",
+            "group",
+            "inline",
+            "kit-box",
+            "kit-text",
+            "list",
+            "list-item",
+            "lucide-icon",
+            "media-frame",
+            "section-frame",
+            "stack",
+            "text",
+            "utils"
+          ]
+        },
+        "twig": {
+          "dependencies": [],
+          "files": [
+            "blocks/sushi-sets.html.twig"
+          ],
+          "path": "twig/blocks/sushi-sets.json",
+          "registryDependencies": [
+            "add-icon",
+            "badge",
+            "box",
+            "empty-state",
+            "grid",
+            "group",
+            "inline",
+            "list",
+            "list-item",
+            "lucide-icon",
+            "media-frame",
+            "section-frame",
+            "stack",
+            "text",
+            "utils"
+          ]
+        },
+        "vue": {
+          "dependencies": [],
+          "files": [
+            "blocks/sushi-sets.vue"
+          ],
+          "path": "vue/blocks/sushi-sets.json",
+          "registryDependencies": [
+            "add-icon",
+            "badge",
+            "box",
+            "dish-showcase",
+            "empty-state",
+            "grid",
+            "group",
+            "inline",
+            "list",
+            "list-item",
+            "lucide-icon",
+            "media-frame",
+            "section-frame",
+            "stack",
+            "text",
+            "utils"
+          ]
+        }
+      },
+      "title": "Sushi Sets",
+      "type": "registry:block"
+    },
+    {
       "category": "primitives",
       "description": "Switch primitive",
       "group": "",
@@ -41698,6 +44990,196 @@
       "type": "registry:utils"
     },
     {
+      "category": "commerce",
+      "description": "Fill a box by weight: produce tiles beside the box with a meter.",
+      "group": "food",
+      "kind": "block",
+      "name": "veggie-box",
+      "runtimes": {
+        "jinja2": {
+          "dependencies": [],
+          "files": [
+            "blocks/veggie-box.html.j2"
+          ],
+          "path": "jinja2/blocks/veggie-box.json",
+          "registryDependencies": [
+            "box",
+            "button",
+            "empty-state",
+            "group",
+            "inline",
+            "label",
+            "lucide-icon",
+            "media-frame",
+            "meter",
+            "number-field",
+            "section-frame",
+            "stack",
+            "text",
+            "utils"
+          ]
+        },
+        "latte": {
+          "dependencies": [],
+          "files": [
+            "blocks/veggie-box.latte"
+          ],
+          "path": "latte/blocks/veggie-box.json",
+          "registryDependencies": [
+            "box",
+            "button",
+            "empty-state",
+            "group",
+            "inline",
+            "label",
+            "lucide-icon",
+            "media-frame",
+            "meter",
+            "number-field",
+            "section-frame",
+            "stack",
+            "text",
+            "utils"
+          ]
+        },
+        "react": {
+          "dependencies": [],
+          "files": [
+            "blocks/veggie-box.tsx"
+          ],
+          "path": "react/blocks/veggie-box.json",
+          "registryDependencies": [
+            "compose",
+            "dish-showcase",
+            "empty-state",
+            "lucide-icon",
+            "media-frame",
+            "number-field",
+            "section-frame",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/veggie-box.tsx"
+          ],
+          "path": "solid/blocks/veggie-box.json",
+          "registryDependencies": [
+            "compose",
+            "dish-showcase",
+            "empty-state",
+            "lucide-icon",
+            "media-frame",
+            "number-field",
+            "section-frame",
+            "utils"
+          ]
+        },
+        "svelte": {
+          "dependencies": [],
+          "files": [
+            "blocks/veggie-box.svelte"
+          ],
+          "path": "svelte/blocks/veggie-box.json",
+          "registryDependencies": [
+            "box",
+            "button",
+            "dish-showcase",
+            "empty-state",
+            "group",
+            "inline",
+            "label",
+            "lucide-icon",
+            "media-frame",
+            "meter",
+            "number-field",
+            "section-frame",
+            "stack",
+            "text",
+            "utils"
+          ]
+        },
+        "templ": {
+          "dependencies": [],
+          "files": [
+            "blocks/veggie-box.templ"
+          ],
+          "path": "templ/blocks/veggie-box.json",
+          "registryDependencies": [
+            "box",
+            "button",
+            "empty-state",
+            "group",
+            "inline",
+            "kit-box",
+            "kit-button",
+            "kit-label",
+            "kit-meter",
+            "kit-text",
+            "label",
+            "lucide-icon",
+            "media-frame",
+            "meter",
+            "number-field",
+            "section-frame",
+            "stack",
+            "text",
+            "utils"
+          ]
+        },
+        "twig": {
+          "dependencies": [],
+          "files": [
+            "blocks/veggie-box.html.twig"
+          ],
+          "path": "twig/blocks/veggie-box.json",
+          "registryDependencies": [
+            "box",
+            "button",
+            "empty-state",
+            "group",
+            "inline",
+            "label",
+            "lucide-icon",
+            "media-frame",
+            "meter",
+            "number-field",
+            "section-frame",
+            "stack",
+            "text",
+            "utils"
+          ]
+        },
+        "vue": {
+          "dependencies": [],
+          "files": [
+            "blocks/veggie-box.vue"
+          ],
+          "path": "vue/blocks/veggie-box.json",
+          "registryDependencies": [
+            "box",
+            "button",
+            "dish-showcase",
+            "empty-state",
+            "group",
+            "inline",
+            "label",
+            "lucide-icon",
+            "media-frame",
+            "meter",
+            "number-field",
+            "section-frame",
+            "stack",
+            "text",
+            "utils"
+          ]
+        }
+      },
+      "title": "Veggie Box",
+      "type": "registry:block"
+    },
+    {
       "category": "marketing",
       "description": "Customer videos as thumbnails with a play button. Playing is a port contract (VideoEmbed).",
       "group": "proof",
@@ -42031,6 +45513,163 @@
         }
       },
       "title": "Video Modal",
+      "type": "registry:block"
+    },
+    {
+      "category": "commerce",
+      "description": "Meal delivery as a week: one column per day with its meal.",
+      "group": "food",
+      "kind": "block",
+      "name": "week-menu",
+      "runtimes": {
+        "jinja2": {
+          "dependencies": [],
+          "files": [
+            "blocks/week-menu.html.j2"
+          ],
+          "path": "jinja2/blocks/week-menu.json",
+          "registryDependencies": [
+            "box",
+            "empty-state",
+            "group",
+            "inline",
+            "media-frame",
+            "section-frame",
+            "stack",
+            "text",
+            "utils"
+          ]
+        },
+        "latte": {
+          "dependencies": [],
+          "files": [
+            "blocks/week-menu.latte"
+          ],
+          "path": "latte/blocks/week-menu.json",
+          "registryDependencies": [
+            "box",
+            "empty-state",
+            "group",
+            "inline",
+            "media-frame",
+            "section-frame",
+            "stack",
+            "text",
+            "utils"
+          ]
+        },
+        "react": {
+          "dependencies": [],
+          "files": [
+            "blocks/week-menu.tsx"
+          ],
+          "path": "react/blocks/week-menu.json",
+          "registryDependencies": [
+            "compose",
+            "dish-showcase",
+            "empty-state",
+            "media-frame",
+            "restaurant-menu",
+            "section-frame",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/week-menu.tsx"
+          ],
+          "path": "solid/blocks/week-menu.json",
+          "registryDependencies": [
+            "compose",
+            "dish-showcase",
+            "empty-state",
+            "media-frame",
+            "restaurant-menu",
+            "section-frame",
+            "utils"
+          ]
+        },
+        "svelte": {
+          "dependencies": [],
+          "files": [
+            "blocks/week-menu.svelte"
+          ],
+          "path": "svelte/blocks/week-menu.json",
+          "registryDependencies": [
+            "box",
+            "dish-showcase",
+            "empty-state",
+            "group",
+            "inline",
+            "media-frame",
+            "restaurant-menu",
+            "section-frame",
+            "stack",
+            "text",
+            "utils"
+          ]
+        },
+        "templ": {
+          "dependencies": [],
+          "files": [
+            "blocks/week-menu.templ"
+          ],
+          "path": "templ/blocks/week-menu.json",
+          "registryDependencies": [
+            "box",
+            "empty-state",
+            "group",
+            "inline",
+            "kit-box",
+            "kit-text",
+            "media-frame",
+            "section-frame",
+            "stack",
+            "text",
+            "utils"
+          ]
+        },
+        "twig": {
+          "dependencies": [],
+          "files": [
+            "blocks/week-menu.html.twig"
+          ],
+          "path": "twig/blocks/week-menu.json",
+          "registryDependencies": [
+            "box",
+            "empty-state",
+            "group",
+            "inline",
+            "media-frame",
+            "section-frame",
+            "stack",
+            "text",
+            "utils"
+          ]
+        },
+        "vue": {
+          "dependencies": [],
+          "files": [
+            "blocks/week-menu.vue"
+          ],
+          "path": "vue/blocks/week-menu.json",
+          "registryDependencies": [
+            "box",
+            "dish-showcase",
+            "empty-state",
+            "group",
+            "inline",
+            "media-frame",
+            "restaurant-menu",
+            "section-frame",
+            "stack",
+            "text",
+            "utils"
+          ]
+        }
+      },
+      "title": "Week Menu",
       "type": "registry:block"
     },
     {
@@ -42484,7 +46123,7 @@
       "type": "registry:block"
     }
   ],
-  "lastUpdated": "2026-11-02T01:32:07+03:00",
+  "lastUpdated": "2026-11-02T21:24:41+03:00",
   "layout": "<runtime>/index.json + <runtime>/{components/ui,components,blocks,utils,lib}/<name>.json; use r/<runtime> as registryUrl",
   "runtimes": [
     "svelte",
@@ -42496,6 +46135,6 @@
     "latte",
     "jinja2"
   ],
-  "sourceCommit": "9ed95b107f1f1d23e86ee4b54e05fc346cebb050",
+  "sourceCommit": "a48e717a64f9a17a2adf3a7ddc4a52b1ae16d8fd",
   "version": "0.1.0"
 }
