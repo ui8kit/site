@@ -9710,6 +9710,173 @@
     },
     {
       "category": "commerce",
+      "description": "A dish as a card: picture, category, portion/weight, price and an order button. No rating.",
+      "group": "restaurant",
+      "kind": "block",
+      "name": "dish-card",
+      "runtimes": {
+        "jinja2": {
+          "dependencies": [],
+          "files": [
+            "blocks/dish-card.html.j2"
+          ],
+          "path": "jinja2/blocks/dish-card.json",
+          "registryDependencies": [
+            "badge",
+            "block",
+            "box",
+            "button",
+            "card-content",
+            "group",
+            "link",
+            "media-frame",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "latte": {
+          "dependencies": [],
+          "files": [
+            "blocks/dish-card.latte"
+          ],
+          "path": "latte/blocks/dish-card.json",
+          "registryDependencies": [
+            "badge",
+            "block",
+            "box",
+            "button",
+            "card-content",
+            "group",
+            "link",
+            "media-frame",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "react": {
+          "dependencies": [],
+          "files": [
+            "blocks/dish-card.tsx",
+            "blocks/dish-card.types.ts"
+          ],
+          "path": "react/blocks/dish-card.json",
+          "registryDependencies": [
+            "compose",
+            "dish-showcase",
+            "media-frame",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/dish-card.tsx",
+            "blocks/dish-card.types.ts"
+          ],
+          "path": "solid/blocks/dish-card.json",
+          "registryDependencies": [
+            "compose",
+            "dish-showcase",
+            "media-frame",
+            "utils"
+          ]
+        },
+        "svelte": {
+          "dependencies": [],
+          "files": [
+            "blocks/dish-card.svelte",
+            "blocks/dish-card.types.ts"
+          ],
+          "path": "svelte/blocks/dish-card.json",
+          "registryDependencies": [
+            "badge",
+            "block",
+            "box",
+            "button",
+            "card-content",
+            "dish-showcase",
+            "group",
+            "link",
+            "media-frame",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "templ": {
+          "dependencies": [],
+          "files": [
+            "blocks/dish-card.templ"
+          ],
+          "path": "templ/blocks/dish-card.json",
+          "registryDependencies": [
+            "badge",
+            "block",
+            "box",
+            "button",
+            "card-content",
+            "group",
+            "kit-box",
+            "kit-button",
+            "kit-link",
+            "kit-text",
+            "link",
+            "media-frame",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "twig": {
+          "dependencies": [],
+          "files": [
+            "blocks/dish-card.html.twig"
+          ],
+          "path": "twig/blocks/dish-card.json",
+          "registryDependencies": [
+            "badge",
+            "block",
+            "box",
+            "button",
+            "card-content",
+            "group",
+            "link",
+            "media-frame",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "vue": {
+          "dependencies": [],
+          "files": [
+            "blocks/dish-card.types.ts",
+            "blocks/dish-card.vue"
+          ],
+          "path": "vue/blocks/dish-card.json",
+          "registryDependencies": [
+            "badge",
+            "block",
+            "box",
+            "button",
+            "card-content",
+            "dish-showcase",
+            "group",
+            "link",
+            "media-frame",
+            "text",
+            "title",
+            "utils"
+          ]
+        }
+      },
+      "title": "Dish Card",
+      "type": "registry:block"
+    },
+    {
+      "category": "commerce",
       "description": "Cards with a quantity field and an add button, under a live cart count.",
       "group": "food",
       "kind": "block",
@@ -21815,6 +21982,333 @@
       "type": "registry:ui"
     },
     {
+      "category": "commerce",
+      "description": "A photo gallery with a dialog for the selected picture. Additive to Photo gallery.",
+      "group": "restaurant",
+      "kind": "block",
+      "name": "lightbox-gallery",
+      "runtimes": {
+        "jinja2": {
+          "dependencies": [],
+          "files": [
+            "blocks/lightbox-gallery.html.j2"
+          ],
+          "path": "jinja2/blocks/lightbox-gallery.json",
+          "registryDependencies": [
+            "box",
+            "button",
+            "empty-state",
+            "figure-block",
+            "group",
+            "lightbox-stage",
+            "lucide-icon",
+            "media-frame",
+            "section-frame",
+            "stack",
+            "text",
+            "utils"
+          ]
+        },
+        "latte": {
+          "dependencies": [],
+          "files": [
+            "blocks/lightbox-gallery.latte"
+          ],
+          "path": "latte/blocks/lightbox-gallery.json",
+          "registryDependencies": [
+            "box",
+            "button",
+            "empty-state",
+            "figure-block",
+            "group",
+            "lightbox-stage",
+            "lucide-icon",
+            "media-frame",
+            "section-frame",
+            "stack",
+            "text",
+            "utils"
+          ]
+        },
+        "react": {
+          "dependencies": [],
+          "files": [
+            "blocks/lightbox-gallery.tsx",
+            "blocks/lightbox-gallery.types.ts"
+          ],
+          "path": "react/blocks/lightbox-gallery.json",
+          "registryDependencies": [
+            "compose",
+            "empty-state",
+            "figure-block",
+            "lightbox-stage",
+            "lucide-icon",
+            "media-frame",
+            "photo-gallery",
+            "section-frame",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/lightbox-gallery.tsx",
+            "blocks/lightbox-gallery.types.ts"
+          ],
+          "path": "solid/blocks/lightbox-gallery.json",
+          "registryDependencies": [
+            "compose",
+            "empty-state",
+            "figure-block",
+            "lightbox-stage",
+            "lucide-icon",
+            "media-frame",
+            "photo-gallery",
+            "section-frame",
+            "utils"
+          ]
+        },
+        "svelte": {
+          "dependencies": [],
+          "files": [
+            "blocks/lightbox-gallery.svelte",
+            "blocks/lightbox-gallery.types.ts"
+          ],
+          "path": "svelte/blocks/lightbox-gallery.json",
+          "registryDependencies": [
+            "box",
+            "button",
+            "empty-state",
+            "figure-block",
+            "group",
+            "lightbox-stage",
+            "lucide-icon",
+            "media-frame",
+            "photo-gallery",
+            "section-frame",
+            "stack",
+            "text",
+            "utils"
+          ]
+        },
+        "templ": {
+          "dependencies": [],
+          "files": [
+            "blocks/lightbox-gallery.templ"
+          ],
+          "path": "templ/blocks/lightbox-gallery.json",
+          "registryDependencies": [
+            "box",
+            "button",
+            "empty-state",
+            "figure-block",
+            "group",
+            "kit-box",
+            "kit-button",
+            "kit-text",
+            "lightbox-stage",
+            "lucide-icon",
+            "media-frame",
+            "section-frame",
+            "stack",
+            "text",
+            "utils"
+          ]
+        },
+        "twig": {
+          "dependencies": [],
+          "files": [
+            "blocks/lightbox-gallery.html.twig"
+          ],
+          "path": "twig/blocks/lightbox-gallery.json",
+          "registryDependencies": [
+            "box",
+            "button",
+            "empty-state",
+            "figure-block",
+            "group",
+            "lightbox-stage",
+            "lucide-icon",
+            "media-frame",
+            "section-frame",
+            "stack",
+            "text",
+            "utils"
+          ]
+        },
+        "vue": {
+          "dependencies": [],
+          "files": [
+            "blocks/lightbox-gallery.types.ts",
+            "blocks/lightbox-gallery.vue"
+          ],
+          "path": "vue/blocks/lightbox-gallery.json",
+          "registryDependencies": [
+            "box",
+            "button",
+            "empty-state",
+            "figure-block",
+            "group",
+            "lightbox-stage",
+            "lucide-icon",
+            "media-frame",
+            "photo-gallery",
+            "section-frame",
+            "stack",
+            "text",
+            "utils"
+          ]
+        }
+      },
+      "title": "Lightbox Gallery",
+      "type": "registry:block"
+    },
+    {
+      "category": "components",
+      "description": "Lightbox Stage component",
+      "group": "",
+      "kind": "component",
+      "name": "lightbox-stage",
+      "runtimes": {
+        "jinja2": {
+          "dependencies": [],
+          "files": [
+            "blocks/lightbox-stage.html.j2"
+          ],
+          "path": "jinja2/components/lightbox-stage.json",
+          "registryDependencies": [
+            "button",
+            "dialog",
+            "group",
+            "lucide-icon",
+            "media-frame",
+            "text",
+            "utils"
+          ]
+        },
+        "latte": {
+          "dependencies": [],
+          "files": [
+            "blocks/lightbox-stage.latte"
+          ],
+          "path": "latte/components/lightbox-stage.json",
+          "registryDependencies": [
+            "button",
+            "dialog",
+            "group",
+            "lucide-icon",
+            "media-frame",
+            "text",
+            "utils"
+          ]
+        },
+        "react": {
+          "dependencies": [],
+          "files": [
+            "components/lightbox-stage.tsx"
+          ],
+          "path": "react/components/lightbox-stage.json",
+          "registryDependencies": [
+            "compose",
+            "lightbox-gallery",
+            "lucide-icon",
+            "media-frame",
+            "photo-gallery",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/lightbox-stage.tsx"
+          ],
+          "path": "solid/components/lightbox-stage.json",
+          "registryDependencies": [
+            "compose",
+            "lightbox-gallery",
+            "lucide-icon",
+            "media-frame",
+            "photo-gallery",
+            "utils"
+          ]
+        },
+        "svelte": {
+          "dependencies": [],
+          "files": [
+            "components/lightbox-stage.svelte"
+          ],
+          "path": "svelte/components/lightbox-stage.json",
+          "registryDependencies": [
+            "button",
+            "dialog",
+            "group",
+            "lightbox-gallery",
+            "lucide-icon",
+            "media-frame",
+            "photo-gallery",
+            "text",
+            "utils"
+          ]
+        },
+        "templ": {
+          "dependencies": [],
+          "files": [
+            "blocks/lightbox-stage.templ"
+          ],
+          "path": "templ/components/lightbox-stage.json",
+          "registryDependencies": [
+            "button",
+            "dialog",
+            "group",
+            "kit-box",
+            "kit-button",
+            "kit-dialog",
+            "kit-text",
+            "lucide-icon",
+            "media-frame",
+            "text",
+            "utils"
+          ]
+        },
+        "twig": {
+          "dependencies": [],
+          "files": [
+            "blocks/lightbox-stage.html.twig"
+          ],
+          "path": "twig/components/lightbox-stage.json",
+          "registryDependencies": [
+            "button",
+            "dialog",
+            "group",
+            "lucide-icon",
+            "media-frame",
+            "text",
+            "utils"
+          ]
+        },
+        "vue": {
+          "dependencies": [],
+          "files": [
+            "components/lightbox-stage.vue"
+          ],
+          "path": "vue/components/lightbox-stage.json",
+          "registryDependencies": [
+            "button",
+            "dialog",
+            "group",
+            "lightbox-gallery",
+            "lucide-icon",
+            "media-frame",
+            "photo-gallery",
+            "text",
+            "utils"
+          ]
+        }
+      },
+      "title": "Lightbox Stage",
+      "type": "registry:component"
+    },
+    {
       "category": "primitives",
       "description": "Link primitive",
       "group": "",
@@ -24457,6 +24951,185 @@
       "type": "registry:component"
     },
     {
+      "category": "commerce",
+      "description": "Category sections with DishCards in a grid, or denser menu rows; prices can be hidden.",
+      "group": "restaurant",
+      "kind": "block",
+      "name": "menu-board",
+      "runtimes": {
+        "jinja2": {
+          "dependencies": [],
+          "files": [
+            "blocks/menu-board.html.j2"
+          ],
+          "path": "jinja2/blocks/menu-board.json",
+          "registryDependencies": [
+            "box",
+            "dish-card",
+            "empty-state",
+            "grid",
+            "list",
+            "menu-row",
+            "menu-section-nav",
+            "section-frame",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "latte": {
+          "dependencies": [],
+          "files": [
+            "blocks/menu-board.latte"
+          ],
+          "path": "latte/blocks/menu-board.json",
+          "registryDependencies": [
+            "box",
+            "dish-card",
+            "empty-state",
+            "grid",
+            "list",
+            "menu-row",
+            "menu-section-nav",
+            "section-frame",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "react": {
+          "dependencies": [],
+          "files": [
+            "blocks/menu-board.tsx"
+          ],
+          "path": "react/blocks/menu-board.json",
+          "registryDependencies": [
+            "compose",
+            "dish-card",
+            "dish-showcase",
+            "empty-state",
+            "menu-row",
+            "menu-section-nav",
+            "restaurant-menu",
+            "section-frame",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/menu-board.tsx"
+          ],
+          "path": "solid/blocks/menu-board.json",
+          "registryDependencies": [
+            "compose",
+            "dish-card",
+            "dish-showcase",
+            "empty-state",
+            "menu-row",
+            "menu-section-nav",
+            "restaurant-menu",
+            "section-frame",
+            "utils"
+          ]
+        },
+        "svelte": {
+          "dependencies": [],
+          "files": [
+            "blocks/menu-board.svelte"
+          ],
+          "path": "svelte/blocks/menu-board.json",
+          "registryDependencies": [
+            "box",
+            "dish-card",
+            "dish-showcase",
+            "empty-state",
+            "grid",
+            "list",
+            "menu-row",
+            "menu-section-nav",
+            "restaurant-menu",
+            "section-frame",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "templ": {
+          "dependencies": [],
+          "files": [
+            "blocks/menu-board.templ"
+          ],
+          "path": "templ/blocks/menu-board.json",
+          "registryDependencies": [
+            "box",
+            "dish-card",
+            "empty-state",
+            "grid",
+            "kit-box",
+            "kit-text",
+            "list",
+            "menu-row",
+            "menu-section-nav",
+            "section-frame",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "twig": {
+          "dependencies": [],
+          "files": [
+            "blocks/menu-board.html.twig"
+          ],
+          "path": "twig/blocks/menu-board.json",
+          "registryDependencies": [
+            "box",
+            "dish-card",
+            "empty-state",
+            "grid",
+            "list",
+            "menu-row",
+            "menu-section-nav",
+            "section-frame",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "vue": {
+          "dependencies": [],
+          "files": [
+            "blocks/menu-board.vue"
+          ],
+          "path": "vue/blocks/menu-board.json",
+          "registryDependencies": [
+            "box",
+            "dish-card",
+            "dish-showcase",
+            "empty-state",
+            "grid",
+            "list",
+            "menu-row",
+            "menu-section-nav",
+            "restaurant-menu",
+            "section-frame",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        }
+      },
+      "title": "Menu Board",
+      "type": "registry:block"
+    },
+    {
       "category": "components",
       "description": "Menu Entry component",
       "group": "",
@@ -24568,6 +25241,129 @@
         }
       },
       "title": "Menu Entry",
+      "type": "registry:component"
+    },
+    {
+      "category": "components",
+      "description": "Menu Row component",
+      "group": "",
+      "kind": "component",
+      "name": "menu-row",
+      "runtimes": {
+        "jinja2": {
+          "dependencies": [],
+          "files": [
+            "blocks/menu-row.html.j2"
+          ],
+          "path": "jinja2/components/menu-row.json",
+          "registryDependencies": [
+            "badge",
+            "box",
+            "inline",
+            "list-item",
+            "utils"
+          ]
+        },
+        "latte": {
+          "dependencies": [],
+          "files": [
+            "blocks/menu-row.latte"
+          ],
+          "path": "latte/components/menu-row.json",
+          "registryDependencies": [
+            "badge",
+            "box",
+            "inline",
+            "list-item",
+            "utils"
+          ]
+        },
+        "react": {
+          "dependencies": [],
+          "files": [
+            "components/menu-row.tsx"
+          ],
+          "path": "react/components/menu-row.json",
+          "registryDependencies": [
+            "compose",
+            "dish-showcase",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "components/menu-row.tsx"
+          ],
+          "path": "solid/components/menu-row.json",
+          "registryDependencies": [
+            "compose",
+            "dish-showcase",
+            "utils"
+          ]
+        },
+        "svelte": {
+          "dependencies": [],
+          "files": [
+            "components/menu-row.svelte"
+          ],
+          "path": "svelte/components/menu-row.json",
+          "registryDependencies": [
+            "badge",
+            "box",
+            "dish-showcase",
+            "inline",
+            "list-item",
+            "utils"
+          ]
+        },
+        "templ": {
+          "dependencies": [],
+          "files": [
+            "blocks/menu-row.templ"
+          ],
+          "path": "templ/components/menu-row.json",
+          "registryDependencies": [
+            "badge",
+            "box",
+            "inline",
+            "kit-box",
+            "kit-text",
+            "list-item",
+            "utils"
+          ]
+        },
+        "twig": {
+          "dependencies": [],
+          "files": [
+            "blocks/menu-row.html.twig"
+          ],
+          "path": "twig/components/menu-row.json",
+          "registryDependencies": [
+            "badge",
+            "box",
+            "inline",
+            "list-item",
+            "utils"
+          ]
+        },
+        "vue": {
+          "dependencies": [],
+          "files": [
+            "components/menu-row.vue"
+          ],
+          "path": "vue/components/menu-row.json",
+          "registryDependencies": [
+            "badge",
+            "box",
+            "dish-showcase",
+            "inline",
+            "list-item",
+            "utils"
+          ]
+        }
+      },
+      "title": "Menu Row",
       "type": "registry:component"
     },
     {
@@ -35109,6 +35905,213 @@
       },
       "title": "Region",
       "type": "registry:component"
+    },
+    {
+      "category": "commerce",
+      "description": "Book a table: name, phone, date, time, guests, optional notes and consent.",
+      "group": "restaurant",
+      "kind": "block",
+      "name": "reservation-form",
+      "runtimes": {
+        "jinja2": {
+          "dependencies": [],
+          "files": [
+            "blocks/reservation-form.html.j2"
+          ],
+          "path": "jinja2/blocks/reservation-form.json",
+          "registryDependencies": [
+            "box",
+            "button",
+            "checkbox",
+            "field",
+            "form",
+            "grid",
+            "group",
+            "input",
+            "label",
+            "lucide-icon",
+            "number-field",
+            "section-frame",
+            "stack",
+            "text",
+            "textarea",
+            "utils"
+          ]
+        },
+        "latte": {
+          "dependencies": [],
+          "files": [
+            "blocks/reservation-form.latte"
+          ],
+          "path": "latte/blocks/reservation-form.json",
+          "registryDependencies": [
+            "box",
+            "button",
+            "checkbox",
+            "field",
+            "form",
+            "grid",
+            "group",
+            "input",
+            "label",
+            "lucide-icon",
+            "number-field",
+            "section-frame",
+            "stack",
+            "text",
+            "textarea",
+            "utils"
+          ]
+        },
+        "react": {
+          "dependencies": [],
+          "files": [
+            "blocks/reservation-form.tsx",
+            "blocks/reservation-form.types.ts"
+          ],
+          "path": "react/blocks/reservation-form.json",
+          "registryDependencies": [
+            "compose",
+            "feature-grid",
+            "field",
+            "lucide-icon",
+            "number-field",
+            "section-frame",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/reservation-form.tsx",
+            "blocks/reservation-form.types.ts"
+          ],
+          "path": "solid/blocks/reservation-form.json",
+          "registryDependencies": [
+            "compose",
+            "feature-grid",
+            "field",
+            "lucide-icon",
+            "number-field",
+            "section-frame",
+            "utils"
+          ]
+        },
+        "svelte": {
+          "dependencies": [],
+          "files": [
+            "blocks/reservation-form.svelte",
+            "blocks/reservation-form.types.ts"
+          ],
+          "path": "svelte/blocks/reservation-form.json",
+          "registryDependencies": [
+            "box",
+            "button",
+            "checkbox",
+            "feature-grid",
+            "field",
+            "form",
+            "grid",
+            "group",
+            "input",
+            "label",
+            "lucide-icon",
+            "number-field",
+            "section-frame",
+            "stack",
+            "text",
+            "textarea",
+            "utils"
+          ]
+        },
+        "templ": {
+          "dependencies": [],
+          "files": [
+            "blocks/reservation-form.templ"
+          ],
+          "path": "templ/blocks/reservation-form.json",
+          "registryDependencies": [
+            "box",
+            "button",
+            "checkbox",
+            "field",
+            "form",
+            "grid",
+            "group",
+            "input",
+            "kit-box",
+            "kit-button",
+            "kit-checkbox",
+            "kit-form",
+            "kit-input",
+            "kit-label",
+            "kit-text",
+            "kit-textarea",
+            "label",
+            "lucide-icon",
+            "number-field",
+            "section-frame",
+            "stack",
+            "text",
+            "textarea",
+            "utils"
+          ]
+        },
+        "twig": {
+          "dependencies": [],
+          "files": [
+            "blocks/reservation-form.html.twig"
+          ],
+          "path": "twig/blocks/reservation-form.json",
+          "registryDependencies": [
+            "box",
+            "button",
+            "checkbox",
+            "field",
+            "form",
+            "grid",
+            "group",
+            "input",
+            "label",
+            "lucide-icon",
+            "number-field",
+            "section-frame",
+            "stack",
+            "text",
+            "textarea",
+            "utils"
+          ]
+        },
+        "vue": {
+          "dependencies": [],
+          "files": [
+            "blocks/reservation-form.types.ts",
+            "blocks/reservation-form.vue"
+          ],
+          "path": "vue/blocks/reservation-form.json",
+          "registryDependencies": [
+            "box",
+            "button",
+            "checkbox",
+            "feature-grid",
+            "field",
+            "form",
+            "grid",
+            "group",
+            "input",
+            "label",
+            "lucide-icon",
+            "number-field",
+            "section-frame",
+            "stack",
+            "text",
+            "textarea",
+            "utils"
+          ]
+        }
+      },
+      "title": "Reservation Form",
+      "type": "registry:block"
     },
     {
       "category": "commerce",
@@ -46123,7 +47126,7 @@
       "type": "registry:block"
     }
   ],
-  "lastUpdated": "2026-11-02T21:24:41+03:00",
+  "lastUpdated": "2026-11-09T23:33:09+03:00",
   "layout": "<runtime>/index.json + <runtime>/{components/ui,components,blocks,utils,lib}/<name>.json; use r/<runtime> as registryUrl",
   "runtimes": [
     "svelte",
@@ -46135,6 +47138,6 @@
     "latte",
     "jinja2"
   ],
-  "sourceCommit": "a48e717a64f9a17a2adf3a7ddc4a52b1ae16d8fd",
+  "sourceCommit": "6d85f1b777ca068b5dbea3c977bcb9c40ecdb5c2",
   "version": "0.1.0"
 }

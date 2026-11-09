@@ -1227,6 +1227,30 @@
     },
     {
       "dependencies": [],
+      "description": "A dish as a card: picture, category, portion/weight, price and an order button. No rating.",
+      "name": "dish-card",
+      "registryDependencies": [
+        "badge",
+        "block",
+        "box",
+        "button",
+        "card-content",
+        "group",
+        "kit-box",
+        "kit-button",
+        "kit-link",
+        "kit-text",
+        "link",
+        "media-frame",
+        "text",
+        "title",
+        "utils"
+      ],
+      "title": "Dish Card",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
       "description": "Cards with a quantity field and an add button, under a live cart count.",
       "name": "dish-cart-grid",
       "registryDependencies": [
@@ -2729,6 +2753,50 @@
     },
     {
       "dependencies": [],
+      "description": "A photo gallery with a dialog for the selected picture. Additive to Photo gallery.",
+      "name": "lightbox-gallery",
+      "registryDependencies": [
+        "box",
+        "button",
+        "empty-state",
+        "figure-block",
+        "group",
+        "kit-box",
+        "kit-button",
+        "kit-text",
+        "lightbox-stage",
+        "lucide-icon",
+        "media-frame",
+        "section-frame",
+        "stack",
+        "text",
+        "utils"
+      ],
+      "title": "Lightbox Gallery",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "The selected photo in a dialog: title, close, picture, optional caption and previous/next. Static open state. Used by LightboxGallery.",
+      "name": "lightbox-stage",
+      "registryDependencies": [
+        "button",
+        "dialog",
+        "group",
+        "kit-box",
+        "kit-button",
+        "kit-dialog",
+        "kit-text",
+        "lucide-icon",
+        "media-frame",
+        "text",
+        "utils"
+      ],
+      "title": "Lightbox Stage",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
       "description": "Link: Link + recipe link.",
       "name": "link",
       "registryDependencies": [
@@ -3058,6 +3126,29 @@
     },
     {
       "dependencies": [],
+      "description": "Category sections with DishCards in a grid, or denser menu rows; prices can be hidden.",
+      "name": "menu-board",
+      "registryDependencies": [
+        "box",
+        "dish-card",
+        "empty-state",
+        "grid",
+        "kit-box",
+        "kit-text",
+        "list",
+        "menu-row",
+        "menu-section-nav",
+        "section-frame",
+        "stack",
+        "text",
+        "title",
+        "utils"
+      ],
+      "title": "Menu Board",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
       "description": "One entry of a menu: a link to its address, or, without one, its content as text in the same box (the magazine routes nothing, so it shows text). current marks the page the entry stands for (aria-current) either way.",
       "name": "menu-entry",
       "registryDependencies": [
@@ -3070,6 +3161,22 @@
         "utils"
       ],
       "title": "Menu Entry",
+      "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "One dish on a menu board: name, optional badge, a dotted leader to the price, then the summary and the portion/weight. Used by MenuBoard; Codex kind `dish`.",
+      "name": "menu-row",
+      "registryDependencies": [
+        "badge",
+        "box",
+        "inline",
+        "kit-box",
+        "kit-text",
+        "list-item",
+        "utils"
+      ],
+      "title": "Menu Row",
       "type": "registry:component"
     },
     {
@@ -4426,6 +4533,39 @@
       ],
       "title": "Region",
       "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "Book a table: name, phone, date, time, guests, optional notes and consent.",
+      "name": "reservation-form",
+      "registryDependencies": [
+        "box",
+        "button",
+        "checkbox",
+        "field",
+        "form",
+        "grid",
+        "group",
+        "input",
+        "kit-box",
+        "kit-button",
+        "kit-checkbox",
+        "kit-form",
+        "kit-input",
+        "kit-label",
+        "kit-text",
+        "kit-textarea",
+        "label",
+        "lucide-icon",
+        "number-field",
+        "section-frame",
+        "stack",
+        "text",
+        "textarea",
+        "utils"
+      ],
+      "title": "Reservation Form",
+      "type": "registry:block"
     },
     {
       "dependencies": [],
@@ -5819,7 +5959,7 @@
       "type": "registry:block"
     }
   ],
-  "lastUpdated": "2026-11-02T21:24:41+03:00",
+  "lastUpdated": "2026-11-09T23:33:09+03:00",
   "registry": "ui",
   "version": "0.1.0"
 }

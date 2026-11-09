@@ -30,6 +30,7 @@
   <url><loc>https://ui.buildy.tw/blocks/dashboard-shell/</loc></url>
   <url><loc>https://ui.buildy.tw/blocks/delivery-info/</loc></url>
   <url><loc>https://ui.buildy.tw/blocks/dish-bento/</loc></url>
+  <url><loc>https://ui.buildy.tw/blocks/dish-card/</loc></url>
   <url><loc>https://ui.buildy.tw/blocks/dish-cart-grid/</loc></url>
   <url><loc>https://ui.buildy.tw/blocks/dish-compare/</loc></url>
   <url><loc>https://ui.buildy.tw/blocks/dish-showcase/</loc></url>
@@ -53,10 +54,12 @@
   <url><loc>https://ui.buildy.tw/blocks/icon-wall/</loc></url>
   <url><loc>https://ui.buildy.tw/blocks/job-board/</loc></url>
   <url><loc>https://ui.buildy.tw/blocks/kanban-board/</loc></url>
+  <url><loc>https://ui.buildy.tw/blocks/lightbox-gallery/</loc></url>
   <url><loc>https://ui.buildy.tw/blocks/logo-cloud/</loc></url>
   <url><loc>https://ui.buildy.tw/blocks/logo-ribbon/</loc></url>
   <url><loc>https://ui.buildy.tw/blocks/media-list/</loc></url>
   <url><loc>https://ui.buildy.tw/blocks/mega-menu/</loc></url>
+  <url><loc>https://ui.buildy.tw/blocks/menu-board/</loc></url>
   <url><loc>https://ui.buildy.tw/blocks/metric-row/</loc></url>
   <url><loc>https://ui.buildy.tw/blocks/milestone-timeline/</loc></url>
   <url><loc>https://ui.buildy.tw/blocks/nav-bar/</loc></url>
@@ -84,6 +87,7 @@
   <url><loc>https://ui.buildy.tw/blocks/quick-order/</loc></url>
   <url><loc>https://ui.buildy.tw/blocks/quote-split/</loc></url>
   <url><loc>https://ui.buildy.tw/blocks/recipe-kits/</loc></url>
+  <url><loc>https://ui.buildy.tw/blocks/reservation-form/</loc></url>
   <url><loc>https://ui.buildy.tw/blocks/restaurant-menu/</loc></url>
   <url><loc>https://ui.buildy.tw/blocks/review-list/</loc></url>
   <url><loc>https://ui.buildy.tw/blocks/rich-text/</loc></url>
@@ -170,6 +174,7 @@
   <url><loc>https://ui.buildy.tw/components/icon-tab/</loc></url>
   <url><loc>https://ui.buildy.tw/components/icon-tabs/</loc></url>
   <url><loc>https://ui.buildy.tw/components/job-cards/</loc></url>
+  <url><loc>https://ui.buildy.tw/components/lightbox-stage/</loc></url>
   <url><loc>https://ui.buildy.tw/components/logo-sidebar/</loc></url>
   <url><loc>https://ui.buildy.tw/components/logo-slot/</loc></url>
   <url><loc>https://ui.buildy.tw/components/meat-cards/</loc></url>
@@ -182,6 +187,7 @@
   <url><loc>https://ui.buildy.tw/components/media-topics/</loc></url>
   <url><loc>https://ui.buildy.tw/components/member-row/</loc></url>
   <url><loc>https://ui.buildy.tw/components/menu-entry/</loc></url>
+  <url><loc>https://ui.buildy.tw/components/menu-row/</loc></url>
   <url><loc>https://ui.buildy.tw/components/menu-section-nav/</loc></url>
   <url><loc>https://ui.buildy.tw/components/meter-row/</loc></url>
   <url><loc>https://ui.buildy.tw/components/nav-actions/</loc></url>

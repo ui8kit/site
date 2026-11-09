@@ -3,8 +3,8 @@
   "runtimes": {
     "jinja2": {
       "counts": {
-        "block": 113,
-        "component": 135,
+        "block": 117,
+        "component": 137,
         "lib": 2,
         "primitive": 84,
         "utils": 1
@@ -609,6 +609,15 @@
             "blocks/dish-bento.html.j2": {
               "bytes": 4981,
               "sha256": "c17e8912c01fd2a4c163ebdb61a1bf376ce2abd69bb737bbd966658f6e079e88"
+            }
+          },
+          "type": "registry:block"
+        },
+        "dish-card": {
+          "files": {
+            "blocks/dish-card.html.j2": {
+              "bytes": 5182,
+              "sha256": "ca3563565930c728d4230a08edfddd9bf0597f7a79805a70ea9f82ec08595a69"
             }
           },
           "type": "registry:block"
@@ -1264,8 +1273,8 @@
         "kit-button": {
           "files": {
             "ui/button/button.html.j2": {
-              "bytes": 3505,
-              "sha256": "60575425936c3ec4fc2d78c2a30aa1964c6bc8dd9b089eab693248afe7bcdb32"
+              "bytes": 4518,
+              "sha256": "78ce7c6351e33b02251138b1cb63eb99010824579edd9fd7f24730a80376f716"
             }
           },
           "type": "registry:ui"
@@ -1465,6 +1474,24 @@
           },
           "type": "registry:ui"
         },
+        "lightbox-gallery": {
+          "files": {
+            "blocks/lightbox-gallery.html.j2": {
+              "bytes": 6150,
+              "sha256": "3e9c4e2009a01d4cbeea05039111f0189a2d12018876aeb551bf00eefe22f2b6"
+            }
+          },
+          "type": "registry:block"
+        },
+        "lightbox-stage": {
+          "files": {
+            "blocks/lightbox-stage.html.j2": {
+              "bytes": 3215,
+              "sha256": "4103ed07db96c9298d11cbe3a352b00c42dc94ed41d301ce236940e7a5a0d94f"
+            }
+          },
+          "type": "registry:component"
+        },
         "link": {
           "files": {
             "compose/link.html.j2": {
@@ -1653,11 +1680,29 @@
           },
           "type": "registry:component"
         },
+        "menu-board": {
+          "files": {
+            "blocks/menu-board.html.j2": {
+              "bytes": 4340,
+              "sha256": "eeb33d3d15d1f086cf3d842a97a1096e4ee939e05a1a4e09c9c35ff292bc16a7"
+            }
+          },
+          "type": "registry:block"
+        },
         "menu-entry": {
           "files": {
             "blocks/menu-entry.html.j2": {
               "bytes": 1884,
               "sha256": "e7cf21db93caa2afc6e385546b75ebd62d5787704eb32c0fa2cb4e43eee5642c"
+            }
+          },
+          "type": "registry:component"
+        },
+        "menu-row": {
+          "files": {
+            "blocks/menu-row.html.j2": {
+              "bytes": 2054,
+              "sha256": "7a11278523af5178651e84bb51cee7bd3e214b62fdd4a966aed261ea7dbf5138"
             }
           },
           "type": "registry:component"
@@ -2406,6 +2451,15 @@
           },
           "type": "registry:component"
         },
+        "reservation-form": {
+          "files": {
+            "blocks/reservation-form.html.j2": {
+              "bytes": 7582,
+              "sha256": "6ac95299ed4a25b44ee7857eaacc60f46334725b2b8ee401f8f11af0f24e5aa9"
+            }
+          },
+          "type": "registry:block"
+        },
         "restaurant-menu": {
           "files": {
             "blocks/restaurant-menu.html.j2": {
@@ -3064,8 +3118,8 @@
               "sha256": "f0708785b6d93b0ac0c8e63642117a8698ea093b5724a38e3cbb59aa004d88c3"
             },
             "ui8kit_jinja/__init__.py": {
-              "bytes": 2796,
-              "sha256": "445c0d4f349bd853395650b4439d08628a3df3ab882bb75d9f9cee993c06aad1"
+              "bytes": 2812,
+              "sha256": "4f20d62adb41d17557d9f4f0303e4901f7fd0f53921b26f049297e2b64e1aa0e"
             },
             "ui8kit_jinja/classes.py": {
               "bytes": 1646,
@@ -3076,8 +3130,8 @@
               "sha256": "9d49a07efa6f20704fa1876b579ef2c928865c942ca5c7cc825e7dff1ffc5d81"
             },
             "ui8kit_jinja/runtime.py": {
-              "bytes": 6786,
-              "sha256": "e34893e385b80479dc3a00e8bb8729d69d86cc8b7463e7b03eac8f8b98aa5bdf"
+              "bytes": 6979,
+              "sha256": "bb329a5ada5a75794eab5e658c2e3ce02875dd361c748562ad76cbc8e8a03130"
             }
           },
           "type": "registry:utils"
@@ -3146,12 +3200,12 @@
           "type": "registry:block"
         }
       },
-      "items": 335
+      "items": 341
     },
     "latte": {
       "counts": {
-        "block": 113,
-        "component": 135,
+        "block": 117,
+        "component": 137,
         "lib": 2,
         "primitive": 84,
         "utils": 1
@@ -3403,8 +3457,8 @@
         "button": {
           "files": {
             "compose/Button.latte": {
-              "bytes": 905,
-              "sha256": "878d9882f9414040104f87fbc98ed66f7e4123733d30e2310ae1a623620e9b9d"
+              "bytes": 1004,
+              "sha256": "95880247cc8e445652c7b8758edb44f2a5678052057b4ed0db27833cf6d1be20"
             }
           },
           "type": "registry:ui"
@@ -3412,8 +3466,8 @@
         "button-plain": {
           "files": {
             "compose/ButtonPlain.latte": {
-              "bytes": 807,
-              "sha256": "d38a0f81d8df0d70bcd32e9a1f9151317a2cc52273ae16c95cc71a6f62663696"
+              "bytes": 906,
+              "sha256": "3fb7aeaa559a3622784e3c01badbc69474b983ee57d443e0003c215184c563e9"
             }
           },
           "type": "registry:ui"
@@ -3756,6 +3810,15 @@
             "blocks/dish-bento.latte": {
               "bytes": 5029,
               "sha256": "ba1f06e972972e3f24eb6dbfcec694047d6e25f94a5d894bb78f8b08406b7d1b"
+            }
+          },
+          "type": "registry:block"
+        },
+        "dish-card": {
+          "files": {
+            "blocks/dish-card.latte": {
+              "bytes": 5145,
+              "sha256": "0a34896103ad72b7208f8f5cb6854d917331313e396c6b8c91c8a3af50832154"
             }
           },
           "type": "registry:block"
@@ -4411,8 +4474,8 @@
         "kit-button": {
           "files": {
             "ui/button/Button.latte": {
-              "bytes": 2209,
-              "sha256": "ea57fe42680911510957f8547e33ea77f4fe0af6e378d8c0cce95b2243e3fc39"
+              "bytes": 2568,
+              "sha256": "197529982c265b2361d4cc35b4bb6b7f7f816fea1253ead417263eb0fd452261"
             }
           },
           "type": "registry:ui"
@@ -4608,6 +4671,24 @@
           },
           "type": "registry:ui"
         },
+        "lightbox-gallery": {
+          "files": {
+            "blocks/lightbox-gallery.latte": {
+              "bytes": 6210,
+              "sha256": "9f0869debc0b4ad72aedb60cf752caa7c46761a6f1e0f753d7981f8f3940a707"
+            }
+          },
+          "type": "registry:block"
+        },
+        "lightbox-stage": {
+          "files": {
+            "blocks/lightbox-stage.latte": {
+              "bytes": 3289,
+              "sha256": "57f50caccb604608f9d00851d0e2bbe6de510a597ce4c29adae47ca548eedaa3"
+            }
+          },
+          "type": "registry:component"
+        },
         "link": {
           "files": {
             "compose/Link.latte": {
@@ -4796,11 +4877,29 @@
           },
           "type": "registry:component"
         },
+        "menu-board": {
+          "files": {
+            "blocks/menu-board.latte": {
+              "bytes": 4323,
+              "sha256": "bada7d3181e048827cbd82b63bfb29c59b0cf512662df654ec7ee3e1033a2a27"
+            }
+          },
+          "type": "registry:block"
+        },
         "menu-entry": {
           "files": {
             "blocks/menu-entry.latte": {
               "bytes": 1830,
               "sha256": "ac150931985cfd99985bb9520d7690bd33967f8c9c72e49ddc564a09625f8286"
+            }
+          },
+          "type": "registry:component"
+        },
+        "menu-row": {
+          "files": {
+            "blocks/menu-row.latte": {
+              "bytes": 2050,
+              "sha256": "8724f5b05087c3e0fa9bff9b4dd9c3ee804105ef35c247afd451554e7790f366"
             }
           },
           "type": "registry:component"
@@ -5549,6 +5648,15 @@
           },
           "type": "registry:component"
         },
+        "reservation-form": {
+          "files": {
+            "blocks/reservation-form.latte": {
+              "bytes": 7696,
+              "sha256": "bc45db190af9412f997a6c468a7e2e156a43924d5d458bd1e0268184ae08b0e5"
+            }
+          },
+          "type": "registry:block"
+        },
         "restaurant-menu": {
           "files": {
             "blocks/restaurant-menu.latte": {
@@ -6207,16 +6315,16 @@
               "sha256": "44a9a2a54747e0f95973459eb63373099ae9698c701f5985dba27773d6209bf2"
             },
             "runtime/Classes.php": {
-              "bytes": 8659,
-              "sha256": "08833ca81ee80cdea5a101171bd510804b8a2aa907aa2caf2ec3eb43dc4d2c76"
+              "bytes": 8692,
+              "sha256": "cda172aa3738e54211a326dfdedd435ec06c44dd0faa67c339baa95b43a328b7"
             },
             "runtime/CnMerge.php": {
               "bytes": 9692,
               "sha256": "e96bcc7cd220f3666925dff533b9c1d079674dae4ad9b6b74cc1d5d649cfb81b"
             },
             "runtime/Rt.php": {
-              "bytes": 8810,
-              "sha256": "ca2a4cc32d71fc63102120ed7f0d5846c656b4f6f1720348621f60e1400dc78c"
+              "bytes": 9030,
+              "sha256": "3ec5f7d9ccead8f9f1ec368328b0041e5b014254aed9a02a0012e189569c13da"
             },
             "runtime/Tags.php": {
               "bytes": 683,
@@ -6289,12 +6397,12 @@
           "type": "registry:block"
         }
       },
-      "items": 335
+      "items": 341
     },
     "react": {
       "counts": {
-        "block": 113,
-        "component": 135,
+        "block": 117,
+        "component": 137,
         "lib": 2,
         "primitive": 88,
         "utils": 1
@@ -7016,6 +7124,19 @@
           },
           "type": "registry:block"
         },
+        "dish-card": {
+          "files": {
+            "blocks/dish-card.tsx": {
+              "bytes": 3818,
+              "sha256": "bafd16169cf33c4e0702357c82e231410135102fc077ee9cbc6922c422705ab8"
+            },
+            "blocks/dish-card.types.ts": {
+              "bytes": 198,
+              "sha256": "d76f4c4cbeef907435ab3036e10f76236580d35ce74f98dfbea7e68e8bead0b4"
+            }
+          },
+          "type": "registry:block"
+        },
         "dish-cart-grid": {
           "files": {
             "blocks/dish-cart-grid.tsx": {
@@ -7715,12 +7836,12 @@
         "kit-button": {
           "files": {
             "kit/ui/button/button.shared.ts": {
-              "bytes": 600,
-              "sha256": "c1666ca1a228d99bd84aecff67f6d5335ec4a0db6197c7fbb9aa9bf1e4973fbc"
+              "bytes": 643,
+              "sha256": "e64ffc4c913f5911fef7c733469cbca52153eae058a229263559a1c1fc5fc254"
             },
             "kit/ui/button/button.tsx": {
-              "bytes": 1954,
-              "sha256": "e3d65443749ffa0bd843a10eccb76db6412ef48151378f4127f128010fc3d4d1"
+              "bytes": 2389,
+              "sha256": "0ce7782ce5a66696513547e951232955ea803cbbd7a09c5bdbf85d4502abfb96"
             }
           },
           "type": "registry:ui"
@@ -7977,6 +8098,28 @@
           },
           "type": "registry:ui"
         },
+        "lightbox-gallery": {
+          "files": {
+            "blocks/lightbox-gallery.tsx": {
+              "bytes": 5026,
+              "sha256": "02b80c7a936bcf7b6b6390a65d27a88a442eb966599382c9fa52aec860a052d9"
+            },
+            "blocks/lightbox-gallery.types.ts": {
+              "bytes": 275,
+              "sha256": "eb69a362a15e6ba54808cc06a7fc0159ee254b4ca3c8c31e6b967a9a90347241"
+            }
+          },
+          "type": "registry:block"
+        },
+        "lightbox-stage": {
+          "files": {
+            "components/lightbox-stage.tsx": {
+              "bytes": 2404,
+              "sha256": "5626013291dfa0128c6949ab7f4b0f8f4ca25b0b02662545e7fa16705692db75"
+            }
+          },
+          "type": "registry:component"
+        },
         "link": {
           "files": {
             "compose/link.tsx": {
@@ -8181,11 +8324,29 @@
           },
           "type": "registry:component"
         },
+        "menu-board": {
+          "files": {
+            "blocks/menu-board.tsx": {
+              "bytes": 3836,
+              "sha256": "cc7200daa5f8b4e0124142ad6c6f1cacda294bbaaea35dd3f17a81547c77d715"
+            }
+          },
+          "type": "registry:block"
+        },
         "menu-entry": {
           "files": {
             "components/menu-entry.tsx": {
               "bytes": 1537,
               "sha256": "e1f3629a7bdb89b3809196a4170d2011f08e0c95f0b3c35bfedfabe0da47e104"
+            }
+          },
+          "type": "registry:component"
+        },
+        "menu-row": {
+          "files": {
+            "components/menu-row.tsx": {
+              "bytes": 1529,
+              "sha256": "0cc531c4988898bc0016e3e669f977a4d202d9264f8ff3992110665b466e64b0"
             }
           },
           "type": "registry:component"
@@ -8963,6 +9124,19 @@
           },
           "type": "registry:component"
         },
+        "reservation-form": {
+          "files": {
+            "blocks/reservation-form.tsx": {
+              "bytes": 4977,
+              "sha256": "9317eac314246016da8c5fe847448dafa1966daf7c6530bc5367ab34c38de22a"
+            },
+            "blocks/reservation-form.types.ts": {
+              "bytes": 384,
+              "sha256": "bc92dddb62c1ec58013ccefb989648490589cfcdd886f737a08afffb360d95c5"
+            }
+          },
+          "type": "registry:block"
+        },
         "restaurant-menu": {
           "files": {
             "blocks/restaurant-menu.tsx": {
@@ -9714,8 +9888,8 @@
               "sha256": "bc01c432801f7c9722b3756b4155c437c66061917362c7b259fcd12cc72a4478"
             },
             "kit/utils/expr.ts": {
-              "bytes": 5137,
-              "sha256": "ae6f7c5372b6881db5c9cb5b0ede34509b3e151c4c6bcfd9f1b0399722bcafb9"
+              "bytes": 5363,
+              "sha256": "b679f14ad497875254d6cf39df785bd0fb9319b56c6d7541212a036340957c7b"
             },
             "kit/utils/index.ts": {
               "bytes": 377,
@@ -9880,12 +10054,12 @@
           "type": "registry:block"
         }
       },
-      "items": 339
+      "items": 345
     },
     "solid": {
       "counts": {
-        "block": 113,
-        "component": 135,
+        "block": 117,
+        "component": 137,
         "lib": 2,
         "primitive": 87,
         "utils": 1
@@ -10607,6 +10781,19 @@
           },
           "type": "registry:block"
         },
+        "dish-card": {
+          "files": {
+            "blocks/dish-card.tsx": {
+              "bytes": 3775,
+              "sha256": "7ef685197a19ff0d6ed572fa9ee6f49e18cbc9ee789d1e8ee3c383a6ffb2f13a"
+            },
+            "blocks/dish-card.types.ts": {
+              "bytes": 198,
+              "sha256": "d76f4c4cbeef907435ab3036e10f76236580d35ce74f98dfbea7e68e8bead0b4"
+            }
+          },
+          "type": "registry:block"
+        },
         "dish-cart-grid": {
           "files": {
             "blocks/dish-cart-grid.tsx": {
@@ -11306,12 +11493,12 @@
         "kit-button": {
           "files": {
             "kit/ui/button/button.shared.ts": {
-              "bytes": 600,
-              "sha256": "c1666ca1a228d99bd84aecff67f6d5335ec4a0db6197c7fbb9aa9bf1e4973fbc"
+              "bytes": 643,
+              "sha256": "e64ffc4c913f5911fef7c733469cbca52153eae058a229263559a1c1fc5fc254"
             },
             "kit/ui/button/button.solid.tsx": {
-              "bytes": 1838,
-              "sha256": "1490375572b74381e5ecf96a5c0438277a11df81277fc75856dedb77251e4498"
+              "bytes": 2295,
+              "sha256": "92f72b104928f2505f0aa1dca126100b7a2df96a2d723550427663239196e4ed"
             }
           },
           "type": "registry:ui"
@@ -11559,6 +11746,28 @@
           },
           "type": "registry:ui"
         },
+        "lightbox-gallery": {
+          "files": {
+            "blocks/lightbox-gallery.tsx": {
+              "bytes": 5062,
+              "sha256": "a28235a0a59d07c7fcc1f2284ad3aec51ef4209e94a6ce765139c1b1da50ed63"
+            },
+            "blocks/lightbox-gallery.types.ts": {
+              "bytes": 275,
+              "sha256": "eb69a362a15e6ba54808cc06a7fc0159ee254b4ca3c8c31e6b967a9a90347241"
+            }
+          },
+          "type": "registry:block"
+        },
+        "lightbox-stage": {
+          "files": {
+            "components/lightbox-stage.tsx": {
+              "bytes": 2389,
+              "sha256": "2db2afefa0d626efaa8b1e6c810a788ec59260fb08d0ac8ac24a745497960461"
+            }
+          },
+          "type": "registry:component"
+        },
         "link": {
           "files": {
             "compose/link.solid.tsx": {
@@ -11763,11 +11972,29 @@
           },
           "type": "registry:component"
         },
+        "menu-board": {
+          "files": {
+            "blocks/menu-board.tsx": {
+              "bytes": 3776,
+              "sha256": "04383c9ad3cd252e4836491b9376778bc78aa40e4f9aa3c565d870f778d98163"
+            }
+          },
+          "type": "registry:block"
+        },
         "menu-entry": {
           "files": {
             "components/menu-entry.tsx": {
               "bytes": 1527,
               "sha256": "6aaed664196fbc7699a0f34cd216e90e031f8a6bc2a513c94266e1b08a020024"
+            }
+          },
+          "type": "registry:component"
+        },
+        "menu-row": {
+          "files": {
+            "components/menu-row.tsx": {
+              "bytes": 1502,
+              "sha256": "1e33d3dd7aa97ce709cceb201257345ce0ce05c176d72bb1dcdfe5f05dcbb168"
             }
           },
           "type": "registry:component"
@@ -12545,6 +12772,19 @@
           },
           "type": "registry:component"
         },
+        "reservation-form": {
+          "files": {
+            "blocks/reservation-form.tsx": {
+              "bytes": 4935,
+              "sha256": "ccf3ed5da95e0f87fc0bf9c32e12eb65b04e07ff5a50f3a72a625792d8ddd10c"
+            },
+            "blocks/reservation-form.types.ts": {
+              "bytes": 384,
+              "sha256": "bc92dddb62c1ec58013ccefb989648490589cfcdd886f737a08afffb360d95c5"
+            }
+          },
+          "type": "registry:block"
+        },
         "restaurant-menu": {
           "files": {
             "blocks/restaurant-menu.tsx": {
@@ -13296,8 +13536,8 @@
               "sha256": "bc01c432801f7c9722b3756b4155c437c66061917362c7b259fcd12cc72a4478"
             },
             "kit/utils/expr.ts": {
-              "bytes": 5137,
-              "sha256": "ae6f7c5372b6881db5c9cb5b0ede34509b3e151c4c6bcfd9f1b0399722bcafb9"
+              "bytes": 5363,
+              "sha256": "b679f14ad497875254d6cf39df785bd0fb9319b56c6d7541212a036340957c7b"
             },
             "kit/utils/index.ts": {
               "bytes": 377,
@@ -13462,12 +13702,12 @@
           "type": "registry:block"
         }
       },
-      "items": 338
+      "items": 344
     },
     "svelte": {
       "counts": {
-        "block": 113,
-        "component": 135,
+        "block": 117,
+        "component": 137,
         "lib": 2,
         "primitive": 87,
         "utils": 1
@@ -14189,6 +14429,19 @@
           },
           "type": "registry:block"
         },
+        "dish-card": {
+          "files": {
+            "blocks/dish-card.svelte": {
+              "bytes": 3845,
+              "sha256": "da7603b7b7a1daf0b594c70136abf2183efd5db84bc0abda28b4bc7afb8bbfa7"
+            },
+            "blocks/dish-card.types.ts": {
+              "bytes": 198,
+              "sha256": "d76f4c4cbeef907435ab3036e10f76236580d35ce74f98dfbea7e68e8bead0b4"
+            }
+          },
+          "type": "registry:block"
+        },
         "dish-cart-grid": {
           "files": {
             "blocks/dish-cart-grid.svelte": {
@@ -14888,12 +15141,12 @@
         "kit-button": {
           "files": {
             "kit/ui/button/Button.svelte": {
-              "bytes": 1353,
-              "sha256": "ee9ce61438a84f3f5751c7a260a7c46faeac420aa43fe2f471b6d4eadf38a02f"
+              "bytes": 1695,
+              "sha256": "b589b0ea565dea30e454335b71e2e663d6a1611e786979c5b0fcb15f68328493"
             },
             "kit/ui/button/button.shared.ts": {
-              "bytes": 600,
-              "sha256": "c1666ca1a228d99bd84aecff67f6d5335ec4a0db6197c7fbb9aa9bf1e4973fbc"
+              "bytes": 643,
+              "sha256": "e64ffc4c913f5911fef7c733469cbca52153eae058a229263559a1c1fc5fc254"
             }
           },
           "type": "registry:ui"
@@ -15161,6 +15414,28 @@
           },
           "type": "registry:ui"
         },
+        "lightbox-gallery": {
+          "files": {
+            "blocks/lightbox-gallery.svelte": {
+              "bytes": 4804,
+              "sha256": "6f8a14355df2ccf3a36afd45739917541909ed068b23fb1a1d17603bcd880843"
+            },
+            "blocks/lightbox-gallery.types.ts": {
+              "bytes": 275,
+              "sha256": "eb69a362a15e6ba54808cc06a7fc0159ee254b4ca3c8c31e6b967a9a90347241"
+            }
+          },
+          "type": "registry:block"
+        },
+        "lightbox-stage": {
+          "files": {
+            "components/lightbox-stage.svelte": {
+              "bytes": 2412,
+              "sha256": "6bc80e4f0acf81e18765c709f3ac9a82e614d849bda8709da58e39962f829ef4"
+            }
+          },
+          "type": "registry:component"
+        },
         "link": {
           "files": {
             "compose/Link.svelte": {
@@ -15365,11 +15640,29 @@
           },
           "type": "registry:component"
         },
+        "menu-board": {
+          "files": {
+            "blocks/menu-board.svelte": {
+              "bytes": 3740,
+              "sha256": "fefcc10236e4537d2b0f55c1f9fe67da75c85459a6c13ad271a2cf7c0740b603"
+            }
+          },
+          "type": "registry:block"
+        },
         "menu-entry": {
           "files": {
             "components/menu-entry.svelte": {
               "bytes": 1609,
               "sha256": "fe70c306ca44ec36613dfba5aba0bf7cb5de3025b99e2b8ddd6c243cc95b40d7"
+            }
+          },
+          "type": "registry:component"
+        },
+        "menu-row": {
+          "files": {
+            "components/menu-row.svelte": {
+              "bytes": 1571,
+              "sha256": "4f38920bf80ac3a90297dba717f1d0741ac24ca21917d5ee00ac4bdcde31a91b"
             }
           },
           "type": "registry:component"
@@ -16147,6 +16440,19 @@
           },
           "type": "registry:component"
         },
+        "reservation-form": {
+          "files": {
+            "blocks/reservation-form.svelte": {
+              "bytes": 5106,
+              "sha256": "5c478c0f659cefdfc51c74dbfeafd20f5ee205207ee40de5cf91bbcbd4189f55"
+            },
+            "blocks/reservation-form.types.ts": {
+              "bytes": 384,
+              "sha256": "bc92dddb62c1ec58013ccefb989648490589cfcdd886f737a08afffb360d95c5"
+            }
+          },
+          "type": "registry:block"
+        },
         "restaurant-menu": {
           "files": {
             "blocks/restaurant-menu.svelte": {
@@ -16898,8 +17204,8 @@
               "sha256": "bc01c432801f7c9722b3756b4155c437c66061917362c7b259fcd12cc72a4478"
             },
             "kit/utils/expr.ts": {
-              "bytes": 5137,
-              "sha256": "ae6f7c5372b6881db5c9cb5b0ede34509b3e151c4c6bcfd9f1b0399722bcafb9"
+              "bytes": 5363,
+              "sha256": "b679f14ad497875254d6cf39df785bd0fb9319b56c6d7541212a036340957c7b"
             },
             "kit/utils/index.ts": {
               "bytes": 377,
@@ -17064,12 +17370,12 @@
           "type": "registry:block"
         }
       },
-      "items": 338
+      "items": 344
     },
     "templ": {
       "counts": {
-        "block": 113,
-        "component": 135,
+        "block": 117,
+        "component": 137,
         "lib": 2,
         "primitive": 84,
         "utils": 1
@@ -17674,6 +17980,15 @@
             "blocks/dish-bento.templ": {
               "bytes": 4555,
               "sha256": "7f170f51b88602f9836eed1660ee02e735e29fa76529b9f626aa46632dced4d3"
+            }
+          },
+          "type": "registry:block"
+        },
+        "dish-card": {
+          "files": {
+            "blocks/dish-card.templ": {
+              "bytes": 4980,
+              "sha256": "9cb0b239b48d370579f409199303b813945eb564bd7473c4b085264fbed36ed7"
             }
           },
           "type": "registry:block"
@@ -18329,8 +18644,8 @@
         "kit-button": {
           "files": {
             "ui/button/button.templ": {
-              "bytes": 3317,
-              "sha256": "6afb472196005ed8b5d5ed88b40a4bc95cc79fb327cfe5d117e086f417dcc2bb"
+              "bytes": 4240,
+              "sha256": "0614d7725f0ab181dd96b33b22ec351b6d3d395335b19dc5de08ffd99c1ca074"
             }
           },
           "type": "registry:ui"
@@ -18513,6 +18828,24 @@
             }
           },
           "type": "registry:ui"
+        },
+        "lightbox-gallery": {
+          "files": {
+            "blocks/lightbox-gallery.templ": {
+              "bytes": 5677,
+              "sha256": "29811a42cc49c98b460423fcf88075e2eb4b45c0ee56d6898c83c238077f484b"
+            }
+          },
+          "type": "registry:block"
+        },
+        "lightbox-stage": {
+          "files": {
+            "blocks/lightbox-stage.templ": {
+              "bytes": 3364,
+              "sha256": "1b793e6de3ec605e14c59d42b0d2f04f27c37317b85c19e60d33e4866e3066d2"
+            }
+          },
+          "type": "registry:component"
         },
         "link": {
           "files": {
@@ -18702,11 +19035,29 @@
           },
           "type": "registry:component"
         },
+        "menu-board": {
+          "files": {
+            "blocks/menu-board.templ": {
+              "bytes": 3986,
+              "sha256": "fad3ddb884b00d24d45d4d2bb43386b0c3ebc046d40cc4ab52111274e57137c9"
+            }
+          },
+          "type": "registry:block"
+        },
         "menu-entry": {
           "files": {
             "blocks/menu-entry.templ": {
               "bytes": 2189,
               "sha256": "308439e00d32697817616de1eebee8ee0390f817af6db977bfac5f946f42d389"
+            }
+          },
+          "type": "registry:component"
+        },
+        "menu-row": {
+          "files": {
+            "blocks/menu-row.templ": {
+              "bytes": 2218,
+              "sha256": "8fb58f9c724c95bed808599e5bac51ad71b30fb8d886e36bfa70429ed0af5246"
             }
           },
           "type": "registry:component"
@@ -19463,6 +19814,15 @@
           },
           "type": "registry:component"
         },
+        "reservation-form": {
+          "files": {
+            "blocks/reservation-form.templ": {
+              "bytes": 6979,
+              "sha256": "f6ecf4cb24732a2f11669c4916fcc9e17c6019d054aab1ed2bf756bb89fa20c5"
+            }
+          },
+          "type": "registry:block"
+        },
         "restaurant-menu": {
           "files": {
             "blocks/restaurant-menu.templ": {
@@ -20149,8 +20509,8 @@
               "sha256": "2761e3565f991314e133f670776bfd342eecf1da2c4b52f72f880e05d3e957b7"
             },
             "utils/expr.go": {
-              "bytes": 2330,
-              "sha256": "4362abd14df130e43da4d38a370eea54aaf637d9b43245e4a6da42a22b1a250e"
+              "bytes": 2523,
+              "sha256": "7ba271048a998099aa7be5257b421efc6683e1502e6c08fb20d9914b9dca7fc0"
             },
             "utils/tags.go": {
               "bytes": 1308,
@@ -20231,12 +20591,12 @@
           "type": "registry:block"
         }
       },
-      "items": 335
+      "items": 341
     },
     "twig": {
       "counts": {
-        "block": 113,
-        "component": 135,
+        "block": 117,
+        "component": 137,
         "lib": 2,
         "primitive": 84,
         "utils": 1
@@ -20841,6 +21201,15 @@
             "blocks/dish-bento.html.twig": {
               "bytes": 5200,
               "sha256": "410112e3c3b55f0a6f55b303bcc39b6bd0288b84ff08f1cc6c106b98fa81b12d"
+            }
+          },
+          "type": "registry:block"
+        },
+        "dish-card": {
+          "files": {
+            "blocks/dish-card.html.twig": {
+              "bytes": 5341,
+              "sha256": "f7e923c5f04786278d116df5651b43c54284fe217bdc48d306a6d3f52a55bec0"
             }
           },
           "type": "registry:block"
@@ -21496,8 +21865,8 @@
         "kit-button": {
           "files": {
             "ui/button/Button.html.twig": {
-              "bytes": 2338,
-              "sha256": "11c4e2e5fe93b0ae9aa095fe5ab4e9fb5b7ded62ce549ee82a148fb641d8580b"
+              "bytes": 2705,
+              "sha256": "945584170f6dd3b96b76a74f032a8530346c73609b188911468e0ff94d572f4d"
             }
           },
           "type": "registry:ui"
@@ -21693,6 +22062,24 @@
           },
           "type": "registry:ui"
         },
+        "lightbox-gallery": {
+          "files": {
+            "blocks/lightbox-gallery.html.twig": {
+              "bytes": 6406,
+              "sha256": "3182e6b5d82600f7dee8f5a612eb6bd9a9d79ea10bd4fa9e04ad696b3eba1dbf"
+            }
+          },
+          "type": "registry:block"
+        },
+        "lightbox-stage": {
+          "files": {
+            "blocks/lightbox-stage.html.twig": {
+              "bytes": 3387,
+              "sha256": "46a22cce86201c6a689aed70b39807cdb3af1a1a7d55d58ed3a9a72af1dfb840"
+            }
+          },
+          "type": "registry:component"
+        },
         "link": {
           "files": {
             "compose/Link.html.twig": {
@@ -21881,11 +22268,29 @@
           },
           "type": "registry:component"
         },
+        "menu-board": {
+          "files": {
+            "blocks/menu-board.html.twig": {
+              "bytes": 4472,
+              "sha256": "84d948c9e725531551c908a3fe67e53b3ea2c7646ab699b7bc9e3b3fb2c86560"
+            }
+          },
+          "type": "registry:block"
+        },
         "menu-entry": {
           "files": {
             "blocks/menu-entry.html.twig": {
               "bytes": 1838,
               "sha256": "a7f5ddd57fa8dd756d88f1ee2e000e56d729a67052f1ec3766c74149d22a99b0"
+            }
+          },
+          "type": "registry:component"
+        },
+        "menu-row": {
+          "files": {
+            "blocks/menu-row.html.twig": {
+              "bytes": 2137,
+              "sha256": "33ddbe18355dcb9722203f8356df3678d5aade1e1f161620307eadaa62ea3f9a"
             }
           },
           "type": "registry:component"
@@ -22638,6 +23043,15 @@
           },
           "type": "registry:component"
         },
+        "reservation-form": {
+          "files": {
+            "blocks/reservation-form.html.twig": {
+              "bytes": 7997,
+              "sha256": "19a2b4230d73c82572999536c0f6eecc29d53fd966420d76bb405ec862cd296a"
+            }
+          },
+          "type": "registry:block"
+        },
         "restaurant-menu": {
           "files": {
             "blocks/restaurant-menu.html.twig": {
@@ -23296,24 +23710,24 @@
               "sha256": "3bc2ec119bdd44145286f3d66791ffadc4212f8945cb8087e722fe62e53e1a3b"
             },
             "runtime/Classes.php": {
-              "bytes": 8658,
-              "sha256": "8566bb5ef8c187a23b3dbbf2d0b87c3850467ebda177e3c7a2168aec27970e98"
+              "bytes": 8691,
+              "sha256": "5aa1b47f3868b0cfb8bb936bce5b6461097d41bf6d257747cd3c9413434566f6"
             },
             "runtime/CnMerge.php": {
               "bytes": 9691,
               "sha256": "3ffef49a305d808c0e23f2598b086228869f625a1b72b319b29dc29dfe7d7263"
             },
             "runtime/Rt.php": {
-              "bytes": 8809,
-              "sha256": "c725a60d3ef6fa278cbe093c2ff1328ff163a2dbc09df8a242ba436db266aabc"
+              "bytes": 9029,
+              "sha256": "37564eb0a3b855dc0ed3531fc308f23debd40502e93874f55d95351c9b5edea9"
             },
             "runtime/Tags.php": {
               "bytes": 682,
               "sha256": "5d9709187764c50976306f2b13945f7e57b1592031ef1b36bc8300f8f723a21c"
             },
             "runtime/TwigExtension.php": {
-              "bytes": 2057,
-              "sha256": "0d52909811df72e65702bf54e87bf7bd30a3174da17740cfd7c5900b4b43689e"
+              "bytes": 2137,
+              "sha256": "373613f238905dab919380a81a0cd360a5030cb7bb098d6fb68a17a2772ffbcd"
             }
           },
           "type": "registry:utils"
@@ -23382,12 +23796,12 @@
           "type": "registry:block"
         }
       },
-      "items": 335
+      "items": 341
     },
     "vue": {
       "counts": {
-        "block": 113,
-        "component": 135,
+        "block": 117,
+        "component": 137,
         "lib": 2,
         "primitive": 87,
         "utils": 1
@@ -24109,6 +24523,19 @@
           },
           "type": "registry:block"
         },
+        "dish-card": {
+          "files": {
+            "blocks/dish-card.types.ts": {
+              "bytes": 198,
+              "sha256": "d76f4c4cbeef907435ab3036e10f76236580d35ce74f98dfbea7e68e8bead0b4"
+            },
+            "blocks/dish-card.vue": {
+              "bytes": 3850,
+              "sha256": "ffec8384441f0611590b2d474cfe720bc72a42f65e82b9fa35ec21cc5c8ae836"
+            }
+          },
+          "type": "registry:block"
+        },
         "dish-cart-grid": {
           "files": {
             "blocks/dish-cart-grid.vue": {
@@ -24808,12 +25235,12 @@
         "kit-button": {
           "files": {
             "kit/ui/button/Button.vue": {
-              "bytes": 1406,
-              "sha256": "f896a1f3fcd4a37a5ec813f04398836fe94f9e3ed690ebfb61363949c5b6e0d8"
+              "bytes": 1797,
+              "sha256": "c99879c79466c11563d9991f89a6745536aa875ff6163fcdb89bb9891cba19c2"
             },
             "kit/ui/button/button.shared.ts": {
-              "bytes": 600,
-              "sha256": "c1666ca1a228d99bd84aecff67f6d5335ec4a0db6197c7fbb9aa9bf1e4973fbc"
+              "bytes": 643,
+              "sha256": "e64ffc4c913f5911fef7c733469cbca52153eae058a229263559a1c1fc5fc254"
             }
           },
           "type": "registry:ui"
@@ -25081,6 +25508,28 @@
           },
           "type": "registry:ui"
         },
+        "lightbox-gallery": {
+          "files": {
+            "blocks/lightbox-gallery.types.ts": {
+              "bytes": 275,
+              "sha256": "eb69a362a15e6ba54808cc06a7fc0159ee254b4ca3c8c31e6b967a9a90347241"
+            },
+            "blocks/lightbox-gallery.vue": {
+              "bytes": 4708,
+              "sha256": "f0586a3da983b57026adddccee095bdea4157e08fa27f57ae5b6e34e5e7de35c"
+            }
+          },
+          "type": "registry:block"
+        },
+        "lightbox-stage": {
+          "files": {
+            "components/lightbox-stage.vue": {
+              "bytes": 2436,
+              "sha256": "d708ed0e38821217b9e48e7181a7e2794d265caca9e89503541ee771e34bbd8d"
+            }
+          },
+          "type": "registry:component"
+        },
         "link": {
           "files": {
             "compose/Link.vue": {
@@ -25285,11 +25734,29 @@
           },
           "type": "registry:component"
         },
+        "menu-board": {
+          "files": {
+            "blocks/menu-board.vue": {
+              "bytes": 3445,
+              "sha256": "61560ebb1353573b43754326c0825c8788156e4868b83ae08bd7196acd127d86"
+            }
+          },
+          "type": "registry:block"
+        },
         "menu-entry": {
           "files": {
             "components/menu-entry.vue": {
               "bytes": 1529,
               "sha256": "5c864a30891cd2cdd1e5c356d4759735559903b7b7ebb4fa0469f0bb445c24bb"
+            }
+          },
+          "type": "registry:component"
+        },
+        "menu-row": {
+          "files": {
+            "components/menu-row.vue": {
+              "bytes": 1578,
+              "sha256": "84d7486654f4bdbd3d95decac5df4e023c9110b193ce8b5bdee013460d3c857a"
             }
           },
           "type": "registry:component"
@@ -26067,6 +26534,19 @@
           },
           "type": "registry:component"
         },
+        "reservation-form": {
+          "files": {
+            "blocks/reservation-form.types.ts": {
+              "bytes": 384,
+              "sha256": "bc92dddb62c1ec58013ccefb989648490589cfcdd886f737a08afffb360d95c5"
+            },
+            "blocks/reservation-form.vue": {
+              "bytes": 5040,
+              "sha256": "4fa7df2389302a4fd3bad7246f4606c5daefdf71d3da0ae0505477aa5d64ddbd"
+            }
+          },
+          "type": "registry:block"
+        },
         "restaurant-menu": {
           "files": {
             "blocks/restaurant-menu.types.ts": {
@@ -26818,8 +27298,8 @@
               "sha256": "bc01c432801f7c9722b3756b4155c437c66061917362c7b259fcd12cc72a4478"
             },
             "kit/utils/expr.ts": {
-              "bytes": 5137,
-              "sha256": "ae6f7c5372b6881db5c9cb5b0ede34509b3e151c4c6bcfd9f1b0399722bcafb9"
+              "bytes": 5363,
+              "sha256": "b679f14ad497875254d6cf39df785bd0fb9319b56c6d7541212a036340957c7b"
             },
             "kit/utils/index.ts": {
               "bytes": 377,
@@ -26984,12 +27464,12 @@
           "type": "registry:block"
         }
       },
-      "items": 338
+      "items": 344
     }
   },
   "source": {
-    "commit": "a48e717a64f9a17a2adf3a7ddc4a52b1ae16d8fd",
-    "commitDate": "2026-11-02T21:24:41+03:00",
+    "commit": "6d85f1b777ca068b5dbea3c977bcb9c40ecdb5c2",
+    "commitDate": "2026-11-09T23:33:09+03:00",
     "dirty": false,
     "repo": "private source monorepo"
   },
