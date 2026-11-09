@@ -59,6 +59,29 @@
       "items": {
         "type": "string"
       }
+    },
+    "variants": {
+      "type": "object",
+      "description": "Stock variant presets: path (relative to the registry root), sha256 of that file, its own digest and version",
+      "required": [
+        "path",
+        "sha256"
+      ],
+      "properties": {
+        "path": {
+          "type": "string"
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "digest": {
+          "type": "string"
+        },
+        "version": {
+          "type": "string"
+        }
+      }
     }
   },
   "description": "UI8Kit registry document. Three shapes: a built registry ({items: registry-item[]}), a per-runtime CLI index r/<runtime>/index.json ({components: index entry[]}) and the cross-runtime catalog r/registry.json ({items: catalog entry[], runtimes}).",

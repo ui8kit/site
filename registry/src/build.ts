@@ -13,6 +13,7 @@ import path from "node:path";
 import { buildTemplateRuntime, TEMPLATE_RUNTIMES, type Kind } from "./template-runtimes";
 import { rewriteKitRefs } from "./kit-paths";
 import { cleanGenerated } from "./clean-out";
+import { publishVariants } from "./variants";
 
 export const TS_RUNTIMES = ["svelte", "react", "vue", "solid"] as const;
 export const RUNTIMES = [...TS_RUNTIMES, ...TEMPLATE_RUNTIMES] as const;
@@ -265,6 +266,10 @@ function main() {
     writeFileSync(path.join(OUT, rt, "index.json"), json(index));
     manifest.runtimes[rt] = { items: items.length, counts, entries: mItems };
   }
+  // Stock variant presets: r/variants/v0.json (+ .sha256), every item must be a registry item in every runtime
+  const everywhere = new Set([...ref.keys()].filter((n) => RUNTIMES.every((rt) => built.get(rt)!.some((i) => i.name === n))));
+  const variants = publishVariants(SRC, OUT, everywhere);
+  manifest.variants = variants;
   writeFileSync(path.join(OUT, "manifest.json"), json(manifest));
   mkdirSync(path.join(OUT, "schema"), { recursive: true });
   for (const f of readdirSync(SCHEMA_SRC).sort(cmp)) cpSync(path.join(SCHEMA_SRC, f), path.join(OUT, "schema", f));
@@ -272,9 +277,11 @@ function main() {
   writeFileSync(path.join(OUT, "registry.json"), json({
     $schema: `${SCHEMA_BASE}/registry.json`, contractVersion: "2.0.0", version: VERSION, sourceCommit: commit, lastUpdated: commitDate,
     runtimes: [...RUNTIMES], layout: "<runtime>/index.json + <runtime>/{components/ui,components,blocks,utils,lib}/<name>.json; use r/<runtime> as registryUrl",
+    variants: { path: variants.path, sha256: variants.sha256, digest: variants.digest, version: variants.version },
     items: list,
   }));
   for (const rt of RUNTIMES) console.log(rt.padEnd(7), JSON.stringify(manifest.runtimes[rt].counts), "total", manifest.runtimes[rt].items);
+  console.log("variants", variants.path, variants.items, "items", variants.variants, "variants", "sha256", variants.sha256);
   console.log("source", commit.slice(0, 12), dirty ? "(dirty)" : "", "->", path.relative(process.cwd(), OUT) || ".");
 }
 main();

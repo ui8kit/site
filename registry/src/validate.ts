@@ -2,6 +2,7 @@
 import { createHash } from "node:crypto";
 import { existsSync, readFileSync, readdirSync, statSync } from "node:fs";
 import path from "node:path";
+import { checkVariants } from "./variants";
 
 const R = path.resolve(process.argv[2] ?? path.join(import.meta.dir, "../../r"));
 const read = (p: string) => JSON.parse(readFileSync(p, "utf8"));
@@ -41,6 +42,23 @@ for (const rt of site.runtimes as string[]) {
   // r/<rt>/wpfasty/ is the separate WP FastY builder registry (scripts/check-wpfasty-registry.ts), not shadcn items
   (function walk(d: string) { for (const e of readdirSync(d)) { const p = path.join(d, e); if (p === path.join(R, rt, "wpfasty")) continue; statSync(p).isDirectory() ? walk(p) : e !== "index.json" && files++; } })(path.join(R, rt));
   if (files !== manifest.runtimes[rt].items) err(`${rt}: ${files} item files on disk, ${manifest.runtimes[rt].items} in manifest`);
+}
+// r/variants/v0.json (Stock variant presets): sha256 = manifest = registry.json = sidecar, own digest, names in every runtime
+if (!manifest.variants) err("manifest: no variants entry");
+else {
+  const p = path.join(R, manifest.variants.path);
+  if (!existsSync(p)) err(`variants: missing ${manifest.variants.path}`);
+  else {
+    const raw = readFileSync(p);
+    const everywhere = new Set<string>((site.items as any[]).filter((i) => (site.runtimes as string[]).every((rt) => i.runtimes?.[rt])).map((i) => i.name));
+    const { entry, problems } = checkVariants(raw, everywhere);
+    problems.forEach(err);
+    if (entry.sha256 !== manifest.variants.sha256 || entry.bytes !== manifest.variants.bytes) err("variants: sha256/bytes differ from manifest");
+    if (site.variants?.sha256 !== entry.sha256 || site.variants?.path !== manifest.variants.path) err("variants: registry.json entry differs");
+    const side = path.join(R, manifest.variants.path + ".sha256");
+    if (!existsSync(side) || readFileSync(side, "utf8").split(/\s+/)[0] !== entry.sha256) err("variants: .sha256 sidecar differs");
+    console.log(`variants: ${entry.items} items, ${entry.variants} variants ok`);
+  }
 }
 if (errors.length) { console.error(errors.slice(0, 30).join("\n")); console.error(`${errors.length} error(s)`); process.exit(1); }
 console.log("registry valid");
