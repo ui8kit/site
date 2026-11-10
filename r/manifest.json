@@ -1,5 +1,13 @@
 {
   "contractVersion": "2.0.0",
+  "props": {
+    "bytes": 611394,
+    "digest": "sha256:395a62bcfb3439038865637e0d278a8a41413dd1cdd22e00f0feac85fc5748da",
+    "items": 117,
+    "path": "props/v0.json",
+    "sha256": "2f5e08736cee3dd30abfac5fb20b3d974934383ecc5c95b5d8c13b5288b266a5",
+    "version": "0"
+  },
   "runtimes": {
     "jinja2": {
       "counts": {
@@ -27468,8 +27476,8 @@
     }
   },
   "source": {
-    "commit": "9b6748507699a0aef22b8792966db377b1606583",
-    "commitDate": "2026-11-09T23:42:50+03:00",
+    "commit": "3a6d923a3bdf75bba8951a3dfda7f3e97a69ecc5",
+    "commitDate": "2026-11-10T00:07:21+03:00",
     "dirty": false,
     "repo": "private source monorepo"
   },

@@ -3,6 +3,7 @@ import { createHash } from "node:crypto";
 import { existsSync, readFileSync, readdirSync, statSync } from "node:fs";
 import path from "node:path";
 import { checkVariants } from "./variants";
+import { checkProps, variantOrganisms } from "./props";
 
 const R = path.resolve(process.argv[2] ?? path.join(import.meta.dir, "../../r"));
 const read = (p: string) => JSON.parse(readFileSync(p, "utf8"));
@@ -58,6 +59,24 @@ else {
     const side = path.join(R, manifest.variants.path + ".sha256");
     if (!existsSync(side) || readFileSync(side, "utf8").split(/\s+/)[0] !== entry.sha256) err("variants: .sha256 sidecar differs");
     console.log(`variants: ${entry.items} items, ${entry.variants} variants ok`);
+  }
+}
+// r/props/v0.json (props schemas): sha256 = manifest = registry.json = sidecar, own digest, names in every runtime, covers variants
+if (!manifest.props) err("manifest: no props entry");
+else {
+  const p = path.join(R, manifest.props.path);
+  if (!existsSync(p)) err(`props: missing ${manifest.props.path}`);
+  else {
+    const raw = readFileSync(p);
+    const everywhere = new Set<string>((site.items as any[]).filter((i) => (site.runtimes as string[]).every((rt) => i.runtimes?.[rt])).map((i) => i.name));
+    const vp = manifest.variants && path.join(R, manifest.variants.path);
+    const { entry, problems } = checkProps(raw, everywhere, vp && existsSync(vp) ? variantOrganisms(readFileSync(vp)) : undefined);
+    problems.forEach(err);
+    if (entry.sha256 !== manifest.props.sha256 || entry.bytes !== manifest.props.bytes) err("props: sha256/bytes differ from manifest");
+    if (site.props?.sha256 !== entry.sha256 || site.props?.path !== manifest.props.path) err("props: registry.json entry differs");
+    const side = path.join(R, manifest.props.path + ".sha256");
+    if (!existsSync(side) || readFileSync(side, "utf8").split(/\s+/)[0] !== entry.sha256) err("props: .sha256 sidecar differs");
+    console.log(`props: ${entry.items} schemas ok`);
   }
 }
 if (errors.length) { console.error(errors.slice(0, 30).join("\n")); console.error(`${errors.length} error(s)`); process.exit(1); }

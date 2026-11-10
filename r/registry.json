@@ -47126,8 +47126,14 @@
       "type": "registry:block"
     }
   ],
-  "lastUpdated": "2026-11-09T23:42:50+03:00",
+  "lastUpdated": "2026-11-10T00:07:21+03:00",
   "layout": "<runtime>/index.json + <runtime>/{components/ui,components,blocks,utils,lib}/<name>.json; use r/<runtime> as registryUrl",
+  "props": {
+    "digest": "sha256:395a62bcfb3439038865637e0d278a8a41413dd1cdd22e00f0feac85fc5748da",
+    "path": "props/v0.json",
+    "sha256": "2f5e08736cee3dd30abfac5fb20b3d974934383ecc5c95b5d8c13b5288b266a5",
+    "version": "0"
+  },
   "runtimes": [
     "svelte",
     "react",
@@ -47138,7 +47144,7 @@
     "latte",
     "jinja2"
   ],
-  "sourceCommit": "9b6748507699a0aef22b8792966db377b1606583",
+  "sourceCommit": "3a6d923a3bdf75bba8951a3dfda7f3e97a69ecc5",
   "variants": {
     "digest": "sha256:39b97e88abe27f2946e5e3d9d0bd0192abb176986303c1f873aec4b914024f33",
     "path": "variants/v0.json",

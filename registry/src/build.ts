@@ -14,6 +14,7 @@ import { buildTemplateRuntime, TEMPLATE_RUNTIMES, type Kind } from "./template-r
 import { rewriteKitRefs } from "./kit-paths";
 import { cleanGenerated } from "./clean-out";
 import { publishVariants } from "./variants";
+import { publishProps, variantOrganisms } from "./props";
 
 export const TS_RUNTIMES = ["svelte", "react", "vue", "solid"] as const;
 export const RUNTIMES = [...TS_RUNTIMES, ...TEMPLATE_RUNTIMES] as const;
@@ -270,6 +271,9 @@ function main() {
   const everywhere = new Set([...ref.keys()].filter((n) => RUNTIMES.every((rt) => built.get(rt)!.some((i) => i.name === n))));
   const variants = publishVariants(SRC, OUT, everywhere);
   manifest.variants = variants;
+  // props schemas: r/props/v0.json (+ .sha256), same names rule, and every variants item has a schema of the same organism
+  const props = publishProps(SRC, OUT, everywhere, variantOrganisms(readFileSync(path.join(OUT, variants.path))));
+  manifest.props = props;
   writeFileSync(path.join(OUT, "manifest.json"), json(manifest));
   mkdirSync(path.join(OUT, "schema"), { recursive: true });
   for (const f of readdirSync(SCHEMA_SRC).sort(cmp)) cpSync(path.join(SCHEMA_SRC, f), path.join(OUT, "schema", f));
@@ -278,10 +282,12 @@ function main() {
     $schema: `${SCHEMA_BASE}/registry.json`, contractVersion: "2.0.0", version: VERSION, sourceCommit: commit, lastUpdated: commitDate,
     runtimes: [...RUNTIMES], layout: "<runtime>/index.json + <runtime>/{components/ui,components,blocks,utils,lib}/<name>.json; use r/<runtime> as registryUrl",
     variants: { path: variants.path, sha256: variants.sha256, digest: variants.digest, version: variants.version },
+    props: { path: props.path, sha256: props.sha256, digest: props.digest, version: props.version },
     items: list,
   }));
   for (const rt of RUNTIMES) console.log(rt.padEnd(7), JSON.stringify(manifest.runtimes[rt].counts), "total", manifest.runtimes[rt].items);
   console.log("variants", variants.path, variants.items, "items", variants.variants, "variants", "sha256", variants.sha256);
+  console.log("props", props.path, props.items, "items", "sha256", props.sha256);
   console.log("source", commit.slice(0, 12), dirty ? "(dirty)" : "", "->", path.relative(process.cwd(), OUT) || ".");
 }
 main();
