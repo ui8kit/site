@@ -1,0 +1,40 @@
+{
+  "$schema": "https://registry.buildy.tw/schema/registry-item.json",
+  "dependencies": [],
+  "description": "Skin Bubblegum: brand tokens (colours, radius, shadows, fonts) for every UI8Kit component, light and dark; on with data-skin=\"bubblegum\".",
+  "devDependencies": [],
+  "digest": "0.1.0",
+  "files": [
+    {
+      "content": "/* Skin \"bubblegum\" (Bubblegum): the tweakcn preset \"bubblegum\" (Apache-2.0, see NOTICE.md), written by packages/skins/tools/tweakcn-skins.ts.\n   On when data-skin=\"bubblegum\" is on <html> (the page) or on any element (a tile of /skins/). Values as tweakcn exports them;\n   the spacing scale stays the kit's 0.25rem. Fonts: Poppins (Google Fonts, loaded when the skin is on). */\n[data-skin=\"bubblegum\"] {\n  --background: hsl(330 47.1% 93.3%);\n  --foreground: hsl(0 0% 36%);\n  --card: hsl(42 93% 89%);\n  --card-foreground: hsl(0 0% 36%);\n  --popover: hsl(0 0% 100%);\n  --popover-foreground: hsl(0 0% 36%);\n  --primary: hsl(325.3 52% 51.8%);\n  --primary-foreground: hsl(0 0% 100%);\n  --secondary: hsl(182 44% 68%);\n  --secondary-foreground: hsl(0 0% 20%);\n  --muted: hsl(191 59% 81%);\n  --muted-foreground: hsl(0 0% 36.5%);\n  --accent: hsl(42 91% 82%);\n  --accent-foreground: hsl(0 0% 20%);\n  --destructive: hsl(357.8 56.8% 53.7%);\n  --destructive-foreground: hsl(0 0% 100%);\n  --border: hsl(325.6 57.8% 56.3%);\n  --input: hsl(0 0% 89%);\n  --ring: hsl(330 70% 67%);\n  --chart-1: hsl(330 70% 67%);\n  --chart-2: hsl(190 62% 70%);\n  --chart-3: hsl(42 91% 82%);\n  --chart-4: hsl(330 78% 79%);\n  --chart-5: hsl(330.6 64.1% 56.3%);\n  --sidebar: hsl(326 70% 91%);\n  --sidebar-foreground: hsl(0 0% 20%);\n  --sidebar-primary: hsl(330.4 81.2% 60.4%);\n  --sidebar-primary-foreground: hsl(0 0% 100%);\n  --sidebar-accent: hsl(327.4 87.1% 81.8%);\n  --sidebar-accent-foreground: hsl(0 0% 20%);\n  --sidebar-border: hsl(268.7 100% 95.5%);\n  --sidebar-ring: hsl(330.4 81.2% 60.4%);\n  --font-sans: Poppins, sans-serif;\n  --font-serif: Lora, serif;\n  --font-mono: Fira Code, monospace;\n  --radius: 0.4rem;\n  --shadow-2xs: 3px 3px 0px 0px hsl(325.7800 58.1800% 56.8600% / 0.50);\n  --shadow-xs: 3px 3px 0px 0px hsl(325.7800 58.1800% 56.8600% / 0.50);\n  --shadow-sm: 3px 3px 0px 0px hsl(325.7800 58.1800% 56.8600% / 1.00), 3px 1px 2px -1px hsl(325.7800 58.1800% 56.8600% / 1.00);\n  --shadow: 3px 3px 0px 0px hsl(325.7800 58.1800% 56.8600% / 1.00), 3px 1px 2px -1px hsl(325.7800 58.1800% 56.8600% / 1.00);\n  --shadow-md: 3px 3px 0px 0px hsl(325.7800 58.1800% 56.8600% / 1.00), 3px 2px 4px -1px hsl(325.7800 58.1800% 56.8600% / 1.00);\n  --shadow-lg: 3px 3px 0px 0px hsl(325.7800 58.1800% 56.8600% / 1.00), 3px 4px 6px -1px hsl(325.7800 58.1800% 56.8600% / 1.00);\n  --shadow-xl: 3px 3px 0px 0px hsl(325.7800 58.1800% 56.8600% / 1.00), 3px 8px 10px -1px hsl(325.7800 58.1800% 56.8600% / 1.00);\n  --shadow-2xl: 3px 3px 0px 0px hsl(325.7800 58.1800% 56.8600% / 2.50);\n  --destructive-hover: hsl(357.8 56.8% 47.7%);\n}\n\n:is(.dark, [data-theme=\"dark\"]) [data-skin=\"bubblegum\"],\n[data-skin=\"bubblegum\"]:is(.dark, [data-theme=\"dark\"]) {\n  --background: hsl(201.4 43.8% 12.5%);\n  --foreground: hsl(334 40% 92%);\n  --card: hsl(201.4 33.3% 16.5%);\n  --card-foreground: hsl(334 40% 92%);\n  --popover: hsl(201.4 33.3% 16.5%);\n  --popover-foreground: hsl(334 40% 92%);\n  --primary: hsl(42 91% 82%);\n  --primary-foreground: hsl(201.4 43.8% 12.5%);\n  --secondary: hsl(346.4 55% 76.5%);\n  --secondary-foreground: hsl(201.4 43.8% 12.5%);\n  --muted: hsl(214.3 8.9% 15.5%);\n  --muted-foreground: hsl(346.4 55% 76.5%);\n  --accent: hsl(337.2 30.7% 45.3%);\n  --accent-foreground: hsl(334 40% 92%);\n  --destructive: hsl(328.4 70.4% 62.9%);\n  --destructive-foreground: hsl(201.4 43.8% 12.5%);\n  --border: hsl(206 28% 27%);\n  --input: hsl(201 31% 18%);\n  --ring: hsl(184 41% 51%);\n  --chart-1: hsl(184 41% 51%);\n  --chart-2: hsl(346.4 55% 76.5%);\n  --chart-3: hsl(338 40% 63%);\n  --chart-4: hsl(191.3 64.9% 25.7%);\n  --chart-5: hsl(214.3 8.9% 15.5%);\n  --sidebar: hsl(203 43% 11%);\n  --sidebar-foreground: hsl(220 14% 96%);\n  --sidebar-primary: hsl(330.4 81.2% 60.4%);\n  --sidebar-primary-foreground: hsl(0 0% 100%);\n  --sidebar-accent: hsl(327.4 87.1% 81.8%);\n  --sidebar-accent-foreground: hsl(215 28% 17%);\n  --sidebar-border: hsl(217 19% 27%);\n  --sidebar-ring: hsl(330.4 81.2% 60.4%);\n  --shadow-2xs: 3px 3px 0px 0px hsl(206.1538 28.0576% 27.2549% / 0.50);\n  --shadow-xs: 3px 3px 0px 0px hsl(206.1538 28.0576% 27.2549% / 0.50);\n  --shadow-sm: 3px 3px 0px 0px hsl(206.1538 28.0576% 27.2549% / 1.00), 3px 1px 2px -1px hsl(206.1538 28.0576% 27.2549% / 1.00);\n  --shadow: 3px 3px 0px 0px hsl(206.1538 28.0576% 27.2549% / 1.00), 3px 1px 2px -1px hsl(206.1538 28.0576% 27.2549% / 1.00);\n  --shadow-md: 3px 3px 0px 0px hsl(206.1538 28.0576% 27.2549% / 1.00), 3px 2px 4px -1px hsl(206.1538 28.0576% 27.2549% / 1.00);\n  --shadow-lg: 3px 3px 0px 0px hsl(206.1538 28.0576% 27.2549% / 1.00), 3px 4px 6px -1px hsl(206.1538 28.0576% 27.2549% / 1.00);\n  --shadow-xl: 3px 3px 0px 0px hsl(206.1538 28.0576% 27.2549% / 1.00), 3px 8px 10px -1px hsl(206.1538 28.0576% 27.2549% / 1.00);\n  --shadow-2xl: 3px 3px 0px 0px hsl(206.1538 28.0576% 27.2549% / 2.50);\n  --destructive-hover: hsl(328.4 70.4% 68.9%);\n}\n\n[data-skin=\"bubblegum\"] .shadow-xs { --tw-shadow: var(--shadow-xs); }\n[data-skin=\"bubblegum\"] .shadow-sm { --tw-shadow: var(--shadow-sm); }\n[data-skin=\"bubblegum\"] .shadow { --tw-shadow: var(--shadow); }\n[data-skin=\"bubblegum\"] .shadow-md { --tw-shadow: var(--shadow-md); }\n[data-skin=\"bubblegum\"] .shadow-lg { --tw-shadow: var(--shadow-lg); }\n[data-skin=\"bubblegum\"] .shadow-xl { --tw-shadow: var(--shadow-xl); }\n",
+      "path": "styles/skins/bubblegum.css",
+      "target": "styles/skins/bubblegum.css"
+    }
+  ],
+  "meta": {
+    "category": "themes",
+    "kind": "theme",
+    "skin": {
+      "fonts": [
+        "Poppins:wght@400;500;600;700"
+      ],
+      "id": "bubblegum",
+      "license": "Apache-2.0",
+      "name": "Bubblegum",
+      "sha256": "8d29f9e3a45a11bfe4c2313ac981a685809f7b55350048883a1871c49e01824a",
+      "source": "tweakcn a3b47b3",
+      "version": "1.0.0"
+    },
+    "tags": [
+      "svelte",
+      "theme"
+    ]
+  },
+  "name": "theme-bubblegum",
+  "registryDependencies": [
+    "theme-base"
+  ],
+  "runtime": "svelte",
+  "title": "Bubblegum",
+  "type": "registry:theme"
+}

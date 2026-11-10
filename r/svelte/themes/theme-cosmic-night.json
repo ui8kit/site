@@ -1,0 +1,40 @@
+{
+  "$schema": "https://registry.buildy.tw/schema/registry-item.json",
+  "dependencies": [],
+  "description": "Skin Cosmic Night: brand tokens (colours, radius, shadows, fonts) for every UI8Kit component, light and dark; on with data-skin=\"cosmic-night\".",
+  "devDependencies": [],
+  "digest": "0.1.0",
+  "files": [
+    {
+      "content": "/* Skin \"cosmic-night\" (Cosmic Night): the tweakcn preset \"cosmic-night\" (Apache-2.0, see NOTICE.md), written by packages/skins/tools/tweakcn-skins.ts.\n   On when data-skin=\"cosmic-night\" is on <html> (the page) or on any element (a tile of /skins/). Values as tweakcn exports them;\n   the spacing scale stays the kit's 0.25rem. Fonts: Inter (Google Fonts, loaded when the skin is on). */\n[data-skin=\"cosmic-night\"] {\n  --background: hsl(240 100% 98%);\n  --foreground: hsl(240 27.6% 22.7%);\n  --card: hsl(0 0% 100%);\n  --card-foreground: hsl(240 27.6% 22.7%);\n  --popover: hsl(0 0% 100%);\n  --popover-foreground: hsl(240 27.6% 22.7%);\n  --primary: hsl(251.9 55.8% 57.5%);\n  --primary-foreground: hsl(0 0% 100%);\n  --secondary: hsl(249.4 100% 93.7%);\n  --secondary-foreground: hsl(249 33% 38%);\n  --muted: hsl(240 50% 96%);\n  --muted-foreground: hsl(240 12.4% 47.5%);\n  --accent: hsl(218.5 100% 92.4%);\n  --accent-foreground: hsl(240 27.6% 22.7%);\n  --destructive: hsl(347.1 70.5% 52.2%);\n  --destructive-foreground: hsl(0 0% 100%);\n  --border: hsl(240 35% 91%);\n  --input: hsl(240 35% 91%);\n  --ring: hsl(251.9 55.8% 57.5%);\n  --chart-1: hsl(251.9 55.8% 57.5%);\n  --chart-2: hsl(250 95% 77%);\n  --chart-3: hsl(239 82% 65%);\n  --chart-4: hsl(243 93% 72%);\n  --chart-5: hsl(244 47% 48%);\n  --sidebar: hsl(240 50% 96%);\n  --sidebar-foreground: hsl(240 27.6% 22.7%);\n  --sidebar-primary: hsl(251.9 55.8% 57.5%);\n  --sidebar-primary-foreground: hsl(0 0% 100%);\n  --sidebar-accent: hsl(218.5 100% 92.4%);\n  --sidebar-accent-foreground: hsl(240 27.6% 22.7%);\n  --sidebar-border: hsl(240 35% 91%);\n  --sidebar-ring: hsl(251.9 55.8% 57.5%);\n  --font-sans: Inter, sans-serif;\n  --font-serif: Georgia, serif;\n  --font-mono: JetBrains Mono, monospace;\n  --radius: 0.5rem;\n  --shadow-2xs: 0px 4px 10px 0px hsl(240 30% 25% / 0.06);\n  --shadow-xs: 0px 4px 10px 0px hsl(240 30% 25% / 0.06);\n  --shadow-sm: 0px 4px 10px 0px hsl(240 30% 25% / 0.12), 0px 1px 2px -1px hsl(240 30% 25% / 0.12);\n  --shadow: 0px 4px 10px 0px hsl(240 30% 25% / 0.12), 0px 1px 2px -1px hsl(240 30% 25% / 0.12);\n  --shadow-md: 0px 4px 10px 0px hsl(240 30% 25% / 0.12), 0px 2px 4px -1px hsl(240 30% 25% / 0.12);\n  --shadow-lg: 0px 4px 10px 0px hsl(240 30% 25% / 0.12), 0px 4px 6px -1px hsl(240 30% 25% / 0.12);\n  --shadow-xl: 0px 4px 10px 0px hsl(240 30% 25% / 0.12), 0px 8px 10px -1px hsl(240 30% 25% / 0.12);\n  --shadow-2xl: 0px 4px 10px 0px hsl(240 30% 25% / 0.30);\n  --destructive-hover: hsl(347.1 70.5% 46.2%);\n}\n\n:is(.dark, [data-theme=\"dark\"]) [data-skin=\"cosmic-night\"],\n[data-skin=\"cosmic-night\"]:is(.dark, [data-theme=\"dark\"]) {\n  --background: hsl(240 27% 8%);\n  --foreground: hsl(240 48.7% 92.4%);\n  --card: hsl(240 28% 14%);\n  --card-foreground: hsl(240 48.7% 92.4%);\n  --popover: hsl(240 28% 14%);\n  --popover-foreground: hsl(240 48.7% 92.4%);\n  --primary: hsl(251 100% 78%);\n  --primary-foreground: hsl(240 27% 8%);\n  --secondary: hsl(243 33% 25%);\n  --secondary-foreground: hsl(242 100% 88%);\n  --muted: hsl(240 33% 20%);\n  --muted-foreground: hsl(240 20% 69%);\n  --accent: hsl(240 33.3% 28.2%);\n  --accent-foreground: hsl(240 48.7% 92.4%);\n  --destructive: hsl(347.1 70.5% 52.2%);\n  --destructive-foreground: hsl(0 0% 100%);\n  --border: hsl(240 26.2% 25.5%);\n  --input: hsl(240 26.2% 25.5%);\n  --ring: hsl(251 100% 78%);\n  --chart-1: hsl(251 100% 78%);\n  --chart-2: hsl(230.5 44.1% 63.5%);\n  --chart-3: hsl(207 89% 68%);\n  --chart-4: hsl(174 42% 51%);\n  --chart-5: hsl(325.5 100% 73.7%);\n  --sidebar: hsl(240 28% 14%);\n  --sidebar-foreground: hsl(240 48.7% 92.4%);\n  --sidebar-primary: hsl(251 100% 78%);\n  --sidebar-primary-foreground: hsl(240 27% 8%);\n  --sidebar-accent: hsl(240 33.3% 28.2%);\n  --sidebar-accent-foreground: hsl(240 48.7% 92.4%);\n  --sidebar-border: hsl(240 26.2% 25.5%);\n  --sidebar-ring: hsl(251 100% 78%);\n  --shadow-2xs: 0px 4px 10px 0px hsl(240 30% 25% / 0.06);\n  --shadow-xs: 0px 4px 10px 0px hsl(240 30% 25% / 0.06);\n  --shadow-sm: 0px 4px 10px 0px hsl(240 30% 25% / 0.12), 0px 1px 2px -1px hsl(240 30% 25% / 0.12);\n  --shadow: 0px 4px 10px 0px hsl(240 30% 25% / 0.12), 0px 1px 2px -1px hsl(240 30% 25% / 0.12);\n  --shadow-md: 0px 4px 10px 0px hsl(240 30% 25% / 0.12), 0px 2px 4px -1px hsl(240 30% 25% / 0.12);\n  --shadow-lg: 0px 4px 10px 0px hsl(240 30% 25% / 0.12), 0px 4px 6px -1px hsl(240 30% 25% / 0.12);\n  --shadow-xl: 0px 4px 10px 0px hsl(240 30% 25% / 0.12), 0px 8px 10px -1px hsl(240 30% 25% / 0.12);\n  --shadow-2xl: 0px 4px 10px 0px hsl(240 30% 25% / 0.30);\n  --destructive-hover: hsl(347.1 70.5% 46.2%);\n}\n\n[data-skin=\"cosmic-night\"] .shadow-xs { --tw-shadow: var(--shadow-xs); }\n[data-skin=\"cosmic-night\"] .shadow-sm { --tw-shadow: var(--shadow-sm); }\n[data-skin=\"cosmic-night\"] .shadow { --tw-shadow: var(--shadow); }\n[data-skin=\"cosmic-night\"] .shadow-md { --tw-shadow: var(--shadow-md); }\n[data-skin=\"cosmic-night\"] .shadow-lg { --tw-shadow: var(--shadow-lg); }\n[data-skin=\"cosmic-night\"] .shadow-xl { --tw-shadow: var(--shadow-xl); }\n",
+      "path": "styles/skins/cosmic-night.css",
+      "target": "styles/skins/cosmic-night.css"
+    }
+  ],
+  "meta": {
+    "category": "themes",
+    "kind": "theme",
+    "skin": {
+      "fonts": [
+        "Inter:wght@400;500;600;700"
+      ],
+      "id": "cosmic-night",
+      "license": "Apache-2.0",
+      "name": "Cosmic Night",
+      "sha256": "e04a009ce708db9d0d4b0906a32a7b1a47f2d5107146e9e46cc1d1537efd479b",
+      "source": "tweakcn a3b47b3",
+      "version": "1.0.0"
+    },
+    "tags": [
+      "svelte",
+      "theme"
+    ]
+  },
+  "name": "theme-cosmic-night",
+  "registryDependencies": [
+    "theme-base"
+  ],
+  "runtime": "svelte",
+  "title": "Cosmic Night",
+  "type": "registry:theme"
+}

@@ -267,6 +267,7 @@
   <url><loc>https://ui.buildy.tw/docs/categories/blocks-support/</loc></url>
   <url><loc>https://ui.buildy.tw/docs/categories/components/</loc></url>
   <url><loc>https://ui.buildy.tw/docs/categories/primitives/</loc></url>
+  <url><loc>https://ui.buildy.tw/docs/categories/themes/</loc></url>
   <url><loc>https://ui.buildy.tw/docs/cli/</loc></url>
   <url><loc>https://ui.buildy.tw/docs/getting-started/</loc></url>
   <url><loc>https://ui.buildy.tw/docs/grid-8px/</loc></url>
@@ -436,4 +437,21 @@
   <url><loc>https://ui.buildy.tw/templates/support-center/home/</loc></url>
   <url><loc>https://ui.buildy.tw/templates/support-center/missing/</loc></url>
   <url><loc>https://ui.buildy.tw/templates/support-center/moved/</loc></url>
+  <url><loc>https://ui.buildy.tw/themes/theme-amber-minimal/</loc></url>
+  <url><loc>https://ui.buildy.tw/themes/theme-base/</loc></url>
+  <url><loc>https://ui.buildy.tw/themes/theme-bubblegum/</loc></url>
+  <url><loc>https://ui.buildy.tw/themes/theme-claude/</loc></url>
+  <url><loc>https://ui.buildy.tw/themes/theme-cosmic-night/</loc></url>
+  <url><loc>https://ui.buildy.tw/themes/theme-doom-64/</loc></url>
+  <url><loc>https://ui.buildy.tw/themes/theme-kodama-grove/</loc></url>
+  <url><loc>https://ui.buildy.tw/themes/theme-mocha-mousse/</loc></url>
+  <url><loc>https://ui.buildy.tw/themes/theme-modern-minimal/</loc></url>
+  <url><loc>https://ui.buildy.tw/themes/theme-neo-brutalism/</loc></url>
+  <url><loc>https://ui.buildy.tw/themes/theme-notebook/</loc></url>
+  <url><loc>https://ui.buildy.tw/themes/theme-perpetuity/</loc></url>
+  <url><loc>https://ui.buildy.tw/themes/theme-rose/</loc></url>
+  <url><loc>https://ui.buildy.tw/themes/theme-sky/</loc></url>
+  <url><loc>https://ui.buildy.tw/themes/theme-supabase/</loc></url>
+  <url><loc>https://ui.buildy.tw/themes/theme-t3-chat/</loc></url>
+  <url><loc>https://ui.buildy.tw/themes/theme-violet-bloom/</loc></url>
 </urlset>

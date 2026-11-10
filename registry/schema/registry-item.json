@@ -27,7 +27,8 @@
         "registry:layout",
         "registry:variants",
         "registry:widget",
-        "registry:rules"
+        "registry:rules",
+        "registry:theme"
       ]
     },
     "title": {

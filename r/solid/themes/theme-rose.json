@@ -1,0 +1,41 @@
+{
+  "$schema": "https://registry.buildy.tw/schema/registry-item.json",
+  "dependencies": [],
+  "description": "Skin Rose: brand tokens (colours, radius, shadows, fonts) for every UI8Kit component, light and dark; on with data-skin=\"rose\".",
+  "devDependencies": [],
+  "digest": "0.1.0",
+  "files": [
+    {
+      "content": "/* Skin \"rose\": RoseUI System (2024 experiment) remapped to shadcn HSL; CodeGen-X wins conflicts (destructive, radius 0.625rem). darkMode class (.dark). Light primary Tailwind rose-600 #e11d48. Typography: H1–H3 / Title as=h1|h2|h3 use font-serif = Pacifico (Lat+Cyr); body and UI use font-sans = Nunito.\n   On when data-skin=\"rose\" is on <html> (the page) or on any element (a tile of /skins/). */\n[data-skin=\"rose\"] {\n  --background: hsl(0 0% 100%);\n  --foreground: hsl(240.0 5.9% 10.0%);\n  --card: hsl(0 0% 100%);\n  --card-foreground: hsl(240.0 5.9% 10.0%);\n  --popover: hsl(0 0% 100%);\n  --popover-foreground: hsl(240.0 5.9% 10.0%);\n  /* Tailwind rose-600 #e11d48 */\n  --primary: hsl(346.8 77.2% 49.8%);\n  --primary-foreground: hsl(0.0 0.0% 98.0%);\n  --secondary: hsl(240.0 4.8% 95.9%);\n  --secondary-foreground: hsl(240.0 5.9% 10.0%);\n  --muted: hsl(240.0 4.8% 95.9%);\n  --muted-foreground: hsl(240.0 3.8% 46.1%);\n  --accent: hsl(355.6 100.0% 94.7%);\n  --accent-foreground: hsl(341.5 75.5% 30.4%);\n  --destructive: hsl(0.6 88.4% 48%);\n  --destructive-foreground: hsl(0 0% 100%);\n  --border: hsl(240.0 5.9% 90.0%);\n  --input: hsl(240.0 4.9% 83.9%);\n  --ring: hsl(346.8 77.2% 49.8%);\n  --chart-1: hsl(346.8 77.2% 49.8%);\n  --chart-2: hsl(351.3 94.5% 71.4%);\n  --chart-3: hsl(349.7 89.2% 60.2%);\n  --chart-4: hsl(240.0 3.8% 46.1%);\n  --chart-5: hsl(240.0 5.3% 26.1%);\n  --sidebar: hsl(0.0 0.0% 98.0%);\n  --sidebar-foreground: hsl(240.0 5.9% 10.0%);\n  --sidebar-primary: hsl(346.8 77.2% 49.8%);\n  --sidebar-primary-foreground: hsl(0.0 0.0% 98.0%);\n  --sidebar-accent: hsl(355.6 100.0% 94.7%);\n  --sidebar-accent-foreground: hsl(341.5 75.5% 30.4%);\n  --sidebar-border: hsl(240.0 5.9% 90.0%);\n  --sidebar-ring: hsl(346.8 77.2% 49.8%);\n  --font-sans: Nunito, ui-sans-serif, system-ui, sans-serif;\n  /* H1–H3 / Title as=h1|h2|h3 → font-serif Pacifico */\n  --font-serif: Pacifico, cursive;\n  --font-mono: \"JetBrains Mono\", ui-monospace, monospace;\n  --radius: 0.625rem;\n  --shadow-2xs: 0px 1px 2px 0px hsl(0 0% 0% / 0.05);\n  --shadow-xs: 0px 1px 2px 0px hsl(0 0% 0% / 0.05);\n  --shadow-sm: 0px 1px 3px 0px hsl(0 0% 0% / 0.10), 0px 1px 2px -1px hsl(0 0% 0% / 0.10);\n  --shadow: 0px 1px 3px 0px hsl(0 0% 0% / 0.10), 0px 1px 2px -1px hsl(0 0% 0% / 0.10);\n  --shadow-md: 0px 4px 6px -1px hsl(0 0% 0% / 0.10), 0px 2px 4px -1px hsl(0 0% 0% / 0.10);\n  --shadow-lg: 0px 10px 15px -3px hsl(0 0% 0% / 0.10), 0px 4px 6px -2px hsl(0 0% 0% / 0.05);\n  --shadow-xl: 0px 20px 25px -5px hsl(0 0% 0% / 0.10), 0px 8px 10px -5px hsl(0 0% 0% / 0.04);\n  --shadow-2xl: 0px 25px 50px -12px hsl(0 0% 0% / 0.25);\n  --tracking-normal: 0em;\n  --tracking-tighter: calc(var(--tracking-normal) - 0.05em);\n  --tracking-tight: calc(var(--tracking-normal) - 0.025em);\n  --tracking-wide: calc(var(--tracking-normal) + 0.025em);\n  --tracking-wider: calc(var(--tracking-normal) + 0.05em);\n  --tracking-widest: calc(var(--tracking-normal) + 0.1em);\n  --destructive-hover: hsl(0.6 88.4% 42%);\n}\n\n:is(.dark, [data-theme=\"dark\"]) [data-skin=\"rose\"],\n[data-skin=\"rose\"]:is(.dark, [data-theme=\"dark\"]) {\n  /* RoseUI dark:bg-zinc-900 */\n  --background: hsl(240.0 5.9% 10.0%);\n  --foreground: hsl(0.0 0.0% 98.0%);\n  /* RoseUI dark:bg-zinc-800 */\n  --card: hsl(240.0 3.7% 15.9%);\n  --card-foreground: hsl(0.0 0.0% 98.0%);\n  --popover: hsl(240.0 3.7% 15.9%);\n  --popover-foreground: hsl(0.0 0.0% 98.0%);\n  /* RoseUI dark:text-rose-300 on zinc-800/900 */\n  --primary: hsl(352.6 95.7% 81.8%);\n  --primary-foreground: hsl(341.5 75.5% 30.4%);\n  --secondary: hsl(240.0 3.7% 15.9%);\n  --secondary-foreground: hsl(0.0 0.0% 98.0%);\n  --muted: hsl(240.0 3.7% 15.9%);\n  --muted-foreground: hsl(240.0 5.0% 64.9%);\n  --accent: hsl(341.5 75.5% 30.4%);\n  --accent-foreground: hsl(355.6 100.0% 94.7%);\n  --destructive: hsl(356.1 62.4% 52%);\n  --destructive-foreground: hsl(0 0% 100%);\n  --border: hsl(240.0 3.7% 15.9%);\n  --input: hsl(240.0 5.3% 26.1%);\n  --ring: hsl(352.6 95.7% 81.8%);\n  --chart-1: hsl(352.6 95.7% 81.8%);\n  --chart-2: hsl(349.7 89.2% 60.2%);\n  --chart-3: hsl(351.3 94.5% 71.4%);\n  --chart-4: hsl(240.0 5.0% 64.9%);\n  --chart-5: hsl(240.0 5.2% 33.9%);\n  --sidebar: hsl(240.0 3.7% 15.9%);\n  --sidebar-foreground: hsl(0.0 0.0% 98.0%);\n  --sidebar-primary: hsl(352.6 95.7% 81.8%);\n  --sidebar-primary-foreground: hsl(341.5 75.5% 30.4%);\n  --sidebar-accent: hsl(341.5 75.5% 30.4%);\n  --sidebar-accent-foreground: hsl(355.6 100.0% 94.7%);\n  --sidebar-border: hsl(240.0 3.7% 15.9%);\n  --sidebar-ring: hsl(352.6 95.7% 81.8%);\n  --font-sans: Nunito, ui-sans-serif, system-ui, sans-serif;\n  /* H1–H3 / Title as=h1|h2|h3 → font-serif Pacifico */\n  --font-serif: Pacifico, cursive;\n  --font-mono: \"JetBrains Mono\", ui-monospace, monospace;\n  --radius: 0.625rem;\n  --shadow-2xs: 0px 1px 2px 0px hsl(0 0% 0% / 0.05);\n  --shadow-xs: 0px 1px 2px 0px hsl(0 0% 0% / 0.05);\n  --shadow-sm: 0px 1px 3px 0px hsl(0 0% 0% / 0.10), 0px 1px 2px -1px hsl(0 0% 0% / 0.10);\n  --shadow: 0px 1px 3px 0px hsl(0 0% 0% / 0.10), 0px 1px 2px -1px hsl(0 0% 0% / 0.10);\n  --shadow-md: 0px 4px 6px -1px hsl(0 0% 0% / 0.10), 0px 2px 4px -1px hsl(0 0% 0% / 0.10);\n  --shadow-lg: 0px 10px 15px -3px hsl(0 0% 0% / 0.10), 0px 4px 6px -2px hsl(0 0% 0% / 0.05);\n  --shadow-xl: 0px 20px 25px -5px hsl(0 0% 0% / 0.10), 0px 8px 10px -5px hsl(0 0% 0% / 0.04);\n  --shadow-2xl: 0px 25px 50px -12px hsl(0 0% 0% / 0.25);\n  --tracking-normal: 0em;\n  --tracking-tighter: calc(var(--tracking-normal) - 0.05em);\n  --tracking-tight: calc(var(--tracking-normal) - 0.025em);\n  --tracking-wide: calc(var(--tracking-normal) + 0.025em);\n  --tracking-wider: calc(var(--tracking-normal) + 0.05em);\n  --tracking-widest: calc(var(--tracking-normal) + 0.1em);\n  --destructive-hover: hsl(356.1 62.4% 46%);\n}\n\n:root[data-skin=\"rose\"] body { letter-spacing: var(--tracking-normal); }\n[data-skin=\"rose\"] :is(h1, h2, h3) { font-family: var(--font-serif); font-weight: var(--taste-heading-weight, var(--font-weight-semibold, 600)); }\n[data-skin=\"rose\"] .shadow-xs { --tw-shadow: var(--shadow-xs); }\n[data-skin=\"rose\"] .shadow-sm { --tw-shadow: var(--shadow-sm); }\n[data-skin=\"rose\"] .shadow { --tw-shadow: var(--shadow); }\n[data-skin=\"rose\"] .shadow-md { --tw-shadow: var(--shadow-md); }\n[data-skin=\"rose\"] .shadow-lg { --tw-shadow: var(--shadow-lg); }\n[data-skin=\"rose\"] .shadow-xl { --tw-shadow: var(--shadow-xl); }\n",
+      "path": "styles/skins/rose.css",
+      "target": "styles/skins/rose.css"
+    }
+  ],
+  "meta": {
+    "category": "themes",
+    "kind": "theme",
+    "skin": {
+      "fonts": [
+        "Pacifico:wght@400",
+        "Nunito:wght@400;500;600;700"
+      ],
+      "id": "rose",
+      "license": "MIT",
+      "name": "Rose",
+      "sha256": "b00ea4cde5d65d4c8c4b2a475c25a2b4e7498b9369948c860cf5cf8e46de9377",
+      "source": "ui8kit",
+      "version": "0.1.0"
+    },
+    "tags": [
+      "solid",
+      "theme"
+    ]
+  },
+  "name": "theme-rose",
+  "registryDependencies": [
+    "theme-base"
+  ],
+  "runtime": "solid",
+  "title": "Rose",
+  "type": "registry:theme"
+}

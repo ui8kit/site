@@ -6413,6 +6413,7 @@
         "component": 137,
         "lib": 2,
         "primitive": 88,
+        "theme": 17,
         "utils": 1
       },
       "entries": {
@@ -9810,6 +9811,154 @@
           },
           "type": "registry:ui"
         },
+        "theme-amber-minimal": {
+          "files": {
+            "styles/skins/amber-minimal.css": {
+              "bytes": 4770,
+              "sha256": "919e58f761a2ded1493b4e7cd022b64f4b5fac5a6bff214d54e323d8bcc7ed81"
+            }
+          },
+          "type": "registry:theme"
+        },
+        "theme-base": {
+          "files": {
+            "styles/skins/NOTICE.md": {
+              "bytes": 997,
+              "sha256": "5720023570a7ea06f0774ac7bc7f7a2d1953e1f969ce389081071331001e7790"
+            },
+            "styles/skins/base.css": {
+              "bytes": 1352,
+              "sha256": "68d7bc8654adb51f7fcf7b4521931f70ea0c1849ae59a85107d67a387e4ad8ff"
+            }
+          },
+          "type": "registry:theme"
+        },
+        "theme-bubblegum": {
+          "files": {
+            "styles/skins/bubblegum.css": {
+              "bytes": 5253,
+              "sha256": "2aeba87b359994c6db2179ac7b43bb7a4f87a8cb4df461ea707cc18e326babeb"
+            }
+          },
+          "type": "registry:theme"
+        },
+        "theme-claude": {
+          "files": {
+            "styles/skins/claude.css": {
+              "bytes": 4792,
+              "sha256": "0fb7953ccebd9aaefb8444684fcdbf30f0b2f48ddbd7a65859d9b757e3aed704"
+            }
+          },
+          "type": "registry:theme"
+        },
+        "theme-cosmic-night": {
+          "files": {
+            "styles/skins/cosmic-night.css": {
+              "bytes": 4950,
+              "sha256": "97ea856aaa911dc1b559bbd57142a0f0daef2dbe4eef800687c6ccf86bb8edfa"
+            }
+          },
+          "type": "registry:theme"
+        },
+        "theme-doom-64": {
+          "files": {
+            "styles/skins/doom-64.css": {
+              "bytes": 4597,
+              "sha256": "51c5163f703a8f2f63806d348e6878e5e05bdccfc1400159d15971845a1a9ae6"
+            }
+          },
+          "type": "registry:theme"
+        },
+        "theme-kodama-grove": {
+          "files": {
+            "styles/skins/kodama-grove.css": {
+              "bytes": 4769,
+              "sha256": "72b79834bdced99a647e179815b0428929af65eaba0b0e1a6c7f8ac63667bf81"
+            }
+          },
+          "type": "registry:theme"
+        },
+        "theme-mocha-mousse": {
+          "files": {
+            "styles/skins/mocha-mousse.css": {
+              "bytes": 4746,
+              "sha256": "6a108252afc18390bde96c0b4f8423aae601636d775ae76954312da764a8bf3c"
+            }
+          },
+          "type": "registry:theme"
+        },
+        "theme-modern-minimal": {
+          "files": {
+            "styles/skins/modern-minimal.css": {
+              "bytes": 4713,
+              "sha256": "d46b51dd0de2c828e5532180869cf0ebb622f66ae03d6c0aae9b6fbd20a737cb"
+            }
+          },
+          "type": "registry:theme"
+        },
+        "theme-neo-brutalism": {
+          "files": {
+            "styles/skins/neo-brutalism.css": {
+              "bytes": 4618,
+              "sha256": "426861b683e147b20ba4877518d01bed004b297b3d7914bdf1019ee0c57cb0b0"
+            }
+          },
+          "type": "registry:theme"
+        },
+        "theme-notebook": {
+          "files": {
+            "styles/skins/notebook.css": {
+              "bytes": 5070,
+              "sha256": "ac66d55d0b738d762d3d7701be2b6e78bdfd1b3cb41e37475b35aa93fdb2ab75"
+            }
+          },
+          "type": "registry:theme"
+        },
+        "theme-perpetuity": {
+          "files": {
+            "styles/skins/perpetuity.css": {
+              "bytes": 4984,
+              "sha256": "380489be639f828efdbdb14dbbce06db60aa9b29962798379a49fc56e32f5b6d"
+            }
+          },
+          "type": "registry:theme"
+        },
+        "theme-rose": {
+          "files": {
+            "styles/skins/rose.css": {
+              "bytes": 6307,
+              "sha256": "c6e9b53e00749efe301c967758d7351dfd1a408644994a27c94594562ac89575"
+            }
+          },
+          "type": "registry:theme"
+        },
+        "theme-sky": {
+          "files": {
+            "styles/skins/sky.css": {
+              "bytes": 6210,
+              "sha256": "ce88b63f22c59a4ccfbe56039f166a83ede1dbe83ecb256fa4b59cb72e826dc5"
+            }
+          },
+          "type": "registry:theme"
+        },
+        "theme-supabase": {
+          "files": {
+            "styles/skins/supabase.css": {
+              "bytes": 5026,
+              "sha256": "4189bcba7ec3b4a446bad0f9f0442f0b37f548ca1f3c9a3e2e77bd741970f036"
+            }
+          },
+          "type": "registry:theme"
+        },
+        "theme-t3-chat": {
+          "files": {
+            "styles/skins/t3-chat.css": {
+              "bytes": 4915,
+              "sha256": "136bd008fb40c41bb09bd7c514968796c41e91731f61102146a568e891881a8a"
+            }
+          },
+          "type": "registry:theme"
+        },
         "theme-toggle": {
           "files": {
             "compose/theme-toggle.tsx": {
@@ -9818,6 +9967,15 @@
             }
           },
           "type": "registry:ui"
+        },
+        "theme-violet-bloom": {
+          "files": {
+            "styles/skins/violet-bloom.css": {
+              "bytes": 5076,
+              "sha256": "e5e3758f99ba249544312abbcd7d57b0314df35d11c98b8e7bd8d273c2047ea0"
+            }
+          },
+          "type": "registry:theme"
         },
         "timeline": {
           "files": {
@@ -10062,7 +10220,7 @@
           "type": "registry:block"
         }
       },
-      "items": 345
+      "items": 362
     },
     "solid": {
       "counts": {
@@ -10070,6 +10228,7 @@
         "component": 137,
         "lib": 2,
         "primitive": 87,
+        "theme": 17,
         "utils": 1
       },
       "entries": {
@@ -13458,6 +13617,154 @@
           },
           "type": "registry:ui"
         },
+        "theme-amber-minimal": {
+          "files": {
+            "styles/skins/amber-minimal.css": {
+              "bytes": 4770,
+              "sha256": "919e58f761a2ded1493b4e7cd022b64f4b5fac5a6bff214d54e323d8bcc7ed81"
+            }
+          },
+          "type": "registry:theme"
+        },
+        "theme-base": {
+          "files": {
+            "styles/skins/NOTICE.md": {
+              "bytes": 997,
+              "sha256": "5720023570a7ea06f0774ac7bc7f7a2d1953e1f969ce389081071331001e7790"
+            },
+            "styles/skins/base.css": {
+              "bytes": 1352,
+              "sha256": "68d7bc8654adb51f7fcf7b4521931f70ea0c1849ae59a85107d67a387e4ad8ff"
+            }
+          },
+          "type": "registry:theme"
+        },
+        "theme-bubblegum": {
+          "files": {
+            "styles/skins/bubblegum.css": {
+              "bytes": 5253,
+              "sha256": "2aeba87b359994c6db2179ac7b43bb7a4f87a8cb4df461ea707cc18e326babeb"
+            }
+          },
+          "type": "registry:theme"
+        },
+        "theme-claude": {
+          "files": {
+            "styles/skins/claude.css": {
+              "bytes": 4792,
+              "sha256": "0fb7953ccebd9aaefb8444684fcdbf30f0b2f48ddbd7a65859d9b757e3aed704"
+            }
+          },
+          "type": "registry:theme"
+        },
+        "theme-cosmic-night": {
+          "files": {
+            "styles/skins/cosmic-night.css": {
+              "bytes": 4950,
+              "sha256": "97ea856aaa911dc1b559bbd57142a0f0daef2dbe4eef800687c6ccf86bb8edfa"
+            }
+          },
+          "type": "registry:theme"
+        },
+        "theme-doom-64": {
+          "files": {
+            "styles/skins/doom-64.css": {
+              "bytes": 4597,
+              "sha256": "51c5163f703a8f2f63806d348e6878e5e05bdccfc1400159d15971845a1a9ae6"
+            }
+          },
+          "type": "registry:theme"
+        },
+        "theme-kodama-grove": {
+          "files": {
+            "styles/skins/kodama-grove.css": {
+              "bytes": 4769,
+              "sha256": "72b79834bdced99a647e179815b0428929af65eaba0b0e1a6c7f8ac63667bf81"
+            }
+          },
+          "type": "registry:theme"
+        },
+        "theme-mocha-mousse": {
+          "files": {
+            "styles/skins/mocha-mousse.css": {
+              "bytes": 4746,
+              "sha256": "6a108252afc18390bde96c0b4f8423aae601636d775ae76954312da764a8bf3c"
+            }
+          },
+          "type": "registry:theme"
+        },
+        "theme-modern-minimal": {
+          "files": {
+            "styles/skins/modern-minimal.css": {
+              "bytes": 4713,
+              "sha256": "d46b51dd0de2c828e5532180869cf0ebb622f66ae03d6c0aae9b6fbd20a737cb"
+            }
+          },
+          "type": "registry:theme"
+        },
+        "theme-neo-brutalism": {
+          "files": {
+            "styles/skins/neo-brutalism.css": {
+              "bytes": 4618,
+              "sha256": "426861b683e147b20ba4877518d01bed004b297b3d7914bdf1019ee0c57cb0b0"
+            }
+          },
+          "type": "registry:theme"
+        },
+        "theme-notebook": {
+          "files": {
+            "styles/skins/notebook.css": {
+              "bytes": 5070,
+              "sha256": "ac66d55d0b738d762d3d7701be2b6e78bdfd1b3cb41e37475b35aa93fdb2ab75"
+            }
+          },
+          "type": "registry:theme"
+        },
+        "theme-perpetuity": {
+          "files": {
+            "styles/skins/perpetuity.css": {
+              "bytes": 4984,
+              "sha256": "380489be639f828efdbdb14dbbce06db60aa9b29962798379a49fc56e32f5b6d"
+            }
+          },
+          "type": "registry:theme"
+        },
+        "theme-rose": {
+          "files": {
+            "styles/skins/rose.css": {
+              "bytes": 6307,
+              "sha256": "c6e9b53e00749efe301c967758d7351dfd1a408644994a27c94594562ac89575"
+            }
+          },
+          "type": "registry:theme"
+        },
+        "theme-sky": {
+          "files": {
+            "styles/skins/sky.css": {
+              "bytes": 6210,
+              "sha256": "ce88b63f22c59a4ccfbe56039f166a83ede1dbe83ecb256fa4b59cb72e826dc5"
+            }
+          },
+          "type": "registry:theme"
+        },
+        "theme-supabase": {
+          "files": {
+            "styles/skins/supabase.css": {
+              "bytes": 5026,
+              "sha256": "4189bcba7ec3b4a446bad0f9f0442f0b37f548ca1f3c9a3e2e77bd741970f036"
+            }
+          },
+          "type": "registry:theme"
+        },
+        "theme-t3-chat": {
+          "files": {
+            "styles/skins/t3-chat.css": {
+              "bytes": 4915,
+              "sha256": "136bd008fb40c41bb09bd7c514968796c41e91731f61102146a568e891881a8a"
+            }
+          },
+          "type": "registry:theme"
+        },
         "theme-toggle": {
           "files": {
             "compose/theme-toggle.solid.tsx": {
@@ -13466,6 +13773,15 @@
             }
           },
           "type": "registry:ui"
+        },
+        "theme-violet-bloom": {
+          "files": {
+            "styles/skins/violet-bloom.css": {
+              "bytes": 5076,
+              "sha256": "e5e3758f99ba249544312abbcd7d57b0314df35d11c98b8e7bd8d273c2047ea0"
+            }
+          },
+          "type": "registry:theme"
         },
         "timeline": {
           "files": {
@@ -13710,7 +14026,7 @@
           "type": "registry:block"
         }
       },
-      "items": 344
+      "items": 361
     },
     "svelte": {
       "counts": {
@@ -13718,6 +14034,7 @@
         "component": 137,
         "lib": 2,
         "primitive": 87,
+        "theme": 17,
         "utils": 1
       },
       "entries": {
@@ -17126,6 +17443,154 @@
           },
           "type": "registry:ui"
         },
+        "theme-amber-minimal": {
+          "files": {
+            "styles/skins/amber-minimal.css": {
+              "bytes": 4770,
+              "sha256": "919e58f761a2ded1493b4e7cd022b64f4b5fac5a6bff214d54e323d8bcc7ed81"
+            }
+          },
+          "type": "registry:theme"
+        },
+        "theme-base": {
+          "files": {
+            "styles/skins/NOTICE.md": {
+              "bytes": 997,
+              "sha256": "5720023570a7ea06f0774ac7bc7f7a2d1953e1f969ce389081071331001e7790"
+            },
+            "styles/skins/base.css": {
+              "bytes": 1352,
+              "sha256": "68d7bc8654adb51f7fcf7b4521931f70ea0c1849ae59a85107d67a387e4ad8ff"
+            }
+          },
+          "type": "registry:theme"
+        },
+        "theme-bubblegum": {
+          "files": {
+            "styles/skins/bubblegum.css": {
+              "bytes": 5253,
+              "sha256": "2aeba87b359994c6db2179ac7b43bb7a4f87a8cb4df461ea707cc18e326babeb"
+            }
+          },
+          "type": "registry:theme"
+        },
+        "theme-claude": {
+          "files": {
+            "styles/skins/claude.css": {
+              "bytes": 4792,
+              "sha256": "0fb7953ccebd9aaefb8444684fcdbf30f0b2f48ddbd7a65859d9b757e3aed704"
+            }
+          },
+          "type": "registry:theme"
+        },
+        "theme-cosmic-night": {
+          "files": {
+            "styles/skins/cosmic-night.css": {
+              "bytes": 4950,
+              "sha256": "97ea856aaa911dc1b559bbd57142a0f0daef2dbe4eef800687c6ccf86bb8edfa"
+            }
+          },
+          "type": "registry:theme"
+        },
+        "theme-doom-64": {
+          "files": {
+            "styles/skins/doom-64.css": {
+              "bytes": 4597,
+              "sha256": "51c5163f703a8f2f63806d348e6878e5e05bdccfc1400159d15971845a1a9ae6"
+            }
+          },
+          "type": "registry:theme"
+        },
+        "theme-kodama-grove": {
+          "files": {
+            "styles/skins/kodama-grove.css": {
+              "bytes": 4769,
+              "sha256": "72b79834bdced99a647e179815b0428929af65eaba0b0e1a6c7f8ac63667bf81"
+            }
+          },
+          "type": "registry:theme"
+        },
+        "theme-mocha-mousse": {
+          "files": {
+            "styles/skins/mocha-mousse.css": {
+              "bytes": 4746,
+              "sha256": "6a108252afc18390bde96c0b4f8423aae601636d775ae76954312da764a8bf3c"
+            }
+          },
+          "type": "registry:theme"
+        },
+        "theme-modern-minimal": {
+          "files": {
+            "styles/skins/modern-minimal.css": {
+              "bytes": 4713,
+              "sha256": "d46b51dd0de2c828e5532180869cf0ebb622f66ae03d6c0aae9b6fbd20a737cb"
+            }
+          },
+          "type": "registry:theme"
+        },
+        "theme-neo-brutalism": {
+          "files": {
+            "styles/skins/neo-brutalism.css": {
+              "bytes": 4618,
+              "sha256": "426861b683e147b20ba4877518d01bed004b297b3d7914bdf1019ee0c57cb0b0"
+            }
+          },
+          "type": "registry:theme"
+        },
+        "theme-notebook": {
+          "files": {
+            "styles/skins/notebook.css": {
+              "bytes": 5070,
+              "sha256": "ac66d55d0b738d762d3d7701be2b6e78bdfd1b3cb41e37475b35aa93fdb2ab75"
+            }
+          },
+          "type": "registry:theme"
+        },
+        "theme-perpetuity": {
+          "files": {
+            "styles/skins/perpetuity.css": {
+              "bytes": 4984,
+              "sha256": "380489be639f828efdbdb14dbbce06db60aa9b29962798379a49fc56e32f5b6d"
+            }
+          },
+          "type": "registry:theme"
+        },
+        "theme-rose": {
+          "files": {
+            "styles/skins/rose.css": {
+              "bytes": 6307,
+              "sha256": "c6e9b53e00749efe301c967758d7351dfd1a408644994a27c94594562ac89575"
+            }
+          },
+          "type": "registry:theme"
+        },
+        "theme-sky": {
+          "files": {
+            "styles/skins/sky.css": {
+              "bytes": 6210,
+              "sha256": "ce88b63f22c59a4ccfbe56039f166a83ede1dbe83ecb256fa4b59cb72e826dc5"
+            }
+          },
+          "type": "registry:theme"
+        },
+        "theme-supabase": {
+          "files": {
+            "styles/skins/supabase.css": {
+              "bytes": 5026,
+              "sha256": "4189bcba7ec3b4a446bad0f9f0442f0b37f548ca1f3c9a3e2e77bd741970f036"
+            }
+          },
+          "type": "registry:theme"
+        },
+        "theme-t3-chat": {
+          "files": {
+            "styles/skins/t3-chat.css": {
+              "bytes": 4915,
+              "sha256": "136bd008fb40c41bb09bd7c514968796c41e91731f61102146a568e891881a8a"
+            }
+          },
+          "type": "registry:theme"
+        },
         "theme-toggle": {
           "files": {
             "compose/ThemeToggle.svelte": {
@@ -17134,6 +17599,15 @@
             }
           },
           "type": "registry:ui"
+        },
+        "theme-violet-bloom": {
+          "files": {
+            "styles/skins/violet-bloom.css": {
+              "bytes": 5076,
+              "sha256": "e5e3758f99ba249544312abbcd7d57b0314df35d11c98b8e7bd8d273c2047ea0"
+            }
+          },
+          "type": "registry:theme"
         },
         "timeline": {
           "files": {
@@ -17378,7 +17852,7 @@
           "type": "registry:block"
         }
       },
-      "items": 344
+      "items": 361
     },
     "templ": {
       "counts": {
@@ -23812,6 +24286,7 @@
         "component": 137,
         "lib": 2,
         "primitive": 87,
+        "theme": 17,
         "utils": 1
       },
       "entries": {
@@ -27220,6 +27695,154 @@
           },
           "type": "registry:ui"
         },
+        "theme-amber-minimal": {
+          "files": {
+            "styles/skins/amber-minimal.css": {
+              "bytes": 4770,
+              "sha256": "919e58f761a2ded1493b4e7cd022b64f4b5fac5a6bff214d54e323d8bcc7ed81"
+            }
+          },
+          "type": "registry:theme"
+        },
+        "theme-base": {
+          "files": {
+            "styles/skins/NOTICE.md": {
+              "bytes": 997,
+              "sha256": "5720023570a7ea06f0774ac7bc7f7a2d1953e1f969ce389081071331001e7790"
+            },
+            "styles/skins/base.css": {
+              "bytes": 1352,
+              "sha256": "68d7bc8654adb51f7fcf7b4521931f70ea0c1849ae59a85107d67a387e4ad8ff"
+            }
+          },
+          "type": "registry:theme"
+        },
+        "theme-bubblegum": {
+          "files": {
+            "styles/skins/bubblegum.css": {
+              "bytes": 5253,
+              "sha256": "2aeba87b359994c6db2179ac7b43bb7a4f87a8cb4df461ea707cc18e326babeb"
+            }
+          },
+          "type": "registry:theme"
+        },
+        "theme-claude": {
+          "files": {
+            "styles/skins/claude.css": {
+              "bytes": 4792,
+              "sha256": "0fb7953ccebd9aaefb8444684fcdbf30f0b2f48ddbd7a65859d9b757e3aed704"
+            }
+          },
+          "type": "registry:theme"
+        },
+        "theme-cosmic-night": {
+          "files": {
+            "styles/skins/cosmic-night.css": {
+              "bytes": 4950,
+              "sha256": "97ea856aaa911dc1b559bbd57142a0f0daef2dbe4eef800687c6ccf86bb8edfa"
+            }
+          },
+          "type": "registry:theme"
+        },
+        "theme-doom-64": {
+          "files": {
+            "styles/skins/doom-64.css": {
+              "bytes": 4597,
+              "sha256": "51c5163f703a8f2f63806d348e6878e5e05bdccfc1400159d15971845a1a9ae6"
+            }
+          },
+          "type": "registry:theme"
+        },
+        "theme-kodama-grove": {
+          "files": {
+            "styles/skins/kodama-grove.css": {
+              "bytes": 4769,
+              "sha256": "72b79834bdced99a647e179815b0428929af65eaba0b0e1a6c7f8ac63667bf81"
+            }
+          },
+          "type": "registry:theme"
+        },
+        "theme-mocha-mousse": {
+          "files": {
+            "styles/skins/mocha-mousse.css": {
+              "bytes": 4746,
+              "sha256": "6a108252afc18390bde96c0b4f8423aae601636d775ae76954312da764a8bf3c"
+            }
+          },
+          "type": "registry:theme"
+        },
+        "theme-modern-minimal": {
+          "files": {
+            "styles/skins/modern-minimal.css": {
+              "bytes": 4713,
+              "sha256": "d46b51dd0de2c828e5532180869cf0ebb622f66ae03d6c0aae9b6fbd20a737cb"
+            }
+          },
+          "type": "registry:theme"
+        },
+        "theme-neo-brutalism": {
+          "files": {
+            "styles/skins/neo-brutalism.css": {
+              "bytes": 4618,
+              "sha256": "426861b683e147b20ba4877518d01bed004b297b3d7914bdf1019ee0c57cb0b0"
+            }
+          },
+          "type": "registry:theme"
+        },
+        "theme-notebook": {
+          "files": {
+            "styles/skins/notebook.css": {
+              "bytes": 5070,
+              "sha256": "ac66d55d0b738d762d3d7701be2b6e78bdfd1b3cb41e37475b35aa93fdb2ab75"
+            }
+          },
+          "type": "registry:theme"
+        },
+        "theme-perpetuity": {
+          "files": {
+            "styles/skins/perpetuity.css": {
+              "bytes": 4984,
+              "sha256": "380489be639f828efdbdb14dbbce06db60aa9b29962798379a49fc56e32f5b6d"
+            }
+          },
+          "type": "registry:theme"
+        },
+        "theme-rose": {
+          "files": {
+            "styles/skins/rose.css": {
+              "bytes": 6307,
+              "sha256": "c6e9b53e00749efe301c967758d7351dfd1a408644994a27c94594562ac89575"
+            }
+          },
+          "type": "registry:theme"
+        },
+        "theme-sky": {
+          "files": {
+            "styles/skins/sky.css": {
+              "bytes": 6210,
+              "sha256": "ce88b63f22c59a4ccfbe56039f166a83ede1dbe83ecb256fa4b59cb72e826dc5"
+            }
+          },
+          "type": "registry:theme"
+        },
+        "theme-supabase": {
+          "files": {
+            "styles/skins/supabase.css": {
+              "bytes": 5026,
+              "sha256": "4189bcba7ec3b4a446bad0f9f0442f0b37f548ca1f3c9a3e2e77bd741970f036"
+            }
+          },
+          "type": "registry:theme"
+        },
+        "theme-t3-chat": {
+          "files": {
+            "styles/skins/t3-chat.css": {
+              "bytes": 4915,
+              "sha256": "136bd008fb40c41bb09bd7c514968796c41e91731f61102146a568e891881a8a"
+            }
+          },
+          "type": "registry:theme"
+        },
         "theme-toggle": {
           "files": {
             "compose/ThemeToggle.vue": {
@@ -27228,6 +27851,15 @@
             }
           },
           "type": "registry:ui"
+        },
+        "theme-violet-bloom": {
+          "files": {
+            "styles/skins/violet-bloom.css": {
+              "bytes": 5076,
+              "sha256": "e5e3758f99ba249544312abbcd7d57b0314df35d11c98b8e7bd8d273c2047ea0"
+            }
+          },
+          "type": "registry:theme"
         },
         "timeline": {
           "files": {
@@ -27472,7 +28104,7 @@
           "type": "registry:block"
         }
       },
-      "items": 344
+      "items": 361
     }
   },
   "source": {

@@ -1,0 +1,38 @@
+{
+  "$schema": "https://registry.buildy.tw/schema/registry-item.json",
+  "dependencies": [],
+  "description": "Skin Claude: brand tokens (colours, radius, shadows, fonts) for every UI8Kit component, light and dark; on with data-skin=\"claude\".",
+  "devDependencies": [],
+  "digest": "0.1.0",
+  "files": [
+    {
+      "content": "/* Skin \"claude\" (Claude): the tweakcn preset \"claude\" (Apache-2.0, see NOTICE.md), written by packages/skins/tools/tweakcn-skins.ts.\n   On when data-skin=\"claude\" is on <html> (the page) or on any element (a tile of /skins/). Values as tweakcn exports them;\n   the spacing scale stays the kit's 0.25rem. Fonts: system. */\n[data-skin=\"claude\"] {\n  --background: hsl(48 33% 97%);\n  --foreground: hsl(48 20% 20%);\n  --card: hsl(48 33% 97%);\n  --card-foreground: hsl(60 3% 8%);\n  --popover: hsl(0 0% 100%);\n  --popover-foreground: hsl(51 19% 13%);\n  --primary: hsl(15.3 55.2% 47.3%);\n  --primary-foreground: hsl(0 0% 100%);\n  --secondary: hsl(46 23% 89%);\n  --secondary-foreground: hsl(51 8% 30%);\n  --muted: hsl(44 29% 90%);\n  --muted-foreground: hsl(50 3% 40%);\n  --accent: hsl(46 23% 89%);\n  --accent-foreground: hsl(51 19% 13%);\n  --destructive: hsl(60 3% 8%);\n  --destructive-foreground: hsl(0 0% 100%);\n  --border: hsl(50 7% 84%);\n  --input: hsl(51 8% 68%);\n  --ring: hsl(15.1 55.6% 52.4%);\n  --chart-1: hsl(18 57% 44%);\n  --chart-2: hsl(251.5 84.6% 74.5%);\n  --chart-3: hsl(46 28% 82%);\n  --chart-4: hsl(256.6 49.2% 88.4%);\n  --chart-5: hsl(18 60% 44%);\n  --sidebar: hsl(51 26% 95%);\n  --sidebar-foreground: hsl(60 3% 23%);\n  --sidebar-primary: hsl(15.1 55.6% 52.4%);\n  --sidebar-primary-foreground: hsl(0 0% 98%);\n  --sidebar-accent: hsl(46 23% 89%);\n  --sidebar-accent-foreground: hsl(0 0% 20%);\n  --sidebar-border: hsl(0 0% 92%);\n  --sidebar-ring: hsl(0 0% 71%);\n  --font-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';\n  --font-serif: ui-serif, Georgia, Cambria, \"Times New Roman\", Times, serif;\n  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, \"Liberation Mono\", \"Courier New\", monospace;\n  --radius: 0.5rem;\n  --shadow-2xs: 0 1px 3px 0px hsl(0 0% 0% / 0.05);\n  --shadow-xs: 0 1px 3px 0px hsl(0 0% 0% / 0.05);\n  --shadow-sm: 0 1px 3px 0px hsl(0 0% 0% / 0.10), 0 1px 2px -1px hsl(0 0% 0% / 0.10);\n  --shadow: 0 1px 3px 0px hsl(0 0% 0% / 0.10), 0 1px 2px -1px hsl(0 0% 0% / 0.10);\n  --shadow-md: 0 1px 3px 0px hsl(0 0% 0% / 0.10), 0 2px 4px -1px hsl(0 0% 0% / 0.10);\n  --shadow-lg: 0 1px 3px 0px hsl(0 0% 0% / 0.10), 0 4px 6px -1px hsl(0 0% 0% / 0.10);\n  --shadow-xl: 0 1px 3px 0px hsl(0 0% 0% / 0.10), 0 8px 10px -1px hsl(0 0% 0% / 0.10);\n  --shadow-2xl: 0 1px 3px 0px hsl(0 0% 0% / 0.25);\n  --destructive-hover: hsl(60 3% 2%);\n}\n\n:is(.dark, [data-theme=\"dark\"]) [data-skin=\"claude\"],\n[data-skin=\"claude\"]:is(.dark, [data-theme=\"dark\"]) {\n  --background: hsl(60 2.7% 14.5%);\n  --foreground: hsl(46 10% 74%);\n  --card: hsl(60 2.7% 14.5%);\n  --card-foreground: hsl(48 33% 97%);\n  --popover: hsl(60 2.1% 18.4%);\n  --popover-foreground: hsl(60 5% 89%);\n  --primary: hsl(14.8 52.1% 47.5%);\n  --primary-foreground: hsl(0 0% 100%);\n  --secondary: hsl(48 33% 97%);\n  --secondary-foreground: hsl(60 2.1% 18.4%);\n  --muted: hsl(60 4% 10%);\n  --muted-foreground: hsl(51 9% 69%);\n  --accent: hsl(48 11% 9%);\n  --accent-foreground: hsl(51 26% 95%);\n  --destructive: hsl(358.3 71.8% 52.7%);\n  --destructive-foreground: hsl(0 0% 100%);\n  --border: hsl(60 5% 23%);\n  --input: hsl(52 5% 31%);\n  --ring: hsl(14.8 63.1% 59.6%);\n  --chart-1: hsl(18 57% 44%);\n  --chart-2: hsl(251.5 84.6% 74.5%);\n  --chart-3: hsl(48 11% 9%);\n  --chart-4: hsl(248 25% 23%);\n  --chart-5: hsl(18 60% 44%);\n  --sidebar: hsl(30 3% 12%);\n  --sidebar-foreground: hsl(46 10% 74%);\n  --sidebar-primary: hsl(0 0% 20%);\n  --sidebar-primary-foreground: hsl(0 0% 98%);\n  --sidebar-accent: hsl(60 3% 6%);\n  --sidebar-accent-foreground: hsl(46 10% 74%);\n  --sidebar-border: hsl(0 0% 92%);\n  --sidebar-ring: hsl(0 0% 71%);\n  --shadow-2xs: 0 1px 3px 0px hsl(0 0% 0% / 0.05);\n  --shadow-xs: 0 1px 3px 0px hsl(0 0% 0% / 0.05);\n  --shadow-sm: 0 1px 3px 0px hsl(0 0% 0% / 0.10), 0 1px 2px -1px hsl(0 0% 0% / 0.10);\n  --shadow: 0 1px 3px 0px hsl(0 0% 0% / 0.10), 0 1px 2px -1px hsl(0 0% 0% / 0.10);\n  --shadow-md: 0 1px 3px 0px hsl(0 0% 0% / 0.10), 0 2px 4px -1px hsl(0 0% 0% / 0.10);\n  --shadow-lg: 0 1px 3px 0px hsl(0 0% 0% / 0.10), 0 4px 6px -1px hsl(0 0% 0% / 0.10);\n  --shadow-xl: 0 1px 3px 0px hsl(0 0% 0% / 0.10), 0 8px 10px -1px hsl(0 0% 0% / 0.10);\n  --shadow-2xl: 0 1px 3px 0px hsl(0 0% 0% / 0.25);\n  --destructive-hover: hsl(358.3 71.8% 46.7%);\n}\n\n[data-skin=\"claude\"] .shadow-xs { --tw-shadow: var(--shadow-xs); }\n[data-skin=\"claude\"] .shadow-sm { --tw-shadow: var(--shadow-sm); }\n[data-skin=\"claude\"] .shadow { --tw-shadow: var(--shadow); }\n[data-skin=\"claude\"] .shadow-md { --tw-shadow: var(--shadow-md); }\n[data-skin=\"claude\"] .shadow-lg { --tw-shadow: var(--shadow-lg); }\n[data-skin=\"claude\"] .shadow-xl { --tw-shadow: var(--shadow-xl); }\n",
+      "path": "styles/skins/claude.css",
+      "target": "styles/skins/claude.css"
+    }
+  ],
+  "meta": {
+    "category": "themes",
+    "kind": "theme",
+    "skin": {
+      "fonts": [],
+      "id": "claude",
+      "license": "Apache-2.0",
+      "name": "Claude",
+      "sha256": "d27d905820c48bf6af8fc6bfe2420235d25ab4bc98f8658cdf538af7aa91e640",
+      "source": "tweakcn a3b47b3",
+      "version": "1.0.0"
+    },
+    "tags": [
+      "react",
+      "theme"
+    ]
+  },
+  "name": "theme-claude",
+  "registryDependencies": [
+    "theme-base"
+  ],
+  "runtime": "react",
+  "title": "Claude",
+  "type": "registry:theme"
+}

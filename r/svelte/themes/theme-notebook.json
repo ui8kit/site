@@ -1,0 +1,40 @@
+{
+  "$schema": "https://registry.buildy.tw/schema/registry-item.json",
+  "dependencies": [],
+  "description": "Skin Notebook: brand tokens (colours, radius, shadows, fonts) for every UI8Kit component, light and dark; on with data-skin=\"notebook\".",
+  "devDependencies": [],
+  "digest": "0.1.0",
+  "files": [
+    {
+      "content": "/* Skin \"notebook\" (Notebook): the tweakcn preset \"notebook\" (Apache-2.0, see NOTICE.md), written by packages/skins/tools/tweakcn-skins.ts.\n   On when data-skin=\"notebook\" is on <html> (the page) or on any element (a tile of /skins/). Values as tweakcn exports them;\n   the spacing scale stays the kit's 0.25rem. Fonts: Architects Daughter (Google Fonts, loaded when the skin is on). */\n[data-skin=\"notebook\"] {\n  --background: hsl(0 0% 98%);\n  --foreground: hsl(0 0% 23%);\n  --card: hsl(0 0% 100%);\n  --card-foreground: hsl(0 0% 23%);\n  --popover: hsl(0 0% 100%);\n  --popover-foreground: hsl(0 0% 23%);\n  --primary: hsl(0 0% 38%);\n  --primary-foreground: hsl(0 0% 94%);\n  --secondary: hsl(0 0% 87%);\n  --secondary-foreground: hsl(0 0% 23%);\n  --muted: hsl(0 0% 89%);\n  --muted-foreground: hsl(0 0% 31%);\n  --accent: hsl(47 64% 87%);\n  --accent-foreground: hsl(14 26% 29%);\n  --destructive: hsl(359.2 30.6% 52%);\n  --destructive-foreground: hsl(0 0% 100%);\n  --border: hsl(0 1% 45%);\n  --input: hsl(0 0% 100%);\n  --ring: hsl(0 0% 63%);\n  --chart-1: hsl(0 0% 20%);\n  --chart-2: hsl(0 0% 33%);\n  --chart-3: hsl(0 0% 47%);\n  --chart-4: hsl(0 0% 60%);\n  --chart-5: hsl(0 0% 73%);\n  --sidebar: hsl(0 0% 94%);\n  --sidebar-foreground: hsl(0 0% 23%);\n  --sidebar-primary: hsl(0 0% 38%);\n  --sidebar-primary-foreground: hsl(0 0% 94%);\n  --sidebar-accent: hsl(47 64% 87%);\n  --sidebar-accent-foreground: hsl(14 26% 29%);\n  --sidebar-border: hsl(0 0% 75%);\n  --sidebar-ring: hsl(0 0% 63%);\n  --font-sans: Architects Daughter, sans-serif;\n  --font-serif: \"Times New Roman\", Times, serif;\n  --font-mono: \"Courier New\", Courier, monospace;\n  --font-weight-medium: 400;\n  --font-weight-semibold: 400;\n  --radius: 0.625rem;\n  --shadow-2xs: 1px 4px 5px 0px hsl(0 0% 0% / 0.01);\n  --shadow-xs: 1px 4px 5px 0px hsl(0 0% 0% / 0.01);\n  --shadow-sm: 1px 4px 5px 0px hsl(0 0% 0% / 0.03), 1px 1px 2px -1px hsl(0 0% 0% / 0.03);\n  --shadow: 1px 4px 5px 0px hsl(0 0% 0% / 0.03), 1px 1px 2px -1px hsl(0 0% 0% / 0.03);\n  --shadow-md: 1px 4px 5px 0px hsl(0 0% 0% / 0.03), 1px 2px 4px -1px hsl(0 0% 0% / 0.03);\n  --shadow-lg: 1px 4px 5px 0px hsl(0 0% 0% / 0.03), 1px 4px 6px -1px hsl(0 0% 0% / 0.03);\n  --shadow-xl: 1px 4px 5px 0px hsl(0 0% 0% / 0.03), 1px 8px 10px -1px hsl(0 0% 0% / 0.03);\n  --shadow-2xl: 1px 4px 5px 0px hsl(0 0% 0% / 0.07);\n  --tracking-normal: 0.5px;\n  --tracking-tighter: calc(var(--tracking-normal) - 0.05em);\n  --tracking-tight: calc(var(--tracking-normal) - 0.025em);\n  --tracking-wide: calc(var(--tracking-normal) + 0.025em);\n  --tracking-wider: calc(var(--tracking-normal) + 0.05em);\n  --tracking-widest: calc(var(--tracking-normal) + 0.1em);\n  --destructive-hover: hsl(359.2 30.6% 46%);\n}\n\n:is(.dark, [data-theme=\"dark\"]) [data-skin=\"notebook\"],\n[data-skin=\"notebook\"]:is(.dark, [data-theme=\"dark\"]) {\n  --background: hsl(0 0% 17%);\n  --foreground: hsl(0 0% 86%);\n  --card: hsl(0 0% 20%);\n  --card-foreground: hsl(0 0% 86%);\n  --popover: hsl(0 0% 20%);\n  --popover-foreground: hsl(0 0% 86%);\n  --primary: hsl(0 0% 69%);\n  --primary-foreground: hsl(0 0% 17%);\n  --secondary: hsl(0 0% 30%);\n  --secondary-foreground: hsl(0 0% 75%);\n  --muted: hsl(0 0% 27%);\n  --muted-foreground: hsl(0 0% 70.6%);\n  --accent: hsl(0 0% 88%);\n  --accent-foreground: hsl(0 0% 20%);\n  --destructive: hsl(0 36% 77%);\n  --destructive-foreground: hsl(0 0% 17%);\n  --border: hsl(0 0% 31%);\n  --input: hsl(0 0% 20%);\n  --ring: hsl(0 0% 75%);\n  --chart-1: hsl(0 0% 94%);\n  --chart-2: hsl(0 0% 82%);\n  --chart-3: hsl(0 0% 69%);\n  --chart-4: hsl(0 0% 56%);\n  --chart-5: hsl(0 0% 44%);\n  --sidebar: hsl(0 0% 13%);\n  --sidebar-foreground: hsl(0 0% 86%);\n  --sidebar-primary: hsl(0 0% 69%);\n  --sidebar-primary-foreground: hsl(0 0% 13%);\n  --sidebar-accent: hsl(0 0% 88%);\n  --sidebar-accent-foreground: hsl(0 0% 20%);\n  --sidebar-border: hsl(0 0% 31%);\n  --sidebar-ring: hsl(0 0% 75%);\n  --font-serif: Georgia, serif;\n  --font-mono: \"Fira Code\", \"Courier New\", monospace;\n  --shadow-2xs: 1px 4px 5px 0px hsl(0 0% 0% / 0.01);\n  --shadow-xs: 1px 4px 5px 0px hsl(0 0% 0% / 0.01);\n  --shadow-sm: 1px 4px 5px 0px hsl(0 0% 0% / 0.03), 1px 1px 2px -1px hsl(0 0% 0% / 0.03);\n  --shadow: 1px 4px 5px 0px hsl(0 0% 0% / 0.03), 1px 1px 2px -1px hsl(0 0% 0% / 0.03);\n  --shadow-md: 1px 4px 5px 0px hsl(0 0% 0% / 0.03), 1px 2px 4px -1px hsl(0 0% 0% / 0.03);\n  --shadow-lg: 1px 4px 5px 0px hsl(0 0% 0% / 0.03), 1px 4px 6px -1px hsl(0 0% 0% / 0.03);\n  --shadow-xl: 1px 4px 5px 0px hsl(0 0% 0% / 0.03), 1px 8px 10px -1px hsl(0 0% 0% / 0.03);\n  --shadow-2xl: 1px 4px 5px 0px hsl(0 0% 0% / 0.07);\n  --destructive-hover: hsl(0 36% 83%);\n}\n\n:root[data-skin=\"notebook\"] body { letter-spacing: var(--tracking-normal); }\n[data-skin=\"notebook\"] .shadow-xs { --tw-shadow: var(--shadow-xs); }\n[data-skin=\"notebook\"] .shadow-sm { --tw-shadow: var(--shadow-sm); }\n[data-skin=\"notebook\"] .shadow { --tw-shadow: var(--shadow); }\n[data-skin=\"notebook\"] .shadow-md { --tw-shadow: var(--shadow-md); }\n[data-skin=\"notebook\"] .shadow-lg { --tw-shadow: var(--shadow-lg); }\n[data-skin=\"notebook\"] .shadow-xl { --tw-shadow: var(--shadow-xl); }\n",
+      "path": "styles/skins/notebook.css",
+      "target": "styles/skins/notebook.css"
+    }
+  ],
+  "meta": {
+    "category": "themes",
+    "kind": "theme",
+    "skin": {
+      "fonts": [
+        "Architects+Daughter:wght@400"
+      ],
+      "id": "notebook",
+      "license": "Apache-2.0",
+      "name": "Notebook",
+      "sha256": "b01130a64320537f2def9b570081adb54f7987bc3226610e5fd6703b9654e4ad",
+      "source": "tweakcn a3b47b3",
+      "version": "1.0.0"
+    },
+    "tags": [
+      "svelte",
+      "theme"
+    ]
+  },
+  "name": "theme-notebook",
+  "registryDependencies": [
+    "theme-base"
+  ],
+  "runtime": "svelte",
+  "title": "Notebook",
+  "type": "registry:theme"
+}

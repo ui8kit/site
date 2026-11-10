@@ -15,18 +15,19 @@ import { rewriteKitRefs } from "./kit-paths";
 import { cleanGenerated } from "./clean-out";
 import { publishVariants } from "./variants";
 import { publishProps, variantOrganisms } from "./props";
+import { THEME_FOLDER, themeSpecs } from "./themes";
 
 export const TS_RUNTIMES = ["svelte", "react", "vue", "solid"] as const;
 export const RUNTIMES = [...TS_RUNTIMES, ...TEMPLATE_RUNTIMES] as const;
 export type TsRuntime = (typeof TS_RUNTIMES)[number];
 export type Runtime = (typeof RUNTIMES)[number];
 
-type RegType = "registry:utils" | "registry:lib" | "registry:ui" | "registry:component" | "registry:block";
+type RegType = "registry:utils" | "registry:lib" | "registry:ui" | "registry:component" | "registry:block" | "registry:theme";
 type File = { path: string; target: string; content: string };
 type Item = {
   name: string; type: RegType; title: string; description: string; runtime: Runtime; digest: string;
   dependencies: string[]; devDependencies: string[]; registryDependencies: string[]; files: File[];
-  meta: { kind: Kind; category: string; group?: string; tags: string[] };
+  meta: { kind: Kind | "theme"; category: string; group?: string; tags: string[]; skin?: unknown };
 };
 
 function arg(name: string, env: string, def: string): string {
@@ -203,7 +204,7 @@ function buildRuntime(rt: TsRuntime, meta: ReturnType<typeof blockMeta>): Item[]
 }
 
 /** folder under r/<runtime>/ where the CLI fetches an item of this type */
-const folderOf = (t: RegType) => ({ "registry:ui": "components/ui", "registry:component": "components", "registry:block": "blocks", "registry:utils": "utils", "registry:lib": "lib" })[t];
+const folderOf = (t: RegType) => ({ "registry:ui": "components/ui", "registry:component": "components", "registry:block": "blocks", "registry:utils": "utils", "registry:lib": "lib", "registry:theme": THEME_FOLDER })[t];
 
 function main() {
   const commit = git(["rev-parse", "HEAD"]);
@@ -224,9 +225,19 @@ function main() {
 
   const built = new Map<Runtime, Item[]>();
   for (const rt of TS_RUNTIMES) built.set(rt, buildRuntime(rt, meta));
+  // skins as theme items (registry:theme) in the TypeScript runtimes: their utils item ships the styles/ the skins extend
+  const themes = themeSpecs(SRC, { check: process.env.UI8KIT_SKINS_CHECK !== "0" });
+  for (const rt of TS_RUNTIMES) {
+    built.get(rt)!.push(...themes.map((t): Item => ({
+      name: t.name, type: "registry:theme", title: t.title, description: t.description, runtime: rt, digest: VERSION,
+      dependencies: [], devDependencies: [], registryDependencies: t.registryDependencies, files: t.files.map((f) => ({ ...f })),
+      meta: { ...t.meta, tags: [rt, "theme"] },
+    })));
+    built.get(rt)!.sort((a, b) => cmp(a.name, b.name));
+  }
   // the template runtimes reuse name, kind, title, description and category of the TypeScript items
-  const ref = new Map(built.get("react")!.map((i) => [i.name, i]));
-  const kinds = new Map<string, Kind>([...ref.values()].map((i) => [i.name, i.meta.kind]));
+  const ref = new Map(built.get("react")!.filter((i) => i.type !== "registry:theme").map((i) => [i.name, i]));
+  const kinds = new Map<string, Kind>([...ref.values()].map((i) => [i.name, i.meta.kind as Kind]));
   const problems: string[] = [];
   for (const rt of TEMPLATE_RUNTIMES) {
     const r = buildTemplateRuntime(SRC, rt, kinds);
@@ -261,7 +272,7 @@ function main() {
     const index = {
       $schema: `${SCHEMA_BASE}/registry.json`,
       components: items.map((i) => ({ name: i.name, type: i.type, title: i.title, description: i.description, dependencies: i.dependencies, registryDependencies: i.registryDependencies })),
-      categories: ["lib", "utils", "ui", "components", "blocks"],
+      categories: ["lib", "utils", "ui", "components", "blocks", ...(items.some((i) => i.type === "registry:theme") ? ["themes"] : [])],
       version: VERSION, lastUpdated: commitDate, registry: "ui",
     };
     writeFileSync(path.join(OUT, rt, "index.json"), json(index));
@@ -280,7 +291,7 @@ function main() {
   const list = Object.values(site).sort((a: any, b: any) => cmp(a.name, b.name));
   writeFileSync(path.join(OUT, "registry.json"), json({
     $schema: `${SCHEMA_BASE}/registry.json`, contractVersion: "2.0.0", version: VERSION, sourceCommit: commit, lastUpdated: commitDate,
-    runtimes: [...RUNTIMES], layout: "<runtime>/index.json + <runtime>/{components/ui,components,blocks,utils,lib}/<name>.json; use r/<runtime> as registryUrl",
+    runtimes: [...RUNTIMES], layout: "<runtime>/index.json + <runtime>/{components/ui,components,blocks,utils,lib,themes}/<name>.json; use r/<runtime> as registryUrl",
     variants: { path: variants.path, sha256: variants.sha256, digest: variants.digest, version: variants.version },
     props: { path: props.path, sha256: props.sha256, digest: props.digest, version: props.version },
     items: list,

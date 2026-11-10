@@ -9,8 +9,8 @@ const R = path.resolve(process.argv[2] ?? path.join(import.meta.dir, "../../r"))
 const read = (p: string) => JSON.parse(readFileSync(p, "utf8"));
 const errors: string[] = [];
 const err = (m: string) => errors.push(m);
-const TYPES = new Set(["registry:ui", "registry:component", "registry:block", "registry:utils", "registry:lib"]);
-const FOLDER: Record<string, string> = { "registry:ui": "components/ui", "registry:component": "components", "registry:block": "blocks", "registry:utils": "utils", "registry:lib": "lib" };
+const TYPES = new Set(["registry:ui", "registry:component", "registry:block", "registry:utils", "registry:lib", "registry:theme"]);
+const FOLDER: Record<string, string> = { "registry:ui": "components/ui", "registry:component": "components", "registry:block": "blocks", "registry:utils": "utils", "registry:lib": "lib", "registry:theme": "themes" };
 
 const manifest = read(path.join(R, "manifest.json"));
 const site = read(path.join(R, "registry.json"));

@@ -1,0 +1,32 @@
+{
+  "$schema": "https://registry.buildy.tw/schema/registry-item.json",
+  "dependencies": [],
+  "description": "Start values of a skin scoped on an element (data-skin on any element but <html>): the kit font, tracking, radius and shadows, so the element shows its own skin only. Licences of the skins in NOTICE.md.",
+  "devDependencies": [],
+  "digest": "0.1.0",
+  "files": [
+    {
+      "content": "/* What a skin scoped on an element inside the page starts from (a tile of /skins/ carries data-skin=\"<name>\"): the kit's\n   default font, weights, tracking, radius and shadows, so a tile shows its own skin and nothing of the skin of the page.\n   :where() keeps this rule at zero specificity, so the skin's own rule always wins. <html> itself is never matched here. */\n:where([data-skin]:not(:root)) {\n  --font-sans: ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\";\n  --font-weight-medium: 500;\n  --font-weight-semibold: 600;\n  --tracking-normal: 0em;\n  --radius: 0.625rem;\n  --shadow-2xs: 0 1px hsl(0 0% 0% / 0.05);\n  --shadow-xs: 0 1px 2px 0 hsl(0 0% 0% / 0.05);\n  --shadow-sm: 0 1px 3px 0 hsl(0 0% 0% / 0.1), 0 1px 2px -1px hsl(0 0% 0% / 0.1);\n  --shadow: 0 1px 3px 0 hsl(0 0% 0% / 0.1), 0 1px 2px -1px hsl(0 0% 0% / 0.1);\n  --shadow-md: 0 4px 6px -1px hsl(0 0% 0% / 0.1), 0 2px 4px -2px hsl(0 0% 0% / 0.1);\n  --shadow-lg: 0 10px 15px -3px hsl(0 0% 0% / 0.1), 0 4px 6px -4px hsl(0 0% 0% / 0.1);\n  --shadow-xl: 0 20px 25px -5px hsl(0 0% 0% / 0.1), 0 8px 10px -6px hsl(0 0% 0% / 0.1);\n  --shadow-2xl: 0 25px 50px -12px hsl(0 0% 0% / 0.25);\n  font-family: var(--font-sans);\n  letter-spacing: var(--tracking-normal);\n  background-color: var(--background);\n  color: var(--foreground);\n}\n",
+      "path": "styles/skins/base.css",
+      "target": "styles/skins/base.css"
+    },
+    {
+      "content": "# Skins: sources and licences\n\n- `sky.css`, `rose.css`, `base.css`, `default.css`: ui8kit (this repository).\n- Every other `.css` file here is a built-in theme preset of **tweakcn** by Sahaj Jain and contributors\n  (<https://github.com/jnsahaj/tweakcn>, `utils/theme-presets.ts` at commit `a3b47b37cba97dd637de517aab52c45ec0f83456`),\n  used under the **Apache License, Version 2.0** (<https://www.apache.org/licenses/LICENSE-2.0>). tweakcn ships no NOTICE file.\n- Changes made to the tweakcn presets: merged with tweakcn's defaults and converted to CSS by\n  `packages/skins/tools/tweakcn-skins.ts` (the colours, radius, fonts, shadows and letter spacing are tweakcn's values);\n  the selectors are ours (`data-skin` on `<html>` or on an element); a preset's `spacing` is not taken (the kit keeps 0.25rem);\n  fonts without medium or semibold faces have those weights mapped onto the faces that exist.\n- `skins.json` lists every skin, where it comes from and the Google Fonts it loads when it is on.\n",
+      "path": "styles/skins/NOTICE.md",
+      "target": "styles/skins/NOTICE.md"
+    }
+  ],
+  "meta": {
+    "category": "themes",
+    "kind": "theme",
+    "tags": [
+      "solid",
+      "theme"
+    ]
+  },
+  "name": "theme-base",
+  "registryDependencies": [],
+  "runtime": "solid",
+  "title": "Theme Base",
+  "type": "registry:theme"
+}

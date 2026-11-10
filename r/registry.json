@@ -44866,6 +44866,818 @@
       "type": "registry:ui"
     },
     {
+      "category": "themes",
+      "description": "Skin Amber Minimal: brand tokens (colours, radius, shadows, fonts) for every UI8Kit component, light and dark; on with data-skin=\"amber-minimal\".",
+      "group": "",
+      "kind": "theme",
+      "name": "theme-amber-minimal",
+      "runtimes": {
+        "react": {
+          "dependencies": [],
+          "files": [
+            "styles/skins/amber-minimal.css"
+          ],
+          "path": "react/themes/theme-amber-minimal.json",
+          "registryDependencies": [
+            "theme-base"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "styles/skins/amber-minimal.css"
+          ],
+          "path": "solid/themes/theme-amber-minimal.json",
+          "registryDependencies": [
+            "theme-base"
+          ]
+        },
+        "svelte": {
+          "dependencies": [],
+          "files": [
+            "styles/skins/amber-minimal.css"
+          ],
+          "path": "svelte/themes/theme-amber-minimal.json",
+          "registryDependencies": [
+            "theme-base"
+          ]
+        },
+        "vue": {
+          "dependencies": [],
+          "files": [
+            "styles/skins/amber-minimal.css"
+          ],
+          "path": "vue/themes/theme-amber-minimal.json",
+          "registryDependencies": [
+            "theme-base"
+          ]
+        }
+      },
+      "title": "Amber Minimal",
+      "type": "registry:theme"
+    },
+    {
+      "category": "themes",
+      "description": "Start values of a skin scoped on an element (data-skin on any element but <html>): the kit font, tracking, radius and shadows, so the element shows its own skin only. Licences of the skins in NOTICE.md.",
+      "group": "",
+      "kind": "theme",
+      "name": "theme-base",
+      "runtimes": {
+        "react": {
+          "dependencies": [],
+          "files": [
+            "styles/skins/base.css",
+            "styles/skins/NOTICE.md"
+          ],
+          "path": "react/themes/theme-base.json",
+          "registryDependencies": []
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "styles/skins/base.css",
+            "styles/skins/NOTICE.md"
+          ],
+          "path": "solid/themes/theme-base.json",
+          "registryDependencies": []
+        },
+        "svelte": {
+          "dependencies": [],
+          "files": [
+            "styles/skins/base.css",
+            "styles/skins/NOTICE.md"
+          ],
+          "path": "svelte/themes/theme-base.json",
+          "registryDependencies": []
+        },
+        "vue": {
+          "dependencies": [],
+          "files": [
+            "styles/skins/base.css",
+            "styles/skins/NOTICE.md"
+          ],
+          "path": "vue/themes/theme-base.json",
+          "registryDependencies": []
+        }
+      },
+      "title": "Theme Base",
+      "type": "registry:theme"
+    },
+    {
+      "category": "themes",
+      "description": "Skin Bubblegum: brand tokens (colours, radius, shadows, fonts) for every UI8Kit component, light and dark; on with data-skin=\"bubblegum\".",
+      "group": "",
+      "kind": "theme",
+      "name": "theme-bubblegum",
+      "runtimes": {
+        "react": {
+          "dependencies": [],
+          "files": [
+            "styles/skins/bubblegum.css"
+          ],
+          "path": "react/themes/theme-bubblegum.json",
+          "registryDependencies": [
+            "theme-base"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "styles/skins/bubblegum.css"
+          ],
+          "path": "solid/themes/theme-bubblegum.json",
+          "registryDependencies": [
+            "theme-base"
+          ]
+        },
+        "svelte": {
+          "dependencies": [],
+          "files": [
+            "styles/skins/bubblegum.css"
+          ],
+          "path": "svelte/themes/theme-bubblegum.json",
+          "registryDependencies": [
+            "theme-base"
+          ]
+        },
+        "vue": {
+          "dependencies": [],
+          "files": [
+            "styles/skins/bubblegum.css"
+          ],
+          "path": "vue/themes/theme-bubblegum.json",
+          "registryDependencies": [
+            "theme-base"
+          ]
+        }
+      },
+      "title": "Bubblegum",
+      "type": "registry:theme"
+    },
+    {
+      "category": "themes",
+      "description": "Skin Claude: brand tokens (colours, radius, shadows, fonts) for every UI8Kit component, light and dark; on with data-skin=\"claude\".",
+      "group": "",
+      "kind": "theme",
+      "name": "theme-claude",
+      "runtimes": {
+        "react": {
+          "dependencies": [],
+          "files": [
+            "styles/skins/claude.css"
+          ],
+          "path": "react/themes/theme-claude.json",
+          "registryDependencies": [
+            "theme-base"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "styles/skins/claude.css"
+          ],
+          "path": "solid/themes/theme-claude.json",
+          "registryDependencies": [
+            "theme-base"
+          ]
+        },
+        "svelte": {
+          "dependencies": [],
+          "files": [
+            "styles/skins/claude.css"
+          ],
+          "path": "svelte/themes/theme-claude.json",
+          "registryDependencies": [
+            "theme-base"
+          ]
+        },
+        "vue": {
+          "dependencies": [],
+          "files": [
+            "styles/skins/claude.css"
+          ],
+          "path": "vue/themes/theme-claude.json",
+          "registryDependencies": [
+            "theme-base"
+          ]
+        }
+      },
+      "title": "Claude",
+      "type": "registry:theme"
+    },
+    {
+      "category": "themes",
+      "description": "Skin Cosmic Night: brand tokens (colours, radius, shadows, fonts) for every UI8Kit component, light and dark; on with data-skin=\"cosmic-night\".",
+      "group": "",
+      "kind": "theme",
+      "name": "theme-cosmic-night",
+      "runtimes": {
+        "react": {
+          "dependencies": [],
+          "files": [
+            "styles/skins/cosmic-night.css"
+          ],
+          "path": "react/themes/theme-cosmic-night.json",
+          "registryDependencies": [
+            "theme-base"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "styles/skins/cosmic-night.css"
+          ],
+          "path": "solid/themes/theme-cosmic-night.json",
+          "registryDependencies": [
+            "theme-base"
+          ]
+        },
+        "svelte": {
+          "dependencies": [],
+          "files": [
+            "styles/skins/cosmic-night.css"
+          ],
+          "path": "svelte/themes/theme-cosmic-night.json",
+          "registryDependencies": [
+            "theme-base"
+          ]
+        },
+        "vue": {
+          "dependencies": [],
+          "files": [
+            "styles/skins/cosmic-night.css"
+          ],
+          "path": "vue/themes/theme-cosmic-night.json",
+          "registryDependencies": [
+            "theme-base"
+          ]
+        }
+      },
+      "title": "Cosmic Night",
+      "type": "registry:theme"
+    },
+    {
+      "category": "themes",
+      "description": "Skin Doom 64: brand tokens (colours, radius, shadows, fonts) for every UI8Kit component, light and dark; on with data-skin=\"doom-64\".",
+      "group": "",
+      "kind": "theme",
+      "name": "theme-doom-64",
+      "runtimes": {
+        "react": {
+          "dependencies": [],
+          "files": [
+            "styles/skins/doom-64.css"
+          ],
+          "path": "react/themes/theme-doom-64.json",
+          "registryDependencies": [
+            "theme-base"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "styles/skins/doom-64.css"
+          ],
+          "path": "solid/themes/theme-doom-64.json",
+          "registryDependencies": [
+            "theme-base"
+          ]
+        },
+        "svelte": {
+          "dependencies": [],
+          "files": [
+            "styles/skins/doom-64.css"
+          ],
+          "path": "svelte/themes/theme-doom-64.json",
+          "registryDependencies": [
+            "theme-base"
+          ]
+        },
+        "vue": {
+          "dependencies": [],
+          "files": [
+            "styles/skins/doom-64.css"
+          ],
+          "path": "vue/themes/theme-doom-64.json",
+          "registryDependencies": [
+            "theme-base"
+          ]
+        }
+      },
+      "title": "Doom 64",
+      "type": "registry:theme"
+    },
+    {
+      "category": "themes",
+      "description": "Skin Kodama Grove: brand tokens (colours, radius, shadows, fonts) for every UI8Kit component, light and dark; on with data-skin=\"kodama-grove\".",
+      "group": "",
+      "kind": "theme",
+      "name": "theme-kodama-grove",
+      "runtimes": {
+        "react": {
+          "dependencies": [],
+          "files": [
+            "styles/skins/kodama-grove.css"
+          ],
+          "path": "react/themes/theme-kodama-grove.json",
+          "registryDependencies": [
+            "theme-base"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "styles/skins/kodama-grove.css"
+          ],
+          "path": "solid/themes/theme-kodama-grove.json",
+          "registryDependencies": [
+            "theme-base"
+          ]
+        },
+        "svelte": {
+          "dependencies": [],
+          "files": [
+            "styles/skins/kodama-grove.css"
+          ],
+          "path": "svelte/themes/theme-kodama-grove.json",
+          "registryDependencies": [
+            "theme-base"
+          ]
+        },
+        "vue": {
+          "dependencies": [],
+          "files": [
+            "styles/skins/kodama-grove.css"
+          ],
+          "path": "vue/themes/theme-kodama-grove.json",
+          "registryDependencies": [
+            "theme-base"
+          ]
+        }
+      },
+      "title": "Kodama Grove",
+      "type": "registry:theme"
+    },
+    {
+      "category": "themes",
+      "description": "Skin Mocha Mousse: brand tokens (colours, radius, shadows, fonts) for every UI8Kit component, light and dark; on with data-skin=\"mocha-mousse\".",
+      "group": "",
+      "kind": "theme",
+      "name": "theme-mocha-mousse",
+      "runtimes": {
+        "react": {
+          "dependencies": [],
+          "files": [
+            "styles/skins/mocha-mousse.css"
+          ],
+          "path": "react/themes/theme-mocha-mousse.json",
+          "registryDependencies": [
+            "theme-base"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "styles/skins/mocha-mousse.css"
+          ],
+          "path": "solid/themes/theme-mocha-mousse.json",
+          "registryDependencies": [
+            "theme-base"
+          ]
+        },
+        "svelte": {
+          "dependencies": [],
+          "files": [
+            "styles/skins/mocha-mousse.css"
+          ],
+          "path": "svelte/themes/theme-mocha-mousse.json",
+          "registryDependencies": [
+            "theme-base"
+          ]
+        },
+        "vue": {
+          "dependencies": [],
+          "files": [
+            "styles/skins/mocha-mousse.css"
+          ],
+          "path": "vue/themes/theme-mocha-mousse.json",
+          "registryDependencies": [
+            "theme-base"
+          ]
+        }
+      },
+      "title": "Mocha Mousse",
+      "type": "registry:theme"
+    },
+    {
+      "category": "themes",
+      "description": "Skin Modern Minimal: brand tokens (colours, radius, shadows, fonts) for every UI8Kit component, light and dark; on with data-skin=\"modern-minimal\".",
+      "group": "",
+      "kind": "theme",
+      "name": "theme-modern-minimal",
+      "runtimes": {
+        "react": {
+          "dependencies": [],
+          "files": [
+            "styles/skins/modern-minimal.css"
+          ],
+          "path": "react/themes/theme-modern-minimal.json",
+          "registryDependencies": [
+            "theme-base"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "styles/skins/modern-minimal.css"
+          ],
+          "path": "solid/themes/theme-modern-minimal.json",
+          "registryDependencies": [
+            "theme-base"
+          ]
+        },
+        "svelte": {
+          "dependencies": [],
+          "files": [
+            "styles/skins/modern-minimal.css"
+          ],
+          "path": "svelte/themes/theme-modern-minimal.json",
+          "registryDependencies": [
+            "theme-base"
+          ]
+        },
+        "vue": {
+          "dependencies": [],
+          "files": [
+            "styles/skins/modern-minimal.css"
+          ],
+          "path": "vue/themes/theme-modern-minimal.json",
+          "registryDependencies": [
+            "theme-base"
+          ]
+        }
+      },
+      "title": "Modern Minimal",
+      "type": "registry:theme"
+    },
+    {
+      "category": "themes",
+      "description": "Skin Neo Brutalism: brand tokens (colours, radius, shadows, fonts) for every UI8Kit component, light and dark; on with data-skin=\"neo-brutalism\".",
+      "group": "",
+      "kind": "theme",
+      "name": "theme-neo-brutalism",
+      "runtimes": {
+        "react": {
+          "dependencies": [],
+          "files": [
+            "styles/skins/neo-brutalism.css"
+          ],
+          "path": "react/themes/theme-neo-brutalism.json",
+          "registryDependencies": [
+            "theme-base"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "styles/skins/neo-brutalism.css"
+          ],
+          "path": "solid/themes/theme-neo-brutalism.json",
+          "registryDependencies": [
+            "theme-base"
+          ]
+        },
+        "svelte": {
+          "dependencies": [],
+          "files": [
+            "styles/skins/neo-brutalism.css"
+          ],
+          "path": "svelte/themes/theme-neo-brutalism.json",
+          "registryDependencies": [
+            "theme-base"
+          ]
+        },
+        "vue": {
+          "dependencies": [],
+          "files": [
+            "styles/skins/neo-brutalism.css"
+          ],
+          "path": "vue/themes/theme-neo-brutalism.json",
+          "registryDependencies": [
+            "theme-base"
+          ]
+        }
+      },
+      "title": "Neo Brutalism",
+      "type": "registry:theme"
+    },
+    {
+      "category": "themes",
+      "description": "Skin Notebook: brand tokens (colours, radius, shadows, fonts) for every UI8Kit component, light and dark; on with data-skin=\"notebook\".",
+      "group": "",
+      "kind": "theme",
+      "name": "theme-notebook",
+      "runtimes": {
+        "react": {
+          "dependencies": [],
+          "files": [
+            "styles/skins/notebook.css"
+          ],
+          "path": "react/themes/theme-notebook.json",
+          "registryDependencies": [
+            "theme-base"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "styles/skins/notebook.css"
+          ],
+          "path": "solid/themes/theme-notebook.json",
+          "registryDependencies": [
+            "theme-base"
+          ]
+        },
+        "svelte": {
+          "dependencies": [],
+          "files": [
+            "styles/skins/notebook.css"
+          ],
+          "path": "svelte/themes/theme-notebook.json",
+          "registryDependencies": [
+            "theme-base"
+          ]
+        },
+        "vue": {
+          "dependencies": [],
+          "files": [
+            "styles/skins/notebook.css"
+          ],
+          "path": "vue/themes/theme-notebook.json",
+          "registryDependencies": [
+            "theme-base"
+          ]
+        }
+      },
+      "title": "Notebook",
+      "type": "registry:theme"
+    },
+    {
+      "category": "themes",
+      "description": "Skin Perpetuity: brand tokens (colours, radius, shadows, fonts) for every UI8Kit component, light and dark; on with data-skin=\"perpetuity\".",
+      "group": "",
+      "kind": "theme",
+      "name": "theme-perpetuity",
+      "runtimes": {
+        "react": {
+          "dependencies": [],
+          "files": [
+            "styles/skins/perpetuity.css"
+          ],
+          "path": "react/themes/theme-perpetuity.json",
+          "registryDependencies": [
+            "theme-base"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "styles/skins/perpetuity.css"
+          ],
+          "path": "solid/themes/theme-perpetuity.json",
+          "registryDependencies": [
+            "theme-base"
+          ]
+        },
+        "svelte": {
+          "dependencies": [],
+          "files": [
+            "styles/skins/perpetuity.css"
+          ],
+          "path": "svelte/themes/theme-perpetuity.json",
+          "registryDependencies": [
+            "theme-base"
+          ]
+        },
+        "vue": {
+          "dependencies": [],
+          "files": [
+            "styles/skins/perpetuity.css"
+          ],
+          "path": "vue/themes/theme-perpetuity.json",
+          "registryDependencies": [
+            "theme-base"
+          ]
+        }
+      },
+      "title": "Perpetuity",
+      "type": "registry:theme"
+    },
+    {
+      "category": "themes",
+      "description": "Skin Rose: brand tokens (colours, radius, shadows, fonts) for every UI8Kit component, light and dark; on with data-skin=\"rose\".",
+      "group": "",
+      "kind": "theme",
+      "name": "theme-rose",
+      "runtimes": {
+        "react": {
+          "dependencies": [],
+          "files": [
+            "styles/skins/rose.css"
+          ],
+          "path": "react/themes/theme-rose.json",
+          "registryDependencies": [
+            "theme-base"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "styles/skins/rose.css"
+          ],
+          "path": "solid/themes/theme-rose.json",
+          "registryDependencies": [
+            "theme-base"
+          ]
+        },
+        "svelte": {
+          "dependencies": [],
+          "files": [
+            "styles/skins/rose.css"
+          ],
+          "path": "svelte/themes/theme-rose.json",
+          "registryDependencies": [
+            "theme-base"
+          ]
+        },
+        "vue": {
+          "dependencies": [],
+          "files": [
+            "styles/skins/rose.css"
+          ],
+          "path": "vue/themes/theme-rose.json",
+          "registryDependencies": [
+            "theme-base"
+          ]
+        }
+      },
+      "title": "Rose",
+      "type": "registry:theme"
+    },
+    {
+      "category": "themes",
+      "description": "Skin Sky: brand tokens (colours, radius, shadows, fonts) for every UI8Kit component, light and dark; on with data-skin=\"sky\".",
+      "group": "",
+      "kind": "theme",
+      "name": "theme-sky",
+      "runtimes": {
+        "react": {
+          "dependencies": [],
+          "files": [
+            "styles/skins/sky.css"
+          ],
+          "path": "react/themes/theme-sky.json",
+          "registryDependencies": [
+            "theme-base"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "styles/skins/sky.css"
+          ],
+          "path": "solid/themes/theme-sky.json",
+          "registryDependencies": [
+            "theme-base"
+          ]
+        },
+        "svelte": {
+          "dependencies": [],
+          "files": [
+            "styles/skins/sky.css"
+          ],
+          "path": "svelte/themes/theme-sky.json",
+          "registryDependencies": [
+            "theme-base"
+          ]
+        },
+        "vue": {
+          "dependencies": [],
+          "files": [
+            "styles/skins/sky.css"
+          ],
+          "path": "vue/themes/theme-sky.json",
+          "registryDependencies": [
+            "theme-base"
+          ]
+        }
+      },
+      "title": "Sky",
+      "type": "registry:theme"
+    },
+    {
+      "category": "themes",
+      "description": "Skin Supabase: brand tokens (colours, radius, shadows, fonts) for every UI8Kit component, light and dark; on with data-skin=\"supabase\".",
+      "group": "",
+      "kind": "theme",
+      "name": "theme-supabase",
+      "runtimes": {
+        "react": {
+          "dependencies": [],
+          "files": [
+            "styles/skins/supabase.css"
+          ],
+          "path": "react/themes/theme-supabase.json",
+          "registryDependencies": [
+            "theme-base"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "styles/skins/supabase.css"
+          ],
+          "path": "solid/themes/theme-supabase.json",
+          "registryDependencies": [
+            "theme-base"
+          ]
+        },
+        "svelte": {
+          "dependencies": [],
+          "files": [
+            "styles/skins/supabase.css"
+          ],
+          "path": "svelte/themes/theme-supabase.json",
+          "registryDependencies": [
+            "theme-base"
+          ]
+        },
+        "vue": {
+          "dependencies": [],
+          "files": [
+            "styles/skins/supabase.css"
+          ],
+          "path": "vue/themes/theme-supabase.json",
+          "registryDependencies": [
+            "theme-base"
+          ]
+        }
+      },
+      "title": "Supabase",
+      "type": "registry:theme"
+    },
+    {
+      "category": "themes",
+      "description": "Skin T3 Chat: brand tokens (colours, radius, shadows, fonts) for every UI8Kit component, light and dark; on with data-skin=\"t3-chat\".",
+      "group": "",
+      "kind": "theme",
+      "name": "theme-t3-chat",
+      "runtimes": {
+        "react": {
+          "dependencies": [],
+          "files": [
+            "styles/skins/t3-chat.css"
+          ],
+          "path": "react/themes/theme-t3-chat.json",
+          "registryDependencies": [
+            "theme-base"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "styles/skins/t3-chat.css"
+          ],
+          "path": "solid/themes/theme-t3-chat.json",
+          "registryDependencies": [
+            "theme-base"
+          ]
+        },
+        "svelte": {
+          "dependencies": [],
+          "files": [
+            "styles/skins/t3-chat.css"
+          ],
+          "path": "svelte/themes/theme-t3-chat.json",
+          "registryDependencies": [
+            "theme-base"
+          ]
+        },
+        "vue": {
+          "dependencies": [],
+          "files": [
+            "styles/skins/t3-chat.css"
+          ],
+          "path": "vue/themes/theme-t3-chat.json",
+          "registryDependencies": [
+            "theme-base"
+          ]
+        }
+      },
+      "title": "T3 Chat",
+      "type": "registry:theme"
+    },
+    {
       "category": "primitives",
       "description": "Theme Toggle primitive",
       "group": "",
@@ -44979,6 +45791,57 @@
       },
       "title": "Theme Toggle",
       "type": "registry:ui"
+    },
+    {
+      "category": "themes",
+      "description": "Skin Violet Bloom: brand tokens (colours, radius, shadows, fonts) for every UI8Kit component, light and dark; on with data-skin=\"violet-bloom\".",
+      "group": "",
+      "kind": "theme",
+      "name": "theme-violet-bloom",
+      "runtimes": {
+        "react": {
+          "dependencies": [],
+          "files": [
+            "styles/skins/violet-bloom.css"
+          ],
+          "path": "react/themes/theme-violet-bloom.json",
+          "registryDependencies": [
+            "theme-base"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "styles/skins/violet-bloom.css"
+          ],
+          "path": "solid/themes/theme-violet-bloom.json",
+          "registryDependencies": [
+            "theme-base"
+          ]
+        },
+        "svelte": {
+          "dependencies": [],
+          "files": [
+            "styles/skins/violet-bloom.css"
+          ],
+          "path": "svelte/themes/theme-violet-bloom.json",
+          "registryDependencies": [
+            "theme-base"
+          ]
+        },
+        "vue": {
+          "dependencies": [],
+          "files": [
+            "styles/skins/violet-bloom.css"
+          ],
+          "path": "vue/themes/theme-violet-bloom.json",
+          "registryDependencies": [
+            "theme-base"
+          ]
+        }
+      },
+      "title": "Violet Bloom",
+      "type": "registry:theme"
     },
     {
       "category": "components",
@@ -47127,7 +47990,7 @@
     }
   ],
   "lastUpdated": "2026-11-10T00:07:21+03:00",
-  "layout": "<runtime>/index.json + <runtime>/{components/ui,components,blocks,utils,lib}/<name>.json; use r/<runtime> as registryUrl",
+  "layout": "<runtime>/index.json + <runtime>/{components/ui,components,blocks,utils,lib,themes}/<name>.json; use r/<runtime> as registryUrl",
   "props": {
     "digest": "sha256:395a62bcfb3439038865637e0d278a8a41413dd1cdd22e00f0feac85fc5748da",
     "path": "props/v0.json",

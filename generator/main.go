@@ -387,6 +387,8 @@ func urlFor(it item) string {
 		return "/components/" + it.Name + "/"
 	case "block":
 		return "/blocks/" + it.Name + "/"
+	case "theme":
+		return "/themes/" + it.Name + "/"
 	}
 	return "/lib/" + it.Name + "/"
 }

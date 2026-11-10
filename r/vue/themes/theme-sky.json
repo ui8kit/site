@@ -1,0 +1,40 @@
+{
+  "$schema": "https://registry.buildy.tw/schema/registry-item.json",
+  "dependencies": [],
+  "description": "Skin Sky: brand tokens (colours, radius, shadows, fonts) for every UI8Kit component, light and dark; on with data-skin=\"sky\".",
+  "devDependencies": [],
+  "digest": "0.1.0",
+  "files": [
+    {
+      "content": "/* Skin \"sky\": white and navy with an orange primary, Istok Web, 0.5rem (8px) corners, soft shadows.\n   On when <html data-skin=\"sky\"> (see skins.css); the font is loaded by bootScreen only for this skin.\n   Only the shadcn tokens change: plain `rounded` reads --radius, the body font reads --font-sans, the tracking\n   utilities read --tracking-*; the shadow utilities print literal values, so the few the kit uses are pointed at the\n   skin's --shadow-* below. */\n:root[data-skin=\"sky\"] {\n  --background: hsl(0 0% 100%);\n  --foreground: hsl(214.4262 100% 11.9608%);\n  --card: hsl(210 16.6667% 97.6471%);\n  --card-foreground: hsl(214.4262 100% 11.9608%);\n  --popover: hsl(0 0% 100%);\n  --popover-foreground: hsl(214.4262 100% 11.9608%);\n  --primary: hsl(23.4 100% 39.2%);\n  --primary-foreground: hsl(0 0% 100%);\n  --secondary: hsl(209.0323 100% 93.9216%);\n  --secondary-foreground: hsl(214.4262 100% 11.9608%);\n  --muted: hsl(210 100% 98.0392%);\n  --muted-foreground: hsl(215.2941 39.0805% 34.1176%);\n  --accent: hsl(209.0323 100% 93.9216%);\n  --accent-foreground: hsl(214.4262 100% 11.9608%);\n  --destructive: hsl(358 69% 51%);\n  --destructive-foreground: hsl(210 40% 98.0392%);\n  /* a barely visible hairline: just darker than the card fill (97.6%), so card edges stay faintly readable on white;\n     fields keep the stronger line (--input, inset-ring-input in the kit) so they read as fields */\n  --border: hsl(214 32% 94%);\n  --input: hsl(214.2857 31.8182% 91.3725%);\n  --ring: hsl(214.4262 100% 11.9608%);\n  --chart-1: hsl(219.8684 90.4762% 67.0588%);\n  --chart-2: hsl(24.8908 100% 55.098%);\n  --chart-3: hsl(215.2941 25% 26.6667%);\n  --chart-4: hsl(32.2059 91.8919% 70.9804%);\n  --chart-5: hsl(213.4884 84.3137% 90%);\n  --sidebar: hsl(0 0% 100%);\n  --sidebar-foreground: hsl(214.4262 100% 11.9608%);\n  --sidebar-primary: hsl(29.1429 100% 51.9608%);\n  --sidebar-primary-foreground: hsl(0 0% 100%);\n  --sidebar-accent: hsl(209.0323 100% 93.9216%);\n  --sidebar-accent-foreground: hsl(214.4262 100% 11.9608%);\n  --sidebar-border: hsl(214.2857 31.8182% 91.3725%);\n  --sidebar-ring: hsl(214.4262 100% 11.9608%);\n  --font-sans: \"Istok Web\", system-ui, sans-serif;\n  /* Istok Web ships 400 and 700 only: medium (500) and semibold (600) would ask for faces that do not exist,\n     and some engines (WebKit) then draw that text in the fallback system font; map them onto real faces */\n  --font-weight-medium: 400;\n  --font-weight-semibold: 700;\n  --font-serif: Georgia, serif;\n  --font-mono: \"JetBrains Mono\", monospace;\n  --radius: 0.5rem;\n  --shadow-2xs: 0px 4px 10px 0px hsl(0 0% 0% / 0.03);\n  --shadow-xs: 0px 4px 10px 0px hsl(0 0% 0% / 0.03);\n  --shadow-sm: 0px 4px 10px 0px hsl(0 0% 0% / 0.05), 0px 1px 2px -1px hsl(0 0% 0% / 0.05);\n  --shadow: 0px 4px 10px 0px hsl(0 0% 0% / 0.05), 0px 1px 2px -1px hsl(0 0% 0% / 0.05);\n  --shadow-md: 0px 4px 10px 0px hsl(0 0% 0% / 0.05), 0px 2px 4px -1px hsl(0 0% 0% / 0.05);\n  --shadow-lg: 0px 4px 10px 0px hsl(0 0% 0% / 0.05), 0px 4px 6px -1px hsl(0 0% 0% / 0.05);\n  --shadow-xl: 0px 4px 10px 0px hsl(0 0% 0% / 0.05), 0px 8px 10px -1px hsl(0 0% 0% / 0.05);\n  --shadow-2xl: 0px 4px 10px 0px hsl(0 0% 0% / 0.13);\n  /* the tracking scale follows --tracking-normal */\n  --tracking-normal: -0.01em;\n  --tracking-tighter: calc(var(--tracking-normal) - 0.05em);\n  --tracking-tight: calc(var(--tracking-normal) - 0.025em);\n  --tracking-wide: calc(var(--tracking-normal) + 0.025em);\n  --tracking-wider: calc(var(--tracking-normal) + 0.05em);\n  --tracking-widest: calc(var(--tracking-normal) + 0.1em);\n  --spacing: 0.25rem;\n  --destructive-hover: hsl(358 69% 45%);\n}\n\n:root[data-skin=\"sky\"]:is(.dark, [data-theme=\"dark\"]) {\n  --background: hsl(220 23.0769% 5.098%);\n  --foreground: hsl(210 16.6667% 97.6471%);\n  --card: hsl(220 18.3673% 9.6078%);\n  --card-foreground: hsl(210 16.6667% 97.6471%);\n  --popover: hsl(220 23.0769% 5.098%);\n  --popover-foreground: hsl(210 16.6667% 97.6471%);\n  --primary: hsl(21.8 100% 40%);\n  --primary-foreground: hsl(0 0% 100%);\n  --secondary: hsl(217.2414 32.5843% 17.451%);\n  --secondary-foreground: hsl(210 16.6667% 97.6471%);\n  --muted: hsl(217.2414 32.5843% 17.451%);\n  --muted-foreground: hsl(215 20.2247% 65.098%);\n  --accent: hsl(214.4262 100% 11.9608%);\n  --accent-foreground: hsl(0 0% 100%);\n  --destructive: hsl(0 62.8205% 30.5882%);\n  --destructive-foreground: hsl(210 40% 98.0392%);\n  --border: hsl(217.2414 32.5843% 17.451%);\n  --input: hsl(217.2414 32.5843% 17.451%);\n  --ring: hsl(24.8908 100% 55.098%);\n  --chart-1: hsl(24.8908 100% 55.098%);\n  --chart-2: hsl(217.2193 91.2195% 59.8039%);\n  --chart-3: hsl(160.1183 84.0796% 39.4118%);\n  --chart-4: hsl(37.6923 92.126% 50.1961%);\n  --chart-5: hsl(238.7324 83.5294% 66.6667%);\n  --sidebar: hsl(220 23.0769% 5.098%);\n  --sidebar-foreground: hsl(210 16.6667% 97.6471%);\n  --sidebar-primary: hsl(24.8908 100% 55.098%);\n  --sidebar-primary-foreground: hsl(0 0% 100%);\n  --sidebar-accent: hsl(0 0% 100%);\n  --sidebar-accent-foreground: hsl(210 23.7288% 23.1373%);\n  --sidebar-border: hsl(217.2414 32.5843% 17.451%);\n  --sidebar-ring: hsl(24.8908 100% 55.098%);\n  --shadow-2xs: 0px 4px 15px 0px hsl(0 0% 0% / 0.2);\n  --shadow-xs: 0px 4px 15px 0px hsl(0 0% 0% / 0.2);\n  --shadow-sm: 0px 4px 15px 0px hsl(0 0% 0% / 0.4), 0px 1px 2px -1px hsl(0 0% 0% / 0.4);\n  --shadow: 0px 4px 15px 0px hsl(0 0% 0% / 0.4), 0px 1px 2px -1px hsl(0 0% 0% / 0.4);\n  --shadow-md: 0px 4px 15px 0px hsl(0 0% 0% / 0.4), 0px 2px 4px -1px hsl(0 0% 0% / 0.4);\n  --shadow-lg: 0px 4px 15px 0px hsl(0 0% 0% / 0.4), 0px 4px 6px -1px hsl(0 0% 0% / 0.4);\n  --shadow-xl: 0px 4px 15px 0px hsl(0 0% 0% / 0.4), 0px 8px 10px -1px hsl(0 0% 0% / 0.4);\n  --shadow-2xl: 0px 4px 15px 0px hsl(0 0% 0% / 1);\n  --destructive-hover: hsl(0 62.82% 24.59%);\n}\n\n:root[data-skin=\"sky\"] body { letter-spacing: var(--tracking-normal); }\n:root[data-skin=\"sky\"] .shadow-xs { --tw-shadow: var(--shadow-xs); }\n:root[data-skin=\"sky\"] .shadow-sm { --tw-shadow: var(--shadow-sm); }\n:root[data-skin=\"sky\"] .shadow { --tw-shadow: var(--shadow); }\n:root[data-skin=\"sky\"] .shadow-md { --tw-shadow: var(--shadow-md); }\n:root[data-skin=\"sky\"] .shadow-lg { --tw-shadow: var(--shadow-lg); }\n:root[data-skin=\"sky\"] .shadow-xl { --tw-shadow: var(--shadow-xl); }\n",
+      "path": "styles/skins/sky.css",
+      "target": "styles/skins/sky.css"
+    }
+  ],
+  "meta": {
+    "category": "themes",
+    "kind": "theme",
+    "skin": {
+      "fonts": [
+        "Istok+Web:ital,wght@0,400;0,700;1,400;1,700"
+      ],
+      "id": "sky",
+      "license": "MIT",
+      "name": "Sky",
+      "sha256": "1e15a924b21f69c1a6481cbdf6f3507dca19d2a8a0a13d5102b45166640018ae",
+      "source": "ui8kit",
+      "version": "1.0.0"
+    },
+    "tags": [
+      "vue",
+      "theme"
+    ]
+  },
+  "name": "theme-sky",
+  "registryDependencies": [
+    "theme-base"
+  ],
+  "runtime": "vue",
+  "title": "Sky",
+  "type": "registry:theme"
+}

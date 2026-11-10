@@ -1,0 +1,40 @@
+{
+  "$schema": "https://registry.buildy.tw/schema/registry-item.json",
+  "dependencies": [],
+  "description": "Skin Violet Bloom: brand tokens (colours, radius, shadows, fonts) for every UI8Kit component, light and dark; on with data-skin=\"violet-bloom\".",
+  "devDependencies": [],
+  "digest": "0.1.0",
+  "files": [
+    {
+      "content": "/* Skin \"violet-bloom\" (Violet Bloom): the tweakcn preset \"violet-bloom\" (Apache-2.0, see NOTICE.md), written by packages/skins/tools/tweakcn-skins.ts.\n   On when data-skin=\"violet-bloom\" is on <html> (the page) or on any element (a tile of /skins/). Values as tweakcn exports them;\n   the spacing scale stays the kit's 0.25rem. Fonts: Plus Jakarta Sans (Google Fonts, loaded when the skin is on). */\n[data-skin=\"violet-bloom\"] {\n  --background: hsl(0 0% 99%);\n  --foreground: hsl(0 0% 0%);\n  --card: hsl(0 0% 99%);\n  --card-foreground: hsl(0 0% 0%);\n  --popover: hsl(0 0% 99%);\n  --popover-foreground: hsl(0 0% 0%);\n  --primary: hsl(258 100% 60%);\n  --primary-foreground: hsl(0 0% 100%);\n  --secondary: hsl(214 24% 94%);\n  --secondary-foreground: hsl(0 0% 3%);\n  --muted: hsl(0 0% 96%);\n  --muted-foreground: hsl(0 0% 32%);\n  --accent: hsl(213 100% 96%);\n  --accent-foreground: hsl(216.3 76% 49%);\n  --destructive: hsl(357.3 64.7% 53.3%);\n  --destructive-foreground: hsl(0 0% 100%);\n  --border: hsl(240 17% 92%);\n  --input: hsl(0 0% 92%);\n  --ring: hsl(0 0% 0%);\n  --chart-1: hsl(148.1 53.4% 53.7%);\n  --chart-2: hsl(258 100% 60%);\n  --chart-3: hsl(25 98% 58%);\n  --chart-4: hsl(217.1 76.7% 54.5%);\n  --chart-5: hsl(0 0% 45%);\n  --sidebar: hsl(210 43% 97%);\n  --sidebar-foreground: hsl(0 0% 0%);\n  --sidebar-primary: hsl(0 0% 0%);\n  --sidebar-primary-foreground: hsl(0 0% 100%);\n  --sidebar-accent: hsl(0 0% 92%);\n  --sidebar-accent-foreground: hsl(0 0% 0%);\n  --sidebar-border: hsl(0 0% 92%);\n  --sidebar-ring: hsl(0 0% 0%);\n  --font-sans: Plus Jakarta Sans, sans-serif;\n  --font-serif: Lora, serif;\n  --font-mono: IBM Plex Mono, monospace;\n  --radius: 1.4rem;\n  --shadow-2xs: 0px 2px 3px 0px hsl(0 0% 0% / 0.08);\n  --shadow-xs: 0px 2px 3px 0px hsl(0 0% 0% / 0.08);\n  --shadow-sm: 0px 2px 3px 0px hsl(0 0% 0% / 0.16), 0px 1px 2px -1px hsl(0 0% 0% / 0.16);\n  --shadow: 0px 2px 3px 0px hsl(0 0% 0% / 0.16), 0px 1px 2px -1px hsl(0 0% 0% / 0.16);\n  --shadow-md: 0px 2px 3px 0px hsl(0 0% 0% / 0.16), 0px 2px 4px -1px hsl(0 0% 0% / 0.16);\n  --shadow-lg: 0px 2px 3px 0px hsl(0 0% 0% / 0.16), 0px 4px 6px -1px hsl(0 0% 0% / 0.16);\n  --shadow-xl: 0px 2px 3px 0px hsl(0 0% 0% / 0.16), 0px 8px 10px -1px hsl(0 0% 0% / 0.16);\n  --shadow-2xl: 0px 2px 3px 0px hsl(0 0% 0% / 0.40);\n  --tracking-normal: -0.025em;\n  --tracking-tighter: calc(var(--tracking-normal) - 0.05em);\n  --tracking-tight: calc(var(--tracking-normal) - 0.025em);\n  --tracking-wide: calc(var(--tracking-normal) + 0.025em);\n  --tracking-wider: calc(var(--tracking-normal) + 0.05em);\n  --tracking-widest: calc(var(--tracking-normal) + 0.1em);\n  --destructive-hover: hsl(357.3 64.7% 47.3%);\n}\n\n:is(.dark, [data-theme=\"dark\"]) [data-skin=\"violet-bloom\"],\n[data-skin=\"violet-bloom\"]:is(.dark, [data-theme=\"dark\"]) {\n  --background: hsl(225 7% 11%);\n  --foreground: hsl(0 0% 94%);\n  --card: hsl(228 7% 14%);\n  --card-foreground: hsl(0 0% 94%);\n  --popover: hsl(228 7% 14%);\n  --popover-foreground: hsl(0 0% 94%);\n  --primary: hsl(258.1 89% 64.3%);\n  --primary-foreground: hsl(0 0% 100%);\n  --secondary: hsl(227 10% 18%);\n  --secondary-foreground: hsl(0 0% 94%);\n  --muted: hsl(227 10% 18%);\n  --muted-foreground: hsl(0 0% 63%);\n  --accent: hsl(217.2 32.6% 17.5%);\n  --accent-foreground: hsl(208.2 100% 73.7%);\n  --destructive: hsl(358.2 55.3% 53.5%);\n  --destructive-foreground: hsl(0 0% 100%);\n  --border: hsl(223 6% 21%);\n  --input: hsl(223 6% 21%);\n  --ring: hsl(258 100% 68%);\n  --chart-1: hsl(142 69% 58%);\n  --chart-2: hsl(258 100% 68%);\n  --chart-3: hsl(0 94% 82%);\n  --chart-4: hsl(217.5 87.6% 65.3%);\n  --chart-5: hsl(0 0% 63%);\n  --sidebar: hsl(240 4% 9%);\n  --sidebar-foreground: hsl(0 0% 94%);\n  --sidebar-primary: hsl(258 100% 68%);\n  --sidebar-primary-foreground: hsl(0 0% 100%);\n  --sidebar-accent: hsl(227 10% 18%);\n  --sidebar-accent-foreground: hsl(258 100% 68%);\n  --sidebar-border: hsl(223 6% 21%);\n  --sidebar-ring: hsl(258 100% 68%);\n  --shadow-2xs: 0px 2px 3px 0px hsl(0 0% 0% / 0.08);\n  --shadow-xs: 0px 2px 3px 0px hsl(0 0% 0% / 0.08);\n  --shadow-sm: 0px 2px 3px 0px hsl(0 0% 0% / 0.16), 0px 1px 2px -1px hsl(0 0% 0% / 0.16);\n  --shadow: 0px 2px 3px 0px hsl(0 0% 0% / 0.16), 0px 1px 2px -1px hsl(0 0% 0% / 0.16);\n  --shadow-md: 0px 2px 3px 0px hsl(0 0% 0% / 0.16), 0px 2px 4px -1px hsl(0 0% 0% / 0.16);\n  --shadow-lg: 0px 2px 3px 0px hsl(0 0% 0% / 0.16), 0px 4px 6px -1px hsl(0 0% 0% / 0.16);\n  --shadow-xl: 0px 2px 3px 0px hsl(0 0% 0% / 0.16), 0px 8px 10px -1px hsl(0 0% 0% / 0.16);\n  --shadow-2xl: 0px 2px 3px 0px hsl(0 0% 0% / 0.40);\n  --destructive-hover: hsl(358.2 55.3% 47.5%);\n}\n\n:root[data-skin=\"violet-bloom\"] body { letter-spacing: var(--tracking-normal); }\n[data-skin=\"violet-bloom\"] .shadow-xs { --tw-shadow: var(--shadow-xs); }\n[data-skin=\"violet-bloom\"] .shadow-sm { --tw-shadow: var(--shadow-sm); }\n[data-skin=\"violet-bloom\"] .shadow { --tw-shadow: var(--shadow); }\n[data-skin=\"violet-bloom\"] .shadow-md { --tw-shadow: var(--shadow-md); }\n[data-skin=\"violet-bloom\"] .shadow-lg { --tw-shadow: var(--shadow-lg); }\n[data-skin=\"violet-bloom\"] .shadow-xl { --tw-shadow: var(--shadow-xl); }\n",
+      "path": "styles/skins/violet-bloom.css",
+      "target": "styles/skins/violet-bloom.css"
+    }
+  ],
+  "meta": {
+    "category": "themes",
+    "kind": "theme",
+    "skin": {
+      "fonts": [
+        "Plus+Jakarta+Sans:wght@400;500;600;700"
+      ],
+      "id": "violet-bloom",
+      "license": "Apache-2.0",
+      "name": "Violet Bloom",
+      "sha256": "432e251d02ac048907b9c7ea8b3e4fdbd8c16af29037c4757a1cbb5de6039af5",
+      "source": "tweakcn a3b47b3",
+      "version": "1.0.0"
+    },
+    "tags": [
+      "svelte",
+      "theme"
+    ]
+  },
+  "name": "theme-violet-bloom",
+  "registryDependencies": [
+    "theme-base"
+  ],
+  "runtime": "svelte",
+  "title": "Violet Bloom",
+  "type": "registry:theme"
+}

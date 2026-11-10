@@ -1,0 +1,40 @@
+{
+  "$schema": "https://registry.buildy.tw/schema/registry-item.json",
+  "dependencies": [],
+  "description": "Skin Neo Brutalism: brand tokens (colours, radius, shadows, fonts) for every UI8Kit component, light and dark; on with data-skin=\"neo-brutalism\".",
+  "devDependencies": [],
+  "digest": "0.1.0",
+  "files": [
+    {
+      "content": "/* Skin \"neo-brutalism\" (Neo Brutalism): the tweakcn preset \"neo-brutalism\" (Apache-2.0, see NOTICE.md), written by packages/skins/tools/tweakcn-skins.ts.\n   On when data-skin=\"neo-brutalism\" is on <html> (the page) or on any element (a tile of /skins/). Values as tweakcn exports them;\n   the spacing scale stays the kit's 0.25rem. Fonts: DM Sans (Google Fonts, loaded when the skin is on). */\n[data-skin=\"neo-brutalism\"] {\n  --background: hsl(0 0% 100%);\n  --foreground: hsl(0 0% 0%);\n  --card: hsl(0 0% 100%);\n  --card-foreground: hsl(0 0% 0%);\n  --popover: hsl(0 0% 100%);\n  --popover-foreground: hsl(0 0% 0%);\n  --primary: hsl(354.9 91.8% 47.6%);\n  --primary-foreground: hsl(0 0% 100%);\n  --secondary: hsl(60 100% 50%);\n  --secondary-foreground: hsl(0 0% 0%);\n  --muted: hsl(0 0% 94%);\n  --muted-foreground: hsl(0 0% 20%);\n  --accent: hsl(216 100% 50%);\n  --accent-foreground: hsl(0 0% 100%);\n  --destructive: hsl(0 0% 0%);\n  --destructive-foreground: hsl(0 0% 100%);\n  --border: hsl(0 0% 0%);\n  --input: hsl(0 0% 0%);\n  --ring: hsl(0 100% 60%);\n  --chart-1: hsl(0 100% 60%);\n  --chart-2: hsl(60 100% 50%);\n  --chart-3: hsl(216 100% 50%);\n  --chart-4: hsl(120 100% 40%);\n  --chart-5: hsl(300 100% 40%);\n  --sidebar: hsl(0 0% 94%);\n  --sidebar-foreground: hsl(0 0% 0%);\n  --sidebar-primary: hsl(0 100% 60%);\n  --sidebar-primary-foreground: hsl(0 0% 100%);\n  --sidebar-accent: hsl(216 100% 50%);\n  --sidebar-accent-foreground: hsl(0 0% 100%);\n  --sidebar-border: hsl(0 0% 0%);\n  --sidebar-ring: hsl(0 100% 60%);\n  --font-sans: DM Sans, sans-serif;\n  --font-serif: ui-serif, Georgia, Cambria, \"Times New Roman\", Times, serif;\n  --font-mono: Space Mono, monospace;\n  --radius: 0px;\n  --shadow-2xs: 4px 4px 0px 0px hsl(0 0% 0% / 0.50);\n  --shadow-xs: 4px 4px 0px 0px hsl(0 0% 0% / 0.50);\n  --shadow-sm: 4px 4px 0px 0px hsl(0 0% 0% / 1.00), 4px 1px 2px -1px hsl(0 0% 0% / 1.00);\n  --shadow: 4px 4px 0px 0px hsl(0 0% 0% / 1.00), 4px 1px 2px -1px hsl(0 0% 0% / 1.00);\n  --shadow-md: 4px 4px 0px 0px hsl(0 0% 0% / 1.00), 4px 2px 4px -1px hsl(0 0% 0% / 1.00);\n  --shadow-lg: 4px 4px 0px 0px hsl(0 0% 0% / 1.00), 4px 4px 6px -1px hsl(0 0% 0% / 1.00);\n  --shadow-xl: 4px 4px 0px 0px hsl(0 0% 0% / 1.00), 4px 8px 10px -1px hsl(0 0% 0% / 1.00);\n  --shadow-2xl: 4px 4px 0px 0px hsl(0 0% 0% / 2.50);\n  --destructive-hover: hsl(0 0% 6%);\n}\n\n:is(.dark, [data-theme=\"dark\"]) [data-skin=\"neo-brutalism\"],\n[data-skin=\"neo-brutalism\"]:is(.dark, [data-theme=\"dark\"]) {\n  --background: hsl(0 0% 0%);\n  --foreground: hsl(0 0% 100%);\n  --card: hsl(0 0% 20%);\n  --card-foreground: hsl(0 0% 100%);\n  --popover: hsl(0 0% 20%);\n  --popover-foreground: hsl(0 0% 100%);\n  --primary: hsl(0 100% 70%);\n  --primary-foreground: hsl(0 0% 0%);\n  --secondary: hsl(60 100% 60%);\n  --secondary-foreground: hsl(0 0% 0%);\n  --muted: hsl(0 0% 10%);\n  --muted-foreground: hsl(0 0% 80%);\n  --accent: hsl(210 100% 60%);\n  --accent-foreground: hsl(0 0% 0%);\n  --destructive: hsl(0 0% 100%);\n  --destructive-foreground: hsl(0 0% 0%);\n  --border: hsl(0 0% 100%);\n  --input: hsl(0 0% 100%);\n  --ring: hsl(0 100% 70%);\n  --chart-1: hsl(0 100% 70%);\n  --chart-2: hsl(60 100% 60%);\n  --chart-3: hsl(210 100% 60%);\n  --chart-4: hsl(120 60% 50%);\n  --chart-5: hsl(300 60% 50%);\n  --sidebar: hsl(0 0% 0%);\n  --sidebar-foreground: hsl(0 0% 100%);\n  --sidebar-primary: hsl(0 100% 70%);\n  --sidebar-primary-foreground: hsl(0 0% 0%);\n  --sidebar-accent: hsl(210 100% 60%);\n  --sidebar-accent-foreground: hsl(0 0% 0%);\n  --sidebar-border: hsl(0 0% 100%);\n  --sidebar-ring: hsl(0 100% 70%);\n  --shadow-2xs: 4px 4px 0px 0px hsl(0 0% 0% / 0.50);\n  --shadow-xs: 4px 4px 0px 0px hsl(0 0% 0% / 0.50);\n  --shadow-sm: 4px 4px 0px 0px hsl(0 0% 0% / 1.00), 4px 1px 2px -1px hsl(0 0% 0% / 1.00);\n  --shadow: 4px 4px 0px 0px hsl(0 0% 0% / 1.00), 4px 1px 2px -1px hsl(0 0% 0% / 1.00);\n  --shadow-md: 4px 4px 0px 0px hsl(0 0% 0% / 1.00), 4px 2px 4px -1px hsl(0 0% 0% / 1.00);\n  --shadow-lg: 4px 4px 0px 0px hsl(0 0% 0% / 1.00), 4px 4px 6px -1px hsl(0 0% 0% / 1.00);\n  --shadow-xl: 4px 4px 0px 0px hsl(0 0% 0% / 1.00), 4px 8px 10px -1px hsl(0 0% 0% / 1.00);\n  --shadow-2xl: 4px 4px 0px 0px hsl(0 0% 0% / 2.50);\n  --destructive-hover: hsl(0 0% 94%);\n}\n\n[data-skin=\"neo-brutalism\"] .shadow-xs { --tw-shadow: var(--shadow-xs); }\n[data-skin=\"neo-brutalism\"] .shadow-sm { --tw-shadow: var(--shadow-sm); }\n[data-skin=\"neo-brutalism\"] .shadow { --tw-shadow: var(--shadow); }\n[data-skin=\"neo-brutalism\"] .shadow-md { --tw-shadow: var(--shadow-md); }\n[data-skin=\"neo-brutalism\"] .shadow-lg { --tw-shadow: var(--shadow-lg); }\n[data-skin=\"neo-brutalism\"] .shadow-xl { --tw-shadow: var(--shadow-xl); }\n",
+      "path": "styles/skins/neo-brutalism.css",
+      "target": "styles/skins/neo-brutalism.css"
+    }
+  ],
+  "meta": {
+    "category": "themes",
+    "kind": "theme",
+    "skin": {
+      "fonts": [
+        "DM+Sans:wght@400;500;600;700"
+      ],
+      "id": "neo-brutalism",
+      "license": "Apache-2.0",
+      "name": "Neo Brutalism",
+      "sha256": "c13a496df78eb3f7e0b50295bfd479f28d8443671a7fc424966483f939110f10",
+      "source": "tweakcn a3b47b3",
+      "version": "1.0.0"
+    },
+    "tags": [
+      "vue",
+      "theme"
+    ]
+  },
+  "name": "theme-neo-brutalism",
+  "registryDependencies": [
+    "theme-base"
+  ],
+  "runtime": "vue",
+  "title": "Neo Brutalism",
+  "type": "registry:theme"
+}

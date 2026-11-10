@@ -5,7 +5,8 @@
     "utils",
     "ui",
     "components",
-    "blocks"
+    "blocks",
+    "themes"
   ],
   "components": [
     {
@@ -4506,6 +4507,164 @@
     },
     {
       "dependencies": [],
+      "description": "Skin Amber Minimal: brand tokens (colours, radius, shadows, fonts) for every UI8Kit component, light and dark; on with data-skin=\"amber-minimal\".",
+      "name": "theme-amber-minimal",
+      "registryDependencies": [
+        "theme-base"
+      ],
+      "title": "Amber Minimal",
+      "type": "registry:theme"
+    },
+    {
+      "dependencies": [],
+      "description": "Start values of a skin scoped on an element (data-skin on any element but <html>): the kit font, tracking, radius and shadows, so the element shows its own skin only. Licences of the skins in NOTICE.md.",
+      "name": "theme-base",
+      "registryDependencies": [],
+      "title": "Theme Base",
+      "type": "registry:theme"
+    },
+    {
+      "dependencies": [],
+      "description": "Skin Bubblegum: brand tokens (colours, radius, shadows, fonts) for every UI8Kit component, light and dark; on with data-skin=\"bubblegum\".",
+      "name": "theme-bubblegum",
+      "registryDependencies": [
+        "theme-base"
+      ],
+      "title": "Bubblegum",
+      "type": "registry:theme"
+    },
+    {
+      "dependencies": [],
+      "description": "Skin Claude: brand tokens (colours, radius, shadows, fonts) for every UI8Kit component, light and dark; on with data-skin=\"claude\".",
+      "name": "theme-claude",
+      "registryDependencies": [
+        "theme-base"
+      ],
+      "title": "Claude",
+      "type": "registry:theme"
+    },
+    {
+      "dependencies": [],
+      "description": "Skin Cosmic Night: brand tokens (colours, radius, shadows, fonts) for every UI8Kit component, light and dark; on with data-skin=\"cosmic-night\".",
+      "name": "theme-cosmic-night",
+      "registryDependencies": [
+        "theme-base"
+      ],
+      "title": "Cosmic Night",
+      "type": "registry:theme"
+    },
+    {
+      "dependencies": [],
+      "description": "Skin Doom 64: brand tokens (colours, radius, shadows, fonts) for every UI8Kit component, light and dark; on with data-skin=\"doom-64\".",
+      "name": "theme-doom-64",
+      "registryDependencies": [
+        "theme-base"
+      ],
+      "title": "Doom 64",
+      "type": "registry:theme"
+    },
+    {
+      "dependencies": [],
+      "description": "Skin Kodama Grove: brand tokens (colours, radius, shadows, fonts) for every UI8Kit component, light and dark; on with data-skin=\"kodama-grove\".",
+      "name": "theme-kodama-grove",
+      "registryDependencies": [
+        "theme-base"
+      ],
+      "title": "Kodama Grove",
+      "type": "registry:theme"
+    },
+    {
+      "dependencies": [],
+      "description": "Skin Mocha Mousse: brand tokens (colours, radius, shadows, fonts) for every UI8Kit component, light and dark; on with data-skin=\"mocha-mousse\".",
+      "name": "theme-mocha-mousse",
+      "registryDependencies": [
+        "theme-base"
+      ],
+      "title": "Mocha Mousse",
+      "type": "registry:theme"
+    },
+    {
+      "dependencies": [],
+      "description": "Skin Modern Minimal: brand tokens (colours, radius, shadows, fonts) for every UI8Kit component, light and dark; on with data-skin=\"modern-minimal\".",
+      "name": "theme-modern-minimal",
+      "registryDependencies": [
+        "theme-base"
+      ],
+      "title": "Modern Minimal",
+      "type": "registry:theme"
+    },
+    {
+      "dependencies": [],
+      "description": "Skin Neo Brutalism: brand tokens (colours, radius, shadows, fonts) for every UI8Kit component, light and dark; on with data-skin=\"neo-brutalism\".",
+      "name": "theme-neo-brutalism",
+      "registryDependencies": [
+        "theme-base"
+      ],
+      "title": "Neo Brutalism",
+      "type": "registry:theme"
+    },
+    {
+      "dependencies": [],
+      "description": "Skin Notebook: brand tokens (colours, radius, shadows, fonts) for every UI8Kit component, light and dark; on with data-skin=\"notebook\".",
+      "name": "theme-notebook",
+      "registryDependencies": [
+        "theme-base"
+      ],
+      "title": "Notebook",
+      "type": "registry:theme"
+    },
+    {
+      "dependencies": [],
+      "description": "Skin Perpetuity: brand tokens (colours, radius, shadows, fonts) for every UI8Kit component, light and dark; on with data-skin=\"perpetuity\".",
+      "name": "theme-perpetuity",
+      "registryDependencies": [
+        "theme-base"
+      ],
+      "title": "Perpetuity",
+      "type": "registry:theme"
+    },
+    {
+      "dependencies": [],
+      "description": "Skin Rose: brand tokens (colours, radius, shadows, fonts) for every UI8Kit component, light and dark; on with data-skin=\"rose\".",
+      "name": "theme-rose",
+      "registryDependencies": [
+        "theme-base"
+      ],
+      "title": "Rose",
+      "type": "registry:theme"
+    },
+    {
+      "dependencies": [],
+      "description": "Skin Sky: brand tokens (colours, radius, shadows, fonts) for every UI8Kit component, light and dark; on with data-skin=\"sky\".",
+      "name": "theme-sky",
+      "registryDependencies": [
+        "theme-base"
+      ],
+      "title": "Sky",
+      "type": "registry:theme"
+    },
+    {
+      "dependencies": [],
+      "description": "Skin Supabase: brand tokens (colours, radius, shadows, fonts) for every UI8Kit component, light and dark; on with data-skin=\"supabase\".",
+      "name": "theme-supabase",
+      "registryDependencies": [
+        "theme-base"
+      ],
+      "title": "Supabase",
+      "type": "registry:theme"
+    },
+    {
+      "dependencies": [],
+      "description": "Skin T3 Chat: brand tokens (colours, radius, shadows, fonts) for every UI8Kit component, light and dark; on with data-skin=\"t3-chat\".",
+      "name": "theme-t3-chat",
+      "registryDependencies": [
+        "theme-base"
+      ],
+      "title": "T3 Chat",
+      "type": "registry:theme"
+    },
+    {
+      "dependencies": [],
       "description": "ThemeToggle: Button + Lucide icons (data-ui8kit=\"theme-toggle\" behaviour).",
       "name": "theme-toggle",
       "registryDependencies": [
@@ -4516,6 +4675,16 @@
       ],
       "title": "Theme Toggle",
       "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "Skin Violet Bloom: brand tokens (colours, radius, shadows, fonts) for every UI8Kit component, light and dark; on with data-skin=\"violet-bloom\".",
+      "name": "theme-violet-bloom",
+      "registryDependencies": [
+        "theme-base"
+      ],
+      "title": "Violet Bloom",
+      "type": "registry:theme"
     },
     {
       "dependencies": [],

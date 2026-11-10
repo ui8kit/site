@@ -1,0 +1,40 @@
+{
+  "$schema": "https://registry.buildy.tw/schema/registry-item.json",
+  "dependencies": [],
+  "description": "Skin Supabase: brand tokens (colours, radius, shadows, fonts) for every UI8Kit component, light and dark; on with data-skin=\"supabase\".",
+  "devDependencies": [],
+  "digest": "0.1.0",
+  "files": [
+    {
+      "content": "/* Skin \"supabase\" (Supabase): the tweakcn preset \"supabase\" (Apache-2.0, see NOTICE.md), written by packages/skins/tools/tweakcn-skins.ts.\n   On when data-skin=\"supabase\" is on <html> (the page) or on any element (a tile of /skins/). Values as tweakcn exports them;\n   the spacing scale stays the kit's 0.25rem. Fonts: Outfit (Google Fonts, loaded when the skin is on). */\n[data-skin=\"supabase\"] {\n  --background: hsl(0 0% 99%);\n  --foreground: hsl(0 0% 9%);\n  --card: hsl(0 0% 99%);\n  --card-foreground: hsl(0 0% 9%);\n  --popover: hsl(0 0% 99%);\n  --popover-foreground: hsl(0 0% 32%);\n  --primary: hsl(151 67% 67%);\n  --primary-foreground: hsl(153.3 13% 13.5%);\n  --secondary: hsl(0 0% 99%);\n  --secondary-foreground: hsl(0 0% 9%);\n  --muted: hsl(0 0% 93%);\n  --muted-foreground: hsl(0 0% 12.5%);\n  --accent: hsl(0 0% 93%);\n  --accent-foreground: hsl(0 0% 12.5%);\n  --destructive: hsl(9.9 82% 43.5%);\n  --destructive-foreground: hsl(0 100% 99.4%);\n  --border: hsl(0 0% 87%);\n  --input: hsl(0 0% 96%);\n  --ring: hsl(151 67% 67%);\n  --chart-1: hsl(151 67% 67%);\n  --chart-2: hsl(217.2 91.2% 59.8%);\n  --chart-3: hsl(258.3 89.5% 66.3%);\n  --chart-4: hsl(37.7 92.1% 50.2%);\n  --chart-5: hsl(160.1 84.1% 39.4%);\n  --sidebar: hsl(0 0% 99%);\n  --sidebar-foreground: hsl(0 0% 44%);\n  --sidebar-primary: hsl(151 67% 67%);\n  --sidebar-primary-foreground: hsl(153.3 13% 13.5%);\n  --sidebar-accent: hsl(0 0% 93%);\n  --sidebar-accent-foreground: hsl(0 0% 12.5%);\n  --sidebar-border: hsl(0 0% 87%);\n  --sidebar-ring: hsl(151 67% 67%);\n  --font-sans: Outfit, sans-serif;\n  --font-serif: ui-serif, Georgia, Cambria, \"Times New Roman\", Times, serif;\n  --font-mono: monospace;\n  --radius: 0.5rem;\n  --shadow-2xs: 0px 1px 3px 0px hsl(0 0% 0% / 0.09);\n  --shadow-xs: 0px 1px 3px 0px hsl(0 0% 0% / 0.09);\n  --shadow-sm: 0px 1px 3px 0px hsl(0 0% 0% / 0.17), 0px 1px 2px -1px hsl(0 0% 0% / 0.17);\n  --shadow: 0px 1px 3px 0px hsl(0 0% 0% / 0.17), 0px 1px 2px -1px hsl(0 0% 0% / 0.17);\n  --shadow-md: 0px 1px 3px 0px hsl(0 0% 0% / 0.17), 0px 2px 4px -1px hsl(0 0% 0% / 0.17);\n  --shadow-lg: 0px 1px 3px 0px hsl(0 0% 0% / 0.17), 0px 4px 6px -1px hsl(0 0% 0% / 0.17);\n  --shadow-xl: 0px 1px 3px 0px hsl(0 0% 0% / 0.17), 0px 8px 10px -1px hsl(0 0% 0% / 0.17);\n  --shadow-2xl: 0px 1px 3px 0px hsl(0 0% 0% / 0.43);\n  --tracking-normal: 0.025em;\n  --tracking-tighter: calc(var(--tracking-normal) - 0.05em);\n  --tracking-tight: calc(var(--tracking-normal) - 0.025em);\n  --tracking-wide: calc(var(--tracking-normal) + 0.025em);\n  --tracking-wider: calc(var(--tracking-normal) + 0.05em);\n  --tracking-widest: calc(var(--tracking-normal) + 0.1em);\n  --destructive-hover: hsl(9.9 82% 37.5%);\n}\n\n:is(.dark, [data-theme=\"dark\"]) [data-skin=\"supabase\"],\n[data-skin=\"supabase\"]:is(.dark, [data-theme=\"dark\"]) {\n  --background: hsl(0 0% 7%);\n  --foreground: hsl(214 32% 91%);\n  --card: hsl(0 0% 9%);\n  --card-foreground: hsl(214 32% 91%);\n  --popover: hsl(0 0% 14%);\n  --popover-foreground: hsl(0 0% 66%);\n  --primary: hsl(154.9 100% 19.2%);\n  --primary-foreground: hsl(153 19% 89%);\n  --secondary: hsl(0 0% 14%);\n  --secondary-foreground: hsl(0 0% 98%);\n  --muted: hsl(0 0% 12%);\n  --muted-foreground: hsl(0 0% 64%);\n  --accent: hsl(0 0% 19%);\n  --accent-foreground: hsl(0 0% 98%);\n  --destructive: hsl(6.7 60% 20.6%);\n  --destructive-foreground: hsl(12 12% 92%);\n  --border: hsl(0 0% 16%);\n  --input: hsl(0 0% 14%);\n  --ring: hsl(142 69% 58%);\n  --chart-1: hsl(142 69% 58%);\n  --chart-2: hsl(213 94% 68%);\n  --chart-3: hsl(255.1 91.7% 76.3%);\n  --chart-4: hsl(43.3 96.4% 56.3%);\n  --chart-5: hsl(172.5 66% 50.4%);\n  --sidebar: hsl(0 0% 7%);\n  --sidebar-foreground: hsl(0 0% 54%);\n  --sidebar-primary: hsl(154.9 100% 19.2%);\n  --sidebar-primary-foreground: hsl(153 19% 89%);\n  --sidebar-accent: hsl(0 0% 19%);\n  --sidebar-accent-foreground: hsl(0 0% 98%);\n  --sidebar-border: hsl(0 0% 16%);\n  --sidebar-ring: hsl(142 69% 58%);\n  --shadow-2xs: 0px 1px 3px 0px hsl(0 0% 0% / 0.09);\n  --shadow-xs: 0px 1px 3px 0px hsl(0 0% 0% / 0.09);\n  --shadow-sm: 0px 1px 3px 0px hsl(0 0% 0% / 0.17), 0px 1px 2px -1px hsl(0 0% 0% / 0.17);\n  --shadow: 0px 1px 3px 0px hsl(0 0% 0% / 0.17), 0px 1px 2px -1px hsl(0 0% 0% / 0.17);\n  --shadow-md: 0px 1px 3px 0px hsl(0 0% 0% / 0.17), 0px 2px 4px -1px hsl(0 0% 0% / 0.17);\n  --shadow-lg: 0px 1px 3px 0px hsl(0 0% 0% / 0.17), 0px 4px 6px -1px hsl(0 0% 0% / 0.17);\n  --shadow-xl: 0px 1px 3px 0px hsl(0 0% 0% / 0.17), 0px 8px 10px -1px hsl(0 0% 0% / 0.17);\n  --shadow-2xl: 0px 1px 3px 0px hsl(0 0% 0% / 0.43);\n  --destructive-hover: hsl(6.7 60% 14.6%);\n}\n\n:root[data-skin=\"supabase\"] body { letter-spacing: var(--tracking-normal); }\n[data-skin=\"supabase\"] .shadow-xs { --tw-shadow: var(--shadow-xs); }\n[data-skin=\"supabase\"] .shadow-sm { --tw-shadow: var(--shadow-sm); }\n[data-skin=\"supabase\"] .shadow { --tw-shadow: var(--shadow); }\n[data-skin=\"supabase\"] .shadow-md { --tw-shadow: var(--shadow-md); }\n[data-skin=\"supabase\"] .shadow-lg { --tw-shadow: var(--shadow-lg); }\n[data-skin=\"supabase\"] .shadow-xl { --tw-shadow: var(--shadow-xl); }\n",
+      "path": "styles/skins/supabase.css",
+      "target": "styles/skins/supabase.css"
+    }
+  ],
+  "meta": {
+    "category": "themes",
+    "kind": "theme",
+    "skin": {
+      "fonts": [
+        "Outfit:wght@400;500;600;700"
+      ],
+      "id": "supabase",
+      "license": "Apache-2.0",
+      "name": "Supabase",
+      "sha256": "5ffd8002dce653c71ae531be5e27c31c1edc1b0f0d051421065e460105803ef0",
+      "source": "tweakcn a3b47b3",
+      "version": "1.0.0"
+    },
+    "tags": [
+      "react",
+      "theme"
+    ]
+  },
+  "name": "theme-supabase",
+  "registryDependencies": [
+    "theme-base"
+  ],
+  "runtime": "react",
+  "title": "Supabase",
+  "type": "registry:theme"
+}

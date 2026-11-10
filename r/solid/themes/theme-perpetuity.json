@@ -1,0 +1,40 @@
+{
+  "$schema": "https://registry.buildy.tw/schema/registry-item.json",
+  "dependencies": [],
+  "description": "Skin Perpetuity: brand tokens (colours, radius, shadows, fonts) for every UI8Kit component, light and dark; on with data-skin=\"perpetuity\".",
+  "devDependencies": [],
+  "digest": "0.1.0",
+  "files": [
+    {
+      "content": "/* Skin \"perpetuity\" (Perpetuity): the tweakcn preset \"perpetuity\" (Apache-2.0, see NOTICE.md), written by packages/skins/tools/tweakcn-skins.ts.\n   On when data-skin=\"perpetuity\" is on <html> (the page) or on any element (a tile of /skins/). Values as tweakcn exports them;\n   the spacing scale stays the kit's 0.25rem. Fonts: Source Code Pro (Google Fonts, loaded when the skin is on). */\n[data-skin=\"perpetuity\"] {\n  --background: hsl(180 21% 93%);\n  --foreground: hsl(188.8 78.9% 18.6%);\n  --card: hsl(180 24% 96%);\n  --card-foreground: hsl(188.8 78.9% 18.6%);\n  --popover: hsl(180 24% 96%);\n  --popover-foreground: hsl(188.8 78.9% 18.6%);\n  --primary: hsl(184 100% 27%);\n  --primary-foreground: hsl(0 0% 100%);\n  --secondary: hsl(180 29% 88%);\n  --secondary-foreground: hsl(188.8 78.9% 18.6%);\n  --muted: hsl(180 19% 90%);\n  --muted-foreground: hsl(184 35.3% 33.3%);\n  --accent: hsl(184 38% 85%);\n  --accent-foreground: hsl(188.8 78.9% 18.6%);\n  --destructive: hsl(0 62.4% 52%);\n  --destructive-foreground: hsl(0 0% 100%);\n  --border: hsl(186 27% 85%);\n  --input: hsl(180 29% 88%);\n  --ring: hsl(184 92% 29%);\n  --chart-1: hsl(184 92% 29%);\n  --chart-2: hsl(183.5 69.4% 38.4%);\n  --chart-3: hsl(183.6 55.1% 48%);\n  --chart-4: hsl(184 54% 59%);\n  --chart-5: hsl(183.6 55% 70.4%);\n  --sidebar: hsl(186 35% 89%);\n  --sidebar-foreground: hsl(188.8 78.9% 18.6%);\n  --sidebar-primary: hsl(184 92% 29%);\n  --sidebar-primary-foreground: hsl(0 0% 100%);\n  --sidebar-accent: hsl(184 38% 85%);\n  --sidebar-accent-foreground: hsl(188.8 78.9% 18.6%);\n  --sidebar-border: hsl(186 27% 85%);\n  --sidebar-ring: hsl(184 92% 29%);\n  --font-sans: Courier New, monospace;\n  --font-serif: Courier New, monospace;\n  --font-mono: Courier New, monospace;\n  --radius: 0.125rem;\n  --shadow-2xs: 1px 1px 2px 0px hsl(185 70% 30% / 0.07);\n  --shadow-xs: 1px 1px 2px 0px hsl(185 70% 30% / 0.07);\n  --shadow-sm: 1px 1px 2px 0px hsl(185 70% 30% / 0.15), 1px 1px 2px -1px hsl(185 70% 30% / 0.15);\n  --shadow: 1px 1px 2px 0px hsl(185 70% 30% / 0.15), 1px 1px 2px -1px hsl(185 70% 30% / 0.15);\n  --shadow-md: 1px 1px 2px 0px hsl(185 70% 30% / 0.15), 1px 2px 4px -1px hsl(185 70% 30% / 0.15);\n  --shadow-lg: 1px 1px 2px 0px hsl(185 70% 30% / 0.15), 1px 4px 6px -1px hsl(185 70% 30% / 0.15);\n  --shadow-xl: 1px 1px 2px 0px hsl(185 70% 30% / 0.15), 1px 8px 10px -1px hsl(185 70% 30% / 0.15);\n  --shadow-2xl: 1px 1px 2px 0px hsl(185 70% 30% / 0.38);\n  --destructive-hover: hsl(0 62.4% 46%);\n}\n\n:is(.dark, [data-theme=\"dark\"]) [data-skin=\"perpetuity\"],\n[data-skin=\"perpetuity\"]:is(.dark, [data-theme=\"dark\"]) {\n  --background: hsl(196 52% 8%);\n  --foreground: hsl(180 77% 61%);\n  --card: hsl(192 51% 9.6%);\n  --card-foreground: hsl(180 77% 61%);\n  --popover: hsl(192 51% 9.6%);\n  --popover-foreground: hsl(180 77% 61%);\n  --primary: hsl(180 77% 61%);\n  --primary-foreground: hsl(196 52% 8%);\n  --secondary: hsl(191 59% 21%);\n  --secondary-foreground: hsl(180 77% 61%);\n  --muted: hsl(193 58% 14%);\n  --muted-foreground: hsl(180 51% 43%);\n  --accent: hsl(191 59% 21%);\n  --accent-foreground: hsl(180 77% 61%);\n  --destructive: hsl(357.6 71.5% 48.2%);\n  --destructive-foreground: hsl(0 0% 95%);\n  --border: hsl(191 59% 21%);\n  --input: hsl(191 59% 21%);\n  --ring: hsl(180 77% 61%);\n  --chart-1: hsl(180 77% 61%);\n  --chart-2: hsl(180 51% 43%);\n  --chart-3: hsl(180 51% 36%);\n  --chart-4: hsl(184 58% 23%);\n  --chart-5: hsl(185.2 62.2% 14.5%);\n  --sidebar: hsl(196 52% 8%);\n  --sidebar-foreground: hsl(180 77% 61%);\n  --sidebar-primary: hsl(180 77% 61%);\n  --sidebar-primary-foreground: hsl(196 52% 8%);\n  --sidebar-accent: hsl(191 59% 21%);\n  --sidebar-accent-foreground: hsl(180 77% 61%);\n  --sidebar-border: hsl(191 59% 21%);\n  --sidebar-ring: hsl(180 77% 61%);\n  --font-sans: Source Code Pro, monospace;\n  --font-serif: Source Code Pro, monospace;\n  --font-mono: Source Code Pro, monospace;\n  --shadow-2xs: 1px 1px 2px 0px hsl(180 70% 60% / 0.10);\n  --shadow-xs: 1px 1px 2px 0px hsl(180 70% 60% / 0.10);\n  --shadow-sm: 1px 1px 2px 0px hsl(180 70% 60% / 0.20), 1px 1px 2px -1px hsl(180 70% 60% / 0.20);\n  --shadow: 1px 1px 2px 0px hsl(180 70% 60% / 0.20), 1px 1px 2px -1px hsl(180 70% 60% / 0.20);\n  --shadow-md: 1px 1px 2px 0px hsl(180 70% 60% / 0.20), 1px 2px 4px -1px hsl(180 70% 60% / 0.20);\n  --shadow-lg: 1px 1px 2px 0px hsl(180 70% 60% / 0.20), 1px 4px 6px -1px hsl(180 70% 60% / 0.20);\n  --shadow-xl: 1px 1px 2px 0px hsl(180 70% 60% / 0.20), 1px 8px 10px -1px hsl(180 70% 60% / 0.20);\n  --shadow-2xl: 1px 1px 2px 0px hsl(180 70% 60% / 0.50);\n  --destructive-hover: hsl(357.6 71.5% 42.2%);\n}\n\n[data-skin=\"perpetuity\"] .shadow-xs { --tw-shadow: var(--shadow-xs); }\n[data-skin=\"perpetuity\"] .shadow-sm { --tw-shadow: var(--shadow-sm); }\n[data-skin=\"perpetuity\"] .shadow { --tw-shadow: var(--shadow); }\n[data-skin=\"perpetuity\"] .shadow-md { --tw-shadow: var(--shadow-md); }\n[data-skin=\"perpetuity\"] .shadow-lg { --tw-shadow: var(--shadow-lg); }\n[data-skin=\"perpetuity\"] .shadow-xl { --tw-shadow: var(--shadow-xl); }\n",
+      "path": "styles/skins/perpetuity.css",
+      "target": "styles/skins/perpetuity.css"
+    }
+  ],
+  "meta": {
+    "category": "themes",
+    "kind": "theme",
+    "skin": {
+      "fonts": [
+        "Source+Code+Pro:wght@400;500;600;700"
+      ],
+      "id": "perpetuity",
+      "license": "Apache-2.0",
+      "name": "Perpetuity",
+      "sha256": "b394b084a762f7de0cfcd4da99a51c7f0cc73d278ef4bc6e97944587f52dc330",
+      "source": "tweakcn a3b47b3",
+      "version": "1.0.0"
+    },
+    "tags": [
+      "solid",
+      "theme"
+    ]
+  },
+  "name": "theme-perpetuity",
+  "registryDependencies": [
+    "theme-base"
+  ],
+  "runtime": "solid",
+  "title": "Perpetuity",
+  "type": "registry:theme"
+}

@@ -1,0 +1,40 @@
+{
+  "$schema": "https://registry.buildy.tw/schema/registry-item.json",
+  "dependencies": [],
+  "description": "Skin Mocha Mousse: brand tokens (colours, radius, shadows, fonts) for every UI8Kit component, light and dark; on with data-skin=\"mocha-mousse\".",
+  "devDependencies": [],
+  "digest": "0.1.0",
+  "files": [
+    {
+      "content": "/* Skin \"mocha-mousse\" (Mocha Mousse): the tweakcn preset \"mocha-mousse\" (Apache-2.0, see NOTICE.md), written by packages/skins/tools/tweakcn-skins.ts.\n   On when data-skin=\"mocha-mousse\" is on <html> (the page) or on any element (a tile of /skins/). Values as tweakcn exports them;\n   the spacing scale stays the kit's 0.25rem. Fonts: DM Sans (Google Fonts, loaded when the skin is on). */\n[data-skin=\"mocha-mousse\"] {\n  --background: hsl(55 30% 92%);\n  --foreground: hsl(16 15% 29%);\n  --card: hsl(55 30% 92%);\n  --card-foreground: hsl(16 15% 29%);\n  --popover: hsl(0 0% 100%);\n  --popover-foreground: hsl(16 15% 29%);\n  --primary: hsl(17.7 25.5% 46.9%);\n  --primary-foreground: hsl(0 0% 100%);\n  --secondary: hsl(37.3 16.7% 43.3%);\n  --secondary-foreground: hsl(0 0% 100%);\n  --muted: hsl(20 45% 81%);\n  --muted-foreground: hsl(13.3 25.1% 35.1%);\n  --accent: hsl(20 45% 81%);\n  --accent-foreground: hsl(16 15% 29%);\n  --destructive: hsl(22.5 14.8% 10.6%);\n  --destructive-foreground: hsl(0 0% 100%);\n  --border: hsl(37 22% 65%);\n  --input: hsl(37 22% 65%);\n  --ring: hsl(18 26% 52%);\n  --chart-1: hsl(18 26% 52%);\n  --chart-2: hsl(14 21% 45%);\n  --chart-3: hsl(22 33% 65%);\n  --chart-4: hsl(37 22% 65%);\n  --chart-5: hsl(22 19% 55%);\n  --sidebar: hsl(21 44% 86%);\n  --sidebar-foreground: hsl(16 15% 29%);\n  --sidebar-primary: hsl(18 26% 52%);\n  --sidebar-primary-foreground: hsl(0 0% 100%);\n  --sidebar-accent: hsl(22 33% 65%);\n  --sidebar-accent-foreground: hsl(0 0% 100%);\n  --sidebar-border: hsl(22 19% 55%);\n  --sidebar-ring: hsl(18 26% 52%);\n  --font-sans: DM Sans, sans-serif;\n  --font-serif: Georgia, serif;\n  --font-mono: Menlo, monospace;\n  --radius: 0.5rem;\n  --shadow-2xs: 2px 2px 0px 0px hsl(20 18% 51% / 0.06);\n  --shadow-xs: 2px 2px 0px 0px hsl(20 18% 51% / 0.06);\n  --shadow-sm: 2px 2px 0px 0px hsl(20 18% 51% / 0.11), 2px 1px 2px -1px hsl(20 18% 51% / 0.11);\n  --shadow: 2px 2px 0px 0px hsl(20 18% 51% / 0.11), 2px 1px 2px -1px hsl(20 18% 51% / 0.11);\n  --shadow-md: 2px 2px 0px 0px hsl(20 18% 51% / 0.11), 2px 2px 4px -1px hsl(20 18% 51% / 0.11);\n  --shadow-lg: 2px 2px 0px 0px hsl(20 18% 51% / 0.11), 2px 4px 6px -1px hsl(20 18% 51% / 0.11);\n  --shadow-xl: 2px 2px 0px 0px hsl(20 18% 51% / 0.11), 2px 8px 10px -1px hsl(20 18% 51% / 0.11);\n  --shadow-2xl: 2px 2px 0px 0px hsl(20 18% 51% / 0.28);\n  --destructive-hover: hsl(22.5 14.8% 4.6%);\n}\n\n:is(.dark, [data-theme=\"dark\"]) [data-skin=\"mocha-mousse\"],\n[data-skin=\"mocha-mousse\"]:is(.dark, [data-theme=\"dark\"]) {\n  --background: hsl(20 15% 15%);\n  --foreground: hsl(55 30% 92%);\n  --card: hsl(21 13% 21%);\n  --card-foreground: hsl(55 30% 92%);\n  --popover: hsl(21 13% 21%);\n  --popover-foreground: hsl(55 30% 92%);\n  --primary: hsl(22 33% 65%);\n  --primary-foreground: hsl(20 15% 15%);\n  --secondary: hsl(13.8 21.4% 43.9%);\n  --secondary-foreground: hsl(55 30% 92%);\n  --muted: hsl(16 15% 29%);\n  --muted-foreground: hsl(21 31% 73%);\n  --accent: hsl(37 22% 65%);\n  --accent-foreground: hsl(20 15% 15%);\n  --destructive: hsl(0 68.7% 67.5%);\n  --destructive-foreground: hsl(20 15% 15%);\n  --border: hsl(16 15% 29%);\n  --input: hsl(16 15% 29%);\n  --ring: hsl(22 33% 65%);\n  --chart-1: hsl(22 33% 65%);\n  --chart-2: hsl(37 22% 65%);\n  --chart-3: hsl(18 26% 52%);\n  --chart-4: hsl(14 21% 45%);\n  --chart-5: hsl(22 19% 55%);\n  --sidebar: hsl(22.5 14.8% 10.6%);\n  --sidebar-foreground: hsl(55 30% 92%);\n  --sidebar-primary: hsl(22 33% 65%);\n  --sidebar-primary-foreground: hsl(22.5 14.8% 10.6%);\n  --sidebar-accent: hsl(37 22% 65%);\n  --sidebar-accent-foreground: hsl(22.5 14.8% 10.6%);\n  --sidebar-border: hsl(16 15% 29%);\n  --sidebar-ring: hsl(22 33% 65%);\n  --shadow-2xs: 2px 2px 0px 0px hsl(20 18% 30% / 0.06);\n  --shadow-xs: 2px 2px 0px 0px hsl(20 18% 30% / 0.06);\n  --shadow-sm: 2px 2px 0px 0px hsl(20 18% 30% / 0.11), 2px 1px 2px -1px hsl(20 18% 30% / 0.11);\n  --shadow: 2px 2px 0px 0px hsl(20 18% 30% / 0.11), 2px 1px 2px -1px hsl(20 18% 30% / 0.11);\n  --shadow-md: 2px 2px 0px 0px hsl(20 18% 30% / 0.11), 2px 2px 4px -1px hsl(20 18% 30% / 0.11);\n  --shadow-lg: 2px 2px 0px 0px hsl(20 18% 30% / 0.11), 2px 4px 6px -1px hsl(20 18% 30% / 0.11);\n  --shadow-xl: 2px 2px 0px 0px hsl(20 18% 30% / 0.11), 2px 8px 10px -1px hsl(20 18% 30% / 0.11);\n  --shadow-2xl: 2px 2px 0px 0px hsl(20 18% 30% / 0.28);\n  --destructive-hover: hsl(0 68.7% 73.5%);\n}\n\n[data-skin=\"mocha-mousse\"] .shadow-xs { --tw-shadow: var(--shadow-xs); }\n[data-skin=\"mocha-mousse\"] .shadow-sm { --tw-shadow: var(--shadow-sm); }\n[data-skin=\"mocha-mousse\"] .shadow { --tw-shadow: var(--shadow); }\n[data-skin=\"mocha-mousse\"] .shadow-md { --tw-shadow: var(--shadow-md); }\n[data-skin=\"mocha-mousse\"] .shadow-lg { --tw-shadow: var(--shadow-lg); }\n[data-skin=\"mocha-mousse\"] .shadow-xl { --tw-shadow: var(--shadow-xl); }\n",
+      "path": "styles/skins/mocha-mousse.css",
+      "target": "styles/skins/mocha-mousse.css"
+    }
+  ],
+  "meta": {
+    "category": "themes",
+    "kind": "theme",
+    "skin": {
+      "fonts": [
+        "DM+Sans:wght@400;500;600;700"
+      ],
+      "id": "mocha-mousse",
+      "license": "Apache-2.0",
+      "name": "Mocha Mousse",
+      "sha256": "7f8b7a493baf67a4e882985963c1064baeffb0ae7bd16bdebcb85101b7f483af",
+      "source": "tweakcn a3b47b3",
+      "version": "1.0.0"
+    },
+    "tags": [
+      "react",
+      "theme"
+    ]
+  },
+  "name": "theme-mocha-mousse",
+  "registryDependencies": [
+    "theme-base"
+  ],
+  "runtime": "react",
+  "title": "Mocha Mousse",
+  "type": "registry:theme"
+}

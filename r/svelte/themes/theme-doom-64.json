@@ -1,0 +1,40 @@
+{
+  "$schema": "https://registry.buildy.tw/schema/registry-item.json",
+  "dependencies": [],
+  "description": "Skin Doom 64: brand tokens (colours, radius, shadows, fonts) for every UI8Kit component, light and dark; on with data-skin=\"doom-64\".",
+  "devDependencies": [],
+  "digest": "0.1.0",
+  "files": [
+    {
+      "content": "/* Skin \"doom-64\" (Doom 64): the tweakcn preset \"doom-64\" (Apache-2.0, see NOTICE.md), written by packages/skins/tools/tweakcn-skins.ts.\n   On when data-skin=\"doom-64\" is on <html> (the page) or on any element (a tile of /skins/). Values as tweakcn exports them;\n   the spacing scale stays the kit's 0.25rem. Fonts: Oxanium (Google Fonts, loaded when the skin is on). */\n[data-skin=\"doom-64\"] {\n  --background: hsl(0 0% 80%);\n  --foreground: hsl(0 0% 12%);\n  --card: hsl(0 0% 69%);\n  --card-foreground: hsl(0 0% 12%);\n  --popover: hsl(0 0% 69%);\n  --popover-foreground: hsl(0 0% 12%);\n  --primary: hsl(0 73.5% 41.4%);\n  --primary-foreground: hsl(0 0% 100%);\n  --secondary: hsl(82 39% 30%);\n  --secondary-foreground: hsl(0 0% 100%);\n  --muted: hsl(0 0% 72%);\n  --muted-foreground: hsl(0 0% 26%);\n  --accent: hsl(207 47.2% 45.3%);\n  --accent-foreground: hsl(0 0% 100%);\n  --destructive: hsl(26 100% 50%);\n  --destructive-foreground: hsl(0 0% 0%);\n  --border: hsl(0 0% 31%);\n  --input: hsl(0 0% 31%);\n  --ring: hsl(0 73.5% 41.4%);\n  --chart-1: hsl(0 73.5% 41.4%);\n  --chart-2: hsl(82 39% 30%);\n  --chart-3: hsl(207 44% 49%);\n  --chart-4: hsl(26 100% 50%);\n  --chart-5: hsl(16 18% 47%);\n  --sidebar: hsl(0 0% 69%);\n  --sidebar-foreground: hsl(0 0% 12%);\n  --sidebar-primary: hsl(0 73.5% 41.4%);\n  --sidebar-primary-foreground: hsl(0 0% 100%);\n  --sidebar-accent: hsl(207 44% 49%);\n  --sidebar-accent-foreground: hsl(0 0% 100%);\n  --sidebar-border: hsl(0 0% 31%);\n  --sidebar-ring: hsl(0 73.5% 41.4%);\n  --font-sans: \"Oxanium\", sans-serif;\n  --font-serif: ui-serif, Georgia, Cambria, \"Times New Roman\", Times, serif;\n  --font-mono: \"Source Code Pro\", monospace;\n  --radius: 0px;\n  --shadow-2xs: 0px 2px 4px 0px hsl(0 0% 0% / 0.20);\n  --shadow-xs: 0px 2px 4px 0px hsl(0 0% 0% / 0.20);\n  --shadow-sm: 0px 2px 4px 0px hsl(0 0% 0% / 0.40), 0px 1px 2px -1px hsl(0 0% 0% / 0.40);\n  --shadow: 0px 2px 4px 0px hsl(0 0% 0% / 0.40), 0px 1px 2px -1px hsl(0 0% 0% / 0.40);\n  --shadow-md: 0px 2px 4px 0px hsl(0 0% 0% / 0.40), 0px 2px 4px -1px hsl(0 0% 0% / 0.40);\n  --shadow-lg: 0px 2px 4px 0px hsl(0 0% 0% / 0.40), 0px 4px 6px -1px hsl(0 0% 0% / 0.40);\n  --shadow-xl: 0px 2px 4px 0px hsl(0 0% 0% / 0.40), 0px 8px 10px -1px hsl(0 0% 0% / 0.40);\n  --shadow-2xl: 0px 2px 4px 0px hsl(0 0% 0% / 1.00);\n  --destructive-hover: hsl(26 100% 56%);\n}\n\n:is(.dark, [data-theme=\"dark\"]) [data-skin=\"doom-64\"],\n[data-skin=\"doom-64\"]:is(.dark, [data-theme=\"dark\"]) {\n  --background: hsl(0 0% 10%);\n  --foreground: hsl(0 0% 88%);\n  --card: hsl(0 0% 16.5%);\n  --card-foreground: hsl(0 0% 88%);\n  --popover: hsl(0 0% 16.5%);\n  --popover-foreground: hsl(0 0% 88%);\n  --primary: hsl(0.7 72% 52.4%);\n  --primary-foreground: hsl(0 0% 100%);\n  --secondary: hsl(92 48% 42%);\n  --secondary-foreground: hsl(0 0% 0%);\n  --muted: hsl(0 0% 14.5%);\n  --muted-foreground: hsl(0 0% 63%);\n  --accent: hsl(207 89% 68%);\n  --accent-foreground: hsl(0 0% 0%);\n  --destructive: hsl(37.6 100% 50%);\n  --destructive-foreground: hsl(0 0% 0%);\n  --border: hsl(0 0% 29%);\n  --input: hsl(0 0% 29%);\n  --ring: hsl(1.4 77.2% 55.3%);\n  --chart-1: hsl(1.4 77.2% 55.3%);\n  --chart-2: hsl(92 48% 42%);\n  --chart-3: hsl(207 89% 68%);\n  --chart-4: hsl(37.6 100% 50%);\n  --chart-5: hsl(16 15% 56%);\n  --sidebar: hsl(0 0% 8%);\n  --sidebar-foreground: hsl(0 0% 88%);\n  --sidebar-primary: hsl(1.4 77.2% 55.3%);\n  --sidebar-primary-foreground: hsl(0 0% 100%);\n  --sidebar-accent: hsl(207 89% 68%);\n  --sidebar-accent-foreground: hsl(0 0% 0%);\n  --sidebar-border: hsl(0 0% 29%);\n  --sidebar-ring: hsl(1.4 77.2% 55.3%);\n  --shadow-2xs: 0px 2px 5px 0px hsl(0 0% 0% / 0.30);\n  --shadow-xs: 0px 2px 5px 0px hsl(0 0% 0% / 0.30);\n  --shadow-sm: 0px 2px 5px 0px hsl(0 0% 0% / 0.60), 0px 1px 2px -1px hsl(0 0% 0% / 0.60);\n  --shadow: 0px 2px 5px 0px hsl(0 0% 0% / 0.60), 0px 1px 2px -1px hsl(0 0% 0% / 0.60);\n  --shadow-md: 0px 2px 5px 0px hsl(0 0% 0% / 0.60), 0px 2px 4px -1px hsl(0 0% 0% / 0.60);\n  --shadow-lg: 0px 2px 5px 0px hsl(0 0% 0% / 0.60), 0px 4px 6px -1px hsl(0 0% 0% / 0.60);\n  --shadow-xl: 0px 2px 5px 0px hsl(0 0% 0% / 0.60), 0px 8px 10px -1px hsl(0 0% 0% / 0.60);\n  --shadow-2xl: 0px 2px 5px 0px hsl(0 0% 0% / 1.50);\n  --destructive-hover: hsl(37.6 100% 56%);\n}\n\n[data-skin=\"doom-64\"] .shadow-xs { --tw-shadow: var(--shadow-xs); }\n[data-skin=\"doom-64\"] .shadow-sm { --tw-shadow: var(--shadow-sm); }\n[data-skin=\"doom-64\"] .shadow { --tw-shadow: var(--shadow); }\n[data-skin=\"doom-64\"] .shadow-md { --tw-shadow: var(--shadow-md); }\n[data-skin=\"doom-64\"] .shadow-lg { --tw-shadow: var(--shadow-lg); }\n[data-skin=\"doom-64\"] .shadow-xl { --tw-shadow: var(--shadow-xl); }\n",
+      "path": "styles/skins/doom-64.css",
+      "target": "styles/skins/doom-64.css"
+    }
+  ],
+  "meta": {
+    "category": "themes",
+    "kind": "theme",
+    "skin": {
+      "fonts": [
+        "Oxanium:wght@400;500;600;700"
+      ],
+      "id": "doom-64",
+      "license": "Apache-2.0",
+      "name": "Doom 64",
+      "sha256": "9551fb57982fe7bb977c1acdaa7ac9250bced2306b328ba411ba50b3ae6d5b43",
+      "source": "tweakcn a3b47b3",
+      "version": "1.0.0"
+    },
+    "tags": [
+      "svelte",
+      "theme"
+    ]
+  },
+  "name": "theme-doom-64",
+  "registryDependencies": [
+    "theme-base"
+  ],
+  "runtime": "svelte",
+  "title": "Doom 64",
+  "type": "registry:theme"
+}

@@ -1,0 +1,38 @@
+{
+  "$schema": "https://registry.buildy.tw/schema/registry-item.json",
+  "dependencies": [],
+  "description": "Skin T3 Chat: brand tokens (colours, radius, shadows, fonts) for every UI8Kit component, light and dark; on with data-skin=\"t3-chat\".",
+  "devDependencies": [],
+  "digest": "0.1.0",
+  "files": [
+    {
+      "content": "/* Skin \"t3-chat\" (T3 Chat): the tweakcn preset \"t3-chat\" (Apache-2.0, see NOTICE.md), written by packages/skins/tools/tweakcn-skins.ts.\n   On when data-skin=\"t3-chat\" is on <html> (the page) or on any element (a tile of /skins/). Values as tweakcn exports them;\n   the spacing scale stays the kit's 0.25rem. Fonts: system. */\n[data-skin=\"t3-chat\"] {\n  --background: hsl(300 33% 97%);\n  --foreground: hsl(296 56% 21%);\n  --card: hsl(300 33% 97%);\n  --card-foreground: hsl(296 56% 21%);\n  --popover: hsl(0 0% 100%);\n  --popover-foreground: hsl(296 56% 21%);\n  --primary: hsl(333 43% 46%);\n  --primary-foreground: hsl(0 0% 100%);\n  --secondary: hsl(314.7 61.6% 85.7%);\n  --secondary-foreground: hsl(295.8 40.9% 34.5%);\n  --muted: hsl(311 49% 93%);\n  --muted-foreground: hsl(296 33% 40%);\n  --accent: hsl(314.7 61.6% 85.7%);\n  --accent-foreground: hsl(295.8 40.9% 34.5%);\n  --destructive: hsl(357.7 43.7% 46.7%);\n  --destructive-foreground: hsl(0 0% 100%);\n  --border: hsl(305 61% 84%);\n  --input: hsl(317 44% 83%);\n  --ring: hsl(333.3 71.4% 50.6%);\n  --chart-1: hsl(318.4 70.2% 50%);\n  --chart-2: hsl(272 82% 40%);\n  --chart-3: hsl(197 37% 24%);\n  --chart-4: hsl(43 74% 66%);\n  --chart-5: hsl(27 87% 67%);\n  --sidebar: hsl(290 50% 93%);\n  --sidebar-foreground: hsl(327 77% 38%);\n  --sidebar-primary: hsl(240 10% 30%);\n  --sidebar-primary-foreground: hsl(320 47% 96%);\n  --sidebar-accent: hsl(60 7% 97%);\n  --sidebar-accent-foreground: hsl(240 10% 30%);\n  --sidebar-border: hsl(20 7% 92%);\n  --sidebar-ring: hsl(333.3 71.4% 50.6%);\n  --font-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';\n  --font-serif: ui-serif, Georgia, Cambria, \"Times New Roman\", Times, serif;\n  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, \"Liberation Mono\", \"Courier New\", monospace;\n  --radius: 0.5rem;\n  --shadow-2xs: 0 1px 3px 0px hsl(0 0% 0% / 0.05);\n  --shadow-xs: 0 1px 3px 0px hsl(0 0% 0% / 0.05);\n  --shadow-sm: 0 1px 3px 0px hsl(0 0% 0% / 0.10), 0 1px 2px -1px hsl(0 0% 0% / 0.10);\n  --shadow: 0 1px 3px 0px hsl(0 0% 0% / 0.10), 0 1px 2px -1px hsl(0 0% 0% / 0.10);\n  --shadow-md: 0 1px 3px 0px hsl(0 0% 0% / 0.10), 0 2px 4px -1px hsl(0 0% 0% / 0.10);\n  --shadow-lg: 0 1px 3px 0px hsl(0 0% 0% / 0.10), 0 4px 6px -1px hsl(0 0% 0% / 0.10);\n  --shadow-xl: 0 1px 3px 0px hsl(0 0% 0% / 0.10), 0 8px 10px -1px hsl(0 0% 0% / 0.10);\n  --shadow-2xl: 0 1px 3px 0px hsl(0 0% 0% / 0.25);\n  --destructive-hover: hsl(357.7 43.7% 40.7%);\n}\n\n:is(.dark, [data-theme=\"dark\"]) [data-skin=\"t3-chat\"],\n[data-skin=\"t3-chat\"]:is(.dark, [data-theme=\"dark\"]) {\n  --background: hsl(270 15% 13%);\n  --foreground: hsl(272 28% 82%);\n  --card: hsl(270 14% 17%);\n  --card-foreground: hsl(324.5 23.4% 81.6%);\n  --popover: hsl(320 23% 5%);\n  --popover-foreground: hsl(326 33% 96%);\n  --primary: hsl(332 100% 32%);\n  --primary-foreground: hsl(329.4 59.5% 84.5%);\n  --secondary: hsl(274 15% 21%);\n  --secondary-foreground: hsl(270 30% 83%);\n  --muted: hsl(272.7 13.9% 15.5%);\n  --muted-foreground: hsl(268.8 20.7% 76.3%);\n  --accent: hsl(272 20% 27%);\n  --accent-foreground: hsl(326 33% 96%);\n  --destructive: hsl(350.6 50% 12.5%);\n  --destructive-foreground: hsl(0 0% 100%);\n  --border: hsl(327 8% 21%);\n  --input: hsl(312 9% 22%);\n  --ring: hsl(333.3 71.4% 50.6%);\n  --chart-1: hsl(333 43% 46%);\n  --chart-2: hsl(273 55% 55%);\n  --chart-3: hsl(30 80% 55%);\n  --chart-4: hsl(280 65% 60%);\n  --chart-5: hsl(340 75% 55%);\n  --sidebar: hsl(309 17% 8%);\n  --sidebar-foreground: hsl(327.3 26.2% 83.5%);\n  --sidebar-primary: hsl(224.3 76.3% 48%);\n  --sidebar-primary-foreground: hsl(0 0% 100%);\n  --sidebar-accent: hsl(318 21% 12%);\n  --sidebar-accent-foreground: hsl(240 5% 96%);\n  --sidebar-border: hsl(0 0% 0%);\n  --sidebar-ring: hsl(333.3 71.4% 50.6%);\n  --shadow-2xs: 0 1px 3px 0px hsl(0 0% 0% / 0.05);\n  --shadow-xs: 0 1px 3px 0px hsl(0 0% 0% / 0.05);\n  --shadow-sm: 0 1px 3px 0px hsl(0 0% 0% / 0.10), 0 1px 2px -1px hsl(0 0% 0% / 0.10);\n  --shadow: 0 1px 3px 0px hsl(0 0% 0% / 0.10), 0 1px 2px -1px hsl(0 0% 0% / 0.10);\n  --shadow-md: 0 1px 3px 0px hsl(0 0% 0% / 0.10), 0 2px 4px -1px hsl(0 0% 0% / 0.10);\n  --shadow-lg: 0 1px 3px 0px hsl(0 0% 0% / 0.10), 0 4px 6px -1px hsl(0 0% 0% / 0.10);\n  --shadow-xl: 0 1px 3px 0px hsl(0 0% 0% / 0.10), 0 8px 10px -1px hsl(0 0% 0% / 0.10);\n  --shadow-2xl: 0 1px 3px 0px hsl(0 0% 0% / 0.25);\n  --destructive-hover: hsl(350.6 50% 6.5%);\n}\n\n[data-skin=\"t3-chat\"] .shadow-xs { --tw-shadow: var(--shadow-xs); }\n[data-skin=\"t3-chat\"] .shadow-sm { --tw-shadow: var(--shadow-sm); }\n[data-skin=\"t3-chat\"] .shadow { --tw-shadow: var(--shadow); }\n[data-skin=\"t3-chat\"] .shadow-md { --tw-shadow: var(--shadow-md); }\n[data-skin=\"t3-chat\"] .shadow-lg { --tw-shadow: var(--shadow-lg); }\n[data-skin=\"t3-chat\"] .shadow-xl { --tw-shadow: var(--shadow-xl); }\n",
+      "path": "styles/skins/t3-chat.css",
+      "target": "styles/skins/t3-chat.css"
+    }
+  ],
+  "meta": {
+    "category": "themes",
+    "kind": "theme",
+    "skin": {
+      "fonts": [],
+      "id": "t3-chat",
+      "license": "Apache-2.0",
+      "name": "T3 Chat",
+      "sha256": "955962485a688718597aa76dd3a5a1f0d6ea70e08171a8b809bdd81caa7f3571",
+      "source": "tweakcn a3b47b3",
+      "version": "1.0.0"
+    },
+    "tags": [
+      "vue",
+      "theme"
+    ]
+  },
+  "name": "theme-t3-chat",
+  "registryDependencies": [
+    "theme-base"
+  ],
+  "runtime": "vue",
+  "title": "T3 Chat",
+  "type": "registry:theme"
+}
