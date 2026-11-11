@@ -2357,7 +2357,9 @@
       "type": "registry:component"
     },
     {
-      "dependencies": [],
+      "dependencies": [
+        "lucide"
+      ],
       "description": "LucideIcon: Icon + recipe lucide-icon.",
       "name": "lucide-icon",
       "registryDependencies": [
@@ -4750,6 +4752,7 @@
     {
       "dependencies": [
         "clsx",
+        "lucide",
         "tailwind-merge"
       ],
       "description": "cn, variants, expr, safe URLs and the shared helpers of the primitives and compositions (plus the theme CSS in styles/)",
@@ -4861,7 +4864,7 @@
       "type": "registry:block"
     }
   ],
-  "lastUpdated": "2026-11-11T01:17:58+03:00",
+  "lastUpdated": "2026-11-11T17:14:01+03:00",
   "registry": "ui",
   "version": "0.1.0"
 }

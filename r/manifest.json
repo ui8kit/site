@@ -1,11 +1,11 @@
 {
   "contractVersion": "2.0.0",
   "props": {
-    "bytes": 720689,
-    "digest": "sha256:730d228c09b753b48bb00dc9b9c0130b314446d6d2b3e1f9a348e0a2450fc01a",
+    "bytes": 1959069,
+    "digest": "sha256:bb4ae0ac537ba08d921557046bf75ee59ea592da181dc5ba3a020ccce9b31896",
     "items": 117,
     "path": "props/v0.json",
-    "sha256": "70f8a01df0d2afab5f6fde1c151d31c6b1a6d1a95009f6c5cf9efda7d31ebeab",
+    "sha256": "eee29ee17b714110532d994b8cfff8bf8b8f7baab09398f33f3b91c43305b3af",
     "version": "0"
   },
   "runtimes": {
@@ -1583,8 +1583,8 @@
               "sha256": "976209f7ec2c12a14e53d65b3db243520514b8f4a4c2798fdf3aac25daaf620b"
             },
             "icons/lucide-icons.json": {
-              "bytes": 113520,
-              "sha256": "75478a7855c465f578c1e285845919139c5187e3c61ed2089fa971ba50005ae4"
+              "bytes": 440089,
+              "sha256": "264c3634b530a91495e633fbf54c679b5508ea474d705c998927edd458e989fd"
             }
           },
           "type": "registry:ui"
@@ -4780,8 +4780,8 @@
               "sha256": "3417ca8b103f9c34d70c43e38a82ae2014a72fa9bf5d57910d6e7f70e98b84bd"
             },
             "icons/lucide-icons.json": {
-              "bytes": 113520,
-              "sha256": "75478a7855c465f578c1e285845919139c5187e3c61ed2089fa971ba50005ae4"
+              "bytes": 440089,
+              "sha256": "264c3634b530a91495e633fbf54c679b5508ea474d705c998927edd458e989fd"
             }
           },
           "type": "registry:ui"
@@ -8212,12 +8212,12 @@
               "sha256": "2e92c2c53e45bbc481595dcbb2f9e3f5f90bbd2399649ac149161d87a5a6a99c"
             },
             "icons/LucideIcon.tsx": {
-              "bytes": 1243,
-              "sha256": "1ceb32899a0296afa171161929ef1f1eb5c61103a4cac9e88e04af6fab842d05"
+              "bytes": 1282,
+              "sha256": "af24c26e7cea174c5b5f42b7ccb1950f5665ac9619734a3ad493e4d4e2c35ec5"
             },
             "icons/lucide-icons.ts": {
-              "bytes": 56437,
-              "sha256": "e2823949165fb24483703a2731b531bb8a141b85dda32b2fc3768507c34ab640"
+              "bytes": 872,
+              "sha256": "303c9788f45ead9f11c455bb8336f74b8df907296132f50905929c47498805b4"
             }
           },
           "type": "registry:ui"
@@ -12018,12 +12018,12 @@
               "sha256": "a370a883425ae48818fe00ba1597e471433ab72a9e4e8c9fb26bb0254fd6ff92"
             },
             "icons/LucideIcon.tsx": {
-              "bytes": 1316,
-              "sha256": "e2de614cb0eb7713229d5b09f36701a8fcbad8f8c37b35cd8f55e116bbc7a4e0"
+              "bytes": 1355,
+              "sha256": "38bdacdc136325745df881a59d4c1d8b8629502d1c1752444023e0e1dbb38883"
             },
             "icons/lucide-icons.ts": {
-              "bytes": 56437,
-              "sha256": "e2823949165fb24483703a2731b531bb8a141b85dda32b2fc3768507c34ab640"
+              "bytes": 872,
+              "sha256": "303c9788f45ead9f11c455bb8336f74b8df907296132f50905929c47498805b4"
             }
           },
           "type": "registry:ui"
@@ -15844,12 +15844,12 @@
               "sha256": "4ff30d8033601bfc6436caa67a292d6d77403ac261da5eb4c33ad88ce81a3be9"
             },
             "icons/LucideIcon.svelte": {
-              "bytes": 1254,
-              "sha256": "e9e3c39b2456deb9ac245f8653da1767bfda34ac92a27842f69438d17b7d8fe2"
+              "bytes": 1293,
+              "sha256": "f667771c625e6b11301200d1afb8aa2eda5b9c20cdeb8584657a98a98cd02ab4"
             },
             "icons/lucide-icons.ts": {
-              "bytes": 56437,
-              "sha256": "e2823949165fb24483703a2731b531bb8a141b85dda32b2fc3768507c34ab640"
+              "bytes": 872,
+              "sha256": "303c9788f45ead9f11c455bb8336f74b8df907296132f50905929c47498805b4"
             }
           },
           "type": "registry:ui"
@@ -19412,8 +19412,8 @@
               "sha256": "5d04f3db84673a1d6c41a13f9363272964e2af4fd2d4978df3a86dc6194d96ab"
             },
             "icons/lucide_icons.go": {
-              "bytes": 78353,
-              "sha256": "ed1f6aae0c1aa932ae8e2c84b20c520dc937639f334579070011d80197812002"
+              "bytes": 618068,
+              "sha256": "ca78a1f913a819219e13ebd1ccb29cd14265ca6f58deef4cb4f8cd75dab83e4c"
             }
           },
           "type": "registry:ui"
@@ -22645,8 +22645,8 @@
               "sha256": "3004ab8c13ee4434fe74bca75099c899228ff44ed0edcd91bc521dba4c094eae"
             },
             "icons/lucide-icons.json": {
-              "bytes": 113520,
-              "sha256": "75478a7855c465f578c1e285845919139c5187e3c61ed2089fa971ba50005ae4"
+              "bytes": 440089,
+              "sha256": "264c3634b530a91495e633fbf54c679b5508ea474d705c998927edd458e989fd"
             }
           },
           "type": "registry:ui"
@@ -26096,12 +26096,12 @@
               "sha256": "f959b769c3c778687a4ea509f1950369f4d35b0d94ec550c412d9108bf3934d5"
             },
             "icons/LucideIcon.vue": {
-              "bytes": 1359,
-              "sha256": "4501f4d61bbeda654af2786382ea26148fdf5e1ebdc0c535528724917ff0ab5c"
+              "bytes": 1398,
+              "sha256": "5beafc34fc4b64986c0eb35c46bf33835887340f338207fe24aa1808e7b83ae6"
             },
             "icons/lucide-icons.ts": {
-              "bytes": 56437,
-              "sha256": "e2823949165fb24483703a2731b531bb8a141b85dda32b2fc3768507c34ab640"
+              "bytes": 872,
+              "sha256": "303c9788f45ead9f11c455bb8336f74b8df907296132f50905929c47498805b4"
             }
           },
           "type": "registry:ui"
@@ -28108,8 +28108,8 @@
     }
   },
   "source": {
-    "commit": "ce2a9b90f1e370e869ae39b19c9a24c0b745b3f0",
-    "commitDate": "2026-11-11T01:17:58+03:00",
+    "commit": "9e57f9ccaf710eb3b50d5599e6e49355fcc32136",
+    "commitDate": "2026-11-11T17:14:01+03:00",
     "dirty": false,
     "repo": "private source monorepo"
   },
