@@ -1,17 +1,17 @@
 {
   "contractVersion": "2.0.0",
   "props": {
-    "bytes": 1959069,
-    "digest": "sha256:bb4ae0ac537ba08d921557046bf75ee59ea592da181dc5ba3a020ccce9b31896",
-    "items": 117,
+    "bytes": 1953989,
+    "digest": "sha256:7cc5ce00fb2b9538c324a47580c5c70a4115c09808fc36378d364ce88d622e61",
+    "items": 116,
     "path": "props/v0.json",
-    "sha256": "eee29ee17b714110532d994b8cfff8bf8b8f7baab09398f33f3b91c43305b3af",
+    "sha256": "68d2a9e6dd2081bdd62e648e31e1ab84b07bf5cb2bc0d84c061ff461d535f0d9",
     "version": "0"
   },
   "runtimes": {
     "jinja2": {
       "counts": {
-        "block": 117,
+        "block": 116,
         "component": 137,
         "lib": 2,
         "primitive": 84,
@@ -2486,15 +2486,6 @@
           },
           "type": "registry:block"
         },
-        "rich-text": {
-          "files": {
-            "blocks/rich-text.html.j2": {
-              "bytes": 5185,
-              "sha256": "ce3eafd5bf9fa23f90978ff39d54e877441c26afdb56073507d03e6d060fdf28"
-            }
-          },
-          "type": "registry:block"
-        },
         "search-field": {
           "files": {
             "blocks/search-field.html.j2": {
@@ -3208,11 +3199,11 @@
           "type": "registry:block"
         }
       },
-      "items": 341
+      "items": 340
     },
     "latte": {
       "counts": {
-        "block": 117,
+        "block": 116,
         "component": 137,
         "lib": 2,
         "primitive": 84,
@@ -5683,15 +5674,6 @@
           },
           "type": "registry:block"
         },
-        "rich-text": {
-          "files": {
-            "blocks/rich-text.latte": {
-              "bytes": 5107,
-              "sha256": "a924c2684ff218a61034dc401ce091c011e08e2914694543d672f518381d89a1"
-            }
-          },
-          "type": "registry:block"
-        },
         "search-field": {
           "files": {
             "blocks/search-field.latte": {
@@ -6405,11 +6387,11 @@
           "type": "registry:block"
         }
       },
-      "items": 341
+      "items": 340
     },
     "react": {
       "counts": {
-        "block": 117,
+        "block": 116,
         "component": 137,
         "lib": 2,
         "primitive": 88,
@@ -9172,19 +9154,6 @@
           },
           "type": "registry:block"
         },
-        "rich-text": {
-          "files": {
-            "blocks/rich-text.tsx": {
-              "bytes": 4225,
-              "sha256": "e48859b2998a09b41ada0458e4a8965c451379743c5fccbf4834e888659f1e39"
-            },
-            "blocks/rich-text.types.ts": {
-              "bytes": 886,
-              "sha256": "75e09a8057645e3ec46a4507beb86cee1e86c31f391f8622f056b5c7ebdaae10"
-            }
-          },
-          "type": "registry:block"
-        },
         "search-field": {
           "files": {
             "components/search-field.tsx": {
@@ -10220,11 +10189,11 @@
           "type": "registry:block"
         }
       },
-      "items": 362
+      "items": 361
     },
     "solid": {
       "counts": {
-        "block": 117,
+        "block": 116,
         "component": 137,
         "lib": 2,
         "primitive": 87,
@@ -12978,19 +12947,6 @@
           },
           "type": "registry:block"
         },
-        "rich-text": {
-          "files": {
-            "blocks/rich-text.tsx": {
-              "bytes": 3958,
-              "sha256": "ad6e202456c42f370154828e9ff8a602225c45907ee208779df390a9377ae863"
-            },
-            "blocks/rich-text.types.ts": {
-              "bytes": 886,
-              "sha256": "75e09a8057645e3ec46a4507beb86cee1e86c31f391f8622f056b5c7ebdaae10"
-            }
-          },
-          "type": "registry:block"
-        },
         "search-field": {
           "files": {
             "components/search-field.tsx": {
@@ -14026,11 +13982,11 @@
           "type": "registry:block"
         }
       },
-      "items": 361
+      "items": 360
     },
     "svelte": {
       "counts": {
-        "block": 117,
+        "block": 116,
         "component": 137,
         "lib": 2,
         "primitive": 87,
@@ -16804,19 +16760,6 @@
           },
           "type": "registry:block"
         },
-        "rich-text": {
-          "files": {
-            "blocks/rich-text.svelte": {
-              "bytes": 4064,
-              "sha256": "b3fc7c97c4020086a750696e7cb0fadff76c7816cd1cac3e20df2d326da0c767"
-            },
-            "blocks/rich-text.types.ts": {
-              "bytes": 886,
-              "sha256": "75e09a8057645e3ec46a4507beb86cee1e86c31f391f8622f056b5c7ebdaae10"
-            }
-          },
-          "type": "registry:block"
-        },
         "search-field": {
           "files": {
             "components/search-field.svelte": {
@@ -17852,11 +17795,11 @@
           "type": "registry:block"
         }
       },
-      "items": 361
+      "items": 360
     },
     "templ": {
       "counts": {
-        "block": 117,
+        "block": 116,
         "component": 137,
         "lib": 2,
         "primitive": 84,
@@ -20323,15 +20266,6 @@
           },
           "type": "registry:block"
         },
-        "rich-text": {
-          "files": {
-            "blocks/rich-text.templ": {
-              "bytes": 4937,
-              "sha256": "08d0b5e3cec1f66196b2ac941538179ad0471b208743f99a0d46dbbf138d1f50"
-            }
-          },
-          "type": "registry:block"
-        },
         "search-field": {
           "files": {
             "blocks/search-field.templ": {
@@ -21073,11 +21007,11 @@
           "type": "registry:block"
         }
       },
-      "items": 341
+      "items": 340
     },
     "twig": {
       "counts": {
-        "block": 117,
+        "block": 116,
         "component": 137,
         "lib": 2,
         "primitive": 84,
@@ -23552,15 +23486,6 @@
           },
           "type": "registry:block"
         },
-        "rich-text": {
-          "files": {
-            "blocks/rich-text.html.twig": {
-              "bytes": 5286,
-              "sha256": "d915348ff85f04429c2cb414df64536261273b7955250a29b1c6eb825b8a2f57"
-            }
-          },
-          "type": "registry:block"
-        },
         "search-field": {
           "files": {
             "blocks/search-field.html.twig": {
@@ -24278,11 +24203,11 @@
           "type": "registry:block"
         }
       },
-      "items": 341
+      "items": 340
     },
     "vue": {
       "counts": {
-        "block": 117,
+        "block": 116,
         "component": 137,
         "lib": 2,
         "primitive": 87,
@@ -27056,19 +26981,6 @@
           },
           "type": "registry:block"
         },
-        "rich-text": {
-          "files": {
-            "blocks/rich-text.types.ts": {
-              "bytes": 886,
-              "sha256": "75e09a8057645e3ec46a4507beb86cee1e86c31f391f8622f056b5c7ebdaae10"
-            },
-            "blocks/rich-text.vue": {
-              "bytes": 3830,
-              "sha256": "7ddd4608be6f86dd4a044ca5bdc1776df6fa4e6720e1ebdadc442334a7811c68"
-            }
-          },
-          "type": "registry:block"
-        },
         "search-field": {
           "files": {
             "components/search-field.vue": {
@@ -28104,22 +28016,22 @@
           "type": "registry:block"
         }
       },
-      "items": 361
+      "items": 360
     }
   },
   "source": {
-    "commit": "9e57f9ccaf710eb3b50d5599e6e49355fcc32136",
-    "commitDate": "2026-11-11T17:14:01+03:00",
+    "commit": "466225e7757aa0ed039d92e175ba569eb1ef4ddc",
+    "commitDate": "2026-11-15T00:17:47+03:00",
     "dirty": false,
     "repo": "private source monorepo"
   },
   "variants": {
-    "bytes": 124758,
-    "digest": "sha256:39b97e88abe27f2946e5e3d9d0bd0192abb176986303c1f873aec4b914024f33",
-    "items": 113,
+    "bytes": 123980,
+    "digest": "sha256:d429a446d35a085e44a4762e6af4d60266784a1c6a13093f24b4eeaa8b107b53",
+    "items": 112,
     "path": "variants/v0.json",
-    "sha256": "c2e72d4ed35a53cae6e6e1d56a4f3b6b4c6516cc4bc8de7283fb359ec81088b4",
-    "variants": 532,
+    "sha256": "10dedbb0f4305681903ec981a58f7e86df2e3cc670f1ce85efd13cac6b1c6458",
+    "variants": 526,
     "version": "0"
   },
   "version": "0.1.0"

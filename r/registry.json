@@ -36466,171 +36466,6 @@
       "type": "registry:block"
     },
     {
-      "category": "content",
-      "description": "The body of the current page or post as rich text (headings, lists, quotes, pictures, code, tables) under its title and a meta line; in a reading column, wide, beside a side note, under a cover, in a card, or as the page heading over a wide cover.",
-      "group": "page",
-      "kind": "block",
-      "name": "rich-text",
-      "runtimes": {
-        "jinja2": {
-          "dependencies": [],
-          "files": [
-            "blocks/rich-text.html.j2"
-          ],
-          "path": "jinja2/blocks/rich-text.json",
-          "registryDependencies": [
-            "box",
-            "card",
-            "grid",
-            "group",
-            "media-frame",
-            "pill",
-            "prose",
-            "section-frame",
-            "text",
-            "title",
-            "utils"
-          ]
-        },
-        "latte": {
-          "dependencies": [],
-          "files": [
-            "blocks/rich-text.latte"
-          ],
-          "path": "latte/blocks/rich-text.json",
-          "registryDependencies": [
-            "box",
-            "card",
-            "grid",
-            "group",
-            "media-frame",
-            "pill",
-            "prose",
-            "section-frame",
-            "text",
-            "title",
-            "utils"
-          ]
-        },
-        "react": {
-          "dependencies": [],
-          "files": [
-            "blocks/rich-text.tsx",
-            "blocks/rich-text.types.ts"
-          ],
-          "path": "react/blocks/rich-text.json",
-          "registryDependencies": [
-            "compose",
-            "media-frame",
-            "pill",
-            "section-frame",
-            "utils"
-          ]
-        },
-        "solid": {
-          "dependencies": [],
-          "files": [
-            "blocks/rich-text.tsx",
-            "blocks/rich-text.types.ts"
-          ],
-          "path": "solid/blocks/rich-text.json",
-          "registryDependencies": [
-            "compose",
-            "media-frame",
-            "pill",
-            "section-frame",
-            "utils"
-          ]
-        },
-        "svelte": {
-          "dependencies": [],
-          "files": [
-            "blocks/rich-text.svelte",
-            "blocks/rich-text.types.ts"
-          ],
-          "path": "svelte/blocks/rich-text.json",
-          "registryDependencies": [
-            "box",
-            "card",
-            "grid",
-            "group",
-            "media-frame",
-            "pill",
-            "prose",
-            "section-frame",
-            "text",
-            "title",
-            "utils"
-          ]
-        },
-        "templ": {
-          "dependencies": [],
-          "files": [
-            "blocks/rich-text.templ"
-          ],
-          "path": "templ/blocks/rich-text.json",
-          "registryDependencies": [
-            "box",
-            "card",
-            "grid",
-            "group",
-            "kit-box",
-            "kit-text",
-            "media-frame",
-            "pill",
-            "prose",
-            "section-frame",
-            "text",
-            "title",
-            "utils"
-          ]
-        },
-        "twig": {
-          "dependencies": [],
-          "files": [
-            "blocks/rich-text.html.twig"
-          ],
-          "path": "twig/blocks/rich-text.json",
-          "registryDependencies": [
-            "box",
-            "card",
-            "grid",
-            "group",
-            "media-frame",
-            "pill",
-            "prose",
-            "section-frame",
-            "text",
-            "title",
-            "utils"
-          ]
-        },
-        "vue": {
-          "dependencies": [],
-          "files": [
-            "blocks/rich-text.types.ts",
-            "blocks/rich-text.vue"
-          ],
-          "path": "vue/blocks/rich-text.json",
-          "registryDependencies": [
-            "box",
-            "card",
-            "grid",
-            "group",
-            "media-frame",
-            "pill",
-            "prose",
-            "section-frame",
-            "text",
-            "title",
-            "utils"
-          ]
-        }
-      },
-      "title": "Rich Text",
-      "type": "registry:block"
-    },
-    {
       "category": "components",
       "description": "Search Field component",
       "group": "",
@@ -48001,12 +47836,12 @@
       "type": "registry:block"
     }
   ],
-  "lastUpdated": "2026-11-11T17:14:01+03:00",
+  "lastUpdated": "2026-11-15T00:17:47+03:00",
   "layout": "<runtime>/index.json + <runtime>/{components/ui,components,blocks,utils,lib,themes}/<name>.json; use r/<runtime> as registryUrl",
   "props": {
-    "digest": "sha256:bb4ae0ac537ba08d921557046bf75ee59ea592da181dc5ba3a020ccce9b31896",
+    "digest": "sha256:7cc5ce00fb2b9538c324a47580c5c70a4115c09808fc36378d364ce88d622e61",
     "path": "props/v0.json",
-    "sha256": "eee29ee17b714110532d994b8cfff8bf8b8f7baab09398f33f3b91c43305b3af",
+    "sha256": "68d2a9e6dd2081bdd62e648e31e1ab84b07bf5cb2bc0d84c061ff461d535f0d9",
     "version": "0"
   },
   "runtimes": [
@@ -48019,11 +47854,11 @@
     "latte",
     "jinja2"
   ],
-  "sourceCommit": "9e57f9ccaf710eb3b50d5599e6e49355fcc32136",
+  "sourceCommit": "466225e7757aa0ed039d92e175ba569eb1ef4ddc",
   "variants": {
-    "digest": "sha256:39b97e88abe27f2946e5e3d9d0bd0192abb176986303c1f873aec4b914024f33",
+    "digest": "sha256:d429a446d35a085e44a4762e6af4d60266784a1c6a13093f24b4eeaa8b107b53",
     "path": "variants/v0.json",
-    "sha256": "c2e72d4ed35a53cae6e6e1d56a4f3b6b4c6516cc4bc8de7283fb359ec81088b4",
+    "sha256": "10dedbb0f4305681903ec981a58f7e86df2e3cc670f1ce85efd13cac6b1c6458",
     "version": "0"
   },
   "version": "0.1.0"

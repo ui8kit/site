@@ -4390,26 +4390,6 @@
     },
     {
       "dependencies": [],
-      "description": "The body of the current page or post as rich text (headings, lists, quotes, pictures, code, tables) under its title and a meta line; in a reading column, wide, beside a side note, under a cover, in a card, or as the page heading over a wide cover.",
-      "name": "rich-text",
-      "registryDependencies": [
-        "box",
-        "card",
-        "grid",
-        "group",
-        "media-frame",
-        "pill",
-        "prose",
-        "section-frame",
-        "text",
-        "title",
-        "utils"
-      ],
-      "title": "Rich Text",
-      "type": "registry:block"
-    },
-    {
-      "dependencies": [],
       "description": "Search Field component",
       "name": "search-field",
       "registryDependencies": [
@@ -5815,7 +5795,7 @@
       "type": "registry:block"
     }
   ],
-  "lastUpdated": "2026-11-11T17:14:01+03:00",
+  "lastUpdated": "2026-11-15T00:17:47+03:00",
   "registry": "ui",
   "version": "0.1.0"
 }

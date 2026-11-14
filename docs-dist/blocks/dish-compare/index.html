@@ -52,7 +52,7 @@
   {<span class="k">#if</span> ((dishes?.length ?? <span class="mi">0</span>) === <span class="mi">0</span>)}
     &lt;<span class="nt">EmptyState</span> <span class="na">icon</span>=<span class="s">&#34;scale&#34;</span> <span class="na">title</span>={empty} <span class="s">/</span>&gt;
   {<span class="k">:else</span> <span class="k">if</span> ((layout <span class="kr">as</span> <span class="kt">string</span>) === <span class="s2">&#34;table&#34;</span>)}
-    &lt;<span class="nt">Box</span> <span class="na">class</span>=<span class="s">&#34;w-full overflow-x-auto&#34;</span> <span class="na">data-testid</span>=<span class="s">&#34;compare-table&#34;</span>&gt;
+    &lt;<span class="nt">Box</span> <span class="na">class</span>=<span class="s">&#34;w-full overflow-x-auto&#34;</span> <span class="na">data-slot</span>=<span class="s">&#34;compare-table&#34;</span>&gt;
       &lt;<span class="nt">Table</span> <span class="na">class</span>=<span class="s">&#34;w-full text-sm&#34;</span>&gt;
         &lt;<span class="nt">TableCaption</span> <span class="na">class</span>=<span class="s">&#34;sr-only&#34;</span>&gt;
           {labels.caption}
@@ -81,7 +81,7 @@
         &lt;/<span class="nt">TableHead</span>&gt;
         &lt;<span class="nt">TableBody</span>&gt;
           {<span class="k">#each</span> dishes <span class="kr">as</span> d (d.id)}
-            &lt;<span class="nt">TableRow</span> <span class="na">data-testid</span>=<span class="s">&#34;item&#34;</span>&gt;
+            &lt;<span class="nt">TableRow</span> <span class="na">data-slot</span>=<span class="s">&#34;item&#34;</span>&gt;
               &lt;<span class="nt">TableHeadCell</span> <span class="na">scope</span>=<span class="s">&#34;row&#34;</span> <span class="na">class</span>=<span class="s">&#34;py-2 font-semibold&#34;</span>&gt;
                 {d.name}
               &lt;/<span class="nt">TableHeadCell</span>&gt;
@@ -153,7 +153,7 @@
       {((dishes?.length ?? <span class="mi">0</span>) === <span class="mi">0</span>) ? (
         &lt;<span class="nt">EmptyState</span> <span class="na">icon</span>=<span class="s">&#34;scale&#34;</span> <span class="na">title</span>={empty} /&gt;
       ) : ((layout <span class="kr">as</span> <span class="kt">string</span>) === <span class="s2">&#34;table&#34;</span>) ? (
-        &lt;<span class="nt">Box</span> <span class="na">className</span>=<span class="s">&#34;w-full overflow-x-auto&#34;</span> <span class="na">data-testid</span>=<span class="s">&#34;compare-table&#34;</span>&gt;
+        &lt;<span class="nt">Box</span> <span class="na">className</span>=<span class="s">&#34;w-full overflow-x-auto&#34;</span> <span class="na">data-slot</span>=<span class="s">&#34;compare-table&#34;</span>&gt;
           &lt;<span class="nt">Table</span> <span class="na">className</span>=<span class="s">&#34;w-full text-sm&#34;</span>&gt;
             &lt;<span class="nt">TableCaption</span> <span class="na">className</span>=<span class="s">&#34;sr-only&#34;</span>&gt;
               {labels.caption}
@@ -182,7 +182,7 @@
             &lt;/<span class="nt">TableHead</span>&gt;
             &lt;<span class="nt">TableBody</span>&gt;
               {(dishes ?? []).map((d) =&gt; (
-                &lt;<span class="nt">TableRow</span> <span class="na">key</span>={d.id} <span class="na">data-testid</span>=<span class="s">&#34;item&#34;</span>&gt;
+                &lt;<span class="nt">TableRow</span> <span class="na">key</span>={d.id} <span class="na">data-slot</span>=<span class="s">&#34;item&#34;</span>&gt;
                   &lt;<span class="nt">TableHeadCell</span> <span class="na">scope</span>=<span class="s">&#34;row&#34;</span> <span class="na">className</span>=<span class="s">&#34;py-2 font-semibold&#34;</span>&gt;
                     {d.name}
                   &lt;/<span class="nt">TableHeadCell</span>&gt;
@@ -268,7 +268,7 @@
 &lt;<span class="nt">template</span>&gt;
   &lt;<span class="nt">SectionFrame</span> <span class="nt">:id</span>=<span class="s">&#34;id&#34;</span> <span class="nt">:title</span>=<span class="s">&#34;title&#34;</span> <span class="nt">:lead</span>=<span class="s">&#34;lead&#34;</span> <span class="nt">:tone</span>=<span class="s">&#34;tone&#34;</span> <span class="nt">:landmarkLabel</span>=<span class="s">&#34;landmarkLabel&#34;</span>&gt;
     &lt;<span class="nt">EmptyState</span> <span class="nt">v-if</span>=<span class="s">&#34;((dishes?.length ?? 0) === 0)&#34; icon=&#34;scale&#34; :title=&#34;empty&#34;</span> /&gt;
-    &lt;<span class="nt">Box</span> <span class="nt">v-else-if</span>=<span class="s">&#34;((layout as string) === &#39;table&#39;)&#34; class=&#34;w-full overflow-x-auto&#34; data-testid=&#34;compare-table&#34;</span>&gt;
+    &lt;<span class="nt">Box</span> <span class="nt">v-else-if</span>=<span class="s">&#34;((layout as string) === &#39;table&#39;)&#34; class=&#34;w-full overflow-x-auto&#34; data-slot=&#34;compare-table&#34;</span>&gt;
       &lt;<span class="nt">Table</span> <span class="na">class</span>=<span class="s">&#34;w-full text-sm&#34;</span>&gt;
         &lt;<span class="nt">TableCaption</span> <span class="na">class</span>=<span class="s">&#34;sr-only&#34;</span>&gt;
           {{ labels.caption }}
@@ -296,7 +296,7 @@
           &lt;/<span class="nt">TableRow</span>&gt;
         &lt;/<span class="nt">TableHead</span>&gt;
         &lt;<span class="nt">TableBody</span>&gt;
-          &lt;<span class="nt">TableRow</span> <span class="nt">v-for</span>=<span class="s">&#34;d in dishes&#34; :key=&#34;d.id&#34; data-testid=&#34;item&#34;</span>&gt;
+          &lt;<span class="nt">TableRow</span> <span class="nt">v-for</span>=<span class="s">&#34;d in dishes&#34; :key=&#34;d.id&#34; data-slot=&#34;item&#34;</span>&gt;
             &lt;<span class="nt">TableHeadCell</span> <span class="na">scope</span>=<span class="s">&#34;row&#34;</span> <span class="na">class</span>=<span class="s">&#34;py-2 font-semibold&#34;</span>&gt;
               {{ d.name }}
             &lt;/<span class="nt">TableHeadCell</span>&gt;
@@ -366,7 +366,7 @@
       {((dishes?.length ?? <span class="mi">0</span>) === <span class="mi">0</span>) ? (
         &lt;<span class="nt">EmptyState</span> <span class="na">icon</span>=<span class="s">&#34;scale&#34;</span> <span class="na">title</span>={empty} /&gt;
       ) : ((layout <span class="kr">as</span> <span class="kt">string</span>) === <span class="s2">&#34;table&#34;</span>) ? (
-        &lt;<span class="nt">Box</span> <span class="na">class</span>=<span class="s">&#34;w-full overflow-x-auto&#34;</span> <span class="na">data-testid</span>=<span class="s">&#34;compare-table&#34;</span>&gt;
+        &lt;<span class="nt">Box</span> <span class="na">class</span>=<span class="s">&#34;w-full overflow-x-auto&#34;</span> <span class="na">data-slot</span>=<span class="s">&#34;compare-table&#34;</span>&gt;
           &lt;<span class="nt">Table</span> <span class="na">class</span>=<span class="s">&#34;w-full text-sm&#34;</span>&gt;
             &lt;<span class="nt">TableCaption</span> <span class="na">class</span>=<span class="s">&#34;sr-only&#34;</span>&gt;
               {labels.caption}
@@ -395,7 +395,7 @@
             &lt;/<span class="nt">TableHead</span>&gt;
             &lt;<span class="nt">TableBody</span>&gt;
               &lt;<span class="nt">For</span> <span class="na">each</span>={dishes ?? []}&gt;{(d) =&gt; (
-                &lt;<span class="nt">TableRow</span> <span class="na">data-testid</span>=<span class="s">&#34;item&#34;</span>&gt;
+                &lt;<span class="nt">TableRow</span> <span class="na">data-slot</span>=<span class="s">&#34;item&#34;</span>&gt;
                   &lt;<span class="nt">TableHeadCell</span> <span class="na">scope</span>=<span class="s">&#34;row&#34;</span> <span class="na">class</span>=<span class="s">&#34;py-2 font-semibold&#34;</span>&gt;
                     {d.name}
                   &lt;/<span class="nt">TableHeadCell</span>&gt;
@@ -468,7 +468,7 @@
 		if uiutils.Eq(uiutils.Len(vDishes), float64(0)) {
 			<span class="nf">@EmptyState</span>(EmptyStateProps{Icon: <span class="s">&#34;scale&#34;</span>, Title: vEmpty})
 		} <span class="k">else</span> <span class="k">if</span> uiutils.<span class="nf">Eq</span>(vLayout, <span class="s">&#34;table&#34;</span>) {
-			<span class="nf">@compose.Box</span>(compose.BoxProps{BoxProps: box.BoxProps{Class: <span class="s">&#34;w-full overflow-x-auto&#34;</span>, Attrs: uiutils.<span class="nf">Attrs</span>(<span class="s">&#34;data-testid&#34;</span>, <span class="s">&#34;compare-table&#34;</span>)}}) {
+			<span class="nf">@compose.Box</span>(compose.BoxProps{BoxProps: box.BoxProps{Class: <span class="s">&#34;w-full overflow-x-auto&#34;</span>, Attrs: uiutils.<span class="nf">Attrs</span>(<span class="s">&#34;data-slot&#34;</span>, <span class="s">&#34;compare-table&#34;</span>)}}) {
 				<span class="nf">@compose.Table</span>(compose.TableProps{BoxProps: box.BoxProps{Class: <span class="s">&#34;w-full text-sm&#34;</span>}}) {
 					<span class="nf">@compose.TableCaption</span>(compose.TableCaptionProps{BoxProps: box.BoxProps{Class: <span class="s">&#34;sr-only&#34;</span>}}) {
 						{ uiutils.<span class="nf">Text</span>(uiutils.<span class="nf">Get</span>(vLabels, <span class="s">&#34;caption&#34;</span>)) }
@@ -497,7 +497,7 @@
 					}
 					<span class="nf">@compose.TableBody</span>(compose.TableBodyProps{BoxProps: box.BoxProps{}}) {
 						for _, vD := range uiutils.L(vDishes) {
-							<span class="nf">@compose.TableRow</span>(compose.TableRowProps{BoxProps: box.BoxProps{Attrs: uiutils.<span class="nf">Attrs</span>(<span class="s">&#34;data-testid&#34;</span>, <span class="s">&#34;item&#34;</span>)}}) {
+							<span class="nf">@compose.TableRow</span>(compose.TableRowProps{BoxProps: box.BoxProps{Attrs: uiutils.<span class="nf">Attrs</span>(<span class="s">&#34;data-slot&#34;</span>, <span class="s">&#34;item&#34;</span>)}}) {
 								<span class="nf">@compose.TableHeadCell</span>(compose.TableHeadCellProps{BoxProps: box.BoxProps{Class: <span class="s">&#34;py-2 font-semibold&#34;</span>, Attrs: uiutils.<span class="nf">Attrs</span>(<span class="s">&#34;scope&#34;</span>, <span class="s">&#34;row&#34;</span>)}}) {
 									{ uiutils.<span class="nf">Text</span>(uiutils.<span class="nf">Get</span>(vD, <span class="s">&#34;name&#34;</span>)) }
 								}
@@ -611,14 +611,14 @@
 </span><span class="x">              </span><span class="cp">{%</span>- <span class="k">endset</span> -<span class="cp">%}</span><span class="x">
 </span><span class="x">              </span><span class="cp">{{</span> <span class="nv">include</span>(<span class="s1">&#39;compose/TableCell.html.twig&#39;</span>, {<span class="s1">&#39;class&#39;</span>: <span class="s1">&#39;font-semibold&#39;</span>, <span class="s1">&#39;children&#39;</span>: <span class="nv">c_15</span>}, <span class="nv">with_context</span> = <span class="kp">false</span>) <span class="cp">}}</span><span class="x">
 </span><span class="x">            </span><span class="cp">{%</span>- <span class="k">endset</span> -<span class="cp">%}</span><span class="x">
-</span><span class="x">            </span><span class="cp">{{</span> <span class="nv">include</span>(<span class="s1">&#39;compose/TableRow.html.twig&#39;</span>, {<span class="s1">&#39;attrs&#39;</span>: <span class="nv">og_attrs</span>([<span class="s1">&#39;data-testid&#39;</span>, <span class="s1">&#39;item&#39;</span>]), <span class="s1">&#39;children&#39;</span>: <span class="nv">c_16</span>}, <span class="nv">with_context</span> = <span class="kp">false</span>) <span class="cp">}}</span><span class="x">
+</span><span class="x">            </span><span class="cp">{{</span> <span class="nv">include</span>(<span class="s1">&#39;compose/TableRow.html.twig&#39;</span>, {<span class="s1">&#39;attrs&#39;</span>: <span class="nv">og_attrs</span>([<span class="s1">&#39;data-slot&#39;</span>, <span class="s1">&#39;item&#39;</span>]), <span class="s1">&#39;children&#39;</span>: <span class="nv">c_16</span>}, <span class="nv">with_context</span> = <span class="kp">false</span>) <span class="cp">}}</span><span class="x">
 </span><span class="x">          </span><span class="cp">{%</span>- <span class="k">endfor</span> <span class="cp">%}</span><span class="x">
 </span><span class="x">        </span><span class="cp">{%</span>- <span class="k">endset</span> -<span class="cp">%}</span><span class="x">
 </span><span class="x">        </span><span class="cp">{{</span> <span class="nv">include</span>(<span class="s1">&#39;compose/TableBody.html.twig&#39;</span>, {<span class="s1">&#39;children&#39;</span>: <span class="nv">c_17</span>}, <span class="nv">with_context</span> = <span class="kp">false</span>) <span class="cp">}}</span><span class="x">
 </span><span class="x">      </span><span class="cp">{%</span>- <span class="k">endset</span> -<span class="cp">%}</span><span class="x">
 </span><span class="x">      </span><span class="cp">{{</span> <span class="nv">include</span>(<span class="s1">&#39;compose/Table.html.twig&#39;</span>, {<span class="s1">&#39;class&#39;</span>: <span class="s1">&#39;w-full text-sm&#39;</span>, <span class="s1">&#39;children&#39;</span>: <span class="nv">c_18</span>}, <span class="nv">with_context</span> = <span class="kp">false</span>) <span class="cp">}}</span><span class="x">
 </span><span class="x">    </span><span class="cp">{%</span>- <span class="k">endset</span> -<span class="cp">%}</span><span class="x">
-</span><span class="x">    </span><span class="cp">{{</span> <span class="nv">include</span>(<span class="s1">&#39;compose/Box.html.twig&#39;</span>, {<span class="s1">&#39;class&#39;</span>: <span class="s1">&#39;w-full overflow-x-auto&#39;</span>, <span class="s1">&#39;attrs&#39;</span>: <span class="nv">og_attrs</span>([<span class="s1">&#39;data-testid&#39;</span>, <span class="s1">&#39;compare-table&#39;</span>]), <span class="s1">&#39;children&#39;</span>: <span class="nv">c_19</span>}, <span class="nv">with_context</span> = <span class="kp">false</span>) <span class="cp">}}</span><span class="x">
+</span><span class="x">    </span><span class="cp">{{</span> <span class="nv">include</span>(<span class="s1">&#39;compose/Box.html.twig&#39;</span>, {<span class="s1">&#39;class&#39;</span>: <span class="s1">&#39;w-full overflow-x-auto&#39;</span>, <span class="s1">&#39;attrs&#39;</span>: <span class="nv">og_attrs</span>([<span class="s1">&#39;data-slot&#39;</span>, <span class="s1">&#39;compare-table&#39;</span>]), <span class="s1">&#39;children&#39;</span>: <span class="nv">c_19</span>}, <span class="nv">with_context</span> = <span class="kp">false</span>) <span class="cp">}}</span><span class="x">
 </span><span class="x">  </span><span class="cp">{%</span>- <span class="k">else</span> <span class="cp">%}</span><span class="x">
 </span><span class="x">    </span><span class="cp">{{</span> <span class="nv">include</span>(<span class="s1">&#39;blocks/cut-cards.html.twig&#39;</span>, {<span class="s1">&#39;p&#39;</span>: {<span class="s1">&#39;dishes&#39;</span>: <span class="nv">v_dishes</span>, <span class="s1">&#39;labels&#39;</span>: <span class="nv">v_labels</span><span class="cp">}}</span><span class="x">, with_context = false) }}
 </span><span class="x">  </span><span class="cp">{%</span>- <span class="k">endif</span> <span class="cp">%}</span><span class="x">
@@ -707,14 +707,14 @@
 </span><span class="x">              </span><span class="cp">{</span><span class="nf">/capture</span><span class="cp">}</span><span class="x">
 </span><span class="x">              </span><span class="cp">{</span>=<span class="na">og_include</span>(<span class="s1">&#39;compose/TableCell.latte&#39;</span>, [<span class="s1">&#39;class&#39;</span> =&gt; <span class="s1">&#39;font-semibold&#39;</span>, <span class="s1">&#39;children&#39;</span> =&gt; (<span class="na">string</span>) <span class="nv">$c_15</span>])|<span class="na">noescape</span><span class="cp">}</span><span class="x">
 </span><span class="x">            </span><span class="cp">{</span><span class="nf">/capture</span><span class="cp">}</span><span class="x">
-</span><span class="x">            </span><span class="cp">{</span>=<span class="na">og_include</span>(<span class="s1">&#39;compose/TableRow.latte&#39;</span>, [<span class="s1">&#39;attrs&#39;</span> =&gt; <span class="na">og_attrs</span>([<span class="s1">&#39;data-testid&#39;</span>, <span class="s1">&#39;item&#39;</span>]), <span class="s1">&#39;children&#39;</span> =&gt; (<span class="na">string</span>) <span class="nv">$c_16</span>])|<span class="na">noescape</span><span class="cp">}</span><span class="x">
+</span><span class="x">            </span><span class="cp">{</span>=<span class="na">og_include</span>(<span class="s1">&#39;compose/TableRow.latte&#39;</span>, [<span class="s1">&#39;attrs&#39;</span> =&gt; <span class="na">og_attrs</span>([<span class="s1">&#39;data-slot&#39;</span>, <span class="s1">&#39;item&#39;</span>]), <span class="s1">&#39;children&#39;</span> =&gt; (<span class="na">string</span>) <span class="nv">$c_16</span>])|<span class="na">noescape</span><span class="cp">}</span><span class="x">
 </span><span class="x">          </span><span class="cp">{</span><span class="nf">/foreach</span><span class="cp">}</span><span class="x">
 </span><span class="x">        </span><span class="cp">{</span><span class="nf">/capture</span><span class="cp">}</span><span class="x">
 </span><span class="x">        </span><span class="cp">{</span>=<span class="na">og_include</span>(<span class="s1">&#39;compose/TableBody.latte&#39;</span>, [<span class="s1">&#39;children&#39;</span> =&gt; (<span class="na">string</span>) <span class="nv">$c_17</span>])|<span class="na">noescape</span><span class="cp">}</span><span class="x">
 </span><span class="x">      </span><span class="cp">{</span><span class="nf">/capture</span><span class="cp">}</span><span class="x">
 </span><span class="x">      </span><span class="cp">{</span>=<span class="na">og_include</span>(<span class="s1">&#39;compose/Table.latte&#39;</span>, [<span class="s1">&#39;class&#39;</span> =&gt; <span class="s1">&#39;w-full text-sm&#39;</span>, <span class="s1">&#39;children&#39;</span> =&gt; (<span class="na">string</span>) <span class="nv">$c_18</span>])|<span class="na">noescape</span><span class="cp">}</span><span class="x">
 </span><span class="x">    </span><span class="cp">{</span><span class="nf">/capture</span><span class="cp">}</span><span class="x">
-</span><span class="x">    </span><span class="cp">{</span>=<span class="na">og_include</span>(<span class="s1">&#39;compose/Box.latte&#39;</span>, [<span class="s1">&#39;class&#39;</span> =&gt; <span class="s1">&#39;w-full overflow-x-auto&#39;</span>, <span class="s1">&#39;attrs&#39;</span> =&gt; <span class="na">og_attrs</span>([<span class="s1">&#39;data-testid&#39;</span>, <span class="s1">&#39;compare-table&#39;</span>]), <span class="s1">&#39;children&#39;</span> =&gt; (<span class="na">string</span>) <span class="nv">$c_19</span>])|<span class="na">noescape</span><span class="cp">}</span><span class="x">
+</span><span class="x">    </span><span class="cp">{</span>=<span class="na">og_include</span>(<span class="s1">&#39;compose/Box.latte&#39;</span>, [<span class="s1">&#39;class&#39;</span> =&gt; <span class="s1">&#39;w-full overflow-x-auto&#39;</span>, <span class="s1">&#39;attrs&#39;</span> =&gt; <span class="na">og_attrs</span>([<span class="s1">&#39;data-slot&#39;</span>, <span class="s1">&#39;compare-table&#39;</span>]), <span class="s1">&#39;children&#39;</span> =&gt; (<span class="na">string</span>) <span class="nv">$c_19</span>])|<span class="na">noescape</span><span class="cp">}</span><span class="x">
 </span><span class="x">  </span><span class="cp">{</span><span class="nf">else</span><span class="cp">}</span><span class="x">
 </span><span class="x">    </span><span class="cp">{</span>=<span class="na">og_include</span>(<span class="s1">&#39;blocks/cut-cards.latte&#39;</span>, [<span class="s1">&#39;p&#39;</span> =&gt; [<span class="s1">&#39;dishes&#39;</span> =&gt; <span class="nv">$v_dishes</span>, <span class="s1">&#39;labels&#39;</span> =&gt; <span class="nv">$v_labels</span>]])|<span class="na">noescape</span><span class="cp">}</span><span class="x">
 </span><span class="x">  </span><span class="cp">{</span><span class="nf">/if</span><span class="cp">}</span><span class="x">
@@ -803,14 +803,14 @@
 </span><span class="x">              </span><span class="cp">{%</span>- <span class="k">endset</span> -<span class="cp">%}</span><span class="x">
 </span><span class="x">              </span><span class="cp">{{</span> <span class="nv">og_include</span>(<span class="s1">&#39;compose/table-cell.html.j2&#39;</span>, {<span class="s1">&#39;p&#39;</span>: {<span class="s1">&#39;Class&#39;</span>: <span class="s1">&#39;font-semibold&#39;</span>}, <span class="s1">&#39;children&#39;</span>: <span class="nv">c_15</span>}) <span class="cp">}}</span><span class="x">
 </span><span class="x">            </span><span class="cp">{%</span>- <span class="k">endset</span> -<span class="cp">%}</span><span class="x">
-</span><span class="x">            </span><span class="cp">{{</span> <span class="nv">og_include</span>(<span class="s1">&#39;compose/table-row.html.j2&#39;</span>, {<span class="s1">&#39;p&#39;</span>: {<span class="s1">&#39;Attrs&#39;</span>: <span class="nv">og_attrs</span>([<span class="s1">&#39;data-testid&#39;</span>, <span class="s1">&#39;item&#39;</span>])}, <span class="s1">&#39;children&#39;</span>: <span class="nv">c_16</span>}) <span class="cp">}}</span><span class="x">
+</span><span class="x">            </span><span class="cp">{{</span> <span class="nv">og_include</span>(<span class="s1">&#39;compose/table-row.html.j2&#39;</span>, {<span class="s1">&#39;p&#39;</span>: {<span class="s1">&#39;Attrs&#39;</span>: <span class="nv">og_attrs</span>([<span class="s1">&#39;data-slot&#39;</span>, <span class="s1">&#39;item&#39;</span>])}, <span class="s1">&#39;children&#39;</span>: <span class="nv">c_16</span>}) <span class="cp">}}</span><span class="x">
 </span><span class="x">          </span><span class="cp">{%</span>- <span class="k">endfor</span> <span class="cp">%}</span><span class="x">
 </span><span class="x">        </span><span class="cp">{%</span>- <span class="k">endset</span> -<span class="cp">%}</span><span class="x">
 </span><span class="x">        </span><span class="cp">{{</span> <span class="nv">og_include</span>(<span class="s1">&#39;compose/table-body.html.j2&#39;</span>, {<span class="s1">&#39;p&#39;</span>: {}, <span class="s1">&#39;children&#39;</span>: <span class="nv">c_17</span>}) <span class="cp">}}</span><span class="x">
 </span><span class="x">      </span><span class="cp">{%</span>- <span class="k">endset</span> -<span class="cp">%}</span><span class="x">
 </span><span class="x">      </span><span class="cp">{{</span> <span class="nv">og_include</span>(<span class="s1">&#39;compose/table.html.j2&#39;</span>, {<span class="s1">&#39;p&#39;</span>: {<span class="s1">&#39;Class&#39;</span>: <span class="s1">&#39;w-full text-sm&#39;</span>}, <span class="s1">&#39;children&#39;</span>: <span class="nv">c_18</span>}) <span class="cp">}}</span><span class="x">
 </span><span class="x">    </span><span class="cp">{%</span>- <span class="k">endset</span> -<span class="cp">%}</span><span class="x">
-</span><span class="x">    </span><span class="cp">{{</span> <span class="nv">og_include</span>(<span class="s1">&#39;compose/box.html.j2&#39;</span>, {<span class="s1">&#39;p&#39;</span>: {<span class="s1">&#39;Class&#39;</span>: <span class="s1">&#39;w-full overflow-x-auto&#39;</span>, <span class="s1">&#39;Attrs&#39;</span>: <span class="nv">og_attrs</span>([<span class="s1">&#39;data-testid&#39;</span>, <span class="s1">&#39;compare-table&#39;</span>])}, <span class="s1">&#39;children&#39;</span>: <span class="nv">c_19</span>}) <span class="cp">}}</span><span class="x">
+</span><span class="x">    </span><span class="cp">{{</span> <span class="nv">og_include</span>(<span class="s1">&#39;compose/box.html.j2&#39;</span>, {<span class="s1">&#39;p&#39;</span>: {<span class="s1">&#39;Class&#39;</span>: <span class="s1">&#39;w-full overflow-x-auto&#39;</span>, <span class="s1">&#39;Attrs&#39;</span>: <span class="nv">og_attrs</span>([<span class="s1">&#39;data-slot&#39;</span>, <span class="s1">&#39;compare-table&#39;</span>])}, <span class="s1">&#39;children&#39;</span>: <span class="nv">c_19</span>}) <span class="cp">}}</span><span class="x">
 </span><span class="x">  </span><span class="cp">{%</span>- <span class="k">else</span> <span class="cp">%}</span><span class="x">
 </span><span class="x">    </span><span class="cp">{{</span> <span class="nv">og_include</span>(<span class="s1">&#39;blocks/cut-cards.html.j2&#39;</span>, {<span class="s1">&#39;p&#39;</span>: {<span class="s1">&#39;dishes&#39;</span>: <span class="nv">v_dishes</span>, <span class="s1">&#39;labels&#39;</span>: <span class="nv">v_labels</span><span class="cp">}}</span><span class="x">) }}
 </span><span class="x">  </span><span class="cp">{%</span>- <span class="k">endif</span> <span class="cp">%}</span><span class="x">
