@@ -146,6 +146,16 @@
      ]
     },
     {
+     "desc": "address of the picture (an https URL or a path); none: the placeholder",
+     "name": "image",
+     "type": "string"
+    },
+    {
+     "desc": "alt text of the picture; none: the title",
+     "name": "imageAlt",
+     "type": "string"
+    },
+    {
      "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
      "name": "landmarkLabel",
      "type": "string"
@@ -251,6 +261,59 @@
     {
      "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
      "name": "landmarkLabel",
+     "type": "string"
+    }
+   ]
+  }
+ ],
+ "add-icon": [
+  {
+   "docs": "A small icon button that adds one dish: a plus, named after the dish. Static markup.",
+   "part": "AddIcon",
+   "rows": [
+    {
+     "desc": "accessible name, with the dish in it",
+     "name": "label",
+     "required": true,
+     "type": "string"
+    },
+    {
+     "default": "\"outline\"",
+     "name": "variant",
+     "type": "\"default\" | \"outline\"",
+     "values": [
+      "default",
+      "outline"
+     ]
+    }
+   ]
+  }
+ ],
+ "add-qty": [
+  {
+   "docs": "A quantity field named after the dish (minus and plus buttons with their own names) beside an add button. Static markup.",
+   "part": "AddQty",
+   "rows": [
+    {
+     "desc": "name of the quantity field",
+     "name": "name",
+     "required": true,
+     "type": "string"
+    },
+    {
+     "desc": "the dish name, put into the labels",
+     "name": "dish",
+     "required": true,
+     "type": "string"
+    },
+    {
+     "name": "labels",
+     "required": true,
+     "type": "{ qtyOf: string; decreaseOf: string; increaseOf: string; add: string }"
+    },
+    {
+     "default": "\"1\"",
+     "name": "value",
      "type": "string"
     }
    ]
@@ -491,7 +554,7 @@
    "part": "ArticleBlock",
    "rows": [
     {
-     "desc": "data-testid of the root",
+     "desc": "data-slot of the root (default: the component name)",
      "name": "testid",
      "type": "string"
     }
@@ -843,6 +906,11 @@
      "default": "\"\"",
      "desc": "accessible name of the picture (image)",
      "name": "alt",
+     "type": "string"
+    },
+    {
+     "desc": "address of the picture (image); none: the placeholder",
+     "name": "image",
      "type": "string"
     }
    ]
@@ -1211,6 +1279,25 @@
   {
    "part": "CardTitle",
    "rows": []
+  }
+ ],
+ "cart-count": [
+  {
+   "docs": "The cart count as a live status (role status, aria-live polite): a bag icon and the words with the number. The page updates the number; screen readers announce it.",
+   "part": "CartCount",
+   "rows": [
+    {
+     "default": "0",
+     "name": "count",
+     "type": "number"
+    },
+    {
+     "desc": "the words with {0} for the number",
+     "name": "label",
+     "required": true,
+     "type": "string"
+    }
+   ]
   }
  ],
  "cart-drawer": [
@@ -1889,6 +1976,86 @@
    ]
   }
  ],
+ "combo-builder": [
+  {
+   "docs": "A set (combo) builder: three numbered steps, each a radio group of cards with the price (main, side, drink), beside or under a summary with the live total and the order button. Axes: layout (split, stacked), tone.",
+   "part": "ComboBuilder",
+   "rows": [
+    {
+     "name": "id",
+     "required": true,
+     "type": "string"
+    },
+    {
+     "name": "title",
+     "required": true,
+     "type": "string"
+    },
+    {
+     "default": "\"\"",
+     "name": "lead",
+     "type": "string"
+    },
+    {
+     "name": "labels",
+     "required": true,
+     "type": "FoodLabels"
+    },
+    {
+     "desc": "main dishes",
+     "name": "mains",
+     "required": true,
+     "type": "DishOption[]"
+    },
+    {
+     "desc": "sides",
+     "name": "sides",
+     "required": true,
+     "type": "DishOption[]"
+    },
+    {
+     "desc": "drinks",
+     "name": "drinks",
+     "required": true,
+     "type": "DishOption[]"
+    },
+    {
+     "desc": "the total of the first choices, minor units",
+     "name": "total",
+     "required": true,
+     "type": "number"
+    },
+    {
+     "name": "currency",
+     "required": true,
+     "type": "string"
+    },
+    {
+     "default": "\"split\"",
+     "name": "layout",
+     "type": "\"split\" | \"stacked\"",
+     "values": [
+      "split",
+      "stacked"
+     ]
+    },
+    {
+     "default": "\"default\"",
+     "name": "tone",
+     "type": "\"default\" | \"muted\"",
+     "values": [
+      "default",
+      "muted"
+     ]
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
+    }
+   ]
+  }
+ ],
  "compare-mark": [
   {
    "docs": "One cell value of ComparisonTable: yes shows a check, no a dash (both with the hidden word for screen readers), any other value is shown as text.",
@@ -2328,6 +2495,16 @@
      ]
     },
     {
+     "desc": "address of the picture (an https URL or a path); none: the placeholder",
+     "name": "image",
+     "type": "string"
+    },
+    {
+     "desc": "alt text of the picture; none: the title",
+     "name": "imageAlt",
+     "type": "string"
+    },
+    {
      "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
      "name": "landmarkLabel",
      "type": "string"
@@ -2464,6 +2641,16 @@
      ]
     },
     {
+     "desc": "address of the picture (an https URL or a path); none: the placeholder",
+     "name": "image",
+     "type": "string"
+    },
+    {
+     "desc": "alt text of the picture; none: the title",
+     "name": "imageAlt",
+     "type": "string"
+    },
+    {
      "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
      "name": "landmarkLabel",
      "type": "string"
@@ -2498,6 +2685,24 @@
      "desc": "the centered layout: items centred in their cells",
      "name": "center",
      "type": "boolean"
+    }
+   ]
+  }
+ ],
+ "cut-cards": [
+  {
+   "docs": "The cards layout of DishCompare: one compare card per cut with a picture, the name, the summary, the weight, heat and price as a description list, and the cooking time.",
+   "part": "CutCards",
+   "rows": [
+    {
+     "name": "dishes",
+     "required": true,
+     "type": "Dish[]"
+    },
+    {
+     "name": "labels",
+     "required": true,
+     "type": "FoodLabels"
     }
    ]
   }
@@ -2780,6 +2985,394 @@
    ]
   }
  ],
+ "dish-bento": [
+  {
+   "docs": "Featured dishes as a bento: the first dish in a large tile (two by two) with its summary and a link to its page, the others in small tiles around it. Axes: feature (start, end), tone.",
+   "part": "DishBento",
+   "rows": [
+    {
+     "name": "id",
+     "required": true,
+     "type": "string"
+    },
+    {
+     "name": "title",
+     "required": true,
+     "type": "string"
+    },
+    {
+     "default": "\"\"",
+     "name": "lead",
+     "type": "string"
+    },
+    {
+     "name": "dishes",
+     "required": true,
+     "type": "Dish[]"
+    },
+    {
+     "default": "\"\"",
+     "desc": "the text of the empty state (no records), from the dictionary",
+     "name": "empty",
+     "type": "string"
+    },
+    {
+     "name": "labels",
+     "required": true,
+     "type": "FoodLabels"
+    },
+    {
+     "default": "\"start\"",
+     "name": "feature",
+     "type": "\"start\" | \"end\"",
+     "values": [
+      "start",
+      "end"
+     ]
+    },
+    {
+     "default": "\"default\"",
+     "name": "tone",
+     "type": "\"default\" | \"muted\"",
+     "values": [
+      "default",
+      "muted"
+     ]
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
+    }
+   ]
+  }
+ ],
+ "dish-card": [
+  {
+   "docs": "A dish as a card: picture, optional badge, category, name, portion/weight, summary, price and an order button. No rating. Axes: layout (vertical, horizontal), media (image, none), density, action (button, none). Records map from Codex kind `dish`.",
+   "part": "DishCard",
+   "rows": [
+    {
+     "name": "dish",
+     "required": true,
+     "type": "Dish"
+    },
+    {
+     "name": "labels",
+     "required": true,
+     "type": "DishLabels"
+    },
+    {
+     "default": "\"vertical\"",
+     "name": "layout",
+     "type": "\"vertical\" | \"horizontal\"",
+     "values": [
+      "vertical",
+      "horizontal"
+     ]
+    },
+    {
+     "default": "\"image\"",
+     "name": "media",
+     "type": "\"image\" | \"none\"",
+     "values": [
+      "image",
+      "none"
+     ]
+    },
+    {
+     "default": "\"show\"",
+     "name": "prices",
+     "type": "\"show\" | \"hide\"",
+     "values": [
+      "show",
+      "hide"
+     ]
+    },
+    {
+     "default": "\"button\"",
+     "name": "action",
+     "type": "\"button\" | \"none\"",
+     "values": [
+      "button",
+      "none"
+     ]
+    },
+    {
+     "default": "\"default\"",
+     "name": "density",
+     "type": "\"default\" | \"compact\"",
+     "values": [
+      "default",
+      "compact"
+     ]
+    }
+   ]
+  }
+ ],
+ "dish-cart-grid": [
+  {
+   "docs": "Dishes added to the cart from the card: the live cart count over a grid of cards, each with a picture, name, weight, price and a quantity field named after the dish beside the add button. Axes: media (image, none), tone.",
+   "part": "DishCartGrid",
+   "rows": [
+    {
+     "name": "id",
+     "required": true,
+     "type": "string"
+    },
+    {
+     "name": "title",
+     "required": true,
+     "type": "string"
+    },
+    {
+     "default": "\"\"",
+     "name": "lead",
+     "type": "string"
+    },
+    {
+     "name": "dishes",
+     "required": true,
+     "type": "Dish[]"
+    },
+    {
+     "default": "\"\"",
+     "desc": "the text of the empty state (no records), from the dictionary",
+     "name": "empty",
+     "type": "string"
+    },
+    {
+     "name": "labels",
+     "required": true,
+     "type": "FoodLabels"
+    },
+    {
+     "default": "0",
+     "desc": "dishes in the cart",
+     "name": "count",
+     "type": "number"
+    },
+    {
+     "default": "\"image\"",
+     "name": "media",
+     "type": "\"image\" | \"none\"",
+     "values": [
+      "image",
+      "none"
+     ]
+    },
+    {
+     "default": "\"default\"",
+     "name": "tone",
+     "type": "\"default\" | \"muted\"",
+     "values": [
+      "default",
+      "muted"
+     ]
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
+    }
+   ]
+  }
+ ],
+ "dish-compare": [
+  {
+   "docs": "Grill cuts side by side: an accessible table (caption, column and row headers) of the cut, weight, cooking time, heat, marinade and price, or one compare card per cut with the same facts as a description list. Axes: layout (table, cards), tone.",
+   "part": "DishCompare",
+   "rows": [
+    {
+     "name": "id",
+     "required": true,
+     "type": "string"
+    },
+    {
+     "name": "title",
+     "required": true,
+     "type": "string"
+    },
+    {
+     "default": "\"\"",
+     "name": "lead",
+     "type": "string"
+    },
+    {
+     "name": "dishes",
+     "required": true,
+     "type": "Dish[]"
+    },
+    {
+     "default": "\"\"",
+     "desc": "the text of the empty state (no records), from the dictionary",
+     "name": "empty",
+     "type": "string"
+    },
+    {
+     "name": "labels",
+     "required": true,
+     "type": "FoodLabels"
+    },
+    {
+     "default": "\"table\"",
+     "name": "layout",
+     "type": "\"table\" | \"cards\"",
+     "values": [
+      "table",
+      "cards"
+     ]
+    },
+    {
+     "default": "\"default\"",
+     "name": "tone",
+     "type": "\"default\" | \"muted\"",
+     "values": [
+      "default",
+      "muted"
+     ]
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
+    }
+   ]
+  }
+ ],
+ "dish-showcase": [
+  {
+   "docs": "A showcase of dishes: each card is one link to the dish page (picture, badge, name, weight, summary, price and an arrow). No cart here. Axes: cols (3, 4), ratio (4/3, 1/1), tone.",
+   "part": "DishShowcase",
+   "rows": [
+    {
+     "name": "id",
+     "required": true,
+     "type": "string"
+    },
+    {
+     "name": "title",
+     "required": true,
+     "type": "string"
+    },
+    {
+     "default": "\"\"",
+     "name": "lead",
+     "type": "string"
+    },
+    {
+     "name": "dishes",
+     "required": true,
+     "type": "Dish[]"
+    },
+    {
+     "default": "\"\"",
+     "desc": "the text of the empty state (no records), from the dictionary",
+     "name": "empty",
+     "type": "string"
+    },
+    {
+     "name": "labels",
+     "required": true,
+     "type": "FoodLabels"
+    },
+    {
+     "default": "\"3\"",
+     "name": "cols",
+     "type": "\"3\" | \"4\"",
+     "values": [
+      "3",
+      "4"
+     ]
+    },
+    {
+     "default": "\"4/3\"",
+     "name": "ratio",
+     "type": "\"4/3\" | \"1/1\"",
+     "values": [
+      "4/3",
+      "1/1"
+     ]
+    },
+    {
+     "default": "\"default\"",
+     "name": "tone",
+     "type": "\"default\" | \"muted\"",
+     "values": [
+      "default",
+      "muted"
+     ]
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
+    }
+   ]
+  }
+ ],
+ "dish-strip": [
+  {
+   "docs": "A horizontal strip of dishes that scrolls sideways (a focusable, named region with snap points): small cards with a picture, name, weight, price and an add button. Axes: size (sm, lg), tone.",
+   "part": "DishStrip",
+   "rows": [
+    {
+     "name": "id",
+     "required": true,
+     "type": "string"
+    },
+    {
+     "name": "title",
+     "required": true,
+     "type": "string"
+    },
+    {
+     "default": "\"\"",
+     "name": "lead",
+     "type": "string"
+    },
+    {
+     "name": "dishes",
+     "required": true,
+     "type": "Dish[]"
+    },
+    {
+     "default": "\"\"",
+     "desc": "the text of the empty state (no records), from the dictionary",
+     "name": "empty",
+     "type": "string"
+    },
+    {
+     "name": "labels",
+     "required": true,
+     "type": "FoodLabels"
+    },
+    {
+     "default": "\"sm\"",
+     "name": "size",
+     "type": "\"sm\" | \"lg\"",
+     "values": [
+      "sm",
+      "lg"
+     ]
+    },
+    {
+     "default": "\"default\"",
+     "name": "tone",
+     "type": "\"default\" | \"muted\"",
+     "values": [
+      "default",
+      "muted"
+     ]
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
+    }
+   ]
+  }
+ ],
  "drawer-lines": [
   {
    "docs": "The filled body of the CartDrawer: the lines with a quantity field, then the free-delivery bar, the subtotal and total and the button.",
@@ -2941,6 +3534,16 @@
      ]
     },
     {
+     "desc": "address of the picture (an https URL or a path); none: the placeholder",
+     "name": "image",
+     "type": "string"
+    },
+    {
+     "desc": "alt text of the picture; none: the title",
+     "name": "imageAlt",
+     "type": "string"
+    },
+    {
      "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
      "name": "landmarkLabel",
      "type": "string"
@@ -3039,6 +3642,16 @@
       "default",
       "muted"
      ]
+    },
+    {
+     "desc": "address of the picture (an https URL or a path); none: the placeholder",
+     "name": "image",
+     "type": "string"
+    },
+    {
+     "desc": "alt text of the picture; none: the title",
+     "name": "imageAlt",
+     "type": "string"
     },
     {
      "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
@@ -3317,6 +3930,16 @@
      ]
     },
     {
+     "desc": "address of the picture (an https URL or a path); none: the placeholder",
+     "name": "image",
+     "type": "string"
+    },
+    {
+     "desc": "alt text of the picture; none: the title",
+     "name": "imageAlt",
+     "type": "string"
+    },
+    {
      "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
      "name": "landmarkLabel",
      "type": "string"
@@ -3391,6 +4014,16 @@
       "default",
       "compact"
      ]
+    },
+    {
+     "desc": "address of the picture (an https URL or a path); none: the placeholder",
+     "name": "image",
+     "type": "string"
+    },
+    {
+     "desc": "alt text of the picture; none: the title",
+     "name": "imageAlt",
+     "type": "string"
     },
     {
      "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
@@ -3738,6 +4371,16 @@
      ]
     },
     {
+     "desc": "address of the picture (an https URL or a path); none: the placeholder",
+     "name": "image",
+     "type": "string"
+    },
+    {
+     "desc": "alt text of the picture; none: the title",
+     "name": "imageAlt",
+     "type": "string"
+    },
+    {
      "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
      "name": "landmarkLabel",
      "type": "string"
@@ -3830,6 +4473,16 @@
       "default",
       "compact"
      ]
+    },
+    {
+     "desc": "address of the picture (an https URL or a path); none: the placeholder",
+     "name": "image",
+     "type": "string"
+    },
+    {
+     "desc": "alt text of the picture; none: the title",
+     "name": "imageAlt",
+     "type": "string"
     },
     {
      "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
@@ -3951,7 +4604,7 @@
    "part": "FigureBlock",
    "rows": [
     {
-     "desc": "data-testid of the root",
+     "desc": "data-slot of the root (default: the component name)",
      "name": "testid",
      "type": "string"
     }
@@ -4302,6 +4955,16 @@
      ]
     },
     {
+     "desc": "address of the picture (an https URL or a path); none: the placeholder",
+     "name": "image",
+     "type": "string"
+    },
+    {
+     "desc": "alt text of the picture; none: the title",
+     "name": "imageAlt",
+     "type": "string"
+    },
+    {
      "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
      "name": "landmarkLabel",
      "type": "string"
@@ -4355,6 +5018,157 @@
   {
    "part": "GridCol",
    "rows": []
+  }
+ ],
+ "grill-builder": [
+  {
+   "docs": "A grill (mangal) dish builder: the meat as picture cards in a radio group, the weight as chips, the sides as checkboxes with prices, then a summary with the live total and the order button. Axes: layout (split, stacked), tone.",
+   "part": "GrillBuilder",
+   "rows": [
+    {
+     "name": "id",
+     "required": true,
+     "type": "string"
+    },
+    {
+     "name": "title",
+     "required": true,
+     "type": "string"
+    },
+    {
+     "default": "\"\"",
+     "name": "lead",
+     "type": "string"
+    },
+    {
+     "name": "labels",
+     "required": true,
+     "type": "FoodLabels"
+    },
+    {
+     "desc": "the meats, price per 500 g",
+     "name": "meats",
+     "required": true,
+     "type": "DishOption[]"
+    },
+    {
+     "desc": "the weights",
+     "name": "weights",
+     "required": true,
+     "type": "DishOption[]"
+    },
+    {
+     "desc": "the sides (checkboxes)",
+     "name": "sides",
+     "required": true,
+     "type": "DishOption[]"
+    },
+    {
+     "desc": "the total of the first choices, minor units",
+     "name": "total",
+     "required": true,
+     "type": "number"
+    },
+    {
+     "name": "currency",
+     "required": true,
+     "type": "string"
+    },
+    {
+     "default": "\"split\"",
+     "name": "layout",
+     "type": "\"split\" | \"stacked\"",
+     "values": [
+      "split",
+      "stacked"
+     ]
+    },
+    {
+     "default": "\"default\"",
+     "name": "tone",
+     "type": "\"default\" | \"muted\"",
+     "values": [
+      "default",
+      "muted"
+     ]
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
+    }
+   ]
+  }
+ ],
+ "grocery-list": [
+  {
+   "docs": "Groceries as a compact list: a small square picture (or none), the name, the pack size, the price and an add button, in one or two columns. Axes: thumbs (show, hide), cols (1, 2), tone.",
+   "part": "GroceryList",
+   "rows": [
+    {
+     "name": "id",
+     "required": true,
+     "type": "string"
+    },
+    {
+     "name": "title",
+     "required": true,
+     "type": "string"
+    },
+    {
+     "default": "\"\"",
+     "name": "lead",
+     "type": "string"
+    },
+    {
+     "name": "dishes",
+     "required": true,
+     "type": "Dish[]"
+    },
+    {
+     "default": "\"\"",
+     "desc": "the text of the empty state (no records), from the dictionary",
+     "name": "empty",
+     "type": "string"
+    },
+    {
+     "name": "labels",
+     "required": true,
+     "type": "FoodLabels"
+    },
+    {
+     "default": "\"show\"",
+     "name": "thumbs",
+     "type": "\"show\" | \"hide\"",
+     "values": [
+      "show",
+      "hide"
+     ]
+    },
+    {
+     "default": "\"2\"",
+     "name": "cols",
+     "type": "\"1\" | \"2\"",
+     "values": [
+      "1",
+      "2"
+     ]
+    },
+    {
+     "default": "\"default\"",
+     "name": "tone",
+     "type": "\"default\" | \"muted\"",
+     "values": [
+      "default",
+      "muted"
+     ]
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
+    }
+   ]
   }
  ],
  "group": [
@@ -4463,6 +5277,16 @@
       "default",
       "compact"
      ]
+    },
+    {
+     "desc": "address of the picture (an https URL or a path); none: the placeholder",
+     "name": "image",
+     "type": "string"
+    },
+    {
+     "desc": "alt text of the picture; none: the title",
+     "name": "imageAlt",
+     "type": "string"
     },
     {
      "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
@@ -4686,6 +5510,16 @@
      ]
     },
     {
+     "desc": "address of the picture (an https URL or a path); none: the placeholder",
+     "name": "image",
+     "type": "string"
+    },
+    {
+     "desc": "alt text of the picture; none: the title",
+     "name": "imageAlt",
+     "type": "string"
+    },
+    {
      "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
      "name": "landmarkLabel",
      "type": "string"
@@ -4731,9 +5565,14 @@
      "type": "HeroContent"
     },
     {
-     "desc": "accessible name of the pictures",
+     "desc": "accessible name of the picture",
      "name": "alt",
      "required": true,
+     "type": "string"
+    },
+    {
+     "desc": "address of the picture (picture, card and plans media); none: the placeholder",
+     "name": "image",
      "type": "string"
     },
     {
@@ -5137,6 +5976,114 @@
    "rows": []
   }
  ],
+ "lightbox-gallery": [
+  {
+   "docs": "Photos in a grid, a masonry of mixed heights, or a featured picture over thumbnails, with a dialog that shows the selected photo. Static markup: the dialog open state is a prop. Axes: layout (grid, masonry, featured), captions (show, hide), lightbox (open, closed).",
+   "part": "LightboxGallery",
+   "rows": [
+    {
+     "name": "id",
+     "required": true,
+     "type": "string"
+    },
+    {
+     "name": "title",
+     "required": true,
+     "type": "string"
+    },
+    {
+     "default": "\"\"",
+     "name": "lead",
+     "type": "string"
+    },
+    {
+     "name": "photos",
+     "required": true,
+     "type": "Photo[]"
+    },
+    {
+     "default": "\"\"",
+     "desc": "the text of the empty state (no records), from the dictionary",
+     "name": "empty",
+     "type": "string"
+    },
+    {
+     "name": "labels",
+     "required": true,
+     "type": "LightboxLabels"
+    },
+    {
+     "default": "\"grid\"",
+     "name": "layout",
+     "type": "\"grid\" | \"masonry\" | \"featured\"",
+     "values": [
+      "grid",
+      "masonry",
+      "featured"
+     ]
+    },
+    {
+     "default": "\"show\"",
+     "name": "captions",
+     "type": "\"show\" | \"hide\"",
+     "values": [
+      "show",
+      "hide"
+     ]
+    },
+    {
+     "default": "\"closed\"",
+     "name": "lightbox",
+     "type": "\"open\" | \"closed\"",
+     "values": [
+      "open",
+      "closed"
+     ]
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
+    }
+   ]
+  }
+ ],
+ "lightbox-stage": [
+  {
+   "docs": "The selected photo in a dialog: title, close, picture, optional caption and previous/next. Static open state. Used by LightboxGallery.",
+   "part": "LightboxStage",
+   "rows": [
+    {
+     "name": "photos",
+     "required": true,
+     "type": "Photo[]"
+    },
+    {
+     "name": "labels",
+     "required": true,
+     "type": "LightboxLabels"
+    },
+    {
+     "default": "\"show\"",
+     "name": "captions",
+     "type": "\"show\" | \"hide\"",
+     "values": [
+      "show",
+      "hide"
+     ]
+    },
+    {
+     "default": "\"closed\"",
+     "name": "lightbox",
+     "type": "\"open\" | \"closed\"",
+     "values": [
+      "open",
+      "closed"
+     ]
+    }
+   ]
+  }
+ ],
  "link": [
   {
    "docs": "Link renders an anchor; External opens a new tab with rel=noopener noreferrer.",
@@ -5355,6 +6302,30 @@
    "rows": []
   }
  ],
+ "meat-cards": [
+  {
+   "docs": "The meat of a grill dish as picture cards in one radio group (fieldset with role radiogroup named by its legend): a picture, the name and the price per 500 g; the first checked.",
+   "part": "MeatCards",
+   "rows": [
+    {
+     "desc": "name of the radio group; the legend id is `<name>-legend`",
+     "name": "name",
+     "required": true,
+     "type": "string"
+    },
+    {
+     "name": "legend",
+     "required": true,
+     "type": "string"
+    },
+    {
+     "name": "options",
+     "required": true,
+     "type": "DishOption[]"
+    }
+   ]
+  }
+ ],
  "media-contacts": [
   {
    "docs": "The ways to get help of MediaList as wide outline buttons, then three support figures as rows in a card.",
@@ -5397,22 +6368,22 @@
  ],
  "media-frame": [
   {
-   "docs": "A picture in a fixed ratio that follows the theme. `src` is the picture of the light theme, `darkSrc` the one of the dark theme (without it the dark theme shows `src`). Without both it shows the built-in neutral placeholders (base64 data URIs, one light and one dark), so a page can be laid out before it has pictures; the placeholder stands in for a real `src` and is switched by the theme token. `ratio` comes from the recipe; the corners are the plain theme radius.",
+   "docs": "A picture in a fixed ratio that follows the theme. `src` is the picture of the light theme, `darkSrc` the one of the dark theme (without it the dark theme shows `src`). Without both (an empty string counts as none) it shows the built-in neutral placeholders (base64 data URIs, one light and one dark), so a page can be laid out before it has pictures; the placeholder is decorative (`alt` is empty), stands in for a real `src` and is switched by the theme token. A real picture gets `alt` and loads lazily. `ratio` comes from the recipe; the corners are the plain theme radius.",
    "part": "MediaFrame",
    "rows": [
     {
-     "desc": "accessible name of the picture",
+     "desc": "accessible name of the picture; used only when there is a `src` (the placeholder is decorative)",
      "name": "alt",
      "required": true,
      "type": "string"
     },
     {
-     "desc": "address of the picture (light theme); none: the built-in light placeholder",
+     "desc": "address of the picture (light theme); none or empty: the built-in light placeholder",
      "name": "src",
      "type": "string"
     },
     {
-     "desc": "address of the picture for the dark theme; none: `src`, or the built-in dark placeholder when there is no `src`",
+     "desc": "address of the picture for the dark theme; none or empty: `src`, or the built-in dark placeholder when there is no `src`",
      "name": "darkSrc",
      "type": "string"
     },
@@ -5505,6 +6476,16 @@
       "default",
       "muted"
      ]
+    },
+    {
+     "desc": "address of the picture (an https URL or a path); none: the placeholder",
+     "name": "image",
+     "type": "string"
+    },
+    {
+     "desc": "alt text of the picture; none: the title",
+     "name": "imageAlt",
+     "type": "string"
     },
     {
      "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
@@ -5697,6 +6678,83 @@
    ]
   }
  ],
+ "menu-board": [
+  {
+   "docs": "A restaurant menu board: category sections with DishCards in a grid, or denser menu rows in a list or a sectioned column. Axes: layout (sections, grid, list), prices (show, hide), density. Composes DishCard; section rows use MenuRow.",
+   "part": "MenuBoard",
+   "rows": [
+    {
+     "name": "id",
+     "required": true,
+     "type": "string"
+    },
+    {
+     "name": "title",
+     "required": true,
+     "type": "string"
+    },
+    {
+     "default": "\"\"",
+     "name": "lead",
+     "type": "string"
+    },
+    {
+     "name": "dishes",
+     "required": true,
+     "type": "Dish[]"
+    },
+    {
+     "name": "sections",
+     "required": true,
+     "type": "DishSection[]"
+    },
+    {
+     "default": "\"\"",
+     "desc": "the text of the empty state (no records), from the dictionary",
+     "name": "empty",
+     "type": "string"
+    },
+    {
+     "name": "labels",
+     "required": true,
+     "type": "FoodLabels"
+    },
+    {
+     "default": "\"sections\"",
+     "name": "layout",
+     "type": "\"sections\" | \"grid\" | \"list\"",
+     "values": [
+      "sections",
+      "grid",
+      "list"
+     ]
+    },
+    {
+     "default": "\"show\"",
+     "name": "prices",
+     "type": "\"show\" | \"hide\"",
+     "values": [
+      "show",
+      "hide"
+     ]
+    },
+    {
+     "default": "\"default\"",
+     "name": "density",
+     "type": "\"default\" | \"compact\"",
+     "values": [
+      "default",
+      "compact"
+     ]
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
+    }
+   ]
+  }
+ ],
  "menu-entry": [
   {
    "docs": "One entry of a menu: a link to its address, or, without one, its content as text in the same box (the magazine routes nothing, so it shows text). current marks the page the entry stands for (aria-current) either way.",
@@ -5734,7 +6792,7 @@
      ]
     },
     {
-     "desc": "the test id of the entry",
+     "desc": "data-slot of the entry (default: the component name)",
      "name": "testid",
      "type": "string"
     },
@@ -5743,6 +6801,58 @@
      "desc": "the content holds block elements: without an address it sits in a div, not a span",
      "name": "block",
      "type": "boolean"
+    }
+   ]
+  }
+ ],
+ "menu-row": [
+  {
+   "docs": "One dish on a menu board: name, optional badge, a dotted leader to the price, then the summary and the portion/weight. Used by MenuBoard; Codex kind `dish`.",
+   "part": "MenuRow",
+   "rows": [
+    {
+     "name": "dish",
+     "required": true,
+     "type": "Dish"
+    },
+    {
+     "default": "\"show\"",
+     "name": "prices",
+     "type": "\"show\" | \"hide\"",
+     "values": [
+      "show",
+      "hide"
+     ]
+    }
+   ]
+  }
+ ],
+ "menu-section-nav": [
+  {
+   "docs": "The sections of a menu as chips that jump to them: a nav landmark named by `label`, one link per section to `#<prefix>-<key>`.",
+   "part": "MenuSectionNav",
+   "rows": [
+    {
+     "desc": "accessible name of the nav",
+     "name": "label",
+     "required": true,
+     "type": "string"
+    },
+    {
+     "name": "sections",
+     "required": true,
+     "type": "Array<{ id: string; key: string; title: string }>"
+    },
+    {
+     "desc": "the block id the section ids start with",
+     "name": "prefix",
+     "required": true,
+     "type": "string"
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
     }
    ]
   }
@@ -5915,6 +7025,16 @@
       "default",
       "compact"
      ]
+    },
+    {
+     "desc": "address of the picture (an https URL or a path); none: the placeholder",
+     "name": "image",
+     "type": "string"
+    },
+    {
+     "desc": "alt text of the picture; none: the title",
+     "name": "imageAlt",
+     "type": "string"
     },
     {
      "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
@@ -6099,7 +7219,7 @@
      "type": "string"
     },
     {
-     "desc": "data-testid of the root",
+     "desc": "data-slot of the root (default: the component name)",
      "name": "testid",
      "type": "string"
     },
@@ -6279,6 +7399,16 @@
      ]
     },
     {
+     "desc": "address of the picture (an https URL or a path); none: the placeholder",
+     "name": "image",
+     "type": "string"
+    },
+    {
+     "desc": "alt text of the picture; none: the title",
+     "name": "imageAlt",
+     "type": "string"
+    },
+    {
      "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
      "name": "landmarkLabel",
      "type": "string"
@@ -6352,6 +7482,11 @@
      "type": "string"
     },
     {
+     "desc": "address of the picture; none: the placeholder",
+     "name": "image",
+     "type": "string"
+    },
+    {
      "name": "card",
      "required": true,
      "type": "OfferCard"
@@ -6363,6 +7498,51 @@
   {
    "part": "OptGroup",
    "rows": []
+  }
+ ],
+ "option-chips": [
+  {
+   "docs": "One choice as a radio group drawn as chips: a fieldset with role radiogroup named by its legend, one radio per option (the first checked), the name and an optional price or note. Static markup.",
+   "part": "OptionChips",
+   "rows": [
+    {
+     "desc": "name of the radio group; the legend id is `<name>-legend`",
+     "name": "name",
+     "required": true,
+     "type": "string"
+    },
+    {
+     "desc": "the visible name of the group",
+     "name": "legend",
+     "required": true,
+     "type": "string"
+    },
+    {
+     "name": "options",
+     "required": true,
+     "type": "DishOption[]"
+    },
+    {
+     "default": "\"none\"",
+     "desc": "what follows the option name",
+     "name": "extra",
+     "type": "\"none\" | \"price\" | \"note\"",
+     "values": [
+      "none",
+      "price",
+      "note"
+     ]
+    },
+    {
+     "default": "\"wrap\"",
+     "name": "layout",
+     "type": "\"wrap\" | \"column\"",
+     "values": [
+      "wrap",
+      "column"
+     ]
+    }
+   ]
   }
  ],
  "order-rows": [
@@ -7025,6 +8205,80 @@
    ]
   }
  ],
+ "pizza-picker": [
+  {
+   "docs": "Pizzas with a picker on each card: the picture, name and toppings, a radio group of sizes and one of crusts (each a fieldset with role radiogroup), the price and an add button. Axes: layout (cards, rows), tone.",
+   "part": "PizzaPicker",
+   "rows": [
+    {
+     "name": "id",
+     "required": true,
+     "type": "string"
+    },
+    {
+     "name": "title",
+     "required": true,
+     "type": "string"
+    },
+    {
+     "default": "\"\"",
+     "name": "lead",
+     "type": "string"
+    },
+    {
+     "name": "dishes",
+     "required": true,
+     "type": "Dish[]"
+    },
+    {
+     "default": "\"\"",
+     "desc": "the text of the empty state (no records), from the dictionary",
+     "name": "empty",
+     "type": "string"
+    },
+    {
+     "name": "labels",
+     "required": true,
+     "type": "FoodLabels"
+    },
+    {
+     "desc": "the sizes, the first checked",
+     "name": "sizes",
+     "required": true,
+     "type": "DishOption[]"
+    },
+    {
+     "desc": "the crusts, the first checked",
+     "name": "crusts",
+     "required": true,
+     "type": "DishOption[]"
+    },
+    {
+     "default": "\"cards\"",
+     "name": "layout",
+     "type": "\"cards\" | \"rows\"",
+     "values": [
+      "cards",
+      "rows"
+     ]
+    },
+    {
+     "default": "\"default\"",
+     "name": "tone",
+     "type": "\"default\" | \"muted\"",
+     "values": [
+      "default",
+      "muted"
+     ]
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
+    }
+   ]
+  }
+ ],
  "post-actions": [
   {
    "docs": "The calls to action of a post header: share and save side by side, one wide read button, or a wide read button with share and save as icons.",
@@ -7495,6 +8749,16 @@
      "default": "\"\"",
      "desc": "the text of the empty state (no records), from the dictionary",
      "name": "empty",
+     "type": "string"
+    },
+    {
+     "desc": "address of the picture (an https URL or a path); none: the placeholder",
+     "name": "image",
+     "type": "string"
+    },
+    {
+     "desc": "alt text of the picture; none: the title",
+     "name": "imageAlt",
      "type": "string"
     },
     {
@@ -8512,6 +9776,68 @@
    "rows": []
   }
  ],
+ "quick-order": [
+  {
+   "docs": "Quick order in one click: compact rows (name, weight, summary, price) each with an order button named after the dish, under a phone field that the one click uses. Axes: phone (show, hide), tone.",
+   "part": "QuickOrder",
+   "rows": [
+    {
+     "name": "id",
+     "required": true,
+     "type": "string"
+    },
+    {
+     "name": "title",
+     "required": true,
+     "type": "string"
+    },
+    {
+     "default": "\"\"",
+     "name": "lead",
+     "type": "string"
+    },
+    {
+     "name": "dishes",
+     "required": true,
+     "type": "Dish[]"
+    },
+    {
+     "default": "\"\"",
+     "desc": "the text of the empty state (no records), from the dictionary",
+     "name": "empty",
+     "type": "string"
+    },
+    {
+     "name": "labels",
+     "required": true,
+     "type": "FoodLabels"
+    },
+    {
+     "default": "\"show\"",
+     "name": "phone",
+     "type": "\"show\" | \"hide\"",
+     "values": [
+      "show",
+      "hide"
+     ]
+    },
+    {
+     "default": "\"default\"",
+     "name": "tone",
+     "type": "\"default\" | \"muted\"",
+     "values": [
+      "default",
+      "muted"
+     ]
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
+    }
+   ]
+  }
+ ],
  "quote-card": [
   {
    "docs": "One customer quote of TestimonialGrid: a card, a plain figure or a social post, with the author's picture, the stars and a company glyph as `item` says.",
@@ -8738,6 +10064,16 @@
      "type": "string"
     },
     {
+     "desc": "address of the picture (an https URL or a path); none: the placeholder",
+     "name": "image",
+     "type": "string"
+    },
+    {
+     "desc": "alt text of the picture; none: the title",
+     "name": "imageAlt",
+     "type": "string"
+    },
+    {
      "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
      "name": "landmarkLabel",
      "type": "string"
@@ -8848,6 +10184,74 @@
    ]
   }
  ],
+ "recipe-kits": [
+  {
+   "docs": "Recipe kits delivered home: a picture beside the kit name, cooking time, the ingredients list, a portions radio group and the price with an add button. Axes: layout (rows, cards), tone.",
+   "part": "RecipeKits",
+   "rows": [
+    {
+     "name": "id",
+     "required": true,
+     "type": "string"
+    },
+    {
+     "name": "title",
+     "required": true,
+     "type": "string"
+    },
+    {
+     "default": "\"\"",
+     "name": "lead",
+     "type": "string"
+    },
+    {
+     "name": "dishes",
+     "required": true,
+     "type": "Dish[]"
+    },
+    {
+     "default": "\"\"",
+     "desc": "the text of the empty state (no records), from the dictionary",
+     "name": "empty",
+     "type": "string"
+    },
+    {
+     "name": "labels",
+     "required": true,
+     "type": "FoodLabels"
+    },
+    {
+     "desc": "the portion sizes, the first checked",
+     "name": "portions",
+     "required": true,
+     "type": "DishOption[]"
+    },
+    {
+     "default": "\"rows\"",
+     "name": "layout",
+     "type": "\"rows\" | \"cards\"",
+     "values": [
+      "rows",
+      "cards"
+     ]
+    },
+    {
+     "default": "\"default\"",
+     "name": "tone",
+     "type": "\"default\" | \"muted\"",
+     "values": [
+      "default",
+      "muted"
+     ]
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
+    }
+   ]
+  }
+ ],
  "region": [
   {
    "docs": "A landmark region (header, nav, section, aside, footer, article, figure) inside another file: one Block, never nested, so a nested landmark is its own component.",
@@ -8869,6 +10273,148 @@
       "main",
       "search",
       "div"
+     ]
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
+    }
+   ]
+  }
+ ],
+ "reservation-form": [
+  {
+   "docs": "A table reservation: name, phone and/or email, date, time, guests, optional notes and consent; in the split layout, the ways to reach the house sit beside the form. Axes: layout (single, split), density, fields (full, compact).",
+   "part": "ReservationForm",
+   "rows": [
+    {
+     "name": "id",
+     "required": true,
+     "type": "string"
+    },
+    {
+     "name": "title",
+     "required": true,
+     "type": "string"
+    },
+    {
+     "name": "text",
+     "required": true,
+     "type": "string"
+    },
+    {
+     "name": "labels",
+     "required": true,
+     "type": "ReservationLabels"
+    },
+    {
+     "desc": "address, hours and phone, shown beside the form in the split layout; Codex kind `contact`",
+     "name": "details",
+     "required": true,
+     "type": "Feature[]"
+    },
+    {
+     "default": "\"single\"",
+     "name": "layout",
+     "type": "\"single\" | \"split\"",
+     "values": [
+      "single",
+      "split"
+     ]
+    },
+    {
+     "default": "\"full\"",
+     "name": "fields",
+     "type": "\"full\" | \"compact\"",
+     "values": [
+      "full",
+      "compact"
+     ]
+    },
+    {
+     "default": "\"hide\"",
+     "name": "terms",
+     "type": "\"show\" | \"hide\"",
+     "values": [
+      "show",
+      "hide"
+     ]
+    },
+    {
+     "default": "\"default\"",
+     "name": "density",
+     "type": "\"default\" | \"compact\"",
+     "values": [
+      "default",
+      "compact"
+     ]
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
+    }
+   ]
+  }
+ ],
+ "restaurant-menu": [
+  {
+   "docs": "A restaurant menu by sections: a nav of section links, then each section (heading and note) with its dishes as menu lines (name, a dotted leader, the price; the summary and weight below). No cart. Axes: cols (1, 2), tone.",
+   "part": "RestaurantMenu",
+   "rows": [
+    {
+     "name": "id",
+     "required": true,
+     "type": "string"
+    },
+    {
+     "name": "title",
+     "required": true,
+     "type": "string"
+    },
+    {
+     "default": "\"\"",
+     "name": "lead",
+     "type": "string"
+    },
+    {
+     "name": "dishes",
+     "required": true,
+     "type": "Dish[]"
+    },
+    {
+     "name": "sections",
+     "required": true,
+     "type": "DishSection[]"
+    },
+    {
+     "default": "\"\"",
+     "desc": "the text of the empty state (no records), from the dictionary",
+     "name": "empty",
+     "type": "string"
+    },
+    {
+     "name": "labels",
+     "required": true,
+     "type": "FoodLabels"
+    },
+    {
+     "default": "\"1\"",
+     "name": "cols",
+     "type": "\"1\" | \"2\"",
+     "values": [
+      "1",
+      "2"
+     ]
+    },
+    {
+     "default": "\"default\"",
+     "name": "tone",
+     "type": "\"default\" | \"muted\"",
+     "values": [
+      "default",
+      "muted"
      ]
     },
     {
@@ -9553,6 +11099,30 @@
    ]
   }
  ],
+ "side-checks": [
+  {
+   "docs": "Extras to tick: a fieldset named by its legend, one checkbox per option with its note and price. Static markup.",
+   "part": "SideChecks",
+   "rows": [
+    {
+     "desc": "prefix of the checkbox names (one per option: <name>-<option id>)",
+     "name": "name",
+     "required": true,
+     "type": "string"
+    },
+    {
+     "name": "legend",
+     "required": true,
+     "type": "string"
+    },
+    {
+     "name": "options",
+     "required": true,
+     "type": "DishOption[]"
+    }
+   ]
+  }
+ ],
  "sidebar-nav": [
   {
    "docs": "A vertical navigation: the brand at the top, the links stacked, the user at the bottom. Axes: width (full: icon and name, compact: icons only with the name hidden), user (show, hide), density.",
@@ -10226,6 +11796,16 @@
      ]
     },
     {
+     "desc": "address of the picture (an https URL or a path); none: the placeholder",
+     "name": "image",
+     "type": "string"
+    },
+    {
+     "desc": "alt text of the picture; none: the title",
+     "name": "imageAlt",
+     "type": "string"
+    },
+    {
      "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
      "name": "landmarkLabel",
      "type": "string"
@@ -10470,6 +12050,16 @@
      ]
     },
     {
+     "desc": "address of the picture (an https URL or a path); none: the placeholder",
+     "name": "image",
+     "type": "string"
+    },
+    {
+     "desc": "alt text of the picture; none: the title",
+     "name": "imageAlt",
+     "type": "string"
+    },
+    {
      "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
      "name": "landmarkLabel",
      "type": "string"
@@ -10661,6 +12251,16 @@
      ]
     },
     {
+     "desc": "address of the picture (an https URL or a path); none: the placeholder",
+     "name": "image",
+     "type": "string"
+    },
+    {
+     "desc": "alt text of the picture; none: the title",
+     "name": "imageAlt",
+     "type": "string"
+    },
+    {
      "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
      "name": "landmarkLabel",
      "type": "string"
@@ -10732,6 +12332,68 @@
      "values": [
       "link",
       "none"
+     ]
+    },
+    {
+     "default": "\"default\"",
+     "name": "tone",
+     "type": "\"default\" | \"muted\"",
+     "values": [
+      "default",
+      "muted"
+     ]
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
+    }
+   ]
+  }
+ ],
+ "sushi-sets": [
+  {
+   "docs": "Sushi sets as a dense grid of tiles: a square picture with the piece count over it, the name, the rolls of the set as a list, the price and an add button. Axes: cols (3, 4), tone.",
+   "part": "SushiSets",
+   "rows": [
+    {
+     "name": "id",
+     "required": true,
+     "type": "string"
+    },
+    {
+     "name": "title",
+     "required": true,
+     "type": "string"
+    },
+    {
+     "default": "\"\"",
+     "name": "lead",
+     "type": "string"
+    },
+    {
+     "name": "dishes",
+     "required": true,
+     "type": "Dish[]"
+    },
+    {
+     "default": "\"\"",
+     "desc": "the text of the empty state (no records), from the dictionary",
+     "name": "empty",
+     "type": "string"
+    },
+    {
+     "name": "labels",
+     "required": true,
+     "type": "FoodLabels"
+    },
+    {
+     "default": "\"4\"",
+     "name": "cols",
+     "type": "\"3\" | \"4\"",
+     "values": [
+      "3",
+      "4"
      ]
     },
     {
@@ -10985,6 +12647,16 @@
       "default",
       "compact"
      ]
+    },
+    {
+     "desc": "address of the picture (an https URL or a path); none: the placeholder",
+     "name": "image",
+     "type": "string"
+    },
+    {
+     "desc": "alt text of the picture; none: the title",
+     "name": "imageAlt",
+     "type": "string"
     },
     {
      "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
@@ -11467,6 +13139,85 @@
    ]
   }
  ],
+ "veggie-box": [
+  {
+   "docs": "A vegetable box by weight: produce tiles (picture, name, price per kg, a weight field in kg named after the item) beside the box card with a meter of how full the box is, the total and the order button. Axes: layout (split, stacked), tone.",
+   "part": "VeggieBox",
+   "rows": [
+    {
+     "name": "id",
+     "required": true,
+     "type": "string"
+    },
+    {
+     "name": "title",
+     "required": true,
+     "type": "string"
+    },
+    {
+     "default": "\"\"",
+     "name": "lead",
+     "type": "string"
+    },
+    {
+     "name": "dishes",
+     "required": true,
+     "type": "Dish[]"
+    },
+    {
+     "default": "\"\"",
+     "desc": "the text of the empty state (no records), from the dictionary",
+     "name": "empty",
+     "type": "string"
+    },
+    {
+     "name": "labels",
+     "required": true,
+     "type": "FoodLabels"
+    },
+    {
+     "default": "60",
+     "desc": "how full the box is, percent",
+     "name": "fill",
+     "type": "number"
+    },
+    {
+     "desc": "minor units",
+     "name": "total",
+     "required": true,
+     "type": "number"
+    },
+    {
+     "name": "currency",
+     "required": true,
+     "type": "string"
+    },
+    {
+     "default": "\"split\"",
+     "name": "layout",
+     "type": "\"split\" | \"stacked\"",
+     "values": [
+      "split",
+      "stacked"
+     ]
+    },
+    {
+     "default": "\"default\"",
+     "name": "tone",
+     "type": "\"default\" | \"muted\"",
+     "values": [
+      "default",
+      "muted"
+     ]
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
+    }
+   ]
+  }
+ ],
  "video-grid": [
   {
    "docs": "Video testimonials as thumbnails: a picture, a play button, the name and the company. The player is a port contract (VideoEmbed); here the button emits `play`. Axes: columns (2, 3), caption (below, overlay), tone, density.",
@@ -11607,6 +13358,83 @@
      "values": [
       "none",
       "chapters"
+     ]
+    },
+    {
+     "default": "\"default\"",
+     "name": "tone",
+     "type": "\"default\" | \"muted\"",
+     "values": [
+      "default",
+      "muted"
+     ]
+    },
+    {
+     "desc": "address of the picture (an https URL or a path); none: the placeholder",
+     "name": "image",
+     "type": "string"
+    },
+    {
+     "desc": "alt text of the picture; none: the title",
+     "name": "imageAlt",
+     "type": "string"
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
+    }
+   ]
+  }
+ ],
+ "week-menu": [
+  {
+   "docs": "Meal delivery as a week: one column per day (its name and delivery note) with the meal of that day as a small card (picture, name, weight, price). Axes: media (image, none), tone.",
+   "part": "WeekMenu",
+   "rows": [
+    {
+     "name": "id",
+     "required": true,
+     "type": "string"
+    },
+    {
+     "name": "title",
+     "required": true,
+     "type": "string"
+    },
+    {
+     "default": "\"\"",
+     "name": "lead",
+     "type": "string"
+    },
+    {
+     "name": "dishes",
+     "required": true,
+     "type": "Dish[]"
+    },
+    {
+     "name": "sections",
+     "required": true,
+     "type": "DishSection[]"
+    },
+    {
+     "default": "\"\"",
+     "desc": "the text of the empty state (no records), from the dictionary",
+     "name": "empty",
+     "type": "string"
+    },
+    {
+     "name": "labels",
+     "required": true,
+     "type": "FoodLabels"
+    },
+    {
+     "default": "\"image\"",
+     "name": "media",
+     "type": "\"image\" | \"none\"",
+     "values": [
+      "image",
+      "none"
      ]
     },
     {
