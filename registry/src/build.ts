@@ -15,6 +15,7 @@ import { rewriteKitRefs } from "./kit-paths";
 import { cleanGenerated } from "./clean-out";
 import { publishVariants } from "./variants";
 import { publishProps, variantOrganisms } from "./props";
+import { publishPrototypes, readPrototypes, type BlockLinks } from "./prototypes";
 import { THEME_FOLDER, themeSpecs } from "./themes";
 
 export const TS_RUNTIMES = ["svelte", "react", "vue", "solid"] as const;
@@ -27,7 +28,7 @@ type File = { path: string; target: string; content: string };
 type Item = {
   name: string; type: RegType; title: string; description: string; runtime: Runtime; digest: string;
   dependencies: string[]; devDependencies: string[]; registryDependencies: string[]; files: File[];
-  meta: { kind: Kind | "theme"; category: string; group?: string; tags: string[]; skin?: unknown };
+  meta: { kind: Kind | "theme"; category: string; group?: string; tags: string[]; skin?: unknown; model?: string; contract?: string };
 };
 
 function arg(name: string, env: string, def: string): string {
@@ -116,7 +117,7 @@ export function tsSourceFiles(rt: TsRuntime): { files: { src: string; target: st
   return { files: files.sort((a, b) => cmp(a.target, b.target)), read };
 }
 
-function buildRuntime(rt: TsRuntime, meta: ReturnType<typeof blockMeta>): Item[] {
+function buildRuntime(rt: TsRuntime, meta: ReturnType<typeof blockMeta>, links: BlockLinks): Item[] {
   const { files: srcFiles, read } = tsSourceFiles(rt);
   const pkg = JSON.parse(readFileSync(path.join(SRC, "packages/kit-compose", rt, "package.json"), "utf8"));
   const files = srcFiles.map((f) => f.target);
@@ -196,7 +197,7 @@ function buildRuntime(rt: TsRuntime, meta: ReturnType<typeof blockMeta>): Item[]
       dependencies: [...npm].sort(cmp), devDependencies: [],
       registryDependencies: [...new Set([...deps, ...(g.kind === "utils" ? [] : ["utils"])])].filter((d) => d !== name).sort(cmp),
       files: fl,
-      meta: { kind: g.kind, category, ...(bm ? { group: bm.group } : {}), tags: [rt, g.kind] },
+      meta: { kind: g.kind, category, ...(bm ? { group: bm.group } : {}), ...(g.kind === "block" && links.has(name) ? { model: links.get(name)!.model, contract: links.get(name)!.contract } : {}), tags: [rt, g.kind] },
     });
   }
   if (problems.length) { console.error(problems.join("\n")); throw new Error(`${rt}: ${problems.length} problem(s)`); }
@@ -220,11 +221,14 @@ function main() {
     if (existsSync(src)) cpSync(src, path.join(OUT, rt, "wpfasty"), { recursive: true });
   }
   const meta = blockMeta();
+  // content models and prototype contracts (packages/prototypes/out): read first, the block items name them in meta
+  const proto = readPrototypes(SRC);
+  const links: BlockLinks = proto?.links ?? new Map();
   const manifest: any = { contractVersion: "2.0.0", version: VERSION, source: { repo: "private source monorepo", commit, dirty, commitDate }, runtimes: {} };
   const site: Record<string, any> = {};
 
   const built = new Map<Runtime, Item[]>();
-  for (const rt of TS_RUNTIMES) built.set(rt, buildRuntime(rt, meta));
+  for (const rt of TS_RUNTIMES) built.set(rt, buildRuntime(rt, meta, links));
   // skins as theme items (registry:theme) in the TypeScript runtimes: their utils item ships the styles/ the skins extend
   const themes = themeSpecs(SRC, { check: process.env.UI8KIT_SKINS_CHECK !== "0" });
   for (const rt of TS_RUNTIMES) {
@@ -265,7 +269,7 @@ function main() {
       mkdirSync(dir, { recursive: true });
       writeFileSync(path.join(dir, `${it.name}.json`), json({ $schema: `${SCHEMA_BASE}/registry-item.json`, ...it }));
       mItems[it.name] = { type: it.type, files: Object.fromEntries(it.files.map((f) => [f.target, { sha256: sha(f.content), bytes: Buffer.byteLength(f.content) }])) };
-      const s = (site[it.name] ??= { name: it.name, title: it.title, kind: it.meta.kind, category: it.meta.category, group: it.meta.group ?? "", description: it.description, type: it.type, runtimes: {} });
+      const s = (site[it.name] ??= { name: it.name, title: it.title, kind: it.meta.kind, category: it.meta.category, group: it.meta.group ?? "", ...(it.meta.model ? { model: it.meta.model, contract: it.meta.contract } : {}), description: it.description, type: it.type, runtimes: {} });
       s.runtimes[rt] = { path: `${rt}/${folderOf(it.type)}/${it.name}.json`, files: it.files.map((f) => f.target), registryDependencies: it.registryDependencies, dependencies: it.dependencies };
     }
     // CLI index: GET {base}/index.json, base = r/<runtime>
@@ -285,6 +289,9 @@ function main() {
   // props schemas: r/props/v0.json (+ .sha256), same names rule, and every variants item has a schema of the same organism
   const props = publishProps(SRC, OUT, everywhere, variantOrganisms(readFileSync(path.join(OUT, variants.path))));
   manifest.props = props;
+  // models and contracts: r/models/<id>@<v>.schema.json, r/contracts/<item>/<n>.json, r/contracts/v0.json (+ .sha256)
+  const prototypes = proto ? publishPrototypes(proto, OUT, everywhere) : undefined;
+  if (prototypes) { manifest.models = prototypes.models; manifest.contracts = { index: prototypes.index, items: prototypes.contracts, source: prototypes.source }; }
   writeFileSync(path.join(OUT, "manifest.json"), json(manifest));
   mkdirSync(path.join(OUT, "schema"), { recursive: true });
   for (const f of readdirSync(SCHEMA_SRC).sort(cmp)) cpSync(path.join(SCHEMA_SRC, f), path.join(OUT, "schema", f));
@@ -294,11 +301,16 @@ function main() {
     runtimes: [...RUNTIMES], layout: "<runtime>/index.json + <runtime>/{components/ui,components,blocks,utils,lib,themes}/<name>.json; use r/<runtime> as registryUrl",
     variants: { path: variants.path, sha256: variants.sha256, digest: variants.digest, version: variants.version },
     props: { path: props.path, sha256: props.sha256, digest: props.digest, version: props.version },
+    ...(prototypes ? {
+      models: Object.fromEntries(Object.entries(prototypes.models).map(([k, e]) => [k, { path: e.path, sha256: e.sha256 }])),
+      contracts: { path: prototypes.index.path, sha256: prototypes.index.sha256, items: Object.fromEntries(Object.entries(prototypes.contracts).map(([k, e]) => [k, { path: e.path, sha256: e.sha256, model: e.model }])) },
+    } : {}),
     items: list,
   }));
   for (const rt of RUNTIMES) console.log(rt.padEnd(7), JSON.stringify(manifest.runtimes[rt].counts), "total", manifest.runtimes[rt].items);
   console.log("variants", variants.path, variants.items, "items", variants.variants, "variants", "sha256", variants.sha256);
   console.log("props", props.path, props.items, "items", "sha256", props.sha256);
+  if (prototypes) console.log("models", Object.keys(prototypes.models).join(", "), "contracts", Object.keys(prototypes.contracts).join(", "));
   console.log("source", commit.slice(0, 12), dirty ? "(dirty)" : "", "->", path.relative(process.cwd(), OUT) || ".");
 }
 main();

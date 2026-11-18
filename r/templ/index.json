@@ -2310,6 +2310,28 @@
     },
     {
       "dependencies": [],
+      "description": "A badge, the heading, one paragraph and one link as the action, with one picture at the end, at the start or on top.",
+      "name": "hero-simple",
+      "registryDependencies": [
+        "badge",
+        "block",
+        "box",
+        "button",
+        "container",
+        "kit-box",
+        "kit-button",
+        "kit-text",
+        "media-frame",
+        "stack",
+        "text",
+        "title",
+        "utils"
+      ],
+      "title": "Hero Simple",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
       "description": "A split hero with figures, faces, small cards or a quote under the lead, beside a picture, a floating card, a picture grid or plan cards.",
       "name": "hero-split",
       "registryDependencies": [
@@ -5591,6 +5613,27 @@
     },
     {
       "dependencies": [],
+      "description": "The heading, one paragraph and the people as a list: a portrait, the name and the role, in two, three or four columns, plain or on cards.",
+      "name": "team-simple",
+      "registryDependencies": [
+        "block",
+        "card",
+        "container",
+        "kit-box",
+        "kit-text",
+        "list",
+        "list-item",
+        "media-frame",
+        "stack",
+        "text",
+        "title",
+        "utils"
+      ],
+      "title": "Team Simple",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
       "description": "Template gallery: filters, a browse-all button and an 8-card MediaFrame grid.",
       "name": "template-grid",
       "registryDependencies": [
@@ -5937,7 +5980,7 @@
       "type": "registry:block"
     }
   ],
-  "lastUpdated": "2026-11-15T19:58:48+03:00",
+  "lastUpdated": "2026-11-18T21:28:57+03:00",
   "registry": "ui",
   "version": "0.1.0"
 }

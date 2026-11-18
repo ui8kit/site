@@ -1,17 +1,59 @@
 {
   "contractVersion": "2.0.0",
+  "contracts": {
+    "index": {
+      "bytes": 372,
+      "path": "contracts/v0.json",
+      "sha256": "2c8b5dc42e975e5e565900e3eb0c2d115752c45b7aa231a075c1b4a710494b57"
+    },
+    "items": {
+      "hero-simple@1": {
+        "block": "block.herosimple",
+        "bytes": 1631,
+        "model": "hero@1",
+        "path": "contracts/hero-simple/1.json",
+        "sha256": "babdb9a5bd0bd5fb9571381c3e76d5947162d2ac385f1606d89fdb303499c009",
+        "version": 1
+      },
+      "team-simple@1": {
+        "block": "block.teamsimple",
+        "bytes": 1952,
+        "model": "team@1",
+        "path": "contracts/team-simple/1.json",
+        "sha256": "c71dd32da3ef8512202b473ea1f4c5e8d785889f8635e972451b65b18478aeac",
+        "version": 1
+      }
+    },
+    "source": {
+      "manifest": "f664df3a5bab9040655b4772c705be49103c5ab6dbb69cdc487f1910a4933838"
+    }
+  },
+  "models": {
+    "hero@1": {
+      "bytes": 1925,
+      "id": "hero@1",
+      "path": "models/hero@1.schema.json",
+      "sha256": "bc3edaec5a433e1481281f4b93502d2f26b58db374f83e6336f1f2d271987a3b"
+    },
+    "team@1": {
+      "bytes": 1979,
+      "id": "team@1",
+      "path": "models/team@1.schema.json",
+      "sha256": "ac003fe0b80251f4fefe73e39572cd63f3eb58b35c5fdbd337d03e232fcf797c"
+    }
+  },
   "props": {
-    "bytes": 1956896,
-    "digest": "sha256:00ab6c06e76f7187e32a1c06f882dbd51aac80b23aa8217df068fd26a8574706",
-    "items": 116,
+    "bytes": 1963059,
+    "digest": "sha256:38ad314a67a0e3188acec7c2427a18f8a39f0309d923d009fed7a19188f5c74a",
+    "items": 118,
     "path": "props/v0.json",
-    "sha256": "088cf63ac891475573bf95c658af60e3621643ecd06985aee5c4391151f0d19e",
+    "sha256": "88e2a2ca366c98a69608fbe342434cc4441da33ff56004cb40451b5da96ae1ac",
     "version": "0"
   },
   "runtimes": {
     "jinja2": {
       "counts": {
-        "block": 116,
+        "block": 118,
         "component": 137,
         "lib": 2,
         "primitive": 84,
@@ -1139,6 +1181,15 @@
             "blocks/hero-prompt.html.j2": {
               "bytes": 3997,
               "sha256": "429ee187fc07ca4a7c9cfdd91c45d8c0940957f42e9c7e4036f6f9e7ad20c1cc"
+            }
+          },
+          "type": "registry:block"
+        },
+        "hero-simple": {
+          "files": {
+            "blocks/hero-simple.html.j2": {
+              "bytes": 3681,
+              "sha256": "af42e32e75fddfe15959860743044338055c6908024d18f3192ede9c9e0d05b3"
             }
           },
           "type": "registry:block"
@@ -2999,6 +3050,15 @@
           },
           "type": "registry:block"
         },
+        "team-simple": {
+          "files": {
+            "blocks/team-simple.html.j2": {
+              "bytes": 5145,
+              "sha256": "172c0b6c099da2abf0cd63e4e8e61d70d6ac32f22e52dafed2594a1ea106c205"
+            }
+          },
+          "type": "registry:block"
+        },
         "template-grid": {
           "files": {
             "blocks/template-grid.html.j2": {
@@ -3199,11 +3259,11 @@
           "type": "registry:block"
         }
       },
-      "items": 340
+      "items": 342
     },
     "latte": {
       "counts": {
-        "block": 116,
+        "block": 118,
         "component": 137,
         "lib": 2,
         "primitive": 84,
@@ -4331,6 +4391,15 @@
             "blocks/hero-prompt.latte": {
               "bytes": 4027,
               "sha256": "65045b545b7d24e97e0b962a31d2bb4a8b76c9f33d11a9b08927d042857cbb5f"
+            }
+          },
+          "type": "registry:block"
+        },
+        "hero-simple": {
+          "files": {
+            "blocks/hero-simple.latte": {
+              "bytes": 3608,
+              "sha256": "632359142ed658cd3937afed2d4a88a992970fcc7582da02013bb25beeb93d86"
             }
           },
           "type": "registry:block"
@@ -6187,6 +6256,15 @@
           },
           "type": "registry:block"
         },
+        "team-simple": {
+          "files": {
+            "blocks/team-simple.latte": {
+              "bytes": 5159,
+              "sha256": "a8c14f328da1f9ceff51b0078d0664053993467e2b6ddc758b1820c83c1e5246"
+            }
+          },
+          "type": "registry:block"
+        },
         "template-grid": {
           "files": {
             "blocks/template-grid.latte": {
@@ -6387,11 +6465,11 @@
           "type": "registry:block"
         }
       },
-      "items": 340
+      "items": 342
     },
     "react": {
       "counts": {
-        "block": 116,
+        "block": 118,
         "component": 137,
         "lib": 2,
         "primitive": 88,
@@ -7669,6 +7747,15 @@
             "blocks/hero-prompt.types.ts": {
               "bytes": 665,
               "sha256": "2db9ecd774b585dab3bdead56ca9f7c26c8d20bb6c52833ca818f6a7ac3949f8"
+            }
+          },
+          "type": "registry:block"
+        },
+        "hero-simple": {
+          "files": {
+            "blocks/hero-simple.tsx": {
+              "bytes": 2790,
+              "sha256": "db78ff7b205eb5f5d93bf9bb60610e44358379ddb2c757e2399bf06f80aff369"
             }
           },
           "type": "registry:block"
@@ -9736,6 +9823,19 @@
           },
           "type": "registry:block"
         },
+        "team-simple": {
+          "files": {
+            "blocks/team-simple.tsx": {
+              "bytes": 3647,
+              "sha256": "10089e2c434015a928c0c2b1f7b6ba1949e63dd178c2228fe2b82290ce07b6cc"
+            },
+            "blocks/team-simple.types.ts": {
+              "bytes": 259,
+              "sha256": "ef6fafb91ec2419f3e782c3a0ceea792a75ea2e0d0068afb9dce4c27f30b0fc2"
+            }
+          },
+          "type": "registry:block"
+        },
         "template-grid": {
           "files": {
             "blocks/template-grid.tsx": {
@@ -10189,11 +10289,11 @@
           "type": "registry:block"
         }
       },
-      "items": 361
+      "items": 363
     },
     "solid": {
       "counts": {
-        "block": 116,
+        "block": 118,
         "component": 137,
         "lib": 2,
         "primitive": 87,
@@ -11471,6 +11571,15 @@
             "blocks/hero-prompt.types.ts": {
               "bytes": 665,
               "sha256": "2db9ecd774b585dab3bdead56ca9f7c26c8d20bb6c52833ca818f6a7ac3949f8"
+            }
+          },
+          "type": "registry:block"
+        },
+        "hero-simple": {
+          "files": {
+            "blocks/hero-simple.tsx": {
+              "bytes": 2767,
+              "sha256": "eedb8a8ccb777c355bce7cfc3647292e027bad4c09174c9a2f333ef5344af1d3"
             }
           },
           "type": "registry:block"
@@ -13529,6 +13638,19 @@
           },
           "type": "registry:block"
         },
+        "team-simple": {
+          "files": {
+            "blocks/team-simple.tsx": {
+              "bytes": 3601,
+              "sha256": "d760b0f9c920bce89956b201a25b4c62210da4c9b0e630286cde9e0c21b51dce"
+            },
+            "blocks/team-simple.types.ts": {
+              "bytes": 259,
+              "sha256": "ef6fafb91ec2419f3e782c3a0ceea792a75ea2e0d0068afb9dce4c27f30b0fc2"
+            }
+          },
+          "type": "registry:block"
+        },
         "template-grid": {
           "files": {
             "blocks/template-grid.tsx": {
@@ -13982,11 +14104,11 @@
           "type": "registry:block"
         }
       },
-      "items": 360
+      "items": 362
     },
     "svelte": {
       "counts": {
-        "block": 116,
+        "block": 118,
         "component": 137,
         "lib": 2,
         "primitive": 87,
@@ -15264,6 +15386,15 @@
             "blocks/hero-prompt.types.ts": {
               "bytes": 665,
               "sha256": "2db9ecd774b585dab3bdead56ca9f7c26c8d20bb6c52833ca818f6a7ac3949f8"
+            }
+          },
+          "type": "registry:block"
+        },
+        "hero-simple": {
+          "files": {
+            "blocks/hero-simple.svelte": {
+              "bytes": 2970,
+              "sha256": "84b43eca516bab7127332d6cfabf94f0e2a110523e8402bd9b6eb8cf1389fa1b"
             }
           },
           "type": "registry:block"
@@ -17342,6 +17473,19 @@
           },
           "type": "registry:block"
         },
+        "team-simple": {
+          "files": {
+            "blocks/team-simple.svelte": {
+              "bytes": 3657,
+              "sha256": "8969d6af5e3d667025f983585b5dd54be88532576c279839da75604932e22e4d"
+            },
+            "blocks/team-simple.types.ts": {
+              "bytes": 259,
+              "sha256": "ef6fafb91ec2419f3e782c3a0ceea792a75ea2e0d0068afb9dce4c27f30b0fc2"
+            }
+          },
+          "type": "registry:block"
+        },
         "template-grid": {
           "files": {
             "blocks/template-grid.svelte": {
@@ -17795,11 +17939,11 @@
           "type": "registry:block"
         }
       },
-      "items": 360
+      "items": 362
     },
     "templ": {
       "counts": {
-        "block": 116,
+        "block": 118,
         "component": 137,
         "lib": 2,
         "primitive": 84,
@@ -18927,6 +19071,15 @@
             "blocks/hero-prompt.templ": {
               "bytes": 3975,
               "sha256": "277a081e83f455e06a5b5ff55379ecd616e4cafd56f803438cc071f7742bc51a"
+            }
+          },
+          "type": "registry:block"
+        },
+        "hero-simple": {
+          "files": {
+            "blocks/hero-simple.templ": {
+              "bytes": 3759,
+              "sha256": "7dfe8dbb08e53d474a737a8837d00e7cbb54a4ce74eae6e6ed530b294eef449a"
             }
           },
           "type": "registry:block"
@@ -20779,6 +20932,15 @@
           },
           "type": "registry:block"
         },
+        "team-simple": {
+          "files": {
+            "blocks/team-simple.templ": {
+              "bytes": 4651,
+              "sha256": "1c62ade6ebc214375e181cab105748a6a5b74a619a5b8ef997b1aa0a5b147c89"
+            }
+          },
+          "type": "registry:block"
+        },
         "template-grid": {
           "files": {
             "blocks/template-grid.templ": {
@@ -21007,11 +21169,11 @@
           "type": "registry:block"
         }
       },
-      "items": 340
+      "items": 342
     },
     "twig": {
       "counts": {
-        "block": 116,
+        "block": 118,
         "component": 137,
         "lib": 2,
         "primitive": 84,
@@ -22139,6 +22301,15 @@
             "blocks/hero-prompt.html.twig": {
               "bytes": 4099,
               "sha256": "632b8f68b42e5617b2fc253d0ed28172e8a6384970defc29c98f5a1e102fc203"
+            }
+          },
+          "type": "registry:block"
+        },
+        "hero-simple": {
+          "files": {
+            "blocks/hero-simple.html.twig": {
+              "bytes": 3731,
+              "sha256": "261ca8c9526f84e4c3937a8880b1492875f51e63ace491ad081969f05a3f39ef"
             }
           },
           "type": "registry:block"
@@ -23999,6 +24170,15 @@
           },
           "type": "registry:block"
         },
+        "team-simple": {
+          "files": {
+            "blocks/team-simple.html.twig": {
+              "bytes": 5324,
+              "sha256": "356ecee8245996002d634114ecc231da58892a33fa048e11835aeff0b38afce3"
+            }
+          },
+          "type": "registry:block"
+        },
         "template-grid": {
           "files": {
             "blocks/template-grid.html.twig": {
@@ -24203,11 +24383,11 @@
           "type": "registry:block"
         }
       },
-      "items": 340
+      "items": 342
     },
     "vue": {
       "counts": {
-        "block": 116,
+        "block": 118,
         "component": 137,
         "lib": 2,
         "primitive": 87,
@@ -25485,6 +25665,15 @@
             "blocks/hero-prompt.vue": {
               "bytes": 3622,
               "sha256": "9e68fba60274ba8440d93e167761051fb3c11aae9bb102360b704d934abf6e2d"
+            }
+          },
+          "type": "registry:block"
+        },
+        "hero-simple": {
+          "files": {
+            "blocks/hero-simple.vue": {
+              "bytes": 2924,
+              "sha256": "9a9fe66329a55dddcb56ede9233cf0125d7c72f04417e188193c7a9e22ade369"
             }
           },
           "type": "registry:block"
@@ -27563,6 +27752,19 @@
           },
           "type": "registry:block"
         },
+        "team-simple": {
+          "files": {
+            "blocks/team-simple.types.ts": {
+              "bytes": 259,
+              "sha256": "ef6fafb91ec2419f3e782c3a0ceea792a75ea2e0d0068afb9dce4c27f30b0fc2"
+            },
+            "blocks/team-simple.vue": {
+              "bytes": 3598,
+              "sha256": "a83c51e05cd429e3354469c7b04f38f12b846d00a02457d9ef53eb9241467b94"
+            }
+          },
+          "type": "registry:block"
+        },
         "template-grid": {
           "files": {
             "blocks/template-grid.types.ts": {
@@ -28016,22 +28218,22 @@
           "type": "registry:block"
         }
       },
-      "items": 360
+      "items": 362
     }
   },
   "source": {
-    "commit": "b61663421cb048e33f2bc405035ea5e2ba1f5009",
-    "commitDate": "2026-11-15T19:58:48+03:00",
+    "commit": "cf36c28550f16e76303ca5e7c5be1259e832325c",
+    "commitDate": "2026-11-18T21:28:57+03:00",
     "dirty": false,
     "repo": "private source monorepo"
   },
   "variants": {
-    "bytes": 123980,
-    "digest": "sha256:d429a446d35a085e44a4762e6af4d60266784a1c6a13093f24b4eeaa8b107b53",
-    "items": 112,
+    "bytes": 125082,
+    "digest": "sha256:0358619969150e50f91da46a0864677b25914bacc9897c4863e7e272f7fd0c6b",
+    "items": 114,
     "path": "variants/v0.json",
-    "sha256": "10dedbb0f4305681903ec981a58f7e86df2e3cc670f1ce85efd13cac6b1c6458",
-    "variants": 526,
+    "sha256": "1d24e60d64986e5bdc358189b3b7a361fc16bdd89c6f636cd18f638d3d8eaea3",
+    "variants": 533,
     "version": "0"
   },
   "version": "0.1.0"

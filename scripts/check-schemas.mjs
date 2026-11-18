@@ -16,7 +16,8 @@ const BASE = "https://registry.buildy.tw/schema/";
 const ajv = new Ajv({ strict: false, allErrors: true });
 for (const f of readdirSync(S)) ajv.addSchema(JSON.parse(readFileSync(path.join(S, f), "utf8")));
 
-const skipDirs = new Set(["schema", "wpfasty"]);
+// models/ hold JSON Schemas (2020-12) of the content models; registry:validate checks them against the prototypes manifest.
+const skipDirs = new Set(["schema", "wpfasty", "models"]);
 const files = [];
 (function walk(d) {
   for (const e of readdirSync(d)) {

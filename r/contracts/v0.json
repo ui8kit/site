@@ -1,0 +1,18 @@
+{
+  "version": 0,
+  "base": "https://registry.buildy.tw/contracts",
+  "items": {
+    "hero-simple": {
+      "version": 1,
+      "block": "block.herosimple",
+      "model": "hero@1",
+      "path": "hero-simple/1.json"
+    },
+    "team-simple": {
+      "version": 1,
+      "block": "block.teamsimple",
+      "model": "team@1",
+      "path": "team-simple/1.json"
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://registry.buildy.tw/models/hero@1.schema.json",
+  "title": "HeroContent",
+  "description": "Hero content: an optional badge, the heading, a description, one picture (light, optional dark) and one action. One object is valid in every hero layout (media at the end, at the start, on top).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "title"
+  ],
+  "properties": {
+    "badge": {
+      "description": "a short pill above the heading; empty: no badge",
+      "type": "string",
+      "maxLength": 40
+    },
+    "title": {
+      "description": "the heading of the section",
+      "type": "string",
+      "maxLength": 120,
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "description": {
+      "description": "one paragraph under the heading; empty: none",
+      "type": "string",
+      "maxLength": 400
+    },
+    "image": {
+      "description": "address of the picture (an https URL or a path); none: the placeholder",
+      "type": "string",
+      "maxLength": 2048,
+      "pattern": "^(?:https?:|(?![A-Za-z][A-Za-z0-9+.-]*:))"
+    },
+    "imageAlt": {
+      "description": "alt text of the picture; none: the title (the placeholder is decorative)",
+      "type": "string",
+      "maxLength": 160
+    },
+    "imageDark": {
+      "description": "address of the picture in the dark theme; none: image",
+      "type": "string",
+      "maxLength": 2048,
+      "pattern": "^(?:https?:|(?![A-Za-z][A-Za-z0-9+.-]*:))"
+    },
+    "actionLabel": {
+      "description": "the label of the action; the link is drawn when the label and the address are both set",
+      "type": "string",
+      "maxLength": 40
+    },
+    "actionHref": {
+      "description": "the address of the action",
+      "type": "string",
+      "maxLength": 2048,
+      "pattern": "^(?:(?:https?|mailto|tel):|(?![A-Za-z][A-Za-z0-9+.-]*:))"
+    }
+  }
+}

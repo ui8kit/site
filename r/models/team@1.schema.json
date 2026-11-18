@@ -1,0 +1,66 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://registry.buildy.tw/models/team@1.schema.json",
+  "title": "TeamContent",
+  "description": "Team content: the heading, a description and an ordered list of one to twelve members. One object is valid in every team layout (two, three or four columns, plain or on cards).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "title",
+    "members"
+  ],
+  "properties": {
+    "title": {
+      "description": "the heading of the section",
+      "type": "string",
+      "maxLength": 120,
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "description": {
+      "description": "one paragraph under the heading; empty: none",
+      "type": "string",
+      "maxLength": 400
+    },
+    "members": {
+      "description": "the people, in the order they are shown",
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 12,
+      "items": {
+        "title": "SimpleMember",
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "title"
+        ],
+        "properties": {
+          "id": {
+            "description": "stable key of the member (the Codex entry id)",
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]*$"
+          },
+          "avatar": {
+            "description": "address of the portrait; none: the placeholder",
+            "type": "string",
+            "maxLength": 2048,
+            "pattern": "^(?:https?:|(?![A-Za-z][A-Za-z0-9+.-]*:))"
+          },
+          "title": {
+            "description": "the name of the member",
+            "type": "string",
+            "maxLength": 80,
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "description": {
+            "description": "the role or a short line about the member; empty: none",
+            "type": "string",
+            "maxLength": 240
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "item": "team-simple",
+  "version": 1,
+  "block": "block.teamsimple",
+  "organism": "TeamSimple",
+  "line": "simple",
+  "model": "team@1",
+  "modelSchema": "https://registry.buildy.tw/models/team@1.schema.json",
+  "axes": {
+    "cols": [
+      "2",
+      "3",
+      "4"
+    ],
+    "surface": [
+      "plain",
+      "cards"
+    ]
+  },
+  "defaults": {
+    "cols": "3",
+    "surface": "plain"
+  },
+  "variants": [
+    {
+      "id": "cols3",
+      "label": "Three columns",
+      "axes": {
+        "cols": "3",
+        "surface": "plain"
+      }
+    },
+    {
+      "id": "cols2",
+      "label": "Two columns",
+      "axes": {
+        "cols": "2",
+        "surface": "plain"
+      }
+    },
+    {
+      "id": "cols4",
+      "label": "Four columns",
+      "axes": {
+        "cols": "4",
+        "surface": "plain"
+      }
+    },
+    {
+      "id": "cards3",
+      "label": "Three columns on cards",
+      "axes": {
+        "cols": "3",
+        "surface": "cards"
+      }
+    }
+  ],
+  "defaultVariant": "cols3",
+  "settings": {
+    "level": {
+      "type": "1 | 2 | 3",
+      "default": 2
+    },
+    "landmarkLabel": {
+      "type": "string"
+    }
+  },
+  "modes": [
+    "wireframe",
+    "page"
+  ],
+  "defaultMode": "wireframe",
+  "places": [
+    {
+      "place": "title",
+      "kind": "heading",
+      "fields": [
+        "/title"
+      ]
+    },
+    {
+      "place": "description",
+      "kind": "text",
+      "fields": [
+        "/description"
+      ]
+    },
+    {
+      "place": "members.avatar",
+      "kind": "media",
+      "fields": [
+        "/members/*/avatar"
+      ],
+      "list": "members"
+    },
+    {
+      "place": "members.title",
+      "kind": "heading",
+      "fields": [
+        "/members/*/title"
+      ],
+      "list": "members"
+    },
+    {
+      "place": "members.description",
+      "kind": "text",
+      "fields": [
+        "/members/*/description"
+      ],
+      "list": "members"
+    }
+  ],
+  "wireframe": {
+    "items": 3
+  }
+}

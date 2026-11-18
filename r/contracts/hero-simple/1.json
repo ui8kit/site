@@ -1,0 +1,100 @@
+{
+  "item": "hero-simple",
+  "version": 1,
+  "block": "block.herosimple",
+  "organism": "HeroSimple",
+  "line": "simple",
+  "model": "hero@1",
+  "modelSchema": "https://registry.buildy.tw/models/hero@1.schema.json",
+  "axes": {
+    "media": [
+      "end",
+      "start",
+      "top"
+    ]
+  },
+  "defaults": {
+    "media": "end"
+  },
+  "variants": [
+    {
+      "id": "mediaEnd",
+      "label": "Picture at the end",
+      "axes": {
+        "media": "end"
+      }
+    },
+    {
+      "id": "mediaStart",
+      "label": "Picture at the start",
+      "axes": {
+        "media": "start"
+      }
+    },
+    {
+      "id": "mediaTop",
+      "label": "Wide picture on top",
+      "axes": {
+        "media": "top"
+      }
+    }
+  ],
+  "defaultVariant": "mediaEnd",
+  "settings": {
+    "level": {
+      "type": "1 | 2 | 3",
+      "default": 2
+    },
+    "landmarkLabel": {
+      "type": "string"
+    }
+  },
+  "modes": [
+    "wireframe",
+    "page"
+  ],
+  "defaultMode": "wireframe",
+  "places": [
+    {
+      "place": "media",
+      "kind": "media",
+      "fields": [
+        "/image",
+        "/imageAlt",
+        "/imageDark"
+      ]
+    },
+    {
+      "place": "badge",
+      "kind": "badge",
+      "fields": [
+        "/badge"
+      ]
+    },
+    {
+      "place": "title",
+      "kind": "heading",
+      "fields": [
+        "/title"
+      ]
+    },
+    {
+      "place": "description",
+      "kind": "text",
+      "fields": [
+        "/description"
+      ]
+    },
+    {
+      "place": "action",
+      "kind": "action",
+      "fields": [
+        "/actionLabel",
+        "/actionHref"
+      ]
+    }
+  ],
+  "wireframe": {
+    "items": 3
+  }
+}

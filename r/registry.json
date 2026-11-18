@@ -1,6 +1,22 @@
 {
   "$schema": "https://registry.buildy.tw/schema/registry.json",
   "contractVersion": "2.0.0",
+  "contracts": {
+    "items": {
+      "hero-simple@1": {
+        "model": "hero@1",
+        "path": "contracts/hero-simple/1.json",
+        "sha256": "babdb9a5bd0bd5fb9571381c3e76d5947162d2ac385f1606d89fdb303499c009"
+      },
+      "team-simple@1": {
+        "model": "team@1",
+        "path": "contracts/team-simple/1.json",
+        "sha256": "c71dd32da3ef8512202b473ea1f4c5e8d785889f8635e972451b65b18478aeac"
+      }
+    },
+    "path": "contracts/v0.json",
+    "sha256": "2c8b5dc42e975e5e565900e3eb0c2d115752c45b7aa231a075c1b4a710494b57"
+  },
   "items": [
     {
       "category": "marketing",
@@ -18034,6 +18050,160 @@
         }
       },
       "title": "Hero Prompt",
+      "type": "registry:block"
+    },
+    {
+      "category": "marketing",
+      "contract": "contracts/hero-simple/1.json",
+      "description": "A badge, the heading, one paragraph and one link as the action, with one picture at the end, at the start or on top.",
+      "group": "hero",
+      "kind": "block",
+      "model": "hero@1",
+      "name": "hero-simple",
+      "runtimes": {
+        "jinja2": {
+          "dependencies": [],
+          "files": [
+            "blocks/hero-simple.html.j2"
+          ],
+          "path": "jinja2/blocks/hero-simple.json",
+          "registryDependencies": [
+            "badge",
+            "block",
+            "box",
+            "button",
+            "container",
+            "media-frame",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "latte": {
+          "dependencies": [],
+          "files": [
+            "blocks/hero-simple.latte"
+          ],
+          "path": "latte/blocks/hero-simple.json",
+          "registryDependencies": [
+            "badge",
+            "block",
+            "box",
+            "button",
+            "container",
+            "media-frame",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "react": {
+          "dependencies": [],
+          "files": [
+            "blocks/hero-simple.tsx"
+          ],
+          "path": "react/blocks/hero-simple.json",
+          "registryDependencies": [
+            "compose",
+            "media-frame",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/hero-simple.tsx"
+          ],
+          "path": "solid/blocks/hero-simple.json",
+          "registryDependencies": [
+            "compose",
+            "media-frame",
+            "utils"
+          ]
+        },
+        "svelte": {
+          "dependencies": [],
+          "files": [
+            "blocks/hero-simple.svelte"
+          ],
+          "path": "svelte/blocks/hero-simple.json",
+          "registryDependencies": [
+            "badge",
+            "block",
+            "box",
+            "button",
+            "container",
+            "media-frame",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "templ": {
+          "dependencies": [],
+          "files": [
+            "blocks/hero-simple.templ"
+          ],
+          "path": "templ/blocks/hero-simple.json",
+          "registryDependencies": [
+            "badge",
+            "block",
+            "box",
+            "button",
+            "container",
+            "kit-box",
+            "kit-button",
+            "kit-text",
+            "media-frame",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "twig": {
+          "dependencies": [],
+          "files": [
+            "blocks/hero-simple.html.twig"
+          ],
+          "path": "twig/blocks/hero-simple.json",
+          "registryDependencies": [
+            "badge",
+            "block",
+            "box",
+            "button",
+            "container",
+            "media-frame",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "vue": {
+          "dependencies": [],
+          "files": [
+            "blocks/hero-simple.vue"
+          ],
+          "path": "vue/blocks/hero-simple.json",
+          "registryDependencies": [
+            "badge",
+            "block",
+            "box",
+            "button",
+            "container",
+            "media-frame",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        }
+      },
+      "title": "Hero Simple",
       "type": "registry:block"
     },
     {
@@ -44168,6 +44338,163 @@
     },
     {
       "category": "marketing",
+      "contract": "contracts/team-simple/1.json",
+      "description": "The heading, one paragraph and the people as a list: a portrait, the name and the role, in two, three or four columns, plain or on cards.",
+      "group": "company",
+      "kind": "block",
+      "model": "team@1",
+      "name": "team-simple",
+      "runtimes": {
+        "jinja2": {
+          "dependencies": [],
+          "files": [
+            "blocks/team-simple.html.j2"
+          ],
+          "path": "jinja2/blocks/team-simple.json",
+          "registryDependencies": [
+            "block",
+            "card",
+            "container",
+            "list",
+            "list-item",
+            "media-frame",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "latte": {
+          "dependencies": [],
+          "files": [
+            "blocks/team-simple.latte"
+          ],
+          "path": "latte/blocks/team-simple.json",
+          "registryDependencies": [
+            "block",
+            "card",
+            "container",
+            "list",
+            "list-item",
+            "media-frame",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "react": {
+          "dependencies": [],
+          "files": [
+            "blocks/team-simple.tsx",
+            "blocks/team-simple.types.ts"
+          ],
+          "path": "react/blocks/team-simple.json",
+          "registryDependencies": [
+            "compose",
+            "media-frame",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/team-simple.tsx",
+            "blocks/team-simple.types.ts"
+          ],
+          "path": "solid/blocks/team-simple.json",
+          "registryDependencies": [
+            "compose",
+            "media-frame",
+            "utils"
+          ]
+        },
+        "svelte": {
+          "dependencies": [],
+          "files": [
+            "blocks/team-simple.svelte",
+            "blocks/team-simple.types.ts"
+          ],
+          "path": "svelte/blocks/team-simple.json",
+          "registryDependencies": [
+            "block",
+            "card",
+            "container",
+            "list",
+            "list-item",
+            "media-frame",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "templ": {
+          "dependencies": [],
+          "files": [
+            "blocks/team-simple.templ"
+          ],
+          "path": "templ/blocks/team-simple.json",
+          "registryDependencies": [
+            "block",
+            "card",
+            "container",
+            "kit-box",
+            "kit-text",
+            "list",
+            "list-item",
+            "media-frame",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "twig": {
+          "dependencies": [],
+          "files": [
+            "blocks/team-simple.html.twig"
+          ],
+          "path": "twig/blocks/team-simple.json",
+          "registryDependencies": [
+            "block",
+            "card",
+            "container",
+            "list",
+            "list-item",
+            "media-frame",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "vue": {
+          "dependencies": [],
+          "files": [
+            "blocks/team-simple.types.ts",
+            "blocks/team-simple.vue"
+          ],
+          "path": "vue/blocks/team-simple.json",
+          "registryDependencies": [
+            "block",
+            "card",
+            "container",
+            "list",
+            "list-item",
+            "media-frame",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        }
+      },
+      "title": "Team Simple",
+      "type": "registry:block"
+    },
+    {
+      "category": "marketing",
       "description": "Template gallery: filters, a browse-all button and an 8-card MediaFrame grid.",
       "group": "gallery",
       "kind": "block",
@@ -47836,12 +48163,22 @@
       "type": "registry:block"
     }
   ],
-  "lastUpdated": "2026-11-15T19:58:48+03:00",
+  "lastUpdated": "2026-11-18T21:28:57+03:00",
   "layout": "<runtime>/index.json + <runtime>/{components/ui,components,blocks,utils,lib,themes}/<name>.json; use r/<runtime> as registryUrl",
+  "models": {
+    "hero@1": {
+      "path": "models/hero@1.schema.json",
+      "sha256": "bc3edaec5a433e1481281f4b93502d2f26b58db374f83e6336f1f2d271987a3b"
+    },
+    "team@1": {
+      "path": "models/team@1.schema.json",
+      "sha256": "ac003fe0b80251f4fefe73e39572cd63f3eb58b35c5fdbd337d03e232fcf797c"
+    }
+  },
   "props": {
-    "digest": "sha256:00ab6c06e76f7187e32a1c06f882dbd51aac80b23aa8217df068fd26a8574706",
+    "digest": "sha256:38ad314a67a0e3188acec7c2427a18f8a39f0309d923d009fed7a19188f5c74a",
     "path": "props/v0.json",
-    "sha256": "088cf63ac891475573bf95c658af60e3621643ecd06985aee5c4391151f0d19e",
+    "sha256": "88e2a2ca366c98a69608fbe342434cc4441da33ff56004cb40451b5da96ae1ac",
     "version": "0"
   },
   "runtimes": [
@@ -47854,11 +48191,11 @@
     "latte",
     "jinja2"
   ],
-  "sourceCommit": "b61663421cb048e33f2bc405035ea5e2ba1f5009",
+  "sourceCommit": "cf36c28550f16e76303ca5e7c5be1259e832325c",
   "variants": {
-    "digest": "sha256:d429a446d35a085e44a4762e6af4d60266784a1c6a13093f24b4eeaa8b107b53",
+    "digest": "sha256:0358619969150e50f91da46a0864677b25914bacc9897c4863e7e272f7fd0c6b",
     "path": "variants/v0.json",
-    "sha256": "10dedbb0f4305681903ec981a58f7e86df2e3cc670f1ce85efd13cac6b1c6458",
+    "sha256": "1d24e60d64986e5bdc358189b3b7a361fc16bdd89c6f636cd18f638d3d8eaea3",
     "version": "0"
   },
   "version": "0.1.0"

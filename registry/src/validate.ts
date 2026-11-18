@@ -4,6 +4,7 @@ import { existsSync, readFileSync, readdirSync, statSync } from "node:fs";
 import path from "node:path";
 import { checkVariants } from "./variants";
 import { checkProps, variantOrganisms } from "./props";
+import { checkPublished } from "./prototypes";
 
 const R = path.resolve(process.argv[2] ?? path.join(import.meta.dir, "../../r"));
 const read = (p: string) => JSON.parse(readFileSync(p, "utf8"));
@@ -77,6 +78,25 @@ else {
     const side = path.join(R, manifest.props.path + ".sha256");
     if (!existsSync(side) || readFileSync(side, "utf8").split(/\s+/)[0] !== entry.sha256) err("props: .sha256 sidecar differs");
     console.log(`props: ${entry.items} schemas ok`);
+  }
+}
+// r/models and r/contracts (simple line): sha256 = manifest = sidecar; every block with a contract names it in meta, in every runtime
+{
+  const entry = manifest.contracts ? { models: manifest.models ?? {}, contracts: manifest.contracts.items ?? {}, index: manifest.contracts.index, source: manifest.contracts.source } : undefined;
+  checkPublished(R, entry).forEach(err);
+  if (entry) {
+    for (const [key, c] of Object.entries<any>(entry.contracts)) {
+      const item = key.split("@")[0]!;
+      const s = (site.items as any[]).find((i) => i.name === item);
+      if (!s || s.contract !== c.path || s.model !== c.model) err(`contracts: registry.json item ${item} does not name ${c.path} / ${c.model}`);
+      for (const rt of site.runtimes as string[]) {
+        const p = path.join(R, rt, "blocks", `${item}.json`);
+        const it = existsSync(p) ? JSON.parse(readFileSync(p, "utf8")) : undefined;
+        if (it?.meta?.contract !== c.path || it?.meta?.model !== c.model) err(`contracts: ${rt}/blocks/${item}.json meta does not name ${c.path} / ${c.model}`);
+      }
+      if (!entry.models[c.model]) err(`contracts: ${c.path} reads ${c.model}, which is not published`);
+    }
+    console.log(`prototypes: ${Object.keys(entry.models).length} models, ${Object.keys(entry.contracts).length} contracts ok`);
   }
 }
 if (errors.length) { console.error(errors.slice(0, 30).join("\n")); console.error(`${errors.length} error(s)`); process.exit(1); }

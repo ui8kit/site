@@ -5423,6 +5423,89 @@
    ]
   }
  ],
+ "hero-simple": [
+  {
+   "docs": "The simple hero (model hero@1): an optional badge, the heading, a description, one link as the action and one picture. Axes: media (end: the picture after the copy, start: before it, top: above it, wide).",
+   "part": "HeroSimple",
+   "rows": [
+    {
+     "name": "id",
+     "required": true,
+     "type": "string"
+    },
+    {
+     "default": "\"\"",
+     "desc": "a short pill above the heading; empty: no badge",
+     "name": "badge",
+     "type": "string"
+    },
+    {
+     "name": "title",
+     "required": true,
+     "type": "string"
+    },
+    {
+     "default": "\"\"",
+     "desc": "one paragraph under the heading; empty: none",
+     "name": "description",
+     "type": "string"
+    },
+    {
+     "desc": "address of the picture (an https URL or a path); none: the placeholder",
+     "name": "image",
+     "type": "string"
+    },
+    {
+     "desc": "alt text of the picture; none: the title",
+     "name": "imageAlt",
+     "type": "string"
+    },
+    {
+     "desc": "address of the picture in the dark theme; none: image",
+     "name": "imageDark",
+     "type": "string"
+    },
+    {
+     "default": "\"\"",
+     "desc": "the label of the action; the link is drawn when the label and the address are both set",
+     "name": "actionLabel",
+     "type": "string"
+    },
+    {
+     "default": "\"\"",
+     "desc": "the address of the action",
+     "name": "actionHref",
+     "type": "string"
+    },
+    {
+     "default": "2",
+     "desc": "the level of the heading (1 on the first section of a page)",
+     "name": "level",
+     "type": "1 | 2 | 3",
+     "values": [
+      "1",
+      "2",
+      "3"
+     ]
+    },
+    {
+     "default": "\"end\"",
+     "name": "media",
+     "type": "\"end\" | \"start\" | \"top\"",
+     "values": [
+      "end",
+      "start",
+      "top"
+     ]
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
+    }
+   ]
+  }
+ ],
  "hero-split": [
   {
    "docs": "A split hero: a badge, the heading, a lead, an extra under it and one or two actions, beside the media. Axes: extra (stats: three figures, avatars: faces and a proof line, minis: two small feature cards, quote: a quote over three figures, none), media (picture, card: a floating card on the picture, grid: four pictures with captions, plans: two plan cards on the picture), mediaSide, tone.",
@@ -12657,6 +12740,71 @@
      "desc": "alt text of the picture; none: the title",
      "name": "imageAlt",
      "type": "string"
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
+    }
+   ]
+  }
+ ],
+ "team-simple": [
+  {
+   "docs": "The simple team (model team@1): the heading, a description and the members as a list, each with a portrait, the name and a line. Axes: cols (2, 3, 4 columns from md up), surface (plain, cards).",
+   "part": "TeamSimple",
+   "rows": [
+    {
+     "name": "id",
+     "required": true,
+     "type": "string"
+    },
+    {
+     "name": "title",
+     "required": true,
+     "type": "string"
+    },
+    {
+     "default": "\"\"",
+     "desc": "one paragraph under the heading; empty: none",
+     "name": "description",
+     "type": "string"
+    },
+    {
+     "desc": "the people, in the order they are shown (1 to 12)",
+     "name": "members",
+     "required": true,
+     "type": "SimpleMember[]"
+    },
+    {
+     "default": "2",
+     "desc": "the level of the heading (1 on the first section of a page)",
+     "name": "level",
+     "type": "1 | 2 | 3",
+     "values": [
+      "1",
+      "2",
+      "3"
+     ]
+    },
+    {
+     "default": "\"3\"",
+     "name": "cols",
+     "type": "\"2\" | \"3\" | \"4\"",
+     "values": [
+      "2",
+      "3",
+      "4"
+     ]
+    },
+    {
+     "default": "\"plain\"",
+     "name": "surface",
+     "type": "\"plain\" | \"cards\"",
+     "values": [
+      "plain",
+      "cards"
+     ]
     },
     {
      "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
