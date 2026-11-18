@@ -6,12 +6,12 @@
       "hero-simple@1": {
         "model": "hero@1",
         "path": "contracts/hero-simple/1.json",
-        "sha256": "7d7858e0ed33a50090fbd2205da74c57b3700a15e077bbf336de3a5378ec65ce"
+        "sha256": "c6a1c46a08c0fa56066f25c1fa87e3cc3651c3a68185c662c66d0365af4c2fd6"
       },
       "team-simple@1": {
         "model": "team@1",
         "path": "contracts/team-simple/1.json",
-        "sha256": "dfc8cfcad0f171aebb66e98d3917b1ca21c3eb7357772ce88302311a6642b1ae"
+        "sha256": "8da627f33b9f3fe4aa9dded87661c39787c6d3c9e7fb425284e0471bc8a7555f"
       }
     },
     "path": "contracts/v0.json",
@@ -48274,7 +48274,7 @@
       "type": "registry:block"
     }
   ],
-  "lastUpdated": "2026-11-18T23:13:03+03:00",
+  "lastUpdated": "2026-11-18T23:42:41+03:00",
   "layout": "<runtime>/index.json + <runtime>/{components/ui,components,blocks,utils,lib,themes}/<name>.json; use r/<runtime> as registryUrl",
   "models": {
     "hero@1": {
@@ -48302,7 +48302,7 @@
     "latte",
     "jinja2"
   ],
-  "sourceCommit": "b088bbf19e2c2d35e1a22845a9a1735d94d24f0e",
+  "sourceCommit": "f95339049104d3451730596447d272e2b2f3755e",
   "variants": {
     "digest": "sha256:0358619969150e50f91da46a0864677b25914bacc9897c4863e7e272f7fd0c6b",
     "path": "variants/v0.json",

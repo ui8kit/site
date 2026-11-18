@@ -54,8 +54,7 @@
     }
   },
   "modes": [
-    "wireframe",
-    "page"
+    "wireframe"
   ],
   "defaultMode": "wireframe",
   "places": [

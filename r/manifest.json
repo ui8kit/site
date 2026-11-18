@@ -9,23 +9,23 @@
     "items": {
       "hero-simple@1": {
         "block": "block.herosimple",
-        "bytes": 1742,
+        "bytes": 1730,
         "model": "hero@1",
         "path": "contracts/hero-simple/1.json",
-        "sha256": "7d7858e0ed33a50090fbd2205da74c57b3700a15e077bbf336de3a5378ec65ce",
+        "sha256": "c6a1c46a08c0fa56066f25c1fa87e3cc3651c3a68185c662c66d0365af4c2fd6",
         "version": 1
       },
       "team-simple@1": {
         "block": "block.teamsimple",
-        "bytes": 2063,
+        "bytes": 2051,
         "model": "team@1",
         "path": "contracts/team-simple/1.json",
-        "sha256": "dfc8cfcad0f171aebb66e98d3917b1ca21c3eb7357772ce88302311a6642b1ae",
+        "sha256": "8da627f33b9f3fe4aa9dded87661c39787c6d3c9e7fb425284e0471bc8a7555f",
         "version": 1
       }
     },
     "source": {
-      "manifest": "18c9976e6fb4b8809e2882abe3eea0eec93a8f5a89e08fded1e5a05793178324"
+      "manifest": "bac0f01b33d46eed3630e34a9af663254668559da0dfb3f8f93cd3f8c41a1b33"
     }
   },
   "models": {
@@ -28294,8 +28294,8 @@
     }
   },
   "source": {
-    "commit": "b088bbf19e2c2d35e1a22845a9a1735d94d24f0e",
-    "commitDate": "2026-11-18T23:13:03+03:00",
+    "commit": "f95339049104d3451730596447d272e2b2f3755e",
+    "commitDate": "2026-11-18T23:42:41+03:00",
     "dirty": false,
     "repo": "private source monorepo"
   },
