@@ -5425,7 +5425,7 @@
  ],
  "hero-simple": [
   {
-   "docs": "The simple hero (model hero@1): an optional badge, the heading, a description, one link as the action and one picture. Axes: media (end: the picture after the copy, start: before it, top: above it, wide).",
+   "docs": "The simple hero (model hero@1): an optional badge, the heading, a description, one link as the action (a link styled as a button: drawn only when the label and the address are both set) and one picture. Axes: media (end: the picture after the copy, start: before it, top: above it, wide).",
    "part": "HeroSimple",
    "rows": [
     {
@@ -5486,6 +5486,17 @@
       "1",
       "2",
       "3"
+     ]
+    },
+    {
+     "default": "\"standard\"",
+     "desc": "the vertical padding of the section: compact (py-8 lg:py-16), standard (py-16 lg:py-32), spacious (py-24 lg:py-40)",
+     "name": "padding",
+     "type": "\"compact\" | \"standard\" | \"spacious\"",
+     "values": [
+      "compact",
+      "standard",
+      "spacious"
      ]
     },
     {
@@ -6188,6 +6199,12 @@
      "type": "boolean"
     }
    ]
+  }
+ ],
+ "link-button": [
+  {
+   "part": "LinkButton",
+   "rows": []
   }
  ],
  "link-plain": [
@@ -12785,6 +12802,17 @@
       "1",
       "2",
       "3"
+     ]
+    },
+    {
+     "default": "\"standard\"",
+     "desc": "the vertical padding of the section: compact (py-8 lg:py-16), standard (py-16 lg:py-32), spacious (py-24 lg:py-40)",
+     "name": "padding",
+     "type": "\"compact\" | \"standard\" | \"spacious\"",
+     "values": [
+      "compact",
+      "standard",
+      "spacious"
      ]
     },
     {

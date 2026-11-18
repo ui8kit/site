@@ -2072,8 +2072,8 @@
         "badge",
         "block",
         "box",
-        "button",
         "container",
+        "link-button",
         "media-frame",
         "stack",
         "text",
@@ -2559,6 +2559,18 @@
         "utils"
       ],
       "title": "Link",
+      "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "LinkButton: Link + recipe link-button.",
+      "name": "link-button",
+      "registryDependencies": [
+        "kit-link",
+        "recipes",
+        "utils"
+      ],
+      "title": "Link Button",
       "type": "registry:ui"
     },
     {
@@ -5379,7 +5391,7 @@
       "type": "registry:block"
     }
   ],
-  "lastUpdated": "2026-11-18T21:28:57+03:00",
+  "lastUpdated": "2026-11-18T23:13:03+03:00",
   "registry": "ui",
   "version": "0.1.0"
 }

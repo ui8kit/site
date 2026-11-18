@@ -6,12 +6,12 @@
       "hero-simple@1": {
         "model": "hero@1",
         "path": "contracts/hero-simple/1.json",
-        "sha256": "babdb9a5bd0bd5fb9571381c3e76d5947162d2ac385f1606d89fdb303499c009"
+        "sha256": "7d7858e0ed33a50090fbd2205da74c57b3700a15e077bbf336de3a5378ec65ce"
       },
       "team-simple@1": {
         "model": "team@1",
         "path": "contracts/team-simple/1.json",
-        "sha256": "c71dd32da3ef8512202b473ea1f4c5e8d785889f8635e972451b65b18478aeac"
+        "sha256": "dfc8cfcad0f171aebb66e98d3917b1ca21c3eb7357772ce88302311a6642b1ae"
       }
     },
     "path": "contracts/v0.json",
@@ -7034,6 +7034,7 @@
             "label",
             "legend",
             "link",
+            "link-button",
             "link-plain",
             "list",
             "list-item",
@@ -7112,6 +7113,7 @@
             "label",
             "legend",
             "link",
+            "link-button",
             "link-plain",
             "list",
             "list-item",
@@ -7190,6 +7192,7 @@
             "label",
             "legend",
             "link",
+            "link-button",
             "link-plain",
             "list",
             "list-item",
@@ -7268,6 +7271,7 @@
             "label",
             "legend",
             "link",
+            "link-button",
             "link-plain",
             "list",
             "list-item",
@@ -18071,8 +18075,8 @@
             "badge",
             "block",
             "box",
-            "button",
             "container",
+            "link-button",
             "media-frame",
             "stack",
             "text",
@@ -18090,8 +18094,8 @@
             "badge",
             "block",
             "box",
-            "button",
             "container",
+            "link-button",
             "media-frame",
             "stack",
             "text",
@@ -18133,8 +18137,8 @@
             "badge",
             "block",
             "box",
-            "button",
             "container",
+            "link-button",
             "media-frame",
             "stack",
             "text",
@@ -18152,11 +18156,11 @@
             "badge",
             "block",
             "box",
-            "button",
             "container",
             "kit-box",
-            "kit-button",
+            "kit-link",
             "kit-text",
+            "link-button",
             "media-frame",
             "stack",
             "text",
@@ -18174,8 +18178,8 @@
             "badge",
             "block",
             "box",
-            "button",
             "container",
+            "link-button",
             "media-frame",
             "stack",
             "text",
@@ -18193,8 +18197,8 @@
             "badge",
             "block",
             "box",
-            "button",
             "container",
+            "link-button",
             "media-frame",
             "stack",
             "text",
@@ -22583,6 +22587,113 @@
         }
       },
       "title": "Link",
+      "type": "registry:ui"
+    },
+    {
+      "category": "primitives",
+      "description": "Link Button primitive",
+      "group": "",
+      "kind": "primitive",
+      "name": "link-button",
+      "runtimes": {
+        "jinja2": {
+          "dependencies": [],
+          "files": [
+            "compose/link-button.html.j2"
+          ],
+          "path": "jinja2/components/ui/link-button.json",
+          "registryDependencies": [
+            "kit-link",
+            "recipes",
+            "utils"
+          ]
+        },
+        "latte": {
+          "dependencies": [],
+          "files": [
+            "compose/LinkButton.latte"
+          ],
+          "path": "latte/components/ui/link-button.json",
+          "registryDependencies": [
+            "kit-link",
+            "recipes",
+            "utils"
+          ]
+        },
+        "react": {
+          "dependencies": [],
+          "files": [
+            "compose/link-button.tsx"
+          ],
+          "path": "react/components/ui/link-button.json",
+          "registryDependencies": [
+            "kit-link",
+            "recipes",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "compose/link-button.solid.tsx"
+          ],
+          "path": "solid/components/ui/link-button.json",
+          "registryDependencies": [
+            "kit-link",
+            "recipes",
+            "utils"
+          ]
+        },
+        "svelte": {
+          "dependencies": [],
+          "files": [
+            "compose/LinkButton.svelte"
+          ],
+          "path": "svelte/components/ui/link-button.json",
+          "registryDependencies": [
+            "kit-link",
+            "recipes",
+            "utils"
+          ]
+        },
+        "templ": {
+          "dependencies": [],
+          "files": [
+            "compose/link-button.templ"
+          ],
+          "path": "templ/components/ui/link-button.json",
+          "registryDependencies": [
+            "kit-link",
+            "recipes",
+            "utils"
+          ]
+        },
+        "twig": {
+          "dependencies": [],
+          "files": [
+            "compose/LinkButton.html.twig"
+          ],
+          "path": "twig/components/ui/link-button.json",
+          "registryDependencies": [
+            "kit-link",
+            "recipes",
+            "utils"
+          ]
+        },
+        "vue": {
+          "dependencies": [],
+          "files": [
+            "compose/LinkButton.vue"
+          ],
+          "path": "vue/components/ui/link-button.json",
+          "registryDependencies": [
+            "kit-link",
+            "recipes",
+            "utils"
+          ]
+        }
+      },
+      "title": "Link Button",
       "type": "registry:ui"
     },
     {
@@ -48163,7 +48274,7 @@
       "type": "registry:block"
     }
   ],
-  "lastUpdated": "2026-11-18T21:28:57+03:00",
+  "lastUpdated": "2026-11-18T23:13:03+03:00",
   "layout": "<runtime>/index.json + <runtime>/{components/ui,components,blocks,utils,lib,themes}/<name>.json; use r/<runtime> as registryUrl",
   "models": {
     "hero@1": {
@@ -48176,9 +48287,9 @@
     }
   },
   "props": {
-    "digest": "sha256:38ad314a67a0e3188acec7c2427a18f8a39f0309d923d009fed7a19188f5c74a",
+    "digest": "sha256:8c1dd16552a488e72e2562dde5293cab4979bc3e0a4947d003d7e532906925ad",
     "path": "props/v0.json",
-    "sha256": "88e2a2ca366c98a69608fbe342434cc4441da33ff56004cb40451b5da96ae1ac",
+    "sha256": "3eda865a026265509613b7f17325d209ac7809eb9c68c4dc168546971bf418d1",
     "version": "0"
   },
   "runtimes": [
@@ -48191,7 +48302,7 @@
     "latte",
     "jinja2"
   ],
-  "sourceCommit": "cf36c28550f16e76303ca5e7c5be1259e832325c",
+  "sourceCommit": "b088bbf19e2c2d35e1a22845a9a1735d94d24f0e",
   "variants": {
     "digest": "sha256:0358619969150e50f91da46a0864677b25914bacc9897c4863e7e272f7fd0c6b",
     "path": "variants/v0.json",

@@ -9,23 +9,23 @@
     "items": {
       "hero-simple@1": {
         "block": "block.herosimple",
-        "bytes": 1631,
+        "bytes": 1742,
         "model": "hero@1",
         "path": "contracts/hero-simple/1.json",
-        "sha256": "babdb9a5bd0bd5fb9571381c3e76d5947162d2ac385f1606d89fdb303499c009",
+        "sha256": "7d7858e0ed33a50090fbd2205da74c57b3700a15e077bbf336de3a5378ec65ce",
         "version": 1
       },
       "team-simple@1": {
         "block": "block.teamsimple",
-        "bytes": 1952,
+        "bytes": 2063,
         "model": "team@1",
         "path": "contracts/team-simple/1.json",
-        "sha256": "c71dd32da3ef8512202b473ea1f4c5e8d785889f8635e972451b65b18478aeac",
+        "sha256": "dfc8cfcad0f171aebb66e98d3917b1ca21c3eb7357772ce88302311a6642b1ae",
         "version": 1
       }
     },
     "source": {
-      "manifest": "f664df3a5bab9040655b4772c705be49103c5ab6dbb69cdc487f1910a4933838"
+      "manifest": "18c9976e6fb4b8809e2882abe3eea0eec93a8f5a89e08fded1e5a05793178324"
     }
   },
   "models": {
@@ -43,11 +43,11 @@
     }
   },
   "props": {
-    "bytes": 1963059,
-    "digest": "sha256:38ad314a67a0e3188acec7c2427a18f8a39f0309d923d009fed7a19188f5c74a",
+    "bytes": 1963585,
+    "digest": "sha256:8c1dd16552a488e72e2562dde5293cab4979bc3e0a4947d003d7e532906925ad",
     "items": 118,
     "path": "props/v0.json",
-    "sha256": "88e2a2ca366c98a69608fbe342434cc4441da33ff56004cb40451b5da96ae1ac",
+    "sha256": "3eda865a026265509613b7f17325d209ac7809eb9c68c4dc168546971bf418d1",
     "version": "0"
   },
   "runtimes": {
@@ -56,7 +56,7 @@
         "block": 118,
         "component": 137,
         "lib": 2,
-        "primitive": 84,
+        "primitive": 85,
         "utils": 1
       },
       "entries": {
@@ -1188,8 +1188,8 @@
         "hero-simple": {
           "files": {
             "blocks/hero-simple.html.j2": {
-              "bytes": 3681,
-              "sha256": "af42e32e75fddfe15959860743044338055c6908024d18f3192ede9c9e0d05b3"
+              "bytes": 3973,
+              "sha256": "aa120ac2d845aedb028ca0f176bfc24045d9aa6debcc4abc1756f43b7f72b535"
             }
           },
           "type": "registry:block"
@@ -1556,6 +1556,15 @@
             "compose/link.html.j2": {
               "bytes": 281,
               "sha256": "f01ae00626ed952289d5165e590230f61dfb704eb364175c52ff55ac0d070837"
+            }
+          },
+          "type": "registry:ui"
+        },
+        "link-button": {
+          "files": {
+            "compose/link-button.html.j2": {
+              "bytes": 300,
+              "sha256": "c86be9ba5606399cce041920d2abfa3f39c4644c4cf074ac6c6fa0d4837c1688"
             }
           },
           "type": "registry:ui"
@@ -2491,8 +2500,8 @@
         "recipes": {
           "files": {
             "compose/compose.json": {
-              "bytes": 42819,
-              "sha256": "4933e33c232a9bcee198b47a20bc13ebffe0eeec73d989e6ea078a0aa92498c4"
+              "bytes": 43949,
+              "sha256": "0b2da150013e08566bcac895c9e44686d3c2c80ca65e7b4dc5234c53b74dda2d"
             },
             "compose/compose_env.py": {
               "bytes": 3347,
@@ -3053,8 +3062,8 @@
         "team-simple": {
           "files": {
             "blocks/team-simple.html.j2": {
-              "bytes": 5145,
-              "sha256": "172c0b6c099da2abf0cd63e4e8e61d70d6ac32f22e52dafed2594a1ea106c205"
+              "bytes": 5375,
+              "sha256": "6685a1638fb32032d7f927cea0ca314bca42f3ad3c0364d83d35d54211caa98f"
             }
           },
           "type": "registry:block"
@@ -3259,14 +3268,14 @@
           "type": "registry:block"
         }
       },
-      "items": 342
+      "items": 343
     },
     "latte": {
       "counts": {
         "block": 118,
         "component": 137,
         "lib": 2,
-        "primitive": 84,
+        "primitive": 85,
         "utils": 1
       },
       "entries": {
@@ -4398,8 +4407,8 @@
         "hero-simple": {
           "files": {
             "blocks/hero-simple.latte": {
-              "bytes": 3608,
-              "sha256": "632359142ed658cd3937afed2d4a88a992970fcc7582da02013bb25beeb93d86"
+              "bytes": 3885,
+              "sha256": "9e6cd4348fa71f7136ab2b84be86dbef72fc79864c9c855649e413e49e95a53a"
             }
           },
           "type": "registry:block"
@@ -4762,6 +4771,15 @@
             "compose/Link.latte": {
               "bytes": 780,
               "sha256": "638c4b22b1cb1a3656de887c5e64bc60097080215e9bd86a44270c3a9ff34513"
+            }
+          },
+          "type": "registry:ui"
+        },
+        "link-button": {
+          "files": {
+            "compose/LinkButton.latte": {
+              "bytes": 799,
+              "sha256": "0e92c417a93561dd27f5149d956655f1c633791d24d40a14b0bf4986716b2830"
             }
           },
           "type": "registry:ui"
@@ -5701,8 +5719,8 @@
               "sha256": "527b36a33f26dfb791c5e985a85131d1fbf74d36907e6d5b18eb03d743c420cf"
             },
             "compose/compose.json": {
-              "bytes": 42819,
-              "sha256": "4933e33c232a9bcee198b47a20bc13ebffe0eeec73d989e6ea078a0aa92498c4"
+              "bytes": 43949,
+              "sha256": "0b2da150013e08566bcac895c9e44686d3c2c80ca65e7b4dc5234c53b74dda2d"
             }
           },
           "type": "registry:lib"
@@ -6259,8 +6277,8 @@
         "team-simple": {
           "files": {
             "blocks/team-simple.latte": {
-              "bytes": 5159,
-              "sha256": "a8c14f328da1f9ceff51b0078d0664053993467e2b6ddc758b1820c83c1e5246"
+              "bytes": 5377,
+              "sha256": "9fb686cbaadfbe7e94a19c00cb8738bfffd6be942208e9833b79074d9ab2d276"
             }
           },
           "type": "registry:block"
@@ -6465,14 +6483,14 @@
           "type": "registry:block"
         }
       },
-      "items": 342
+      "items": 343
     },
     "react": {
       "counts": {
         "block": 118,
         "component": 137,
         "lib": 2,
-        "primitive": 88,
+        "primitive": 89,
         "theme": 17,
         "utils": 1
       },
@@ -7011,8 +7029,8 @@
         "compose": {
           "files": {
             "compose/index.ts": {
-              "bytes": 2021,
-              "sha256": "792e24e089d91439844aa73c5a90843856d3e58b7dd4f871f32842ea4bf82e2e"
+              "bytes": 2052,
+              "sha256": "b5b494dbb314a22b467b111e68dae43119e7b7538831056f249047775d829ac0"
             }
           },
           "type": "registry:ui"
@@ -7754,8 +7772,8 @@
         "hero-simple": {
           "files": {
             "blocks/hero-simple.tsx": {
-              "bytes": 2790,
-              "sha256": "db78ff7b205eb5f5d93bf9bb60610e44358379ddb2c757e2399bf06f80aff369"
+              "bytes": 3115,
+              "sha256": "73c99a6cbc3e923fe841fb103cebf7517fc91818318d245a842eb1cac05cd7e6"
             }
           },
           "type": "registry:block"
@@ -8203,6 +8221,15 @@
             "compose/link.tsx": {
               "bytes": 670,
               "sha256": "565caad0f8f4fb11dbbd2f37ee5b4e8ab12aa53401768dc805034c902e98ddd5"
+            }
+          },
+          "type": "registry:ui"
+        },
+        "link-button": {
+          "files": {
+            "compose/link-button.tsx": {
+              "bytes": 727,
+              "sha256": "950a3cab8f96633e7aa49654a696272b8ce2d36764ab3b4d9497651a1c80a89c"
             }
           },
           "type": "registry:ui"
@@ -9187,8 +9214,8 @@
         "recipes": {
           "files": {
             "compose/recipes.ts": {
-              "bytes": 26605,
-              "sha256": "ae94326a1e398419beaf8f627c4fe87dca8eafac7f8da0981ba06ebd1c0f22b9"
+              "bytes": 27398,
+              "sha256": "68e30d8bbe845066b947bc5bfc8a7669e769b3e18f77e6879f86f1d25695df59"
             }
           },
           "type": "registry:lib"
@@ -9826,8 +9853,8 @@
         "team-simple": {
           "files": {
             "blocks/team-simple.tsx": {
-              "bytes": 3647,
-              "sha256": "10089e2c434015a928c0c2b1f7b6ba1949e63dd178c2228fe2b82290ce07b6cc"
+              "bytes": 3896,
+              "sha256": "316ac3e605b2d6db57d98ee9d3dbaa2eff92bc6a889fd01c9a20dc6fff4e3c82"
             },
             "blocks/team-simple.types.ts": {
               "bytes": 259,
@@ -10289,14 +10316,14 @@
           "type": "registry:block"
         }
       },
-      "items": 363
+      "items": 364
     },
     "solid": {
       "counts": {
         "block": 118,
         "component": 137,
         "lib": 2,
-        "primitive": 87,
+        "primitive": 88,
         "theme": 17,
         "utils": 1
       },
@@ -10835,8 +10862,8 @@
         "compose": {
           "files": {
             "compose/index.ts": {
-              "bytes": 2423,
-              "sha256": "9582924199b7ad3e66922c906b1c39c668bd5b81eacd6f962af163bce520fb35"
+              "bytes": 2460,
+              "sha256": "2a4cac0fc3b3d4487e8041f1cf790aeaad2a08ec5a3f3a29c30f69a08583b962"
             }
           },
           "type": "registry:ui"
@@ -11578,8 +11605,8 @@
         "hero-simple": {
           "files": {
             "blocks/hero-simple.tsx": {
-              "bytes": 2767,
-              "sha256": "eedb8a8ccb777c355bce7cfc3647292e027bad4c09174c9a2f333ef5344af1d3"
+              "bytes": 3092,
+              "sha256": "4de097105f16291422df44621942c1af5f9609e30d38f47c5169db6ba2569926"
             }
           },
           "type": "registry:block"
@@ -12018,6 +12045,15 @@
             "compose/link.solid.tsx": {
               "bytes": 793,
               "sha256": "4d6d33f501be15a677de8d54089e5f9b1e97fc0725b5d9f9f3f5ab221ac4bc77"
+            }
+          },
+          "type": "registry:ui"
+        },
+        "link-button": {
+          "files": {
+            "compose/link-button.solid.tsx": {
+              "bytes": 850,
+              "sha256": "2020a6246c64b7d6732811a4b50529b5d1cc1aee30472cc2f8b1eb262d4ef06b"
             }
           },
           "type": "registry:ui"
@@ -13002,8 +13038,8 @@
         "recipes": {
           "files": {
             "compose/recipes.ts": {
-              "bytes": 26605,
-              "sha256": "ae94326a1e398419beaf8f627c4fe87dca8eafac7f8da0981ba06ebd1c0f22b9"
+              "bytes": 27398,
+              "sha256": "68e30d8bbe845066b947bc5bfc8a7669e769b3e18f77e6879f86f1d25695df59"
             }
           },
           "type": "registry:lib"
@@ -13641,8 +13677,8 @@
         "team-simple": {
           "files": {
             "blocks/team-simple.tsx": {
-              "bytes": 3601,
-              "sha256": "d760b0f9c920bce89956b201a25b4c62210da4c9b0e630286cde9e0c21b51dce"
+              "bytes": 3850,
+              "sha256": "357fe3c0c5758d6ace4884ab75308843e7317d87d53b250c09819072ed79fe68"
             },
             "blocks/team-simple.types.ts": {
               "bytes": 259,
@@ -14104,14 +14140,14 @@
           "type": "registry:block"
         }
       },
-      "items": 362
+      "items": 363
     },
     "svelte": {
       "counts": {
         "block": 118,
         "component": 137,
         "lib": 2,
-        "primitive": 87,
+        "primitive": 88,
         "theme": 17,
         "utils": 1
       },
@@ -14650,8 +14686,8 @@
         "compose": {
           "files": {
             "compose/index.ts": {
-              "bytes": 3911,
-              "sha256": "eef28268d2f52587645bce52ac1eb48f71e32fe2abf71112b9b75edc10a3507e"
+              "bytes": 3972,
+              "sha256": "0f58c8f50bfee44637732ba24434f63914755f13b625a7854d0dccee13b008c3"
             }
           },
           "type": "registry:ui"
@@ -15393,8 +15429,8 @@
         "hero-simple": {
           "files": {
             "blocks/hero-simple.svelte": {
-              "bytes": 2970,
-              "sha256": "84b43eca516bab7127332d6cfabf94f0e2a110523e8402bd9b6eb8cf1389fa1b"
+              "bytes": 3286,
+              "sha256": "005e5d018d7c221d0d5b9d607cc3734376245809d3464e62e4b8b67e2a471c66"
             }
           },
           "type": "registry:block"
@@ -15853,6 +15889,15 @@
             "compose/Link.svelte": {
               "bytes": 718,
               "sha256": "f43ae90a65801c9620b944289cfd079f88d2633136d055d3d44015ba0372bd69"
+            }
+          },
+          "type": "registry:ui"
+        },
+        "link-button": {
+          "files": {
+            "compose/LinkButton.svelte": {
+              "bytes": 757,
+              "sha256": "2281f0f55c9b8a2cdebf1e85c402e925a7b76e1d8c89690589154dbc1c26cae7"
             }
           },
           "type": "registry:ui"
@@ -16837,8 +16882,8 @@
         "recipes": {
           "files": {
             "compose/recipes.ts": {
-              "bytes": 26605,
-              "sha256": "ae94326a1e398419beaf8f627c4fe87dca8eafac7f8da0981ba06ebd1c0f22b9"
+              "bytes": 27398,
+              "sha256": "68e30d8bbe845066b947bc5bfc8a7669e769b3e18f77e6879f86f1d25695df59"
             }
           },
           "type": "registry:lib"
@@ -17476,8 +17521,8 @@
         "team-simple": {
           "files": {
             "blocks/team-simple.svelte": {
-              "bytes": 3657,
-              "sha256": "8969d6af5e3d667025f983585b5dd54be88532576c279839da75604932e22e4d"
+              "bytes": 3894,
+              "sha256": "b0fbad2de38ebcd4e262fd4674cf54278ab318c055b92d43f82eb19ccfeebffe"
             },
             "blocks/team-simple.types.ts": {
               "bytes": 259,
@@ -17939,14 +17984,14 @@
           "type": "registry:block"
         }
       },
-      "items": 362
+      "items": 363
     },
     "templ": {
       "counts": {
         "block": 118,
         "component": 137,
         "lib": 2,
-        "primitive": 84,
+        "primitive": 85,
         "utils": 1
       },
       "entries": {
@@ -19078,8 +19123,8 @@
         "hero-simple": {
           "files": {
             "blocks/hero-simple.templ": {
-              "bytes": 3759,
-              "sha256": "7dfe8dbb08e53d474a737a8837d00e7cbb54a4ce74eae6e6ed530b294eef449a"
+              "bytes": 4099,
+              "sha256": "133579f1da7516b6607fcfae0e99b531a1a94e945007489aa50dac9e35fb6a9c"
             }
           },
           "type": "registry:block"
@@ -19430,6 +19475,15 @@
             "compose/link.templ": {
               "bytes": 598,
               "sha256": "c41077fc2c9507c83cfd1b24db3f0d1b7838829180eaf6458ef781eabb6269ba"
+            }
+          },
+          "type": "registry:ui"
+        },
+        "link-button": {
+          "files": {
+            "compose/link-button.templ": {
+              "bytes": 740,
+              "sha256": "829be5f455d371fb6d6ee3f44a96a0cce47a762bcf4dcd2e2a985011a47abeb5"
             }
           },
           "type": "registry:ui"
@@ -20373,8 +20427,8 @@
               "sha256": "df577d4b10997cd3a7547d5d7a4ab362916751ef933ea55a40016092ba5a83f1"
             },
             "compose/compose.json": {
-              "bytes": 42819,
-              "sha256": "4933e33c232a9bcee198b47a20bc13ebffe0eeec73d989e6ea078a0aa92498c4"
+              "bytes": 43949,
+              "sha256": "0b2da150013e08566bcac895c9e44686d3c2c80ca65e7b4dc5234c53b74dda2d"
             },
             "compose/lucide.go": {
               "bytes": 1507,
@@ -20935,8 +20989,8 @@
         "team-simple": {
           "files": {
             "blocks/team-simple.templ": {
-              "bytes": 4651,
-              "sha256": "1c62ade6ebc214375e181cab105748a6a5b74a619a5b8ef997b1aa0a5b147c89"
+              "bytes": 4932,
+              "sha256": "291b62eb5d6881fd20b3947a157995590c86f70446499c2866fa1059e9929b90"
             }
           },
           "type": "registry:block"
@@ -21169,14 +21223,14 @@
           "type": "registry:block"
         }
       },
-      "items": 342
+      "items": 343
     },
     "twig": {
       "counts": {
         "block": 118,
         "component": 137,
         "lib": 2,
-        "primitive": 84,
+        "primitive": 85,
         "utils": 1
       },
       "entries": {
@@ -22308,8 +22362,8 @@
         "hero-simple": {
           "files": {
             "blocks/hero-simple.html.twig": {
-              "bytes": 3731,
-              "sha256": "261ca8c9526f84e4c3937a8880b1492875f51e63ace491ad081969f05a3f39ef"
+              "bytes": 4007,
+              "sha256": "d0beb1d194e1cdadb3f0b42b03fec9b201c0a37bf87bb5ff46c1cabc8ca49dbc"
             }
           },
           "type": "registry:block"
@@ -22672,6 +22726,15 @@
             "compose/Link.html.twig": {
               "bytes": 270,
               "sha256": "eaa7f2a51fd46cc2e7e140f706db3f671270a310fab69f9312b9858a29f912e2"
+            }
+          },
+          "type": "registry:ui"
+        },
+        "link-button": {
+          "files": {
+            "compose/LinkButton.html.twig": {
+              "bytes": 289,
+              "sha256": "dcc7e25ff6f88b8755d04ae023d439fcd522d2bb10bb0c585b2fd707ead3ea3c"
             }
           },
           "type": "registry:ui"
@@ -23615,8 +23678,8 @@
               "sha256": "c92ad1f0481e927194f1b22d8888ecc7b5758af0a8dfc0099fed04e6a199aec8"
             },
             "compose/compose.json": {
-              "bytes": 42819,
-              "sha256": "4933e33c232a9bcee198b47a20bc13ebffe0eeec73d989e6ea078a0aa92498c4"
+              "bytes": 43949,
+              "sha256": "0b2da150013e08566bcac895c9e44686d3c2c80ca65e7b4dc5234c53b74dda2d"
             }
           },
           "type": "registry:lib"
@@ -24173,8 +24236,8 @@
         "team-simple": {
           "files": {
             "blocks/team-simple.html.twig": {
-              "bytes": 5324,
-              "sha256": "356ecee8245996002d634114ecc231da58892a33fa048e11835aeff0b38afce3"
+              "bytes": 5539,
+              "sha256": "8a814d5c55429208570723f194e30af91d66ee55498573c069ab9849c0fedeee"
             }
           },
           "type": "registry:block"
@@ -24383,14 +24446,14 @@
           "type": "registry:block"
         }
       },
-      "items": 342
+      "items": 343
     },
     "vue": {
       "counts": {
         "block": 118,
         "component": 137,
         "lib": 2,
-        "primitive": 87,
+        "primitive": 88,
         "theme": 17,
         "utils": 1
       },
@@ -24929,8 +24992,8 @@
         "compose": {
           "files": {
             "compose/index.ts": {
-              "bytes": 3710,
-              "sha256": "89ab83e8a74251c173aa3b01d960267d476e0faf7f5024c2eacbb65d1d5345c1"
+              "bytes": 3768,
+              "sha256": "05684b0b8ebdfc0eb3e130ccb89111030e51f5c6db621b462d2856d9e0e5b03d"
             }
           },
           "type": "registry:ui"
@@ -25672,8 +25735,8 @@
         "hero-simple": {
           "files": {
             "blocks/hero-simple.vue": {
-              "bytes": 2924,
-              "sha256": "9a9fe66329a55dddcb56ede9233cf0125d7c72f04417e188193c7a9e22ade369"
+              "bytes": 3245,
+              "sha256": "b27378a4089d0c7ef2709d782c4e5f000acde9a2ab7972de1fa9fdeffef19c48"
             }
           },
           "type": "registry:block"
@@ -26132,6 +26195,15 @@
             "compose/Link.vue": {
               "bytes": 829,
               "sha256": "199cb716a42c8130af5c5f38fcea67a9f0f10782ad4af484ee27bc072c23f46c"
+            }
+          },
+          "type": "registry:ui"
+        },
+        "link-button": {
+          "files": {
+            "compose/LinkButton.vue": {
+              "bytes": 874,
+              "sha256": "a0323fc4a512e9528e9032a59827b89adc710c45bb9b69dc42c9b0435791ddb5"
             }
           },
           "type": "registry:ui"
@@ -27116,8 +27188,8 @@
         "recipes": {
           "files": {
             "compose/recipes.ts": {
-              "bytes": 26605,
-              "sha256": "ae94326a1e398419beaf8f627c4fe87dca8eafac7f8da0981ba06ebd1c0f22b9"
+              "bytes": 27398,
+              "sha256": "68e30d8bbe845066b947bc5bfc8a7669e769b3e18f77e6879f86f1d25695df59"
             }
           },
           "type": "registry:lib"
@@ -27759,8 +27831,8 @@
               "sha256": "ef6fafb91ec2419f3e782c3a0ceea792a75ea2e0d0068afb9dce4c27f30b0fc2"
             },
             "blocks/team-simple.vue": {
-              "bytes": 3598,
-              "sha256": "a83c51e05cd429e3354469c7b04f38f12b846d00a02457d9ef53eb9241467b94"
+              "bytes": 3840,
+              "sha256": "74ebf97afdc03b53a2ac95141115d11c89c47bc3ad604b4cd81c32c61062cbe4"
             }
           },
           "type": "registry:block"
@@ -28218,12 +28290,12 @@
           "type": "registry:block"
         }
       },
-      "items": 362
+      "items": 363
     }
   },
   "source": {
-    "commit": "cf36c28550f16e76303ca5e7c5be1259e832325c",
-    "commitDate": "2026-11-18T21:28:57+03:00",
+    "commit": "b088bbf19e2c2d35e1a22845a9a1735d94d24f0e",
+    "commitDate": "2026-11-18T23:13:03+03:00",
     "dirty": false,
     "repo": "private source monorepo"
   },
