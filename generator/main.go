@@ -49,6 +49,8 @@ type item struct {
 	Group       string                `json:"group"`
 	Description string                `json:"description"`
 	Runtimes    map[string]runtimeRef `json:"runtimes"`
+	// Contract: set for the blocks of the simple line (a builder contract, codegen-x packages/prototypes)
+	Contract string `json:"contract"`
 }
 
 type runtimeRef struct {
@@ -232,6 +234,9 @@ func main() {
 			Name: it.Name, Title: it.Title, Kind: it.Kind, Category: it.Category, Group: it.Group,
 			Description: it.Description, Install: "npx ui8kit add " + it.Name,
 			CategoryHref: categoryHref(docs, it),
+			// the simple line draws logical classes only (align start / end follow dir): its preview takes the header's
+			// preview direction (LTR / RTL, theme.js)
+			DirPreview: it.Contract != "",
 		}
 		if b, err := os.ReadFile(filepath.Join(cfg.previews, "html", it.Name+".html")); err == nil {
 			d.Preview = string(b)

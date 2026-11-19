@@ -16,6 +16,10 @@ func themeOptions() []selectfield.SelectOptionItem {
 	return []selectfield.SelectOptionItem{{Value: "system", Label: T("theme.system")}, {Value: "light", Label: T("theme.light")}, {Value: "dark", Label: T("theme.dark")}}
 }
 
+func dirOptions() []selectfield.SelectOptionItem {
+	return []selectfield.SelectOptionItem{{Value: "ltr", Label: T("dir.ltr")}, {Value: "rtl", Label: T("dir.rtl")}}
+}
+
 func skinOptions() []selectfield.SelectOptionItem {
 	out := []selectfield.SelectOptionItem{{Value: "", Label: T("skin.default")}}
 	for _, s := range Skins {

@@ -272,7 +272,7 @@ func TemplatePage(d TemplatePageData) templ.Component {
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
-			templ_7745c5c3_Err = Preview(d.Preview, Tf("tpl.previewOf", d.Nav), false, T("tpl.noPreview")).Render(ctx, templ_7745c5c3_Buffer)
+			templ_7745c5c3_Err = Preview(d.Preview, Tf("tpl.previewOf", d.Nav), false, T("tpl.noPreview"), false).Render(ctx, templ_7745c5c3_Buffer)
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}

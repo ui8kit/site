@@ -9,10 +9,10 @@
     "items": {
       "hero-simple@1": {
         "block": "block.herosimple",
-        "bytes": 1827,
+        "bytes": 1882,
         "model": "hero@1",
         "path": "contracts/hero-simple/1.json",
-        "sha256": "d36b7322898a6455ea881fc0b9e319c1f97a25194dff9f0b1239434b7fd9653f",
+        "sha256": "b257de955d42d36202199349356c44d20b03482f11be7e0cd6a4ccdbe61cedf0",
         "version": 1
       },
       "team-simple@1": {
@@ -25,7 +25,7 @@
       }
     },
     "source": {
-      "manifest": "14cbcd6f22501c19ee7f4f06a389ddbbc8d9418e4d45d64196f865ba67f8da9e"
+      "manifest": "cdabcc4e18459266c5d003d4d4a9940212fb04ddccde4ebaede3de344d0759ee"
     }
   },
   "models": {
@@ -28294,17 +28294,17 @@
     }
   },
   "source": {
-    "commit": "a513d1810727f0f8cda16189d375abf1fe269725",
-    "commitDate": "2026-11-19T14:16:32+03:00",
+    "commit": "03f1d41af54c98d9a97208a6da29aa6319084534",
+    "commitDate": "2026-11-19T19:20:07+03:00",
     "dirty": false,
     "repo": "private source monorepo"
   },
   "variants": {
-    "bytes": 125082,
-    "digest": "sha256:0358619969150e50f91da46a0864677b25914bacc9897c4863e7e272f7fd0c6b",
+    "bytes": 125099,
+    "digest": "sha256:88bf3c5455122327087b154730c14a427c3860e822a882540c0269b9464ae5db",
     "items": 114,
     "path": "variants/v0.json",
-    "sha256": "1d24e60d64986e5bdc358189b3b7a361fc16bdd89c6f636cd18f638d3d8eaea3",
+    "sha256": "56ad960c25ffaa14db5fff89d87ff7c41f5f77aed13c720fd698a8902c469983",
     "variants": 533,
     "version": "0"
   },

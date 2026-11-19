@@ -122,6 +122,7 @@ type ItemData struct {
 	Install      string
 	Panels       []RuntimePanel
 	Requires     []Related
+	DirPreview   bool // the preview follows the header's preview direction (the simple line: logical classes only)
 }
 
 type ListData struct {

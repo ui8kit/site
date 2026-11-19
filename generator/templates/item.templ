@@ -31,7 +31,7 @@ templ Item(d ItemData) {
 			@RelatedLinks(T("item.pulls"), d.Requires, "mb-6")
 		}
 		@SectionTitle(T("item.preview"))
-		@Preview(d.Preview, Tf("item.previewOf", d.Title), d.Kind != "block", T("item.noPreview"))
+		@Preview(d.Preview, Tf("item.previewOf", d.Title), d.Kind != "block", T("item.noPreview"), d.DirPreview)
 		@SectionTitle(T("item.code"))
 		@CodePanels(d.Panels, T("item.cliIntro"), true)
 		@SectionTitle(T("item.props"))

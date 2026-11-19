@@ -19,7 +19,8 @@ import (
 	selectfield "github.com/codegen-x/ui8kit/packages/templ/ui/ui/select"
 )
 
-// SiteHeader: brand, main nav, search (enhanced by app.js), colour mode and skin selects (shown only with JS, theme.js).
+// SiteHeader: brand, main nav, search (enhanced by app.js), colour mode, skin and preview direction selects (shown only
+// with JS, theme.js). The direction turns only the previews of the simple line (data-dir-preview), never the page.
 func SiteHeader() templ.Component {
 	return templruntime.GeneratedTemplate(func(templ_7745c5c3_Input templruntime.GeneratedComponentInput) (templ_7745c5c3_Err error) {
 		templ_7745c5c3_W, ctx := templ_7745c5c3_Input.Writer, templ_7745c5c3_Input.Context
@@ -80,7 +81,7 @@ func SiteHeader() templ.Component {
 					var templ_7745c5c3_Var5 string
 					templ_7745c5c3_Var5, templ_7745c5c3_Err = templ.JoinStringErrs(T("brand"))
 					if templ_7745c5c3_Err != nil {
-						return templ.Error{Err: templ_7745c5c3_Err, FileName: `templates/site-header.templ`, Line: 19, Col: 16}
+						return templ.Error{Err: templ_7745c5c3_Err, FileName: `templates/site-header.templ`, Line: 20, Col: 16}
 					}
 					_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var5))
 					if templ_7745c5c3_Err != nil {
@@ -123,7 +124,7 @@ func SiteHeader() templ.Component {
 						var templ_7745c5c3_Var8 string
 						templ_7745c5c3_Var8, templ_7745c5c3_Err = templ.JoinStringErrs(T("search.label"))
 						if templ_7745c5c3_Err != nil {
-							return templ.Error{Err: templ_7745c5c3_Err, FileName: `templates/site-header.templ`, Line: 24, Col: 24}
+							return templ.Error{Err: templ_7745c5c3_Err, FileName: `templates/site-header.templ`, Line: 25, Col: 24}
 						}
 						_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var8))
 						if templ_7745c5c3_Err != nil {
@@ -176,7 +177,7 @@ func SiteHeader() templ.Component {
 						var templ_7745c5c3_Var11 string
 						templ_7745c5c3_Var11, templ_7745c5c3_Err = templ.JoinStringErrs(T("theme.label"))
 						if templ_7745c5c3_Err != nil {
-							return templ.Error{Err: templ_7745c5c3_Err, FileName: `templates/site-header.templ`, Line: 31, Col: 23}
+							return templ.Error{Err: templ_7745c5c3_Err, FileName: `templates/site-header.templ`, Line: 32, Col: 23}
 						}
 						_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var11))
 						if templ_7745c5c3_Err != nil {
@@ -207,7 +208,7 @@ func SiteHeader() templ.Component {
 						var templ_7745c5c3_Var13 string
 						templ_7745c5c3_Var13, templ_7745c5c3_Err = templ.JoinStringErrs(T("skin.label"))
 						if templ_7745c5c3_Err != nil {
-							return templ.Error{Err: templ_7745c5c3_Err, FileName: `templates/site-header.templ`, Line: 35, Col: 22}
+							return templ.Error{Err: templ_7745c5c3_Err, FileName: `templates/site-header.templ`, Line: 36, Col: 22}
 						}
 						_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var13))
 						if templ_7745c5c3_Err != nil {
@@ -220,6 +221,37 @@ func SiteHeader() templ.Component {
 						return templ_7745c5c3_Err
 					}
 					templ_7745c5c3_Err = selectfield.Select(selectfield.SelectProps{ID: "skin-select", Class: "w-auto bg-card px-2 text-card-foreground", Options: skinOptions()}).Render(ctx, templ_7745c5c3_Buffer)
+					if templ_7745c5c3_Err != nil {
+						return templ_7745c5c3_Err
+					}
+					templ_7745c5c3_Var14 := templruntime.GeneratedTemplate(func(templ_7745c5c3_Input templruntime.GeneratedComponentInput) (templ_7745c5c3_Err error) {
+						templ_7745c5c3_W, ctx := templ_7745c5c3_Input.Writer, templ_7745c5c3_Input.Context
+						templ_7745c5c3_Buffer, templ_7745c5c3_IsBuffer := templruntime.GetBuffer(templ_7745c5c3_W)
+						if !templ_7745c5c3_IsBuffer {
+							defer func() {
+								templ_7745c5c3_BufErr := templruntime.ReleaseBuffer(templ_7745c5c3_Buffer)
+								if templ_7745c5c3_Err == nil {
+									templ_7745c5c3_Err = templ_7745c5c3_BufErr
+								}
+							}()
+						}
+						ctx = templ.InitializeContext(ctx)
+						var templ_7745c5c3_Var15 string
+						templ_7745c5c3_Var15, templ_7745c5c3_Err = templ.JoinStringErrs(T("dir.label"))
+						if templ_7745c5c3_Err != nil {
+							return templ.Error{Err: templ_7745c5c3_Err, FileName: `templates/site-header.templ`, Line: 40, Col: 21}
+						}
+						_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var15))
+						if templ_7745c5c3_Err != nil {
+							return templ_7745c5c3_Err
+						}
+						return nil
+					})
+					templ_7745c5c3_Err = label.Label(label.LabelProps{HTMLFor: "dir-select", Class: "sr-only"}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var14), templ_7745c5c3_Buffer)
+					if templ_7745c5c3_Err != nil {
+						return templ_7745c5c3_Err
+					}
+					templ_7745c5c3_Err = selectfield.Select(selectfield.SelectProps{ID: "dir-select", Class: "w-auto bg-card px-2 text-card-foreground", Options: dirOptions(), Attrs: templ.Attributes{"title": T("dir.label")}}).Render(ctx, templ_7745c5c3_Buffer)
 					if templ_7745c5c3_Err != nil {
 						return templ_7745c5c3_Err
 					}

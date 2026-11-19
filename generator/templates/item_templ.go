@@ -190,7 +190,7 @@ func Item(d ItemData) templ.Component {
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
-			templ_7745c5c3_Err = Preview(d.Preview, Tf("item.previewOf", d.Title), d.Kind != "block", T("item.noPreview")).Render(ctx, templ_7745c5c3_Buffer)
+			templ_7745c5c3_Err = Preview(d.Preview, Tf("item.previewOf", d.Title), d.Kind != "block", T("item.noPreview"), d.DirPreview).Render(ctx, templ_7745c5c3_Buffer)
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}

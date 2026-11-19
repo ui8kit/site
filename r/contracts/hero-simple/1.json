@@ -36,6 +36,9 @@
       "label": "Wide picture on top",
       "axes": {
         "media": "top"
+      },
+      "settings": {
+        "align": "center"
       }
     }
   ],

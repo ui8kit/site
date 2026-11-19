@@ -1,20 +1,24 @@
 // Colour mode (system/light/dark) and skin: sets html.dark and data-skin from localStorage before first paint (loaded
-// synchronously in <head>, same-origin file, so a CSP of script-src 'self' is enough), then wires the two header selects.
+// synchronously in <head>, same-origin file, so a CSP of script-src 'self' is enough), then wires the header selects.
+// Preview direction (ltr/rtl): dir on the previews of the simple line ([data-dir-preview]) only, never on the page.
 (function () {
-  var d = document.documentElement, M = "ui8kit-theme", S = "ui8kit-skin", mq = matchMedia("(prefers-color-scheme: dark)");
+  var d = document.documentElement, M = "ui8kit-theme", S = "ui8kit-skin", D = "ui8kit-preview-dir", mq = matchMedia("(prefers-color-scheme: dark)");
   function get(k) { try { return localStorage.getItem(k); } catch (e) { return null; } }
   function put(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
   function apply() {
     var t = get(M), s = get(S);
     d.classList.toggle("dark", t === "dark" || (t !== "light" && mq.matches));
     if (s && /^[a-z0-9-]+$/.test(s)) d.setAttribute("data-skin", s); else d.removeAttribute("data-skin");
+    var dir = get(D) === "rtl" ? "rtl" : "ltr";
+    document.querySelectorAll("[data-dir-preview]").forEach(function (p) { p.setAttribute("dir", dir); });
   }
   d.classList.add("js");
   apply();
   mq.addEventListener("change", apply);
   addEventListener("storage", apply);
   document.addEventListener("DOMContentLoaded", function () {
-    [["theme-select", M, "system"], ["skin-select", S, ""]].forEach(function (c) {
+    apply();
+    [["theme-select", M, "system"], ["skin-select", S, ""], ["dir-select", D, "ltr"]].forEach(function (c) {
       var el = document.getElementById(c[0]);
       if (!el) return;
       el.value = get(c[1]) || c[2];

@@ -37,7 +37,7 @@ templ TemplatePage(d TemplatePageData) {
 		@text.Text(text.TextProps{Size: "sm", Class: "mb-2 text-muted-foreground"}) {
 			{ T("tpl.previewLead") }
 		}
-		@Preview(d.Preview, Tf("tpl.previewOf", d.Nav), false, T("tpl.noPreview"))
+		@Preview(d.Preview, Tf("tpl.previewOf", d.Nav), false, T("tpl.noPreview"), false)
 		@SectionTitle(T("item.code"))
 		@text.Text(text.TextProps{Size: "sm", Class: "mb-4 max-w-3xl text-muted-foreground"}) {
 			{ Tf("tpl.codeLead", d.Commit) }

@@ -14,7 +14,8 @@ import (
 )
 
 // Preview: the static HTML of a block or page sample, rendered at build time (raw-html, recorded), in a scrolling frame.
-func Preview(html string, label string, padded bool, empty string) templ.Component {
+// dirPreview: the root takes the header's preview direction (data-dir-preview; theme.js sets dir="ltr" | "rtl" on it).
+func Preview(html string, label string, padded bool, empty string, dirPreview bool) templ.Component {
 	return templruntime.GeneratedTemplate(func(templ_7745c5c3_Input templruntime.GeneratedComponentInput) (templ_7745c5c3_Err error) {
 		templ_7745c5c3_W, ctx := templ_7745c5c3_Input.Writer, templ_7745c5c3_Input.Context
 		if templ_7745c5c3_CtxErr := ctx.Err(); templ_7745c5c3_CtxErr != nil {
@@ -54,7 +55,7 @@ func Preview(html string, label string, padded bool, empty string) templ.Compone
 				}
 				return nil
 			})
-			templ_7745c5c3_Err = box.Box(box.BoxProps{Class: previewClass(padded), Attrs: templ.Attributes{"role": "group", "tabindex": "0", "aria-label": label}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var2), templ_7745c5c3_Buffer)
+			templ_7745c5c3_Err = box.Box(box.BoxProps{Class: previewClass(padded), Attrs: previewAttrs(label, dirPreview)}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var2), templ_7745c5c3_Buffer)
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
@@ -74,7 +75,7 @@ func Preview(html string, label string, padded bool, empty string) templ.Compone
 				var templ_7745c5c3_Var4 string
 				templ_7745c5c3_Var4, templ_7745c5c3_Err = templ.JoinStringErrs(empty)
 				if templ_7745c5c3_Err != nil {
-					return templ.Error{Err: templ_7745c5c3_Err, FileName: `templates/preview.templ`, Line: 16, Col: 10}
+					return templ.Error{Err: templ_7745c5c3_Err, FileName: `templates/preview.templ`, Line: 17, Col: 10}
 				}
 				_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var4))
 				if templ_7745c5c3_Err != nil {
@@ -96,6 +97,14 @@ func previewClass(padded bool) string {
 		return "preview mb-8 rounded border border-border bg-background p-6"
 	}
 	return "preview mb-8 rounded border border-border bg-background"
+}
+
+func previewAttrs(label string, dirPreview bool) templ.Attributes {
+	a := templ.Attributes{"role": "group", "tabindex": "0", "aria-label": label}
+	if dirPreview {
+		a["data-dir-preview"] = true
+	}
+	return a
 }
 
 var _ = templruntime.GeneratedTemplate

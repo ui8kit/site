@@ -11,7 +11,8 @@ import (
 	selectfield "github.com/codegen-x/ui8kit/packages/templ/ui/ui/select"
 )
 
-// SiteHeader: brand, main nav, search (enhanced by app.js), colour mode and skin selects (shown only with JS, theme.js).
+// SiteHeader: brand, main nav, search (enhanced by app.js), colour mode, skin and preview direction selects (shown only
+// with JS, theme.js). The direction turns only the previews of the simple line (data-dir-preview), never the page.
 templ SiteHeader() {
 	@block.Block(block.BlockProps{Tag: "header", Class: "border-b border-border"}) {
 		@box.Box(box.BoxProps{Class: "mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-4 py-4"}) {
@@ -35,6 +36,10 @@ templ SiteHeader() {
 					{ T("skin.label") }
 				}
 				@selectfield.Select(selectfield.SelectProps{ID: "skin-select", Class: "w-auto bg-card px-2 text-card-foreground", Options: skinOptions()})
+				@label.Label(label.LabelProps{HTMLFor: "dir-select", Class: "sr-only"}) {
+					{ T("dir.label") }
+				}
+				@selectfield.Select(selectfield.SelectProps{ID: "dir-select", Class: "w-auto bg-card px-2 text-card-foreground", Options: dirOptions(), Attrs: templ.Attributes{"title": T("dir.label")}})
 			}
 		}
 	}
