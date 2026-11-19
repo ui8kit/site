@@ -5500,6 +5500,17 @@
      ]
     },
     {
+     "default": "\"start\"",
+     "desc": "the alignment of the copy: start, center or end (logical, follows the writing direction): items-* on the column, text-* on the text",
+     "name": "align",
+     "type": "\"start\" | \"center\" | \"end\"",
+     "values": [
+      "start",
+      "center",
+      "end"
+     ]
+    },
+    {
      "default": "\"end\"",
      "name": "media",
      "type": "\"end\" | \"start\" | \"top\"",
@@ -12813,6 +12824,17 @@
       "compact",
       "standard",
       "spacious"
+     ]
+    },
+    {
+     "default": "\"start\"",
+     "desc": "the alignment of the copy: start, center or end (logical, follows the writing direction): items-* on the column, text-* on the text",
+     "name": "align",
+     "type": "\"start\" | \"center\" | \"end\"",
+     "values": [
+      "start",
+      "center",
+      "end"
      ]
     },
     {
