@@ -16,7 +16,7 @@
       "gallery-hero@1": {
         "model": "gallery@1",
         "path": "contracts/gallery-hero/1.json",
-        "sha256": "2297920f5ec7bb47c8673362971b10ecd7aa7e44f9108212217a7946ba88ff30"
+        "sha256": "d3d96918a81d9e9ac808cc319cd2fe90ae72458ee830cf77bbda5b747749db69"
       },
       "hero-simple@1": {
         "model": "hero@1",
@@ -17099,7 +17099,7 @@
     {
       "category": "marketing",
       "contract": "contracts/gallery-hero/1.json",
-      "description": "A badge, the heading, one paragraph and up to two links as the actions beside three or four photos: at the end, at the start, or in a row under the copy.",
+      "description": "The heading, one paragraph and up to two links as the actions beside three or four photos: at the end, at the start, or in a row under the copy.",
       "group": "hero",
       "kind": "block",
       "model": "gallery@1",
@@ -17112,7 +17112,6 @@
           ],
           "path": "jinja2/blocks/gallery-hero.json",
           "registryDependencies": [
-            "badge",
             "block",
             "box",
             "container",
@@ -17134,7 +17133,6 @@
           ],
           "path": "latte/blocks/gallery-hero.json",
           "registryDependencies": [
-            "badge",
             "block",
             "box",
             "container",
@@ -17183,7 +17181,6 @@
           ],
           "path": "svelte/blocks/gallery-hero.json",
           "registryDependencies": [
-            "badge",
             "block",
             "box",
             "container",
@@ -17205,7 +17202,6 @@
           ],
           "path": "templ/blocks/gallery-hero.json",
           "registryDependencies": [
-            "badge",
             "block",
             "box",
             "container",
@@ -17230,7 +17226,6 @@
           ],
           "path": "twig/blocks/gallery-hero.json",
           "registryDependencies": [
-            "badge",
             "block",
             "box",
             "container",
@@ -17253,7 +17248,6 @@
           ],
           "path": "vue/blocks/gallery-hero.json",
           "registryDependencies": [
-            "badge",
             "block",
             "box",
             "container",
@@ -50008,7 +50002,7 @@
       "type": "registry:block"
     }
   ],
-  "lastUpdated": "2026-11-20T18:49:27+03:00",
+  "lastUpdated": "2026-11-20T19:04:56+03:00",
   "layout": "<runtime>/index.json + <runtime>/{components/ui,components,blocks,utils,lib,themes}/<name>.json; use r/<runtime> as registryUrl",
   "models": {
     "faq@1": {
@@ -50021,7 +50015,7 @@
     },
     "gallery@1": {
       "path": "models/gallery@1.schema.json",
-      "sha256": "1b2290a6a22f6d648d87d4b2f365cde7a17324197732db30049d54078d482f8d"
+      "sha256": "728e408f73900e79639629aaa52698fee31b3a9fc87e73efdb1b11457906b7f2"
     },
     "hero@1": {
       "path": "models/hero@1.schema.json",
@@ -50065,9 +50059,9 @@
     }
   },
   "props": {
-    "digest": "sha256:cea386ad952022a8d44f0d2d6b2bc321463fc5775309501ac696d5d411d7ad10",
+    "digest": "sha256:1a27d06a6dcbf0a871a8b0cc006fb999758cf781c17ee27c9102b5fe4b8673f2",
     "path": "props/v0.json",
-    "sha256": "10f39b3b31839a9071b29986731df9b98eb114098fe4afa69c6a3e9eaf7fc7a8",
+    "sha256": "520c0e4cb37ce269d24ba29dd5b6ca1d35beca22f351a6fc4db6d1e89699e8b0",
     "version": "0"
   },
   "runtimes": [
@@ -50080,7 +50074,7 @@
     "latte",
     "jinja2"
   ],
-  "sourceCommit": "4d672d81844bf60c4b7a87356b2a82af351b935d",
+  "sourceCommit": "70773899d6b2da7b6c35b974b8f40f3d64677929",
   "variants": {
     "digest": "sha256:cb6d7cd5219746c156f881178a3213c5cd8761382580626633c13c06880646ef",
     "path": "variants/v0.json",

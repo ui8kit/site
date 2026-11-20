@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://registry.buildy.tw/models/gallery@1.schema.json",
   "title": "GalleryContent",
-  "description": "Gallery hero content: an optional badge, the heading, a description, up to two actions and three or four photos. One object is valid in every gallery layout (a grid of photos at the end or the start, layered photos at the end or under the copy).",
+  "description": "Gallery hero content: the heading, a description, up to two actions and three or four photos. One object is valid in every gallery layout (a grid of photos at the end or the start, layered photos at the end or under the copy).",
   "type": "object",
   "additionalProperties": false,
   "required": [
@@ -10,11 +10,6 @@
     "photos"
   ],
   "properties": {
-    "badge": {
-      "description": "a short pill above the heading; empty: no badge",
-      "type": "string",
-      "maxLength": 40
-    },
     "title": {
       "description": "the heading of the section",
       "type": "string",

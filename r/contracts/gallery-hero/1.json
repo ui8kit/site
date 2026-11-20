@@ -101,13 +101,6 @@
   "defaultMode": "wireframe",
   "places": [
     {
-      "place": "badge",
-      "kind": "badge",
-      "fields": [
-        "/badge"
-      ]
-    },
-    {
       "place": "title",
       "kind": "heading",
       "fields": [

@@ -5183,18 +5183,12 @@
  ],
  "gallery-hero": [
   {
-   "docs": "The gallery hero (model gallery@1): an optional badge, the heading, a description, up to two links as the actions and three or four photos as a list. Axes: media (end: the photos after the copy, start: before it from md up, bottom: in a row under it), count (3: three square photos in a row, 4: a 2 x 2 grid, a row of four under the copy).",
+   "docs": "The gallery hero (model gallery@1): the heading, a description, up to two links as the actions and three or four photos as a list. Axes: media (end: the photos after the copy, start: before it from md up, bottom: in a row under it), count (3: three square photos in a row, 4: a 2 x 2 grid, a row of four under the copy).",
    "part": "GalleryHero",
    "rows": [
     {
      "name": "id",
      "required": true,
-     "type": "string"
-    },
-    {
-     "default": "\"\"",
-     "desc": "a short pill above the heading; empty: no badge",
-     "name": "badge",
      "type": "string"
     },
     {
