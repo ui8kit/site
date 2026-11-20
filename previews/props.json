@@ -5425,7 +5425,7 @@
  ],
  "hero-simple": [
   {
-   "docs": "The simple hero (model hero@1): an optional badge, the heading, a description, one link as the action (a link styled as a button: drawn only when the label and the address are both set) and one picture. Axes: media (end: the picture after the copy, start: before it, top: above it, wide).",
+   "docs": "The simple hero (model hero@1): an optional badge, the heading, a description, up to two links as the actions (links styled as buttons, the first primary, the second secondary: each drawn only when its label and its address are both set) and one picture. Axes: media (end: the picture after the copy, start: before it, top: above it, wide), frame (box: inside the container; split: two halves, the picture to the edge of the screen).",
    "part": "HeroSimple",
    "rows": [
     {
@@ -5478,6 +5478,18 @@
      "type": "string"
     },
     {
+     "default": "\"\"",
+     "desc": "the label of the second action (the secondary button after the first); drawn when the label and the address are both set",
+     "name": "secondaryActionLabel",
+     "type": "string"
+    },
+    {
+     "default": "\"\"",
+     "desc": "the address of the second action",
+     "name": "secondaryActionHref",
+     "type": "string"
+    },
+    {
      "default": "2",
      "desc": "the level of the heading (1 on the first section of a page)",
      "name": "level",
@@ -5518,6 +5530,15 @@
       "end",
       "start",
       "top"
+     ]
+    },
+    {
+     "default": "\"box\"",
+     "name": "frame",
+     "type": "\"box\" | \"split\"",
+     "values": [
+      "box",
+      "split"
      ]
     },
     {

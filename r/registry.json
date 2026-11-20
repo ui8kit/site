@@ -6,7 +6,7 @@
       "hero-simple@1": {
         "model": "hero@1",
         "path": "contracts/hero-simple/1.json",
-        "sha256": "b257de955d42d36202199349356c44d20b03482f11be7e0cd6a4ccdbe61cedf0"
+        "sha256": "b1e3ba16dc7718a029f0bc77f0c2b4ba97c971cb71ebcb2f2e96480c0fec7b0d"
       },
       "team-simple@1": {
         "model": "team@1",
@@ -18059,7 +18059,7 @@
     {
       "category": "marketing",
       "contract": "contracts/hero-simple/1.json",
-      "description": "A badge, the heading, one paragraph and one link as the action, with one picture at the end, at the start or on top.",
+      "description": "A badge, the heading, one paragraph and up to two links as the actions (primary, then secondary), with one picture at the end, at the start or on top, in a box or split to the edge of the screen.",
       "group": "hero",
       "kind": "block",
       "model": "hero@1",
@@ -18076,6 +18076,7 @@
             "block",
             "box",
             "container",
+            "group",
             "link-button",
             "media-frame",
             "stack",
@@ -18095,6 +18096,7 @@
             "block",
             "box",
             "container",
+            "group",
             "link-button",
             "media-frame",
             "stack",
@@ -18138,6 +18140,7 @@
             "block",
             "box",
             "container",
+            "group",
             "link-button",
             "media-frame",
             "stack",
@@ -18157,6 +18160,7 @@
             "block",
             "box",
             "container",
+            "group",
             "kit-box",
             "kit-link",
             "kit-text",
@@ -18179,6 +18183,7 @@
             "block",
             "box",
             "container",
+            "group",
             "link-button",
             "media-frame",
             "stack",
@@ -18198,6 +18203,7 @@
             "block",
             "box",
             "container",
+            "group",
             "link-button",
             "media-frame",
             "stack",
@@ -48274,12 +48280,12 @@
       "type": "registry:block"
     }
   ],
-  "lastUpdated": "2026-11-20T13:58:02+03:00",
+  "lastUpdated": "2026-11-20T14:25:01+03:00",
   "layout": "<runtime>/index.json + <runtime>/{components/ui,components,blocks,utils,lib,themes}/<name>.json; use r/<runtime> as registryUrl",
   "models": {
     "hero@1": {
       "path": "models/hero@1.schema.json",
-      "sha256": "bc3edaec5a433e1481281f4b93502d2f26b58db374f83e6336f1f2d271987a3b"
+      "sha256": "fe64b0f574767813e0585c875a7ed23ad419f1f603a37ebfc524272ab5211af5"
     },
     "team@1": {
       "path": "models/team@1.schema.json",
@@ -48287,9 +48293,9 @@
     }
   },
   "props": {
-    "digest": "sha256:fd43f59fc5c2c6ca1abd8a4d8d209f729620dfccf45857bcfcd37570e3f30b65",
+    "digest": "sha256:461c084b4626e5c9713c4bc85a68baf715254e26e80fe20971cbf71b78aa1e88",
     "path": "props/v0.json",
-    "sha256": "4ea530101181d7cce5cf6e332fc19bd6696f3aedf8ed57eab7c43d868d0ef43f",
+    "sha256": "b51c23e5f9fc0529f4416fb651e6792edfcfd5d9ab3d652852807cb5994f2b76",
     "version": "0"
   },
   "runtimes": [
@@ -48302,11 +48308,11 @@
     "latte",
     "jinja2"
   ],
-  "sourceCommit": "3aed62438c2febfaedea073f9e3e75ec058fc8a3",
+  "sourceCommit": "3c5ff1af92bacfdebe0dbdb855ce51a810498f69",
   "variants": {
-    "digest": "sha256:88bf3c5455122327087b154730c14a427c3860e822a882540c0269b9464ae5db",
+    "digest": "sha256:f355ccf988693f0459e1ab44ad51755a420fd8e01701f57b819113a9110cc8d7",
     "path": "variants/v0.json",
-    "sha256": "56ad960c25ffaa14db5fff89d87ff7c41f5f77aed13c720fd698a8902c469983",
+    "sha256": "b0c71a7299040dd45a13c9480d7f91a72603e706f6b4883e600a651d003cb1c3",
     "version": "0"
   },
   "version": "0.1.0"

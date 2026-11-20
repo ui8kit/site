@@ -9,10 +9,10 @@
     "items": {
       "hero-simple@1": {
         "block": "block.herosimple",
-        "bytes": 1882,
+        "bytes": 2522,
         "model": "hero@1",
         "path": "contracts/hero-simple/1.json",
-        "sha256": "b257de955d42d36202199349356c44d20b03482f11be7e0cd6a4ccdbe61cedf0",
+        "sha256": "b1e3ba16dc7718a029f0bc77f0c2b4ba97c971cb71ebcb2f2e96480c0fec7b0d",
         "version": 1
       },
       "team-simple@1": {
@@ -25,15 +25,15 @@
       }
     },
     "source": {
-      "manifest": "edeed345a2cd44acf3b603c1c9e1f58f57c81dc602f740563e881236acbc5d2b"
+      "manifest": "270fa83a116074aa3bc1df43a922f246ea0dee05de17d8689462428c8e31ce8c"
     }
   },
   "models": {
     "hero@1": {
-      "bytes": 1925,
+      "bytes": 2495,
       "id": "hero@1",
       "path": "models/hero@1.schema.json",
-      "sha256": "bc3edaec5a433e1481281f4b93502d2f26b58db374f83e6336f1f2d271987a3b"
+      "sha256": "fe64b0f574767813e0585c875a7ed23ad419f1f603a37ebfc524272ab5211af5"
     },
     "team@1": {
       "bytes": 1979,
@@ -43,11 +43,11 @@
     }
   },
   "props": {
-    "bytes": 1964034,
-    "digest": "sha256:fd43f59fc5c2c6ca1abd8a4d8d209f729620dfccf45857bcfcd37570e3f30b65",
+    "bytes": 1964663,
+    "digest": "sha256:461c084b4626e5c9713c4bc85a68baf715254e26e80fe20971cbf71b78aa1e88",
     "items": 118,
     "path": "props/v0.json",
-    "sha256": "4ea530101181d7cce5cf6e332fc19bd6696f3aedf8ed57eab7c43d868d0ef43f",
+    "sha256": "b51c23e5f9fc0529f4416fb651e6792edfcfd5d9ab3d652852807cb5994f2b76",
     "version": "0"
   },
   "runtimes": {
@@ -1188,8 +1188,8 @@
         "hero-simple": {
           "files": {
             "blocks/hero-simple.html.j2": {
-              "bytes": 4363,
-              "sha256": "3a9a37c544a2174639120c2032b000600f0bde4a4988b5e8934f23730d7b5bd0"
+              "bytes": 6060,
+              "sha256": "21151617e028c6ae12190182e0b430702892ee55c70a7eb1f97a2d0db436f7c7"
             }
           },
           "type": "registry:block"
@@ -4407,8 +4407,8 @@
         "hero-simple": {
           "files": {
             "blocks/hero-simple.latte": {
-              "bytes": 4248,
-              "sha256": "35bdb23661bc1bbbdc41e025f1f89b8c1e16264901a5d99546b090a93886bb31"
+              "bytes": 5896,
+              "sha256": "728845e0aa04d7127a3af17baeeec7e4f613c1f156df718907498fe176934638"
             }
           },
           "type": "registry:block"
@@ -7772,8 +7772,8 @@
         "hero-simple": {
           "files": {
             "blocks/hero-simple.tsx": {
-              "bytes": 3465,
-              "sha256": "8dc2bdd4a0660d4a9d01b1abbb7b3d400429c9a6b4567d904e1ed4ece4cfe80b"
+              "bytes": 4768,
+              "sha256": "02f3fc4a359ace78f9197811f77887c0257bc8effe9e1136f26f1f6386c65c27"
             }
           },
           "type": "registry:block"
@@ -11605,8 +11605,8 @@
         "hero-simple": {
           "files": {
             "blocks/hero-simple.tsx": {
-              "bytes": 3442,
-              "sha256": "400c927a0fe4622079444b7a92478c476ae6b5fabbd68b492b2440b0b0faea09"
+              "bytes": 4729,
+              "sha256": "12ce318cb85c9cd750c35677aabe2d52bf3588bea8c19d31946b0bbecff63375"
             }
           },
           "type": "registry:block"
@@ -15429,8 +15429,8 @@
         "hero-simple": {
           "files": {
             "blocks/hero-simple.svelte": {
-              "bytes": 3668,
-              "sha256": "df5dd2cb9f0a44dda393726699b61cb850ddd35ec0e4e1b07be506f3cf58eb89"
+              "bytes": 4982,
+              "sha256": "243c7ae2d30ff2168a7e3508318b06a4bac620cd3053e92697f56c0615d7c338"
             }
           },
           "type": "registry:block"
@@ -19123,8 +19123,8 @@
         "hero-simple": {
           "files": {
             "blocks/hero-simple.templ": {
-              "bytes": 4583,
-              "sha256": "ac56ca48908cfdbfe0d3103389ae83236fecf79529a9a9dae41647888dd8409b"
+              "bytes": 6266,
+              "sha256": "408cc2ac1ccb2b02bfd877bca0d9043b21ef5ae600c5e948a3ef535165da7821"
             }
           },
           "type": "registry:block"
@@ -22362,8 +22362,8 @@
         "hero-simple": {
           "files": {
             "blocks/hero-simple.html.twig": {
-              "bytes": 4374,
-              "sha256": "5539271d9f6fb28ebb955c04b905875b388e1e6f1476517766095c407270631a"
+              "bytes": 6049,
+              "sha256": "c69be679b8603ae869aff5a39d86480274c4859ed44b629709890a9dcc4381c3"
             }
           },
           "type": "registry:block"
@@ -25735,8 +25735,8 @@
         "hero-simple": {
           "files": {
             "blocks/hero-simple.vue": {
-              "bytes": 3616,
-              "sha256": "9243234654442f48e16fb420205633385f9345beb364cceba463becd80256270"
+              "bytes": 4949,
+              "sha256": "21b2dd32e5823a422af2908ddb1c4f5e3435db6eac3c2c268d65809de317ac79"
             }
           },
           "type": "registry:block"
@@ -28294,18 +28294,18 @@
     }
   },
   "source": {
-    "commit": "3aed62438c2febfaedea073f9e3e75ec058fc8a3",
-    "commitDate": "2026-11-20T13:58:02+03:00",
+    "commit": "3c5ff1af92bacfdebe0dbdb855ce51a810498f69",
+    "commitDate": "2026-11-20T14:25:01+03:00",
     "dirty": false,
     "repo": "private source monorepo"
   },
   "variants": {
-    "bytes": 125099,
-    "digest": "sha256:88bf3c5455122327087b154730c14a427c3860e822a882540c0269b9464ae5db",
+    "bytes": 125427,
+    "digest": "sha256:f355ccf988693f0459e1ab44ad51755a420fd8e01701f57b819113a9110cc8d7",
     "items": 114,
     "path": "variants/v0.json",
-    "sha256": "56ad960c25ffaa14db5fff89d87ff7c41f5f77aed13c720fd698a8902c469983",
-    "variants": 533,
+    "sha256": "b0c71a7299040dd45a13c9480d7f91a72603e706f6b4883e600a651d003cb1c3",
+    "variants": 535,
     "version": "0"
   },
   "version": "0.1.0"

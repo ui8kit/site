@@ -11,34 +11,58 @@
       "end",
       "start",
       "top"
+    ],
+    "frame": [
+      "box",
+      "split"
     ]
   },
   "defaults": {
-    "media": "end"
+    "media": "end",
+    "frame": "box"
   },
   "variants": [
     {
       "id": "mediaEnd",
       "label": "Picture at the end",
       "axes": {
-        "media": "end"
+        "media": "end",
+        "frame": "box"
       }
     },
     {
       "id": "mediaStart",
       "label": "Picture at the start",
       "axes": {
-        "media": "start"
+        "media": "start",
+        "frame": "box"
       }
     },
     {
       "id": "mediaTop",
       "label": "Wide picture on top",
       "axes": {
-        "media": "top"
+        "media": "top",
+        "frame": "box"
       },
       "settings": {
         "align": "center"
+      }
+    },
+    {
+      "id": "splitEnd",
+      "label": "Split, picture at the end to the edge",
+      "axes": {
+        "media": "end",
+        "frame": "split"
+      }
+    },
+    {
+      "id": "splitStart",
+      "label": "Split, picture at the start to the edge",
+      "axes": {
+        "media": "start",
+        "frame": "split"
       }
     }
   ],
@@ -101,6 +125,14 @@
       "fields": [
         "/actionLabel",
         "/actionHref"
+      ]
+    },
+    {
+      "place": "secondaryAction",
+      "kind": "action",
+      "fields": [
+        "/secondaryActionLabel",
+        "/secondaryActionHref"
       ]
     }
   ],

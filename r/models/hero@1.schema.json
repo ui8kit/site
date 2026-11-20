@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://registry.buildy.tw/models/hero@1.schema.json",
   "title": "HeroContent",
-  "description": "Hero content: an optional badge, the heading, a description, one picture (light, optional dark) and one action. One object is valid in every hero layout (media at the end, at the start, on top).",
+  "description": "Hero content: an optional badge, the heading, a description, one picture (light, optional dark) and up to two actions (the first drawn as the primary button, the second as the secondary one). One object is valid in every hero layout (media at the end, at the start, on top; in a box or split to the edge).",
   "type": "object",
   "additionalProperties": false,
   "required": [
@@ -50,6 +50,17 @@
     },
     "actionHref": {
       "description": "the address of the action",
+      "type": "string",
+      "maxLength": 2048,
+      "pattern": "^(?:(?:https?|mailto|tel):|(?![A-Za-z][A-Za-z0-9+.-]*:))"
+    },
+    "secondaryActionLabel": {
+      "description": "the label of the second action (the secondary button after the first); drawn when the label and the address are both set; empty: none",
+      "type": "string",
+      "maxLength": 40
+    },
+    "secondaryActionHref": {
+      "description": "the address of the second action",
       "type": "string",
       "maxLength": 2048,
       "pattern": "^(?:(?:https?|mailto|tel):|(?![A-Za-z][A-Za-z0-9+.-]*:))"
