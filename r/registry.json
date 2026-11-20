@@ -54998,7 +54998,7 @@
       "type": "registry:block"
     }
   ],
-  "lastUpdated": "2026-11-21T01:48:37+03:00",
+  "lastUpdated": "2026-11-21T02:02:54+03:00",
   "layout": "<runtime>/index.json + <runtime>/{components/ui,components,blocks,utils,lib,themes}/<name>.json; use r/<runtime> as registryUrl",
   "models": {
     "article-lead@1": {
@@ -55198,7 +55198,7 @@
     "latte",
     "jinja2"
   ],
-  "sourceCommit": "819cb1b93b785feee45226cb4f524114c4849afe",
+  "sourceCommit": "8e636b7394d68be2784f5fb67ec00812b20f95bc",
   "variants": {
     "digest": "sha256:69ddffd21a4e36d94b5c2934c41d9d4600cba65127f5bb1068f7209352ef0d49",
     "path": "variants/v0.json",

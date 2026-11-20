@@ -369,7 +369,7 @@
       }
     },
     "source": {
-      "manifest": "8116b5926a3754be89553b3ddef9cfe9946cfd8e79dd37c8ba63e9c21feef579"
+      "manifest": "afc49e6ed439a64076875d8c64b495ef349c87e7461244e650cacdc703e549bc"
     }
   },
   "models": {
@@ -1988,8 +1988,8 @@
         "hours-simple": {
           "files": {
             "blocks/hours-simple.html.j2": {
-              "bytes": 6588,
-              "sha256": "e698d02f8e1512b2d70df16f9c9dc7f5ea5d13e0d9f6d421aeae828b9bb367d6"
+              "bytes": 6591,
+              "sha256": "6401b05411723b2b4369247b588bc2fbe8fb988c67b0999a17f80b594add6d16"
             }
           },
           "type": "registry:block"
@@ -5594,8 +5594,8 @@
         "hours-simple": {
           "files": {
             "blocks/hours-simple.latte": {
-              "bytes": 6523,
-              "sha256": "b4b5ad2b241fc2a0698eb27eed275aa3a22a3603b64ac08686400804a9db6e75"
+              "bytes": 6526,
+              "sha256": "286db8a1fc87ec64e7b4222b91c935555ea6c8e83d77c86d020becca5368241b"
             }
           },
           "type": "registry:block"
@@ -9402,8 +9402,8 @@
         "hours-simple": {
           "files": {
             "blocks/hours-simple.tsx": {
-              "bytes": 4872,
-              "sha256": "e596254c8489bdfa332c8ef68057cf9935e352a94f3f3af3d735c0c362dab86f"
+              "bytes": 4875,
+              "sha256": "0403e9e5f62baea63c8e1dfa0c662f4e67340f8a9e2969c67f4e800c8f94de38"
             },
             "blocks/hours-simple.types.ts": {
               "bytes": 229,
@@ -13750,8 +13750,8 @@
         "hours-simple": {
           "files": {
             "blocks/hours-simple.tsx": {
-              "bytes": 4814,
-              "sha256": "75390dfdec64aacdbe87a74bc70bf4fd88a4de1445b0e258b0d12a4c6a498d8b"
+              "bytes": 4817,
+              "sha256": "9fa9e75aced710b640151cbeb65d8e9f0112101e1584f538e538b653f926d1ad"
             },
             "blocks/hours-simple.types.ts": {
               "bytes": 229,
@@ -18089,8 +18089,8 @@
         "hours-simple": {
           "files": {
             "blocks/hours-simple.svelte": {
-              "bytes": 5111,
-              "sha256": "a135f0496451bb39abb8cf40b59f760ee35b76414b049f4e977320d7dc9bfce1"
+              "bytes": 5114,
+              "sha256": "599df1ba8189a821e264572a974214408eabf975c70571fe5980daa27a91d36b"
             },
             "blocks/hours-simple.types.ts": {
               "bytes": 229,
@@ -22242,8 +22242,8 @@
         "hours-simple": {
           "files": {
             "blocks/hours-simple.templ": {
-              "bytes": 6479,
-              "sha256": "c0fb3fed2b439023885e2a1e9558747ee8b79a029ffdae10440dba4dfee9f868"
+              "bytes": 6482,
+              "sha256": "e3dd2b980a1fdef8bc89fe4fc2a9b50718abdffa13885aedac3e0fb04db45d02"
             }
           },
           "type": "registry:block"
@@ -25868,8 +25868,8 @@
         "hours-simple": {
           "files": {
             "blocks/hours-simple.html.twig": {
-              "bytes": 6666,
-              "sha256": "e520d38bbfd581de0a9ad5bacefd5f26d51b06de35dfaac1b5d2abb8d280c9e7"
+              "bytes": 6669,
+              "sha256": "06ee07223e1adf2f81465bca9db1a74a9ad1a89b8e84b84588120cc409dc9d31"
             }
           },
           "type": "registry:block"
@@ -29688,8 +29688,8 @@
               "sha256": "526e00965c00798375302d13fb4917adf3a40e29bfb8d1529d4b0c6f7a36ab31"
             },
             "blocks/hours-simple.vue": {
-              "bytes": 5035,
-              "sha256": "d6719e7f68b5cfe51cd27c5a083d459ed7ba8f6e6a2f58f74c884507389a212d"
+              "bytes": 5038,
+              "sha256": "532b5e55ab09c60642a02a1e71476f2b1d7d5cb3a4c762dd78bcf1a21d76d27d"
             }
           },
           "type": "registry:block"
@@ -32504,8 +32504,8 @@
     }
   },
   "source": {
-    "commit": "819cb1b93b785feee45226cb4f524114c4849afe",
-    "commitDate": "2026-11-21T01:48:37+03:00",
+    "commit": "8e636b7394d68be2784f5fb67ec00812b20f95bc",
+    "commitDate": "2026-11-21T02:02:54+03:00",
     "dirty": false,
     "repo": "private source monorepo"
   },
