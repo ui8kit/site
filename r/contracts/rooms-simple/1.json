@@ -1,0 +1,134 @@
+{
+  "item": "rooms-simple",
+  "version": 1,
+  "block": "block.roomssimple",
+  "organism": "RoomsSimple",
+  "line": "simple",
+  "model": "rooms@1",
+  "modelSchema": "https://registry.buildy.tw/models/rooms@1.schema.json",
+  "axes": {
+    "layout": [
+      "cards",
+      "rows"
+    ],
+    "cols": [
+      "3",
+      "2"
+    ]
+  },
+  "defaults": {
+    "layout": "cards",
+    "cols": "3"
+  },
+  "variants": [
+    {
+      "id": "cards3",
+      "label": "Three room cards",
+      "axes": {
+        "layout": "cards",
+        "cols": "3"
+      }
+    },
+    {
+      "id": "cards2",
+      "label": "Two columns",
+      "axes": {
+        "layout": "cards",
+        "cols": "2"
+      }
+    },
+    {
+      "id": "rows",
+      "label": "Rows, the picture at the start",
+      "axes": {
+        "layout": "rows",
+        "cols": "3"
+      },
+      "settings": {
+        "align": "start"
+      }
+    }
+  ],
+  "defaultVariant": "cards3",
+  "settings": {
+    "level": {
+      "type": "1 | 2 | 3",
+      "default": 2
+    },
+    "padding": {
+      "type": "\"compact\" | \"standard\" | \"spacious\"",
+      "default": "standard"
+    },
+    "align": {
+      "type": "\"start\" | \"center\" | \"end\"",
+      "default": "center"
+    },
+    "landmarkLabel": {
+      "type": "string"
+    }
+  },
+  "modes": [
+    "wireframe"
+  ],
+  "defaultMode": "wireframe",
+  "places": [
+    {
+      "place": "title",
+      "kind": "heading",
+      "fields": [
+        "/title"
+      ]
+    },
+    {
+      "place": "description",
+      "kind": "text",
+      "fields": [
+        "/description"
+      ]
+    },
+    {
+      "place": "items.image",
+      "kind": "media",
+      "fields": [
+        "/items/*/image"
+      ],
+      "list": "items"
+    },
+    {
+      "place": "items.title",
+      "kind": "heading",
+      "fields": [
+        "/items/*/title",
+        "/items/*/href"
+      ],
+      "list": "items"
+    },
+    {
+      "place": "items.guests",
+      "kind": "text",
+      "fields": [
+        "/items/*/guests"
+      ],
+      "list": "items"
+    },
+    {
+      "place": "items.description",
+      "kind": "text",
+      "fields": [
+        "/items/*/description"
+      ],
+      "list": "items"
+    },
+    {
+      "place": "items.price",
+      "kind": "text",
+      "fields": [
+        "/items/*/price"
+      ],
+      "list": "items"
+    }
+  ],
+  "wireframe": {
+    "items": 3
+  }
+}

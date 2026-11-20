@@ -7225,6 +7225,122 @@
    ]
   }
  ],
+ "hours-simple": [
+  {
+   "docs": "The simple opening hours (model hours@1): the heading, a description, the address, the phone as a link, an optional map link and the opening hours as a list (the day or the days and the time per row). Axes: layout (columns: the address and the links at the start, the hours at the end from md up; stack: one narrow column, placed by the align setting), surface (plain, card: the address and the hours each on a card).",
+   "part": "HoursSimple",
+   "rows": [
+    {
+     "name": "id",
+     "required": true,
+     "type": "string"
+    },
+    {
+     "name": "title",
+     "required": true,
+     "type": "string"
+    },
+    {
+     "default": "\"\"",
+     "desc": "one paragraph under the heading; empty: none",
+     "name": "description",
+     "type": "string"
+    },
+    {
+     "desc": "the address as it is shown",
+     "name": "address",
+     "required": true,
+     "type": "string"
+    },
+    {
+     "desc": "the phone number as it is shown",
+     "name": "phone",
+     "required": true,
+     "type": "string"
+    },
+    {
+     "desc": "the address of the phone link (tel:)",
+     "name": "phoneHref",
+     "required": true,
+     "type": "string"
+    },
+    {
+     "default": "\"\"",
+     "desc": "the label of the map link; the link is drawn when the label and the address are both set",
+     "name": "mapLabel",
+     "type": "string"
+    },
+    {
+     "default": "\"\"",
+     "desc": "the address of the map",
+     "name": "mapHref",
+     "type": "string"
+    },
+    {
+     "desc": "the opening hours, a row per day or per days (1 to 7)",
+     "name": "items",
+     "required": true,
+     "type": "OpeningHour[]"
+    },
+    {
+     "default": "2",
+     "desc": "the level of the heading (1 on the first section of a page)",
+     "name": "level",
+     "type": "1 | 2 | 3",
+     "values": [
+      "1",
+      "2",
+      "3"
+     ]
+    },
+    {
+     "default": "\"standard\"",
+     "desc": "the vertical padding of the section: compact (py-8 lg:py-16), standard (py-16 lg:py-32), spacious (py-24 lg:py-40)",
+     "name": "padding",
+     "type": "\"compact\" | \"standard\" | \"spacious\"",
+     "values": [
+      "compact",
+      "standard",
+      "spacious"
+     ]
+    },
+    {
+     "default": "\"center\"",
+     "desc": "the alignment of the copy: start, center or end (logical, follows the writing direction): items-* on the column, text-* on the text",
+     "name": "align",
+     "type": "\"start\" | \"center\" | \"end\"",
+     "values": [
+      "start",
+      "center",
+      "end"
+     ]
+    },
+    {
+     "default": "\"columns\"",
+     "name": "layout",
+     "type": "\"columns\" | \"stack\"",
+     "values": [
+      "columns",
+      "stack"
+     ]
+    },
+    {
+     "default": "\"plain\"",
+     "name": "surface",
+     "type": "\"plain\" | \"card\"",
+     "values": [
+      "plain",
+      "card"
+     ]
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
+    }
+   ]
+  }
+ ],
  "icon": [
   {
    "docs": "Icon renders span[data-slot=icon]; Label switches to role=img + aria-label.",
@@ -13445,6 +13561,92 @@
      "values": [
       "default",
       "roomy"
+     ]
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
+    }
+   ]
+  }
+ ],
+ "rooms-simple": [
+  {
+   "docs": "The simple rooms (model rooms@1): the heading, a description and the rooms as a list, each with a picture, the name (a link when the room has an address), the guests or the size, a line and the price a night as it is shown. Axes: layout (cards: a card surface per room, the picture on top; rows: the picture at the start, a third of the row from md up), cols (3, 2 columns of the cards).",
+   "part": "RoomsSimple",
+   "rows": [
+    {
+     "name": "id",
+     "required": true,
+     "type": "string"
+    },
+    {
+     "name": "title",
+     "required": true,
+     "type": "string"
+    },
+    {
+     "default": "\"\"",
+     "desc": "one paragraph under the heading; empty: none",
+     "name": "description",
+     "type": "string"
+    },
+    {
+     "desc": "the rooms, in the order they are shown (1 to 6)",
+     "name": "items",
+     "required": true,
+     "type": "Room[]"
+    },
+    {
+     "default": "2",
+     "desc": "the level of the heading (1 on the first section of a page)",
+     "name": "level",
+     "type": "1 | 2 | 3",
+     "values": [
+      "1",
+      "2",
+      "3"
+     ]
+    },
+    {
+     "default": "\"standard\"",
+     "desc": "the vertical padding of the section: compact (py-8 lg:py-16), standard (py-16 lg:py-32), spacious (py-24 lg:py-40)",
+     "name": "padding",
+     "type": "\"compact\" | \"standard\" | \"spacious\"",
+     "values": [
+      "compact",
+      "standard",
+      "spacious"
+     ]
+    },
+    {
+     "default": "\"center\"",
+     "desc": "the alignment of the copy: start, center or end (logical, follows the writing direction): items-* on the column, text-* on the text",
+     "name": "align",
+     "type": "\"start\" | \"center\" | \"end\"",
+     "values": [
+      "start",
+      "center",
+      "end"
+     ]
+    },
+    {
+     "default": "\"cards\"",
+     "name": "layout",
+     "type": "\"cards\" | \"rows\"",
+     "values": [
+      "cards",
+      "rows"
+     ]
+    },
+    {
+     "default": "\"3\"",
+     "name": "cols",
+     "type": "\"3\" | \"2\"",
+     "values": [
+      "3",
+      "2"
      ]
     },
     {

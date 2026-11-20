@@ -1,0 +1,143 @@
+{
+  "item": "hours-simple",
+  "version": 1,
+  "block": "block.hourssimple",
+  "organism": "HoursSimple",
+  "line": "simple",
+  "model": "hours@1",
+  "modelSchema": "https://registry.buildy.tw/models/hours@1.schema.json",
+  "axes": {
+    "layout": [
+      "columns",
+      "stack"
+    ],
+    "surface": [
+      "plain",
+      "card"
+    ]
+  },
+  "defaults": {
+    "layout": "columns",
+    "surface": "plain"
+  },
+  "variants": [
+    {
+      "id": "columns",
+      "label": "Address and hours side by side",
+      "axes": {
+        "layout": "columns",
+        "surface": "plain"
+      },
+      "settings": {
+        "align": "start"
+      }
+    },
+    {
+      "id": "columnsCard",
+      "label": "Side by side on cards",
+      "axes": {
+        "layout": "columns",
+        "surface": "card"
+      },
+      "settings": {
+        "align": "start"
+      }
+    },
+    {
+      "id": "stack",
+      "label": "One centred column",
+      "axes": {
+        "layout": "stack",
+        "surface": "plain"
+      }
+    },
+    {
+      "id": "stackCard",
+      "label": "One column on cards",
+      "axes": {
+        "layout": "stack",
+        "surface": "card"
+      }
+    }
+  ],
+  "defaultVariant": "columns",
+  "settings": {
+    "level": {
+      "type": "1 | 2 | 3",
+      "default": 2
+    },
+    "padding": {
+      "type": "\"compact\" | \"standard\" | \"spacious\"",
+      "default": "standard"
+    },
+    "align": {
+      "type": "\"start\" | \"center\" | \"end\"",
+      "default": "center"
+    },
+    "landmarkLabel": {
+      "type": "string"
+    }
+  },
+  "modes": [
+    "wireframe"
+  ],
+  "defaultMode": "wireframe",
+  "places": [
+    {
+      "place": "title",
+      "kind": "heading",
+      "fields": [
+        "/title"
+      ]
+    },
+    {
+      "place": "description",
+      "kind": "text",
+      "fields": [
+        "/description"
+      ]
+    },
+    {
+      "place": "address",
+      "kind": "text",
+      "fields": [
+        "/address"
+      ]
+    },
+    {
+      "place": "phone",
+      "kind": "text",
+      "fields": [
+        "/phone",
+        "/phoneHref"
+      ]
+    },
+    {
+      "place": "mapLabel",
+      "kind": "text",
+      "fields": [
+        "/mapLabel",
+        "/mapHref"
+      ]
+    },
+    {
+      "place": "items.day",
+      "kind": "text",
+      "fields": [
+        "/items/*/day"
+      ],
+      "list": "items"
+    },
+    {
+      "place": "items.time",
+      "kind": "text",
+      "fields": [
+        "/items/*/time"
+      ],
+      "list": "items"
+    }
+  ],
+  "wireframe": {
+    "items": 3
+  }
+}

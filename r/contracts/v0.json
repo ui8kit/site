@@ -116,6 +116,12 @@
       "model": "hero@1",
       "path": "hero-simple/1.json"
     },
+    "hours-simple": {
+      "version": 1,
+      "block": "block.hourssimple",
+      "model": "hours@1",
+      "path": "hours-simple/1.json"
+    },
     "intro-simple": {
       "version": 1,
       "block": "block.introsimple",
@@ -205,6 +211,12 @@
       "block": "block.ratingsimple",
       "model": "rating@1",
       "path": "rating-simple/1.json"
+    },
+    "rooms-simple": {
+      "version": 1,
+      "block": "block.roomssimple",
+      "model": "rooms@1",
+      "path": "rooms-simple/1.json"
     },
     "specs-simple": {
       "version": 1,

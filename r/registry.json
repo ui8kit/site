@@ -98,6 +98,11 @@
         "path": "contracts/hero-simple/1.json",
         "sha256": "688efe720e94b29a5bc2e1cd35eb9024008693737f8e2e81db89d6f6ca63dbef"
       },
+      "hours-simple@1": {
+        "model": "hours@1",
+        "path": "contracts/hours-simple/1.json",
+        "sha256": "580ba25e5388d0325f0fa09a4848b2ea5aa8318a7441d4df2baf114f40c765dc"
+      },
       "intro-simple@1": {
         "model": "intro@1",
         "path": "contracts/intro-simple/1.json",
@@ -173,6 +178,11 @@
         "path": "contracts/rating-simple/1.json",
         "sha256": "c8e8f0be71bd9d117759715ae674b67c136df8bb1df43511a4c5a292d042a4db"
       },
+      "rooms-simple@1": {
+        "model": "rooms@1",
+        "path": "contracts/rooms-simple/1.json",
+        "sha256": "d8b7b384d17c5306873aaa2949e4cd8c645c3d9308b0a6cb456a3eb4db304703"
+      },
       "specs-simple@1": {
         "model": "specs@1",
         "path": "contracts/specs-simple/1.json",
@@ -220,7 +230,7 @@
       }
     },
     "path": "contracts/v0.json",
-    "sha256": "d14c775a083fc7571a306c726a23c6d90ea5ebefadf21737e267f8d00afe153f"
+    "sha256": "a5c6c6529821dc01f2e2408bf5374c3dea6c67732b512f3d761c2479a63fafd7"
   },
   "items": [
     {
@@ -21586,6 +21596,162 @@
       "type": "registry:component"
     },
     {
+      "category": "marketing",
+      "contract": "contracts/hours-simple/1.json",
+      "description": "The heading, one paragraph, the address, the phone, a map link and the opening hours by day: side by side or in one narrow column, plain or on cards.",
+      "group": "contact",
+      "kind": "block",
+      "model": "hours@1",
+      "name": "hours-simple",
+      "runtimes": {
+        "jinja2": {
+          "dependencies": [],
+          "files": [
+            "blocks/hours-simple.html.j2"
+          ],
+          "path": "jinja2/blocks/hours-simple.json",
+          "registryDependencies": [
+            "block",
+            "box",
+            "container",
+            "link-plain",
+            "list",
+            "list-item",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "latte": {
+          "dependencies": [],
+          "files": [
+            "blocks/hours-simple.latte"
+          ],
+          "path": "latte/blocks/hours-simple.json",
+          "registryDependencies": [
+            "block",
+            "box",
+            "container",
+            "link-plain",
+            "list",
+            "list-item",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "react": {
+          "dependencies": [],
+          "files": [
+            "blocks/hours-simple.tsx",
+            "blocks/hours-simple.types.ts"
+          ],
+          "path": "react/blocks/hours-simple.json",
+          "registryDependencies": [
+            "compose",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/hours-simple.tsx",
+            "blocks/hours-simple.types.ts"
+          ],
+          "path": "solid/blocks/hours-simple.json",
+          "registryDependencies": [
+            "compose",
+            "utils"
+          ]
+        },
+        "svelte": {
+          "dependencies": [],
+          "files": [
+            "blocks/hours-simple.svelte",
+            "blocks/hours-simple.types.ts"
+          ],
+          "path": "svelte/blocks/hours-simple.json",
+          "registryDependencies": [
+            "block",
+            "box",
+            "container",
+            "link-plain",
+            "list",
+            "list-item",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "templ": {
+          "dependencies": [],
+          "files": [
+            "blocks/hours-simple.templ"
+          ],
+          "path": "templ/blocks/hours-simple.json",
+          "registryDependencies": [
+            "block",
+            "box",
+            "container",
+            "kit-box",
+            "kit-link",
+            "kit-text",
+            "link-plain",
+            "list",
+            "list-item",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "twig": {
+          "dependencies": [],
+          "files": [
+            "blocks/hours-simple.html.twig"
+          ],
+          "path": "twig/blocks/hours-simple.json",
+          "registryDependencies": [
+            "block",
+            "box",
+            "container",
+            "link-plain",
+            "list",
+            "list-item",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "vue": {
+          "dependencies": [],
+          "files": [
+            "blocks/hours-simple.types.ts",
+            "blocks/hours-simple.vue"
+          ],
+          "path": "vue/blocks/hours-simple.json",
+          "registryDependencies": [
+            "block",
+            "box",
+            "container",
+            "link-plain",
+            "list",
+            "list-item",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        }
+      },
+      "title": "Hours Simple",
+      "type": "registry:block"
+    },
+    {
       "category": "primitives",
       "description": "Icon primitive",
       "group": "",
@@ -41942,6 +42108,164 @@
       "type": "registry:block"
     },
     {
+      "category": "marketing",
+      "contract": "contracts/rooms-simple/1.json",
+      "description": "The heading, one paragraph and the rooms (a picture, the name as a link, the guests, a line, the price a night): on cards in three or two columns, or rows with the picture at the start.",
+      "group": "catalog",
+      "kind": "block",
+      "model": "rooms@1",
+      "name": "rooms-simple",
+      "runtimes": {
+        "jinja2": {
+          "dependencies": [],
+          "files": [
+            "blocks/rooms-simple.html.j2"
+          ],
+          "path": "jinja2/blocks/rooms-simple.json",
+          "registryDependencies": [
+            "block",
+            "container",
+            "link-plain",
+            "list",
+            "list-item",
+            "media-frame",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "latte": {
+          "dependencies": [],
+          "files": [
+            "blocks/rooms-simple.latte"
+          ],
+          "path": "latte/blocks/rooms-simple.json",
+          "registryDependencies": [
+            "block",
+            "container",
+            "link-plain",
+            "list",
+            "list-item",
+            "media-frame",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "react": {
+          "dependencies": [],
+          "files": [
+            "blocks/rooms-simple.tsx",
+            "blocks/rooms-simple.types.ts"
+          ],
+          "path": "react/blocks/rooms-simple.json",
+          "registryDependencies": [
+            "compose",
+            "media-frame",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/rooms-simple.tsx",
+            "blocks/rooms-simple.types.ts"
+          ],
+          "path": "solid/blocks/rooms-simple.json",
+          "registryDependencies": [
+            "compose",
+            "media-frame",
+            "utils"
+          ]
+        },
+        "svelte": {
+          "dependencies": [],
+          "files": [
+            "blocks/rooms-simple.svelte",
+            "blocks/rooms-simple.types.ts"
+          ],
+          "path": "svelte/blocks/rooms-simple.json",
+          "registryDependencies": [
+            "block",
+            "container",
+            "link-plain",
+            "list",
+            "list-item",
+            "media-frame",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "templ": {
+          "dependencies": [],
+          "files": [
+            "blocks/rooms-simple.templ"
+          ],
+          "path": "templ/blocks/rooms-simple.json",
+          "registryDependencies": [
+            "block",
+            "container",
+            "kit-box",
+            "kit-link",
+            "kit-text",
+            "link-plain",
+            "list",
+            "list-item",
+            "media-frame",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "twig": {
+          "dependencies": [],
+          "files": [
+            "blocks/rooms-simple.html.twig"
+          ],
+          "path": "twig/blocks/rooms-simple.json",
+          "registryDependencies": [
+            "block",
+            "container",
+            "link-plain",
+            "list",
+            "list-item",
+            "media-frame",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "vue": {
+          "dependencies": [],
+          "files": [
+            "blocks/rooms-simple.types.ts",
+            "blocks/rooms-simple.vue"
+          ],
+          "path": "vue/blocks/rooms-simple.json",
+          "registryDependencies": [
+            "block",
+            "container",
+            "link-plain",
+            "list",
+            "list-item",
+            "media-frame",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        }
+      },
+      "title": "Rooms Simple",
+      "type": "registry:block"
+    },
+    {
       "category": "components",
       "description": "Search Field component",
       "group": "",
@@ -54674,7 +54998,7 @@
       "type": "registry:block"
     }
   ],
-  "lastUpdated": "2026-11-21T01:21:48+03:00",
+  "lastUpdated": "2026-11-21T01:48:37+03:00",
   "layout": "<runtime>/index.json + <runtime>/{components/ui,components,blocks,utils,lib,themes}/<name>.json; use r/<runtime> as registryUrl",
   "models": {
     "article-lead@1": {
@@ -54753,6 +55077,10 @@
       "path": "models/hero@1.schema.json",
       "sha256": "b114d150cc77d9249b8793c9591a6242db9c8d55d94d0dd06bfe6aecd335eee6"
     },
+    "hours@1": {
+      "path": "models/hours@1.schema.json",
+      "sha256": "94b25f2a4e394804ff6e99dce2178e92e6655ead1c552332287fad01dee310da"
+    },
     "intro@1": {
       "path": "models/intro@1.schema.json",
       "sha256": "9ede625f409532dba4ca1f05345afb5b39d69d8945039d38a491618ff7ef5ee6"
@@ -54813,6 +55141,10 @@
       "path": "models/reviews@1.schema.json",
       "sha256": "9a4f774744074c2d6a3ee633f2879acc1569c802fd847aa04c801e7c160a968a"
     },
+    "rooms@1": {
+      "path": "models/rooms@1.schema.json",
+      "sha256": "2612627b469c7dbeceaf312201e47c722e4a1e121733e47e8f56b8776ef4a5b6"
+    },
     "specs@1": {
       "path": "models/specs@1.schema.json",
       "sha256": "190ead29f6da241d6c9fd255aa6b9937477af0ace8f1940378fda9b7e48e5cd9"
@@ -54851,9 +55183,9 @@
     }
   },
   "props": {
-    "digest": "sha256:ffeeb55ab26b97d8f1fdb67afc79c8a346da0fcf218c7aa2682616e93c54220a",
+    "digest": "sha256:fac5984aee70cf4fd95d8508be03b03dd6c47d82824ea5581f2e93f3bf5d1d6a",
     "path": "props/v0.json",
-    "sha256": "76ff108820c7baa6473379cf722874dc7b9bc822ee2a1075c0cb97a8ab106023",
+    "sha256": "dfb832e295578327b293d6c6d0866699b7b2f322e564128fda0af7dbc61198e6",
     "version": "0"
   },
   "runtimes": [
@@ -54866,11 +55198,11 @@
     "latte",
     "jinja2"
   ],
-  "sourceCommit": "5acdb43990dc5f2b17a04fe5fcb09a170b0d6d4a",
+  "sourceCommit": "819cb1b93b785feee45226cb4f524114c4849afe",
   "variants": {
-    "digest": "sha256:b54c43be6c208df7db0d28d442152ac46be9e2c12745f76fa9d6c4824eaa5f69",
+    "digest": "sha256:69ddffd21a4e36d94b5c2934c41d9d4600cba65127f5bb1068f7209352ef0d49",
     "path": "variants/v0.json",
-    "sha256": "6b1454980e0837dbf954724055d49aa5cf8f7af928b6c6727bf94c13fd6f9df0",
+    "sha256": "ff6d252473322fa8b86c0829b5b4414edcb6f7e19fb578042f3b9361649959a9",
     "version": "0"
   },
   "version": "0.1.0"

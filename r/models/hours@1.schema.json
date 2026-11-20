@@ -1,0 +1,97 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://registry.buildy.tw/models/hours@1.schema.json",
+  "title": "HoursContent",
+  "description": "Opening hours content: the heading, a description, the address, the phone and its link, an optional map link and the opening hours, a row per day or per days. One object is valid in every hours layout (side by side, one column; plain or on cards).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "title",
+    "address",
+    "phone",
+    "phoneHref",
+    "items"
+  ],
+  "properties": {
+    "title": {
+      "description": "the heading of the section",
+      "type": "string",
+      "maxLength": 120,
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "description": {
+      "description": "one paragraph under the heading; empty: none",
+      "type": "string",
+      "maxLength": 400
+    },
+    "address": {
+      "description": "the address as it is shown",
+      "type": "string",
+      "maxLength": 160,
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "phone": {
+      "description": "the phone number as it is shown",
+      "type": "string",
+      "maxLength": 40,
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "phoneHref": {
+      "description": "the address of the phone link (tel:)",
+      "type": "string",
+      "maxLength": 2048,
+      "pattern": "^(?:(?:https?|mailto|tel):|(?![A-Za-z][A-Za-z0-9+.-]*:))"
+    },
+    "mapLabel": {
+      "description": "the label of the map link; the link is drawn when the label and the address are both set",
+      "type": "string",
+      "maxLength": 40
+    },
+    "mapHref": {
+      "description": "the address of the map",
+      "type": "string",
+      "maxLength": 2048,
+      "pattern": "^(?:(?:https?|mailto|tel):|(?![A-Za-z][A-Za-z0-9+.-]*:))"
+    },
+    "items": {
+      "description": "the opening hours, a row per day or per days",
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 7,
+      "items": {
+        "title": "OpeningHour",
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "day",
+          "time"
+        ],
+        "properties": {
+          "id": {
+            "description": "stable key of the entry (the Codex entry id)",
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]*$"
+          },
+          "day": {
+            "description": "the day or the days (Mon to Fri)",
+            "type": "string",
+            "maxLength": 40,
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "time": {
+            "description": "the time as it is shown (12:00 to 23:00), or closed",
+            "type": "string",
+            "maxLength": 40,
+            "minLength": 1,
+            "pattern": "\\S"
+          }
+        }
+      }
+    }
+  }
+}

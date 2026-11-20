@@ -1,0 +1,85 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://registry.buildy.tw/models/rooms@1.schema.json",
+  "title": "RoomsContent",
+  "description": "Rooms content: the heading, a description and an ordered list of rooms or apartments, each with a picture, the name, the guests or the size, a line, the price a night as it is shown and an optional address. One object is valid in every rooms layout (cards in three or two columns, rows).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "title",
+    "items"
+  ],
+  "properties": {
+    "title": {
+      "description": "the heading of the section",
+      "type": "string",
+      "maxLength": 120,
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "description": {
+      "description": "one paragraph under the heading; empty: none",
+      "type": "string",
+      "maxLength": 400
+    },
+    "items": {
+      "description": "the rooms, in the order they are shown",
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 6,
+      "items": {
+        "title": "Room",
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "title",
+          "price"
+        ],
+        "properties": {
+          "id": {
+            "description": "stable key of the entry (the Codex entry id)",
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]*$"
+          },
+          "image": {
+            "description": "address of the room picture; none: the placeholder",
+            "type": "string",
+            "maxLength": 2048,
+            "pattern": "^(?:https?:|(?![A-Za-z][A-Za-z0-9+.-]*:))"
+          },
+          "title": {
+            "description": "the name of the room (the alt text of the picture)",
+            "type": "string",
+            "maxLength": 80,
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "guests": {
+            "description": "the guests or the size as it is shown (2 guests, 24 m2); empty: none",
+            "type": "string",
+            "maxLength": 60
+          },
+          "description": {
+            "description": "one line about the room; empty: none",
+            "type": "string",
+            "maxLength": 200
+          },
+          "price": {
+            "description": "the price a night as it is shown",
+            "type": "string",
+            "maxLength": 40,
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "href": {
+            "description": "the address of the room page; empty: no link",
+            "type": "string",
+            "maxLength": 2048,
+            "pattern": "^(?:(?:https?|mailto|tel):|(?![A-Za-z][A-Za-z0-9+.-]*:))"
+          }
+        }
+      }
+    }
+  }
+}
