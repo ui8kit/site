@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://registry.buildy.tw/models/split@1.schema.json",
+  "title": "SplitContent",
+  "description": "Split content: the copy of one half (the heading, a description and up to two actions: the first drawn as the primary button, the second as the secondary one) and the picture of the other half (light, optional dark), which fills its half. One object is valid in every split layout (the picture at the end, at the start). Other media of the half (video, a sign-in form) are a later version of this model.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "title"
+  ],
+  "properties": {
+    "title": {
+      "description": "the heading of the section",
+      "type": "string",
+      "maxLength": 120,
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "description": {
+      "description": "one paragraph under the heading; empty: none",
+      "type": "string",
+      "maxLength": 400
+    },
+    "image": {
+      "description": "address of the picture (an https URL or a path); none: the placeholder",
+      "type": "string",
+      "maxLength": 2048,
+      "pattern": "^(?:https?:|(?![A-Za-z][A-Za-z0-9+.-]*:))"
+    },
+    "imageAlt": {
+      "description": "alt text of the picture; none: the title (the placeholder is decorative)",
+      "type": "string",
+      "maxLength": 160
+    },
+    "imageDark": {
+      "description": "address of the picture in the dark theme; none: image",
+      "type": "string",
+      "maxLength": 2048,
+      "pattern": "^(?:https?:|(?![A-Za-z][A-Za-z0-9+.-]*:))"
+    },
+    "actionLabel": {
+      "description": "the label of the action; the link is drawn when the label and the address are both set",
+      "type": "string",
+      "maxLength": 40
+    },
+    "actionHref": {
+      "description": "the address of the action",
+      "type": "string",
+      "maxLength": 2048,
+      "pattern": "^(?:(?:https?|mailto|tel):|(?![A-Za-z][A-Za-z0-9+.-]*:))"
+    },
+    "secondaryActionLabel": {
+      "description": "the label of the second action (the secondary button after the first); drawn when the label and the address are both set; empty: none",
+      "type": "string",
+      "maxLength": 40
+    },
+    "secondaryActionHref": {
+      "description": "the address of the second action",
+      "type": "string",
+      "maxLength": 2048,
+      "pattern": "^(?:(?:https?|mailto|tel):|(?![A-Za-z][A-Za-z0-9+.-]*:))"
+    }
+  }
+}

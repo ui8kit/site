@@ -8,6 +8,12 @@
       "model": "hero@1",
       "path": "hero-simple/1.json"
     },
+    "split-simple": {
+      "version": 1,
+      "block": "block.splitsimple",
+      "model": "split@1",
+      "path": "split-simple/1.json"
+    },
     "team-simple": {
       "version": 1,
       "block": "block.teamsimple",

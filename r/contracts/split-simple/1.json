@@ -1,0 +1,96 @@
+{
+  "item": "split-simple",
+  "version": 1,
+  "block": "block.splitsimple",
+  "organism": "SplitSimple",
+  "line": "simple",
+  "model": "split@1",
+  "modelSchema": "https://registry.buildy.tw/models/split@1.schema.json",
+  "axes": {
+    "media": [
+      "end",
+      "start"
+    ]
+  },
+  "defaults": {
+    "media": "end"
+  },
+  "variants": [
+    {
+      "id": "mediaEnd",
+      "label": "Picture at the end, to the edge",
+      "axes": {
+        "media": "end"
+      }
+    },
+    {
+      "id": "mediaStart",
+      "label": "Picture at the start, to the edge",
+      "axes": {
+        "media": "start"
+      }
+    }
+  ],
+  "defaultVariant": "mediaEnd",
+  "settings": {
+    "level": {
+      "type": "1 | 2 | 3",
+      "default": 2
+    },
+    "padding": {
+      "type": "\"compact\" | \"standard\" | \"spacious\"",
+      "default": "standard"
+    },
+    "landmarkLabel": {
+      "type": "string"
+    }
+  },
+  "modes": [
+    "wireframe"
+  ],
+  "defaultMode": "wireframe",
+  "places": [
+    {
+      "place": "media",
+      "kind": "media",
+      "fields": [
+        "/image",
+        "/imageAlt",
+        "/imageDark"
+      ]
+    },
+    {
+      "place": "title",
+      "kind": "heading",
+      "fields": [
+        "/title"
+      ]
+    },
+    {
+      "place": "description",
+      "kind": "text",
+      "fields": [
+        "/description"
+      ]
+    },
+    {
+      "place": "action",
+      "kind": "action",
+      "fields": [
+        "/actionLabel",
+        "/actionHref"
+      ]
+    },
+    {
+      "place": "secondaryAction",
+      "kind": "action",
+      "fields": [
+        "/secondaryActionLabel",
+        "/secondaryActionHref"
+      ]
+    }
+  ],
+  "wireframe": {
+    "items": 3
+  }
+}

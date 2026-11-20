@@ -11,58 +11,34 @@
       "end",
       "start",
       "top"
-    ],
-    "frame": [
-      "box",
-      "split"
     ]
   },
   "defaults": {
-    "media": "end",
-    "frame": "box"
+    "media": "end"
   },
   "variants": [
     {
       "id": "mediaEnd",
       "label": "Picture at the end",
       "axes": {
-        "media": "end",
-        "frame": "box"
+        "media": "end"
       }
     },
     {
       "id": "mediaStart",
       "label": "Picture at the start",
       "axes": {
-        "media": "start",
-        "frame": "box"
+        "media": "start"
       }
     },
     {
       "id": "mediaTop",
       "label": "Wide picture on top",
       "axes": {
-        "media": "top",
-        "frame": "box"
+        "media": "top"
       },
       "settings": {
         "align": "center"
-      }
-    },
-    {
-      "id": "splitEnd",
-      "label": "Split, picture at the end to the edge",
-      "axes": {
-        "media": "end",
-        "frame": "split"
-      }
-    },
-    {
-      "id": "splitStart",
-      "label": "Split, picture at the start to the edge",
-      "axes": {
-        "media": "start",
-        "frame": "split"
       }
     }
   ],

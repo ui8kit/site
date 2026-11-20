@@ -5425,7 +5425,7 @@
  ],
  "hero-simple": [
   {
-   "docs": "The simple hero (model hero@1): an optional badge, the heading, a description, up to two links as the actions (links styled as buttons, the first primary, the second secondary: each drawn only when its label and its address are both set) and one picture. Axes: media (end: the picture after the copy, start: before it, top: above it, wide), frame (box: inside the container; split: two halves, the picture to the edge of the screen).",
+   "docs": "The simple hero (model hero@1): an optional badge, the heading, a description, up to two links as the actions (links styled as buttons, the first primary, the second secondary: each drawn only when its label and its address are both set) and one picture. Axes: media (end: the picture after the copy, start: before it, top: above it, wide).",
    "part": "HeroSimple",
    "rows": [
     {
@@ -5530,15 +5530,6 @@
       "end",
       "start",
       "top"
-     ]
-    },
-    {
-     "default": "\"box\"",
-     "name": "frame",
-     "type": "\"box\" | \"split\"",
-     "values": [
-      "box",
-      "split"
      ]
     },
     {
@@ -11758,6 +11749,105 @@
       "card",
       "plain"
      ]
+    }
+   ]
+  }
+ ],
+ "split-simple": [
+  {
+   "docs": "The simple split (model split@1): two halves of the section, the copy (the heading, a description, up to two links as the actions: the first primary, the second secondary, each drawn only when its label and its address are both set) and one picture that fills its half to the edge of the screen (no rounding). Axes: media (end: the picture after the copy, start: before it).",
+   "part": "SplitSimple",
+   "rows": [
+    {
+     "name": "id",
+     "required": true,
+     "type": "string"
+    },
+    {
+     "name": "title",
+     "required": true,
+     "type": "string"
+    },
+    {
+     "default": "\"\"",
+     "desc": "one paragraph under the heading; empty: none",
+     "name": "description",
+     "type": "string"
+    },
+    {
+     "desc": "address of the picture (an https URL or a path); none: the placeholder",
+     "name": "image",
+     "type": "string"
+    },
+    {
+     "desc": "alt text of the picture; none: the title",
+     "name": "imageAlt",
+     "type": "string"
+    },
+    {
+     "desc": "address of the picture in the dark theme; none: image",
+     "name": "imageDark",
+     "type": "string"
+    },
+    {
+     "default": "\"\"",
+     "desc": "the label of the action; the link is drawn when the label and the address are both set",
+     "name": "actionLabel",
+     "type": "string"
+    },
+    {
+     "default": "\"\"",
+     "desc": "the address of the action",
+     "name": "actionHref",
+     "type": "string"
+    },
+    {
+     "default": "\"\"",
+     "desc": "the label of the second action (the secondary button after the first); drawn when the label and the address are both set",
+     "name": "secondaryActionLabel",
+     "type": "string"
+    },
+    {
+     "default": "\"\"",
+     "desc": "the address of the second action",
+     "name": "secondaryActionHref",
+     "type": "string"
+    },
+    {
+     "default": "2",
+     "desc": "the level of the heading (1 on the first section of a page)",
+     "name": "level",
+     "type": "1 | 2 | 3",
+     "values": [
+      "1",
+      "2",
+      "3"
+     ]
+    },
+    {
+     "default": "\"standard\"",
+     "desc": "the vertical padding of the section: compact (py-8 lg:py-16), standard (py-16 lg:py-32), spacious (py-24 lg:py-40)",
+     "name": "padding",
+     "type": "\"compact\" | \"standard\" | \"spacious\"",
+     "values": [
+      "compact",
+      "standard",
+      "spacious"
+     ]
+    },
+    {
+     "default": "\"end\"",
+     "name": "media",
+     "type": "\"end\" | \"start\"",
+     "values": [
+      "end",
+      "start"
+     ]
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
     }
    ]
   }

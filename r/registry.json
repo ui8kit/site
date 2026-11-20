@@ -6,7 +6,12 @@
       "hero-simple@1": {
         "model": "hero@1",
         "path": "contracts/hero-simple/1.json",
-        "sha256": "b1e3ba16dc7718a029f0bc77f0c2b4ba97c971cb71ebcb2f2e96480c0fec7b0d"
+        "sha256": "c9e275e63ebe4bd48487c744e4f4b70465fd669749e0c7213c87bd6ef15074da"
+      },
+      "split-simple@1": {
+        "model": "split@1",
+        "path": "contracts/split-simple/1.json",
+        "sha256": "cb1936dc7bf74e33036b4051337c47f517fe370cef2d701180dee987e7edbc75"
       },
       "team-simple@1": {
         "model": "team@1",
@@ -15,7 +20,7 @@
       }
     },
     "path": "contracts/v0.json",
-    "sha256": "2c8b5dc42e975e5e565900e3eb0c2d115752c45b7aa231a075c1b4a710494b57"
+    "sha256": "75ac42f7b2a2fd1ca5de1b7e8a079f5b744067c8ab5258b7ba0d3fd6db7056ff"
   },
   "items": [
     {
@@ -18059,7 +18064,7 @@
     {
       "category": "marketing",
       "contract": "contracts/hero-simple/1.json",
-      "description": "A badge, the heading, one paragraph and up to two links as the actions (primary, then secondary), with one picture at the end, at the start or on top, in a box or split to the edge of the screen.",
+      "description": "A badge, the heading, one paragraph and up to two links as the actions (primary, then secondary), with one picture at the end, at the start or on top.",
       "group": "hero",
       "kind": "block",
       "model": "hero@1",
@@ -40687,6 +40692,154 @@
       "type": "registry:component"
     },
     {
+      "category": "marketing",
+      "contract": "contracts/split-simple/1.json",
+      "description": "Two halves: the heading, one paragraph and up to two links as the actions (primary, then secondary) beside one picture that fills its half to the edge of the screen.",
+      "group": "hero",
+      "kind": "block",
+      "model": "split@1",
+      "name": "split-simple",
+      "runtimes": {
+        "jinja2": {
+          "dependencies": [],
+          "files": [
+            "blocks/split-simple.html.j2"
+          ],
+          "path": "jinja2/blocks/split-simple.json",
+          "registryDependencies": [
+            "block",
+            "box",
+            "group",
+            "link-button",
+            "media-frame",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "latte": {
+          "dependencies": [],
+          "files": [
+            "blocks/split-simple.latte"
+          ],
+          "path": "latte/blocks/split-simple.json",
+          "registryDependencies": [
+            "block",
+            "box",
+            "group",
+            "link-button",
+            "media-frame",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "react": {
+          "dependencies": [],
+          "files": [
+            "blocks/split-simple.tsx"
+          ],
+          "path": "react/blocks/split-simple.json",
+          "registryDependencies": [
+            "compose",
+            "media-frame",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/split-simple.tsx"
+          ],
+          "path": "solid/blocks/split-simple.json",
+          "registryDependencies": [
+            "compose",
+            "media-frame",
+            "utils"
+          ]
+        },
+        "svelte": {
+          "dependencies": [],
+          "files": [
+            "blocks/split-simple.svelte"
+          ],
+          "path": "svelte/blocks/split-simple.json",
+          "registryDependencies": [
+            "block",
+            "box",
+            "group",
+            "link-button",
+            "media-frame",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "templ": {
+          "dependencies": [],
+          "files": [
+            "blocks/split-simple.templ"
+          ],
+          "path": "templ/blocks/split-simple.json",
+          "registryDependencies": [
+            "block",
+            "box",
+            "group",
+            "kit-box",
+            "kit-link",
+            "kit-text",
+            "link-button",
+            "media-frame",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "twig": {
+          "dependencies": [],
+          "files": [
+            "blocks/split-simple.html.twig"
+          ],
+          "path": "twig/blocks/split-simple.json",
+          "registryDependencies": [
+            "block",
+            "box",
+            "group",
+            "link-button",
+            "media-frame",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "vue": {
+          "dependencies": [],
+          "files": [
+            "blocks/split-simple.vue"
+          ],
+          "path": "vue/blocks/split-simple.json",
+          "registryDependencies": [
+            "block",
+            "box",
+            "group",
+            "link-button",
+            "media-frame",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        }
+      },
+      "title": "Split Simple",
+      "type": "registry:block"
+    },
+    {
       "category": "primitives",
       "description": "Stack primitive",
       "group": "",
@@ -48280,12 +48433,16 @@
       "type": "registry:block"
     }
   ],
-  "lastUpdated": "2026-11-20T14:30:00+03:00",
+  "lastUpdated": "2026-11-20T15:16:25+03:00",
   "layout": "<runtime>/index.json + <runtime>/{components/ui,components,blocks,utils,lib,themes}/<name>.json; use r/<runtime> as registryUrl",
   "models": {
     "hero@1": {
       "path": "models/hero@1.schema.json",
-      "sha256": "fe64b0f574767813e0585c875a7ed23ad419f1f603a37ebfc524272ab5211af5"
+      "sha256": "b114d150cc77d9249b8793c9591a6242db9c8d55d94d0dd06bfe6aecd335eee6"
+    },
+    "split@1": {
+      "path": "models/split@1.schema.json",
+      "sha256": "40d6489b3bbaa08ab9f5385ef1b8e1d75432b427f51c2598ec92e9c542aada6d"
     },
     "team@1": {
       "path": "models/team@1.schema.json",
@@ -48293,9 +48450,9 @@
     }
   },
   "props": {
-    "digest": "sha256:461c084b4626e5c9713c4bc85a68baf715254e26e80fe20971cbf71b78aa1e88",
+    "digest": "sha256:76caabd7eff65e2dec45a0c30698a5014270b42508bd2be1ff9b4b726d41cbc9",
     "path": "props/v0.json",
-    "sha256": "b51c23e5f9fc0529f4416fb651e6792edfcfd5d9ab3d652852807cb5994f2b76",
+    "sha256": "52cf1a84c91c80615908f9edb8db458b3a790cfe0ada2f0edd1519eb5629552a",
     "version": "0"
   },
   "runtimes": [
@@ -48308,11 +48465,11 @@
     "latte",
     "jinja2"
   ],
-  "sourceCommit": "3208a03e2b43f1b147d46f1b9d2d924dd51b0d69",
+  "sourceCommit": "44b70307459ab4dcac991d4a3a7a6048e6ca6ada",
   "variants": {
-    "digest": "sha256:f355ccf988693f0459e1ab44ad51755a420fd8e01701f57b819113a9110cc8d7",
+    "digest": "sha256:d3fa7673d9fc9c96c904ff6412492df34e2da40418e38fdbd4f6f894eac75478",
     "path": "variants/v0.json",
-    "sha256": "b0c71a7299040dd45a13c9480d7f91a72603e706f6b4883e600a651d003cb1c3",
+    "sha256": "64b57e44098f217eeb8a3268c3ea3e52b64e61cb5dfc9c49ed3ce5d4db24a1b7",
     "version": "0"
   },
   "version": "0.1.0"
