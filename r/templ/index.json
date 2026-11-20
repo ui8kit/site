@@ -1264,6 +1264,28 @@
     },
     {
       "dependencies": [],
+      "description": "One band: a badge when set, the heading, one paragraph and up to two buttons; centred or at the start, or the buttons at the end; on a muted or an outlined surface.",
+      "name": "cta-simple",
+      "registryDependencies": [
+        "badge",
+        "block",
+        "box",
+        "container",
+        "group",
+        "kit-box",
+        "kit-link",
+        "kit-text",
+        "link-button",
+        "stack",
+        "text",
+        "title",
+        "utils"
+      ],
+      "title": "Cta Simple",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
       "description": "The cards layout of DishCompare: one compare card per cut with a picture, the name, the summary, the weight, heat and price as a description list, and the cooking time.",
       "name": "cut-cards",
       "registryDependencies": [
@@ -3644,6 +3666,27 @@
     },
     {
       "dependencies": [],
+      "description": "The heading, one paragraph and the dishes (a picture, a badge when set, the name, the weight, a line, the price): on cards in three, two or four columns, or menu rows with the price at the end.",
+      "name": "menu-simple",
+      "registryDependencies": [
+        "badge",
+        "block",
+        "container",
+        "kit-box",
+        "kit-text",
+        "list",
+        "list-item",
+        "media-frame",
+        "stack",
+        "text",
+        "title",
+        "utils"
+      ],
+      "title": "Menu Simple",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
       "description": "Meter: Meter + recipe meter.",
       "name": "meter",
       "registryDependencies": [
@@ -4838,6 +4881,28 @@
       ],
       "title": "Project Tiles",
       "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "One offer: the discount as a badge, the heading, the deadline as text, one paragraph, a promo code when set and one button, beside a picture at the end or at the start, or under a wide one.",
+      "name": "promo-simple",
+      "registryDependencies": [
+        "badge",
+        "block",
+        "box",
+        "container",
+        "kit-box",
+        "kit-link",
+        "kit-text",
+        "link-button",
+        "media-frame",
+        "stack",
+        "text",
+        "title",
+        "utils"
+      ],
+      "title": "Promo Simple",
+      "type": "registry:block"
     },
     {
       "dependencies": [],
@@ -6780,7 +6845,7 @@
       "type": "registry:block"
     }
   ],
-  "lastUpdated": "2026-11-20T22:48:08+03:00",
+  "lastUpdated": "2026-11-21T01:21:48+03:00",
   "registry": "ui",
   "version": "0.1.0"
 }

@@ -50,6 +50,12 @@
       "model": "curriculum@1",
       "path": "course-outline/1.json"
     },
+    "cta-simple": {
+      "version": 1,
+      "block": "block.ctasimple",
+      "model": "cta@1",
+      "path": "cta-simple/1.json"
+    },
     "error-simple": {
       "version": 1,
       "block": "block.errorsimple",
@@ -128,6 +134,12 @@
       "model": "logos@1",
       "path": "logos-simple/1.json"
     },
+    "menu-simple": {
+      "version": 1,
+      "block": "block.menusimple",
+      "model": "menu@1",
+      "path": "menu-simple/1.json"
+    },
     "offers-simple": {
       "version": 1,
       "block": "block.offerssimple",
@@ -169,6 +181,12 @@
       "block": "block.profileintro",
       "model": "profile@1",
       "path": "profile-intro/1.json"
+    },
+    "promo-simple": {
+      "version": 1,
+      "block": "block.promosimple",
+      "model": "promo@1",
+      "path": "promo-simple/1.json"
     },
     "pull-quote-simple": {
       "version": 1,

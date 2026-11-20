@@ -43,6 +43,11 @@
         "path": "contracts/course-outline/1.json",
         "sha256": "436339e3a131e62005fd3452f16e857a074cbaec950f3f7a7344cdb927bfcb42"
       },
+      "cta-simple@1": {
+        "model": "cta@1",
+        "path": "contracts/cta-simple/1.json",
+        "sha256": "b7a19d889f9f999e856d2c44413d75f7e0870e283d8a28d6edb53527baf3453f"
+      },
       "error-simple@1": {
         "model": "error@1",
         "path": "contracts/error-simple/1.json",
@@ -108,6 +113,11 @@
         "path": "contracts/logos-simple/1.json",
         "sha256": "84b5b8d142a3bea0319c41f6fa8a70edc1f315e6140b39dad6721f10c6e78378"
       },
+      "menu-simple@1": {
+        "model": "menu@1",
+        "path": "contracts/menu-simple/1.json",
+        "sha256": "71c12d7fb3af29566937dbbf986c79fdc4f9b15370a6e0f6d051ccf9c42d38f3"
+      },
       "offers-simple@1": {
         "model": "offers@1",
         "path": "contracts/offers-simple/1.json",
@@ -142,6 +152,11 @@
         "model": "profile@1",
         "path": "contracts/profile-intro/1.json",
         "sha256": "5aa5893da2bdf4a4d5e32c661fbaf7767dcd570b2136ceb005d019fc56e9a2b9"
+      },
+      "promo-simple@1": {
+        "model": "promo@1",
+        "path": "contracts/promo-simple/1.json",
+        "sha256": "2e0cd68bda7a7d1880c2b52cb1876327d641b7161a947f9e1b5e9eef7bb9e2cc"
       },
       "pull-quote-simple@1": {
         "model": "pull-quote@1",
@@ -205,7 +220,7 @@
       }
     },
     "path": "contracts/v0.json",
-    "sha256": "5108313add6ce56fc03afbffe84ed8b20d1f9ba0ac6792f071b4a188c1f7c633"
+    "sha256": "d14c775a083fc7571a306c726a23c6d90ea5ebefadf21737e267f8d00afe153f"
   },
   "items": [
     {
@@ -10090,6 +10105,158 @@
       },
       "title": "Cta Proof Items",
       "type": "registry:component"
+    },
+    {
+      "category": "marketing",
+      "contract": "contracts/cta-simple/1.json",
+      "description": "One band: a badge when set, the heading, one paragraph and up to two buttons; centred or at the start, or the buttons at the end; on a muted or an outlined surface.",
+      "group": "cta",
+      "kind": "block",
+      "model": "cta@1",
+      "name": "cta-simple",
+      "runtimes": {
+        "jinja2": {
+          "dependencies": [],
+          "files": [
+            "blocks/cta-simple.html.j2"
+          ],
+          "path": "jinja2/blocks/cta-simple.json",
+          "registryDependencies": [
+            "badge",
+            "block",
+            "box",
+            "container",
+            "group",
+            "link-button",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "latte": {
+          "dependencies": [],
+          "files": [
+            "blocks/cta-simple.latte"
+          ],
+          "path": "latte/blocks/cta-simple.json",
+          "registryDependencies": [
+            "badge",
+            "block",
+            "box",
+            "container",
+            "group",
+            "link-button",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "react": {
+          "dependencies": [],
+          "files": [
+            "blocks/cta-simple.tsx"
+          ],
+          "path": "react/blocks/cta-simple.json",
+          "registryDependencies": [
+            "compose",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/cta-simple.tsx"
+          ],
+          "path": "solid/blocks/cta-simple.json",
+          "registryDependencies": [
+            "compose",
+            "utils"
+          ]
+        },
+        "svelte": {
+          "dependencies": [],
+          "files": [
+            "blocks/cta-simple.svelte"
+          ],
+          "path": "svelte/blocks/cta-simple.json",
+          "registryDependencies": [
+            "badge",
+            "block",
+            "box",
+            "container",
+            "group",
+            "link-button",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "templ": {
+          "dependencies": [],
+          "files": [
+            "blocks/cta-simple.templ"
+          ],
+          "path": "templ/blocks/cta-simple.json",
+          "registryDependencies": [
+            "badge",
+            "block",
+            "box",
+            "container",
+            "group",
+            "kit-box",
+            "kit-link",
+            "kit-text",
+            "link-button",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "twig": {
+          "dependencies": [],
+          "files": [
+            "blocks/cta-simple.html.twig"
+          ],
+          "path": "twig/blocks/cta-simple.json",
+          "registryDependencies": [
+            "badge",
+            "block",
+            "box",
+            "container",
+            "group",
+            "link-button",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "vue": {
+          "dependencies": [],
+          "files": [
+            "blocks/cta-simple.vue"
+          ],
+          "path": "vue/blocks/cta-simple.json",
+          "registryDependencies": [
+            "badge",
+            "block",
+            "box",
+            "container",
+            "group",
+            "link-button",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        }
+      },
+      "title": "Cta Simple",
+      "type": "registry:block"
     },
     {
       "category": "components",
@@ -28978,6 +29145,163 @@
       "type": "registry:component"
     },
     {
+      "category": "marketing",
+      "contract": "contracts/menu-simple/1.json",
+      "description": "The heading, one paragraph and the dishes (a picture, a badge when set, the name, the weight, a line, the price): on cards in three, two or four columns, or menu rows with the price at the end.",
+      "group": "food",
+      "kind": "block",
+      "model": "menu@1",
+      "name": "menu-simple",
+      "runtimes": {
+        "jinja2": {
+          "dependencies": [],
+          "files": [
+            "blocks/menu-simple.html.j2"
+          ],
+          "path": "jinja2/blocks/menu-simple.json",
+          "registryDependencies": [
+            "badge",
+            "block",
+            "container",
+            "list",
+            "list-item",
+            "media-frame",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "latte": {
+          "dependencies": [],
+          "files": [
+            "blocks/menu-simple.latte"
+          ],
+          "path": "latte/blocks/menu-simple.json",
+          "registryDependencies": [
+            "badge",
+            "block",
+            "container",
+            "list",
+            "list-item",
+            "media-frame",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "react": {
+          "dependencies": [],
+          "files": [
+            "blocks/menu-simple.tsx",
+            "blocks/menu-simple.types.ts"
+          ],
+          "path": "react/blocks/menu-simple.json",
+          "registryDependencies": [
+            "compose",
+            "media-frame",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/menu-simple.tsx",
+            "blocks/menu-simple.types.ts"
+          ],
+          "path": "solid/blocks/menu-simple.json",
+          "registryDependencies": [
+            "compose",
+            "media-frame",
+            "utils"
+          ]
+        },
+        "svelte": {
+          "dependencies": [],
+          "files": [
+            "blocks/menu-simple.svelte",
+            "blocks/menu-simple.types.ts"
+          ],
+          "path": "svelte/blocks/menu-simple.json",
+          "registryDependencies": [
+            "badge",
+            "block",
+            "container",
+            "list",
+            "list-item",
+            "media-frame",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "templ": {
+          "dependencies": [],
+          "files": [
+            "blocks/menu-simple.templ"
+          ],
+          "path": "templ/blocks/menu-simple.json",
+          "registryDependencies": [
+            "badge",
+            "block",
+            "container",
+            "kit-box",
+            "kit-text",
+            "list",
+            "list-item",
+            "media-frame",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "twig": {
+          "dependencies": [],
+          "files": [
+            "blocks/menu-simple.html.twig"
+          ],
+          "path": "twig/blocks/menu-simple.json",
+          "registryDependencies": [
+            "badge",
+            "block",
+            "container",
+            "list",
+            "list-item",
+            "media-frame",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "vue": {
+          "dependencies": [],
+          "files": [
+            "blocks/menu-simple.types.ts",
+            "blocks/menu-simple.vue"
+          ],
+          "path": "vue/blocks/menu-simple.json",
+          "registryDependencies": [
+            "badge",
+            "block",
+            "container",
+            "list",
+            "list-item",
+            "media-frame",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        }
+      },
+      "title": "Menu Simple",
+      "type": "registry:block"
+    },
+    {
       "category": "primitives",
       "description": "Meter primitive",
       "group": "",
@@ -38146,6 +38470,160 @@
       },
       "title": "Project Tiles",
       "type": "registry:component"
+    },
+    {
+      "category": "marketing",
+      "contract": "contracts/promo-simple/1.json",
+      "description": "One offer: the discount as a badge, the heading, the deadline as text, one paragraph, a promo code when set and one button, beside a picture at the end or at the start, or under a wide one.",
+      "group": "cta",
+      "kind": "block",
+      "model": "promo@1",
+      "name": "promo-simple",
+      "runtimes": {
+        "jinja2": {
+          "dependencies": [],
+          "files": [
+            "blocks/promo-simple.html.j2"
+          ],
+          "path": "jinja2/blocks/promo-simple.json",
+          "registryDependencies": [
+            "badge",
+            "block",
+            "box",
+            "container",
+            "link-button",
+            "media-frame",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "latte": {
+          "dependencies": [],
+          "files": [
+            "blocks/promo-simple.latte"
+          ],
+          "path": "latte/blocks/promo-simple.json",
+          "registryDependencies": [
+            "badge",
+            "block",
+            "box",
+            "container",
+            "link-button",
+            "media-frame",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "react": {
+          "dependencies": [],
+          "files": [
+            "blocks/promo-simple.tsx"
+          ],
+          "path": "react/blocks/promo-simple.json",
+          "registryDependencies": [
+            "compose",
+            "media-frame",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/promo-simple.tsx"
+          ],
+          "path": "solid/blocks/promo-simple.json",
+          "registryDependencies": [
+            "compose",
+            "media-frame",
+            "utils"
+          ]
+        },
+        "svelte": {
+          "dependencies": [],
+          "files": [
+            "blocks/promo-simple.svelte"
+          ],
+          "path": "svelte/blocks/promo-simple.json",
+          "registryDependencies": [
+            "badge",
+            "block",
+            "box",
+            "container",
+            "link-button",
+            "media-frame",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "templ": {
+          "dependencies": [],
+          "files": [
+            "blocks/promo-simple.templ"
+          ],
+          "path": "templ/blocks/promo-simple.json",
+          "registryDependencies": [
+            "badge",
+            "block",
+            "box",
+            "container",
+            "kit-box",
+            "kit-link",
+            "kit-text",
+            "link-button",
+            "media-frame",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "twig": {
+          "dependencies": [],
+          "files": [
+            "blocks/promo-simple.html.twig"
+          ],
+          "path": "twig/blocks/promo-simple.json",
+          "registryDependencies": [
+            "badge",
+            "block",
+            "box",
+            "container",
+            "link-button",
+            "media-frame",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "vue": {
+          "dependencies": [],
+          "files": [
+            "blocks/promo-simple.vue"
+          ],
+          "path": "vue/blocks/promo-simple.json",
+          "registryDependencies": [
+            "badge",
+            "block",
+            "box",
+            "container",
+            "link-button",
+            "media-frame",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        }
+      },
+      "title": "Promo Simple",
+      "type": "registry:block"
     },
     {
       "category": "components",
@@ -54196,7 +54674,7 @@
       "type": "registry:block"
     }
   ],
-  "lastUpdated": "2026-11-20T22:48:08+03:00",
+  "lastUpdated": "2026-11-21T01:21:48+03:00",
   "layout": "<runtime>/index.json + <runtime>/{components/ui,components,blocks,utils,lib,themes}/<name>.json; use r/<runtime> as registryUrl",
   "models": {
     "article-lead@1": {
@@ -54226,6 +54704,10 @@
     "contacts@1": {
       "path": "models/contacts@1.schema.json",
       "sha256": "b62f96402d8013ac4563afecfde249e1281647be1fbe5f5377c9eb4a9e5578b7"
+    },
+    "cta@1": {
+      "path": "models/cta@1.schema.json",
+      "sha256": "08928cf4407d113ab976afc3c302414374491fd1b8997b0cbc620a2b0efaeafb"
     },
     "curriculum@1": {
       "path": "models/curriculum@1.schema.json",
@@ -54283,6 +54765,10 @@
       "path": "models/logos@1.schema.json",
       "sha256": "c2ca4e110e46821571e84581123062042b72b3dfbe47c07633449948fef13e1c"
     },
+    "menu@1": {
+      "path": "models/menu@1.schema.json",
+      "sha256": "3cdb398a9e650633dc56862459f737c8cb1fff4cc69f5cc9e5f367da6a53ff6d"
+    },
     "offers@1": {
       "path": "models/offers@1.schema.json",
       "sha256": "cbe2d34366f77c8192c24731957c3ce87b4d29041a05deb8f078a777669e6bdc"
@@ -54306,6 +54792,10 @@
     "profile@1": {
       "path": "models/profile@1.schema.json",
       "sha256": "0c4283ba562f39a9286a8d1448d034c5d32efe12439bd5ec48f204b6410ac6b3"
+    },
+    "promo@1": {
+      "path": "models/promo@1.schema.json",
+      "sha256": "e044e1554d5a0ad2ce81aa851c4861eaf975cc291dfbd5f6ef5cd2ec72117bc7"
     },
     "pull-quote@1": {
       "path": "models/pull-quote@1.schema.json",
@@ -54361,9 +54851,9 @@
     }
   },
   "props": {
-    "digest": "sha256:8d07269ba87ec6dcc150010f0708cde183b4e85c5ebe4a7b25c03b24ce4faf0c",
+    "digest": "sha256:ffeeb55ab26b97d8f1fdb67afc79c8a346da0fcf218c7aa2682616e93c54220a",
     "path": "props/v0.json",
-    "sha256": "fafe9e556be48ff9930f4b5abf8226317c6827df271a06e6db302e97fdd466e6",
+    "sha256": "76ff108820c7baa6473379cf722874dc7b9bc822ee2a1075c0cb97a8ab106023",
     "version": "0"
   },
   "runtimes": [
@@ -54376,11 +54866,11 @@
     "latte",
     "jinja2"
   ],
-  "sourceCommit": "7a0689469ae709833ce9659a876c7a82a04e6125",
+  "sourceCommit": "5acdb43990dc5f2b17a04fe5fcb09a170b0d6d4a",
   "variants": {
-    "digest": "sha256:b76814541966e1c3e462fd3b15f165e6b6ae9fb7e1547f9e6b9a858c0f6f468e",
+    "digest": "sha256:b54c43be6c208df7db0d28d442152ac46be9e2c12745f76fa9d6c4824eaa5f69",
     "path": "variants/v0.json",
-    "sha256": "890385335d0f9240b6a1f2c4d3918412ba9baecd94aa246d0408ecdb299ed1e3",
+    "sha256": "6b1454980e0837dbf954724055d49aa5cf8f7af928b6c6727bf94c13fd6f9df0",
     "version": "0"
   },
   "version": "0.1.0"

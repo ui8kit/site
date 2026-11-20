@@ -2,9 +2,9 @@
   "contractVersion": "2.0.0",
   "contracts": {
     "index": {
-      "bytes": 6256,
+      "bytes": 6685,
       "path": "contracts/v0.json",
-      "sha256": "5108313add6ce56fc03afbffe84ed8b20d1f9ba0ac6792f071b4a188c1f7c633"
+      "sha256": "d14c775a083fc7571a306c726a23c6d90ea5ebefadf21737e267f8d00afe153f"
     },
     "items": {
       "article-lead@1": {
@@ -69,6 +69,14 @@
         "model": "curriculum@1",
         "path": "contracts/course-outline/1.json",
         "sha256": "436339e3a131e62005fd3452f16e857a074cbaec950f3f7a7344cdb927bfcb42",
+        "version": 1
+      },
+      "cta-simple@1": {
+        "block": "block.ctasimple",
+        "bytes": 2472,
+        "model": "cta@1",
+        "path": "contracts/cta-simple/1.json",
+        "sha256": "b7a19d889f9f999e856d2c44413d75f7e0870e283d8a28d6edb53527baf3453f",
         "version": 1
       },
       "error-simple@1": {
@@ -175,6 +183,14 @@
         "sha256": "84b5b8d142a3bea0319c41f6fa8a70edc1f315e6140b39dad6721f10c6e78378",
         "version": 1
       },
+      "menu-simple@1": {
+        "block": "block.menusimple",
+        "bytes": 2609,
+        "model": "menu@1",
+        "path": "contracts/menu-simple/1.json",
+        "sha256": "71c12d7fb3af29566937dbbf986c79fdc4f9b15370a6e0f6d051ccf9c42d38f3",
+        "version": 1
+      },
       "offers-simple@1": {
         "block": "block.offerssimple",
         "bytes": 1824,
@@ -229,6 +245,14 @@
         "model": "profile@1",
         "path": "contracts/profile-intro/1.json",
         "sha256": "5aa5893da2bdf4a4d5e32c661fbaf7767dcd570b2136ceb005d019fc56e9a2b9",
+        "version": 1
+      },
+      "promo-simple@1": {
+        "block": "block.promosimple",
+        "bytes": 2073,
+        "model": "promo@1",
+        "path": "contracts/promo-simple/1.json",
+        "sha256": "2e0cd68bda7a7d1880c2b52cb1876327d641b7161a947f9e1b5e9eef7bb9e2cc",
         "version": 1
       },
       "pull-quote-simple@1": {
@@ -329,7 +353,7 @@
       }
     },
     "source": {
-      "manifest": "899b2221e3236e44ec6001bd1e8f174fef35e5f3c7ab4e006913fc36c3e9e535"
+      "manifest": "bae6fa0374ba2a134a3c58f733131a8f8c3465a98dcdc75bf94d46a0717f6347"
     }
   },
   "models": {
@@ -374,6 +398,12 @@
       "id": "contacts@1",
       "path": "models/contacts@1.schema.json",
       "sha256": "b62f96402d8013ac4563afecfde249e1281647be1fbe5f5377c9eb4a9e5578b7"
+    },
+    "cta@1": {
+      "bytes": 1746,
+      "id": "cta@1",
+      "path": "models/cta@1.schema.json",
+      "sha256": "08928cf4407d113ab976afc3c302414374491fd1b8997b0cbc620a2b0efaeafb"
     },
     "curriculum@1": {
       "bytes": 2181,
@@ -459,6 +489,12 @@
       "path": "models/logos@1.schema.json",
       "sha256": "c2ca4e110e46821571e84581123062042b72b3dfbe47c07633449948fef13e1c"
     },
+    "menu@1": {
+      "bytes": 2643,
+      "id": "menu@1",
+      "path": "models/menu@1.schema.json",
+      "sha256": "3cdb398a9e650633dc56862459f737c8cb1fff4cc69f5cc9e5f367da6a53ff6d"
+    },
     "offers@1": {
       "bytes": 2186,
       "id": "offers@1",
@@ -494,6 +530,12 @@
       "id": "profile@1",
       "path": "models/profile@1.schema.json",
       "sha256": "0c4283ba562f39a9286a8d1448d034c5d32efe12439bd5ec48f204b6410ac6b3"
+    },
+    "promo@1": {
+      "bytes": 2091,
+      "id": "promo@1",
+      "path": "models/promo@1.schema.json",
+      "sha256": "e044e1554d5a0ad2ce81aa851c4861eaf975cc291dfbd5f6ef5cd2ec72117bc7"
     },
     "pull-quote@1": {
       "bytes": 1334,
@@ -575,17 +617,17 @@
     }
   },
   "props": {
-    "bytes": 2097630,
-    "digest": "sha256:8d07269ba87ec6dcc150010f0708cde183b4e85c5ebe4a7b25c03b24ce4faf0c",
-    "items": 156,
+    "bytes": 2109312,
+    "digest": "sha256:ffeeb55ab26b97d8f1fdb67afc79c8a346da0fcf218c7aa2682616e93c54220a",
+    "items": 159,
     "path": "props/v0.json",
-    "sha256": "fafe9e556be48ff9930f4b5abf8226317c6827df271a06e6db302e97fdd466e6",
+    "sha256": "76ff108820c7baa6473379cf722874dc7b9bc822ee2a1075c0cb97a8ab106023",
     "version": "0"
   },
   "runtimes": {
     "jinja2": {
       "counts": {
-        "block": 156,
+        "block": 159,
         "component": 137,
         "lib": 2,
         "primitive": 85,
@@ -1203,6 +1245,15 @@
             }
           },
           "type": "registry:component"
+        },
+        "cta-simple": {
+          "files": {
+            "blocks/cta-simple.html.j2": {
+              "bytes": 5137,
+              "sha256": "be4d8c32eb05ac0f77bdf1eb7cc6fab06dbf9b0a4bd5f0111a502b67a7c57b8e"
+            }
+          },
+          "type": "registry:block"
         },
         "cut-cards": {
           "files": {
@@ -2496,6 +2547,15 @@
           },
           "type": "registry:component"
         },
+        "menu-simple": {
+          "files": {
+            "blocks/menu-simple.html.j2": {
+              "bytes": 6391,
+              "sha256": "f4a0c82da072508d34366c7d2d699cb4a74d924b09cd041d7995eb4f8b7e238f"
+            }
+          },
+          "type": "registry:block"
+        },
         "meter": {
           "files": {
             "compose/meter.html.j2": {
@@ -3127,6 +3187,15 @@
             }
           },
           "type": "registry:component"
+        },
+        "promo-simple": {
+          "files": {
+            "blocks/promo-simple.html.j2": {
+              "bytes": 4953,
+              "sha256": "1129e4b4401771da54d9a6d82fb486b4eadd247361a37bf6d29f6fabe83884ef"
+            }
+          },
+          "type": "registry:block"
         },
         "prompt-composer": {
           "files": {
@@ -4142,11 +4211,11 @@
           "type": "registry:block"
         }
       },
-      "items": 381
+      "items": 384
     },
     "latte": {
       "counts": {
-        "block": 156,
+        "block": 159,
         "component": 137,
         "lib": 2,
         "primitive": 85,
@@ -4764,6 +4833,15 @@
             }
           },
           "type": "registry:component"
+        },
+        "cta-simple": {
+          "files": {
+            "blocks/cta-simple.latte": {
+              "bytes": 5012,
+              "sha256": "183379c4a416058a3c6121888d52855db382e9677b34fbc13f1029a9bd87dc9e"
+            }
+          },
+          "type": "registry:block"
         },
         "cut-cards": {
           "files": {
@@ -6053,6 +6131,15 @@
           },
           "type": "registry:component"
         },
+        "menu-simple": {
+          "files": {
+            "blocks/menu-simple.latte": {
+              "bytes": 6312,
+              "sha256": "6e86dcaba53f3ccfabf4326431474a1ae5645ff441283a22c806db2d32b5e1bf"
+            }
+          },
+          "type": "registry:block"
+        },
         "meter": {
           "files": {
             "compose/Meter.latte": {
@@ -6684,6 +6771,15 @@
             }
           },
           "type": "registry:component"
+        },
+        "promo-simple": {
+          "files": {
+            "blocks/promo-simple.latte": {
+              "bytes": 4837,
+              "sha256": "515a0fd647d82769567c645bf05925df653666d2621e0a1edbb367dc2eafa9f5"
+            }
+          },
+          "type": "registry:block"
         },
         "prompt-composer": {
           "files": {
@@ -7699,11 +7795,11 @@
           "type": "registry:block"
         }
       },
-      "items": 381
+      "items": 384
     },
     "react": {
       "counts": {
-        "block": 156,
+        "block": 159,
         "component": 137,
         "lib": 2,
         "primitive": 89,
@@ -8451,6 +8547,15 @@
             }
           },
           "type": "registry:component"
+        },
+        "cta-simple": {
+          "files": {
+            "blocks/cta-simple.tsx": {
+              "bytes": 4211,
+              "sha256": "b1225d30dc39a1102c199949c9eefa9931c4ae25f3e5d1095af30ef996844f73"
+            }
+          },
+          "type": "registry:block"
         },
         "cut-cards": {
           "files": {
@@ -9921,6 +10026,19 @@
           },
           "type": "registry:component"
         },
+        "menu-simple": {
+          "files": {
+            "blocks/menu-simple.tsx": {
+              "bytes": 4883,
+              "sha256": "9aafa57ee02d71543d0f0ec8ab5ac867c8c03dd4598860daf0ca0c602cfe8423"
+            },
+            "blocks/menu-simple.types.ts": {
+              "bytes": 308,
+              "sha256": "3b2af2ff07b478a0f768fcf66ebbe6b5c346b4b605c7fc8985c42e805ba3070f"
+            }
+          },
+          "type": "registry:block"
+        },
         "meter": {
           "files": {
             "compose/meter.tsx": {
@@ -10609,6 +10727,15 @@
             }
           },
           "type": "registry:component"
+        },
+        "promo-simple": {
+          "files": {
+            "blocks/promo-simple.tsx": {
+              "bytes": 3923,
+              "sha256": "8959c17f2af4af619b3385f7389384e8275c96e830eda9dee51248a4aef328f2"
+            }
+          },
+          "type": "registry:block"
         },
         "prompt-composer": {
           "files": {
@@ -11990,11 +12117,11 @@
           "type": "registry:block"
         }
       },
-      "items": 402
+      "items": 405
     },
     "solid": {
       "counts": {
-        "block": 156,
+        "block": 159,
         "component": 137,
         "lib": 2,
         "primitive": 88,
@@ -12742,6 +12869,15 @@
             }
           },
           "type": "registry:component"
+        },
+        "cta-simple": {
+          "files": {
+            "blocks/cta-simple.tsx": {
+              "bytes": 4184,
+              "sha256": "c6ea6bac8cc6adac54ecfc6d9f328e9fb8f46f5c22fca1e2f99acf1dbf9c9f89"
+            }
+          },
+          "type": "registry:block"
         },
         "cut-cards": {
           "files": {
@@ -14203,6 +14339,19 @@
           },
           "type": "registry:component"
         },
+        "menu-simple": {
+          "files": {
+            "blocks/menu-simple.tsx": {
+              "bytes": 4833,
+              "sha256": "a9aa79c5fe34f954e6fce24dcc8d380a6771376136717f937cc908c13e14b4e8"
+            },
+            "blocks/menu-simple.types.ts": {
+              "bytes": 308,
+              "sha256": "3b2af2ff07b478a0f768fcf66ebbe6b5c346b4b605c7fc8985c42e805ba3070f"
+            }
+          },
+          "type": "registry:block"
+        },
         "meter": {
           "files": {
             "compose/meter.solid.tsx": {
@@ -14891,6 +15040,15 @@
             }
           },
           "type": "registry:component"
+        },
+        "promo-simple": {
+          "files": {
+            "blocks/promo-simple.tsx": {
+              "bytes": 3884,
+              "sha256": "9ff413472fe6aefbbabae4ce94735531589265c16abd417f0426d55ae13af529"
+            }
+          },
+          "type": "registry:block"
         },
         "prompt-composer": {
           "files": {
@@ -16272,11 +16430,11 @@
           "type": "registry:block"
         }
       },
-      "items": 401
+      "items": 404
     },
     "svelte": {
       "counts": {
-        "block": 156,
+        "block": 159,
         "component": 137,
         "lib": 2,
         "primitive": 88,
@@ -17024,6 +17182,15 @@
             }
           },
           "type": "registry:component"
+        },
+        "cta-simple": {
+          "files": {
+            "blocks/cta-simple.svelte": {
+              "bytes": 4528,
+              "sha256": "47f189f1e6f4ec9039e5fb35834c32b79f212df9c92587dfe7b0e5746080fdac"
+            }
+          },
+          "type": "registry:block"
         },
         "cut-cards": {
           "files": {
@@ -18505,6 +18672,19 @@
           },
           "type": "registry:component"
         },
+        "menu-simple": {
+          "files": {
+            "blocks/menu-simple.svelte": {
+              "bytes": 5102,
+              "sha256": "753126e43db8e7ff6af60ff2d66cc26a2ddbd999176a3b3da09d863983bdb27b"
+            },
+            "blocks/menu-simple.types.ts": {
+              "bytes": 308,
+              "sha256": "3b2af2ff07b478a0f768fcf66ebbe6b5c346b4b605c7fc8985c42e805ba3070f"
+            }
+          },
+          "type": "registry:block"
+        },
         "meter": {
           "files": {
             "compose/Meter.svelte": {
@@ -19193,6 +19373,15 @@
             }
           },
           "type": "registry:component"
+        },
+        "promo-simple": {
+          "files": {
+            "blocks/promo-simple.svelte": {
+              "bytes": 4198,
+              "sha256": "55f105aad9379bc2215fb2022f1d05392af69e1449fbafd39c23dbf6593adf56"
+            }
+          },
+          "type": "registry:block"
         },
         "prompt-composer": {
           "files": {
@@ -20574,11 +20763,11 @@
           "type": "registry:block"
         }
       },
-      "items": 401
+      "items": 404
     },
     "templ": {
       "counts": {
-        "block": 156,
+        "block": 159,
         "component": 137,
         "lib": 2,
         "primitive": 85,
@@ -21196,6 +21385,15 @@
             }
           },
           "type": "registry:component"
+        },
+        "cta-simple": {
+          "files": {
+            "blocks/cta-simple.templ": {
+              "bytes": 5398,
+              "sha256": "945c08992bcae13e413aef499c16f2b2584a07250803ecb3a5b748b0267f34d4"
+            }
+          },
+          "type": "registry:block"
         },
         "cut-cards": {
           "files": {
@@ -22473,6 +22671,15 @@
           },
           "type": "registry:component"
         },
+        "menu-simple": {
+          "files": {
+            "blocks/menu-simple.templ": {
+              "bytes": 6297,
+              "sha256": "52aea634793939d15d6d80e7399641169dc059f6f97d5936e104a58a840b93c0"
+            }
+          },
+          "type": "registry:block"
+        },
         "meter": {
           "files": {
             "compose/meter.templ": {
@@ -23108,6 +23315,15 @@
             }
           },
           "type": "registry:component"
+        },
+        "promo-simple": {
+          "files": {
+            "blocks/promo-simple.templ": {
+              "bytes": 5124,
+              "sha256": "b57dbda711aa8be1bb5434da16dc34257fefbb03d4edaac9e48ba178835038c4"
+            }
+          },
+          "type": "registry:block"
         },
         "prompt-composer": {
           "files": {
@@ -24155,11 +24371,11 @@
           "type": "registry:block"
         }
       },
-      "items": 381
+      "items": 384
     },
     "twig": {
       "counts": {
-        "block": 156,
+        "block": 159,
         "component": 137,
         "lib": 2,
         "primitive": 85,
@@ -24777,6 +24993,15 @@
             }
           },
           "type": "registry:component"
+        },
+        "cta-simple": {
+          "files": {
+            "blocks/cta-simple.html.twig": {
+              "bytes": 5141,
+              "sha256": "7ac804f4b345e91539d97e797e4ec70c3cdea0393e3070dc62c7508a03e4d732"
+            }
+          },
+          "type": "registry:block"
         },
         "cut-cards": {
           "files": {
@@ -26066,6 +26291,15 @@
           },
           "type": "registry:component"
         },
+        "menu-simple": {
+          "files": {
+            "blocks/menu-simple.html.twig": {
+              "bytes": 6473,
+              "sha256": "d2466ff5f042aa2d4414356568c7a496e1f8b4b0270f1da0c8217f4d9200ecb9"
+            }
+          },
+          "type": "registry:block"
+        },
         "meter": {
           "files": {
             "compose/Meter.html.twig": {
@@ -26697,6 +26931,15 @@
             }
           },
           "type": "registry:component"
+        },
+        "promo-simple": {
+          "files": {
+            "blocks/promo-simple.html.twig": {
+              "bytes": 4982,
+              "sha256": "ee2ad3f51bed74a5f6c37273076f773a1e108fe6264bd66600f400fd0a072738"
+            }
+          },
+          "type": "registry:block"
         },
         "prompt-composer": {
           "files": {
@@ -27720,11 +27963,11 @@
           "type": "registry:block"
         }
       },
-      "items": 381
+      "items": 384
     },
     "vue": {
       "counts": {
-        "block": 156,
+        "block": 159,
         "component": 137,
         "lib": 2,
         "primitive": 88,
@@ -28472,6 +28715,15 @@
             }
           },
           "type": "registry:component"
+        },
+        "cta-simple": {
+          "files": {
+            "blocks/cta-simple.vue": {
+              "bytes": 4485,
+              "sha256": "ecc1caccacab93ff6f81a74aa9024c19256f028fb8259450319a24afd35a1674"
+            }
+          },
+          "type": "registry:block"
         },
         "cut-cards": {
           "files": {
@@ -29953,6 +30205,19 @@
           },
           "type": "registry:component"
         },
+        "menu-simple": {
+          "files": {
+            "blocks/menu-simple.types.ts": {
+              "bytes": 308,
+              "sha256": "3b2af2ff07b478a0f768fcf66ebbe6b5c346b4b605c7fc8985c42e805ba3070f"
+            },
+            "blocks/menu-simple.vue": {
+              "bytes": 4950,
+              "sha256": "fe01b07865c418993e417b704aa3470b703b3748c426d06670d1cfb4cc5d050e"
+            }
+          },
+          "type": "registry:block"
+        },
         "meter": {
           "files": {
             "compose/Meter.vue": {
@@ -30641,6 +30906,15 @@
             }
           },
           "type": "registry:component"
+        },
+        "promo-simple": {
+          "files": {
+            "blocks/promo-simple.vue": {
+              "bytes": 4101,
+              "sha256": "9f3251c69860010e258c1e7a908250938e70d8f0195c2c2cd3e94414bd65411d"
+            }
+          },
+          "type": "registry:block"
         },
         "prompt-composer": {
           "files": {
@@ -32022,22 +32296,22 @@
           "type": "registry:block"
         }
       },
-      "items": 401
+      "items": 404
     }
   },
   "source": {
-    "commit": "7a0689469ae709833ce9659a876c7a82a04e6125",
-    "commitDate": "2026-11-20T22:48:08+03:00",
+    "commit": "5acdb43990dc5f2b17a04fe5fcb09a170b0d6d4a",
+    "commitDate": "2026-11-21T01:21:48+03:00",
     "dirty": false,
     "repo": "private source monorepo"
   },
   "variants": {
-    "bytes": 145202,
-    "digest": "sha256:b76814541966e1c3e462fd3b15f165e6b6ae9fb7e1547f9e6b9a858c0f6f468e",
-    "items": 152,
+    "bytes": 147226,
+    "digest": "sha256:b54c43be6c208df7db0d28d442152ac46be9e2c12745f76fa9d6c4824eaa5f69",
+    "items": 155,
     "path": "variants/v0.json",
-    "sha256": "890385335d0f9240b6a1f2c4d3918412ba9baecd94aa246d0408ecdb299ed1e3",
-    "variants": 644,
+    "sha256": "6b1454980e0837dbf954724055d49aa5cf8f7af928b6c6727bf94c13fd6f9df0",
+    "variants": 656,
     "version": "0"
   },
   "version": "0.1.0"

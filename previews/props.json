@@ -3352,6 +3352,116 @@
    ]
   }
  ],
+ "cta-simple": [
+  {
+   "docs": "The simple call to action (model cta@1): one band with an optional badge, the heading, a description and up to two links styled as buttons (the first primary, the second secondary; each drawn when its label and its address are both set). Text only (a picture beside the copy is the split or the hero). Axes: layout (stack: the copy and the actions in one column, placed by the align setting; between: the copy at the start, the actions at the end from md up), surface (muted: a muted band, outline: a bordered card).",
+   "part": "CtaSimple",
+   "rows": [
+    {
+     "name": "id",
+     "required": true,
+     "type": "string"
+    },
+    {
+     "default": "\"\"",
+     "desc": "a short pill above the heading; empty: no badge",
+     "name": "badge",
+     "type": "string"
+    },
+    {
+     "name": "title",
+     "required": true,
+     "type": "string"
+    },
+    {
+     "default": "\"\"",
+     "desc": "one paragraph under the heading; empty: none",
+     "name": "description",
+     "type": "string"
+    },
+    {
+     "default": "\"\"",
+     "desc": "the label of the action; the link is drawn when the label and the address are both set",
+     "name": "actionLabel",
+     "type": "string"
+    },
+    {
+     "default": "\"\"",
+     "desc": "the address of the action",
+     "name": "actionHref",
+     "type": "string"
+    },
+    {
+     "default": "\"\"",
+     "desc": "the label of the second action (the secondary button after the first); drawn when the label and the address are both set",
+     "name": "secondaryActionLabel",
+     "type": "string"
+    },
+    {
+     "default": "\"\"",
+     "desc": "the address of the second action",
+     "name": "secondaryActionHref",
+     "type": "string"
+    },
+    {
+     "default": "2",
+     "desc": "the level of the heading (1 on the first section of a page)",
+     "name": "level",
+     "type": "1 | 2 | 3",
+     "values": [
+      "1",
+      "2",
+      "3"
+     ]
+    },
+    {
+     "default": "\"standard\"",
+     "desc": "the vertical padding of the section: compact (py-8 lg:py-16), standard (py-16 lg:py-32), spacious (py-24 lg:py-40)",
+     "name": "padding",
+     "type": "\"compact\" | \"standard\" | \"spacious\"",
+     "values": [
+      "compact",
+      "standard",
+      "spacious"
+     ]
+    },
+    {
+     "default": "\"center\"",
+     "desc": "the alignment of the copy: start, center or end (logical, follows the writing direction): items-* on the column, text-* on the text",
+     "name": "align",
+     "type": "\"start\" | \"center\" | \"end\"",
+     "values": [
+      "start",
+      "center",
+      "end"
+     ]
+    },
+    {
+     "default": "\"stack\"",
+     "name": "layout",
+     "type": "\"stack\" | \"between\"",
+     "values": [
+      "stack",
+      "between"
+     ]
+    },
+    {
+     "default": "\"muted\"",
+     "name": "surface",
+     "type": "\"muted\" | \"outline\"",
+     "values": [
+      "muted",
+      "outline"
+     ]
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
+    }
+   ]
+  }
+ ],
  "cut-cards": [
   {
    "docs": "The cards layout of DishCompare: one compare card per cut with a picture, the name, the summary, the weight, heat and price as a description list, and the cooking time.",
@@ -8650,6 +8760,93 @@
    ]
   }
  ],
+ "menu-simple": [
+  {
+   "docs": "The simple menu (model menu@1): the heading, a description and the dishes as a list, each with a picture, an optional badge (a new or a spicy dish), the name, the weight or the portion, a line and the price as it is shown. Axes: layout (cards: a card surface per dish, the picture on top; rows: the picture at the start, the price at the end), cols (3, 2, 4 columns of the cards).",
+   "part": "MenuSimple",
+   "rows": [
+    {
+     "name": "id",
+     "required": true,
+     "type": "string"
+    },
+    {
+     "name": "title",
+     "required": true,
+     "type": "string"
+    },
+    {
+     "default": "\"\"",
+     "desc": "one paragraph under the heading; empty: none",
+     "name": "description",
+     "type": "string"
+    },
+    {
+     "desc": "the dishes, in the order they are shown (1 to 8)",
+     "name": "items",
+     "required": true,
+     "type": "MenuDish[]"
+    },
+    {
+     "default": "2",
+     "desc": "the level of the heading (1 on the first section of a page)",
+     "name": "level",
+     "type": "1 | 2 | 3",
+     "values": [
+      "1",
+      "2",
+      "3"
+     ]
+    },
+    {
+     "default": "\"standard\"",
+     "desc": "the vertical padding of the section: compact (py-8 lg:py-16), standard (py-16 lg:py-32), spacious (py-24 lg:py-40)",
+     "name": "padding",
+     "type": "\"compact\" | \"standard\" | \"spacious\"",
+     "values": [
+      "compact",
+      "standard",
+      "spacious"
+     ]
+    },
+    {
+     "default": "\"center\"",
+     "desc": "the alignment of the copy: start, center or end (logical, follows the writing direction): items-* on the column, text-* on the text",
+     "name": "align",
+     "type": "\"start\" | \"center\" | \"end\"",
+     "values": [
+      "start",
+      "center",
+      "end"
+     ]
+    },
+    {
+     "default": "\"cards\"",
+     "name": "layout",
+     "type": "\"cards\" | \"rows\"",
+     "values": [
+      "cards",
+      "rows"
+     ]
+    },
+    {
+     "default": "\"3\"",
+     "name": "cols",
+     "type": "\"3\" | \"2\" | \"4\"",
+     "values": [
+      "3",
+      "2",
+      "4"
+     ]
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
+    }
+   ]
+  }
+ ],
  "meter": [
   {
    "docs": "Meter renders a native meter; children are the fallback text.",
@@ -12070,6 +12267,120 @@
       "bento",
       "list"
      ]
+    }
+   ]
+  }
+ ],
+ "promo-simple": [
+  {
+   "docs": "The simple promo (model promo@1): one offer with the discount as a badge, the heading, the deadline as text (no countdown), a description, an optional promo code, one action and a picture. Axes: media (end: the picture after the copy from md up, start: before it, top: above it, wide).",
+   "part": "PromoSimple",
+   "rows": [
+    {
+     "name": "id",
+     "required": true,
+     "type": "string"
+    },
+    {
+     "default": "\"\"",
+     "desc": "a short pill above the heading; empty: no badge",
+     "name": "badge",
+     "type": "string"
+    },
+    {
+     "name": "title",
+     "required": true,
+     "type": "string"
+    },
+    {
+     "desc": "the deadline of the offer as it is shown (until 31 December)",
+     "name": "deadline",
+     "required": true,
+     "type": "string"
+    },
+    {
+     "default": "\"\"",
+     "desc": "one paragraph under the heading; empty: none",
+     "name": "description",
+     "type": "string"
+    },
+    {
+     "default": "\"\"",
+     "desc": "a promo code; empty: none",
+     "name": "code",
+     "type": "string"
+    },
+    {
+     "default": "\"\"",
+     "desc": "the label of the action; the link is drawn when the label and the address are both set",
+     "name": "actionLabel",
+     "type": "string"
+    },
+    {
+     "default": "\"\"",
+     "desc": "the address of the action",
+     "name": "actionHref",
+     "type": "string"
+    },
+    {
+     "default": "\"\"",
+     "desc": "address of the picture; none: the placeholder",
+     "name": "image",
+     "type": "string"
+    },
+    {
+     "desc": "alt text of the picture",
+     "name": "imageAlt",
+     "required": true,
+     "type": "string"
+    },
+    {
+     "default": "2",
+     "desc": "the level of the heading (1 on the first section of a page)",
+     "name": "level",
+     "type": "1 | 2 | 3",
+     "values": [
+      "1",
+      "2",
+      "3"
+     ]
+    },
+    {
+     "default": "\"standard\"",
+     "desc": "the vertical padding of the section: compact (py-8 lg:py-16), standard (py-16 lg:py-32), spacious (py-24 lg:py-40)",
+     "name": "padding",
+     "type": "\"compact\" | \"standard\" | \"spacious\"",
+     "values": [
+      "compact",
+      "standard",
+      "spacious"
+     ]
+    },
+    {
+     "default": "\"start\"",
+     "desc": "the alignment of the copy: start, center or end (logical, follows the writing direction): items-* on the column, text-* on the text",
+     "name": "align",
+     "type": "\"start\" | \"center\" | \"end\"",
+     "values": [
+      "start",
+      "center",
+      "end"
+     ]
+    },
+    {
+     "default": "\"end\"",
+     "name": "media",
+     "type": "\"end\" | \"start\" | \"top\"",
+     "values": [
+      "end",
+      "start",
+      "top"
+     ]
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
     }
    ]
   }

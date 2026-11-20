@@ -1,0 +1,84 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://registry.buildy.tw/models/menu@1.schema.json",
+  "title": "MenuContent",
+  "description": "Menu content: the heading, a description and an ordered list of dishes, each with a picture, the name, the weight or the portion, the price as it is shown, a line and an optional badge. One object is valid in every menu layout (cards in two, three or four columns, rows).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "title",
+    "items"
+  ],
+  "properties": {
+    "title": {
+      "description": "the heading of the section",
+      "type": "string",
+      "maxLength": 120,
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "description": {
+      "description": "one paragraph under the heading; empty: none",
+      "type": "string",
+      "maxLength": 400
+    },
+    "items": {
+      "description": "the dishes, in the order they are shown",
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 8,
+      "items": {
+        "title": "MenuDish",
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "title",
+          "price"
+        ],
+        "properties": {
+          "id": {
+            "description": "stable key of the entry (the Codex entry id)",
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]*$"
+          },
+          "image": {
+            "description": "address of the dish picture; none: the placeholder",
+            "type": "string",
+            "maxLength": 2048,
+            "pattern": "^(?:https?:|(?![A-Za-z][A-Za-z0-9+.-]*:))"
+          },
+          "title": {
+            "description": "the name of the dish (the alt text of the picture)",
+            "type": "string",
+            "maxLength": 80,
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "weight": {
+            "description": "the weight or the portion as it is shown; empty: none",
+            "type": "string",
+            "maxLength": 40
+          },
+          "price": {
+            "description": "the price as it is shown",
+            "type": "string",
+            "maxLength": 24,
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "description": {
+            "description": "one line about the dish; empty: none",
+            "type": "string",
+            "maxLength": 200
+          },
+          "badge": {
+            "description": "a short pill (new, spicy); empty: no badge",
+            "type": "string",
+            "maxLength": 24
+          }
+        }
+      }
+    }
+  }
+}

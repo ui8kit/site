@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://registry.buildy.tw/models/promo@1.schema.json",
+  "title": "PromoContent",
+  "description": "Promo content: one offer with the discount as a badge, the heading, the deadline as text, a description, an optional promo code, one action and a picture. One object is valid in every promo layout (the picture at the end, at the start, on top).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "title",
+    "deadline",
+    "imageAlt"
+  ],
+  "properties": {
+    "badge": {
+      "description": "the discount as a short pill (-20%); empty: no badge",
+      "type": "string",
+      "maxLength": 24
+    },
+    "title": {
+      "description": "the heading of the section",
+      "type": "string",
+      "maxLength": 120,
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "deadline": {
+      "description": "the deadline of the offer as it is shown (until 31 December)",
+      "type": "string",
+      "maxLength": 60,
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "description": {
+      "description": "one paragraph under the heading; empty: none",
+      "type": "string",
+      "maxLength": 400
+    },
+    "code": {
+      "description": "a promo code; empty: none",
+      "type": "string",
+      "maxLength": 24
+    },
+    "actionLabel": {
+      "description": "the label of the action; the link is drawn when the label and the address are both set",
+      "type": "string",
+      "maxLength": 40
+    },
+    "actionHref": {
+      "description": "the address of the action",
+      "type": "string",
+      "maxLength": 2048,
+      "pattern": "^(?:(?:https?|mailto|tel):|(?![A-Za-z][A-Za-z0-9+.-]*:))"
+    },
+    "image": {
+      "description": "address of the picture; none: the placeholder",
+      "type": "string",
+      "maxLength": 2048,
+      "pattern": "^(?:https?:|(?![A-Za-z][A-Za-z0-9+.-]*:))"
+    },
+    "imageAlt": {
+      "description": "alt text of the picture",
+      "type": "string",
+      "maxLength": 160,
+      "minLength": 1,
+      "pattern": "\\S"
+    }
+  }
+}

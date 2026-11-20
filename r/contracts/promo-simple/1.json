@@ -1,0 +1,123 @@
+{
+  "item": "promo-simple",
+  "version": 1,
+  "block": "block.promosimple",
+  "organism": "PromoSimple",
+  "line": "simple",
+  "model": "promo@1",
+  "modelSchema": "https://registry.buildy.tw/models/promo@1.schema.json",
+  "axes": {
+    "media": [
+      "end",
+      "start",
+      "top"
+    ]
+  },
+  "defaults": {
+    "media": "end"
+  },
+  "variants": [
+    {
+      "id": "mediaEnd",
+      "label": "Picture at the end",
+      "axes": {
+        "media": "end"
+      }
+    },
+    {
+      "id": "mediaStart",
+      "label": "Picture at the start",
+      "axes": {
+        "media": "start"
+      }
+    },
+    {
+      "id": "mediaTop",
+      "label": "Wide picture on top",
+      "axes": {
+        "media": "top"
+      },
+      "settings": {
+        "align": "center"
+      }
+    }
+  ],
+  "defaultVariant": "mediaEnd",
+  "settings": {
+    "level": {
+      "type": "1 | 2 | 3",
+      "default": 2
+    },
+    "padding": {
+      "type": "\"compact\" | \"standard\" | \"spacious\"",
+      "default": "standard"
+    },
+    "align": {
+      "type": "\"start\" | \"center\" | \"end\"",
+      "default": "start"
+    },
+    "landmarkLabel": {
+      "type": "string"
+    }
+  },
+  "modes": [
+    "wireframe"
+  ],
+  "defaultMode": "wireframe",
+  "places": [
+    {
+      "place": "badge",
+      "kind": "badge",
+      "fields": [
+        "/badge"
+      ]
+    },
+    {
+      "place": "title",
+      "kind": "heading",
+      "fields": [
+        "/title"
+      ]
+    },
+    {
+      "place": "deadline",
+      "kind": "text",
+      "fields": [
+        "/deadline"
+      ]
+    },
+    {
+      "place": "description",
+      "kind": "text",
+      "fields": [
+        "/description"
+      ]
+    },
+    {
+      "place": "code",
+      "kind": "text",
+      "fields": [
+        "/code"
+      ]
+    },
+    {
+      "place": "action",
+      "kind": "action",
+      "fields": [
+        "/actionLabel",
+        "/actionHref"
+      ]
+    },
+    {
+      "place": "media",
+      "kind": "media",
+      "fields": [
+        "/image",
+        "/imageAlt"
+      ]
+    }
+  ],
+  "wireframe": {
+    "items": 3
+  }
+}

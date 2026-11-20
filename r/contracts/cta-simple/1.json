@@ -1,0 +1,138 @@
+{
+  "item": "cta-simple",
+  "version": 1,
+  "block": "block.ctasimple",
+  "organism": "CtaSimple",
+  "line": "simple",
+  "model": "cta@1",
+  "modelSchema": "https://registry.buildy.tw/models/cta@1.schema.json",
+  "axes": {
+    "layout": [
+      "stack",
+      "between"
+    ],
+    "surface": [
+      "muted",
+      "outline"
+    ]
+  },
+  "defaults": {
+    "layout": "stack",
+    "surface": "muted"
+  },
+  "variants": [
+    {
+      "id": "center",
+      "label": "Centred band",
+      "axes": {
+        "layout": "stack",
+        "surface": "muted"
+      }
+    },
+    {
+      "id": "start",
+      "label": "At the start",
+      "axes": {
+        "layout": "stack",
+        "surface": "muted"
+      },
+      "settings": {
+        "align": "start"
+      }
+    },
+    {
+      "id": "between",
+      "label": "Buttons at the end",
+      "axes": {
+        "layout": "between",
+        "surface": "muted"
+      },
+      "settings": {
+        "align": "start"
+      }
+    },
+    {
+      "id": "centerOutline",
+      "label": "Centred, outlined",
+      "axes": {
+        "layout": "stack",
+        "surface": "outline"
+      }
+    },
+    {
+      "id": "betweenOutline",
+      "label": "Buttons at the end, outlined",
+      "axes": {
+        "layout": "between",
+        "surface": "outline"
+      },
+      "settings": {
+        "align": "start"
+      }
+    }
+  ],
+  "defaultVariant": "center",
+  "settings": {
+    "level": {
+      "type": "1 | 2 | 3",
+      "default": 2
+    },
+    "padding": {
+      "type": "\"compact\" | \"standard\" | \"spacious\"",
+      "default": "standard"
+    },
+    "align": {
+      "type": "\"start\" | \"center\" | \"end\"",
+      "default": "center"
+    },
+    "landmarkLabel": {
+      "type": "string"
+    }
+  },
+  "modes": [
+    "wireframe"
+  ],
+  "defaultMode": "wireframe",
+  "places": [
+    {
+      "place": "badge",
+      "kind": "badge",
+      "fields": [
+        "/badge"
+      ]
+    },
+    {
+      "place": "title",
+      "kind": "heading",
+      "fields": [
+        "/title"
+      ]
+    },
+    {
+      "place": "description",
+      "kind": "text",
+      "fields": [
+        "/description"
+      ]
+    },
+    {
+      "place": "action",
+      "kind": "action",
+      "fields": [
+        "/actionLabel",
+        "/actionHref"
+      ]
+    },
+    {
+      "place": "secondaryAction",
+      "kind": "action",
+      "fields": [
+        "/secondaryActionLabel",
+        "/secondaryActionHref"
+      ]
+    }
+  ],
+  "wireframe": {
+    "items": 3
+  }
+}

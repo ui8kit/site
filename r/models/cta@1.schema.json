@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://registry.buildy.tw/models/cta@1.schema.json",
+  "title": "CtaContent",
+  "description": "Call to action content: an optional badge, the heading, a description, up to two actions. One object is valid in every call to action layout (centred, at the start, the actions at the end; muted or outlined).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "title"
+  ],
+  "properties": {
+    "badge": {
+      "description": "a short pill above the heading; empty: no badge",
+      "type": "string",
+      "maxLength": 40
+    },
+    "title": {
+      "description": "the heading of the section",
+      "type": "string",
+      "maxLength": 120,
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "description": {
+      "description": "one paragraph under the heading; empty: none",
+      "type": "string",
+      "maxLength": 400
+    },
+    "actionLabel": {
+      "description": "the label of the action; the link is drawn when the label and the address are both set",
+      "type": "string",
+      "maxLength": 40
+    },
+    "actionHref": {
+      "description": "the address of the action",
+      "type": "string",
+      "maxLength": 2048,
+      "pattern": "^(?:(?:https?|mailto|tel):|(?![A-Za-z][A-Za-z0-9+.-]*:))"
+    },
+    "secondaryActionLabel": {
+      "description": "the label of the second action; the link is drawn when the label and the address are both set",
+      "type": "string",
+      "maxLength": 40
+    },
+    "secondaryActionHref": {
+      "description": "the address of the second action",
+      "type": "string",
+      "maxLength": 2048,
+      "pattern": "^(?:(?:https?|mailto|tel):|(?![A-Za-z][A-Za-z0-9+.-]*:))"
+    }
+  }
+}
