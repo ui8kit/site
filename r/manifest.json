@@ -9,10 +9,10 @@
     "items": {
       "article-lead@1": {
         "block": "block.articlelead",
-        "bytes": 1817,
+        "bytes": 1903,
         "model": "article-lead@1",
         "path": "contracts/article-lead/1.json",
-        "sha256": "b3bbbcda02d63e06f44acc9d1dc633ae5a8f2ee7cb3ce0072f53daaf3f845cf7",
+        "sha256": "8b293a8e7cec0f45fe744e31c5183fea0047725854cbdb7f1c8e38dee4456c9b",
         "version": 1
       },
       "article-simple@1": {
@@ -329,7 +329,7 @@
       }
     },
     "source": {
-      "manifest": "23bbec7057ab1ea57fa88ce31d5a9f22df286757b1b7659d2ab8940b1dfc6971"
+      "manifest": "899b2221e3236e44ec6001bd1e8f174fef35e5f3c7ab4e006913fc36c3e9e535"
     }
   },
   "models": {
@@ -1090,8 +1090,8 @@
         "compare-simple": {
           "files": {
             "blocks/compare-simple.html.j2": {
-              "bytes": 5562,
-              "sha256": "4acf4344a248488e259258c0fe565a0e30e8ca4b69f2c16aa76e875697a2eb01"
+              "bytes": 5555,
+              "sha256": "ebd3dc45ee8281c72b2b0ccafefdde40630d620a2afc50ed25932e6ecca2cc4f"
             }
           },
           "type": "registry:block"
@@ -1144,8 +1144,8 @@
         "course-outline": {
           "files": {
             "blocks/course-outline.html.j2": {
-              "bytes": 5379,
-              "sha256": "31fc8ffbb6f1413d349acd3b1d0a71b6a9270e59666db2ec685e556885c1df8d"
+              "bytes": 5372,
+              "sha256": "3a118849758d6463f0bf908384252b641de95435976963710059d3fdef55b98a"
             }
           },
           "type": "registry:block"
@@ -2987,8 +2987,8 @@
         "pricing-simple": {
           "files": {
             "blocks/pricing-simple.html.j2": {
-              "bytes": 5930,
-              "sha256": "c02ec1b06f4f5321b44aef47606f3057294fb9a38f1f6b675208d2bec31f739a"
+              "bytes": 5923,
+              "sha256": "9464a2a50ca63054664781e6b202462f3de2eeff35f175cfb41b466f9254fc1f"
             }
           },
           "type": "registry:block"
@@ -3059,8 +3059,8 @@
         "product-reviews": {
           "files": {
             "blocks/product-reviews.html.j2": {
-              "bytes": 5614,
-              "sha256": "6bb5d0956f6bfc7c03aedba87b53077a012a5bb789b229a25c0df490d4929587"
+              "bytes": 5607,
+              "sha256": "35fc5e5b7aa7647af00e173182f27c267a0025dfcae4a29f4dd89921f7070154"
             }
           },
           "type": "registry:block"
@@ -3077,8 +3077,8 @@
         "products-simple": {
           "files": {
             "blocks/products-simple.html.j2": {
-              "bytes": 5575,
-              "sha256": "6249c50e15a4a6e5c2adb746e8d248547ff645d756806ba520d1b70cd812b134"
+              "bytes": 5568,
+              "sha256": "bd526fb3abb9fec71d6be60435d6d7c381dd2d5d27e89a54754764e0c673d2b4"
             }
           },
           "type": "registry:block"
@@ -3603,8 +3603,8 @@
         "specs-simple": {
           "files": {
             "blocks/specs-simple.html.j2": {
-              "bytes": 4211,
-              "sha256": "922779c53256772aabced85243560c9b95a9f0004074d230666c95272ddd1026"
+              "bytes": 4204,
+              "sha256": "6850e535ae395198bbae85912535ae941ca57484782610e006a35be06e114d6b"
             }
           },
           "type": "registry:block"
@@ -4008,8 +4008,8 @@
         "topics-simple": {
           "files": {
             "blocks/topics-simple.html.j2": {
-              "bytes": 5653,
-              "sha256": "f592560e9588bb3c8e8f14ed610aafea918ef4c082a524ffbd818a1142ff0e8c"
+              "bytes": 5646,
+              "sha256": "7765e2ba23a83dce8355e0ac1391eab9885da1d17c3c4441a5e57c501e7adb67"
             }
           },
           "type": "registry:block"
@@ -4651,8 +4651,8 @@
         "compare-simple": {
           "files": {
             "blocks/compare-simple.latte": {
-              "bytes": 5524,
-              "sha256": "b6b91961e15fc6b4da728c1bce48018be5dbb106349306299178d280cd491089"
+              "bytes": 5517,
+              "sha256": "dcc740f47679fb037d66c43d2e1aca97c8e1b465ebc7c716ae756da5a762331c"
             }
           },
           "type": "registry:block"
@@ -4705,8 +4705,8 @@
         "course-outline": {
           "files": {
             "blocks/course-outline.latte": {
-              "bytes": 5317,
-              "sha256": "415e25f0c38fe8cbee7872f02d6ed6f3c14abf6ead8a8e0304736ab12570d3bd"
+              "bytes": 5310,
+              "sha256": "8233b544f661c834c252ee43c965134cc04b53d2b269b5c19204aafaec2857bf"
             }
           },
           "type": "registry:block"
@@ -6544,8 +6544,8 @@
         "pricing-simple": {
           "files": {
             "blocks/pricing-simple.latte": {
-              "bytes": 5855,
-              "sha256": "a42e2960df28ba1fb42b584907fd9cdcf4099d2a35af89dba924dc67ad95eabc"
+              "bytes": 5848,
+              "sha256": "d519193c7bc396e218466409db4d1a8d1b89df6d1eece969d0207db525c2633d"
             }
           },
           "type": "registry:block"
@@ -6616,8 +6616,8 @@
         "product-reviews": {
           "files": {
             "blocks/product-reviews.latte": {
-              "bytes": 5590,
-              "sha256": "b72830f9532c2cf38f847fc41d014512309d95fdb8bf4b54f56b24ae9b928cf9"
+              "bytes": 5583,
+              "sha256": "9bdafabd9edf15f4e47ee65cf2e574b775da46f5d28742b7be1f62eb9868f60f"
             }
           },
           "type": "registry:block"
@@ -6634,8 +6634,8 @@
         "products-simple": {
           "files": {
             "blocks/products-simple.latte": {
-              "bytes": 5531,
-              "sha256": "6bf358c7987befa82b67ae40304e9add1234a6bdba406431367d268f3dac8b85"
+              "bytes": 5524,
+              "sha256": "183317a93a6bb7738bdf986cc380426afd1e53754f9349c8f5b62ef45e487be5"
             }
           },
           "type": "registry:block"
@@ -7160,8 +7160,8 @@
         "specs-simple": {
           "files": {
             "blocks/specs-simple.latte": {
-              "bytes": 4155,
-              "sha256": "4b4cc7857c0d612a0517e7aad923d0d8cf6a48de197cc70830d2a0d5434402ca"
+              "bytes": 4148,
+              "sha256": "f5fbc2a734a559a7cac6b82730d15d9131de36ade65ab7619c908a1b76b9bb9b"
             }
           },
           "type": "registry:block"
@@ -7565,8 +7565,8 @@
         "topics-simple": {
           "files": {
             "blocks/topics-simple.latte": {
-              "bytes": 5591,
-              "sha256": "58a1a982cc70854e98d935d56a5a581a6a825e87d1415057ffb1036dabead053"
+              "bytes": 5584,
+              "sha256": "306d10b308fed97f07e9255ac054ffa6a52555235f93604e9cbd34ec967c3ded"
             }
           },
           "type": "registry:block"
@@ -8293,8 +8293,8 @@
         "compare-simple": {
           "files": {
             "blocks/compare-simple.tsx": {
-              "bytes": 4064,
-              "sha256": "b0da249a4e50e783bd17b1bc9f12ee84da628568a4b1135e470d160b4213d15c"
+              "bytes": 4057,
+              "sha256": "17f8cb5cd7823fa4a5d383853866f92dcca4eac903b2d73eb3758ea80ed531d0"
             },
             "blocks/compare-simple.types.ts": {
               "bytes": 250,
@@ -8372,8 +8372,8 @@
         "course-outline": {
           "files": {
             "blocks/course-outline.tsx": {
-              "bytes": 4108,
-              "sha256": "b15a56bb5132dd1d0df73d41965f66a7a4c1786a09d36a4475b7ce2280daec0d"
+              "bytes": 4101,
+              "sha256": "97f47d0870b50e2e6004a9606fe55cd3c36719dc6eb4f0c6a2ac2cafce513dd0"
             },
             "blocks/course-outline.types.ts": {
               "bytes": 274,
@@ -10425,8 +10425,8 @@
         "pricing-simple": {
           "files": {
             "blocks/pricing-simple.tsx": {
-              "bytes": 4511,
-              "sha256": "452b7a9e85ba4a4d9a5d5179cdf57c92c0b3877e42a39f1d3f39b60b7441f6a8"
+              "bytes": 4504,
+              "sha256": "c9aa4fa2fdfb19782c995751d5b29ac901a5b3181d93701dfd615fd79c971023"
             },
             "blocks/pricing-simple.types.ts": {
               "bytes": 321,
@@ -10517,8 +10517,8 @@
         "product-reviews": {
           "files": {
             "blocks/product-reviews.tsx": {
-              "bytes": 4337,
-              "sha256": "4a35b94d72857daec50caea55c1d4f63f858a66839bcee1fc93213f84636d410"
+              "bytes": 4330,
+              "sha256": "89b785d7dada46c8ac88996917d934c4676646c530a28cd06bc00c047361dba5"
             },
             "blocks/product-reviews.types.ts": {
               "bytes": 292,
@@ -10543,8 +10543,8 @@
         "products-simple": {
           "files": {
             "blocks/products-simple.tsx": {
-              "bytes": 4281,
-              "sha256": "3070619c2802ff1ed7b5838fa1c84581f7f0f6f2ac11ecbc2bd6ed15ce45f8d3"
+              "bytes": 4274,
+              "sha256": "f05ed53d7459664299f7b9cd9f2992b8fe19ea1a1ce6890d83b2921787ab12d5"
             },
             "blocks/products-simple.types.ts": {
               "bytes": 267,
@@ -11142,8 +11142,8 @@
         "specs-simple": {
           "files": {
             "blocks/specs-simple.tsx": {
-              "bytes": 3339,
-              "sha256": "2fe71d5bcd658f4c704d71c034c720deba82f5b9aedf6468b2a4e562d9dac2ae"
+              "bytes": 3332,
+              "sha256": "b816c6351c4a3993b86f59a2b0808e67bcbd3dd8282d4840ab4fe18c6713b86f"
             },
             "blocks/specs-simple.types.ts": {
               "bytes": 235,
@@ -11772,8 +11772,8 @@
         "topics-simple": {
           "files": {
             "blocks/topics-simple.tsx": {
-              "bytes": 4343,
-              "sha256": "be018292b0388e3177c85346ad3de704e78e140aebb029cd5ca3351df0a19d46"
+              "bytes": 4336,
+              "sha256": "9704355029226f4f603c41a972f90d7a9d2d3b1a6720f1bf12384bf223624d8b"
             },
             "blocks/topics-simple.types.ts": {
               "bytes": 271,
@@ -12584,8 +12584,8 @@
         "compare-simple": {
           "files": {
             "blocks/compare-simple.tsx": {
-              "bytes": 4002,
-              "sha256": "0dbfe1acb1679fee4f36052bde7da27e8c8dd5bace72242c949f086b50751b7e"
+              "bytes": 3995,
+              "sha256": "de2eef1b75ea0e027a40aed779866b6ee028165852381d365eabd77271e71d49"
             },
             "blocks/compare-simple.types.ts": {
               "bytes": 250,
@@ -12663,8 +12663,8 @@
         "course-outline": {
           "files": {
             "blocks/course-outline.tsx": {
-              "bytes": 4062,
-              "sha256": "6faef89dd82af378e5d7487dd9d72d7956bbf958c0a577d01f575498bd151bab"
+              "bytes": 4055,
+              "sha256": "268947f9c8e7238386fa1450fa7854ff68105a88936473d29a8fd0e37fd7d423"
             },
             "blocks/course-outline.types.ts": {
               "bytes": 274,
@@ -14707,8 +14707,8 @@
         "pricing-simple": {
           "files": {
             "blocks/pricing-simple.tsx": {
-              "bytes": 4422,
-              "sha256": "77267544170e5703d01d78a0ef3219a6fa044233ca049e06020d396f8e478874"
+              "bytes": 4415,
+              "sha256": "19d7bc4252a34b3700e52b838337f89f07bde70e28084ef95905a5b1f7a3f834"
             },
             "blocks/pricing-simple.types.ts": {
               "bytes": 321,
@@ -14799,8 +14799,8 @@
         "product-reviews": {
           "files": {
             "blocks/product-reviews.tsx": {
-              "bytes": 4237,
-              "sha256": "b78b328e2f52ee127891d43e0e25e0e73ea5f3b8484e801832c1804e0255f398"
+              "bytes": 4230,
+              "sha256": "d80f9f1f03b2c70267f3b14d777015893960e503214ec55a457be536c4775291"
             },
             "blocks/product-reviews.types.ts": {
               "bytes": 292,
@@ -14825,8 +14825,8 @@
         "products-simple": {
           "files": {
             "blocks/products-simple.tsx": {
-              "bytes": 4235,
-              "sha256": "9c8bfbff37bd12cd505597038c9873ec7e92aa1a3f79ad0ffefab7b359b60ba8"
+              "bytes": 4228,
+              "sha256": "2e41dddd3bd4bbd5a369fd5b2b129b86c48def9c6f53069c77fd0abb26c9b579"
             },
             "blocks/products-simple.types.ts": {
               "bytes": 267,
@@ -15424,8 +15424,8 @@
         "specs-simple": {
           "files": {
             "blocks/specs-simple.tsx": {
-              "bytes": 3301,
-              "sha256": "68fa06b7e1f3909f4cc553052463c25c3be5febf3319da1f5bde7315bd249ccf"
+              "bytes": 3294,
+              "sha256": "06fa3c1b9db1adb7b0c8abbd9ca409a9610dd935496942c2516215437f1d9b8a"
             },
             "blocks/specs-simple.types.ts": {
               "bytes": 235,
@@ -16054,8 +16054,8 @@
         "topics-simple": {
           "files": {
             "blocks/topics-simple.tsx": {
-              "bytes": 4301,
-              "sha256": "16e624838cf442927ffaed06ee0886ce8f3c38cf401179705e7e2efcff9f4f5c"
+              "bytes": 4294,
+              "sha256": "8b6475522a6a4c704ad0642925f94cc66e39e3c6e1f6b3a0174e80173ce4f786"
             },
             "blocks/topics-simple.types.ts": {
               "bytes": 271,
@@ -16866,8 +16866,8 @@
         "compare-simple": {
           "files": {
             "blocks/compare-simple.svelte": {
-              "bytes": 4243,
-              "sha256": "e089a8597fca2b41c094e02eca7acff370343270cae6a6e9aeca43402be90b43"
+              "bytes": 4236,
+              "sha256": "1e361ba15762f793503bc6c8b0dcdcef07848598eb2e27f20e769ec42e195d19"
             },
             "blocks/compare-simple.types.ts": {
               "bytes": 250,
@@ -16945,8 +16945,8 @@
         "course-outline": {
           "files": {
             "blocks/course-outline.svelte": {
-              "bytes": 4323,
-              "sha256": "3d5ec50cc1ecf55668419882d474f501a5c1870cdb2b4de941c4ace8932f7321"
+              "bytes": 4316,
+              "sha256": "cf637bfc1fd2b07b70df0d16e7441f9e4912c0624f0e5d1f5ea70edd32f11a36"
             },
             "blocks/course-outline.types.ts": {
               "bytes": 274,
@@ -19009,8 +19009,8 @@
         "pricing-simple": {
           "files": {
             "blocks/pricing-simple.svelte": {
-              "bytes": 4713,
-              "sha256": "29ae6c5788c91198fb699af6c33492ecf43c799e9d216d2732ba8b80f68e658c"
+              "bytes": 4706,
+              "sha256": "69100bbba4cdd9651bb0eeaab1a5887d880fe581f69c896a332b46315601c416"
             },
             "blocks/pricing-simple.types.ts": {
               "bytes": 321,
@@ -19101,8 +19101,8 @@
         "product-reviews": {
           "files": {
             "blocks/product-reviews.svelte": {
-              "bytes": 4472,
-              "sha256": "c640e6bc90553774fc9dac799e730730cbc1b340066098c8a2bf25750b9d3453"
+              "bytes": 4465,
+              "sha256": "3e64525b5df75f0fac30d36b7c18dc2b829dc2832d428fddfd8f1644a6dd7cf4"
             },
             "blocks/product-reviews.types.ts": {
               "bytes": 292,
@@ -19127,8 +19127,8 @@
         "products-simple": {
           "files": {
             "blocks/products-simple.svelte": {
-              "bytes": 4528,
-              "sha256": "b3377102aad02e6ca8cb42050ec16ec4eca2aedfceaa4dded5564b2a588413f0"
+              "bytes": 4521,
+              "sha256": "07ec38e882dc37720f4fc298a7bf2b2331c72bd187ecc58c91b3828760039421"
             },
             "blocks/products-simple.types.ts": {
               "bytes": 267,
@@ -19726,8 +19726,8 @@
         "specs-simple": {
           "files": {
             "blocks/specs-simple.svelte": {
-              "bytes": 3564,
-              "sha256": "d7e9cfb5e794a4b8c89ae08ffa53cabb4b052ddf598f777b82a3da6559625bcb"
+              "bytes": 3557,
+              "sha256": "bbd7f2a7667d610bacac4d0c44d4633d44e0851d60e5ce61b62d6bf6a1719630"
             },
             "blocks/specs-simple.types.ts": {
               "bytes": 235,
@@ -20356,8 +20356,8 @@
         "topics-simple": {
           "files": {
             "blocks/topics-simple.svelte": {
-              "bytes": 4584,
-              "sha256": "30f03d8969d03f2499babcb4d5cad5dcacfa7ae7bee8dfa5847bbcab40c995a4"
+              "bytes": 4577,
+              "sha256": "f6f614ed8fd2c7019ff8e4235c0300160c30c6be7bbc2a430ba770050576c90b"
             },
             "blocks/topics-simple.types.ts": {
               "bytes": 271,
@@ -21083,8 +21083,8 @@
         "compare-simple": {
           "files": {
             "blocks/compare-simple.templ": {
-              "bytes": 5451,
-              "sha256": "045dbb49d9b4cd6666ebf430d2d75c7495a36e3eee428490e7fe465d0fafdc3d"
+              "bytes": 5444,
+              "sha256": "a23fe727c4124b368e3f1d875a0768681f620dd6625d878330c4ee7046795716"
             }
           },
           "type": "registry:block"
@@ -21137,8 +21137,8 @@
         "course-outline": {
           "files": {
             "blocks/course-outline.templ": {
-              "bytes": 5354,
-              "sha256": "573c23e60b7a1500dca2c3b24219ef12bb156e685d78333b15c92ac3f84ea1f0"
+              "bytes": 5347,
+              "sha256": "50976872bb4bb291f9f8e4d55604b0742b1ea1bec606146cc554782a892f1cd4"
             }
           },
           "type": "registry:block"
@@ -22968,8 +22968,8 @@
         "pricing-simple": {
           "files": {
             "blocks/pricing-simple.templ": {
-              "bytes": 5916,
-              "sha256": "ea1b7074d4127c9e523c754ff6985356f44900129ca025c0c1a77fd555a28b7e"
+              "bytes": 5909,
+              "sha256": "f4f9661fc2474b66c6337b8dc41925bb5ae2fd66da2133b511140be6b80c8965"
             }
           },
           "type": "registry:block"
@@ -23040,8 +23040,8 @@
         "product-reviews": {
           "files": {
             "blocks/product-reviews.templ": {
-              "bytes": 5496,
-              "sha256": "f4237ee69ef091774175d9de2b35b2913c21ba374c941bfa5cc2fff402db8945"
+              "bytes": 5489,
+              "sha256": "c5d02229f90c9d8fccdf3cad8b010ce612cef4de7152ad351d2c9dcfac8d8074"
             }
           },
           "type": "registry:block"
@@ -23058,8 +23058,8 @@
         "products-simple": {
           "files": {
             "blocks/products-simple.templ": {
-              "bytes": 5602,
-              "sha256": "30546a665b46304067a0d2abd4e3d7a569680fdb7175698051ef6c8f38c4d6ae"
+              "bytes": 5595,
+              "sha256": "29291e0ae8ef4be2127d4d2859fc7ce8f2401522ec18b47fcd919ca2d4590730"
             }
           },
           "type": "registry:block"
@@ -23588,8 +23588,8 @@
         "specs-simple": {
           "files": {
             "blocks/specs-simple.templ": {
-              "bytes": 4372,
-              "sha256": "a782f6a2b20e65b9553a985b752fcd0af1c8745b6fb78c56f92a0be4e425331c"
+              "bytes": 4365,
+              "sha256": "4430e94ddbcc3b1d318dd89a5cfa03099ebe52b9302fa3eb4dea6e474664e6b2"
             }
           },
           "type": "registry:block"
@@ -23993,8 +23993,8 @@
         "topics-simple": {
           "files": {
             "blocks/topics-simple.templ": {
-              "bytes": 5622,
-              "sha256": "9e5e5e1e7409ac37af31c9cdd57db2d4e4213e470ad7523d152ec0224aef4e1e"
+              "bytes": 5615,
+              "sha256": "f0bd1d38d1972be5c042c1e1d7d273e545102e8eba040b8cc2e9c3ff7a343ac1"
             }
           },
           "type": "registry:block"
@@ -24664,8 +24664,8 @@
         "compare-simple": {
           "files": {
             "blocks/compare-simple.html.twig": {
-              "bytes": 5668,
-              "sha256": "7c889585628b0eb77a7f3d0bbe05de01b5c4fb31acd7bfb68fa911d76564d9c8"
+              "bytes": 5661,
+              "sha256": "90942fd17d0d28739432113ed976405815c55aa3ab85d911bba215038533600b"
             }
           },
           "type": "registry:block"
@@ -24718,8 +24718,8 @@
         "course-outline": {
           "files": {
             "blocks/course-outline.html.twig": {
-              "bytes": 5449,
-              "sha256": "68fb65ff45d037201ec327d622f9bab875fcead269d25b8a5ecc6ae4c187d8fa"
+              "bytes": 5442,
+              "sha256": "68f763a611230e739baf9b1f41b7c7826f6c73156276623fe5319feb3a76b0cc"
             }
           },
           "type": "registry:block"
@@ -26557,8 +26557,8 @@
         "pricing-simple": {
           "files": {
             "blocks/pricing-simple.html.twig": {
-              "bytes": 6002,
-              "sha256": "46acd735a01c7c325314fbd1bdd001b957356323c94961bd9844ae577d53ce15"
+              "bytes": 5995,
+              "sha256": "785af8d66f51e481d7f05da2b1446fbeb581885ca2a4bbc1e00ec3187384519b"
             }
           },
           "type": "registry:block"
@@ -26629,8 +26629,8 @@
         "product-reviews": {
           "files": {
             "blocks/product-reviews.html.twig": {
-              "bytes": 5716,
-              "sha256": "0fdebccaa4a85f3c2d733ed8f2495d31831980f6becdbdbf62e64f5f23c873d5"
+              "bytes": 5709,
+              "sha256": "2ec6007c2778ce605ee6fc9bf6981761bb1056c58893b8255761e9a60f079cba"
             }
           },
           "type": "registry:block"
@@ -26647,8 +26647,8 @@
         "products-simple": {
           "files": {
             "blocks/products-simple.html.twig": {
-              "bytes": 5654,
-              "sha256": "1214fc4c1c12536891d178dfdcefc7d977e71bc84cc9a8a8a456b7dc0acb81f2"
+              "bytes": 5647,
+              "sha256": "bca1596002c9028b6e5958a49af6c4bfb76e8c9446061b9d58001f9cfa6f167e"
             }
           },
           "type": "registry:block"
@@ -27177,8 +27177,8 @@
         "specs-simple": {
           "files": {
             "blocks/specs-simple.html.twig": {
-              "bytes": 4243,
-              "sha256": "6f70e841565bd34e145a3656697f956b4aa787b95a62763430d93d15390542e1"
+              "bytes": 4236,
+              "sha256": "3d507dd9e0fb18995c3759e4c7b5c0a102c8595d7fac954d565bf88cbf0c7e5f"
             }
           },
           "type": "registry:block"
@@ -27582,8 +27582,8 @@
         "topics-simple": {
           "files": {
             "blocks/topics-simple.html.twig": {
-              "bytes": 5729,
-              "sha256": "793129b337f1eeecebbb0d37d2fda8280ea77cf3cd5c16bbed2dc304f15dc12e"
+              "bytes": 5722,
+              "sha256": "505972ecbe9f669f2df02eb1ece570e7a8a55a94b50886c58260c4cd0bf54194"
             }
           },
           "type": "registry:block"
@@ -28318,8 +28318,8 @@
               "sha256": "a8e754f6a889a0f3ad6b7a2cde108f20e2d7e1bf459a4f71837adcae43cb3433"
             },
             "blocks/compare-simple.vue": {
-              "bytes": 4224,
-              "sha256": "eda6aa6a86cc42cd4c088708889a8477ee56372eb804e5015d6c3b2f31f1ee3d"
+              "bytes": 4217,
+              "sha256": "68c05d9cdda9fda8d7d94b366ce83ef3a1d7ae81733e6591b8a99a60c3b5fbc1"
             }
           },
           "type": "registry:block"
@@ -28397,8 +28397,8 @@
               "sha256": "78e78a7e4199f70d2e34fdfd4f60c2173586fa4d9932f358365d6f1001f797fb"
             },
             "blocks/course-outline.vue": {
-              "bytes": 4215,
-              "sha256": "f9349bfc3b3ecac8402ab55a258859882479926c14d45c1cfc5c44cc2e0e7ec1"
+              "bytes": 4208,
+              "sha256": "d001e43250386e61e7c9433465d28f054918b6e3bcd521eb112b0d116e67909e"
             }
           },
           "type": "registry:block"
@@ -30461,8 +30461,8 @@
               "sha256": "4c5473b5e0d1a29f7e54d27397dfc4b2c779ca4f277d6eb7a6830371838a1d27"
             },
             "blocks/pricing-simple.vue": {
-              "bytes": 4612,
-              "sha256": "ca1255a2885e8e983604007a4761cd253d87c2609816cc15d88ef347e2f0880f"
+              "bytes": 4605,
+              "sha256": "9cdd6742f93eb9b141e655d568d05c720ce44bcba8eabbff33dcdb9132221af3"
             }
           },
           "type": "registry:block"
@@ -30553,8 +30553,8 @@
               "sha256": "1697716f2a2543983232c61f26e0996932519d039b5862ec0a6761c100f3b4e5"
             },
             "blocks/product-reviews.vue": {
-              "bytes": 4376,
-              "sha256": "c056188a9e9e89c79da6441ce71016d940786d2adcd3355e51472fc545e9fa1d"
+              "bytes": 4369,
+              "sha256": "447dc23c0f017a0be534f2cd2af571d2d5a7ee2f24a9d58877bcb5ba3dda7289"
             }
           },
           "type": "registry:block"
@@ -30579,8 +30579,8 @@
               "sha256": "9687fee7b50af30c60c6910430ba2487ec0099892b95f1f3b0a0de6b280fa451"
             },
             "blocks/products-simple.vue": {
-              "bytes": 4410,
-              "sha256": "db1437a890c2a15e1d832d465e47b3f6dd66dcd1a3928e37378b8b341682cf7f"
+              "bytes": 4403,
+              "sha256": "bff4ddce703d41d56f70e31b58941aa465a3cdab7f5eb8fcb8858b98ecfc5ed2"
             }
           },
           "type": "registry:block"
@@ -31178,8 +31178,8 @@
               "sha256": "160fe877db70d79761454b65d9d2833839c9054713ed5d31c3b24be781666626"
             },
             "blocks/specs-simple.vue": {
-              "bytes": 3585,
-              "sha256": "3867265c163d00ec47b0230995c9fb4d368b4f0877b3ee7aad73c6ab6c91d441"
+              "bytes": 3578,
+              "sha256": "8365033c1115459b27275a7e4bf2cf8121020e75baf7cbc622a83e3ba6181117"
             }
           },
           "type": "registry:block"
@@ -31808,8 +31808,8 @@
               "sha256": "8559de4c8b2dc7d2f3ccc648beb867c0adb117662953069cca3d46f8fbc9bf2a"
             },
             "blocks/topics-simple.vue": {
-              "bytes": 4425,
-              "sha256": "7880e475869e20719911e0d2706047b2b779c14965e6f8871d6b9b17dfb1808e"
+              "bytes": 4418,
+              "sha256": "459b49b67d3828bca1a6cc23e6e8ffd5dbd6c43bbe8115be580575e712463669"
             }
           },
           "type": "registry:block"
@@ -32026,8 +32026,8 @@
     }
   },
   "source": {
-    "commit": "7e237a3914b324025009612f601423704ecf2882",
-    "commitDate": "2026-11-20T22:34:11+03:00",
+    "commit": "7a0689469ae709833ce9659a876c7a82a04e6125",
+    "commitDate": "2026-11-20T22:48:08+03:00",
     "dirty": false,
     "repo": "private source monorepo"
   },

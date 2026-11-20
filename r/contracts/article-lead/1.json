@@ -77,13 +77,11 @@
       ]
     },
     {
-      "place": "media",
+      "place": "avatar",
       "kind": "media",
       "fields": [
         "/avatar",
-        "/author",
-        "/image",
-        "/imageAlt"
+        "/author"
       ]
     },
     {
@@ -98,6 +96,14 @@
       "kind": "text",
       "fields": [
         "/date"
+      ]
+    },
+    {
+      "place": "media",
+      "kind": "media",
+      "fields": [
+        "/image",
+        "/imageAlt"
       ]
     }
   ],

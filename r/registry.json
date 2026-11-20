@@ -6,7 +6,7 @@
       "article-lead@1": {
         "model": "article-lead@1",
         "path": "contracts/article-lead/1.json",
-        "sha256": "b3bbbcda02d63e06f44acc9d1dc633ae5a8f2ee7cb3ce0072f53daaf3f845cf7"
+        "sha256": "8b293a8e7cec0f45fe744e31c5183fea0047725854cbdb7f1c8e38dee4456c9b"
       },
       "article-simple@1": {
         "model": "article@1",
@@ -54196,7 +54196,7 @@
       "type": "registry:block"
     }
   ],
-  "lastUpdated": "2026-11-20T22:34:11+03:00",
+  "lastUpdated": "2026-11-20T22:48:08+03:00",
   "layout": "<runtime>/index.json + <runtime>/{components/ui,components,blocks,utils,lib,themes}/<name>.json; use r/<runtime> as registryUrl",
   "models": {
     "article-lead@1": {
@@ -54376,7 +54376,7 @@
     "latte",
     "jinja2"
   ],
-  "sourceCommit": "7e237a3914b324025009612f601423704ecf2882",
+  "sourceCommit": "7a0689469ae709833ce9659a876c7a82a04e6125",
   "variants": {
     "digest": "sha256:b76814541966e1c3e462fd3b15f165e6b6ae9fb7e1547f9e6b9a858c0f6f468e",
     "path": "variants/v0.json",
