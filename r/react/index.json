@@ -2088,7 +2088,7 @@
     },
     {
       "dependencies": [],
-      "description": "The heading, one paragraph, the address, the phone, a map link and the opening hours by day: side by side or in one narrow column, plain or on cards.",
+      "description": "The heading, one paragraph, the address (a link to the map), the phone and the opening hours by day: side by side or in one narrow column, plain or on cards.",
       "name": "hours-simple",
       "registryDependencies": [
         "compose",
@@ -5395,7 +5395,7 @@
       "type": "registry:block"
     }
   ],
-  "lastUpdated": "2026-11-21T02:06:59+03:00",
+  "lastUpdated": "2026-11-21T02:11:14+03:00",
   "registry": "ui",
   "version": "0.1.0"
 }

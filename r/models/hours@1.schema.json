@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://registry.buildy.tw/models/hours@1.schema.json",
   "title": "HoursContent",
-  "description": "Opening hours content: the heading, a description, the address, the phone and its link, an optional map link and the opening hours, a row per day or per days. One object is valid in every hours layout (side by side, one column; plain or on cards).",
+  "description": "Opening hours content: the heading, a description, the address, the phone and its link, an optional map address (the address links to it) and the opening hours, a row per day or per days. One object is valid in every hours layout (side by side, one column; plain or on cards).",
   "type": "object",
   "additionalProperties": false,
   "required": [
@@ -45,13 +45,8 @@
       "maxLength": 2048,
       "pattern": "^(?:(?:https?|mailto|tel):|(?![A-Za-z][A-Za-z0-9+.-]*:))"
     },
-    "mapLabel": {
-      "description": "the label of the map link; the link is drawn when the label and the address are both set",
-      "type": "string",
-      "maxLength": 40
-    },
     "mapHref": {
-      "description": "the address of the map",
+      "description": "the address of the map; set: the address is a link to it",
       "type": "string",
       "maxLength": 2048,
       "pattern": "^(?:(?:https?|mailto|tel):|(?![A-Za-z][A-Za-z0-9+.-]*:))"

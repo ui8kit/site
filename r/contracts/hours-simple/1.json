@@ -101,7 +101,8 @@
       "place": "address",
       "kind": "text",
       "fields": [
-        "/address"
+        "/address",
+        "/mapHref"
       ]
     },
     {
@@ -110,14 +111,6 @@
       "fields": [
         "/phone",
         "/phoneHref"
-      ]
-    },
-    {
-      "place": "mapLabel",
-      "kind": "text",
-      "fields": [
-        "/mapLabel",
-        "/mapHref"
       ]
     },
     {

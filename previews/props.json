@@ -7227,7 +7227,7 @@
  ],
  "hours-simple": [
   {
-   "docs": "The simple opening hours (model hours@1): the heading, a description, the address, the phone as a link, an optional map link and the opening hours as a list (the day or the days and the time per row). Axes: layout (columns: the address and the links at the start, the hours at the end from md up; stack: one narrow column, placed by the align setting), surface (plain, card: the address and the hours each on a card).",
+   "docs": "The simple opening hours (model hours@1): the heading, a description, the address, the phone as a link, the address as a link to the map when it has one, and the opening hours as a list (the day or the days and the time per row). Axes: layout (columns: the address and the links at the start, the hours at the end from md up; stack: one narrow column, placed by the align setting), surface (plain, card: the address and the hours each on a card).",
    "part": "HoursSimple",
    "rows": [
     {
@@ -7266,13 +7266,7 @@
     },
     {
      "default": "\"\"",
-     "desc": "the label of the map link; the link is drawn when the label and the address are both set",
-     "name": "mapLabel",
-     "type": "string"
-    },
-    {
-     "default": "\"\"",
-     "desc": "the address of the map",
+     "desc": "the address of the map; set: the address is a link to it",
      "name": "mapHref",
      "type": "string"
     },

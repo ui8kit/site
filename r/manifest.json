@@ -161,10 +161,10 @@
       },
       "hours-simple@1": {
         "block": "block.hourssimple",
-        "bytes": 2516,
+        "bytes": 2408,
         "model": "hours@1",
         "path": "contracts/hours-simple/1.json",
-        "sha256": "580ba25e5388d0325f0fa09a4848b2ea5aa8318a7441d4df2baf114f40c765dc",
+        "sha256": "69c709c07fb55db0c7d411dd28ae9055b60b96aede921b5cab9c8331a3cc7c4e",
         "version": 1
       },
       "intro-simple@1": {
@@ -369,7 +369,7 @@
       }
     },
     "source": {
-      "manifest": "42183adafc381d3cf0d9ddd2d271511db8ee359796cc5b85bed8eea25ba4f5cf"
+      "manifest": "4e5993eafd2860d4497d245378fb490ade869a9a549b19436d2f1d3021e3366c"
     }
   },
   "models": {
@@ -488,10 +488,10 @@
       "sha256": "b114d150cc77d9249b8793c9591a6242db9c8d55d94d0dd06bfe6aecd335eee6"
     },
     "hours@1": {
-      "bytes": 2856,
+      "bytes": 2735,
       "id": "hours@1",
       "path": "models/hours@1.schema.json",
-      "sha256": "94b25f2a4e394804ff6e99dce2178e92e6655ead1c552332287fad01dee310da"
+      "sha256": "92011a5a6ecf77b47936e8dd39a2de7a652fc847f28697fbc22dc565ac695e34"
     },
     "intro@1": {
       "bytes": 1836,
@@ -645,11 +645,11 @@
     }
   },
   "props": {
-    "bytes": 2117368,
-    "digest": "sha256:fac5984aee70cf4fd95d8508be03b03dd6c47d82824ea5581f2e93f3bf5d1d6a",
+    "bytes": 2117251,
+    "digest": "sha256:e022c7e247a750e3277fbb7a4f349ec3fdceea2e0a20897451389314e90f8094",
     "items": 161,
     "path": "props/v0.json",
-    "sha256": "dfb832e295578327b293d6c6d0866699b7b2f322e564128fda0af7dbc61198e6",
+    "sha256": "2c3a1f3d1b15bd608ee95b2c3c15596fedd1c84b3920d4e2b2cb20083f952ff3",
     "version": "0"
   },
   "runtimes": {
@@ -1988,8 +1988,8 @@
         "hours-simple": {
           "files": {
             "blocks/hours-simple.html.j2": {
-              "bytes": 6533,
-              "sha256": "0e7ecb819ea097764b2405eb1f52f4f0801f93050ad55b15662adbdba4b343a2"
+              "bytes": 6504,
+              "sha256": "9647687d1194c8d3d4133f788eb3e6748ebb86b40d3a7ea1ecdc1ad32da76859"
             }
           },
           "type": "registry:block"
@@ -5594,8 +5594,8 @@
         "hours-simple": {
           "files": {
             "blocks/hours-simple.latte": {
-              "bytes": 6479,
-              "sha256": "96435f1151d8dcbc53ecf7ce10c3c4e90f08eb99f10b94c728f2e3f3cd0e84ec"
+              "bytes": 6454,
+              "sha256": "64eb4d1ce9bd02efa57750bc9d9b6e82863085fddd9606297730ac3e78733d4b"
             }
           },
           "type": "registry:block"
@@ -9402,8 +9402,8 @@
         "hours-simple": {
           "files": {
             "blocks/hours-simple.tsx": {
-              "bytes": 4717,
-              "sha256": "146a9d53395f008cc545198270110777211327773a990f21933c878e11bb1eba"
+              "bytes": 4713,
+              "sha256": "03b6fd251ff28138d57e7cdf52bcc2631866f3413f41584a2e02f8505ab0349b"
             },
             "blocks/hours-simple.types.ts": {
               "bytes": 229,
@@ -13750,8 +13750,8 @@
         "hours-simple": {
           "files": {
             "blocks/hours-simple.tsx": {
-              "bytes": 4655,
-              "sha256": "30db5a208974257273ba4ca2472827fc3196e7afa389304dd0236e5e93949377"
+              "bytes": 4651,
+              "sha256": "bd1a068489c36ceecbf64ac668a54b4c81d0937e0db22c0a72f3afd008e1f1ee"
             },
             "blocks/hours-simple.types.ts": {
               "bytes": 229,
@@ -18089,8 +18089,8 @@
         "hours-simple": {
           "files": {
             "blocks/hours-simple.svelte": {
-              "bytes": 4944,
-              "sha256": "f9ed1edf4946f546142a27b0c98f2a841c8c2f0f24c1bbe403b6d33475a25c6c"
+              "bytes": 4940,
+              "sha256": "d9e3f4b22b1cafc80093ec3a62bae8f47cb587e90ba95a105dfffd99d275ff05"
             },
             "blocks/hours-simple.types.ts": {
               "bytes": 229,
@@ -22242,8 +22242,8 @@
         "hours-simple": {
           "files": {
             "blocks/hours-simple.templ": {
-              "bytes": 6308,
-              "sha256": "897716ffcf72c0df1861bc58dcc273faefde134ed9fa475774f97a0eff2cf325"
+              "bytes": 6241,
+              "sha256": "8494bbc4fa2047235c0300f169843e8ce13fb85dbadaa673b0ea542bb32b0ff9"
             }
           },
           "type": "registry:block"
@@ -25868,8 +25868,8 @@
         "hours-simple": {
           "files": {
             "blocks/hours-simple.html.twig": {
-              "bytes": 6633,
-              "sha256": "948bcc38d6cc222fd116a98a6fbe5a824fdf6df137bbd78949d663771aad493f"
+              "bytes": 6611,
+              "sha256": "52332b19ee2838d7f6cd77a91844aad56c9ea7a17e63f0956c8d341b148c72a0"
             }
           },
           "type": "registry:block"
@@ -29688,8 +29688,8 @@
               "sha256": "526e00965c00798375302d13fb4917adf3a40e29bfb8d1529d4b0c6f7a36ab31"
             },
             "blocks/hours-simple.vue": {
-              "bytes": 4873,
-              "sha256": "d86f6b8d2794e589d7381037646cdcb349acffd084b68c55a0fd38b67f2db82a"
+              "bytes": 4856,
+              "sha256": "583166fdf8b3a8994d9c3d87d677cec9fea44ddc4baad2b73d2639fa2c87112e"
             }
           },
           "type": "registry:block"
@@ -32504,8 +32504,8 @@
     }
   },
   "source": {
-    "commit": "832d6b46a2c1be01c38c9012f08819dd9a9461f5",
-    "commitDate": "2026-11-21T02:06:59+03:00",
+    "commit": "004a0b4140cfc719d4f1355a3d0d881c4cae0933",
+    "commitDate": "2026-11-21T02:11:14+03:00",
     "dirty": false,
     "repo": "private source monorepo"
   },

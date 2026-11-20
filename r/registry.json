@@ -101,7 +101,7 @@
       "hours-simple@1": {
         "model": "hours@1",
         "path": "contracts/hours-simple/1.json",
-        "sha256": "580ba25e5388d0325f0fa09a4848b2ea5aa8318a7441d4df2baf114f40c765dc"
+        "sha256": "69c709c07fb55db0c7d411dd28ae9055b60b96aede921b5cab9c8331a3cc7c4e"
       },
       "intro-simple@1": {
         "model": "intro@1",
@@ -21598,7 +21598,7 @@
     {
       "category": "marketing",
       "contract": "contracts/hours-simple/1.json",
-      "description": "The heading, one paragraph, the address, the phone, a map link and the opening hours by day: side by side or in one narrow column, plain or on cards.",
+      "description": "The heading, one paragraph, the address (a link to the map), the phone and the opening hours by day: side by side or in one narrow column, plain or on cards.",
       "group": "contact",
       "kind": "block",
       "model": "hours@1",
@@ -54998,7 +54998,7 @@
       "type": "registry:block"
     }
   ],
-  "lastUpdated": "2026-11-21T02:06:59+03:00",
+  "lastUpdated": "2026-11-21T02:11:14+03:00",
   "layout": "<runtime>/index.json + <runtime>/{components/ui,components,blocks,utils,lib,themes}/<name>.json; use r/<runtime> as registryUrl",
   "models": {
     "article-lead@1": {
@@ -55079,7 +55079,7 @@
     },
     "hours@1": {
       "path": "models/hours@1.schema.json",
-      "sha256": "94b25f2a4e394804ff6e99dce2178e92e6655ead1c552332287fad01dee310da"
+      "sha256": "92011a5a6ecf77b47936e8dd39a2de7a652fc847f28697fbc22dc565ac695e34"
     },
     "intro@1": {
       "path": "models/intro@1.schema.json",
@@ -55183,9 +55183,9 @@
     }
   },
   "props": {
-    "digest": "sha256:fac5984aee70cf4fd95d8508be03b03dd6c47d82824ea5581f2e93f3bf5d1d6a",
+    "digest": "sha256:e022c7e247a750e3277fbb7a4f349ec3fdceea2e0a20897451389314e90f8094",
     "path": "props/v0.json",
-    "sha256": "dfb832e295578327b293d6c6d0866699b7b2f322e564128fda0af7dbc61198e6",
+    "sha256": "2c3a1f3d1b15bd608ee95b2c3c15596fedd1c84b3920d4e2b2cb20083f952ff3",
     "version": "0"
   },
   "runtimes": [
@@ -55198,7 +55198,7 @@
     "latte",
     "jinja2"
   ],
-  "sourceCommit": "832d6b46a2c1be01c38c9012f08819dd9a9461f5",
+  "sourceCommit": "004a0b4140cfc719d4f1355a3d0d881c4cae0933",
   "variants": {
     "digest": "sha256:69ddffd21a4e36d94b5c2934c41d9d4600cba65127f5bb1068f7209352ef0d49",
     "path": "variants/v0.json",
