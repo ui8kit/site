@@ -48280,7 +48280,7 @@
       "type": "registry:block"
     }
   ],
-  "lastUpdated": "2026-11-20T14:25:01+03:00",
+  "lastUpdated": "2026-11-20T14:30:00+03:00",
   "layout": "<runtime>/index.json + <runtime>/{components/ui,components,blocks,utils,lib,themes}/<name>.json; use r/<runtime> as registryUrl",
   "models": {
     "hero@1": {
@@ -48308,7 +48308,7 @@
     "latte",
     "jinja2"
   ],
-  "sourceCommit": "3c5ff1af92bacfdebe0dbdb855ce51a810498f69",
+  "sourceCommit": "3208a03e2b43f1b147d46f1b9d2d924dd51b0d69",
   "variants": {
     "digest": "sha256:f355ccf988693f0459e1ab44ad51755a420fd8e01701f57b819113a9110cc8d7",
     "path": "variants/v0.json",
