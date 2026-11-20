@@ -1,0 +1,118 @@
+{
+  "item": "intro-simple",
+  "version": 1,
+  "block": "block.introsimple",
+  "organism": "IntroSimple",
+  "line": "simple",
+  "model": "intro@1",
+  "modelSchema": "https://registry.buildy.tw/models/intro@1.schema.json",
+  "axes": {
+    "place": [
+      "middle",
+      "bottom"
+    ]
+  },
+  "defaults": {
+    "place": "middle"
+  },
+  "variants": [
+    {
+      "id": "center",
+      "label": "Centred",
+      "axes": {
+        "place": "middle"
+      }
+    },
+    {
+      "id": "start",
+      "label": "At the start",
+      "axes": {
+        "place": "middle"
+      },
+      "settings": {
+        "align": "start"
+      }
+    },
+    {
+      "id": "bottomStart",
+      "label": "Low in the section, at the start",
+      "axes": {
+        "place": "bottom"
+      },
+      "settings": {
+        "align": "start"
+      }
+    },
+    {
+      "id": "bottomCenter",
+      "label": "Low in the section, centred",
+      "axes": {
+        "place": "bottom"
+      }
+    }
+  ],
+  "defaultVariant": "center",
+  "settings": {
+    "level": {
+      "type": "1 | 2 | 3",
+      "default": 2
+    },
+    "padding": {
+      "type": "\"compact\" | \"standard\" | \"spacious\"",
+      "default": "standard"
+    },
+    "align": {
+      "type": "\"start\" | \"center\" | \"end\"",
+      "default": "center"
+    },
+    "landmarkLabel": {
+      "type": "string"
+    }
+  },
+  "modes": [
+    "wireframe"
+  ],
+  "defaultMode": "wireframe",
+  "places": [
+    {
+      "place": "badge",
+      "kind": "badge",
+      "fields": [
+        "/badge"
+      ]
+    },
+    {
+      "place": "title",
+      "kind": "heading",
+      "fields": [
+        "/title"
+      ]
+    },
+    {
+      "place": "description",
+      "kind": "text",
+      "fields": [
+        "/description"
+      ]
+    },
+    {
+      "place": "action",
+      "kind": "action",
+      "fields": [
+        "/actionLabel",
+        "/actionHref"
+      ]
+    },
+    {
+      "place": "secondaryAction",
+      "kind": "action",
+      "fields": [
+        "/secondaryActionLabel",
+        "/secondaryActionHref"
+      ]
+    }
+  ],
+  "wireframe": {
+    "items": 3
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "item": "logos-simple",
+  "version": 1,
+  "block": "block.logossimple",
+  "organism": "LogosSimple",
+  "line": "simple",
+  "model": "logos@1",
+  "modelSchema": "https://registry.buildy.tw/models/logos@1.schema.json",
+  "axes": {
+    "surface": [
+      "plain",
+      "cards"
+    ]
+  },
+  "defaults": {
+    "surface": "plain"
+  },
+  "variants": [
+    {
+      "id": "row",
+      "label": "Logos in a row",
+      "axes": {
+        "surface": "plain"
+      }
+    },
+    {
+      "id": "cards",
+      "label": "Logos on cards",
+      "axes": {
+        "surface": "cards"
+      }
+    }
+  ],
+  "defaultVariant": "row",
+  "settings": {
+    "level": {
+      "type": "1 | 2 | 3",
+      "default": 2
+    },
+    "padding": {
+      "type": "\"compact\" | \"standard\" | \"spacious\"",
+      "default": "standard"
+    },
+    "align": {
+      "type": "\"start\" | \"center\" | \"end\"",
+      "default": "center"
+    },
+    "landmarkLabel": {
+      "type": "string"
+    }
+  },
+  "modes": [
+    "wireframe"
+  ],
+  "defaultMode": "wireframe",
+  "places": [
+    {
+      "place": "title",
+      "kind": "heading",
+      "fields": [
+        "/title"
+      ]
+    },
+    {
+      "place": "logos.image",
+      "kind": "media",
+      "fields": [
+        "/logos/*/image",
+        "/logos/*/title"
+      ],
+      "list": "logos"
+    }
+  ],
+  "wireframe": {
+    "items": 3
+  }
+}

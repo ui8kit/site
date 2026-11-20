@@ -1,0 +1,91 @@
+{
+  "item": "faq-simple",
+  "version": 1,
+  "block": "block.faqsimple",
+  "organism": "FaqSimple",
+  "line": "simple",
+  "model": "faq@1",
+  "modelSchema": "https://registry.buildy.tw/models/faq@1.schema.json",
+  "axes": {
+    "columns": [
+      "one",
+      "two"
+    ]
+  },
+  "defaults": {
+    "columns": "two"
+  },
+  "variants": [
+    {
+      "id": "grid2",
+      "label": "Two columns",
+      "axes": {
+        "columns": "two"
+      }
+    },
+    {
+      "id": "list",
+      "label": "One column",
+      "axes": {
+        "columns": "one"
+      }
+    }
+  ],
+  "defaultVariant": "grid2",
+  "settings": {
+    "level": {
+      "type": "1 | 2 | 3",
+      "default": 2
+    },
+    "padding": {
+      "type": "\"compact\" | \"standard\" | \"spacious\"",
+      "default": "standard"
+    },
+    "align": {
+      "type": "\"start\" | \"center\" | \"end\"",
+      "default": "start"
+    },
+    "landmarkLabel": {
+      "type": "string"
+    }
+  },
+  "modes": [
+    "wireframe"
+  ],
+  "defaultMode": "wireframe",
+  "places": [
+    {
+      "place": "title",
+      "kind": "heading",
+      "fields": [
+        "/title"
+      ]
+    },
+    {
+      "place": "description",
+      "kind": "text",
+      "fields": [
+        "/description"
+      ]
+    },
+    {
+      "place": "items.title",
+      "kind": "heading",
+      "fields": [
+        "/items/*/title"
+      ],
+      "list": "items"
+    },
+    {
+      "place": "items.description",
+      "kind": "text",
+      "fields": [
+        "/items/*/description"
+      ],
+      "list": "items"
+    }
+  ],
+  "wireframe": {
+    "items": 3
+  }
+}

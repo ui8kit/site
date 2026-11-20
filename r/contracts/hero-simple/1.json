@@ -10,35 +10,71 @@
     "media": [
       "end",
       "start",
-      "top"
+      "top",
+      "bottom"
+    ],
+    "ratio": [
+      "landscape",
+      "portrait"
     ]
   },
   "defaults": {
-    "media": "end"
+    "media": "end",
+    "ratio": "landscape"
   },
   "variants": [
     {
       "id": "mediaEnd",
       "label": "Picture at the end",
       "axes": {
-        "media": "end"
+        "media": "end",
+        "ratio": "landscape"
       }
     },
     {
       "id": "mediaStart",
       "label": "Picture at the start",
       "axes": {
-        "media": "start"
+        "media": "start",
+        "ratio": "landscape"
       }
     },
     {
       "id": "mediaTop",
       "label": "Wide picture on top",
       "axes": {
-        "media": "top"
+        "media": "top",
+        "ratio": "landscape"
       },
       "settings": {
         "align": "center"
+      }
+    },
+    {
+      "id": "mediaBottom",
+      "label": "Wide picture at the bottom",
+      "axes": {
+        "media": "bottom",
+        "ratio": "landscape"
+      },
+      "settings": {
+        "align": "center"
+      }
+    },
+    {
+      "id": "mediaEndPortrait",
+      "label": "Portrait picture at the end",
+      "axes": {
+        "media": "end",
+        "ratio": "portrait"
+      }
+    },
+    {
+      "id": "mediaStartPortrait",
+      "label": "Portrait picture at the start",
+      "axes": {
+        "media": "start",
+        "ratio": "portrait"
       }
     }
   ],
@@ -65,15 +101,6 @@
   ],
   "defaultMode": "wireframe",
   "places": [
-    {
-      "place": "media",
-      "kind": "media",
-      "fields": [
-        "/image",
-        "/imageAlt",
-        "/imageDark"
-      ]
-    },
     {
       "place": "badge",
       "kind": "badge",
@@ -109,6 +136,15 @@
       "fields": [
         "/secondaryActionLabel",
         "/secondaryActionHref"
+      ]
+    },
+    {
+      "place": "media",
+      "kind": "media",
+      "fields": [
+        "/image",
+        "/imageAlt",
+        "/imageDark"
       ]
     }
   ],

@@ -1,0 +1,153 @@
+{
+  "item": "gallery-hero",
+  "version": 1,
+  "block": "block.galleryhero",
+  "organism": "GalleryHero",
+  "line": "simple",
+  "model": "gallery@1",
+  "modelSchema": "https://registry.buildy.tw/models/gallery@1.schema.json",
+  "axes": {
+    "media": [
+      "end",
+      "start",
+      "bottom"
+    ],
+    "count": [
+      "3",
+      "4"
+    ]
+  },
+  "defaults": {
+    "media": "end",
+    "count": "3"
+  },
+  "variants": [
+    {
+      "id": "photos3",
+      "label": "Three photos at the end",
+      "axes": {
+        "media": "end",
+        "count": "3"
+      }
+    },
+    {
+      "id": "photos4",
+      "label": "Four photos at the end",
+      "axes": {
+        "media": "end",
+        "count": "4"
+      }
+    },
+    {
+      "id": "photos3Start",
+      "label": "Three photos at the start",
+      "axes": {
+        "media": "start",
+        "count": "3"
+      }
+    },
+    {
+      "id": "photos4Start",
+      "label": "Four photos at the start",
+      "axes": {
+        "media": "start",
+        "count": "4"
+      }
+    },
+    {
+      "id": "photos3Bottom",
+      "label": "Three photos under the copy",
+      "axes": {
+        "media": "bottom",
+        "count": "3"
+      },
+      "settings": {
+        "align": "center"
+      }
+    },
+    {
+      "id": "photos4Bottom",
+      "label": "Four photos under the copy",
+      "axes": {
+        "media": "bottom",
+        "count": "4"
+      },
+      "settings": {
+        "align": "center"
+      }
+    }
+  ],
+  "defaultVariant": "photos3",
+  "settings": {
+    "level": {
+      "type": "1 | 2 | 3",
+      "default": 2
+    },
+    "padding": {
+      "type": "\"compact\" | \"standard\" | \"spacious\"",
+      "default": "standard"
+    },
+    "align": {
+      "type": "\"start\" | \"center\" | \"end\"",
+      "default": "start"
+    },
+    "landmarkLabel": {
+      "type": "string"
+    }
+  },
+  "modes": [
+    "wireframe"
+  ],
+  "defaultMode": "wireframe",
+  "places": [
+    {
+      "place": "badge",
+      "kind": "badge",
+      "fields": [
+        "/badge"
+      ]
+    },
+    {
+      "place": "title",
+      "kind": "heading",
+      "fields": [
+        "/title"
+      ]
+    },
+    {
+      "place": "description",
+      "kind": "text",
+      "fields": [
+        "/description"
+      ]
+    },
+    {
+      "place": "action",
+      "kind": "action",
+      "fields": [
+        "/actionLabel",
+        "/actionHref"
+      ]
+    },
+    {
+      "place": "secondaryAction",
+      "kind": "action",
+      "fields": [
+        "/secondaryActionLabel",
+        "/secondaryActionHref"
+      ]
+    },
+    {
+      "place": "photos.image",
+      "kind": "media",
+      "fields": [
+        "/photos/*/image",
+        "/photos/*/imageAlt"
+      ],
+      "list": "photos"
+    }
+  ],
+  "wireframe": {
+    "items": 3
+  }
+}

@@ -1,0 +1,168 @@
+{
+  "item": "features-simple",
+  "version": 1,
+  "block": "block.featuressimple",
+  "organism": "FeaturesSimple",
+  "line": "simple",
+  "model": "features@1",
+  "modelSchema": "https://registry.buildy.tw/models/features@1.schema.json",
+  "axes": {
+    "layout": [
+      "stack",
+      "aside"
+    ],
+    "cols": [
+      "2",
+      "3",
+      "4"
+    ],
+    "marker": [
+      "top",
+      "inline"
+    ]
+  },
+  "defaults": {
+    "layout": "stack",
+    "cols": "3",
+    "marker": "top"
+  },
+  "variants": [
+    {
+      "id": "cols3",
+      "label": "Three columns",
+      "axes": {
+        "layout": "stack",
+        "cols": "3",
+        "marker": "top"
+      }
+    },
+    {
+      "id": "cols2",
+      "label": "Two columns",
+      "axes": {
+        "layout": "stack",
+        "cols": "2",
+        "marker": "top"
+      }
+    },
+    {
+      "id": "cols4",
+      "label": "Four columns",
+      "axes": {
+        "layout": "stack",
+        "cols": "4",
+        "marker": "top"
+      }
+    },
+    {
+      "id": "summaryRow",
+      "label": "The heading beside a row of three",
+      "axes": {
+        "layout": "aside",
+        "cols": "3",
+        "marker": "top"
+      },
+      "settings": {
+        "align": "start"
+      }
+    },
+    {
+      "id": "summaryGrid",
+      "label": "The heading beside a 2 x 2 grid",
+      "axes": {
+        "layout": "aside",
+        "cols": "2",
+        "marker": "top"
+      },
+      "settings": {
+        "align": "start"
+      }
+    },
+    {
+      "id": "inlineGrid",
+      "label": "Icons at the side, two columns",
+      "axes": {
+        "layout": "stack",
+        "cols": "2",
+        "marker": "inline"
+      }
+    },
+    {
+      "id": "checklist",
+      "label": "The heading beside a list with icons at the side",
+      "axes": {
+        "layout": "aside",
+        "cols": "2",
+        "marker": "inline"
+      },
+      "settings": {
+        "align": "start"
+      }
+    }
+  ],
+  "defaultVariant": "cols3",
+  "settings": {
+    "level": {
+      "type": "1 | 2 | 3",
+      "default": 2
+    },
+    "padding": {
+      "type": "\"compact\" | \"standard\" | \"spacious\"",
+      "default": "standard"
+    },
+    "align": {
+      "type": "\"start\" | \"center\" | \"end\"",
+      "default": "center"
+    },
+    "landmarkLabel": {
+      "type": "string"
+    }
+  },
+  "modes": [
+    "wireframe"
+  ],
+  "defaultMode": "wireframe",
+  "places": [
+    {
+      "place": "title",
+      "kind": "heading",
+      "fields": [
+        "/title"
+      ]
+    },
+    {
+      "place": "description",
+      "kind": "text",
+      "fields": [
+        "/description"
+      ]
+    },
+    {
+      "place": "items.image",
+      "kind": "media",
+      "fields": [
+        "/items/*/image"
+      ],
+      "list": "items"
+    },
+    {
+      "place": "items.title",
+      "kind": "heading",
+      "fields": [
+        "/items/*/title"
+      ],
+      "list": "items"
+    },
+    {
+      "place": "items.description",
+      "kind": "text",
+      "fields": [
+        "/items/*/description"
+      ],
+      "list": "items"
+    }
+  ],
+  "wireframe": {
+    "items": 3
+  }
+}

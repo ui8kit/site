@@ -1,0 +1,74 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://registry.buildy.tw/models/testimonials@1.schema.json",
+  "title": "TestimonialsContent",
+  "description": "Testimonials content: the heading, a description and an ordered list of one to six quotes, each with the words, the author, a role line and a portrait. One object is valid in every testimonials layout (cards in columns, rows with the portrait at the side, one centred quote).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "title",
+    "quotes"
+  ],
+  "properties": {
+    "title": {
+      "description": "the heading of the section",
+      "type": "string",
+      "maxLength": 120,
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "description": {
+      "description": "one paragraph under the heading; empty: none",
+      "type": "string",
+      "maxLength": 400
+    },
+    "quotes": {
+      "description": "the quotes, in the order they are shown",
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 6,
+      "items": {
+        "title": "SimpleQuote",
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "quote",
+          "title"
+        ],
+        "properties": {
+          "id": {
+            "description": "stable key of the entry (the Codex entry id)",
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]*$"
+          },
+          "quote": {
+            "description": "the words of the author",
+            "type": "string",
+            "maxLength": 400,
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "avatar": {
+            "description": "address of the portrait; none: the placeholder",
+            "type": "string",
+            "maxLength": 2048,
+            "pattern": "^(?:https?:|(?![A-Za-z][A-Za-z0-9+.-]*:))"
+          },
+          "title": {
+            "description": "the name of the author",
+            "type": "string",
+            "maxLength": 80,
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "description": {
+            "description": "the role and the company of the author; empty: none",
+            "type": "string",
+            "maxLength": 120
+          }
+        }
+      }
+    }
+  }
+}

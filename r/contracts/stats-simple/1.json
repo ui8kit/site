@@ -1,0 +1,123 @@
+{
+  "item": "stats-simple",
+  "version": 1,
+  "block": "block.statssimple",
+  "organism": "StatsSimple",
+  "line": "simple",
+  "model": "stats@1",
+  "modelSchema": "https://registry.buildy.tw/models/stats@1.schema.json",
+  "axes": {
+    "cols": [
+      "2",
+      "3",
+      "4"
+    ],
+    "surface": [
+      "plain",
+      "cards"
+    ]
+  },
+  "defaults": {
+    "cols": "4",
+    "surface": "plain"
+  },
+  "variants": [
+    {
+      "id": "cols4",
+      "label": "Four figures",
+      "axes": {
+        "cols": "4",
+        "surface": "plain"
+      }
+    },
+    {
+      "id": "cols3",
+      "label": "Three columns",
+      "axes": {
+        "cols": "3",
+        "surface": "plain"
+      }
+    },
+    {
+      "id": "cols2",
+      "label": "Two columns",
+      "axes": {
+        "cols": "2",
+        "surface": "plain"
+      }
+    },
+    {
+      "id": "cards4",
+      "label": "Four figures on cards",
+      "axes": {
+        "cols": "4",
+        "surface": "cards"
+      }
+    }
+  ],
+  "defaultVariant": "cols4",
+  "settings": {
+    "level": {
+      "type": "1 | 2 | 3",
+      "default": 2
+    },
+    "padding": {
+      "type": "\"compact\" | \"standard\" | \"spacious\"",
+      "default": "standard"
+    },
+    "align": {
+      "type": "\"start\" | \"center\" | \"end\"",
+      "default": "center"
+    },
+    "landmarkLabel": {
+      "type": "string"
+    }
+  },
+  "modes": [
+    "wireframe"
+  ],
+  "defaultMode": "wireframe",
+  "places": [
+    {
+      "place": "title",
+      "kind": "heading",
+      "fields": [
+        "/title"
+      ]
+    },
+    {
+      "place": "description",
+      "kind": "text",
+      "fields": [
+        "/description"
+      ]
+    },
+    {
+      "place": "items.value",
+      "kind": "text",
+      "fields": [
+        "/items/*/value"
+      ],
+      "list": "items"
+    },
+    {
+      "place": "items.title",
+      "kind": "heading",
+      "fields": [
+        "/items/*/title"
+      ],
+      "list": "items"
+    },
+    {
+      "place": "items.description",
+      "kind": "text",
+      "fields": [
+        "/items/*/description"
+      ],
+      "list": "items"
+    }
+  ],
+  "wireframe": {
+    "items": 4
+  }
+}

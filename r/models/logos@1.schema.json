@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://registry.buildy.tw/models/logos@1.schema.json",
+  "title": "LogosContent",
+  "description": "Logos content: the heading and an ordered list of three to eight logos, each a picture and the name it stands for. One object is valid in every logos layout.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "title",
+    "logos"
+  ],
+  "properties": {
+    "title": {
+      "description": "the heading of the section",
+      "type": "string",
+      "maxLength": 120,
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "logos": {
+      "description": "the logos, in the order they are shown",
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 8,
+      "items": {
+        "title": "SimpleLogo",
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "title"
+        ],
+        "properties": {
+          "id": {
+            "description": "stable key of the entry (the Codex entry id)",
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]*$"
+          },
+          "image": {
+            "description": "address of the logo; none: the placeholder",
+            "type": "string",
+            "maxLength": 2048,
+            "pattern": "^(?:https?:|(?![A-Za-z][A-Za-z0-9+.-]*:))"
+          },
+          "title": {
+            "description": "the name of the company (the alt text of the logo)",
+            "type": "string",
+            "maxLength": 80,
+            "minLength": 1,
+            "pattern": "\\S"
+          }
+        }
+      }
+    }
+  }
+}

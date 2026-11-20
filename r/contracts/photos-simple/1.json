@@ -1,0 +1,92 @@
+{
+  "item": "photos-simple",
+  "version": 1,
+  "block": "block.photossimple",
+  "organism": "PhotosSimple",
+  "line": "simple",
+  "model": "photos@1",
+  "modelSchema": "https://registry.buildy.tw/models/photos@1.schema.json",
+  "axes": {
+    "cols": [
+      "2",
+      "3",
+      "4"
+    ]
+  },
+  "defaults": {
+    "cols": "4"
+  },
+  "variants": [
+    {
+      "id": "row4",
+      "label": "Four in a row",
+      "axes": {
+        "cols": "4"
+      }
+    },
+    {
+      "id": "grid3",
+      "label": "Three columns",
+      "axes": {
+        "cols": "3"
+      }
+    },
+    {
+      "id": "diptych",
+      "label": "A pair",
+      "axes": {
+        "cols": "2"
+      }
+    }
+  ],
+  "defaultVariant": "row4",
+  "settings": {
+    "level": {
+      "type": "1 | 2 | 3",
+      "default": 2
+    },
+    "padding": {
+      "type": "\"compact\" | \"standard\" | \"spacious\"",
+      "default": "standard"
+    },
+    "align": {
+      "type": "\"start\" | \"center\" | \"end\"",
+      "default": "center"
+    },
+    "landmarkLabel": {
+      "type": "string"
+    }
+  },
+  "modes": [
+    "wireframe"
+  ],
+  "defaultMode": "wireframe",
+  "places": [
+    {
+      "place": "title",
+      "kind": "heading",
+      "fields": [
+        "/title"
+      ]
+    },
+    {
+      "place": "description",
+      "kind": "text",
+      "fields": [
+        "/description"
+      ]
+    },
+    {
+      "place": "photos.image",
+      "kind": "media",
+      "fields": [
+        "/photos/*/image",
+        "/photos/*/imageAlt"
+      ],
+      "list": "photos"
+    }
+  ],
+  "wireframe": {
+    "items": 4
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "item": "stories-simple",
+  "version": 1,
+  "block": "block.storiessimple",
+  "organism": "StoriesSimple",
+  "line": "simple",
+  "model": "stories@1",
+  "modelSchema": "https://registry.buildy.tw/models/stories@1.schema.json",
+  "axes": {
+    "layout": [
+      "grid",
+      "compact"
+    ],
+    "cols": [
+      "2",
+      "3"
+    ]
+  },
+  "defaults": {
+    "layout": "grid",
+    "cols": "3"
+  },
+  "variants": [
+    {
+      "id": "cols3",
+      "label": "Three columns",
+      "axes": {
+        "layout": "grid",
+        "cols": "3"
+      }
+    },
+    {
+      "id": "duo",
+      "label": "Two columns, wide covers",
+      "axes": {
+        "layout": "grid",
+        "cols": "2"
+      }
+    },
+    {
+      "id": "related3",
+      "label": "Compact rows on cards",
+      "axes": {
+        "layout": "compact",
+        "cols": "3"
+      }
+    }
+  ],
+  "defaultVariant": "cols3",
+  "settings": {
+    "level": {
+      "type": "1 | 2 | 3",
+      "default": 2
+    },
+    "padding": {
+      "type": "\"compact\" | \"standard\" | \"spacious\"",
+      "default": "standard"
+    },
+    "align": {
+      "type": "\"start\" | \"center\" | \"end\"",
+      "default": "center"
+    },
+    "landmarkLabel": {
+      "type": "string"
+    }
+  },
+  "modes": [
+    "wireframe"
+  ],
+  "defaultMode": "wireframe",
+  "places": [
+    {
+      "place": "title",
+      "kind": "heading",
+      "fields": [
+        "/title"
+      ]
+    },
+    {
+      "place": "description",
+      "kind": "text",
+      "fields": [
+        "/description"
+      ]
+    },
+    {
+      "place": "stories.image",
+      "kind": "media",
+      "fields": [
+        "/stories/*/image"
+      ],
+      "list": "stories"
+    },
+    {
+      "place": "stories.title",
+      "kind": "heading",
+      "fields": [
+        "/stories/*/title",
+        "/stories/*/href"
+      ],
+      "list": "stories"
+    },
+    {
+      "place": "stories.description",
+      "kind": "text",
+      "fields": [
+        "/stories/*/description"
+      ],
+      "list": "stories"
+    }
+  ],
+  "wireframe": {
+    "items": 3
+  }
+}

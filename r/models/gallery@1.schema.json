@@ -1,0 +1,88 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://registry.buildy.tw/models/gallery@1.schema.json",
+  "title": "GalleryContent",
+  "description": "Gallery hero content: an optional badge, the heading, a description, up to two actions and three or four photos. One object is valid in every gallery layout (a grid of photos at the end or the start, layered photos at the end or under the copy).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "title",
+    "photos"
+  ],
+  "properties": {
+    "badge": {
+      "description": "a short pill above the heading; empty: no badge",
+      "type": "string",
+      "maxLength": 40
+    },
+    "title": {
+      "description": "the heading of the section",
+      "type": "string",
+      "maxLength": 120,
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "description": {
+      "description": "one paragraph under the heading; empty: none",
+      "type": "string",
+      "maxLength": 400
+    },
+    "actionLabel": {
+      "description": "the label of the action; the link is drawn when the label and the address are both set",
+      "type": "string",
+      "maxLength": 40
+    },
+    "actionHref": {
+      "description": "the address of the action",
+      "type": "string",
+      "maxLength": 2048,
+      "pattern": "^(?:(?:https?|mailto|tel):|(?![A-Za-z][A-Za-z0-9+.-]*:))"
+    },
+    "secondaryActionLabel": {
+      "description": "the label of the second action (the secondary button after the first); drawn when the label and the address are both set; empty: none",
+      "type": "string",
+      "maxLength": 40
+    },
+    "secondaryActionHref": {
+      "description": "the address of the second action",
+      "type": "string",
+      "maxLength": 2048,
+      "pattern": "^(?:(?:https?|mailto|tel):|(?![A-Za-z][A-Za-z0-9+.-]*:))"
+    },
+    "photos": {
+      "description": "the photos, in the order they are shown (the layout shows three or four)",
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 4,
+      "items": {
+        "title": "GalleryPhoto",
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "imageAlt"
+        ],
+        "properties": {
+          "id": {
+            "description": "stable key of the entry (the Codex entry id)",
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]*$"
+          },
+          "image": {
+            "description": "address of the photo; none: the placeholder",
+            "type": "string",
+            "maxLength": 2048,
+            "pattern": "^(?:https?:|(?![A-Za-z][A-Za-z0-9+.-]*:))"
+          },
+          "imageAlt": {
+            "description": "alt text of the photo",
+            "type": "string",
+            "maxLength": 160,
+            "minLength": 1,
+            "pattern": "\\S"
+          }
+        }
+      }
+    }
+  }
+}

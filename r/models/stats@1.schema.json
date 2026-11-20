@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://registry.buildy.tw/models/stats@1.schema.json",
+  "title": "StatsContent",
+  "description": "Stats content: the heading, a description and an ordered list of two to four figures, each with a value, a label and an optional note. One object is valid in every stats layout.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "title",
+    "items"
+  ],
+  "properties": {
+    "title": {
+      "description": "the heading of the section",
+      "type": "string",
+      "maxLength": 120,
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "description": {
+      "description": "one paragraph under the heading; empty: none",
+      "type": "string",
+      "maxLength": 400
+    },
+    "items": {
+      "description": "the figures, in the order they are shown",
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 4,
+      "items": {
+        "title": "SimpleStat",
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "value",
+          "title"
+        ],
+        "properties": {
+          "id": {
+            "description": "stable key of the entry (the Codex entry id)",
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]*$"
+          },
+          "value": {
+            "description": "the figure as it is shown (12k, 99.9%, 4.8)",
+            "type": "string",
+            "maxLength": 16,
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "title": {
+            "description": "what the figure counts",
+            "type": "string",
+            "maxLength": 80,
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "description": {
+            "description": "a short note under the label; empty: none",
+            "type": "string",
+            "maxLength": 160
+          }
+        }
+      }
+    }
+  }
+}

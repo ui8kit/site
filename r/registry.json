@@ -3,24 +3,74 @@
   "contractVersion": "2.0.0",
   "contracts": {
     "items": {
+      "faq-simple@1": {
+        "model": "faq@1",
+        "path": "contracts/faq-simple/1.json",
+        "sha256": "ec0badfc25b5820b04f48d24f7d9770713e276d9f8985a283c9281ae2af0cc33"
+      },
+      "features-simple@1": {
+        "model": "features@1",
+        "path": "contracts/features-simple/1.json",
+        "sha256": "ec9b24f9241923f6d1dfc83a17c14590ff0e229e0416ef2d7bdca704e31c03e1"
+      },
+      "gallery-hero@1": {
+        "model": "gallery@1",
+        "path": "contracts/gallery-hero/1.json",
+        "sha256": "2297920f5ec7bb47c8673362971b10ecd7aa7e44f9108212217a7946ba88ff30"
+      },
       "hero-simple@1": {
         "model": "hero@1",
         "path": "contracts/hero-simple/1.json",
-        "sha256": "c9e275e63ebe4bd48487c744e4f4b70465fd669749e0c7213c87bd6ef15074da"
+        "sha256": "688efe720e94b29a5bc2e1cd35eb9024008693737f8e2e81db89d6f6ca63dbef"
+      },
+      "intro-simple@1": {
+        "model": "intro@1",
+        "path": "contracts/intro-simple/1.json",
+        "sha256": "8eccd2cf0f2e0e53b6dd1737b1c677da0f4fc82b7c85ada85fc0adbfd83801ab"
+      },
+      "logos-simple@1": {
+        "model": "logos@1",
+        "path": "contracts/logos-simple/1.json",
+        "sha256": "84b5b8d142a3bea0319c41f6fa8a70edc1f315e6140b39dad6721f10c6e78378"
+      },
+      "photos-simple@1": {
+        "model": "photos@1",
+        "path": "contracts/photos-simple/1.json",
+        "sha256": "21b8f6c36f967c774b79547e82011c9bb57bc05ae724b85c7fc7ebefea657514"
       },
       "split-simple@1": {
         "model": "split@1",
         "path": "contracts/split-simple/1.json",
         "sha256": "cb1936dc7bf74e33036b4051337c47f517fe370cef2d701180dee987e7edbc75"
       },
+      "stats-simple@1": {
+        "model": "stats@1",
+        "path": "contracts/stats-simple/1.json",
+        "sha256": "3f7deae3375323293e3e4781cdac763f13441fb4d0d521bfff24d1b33491d115"
+      },
+      "steps-simple@1": {
+        "model": "steps@1",
+        "path": "contracts/steps-simple/1.json",
+        "sha256": "5042753ebe5c3d48ea4947418350e42a4bf40cfb2056bb1d99cb0063f8854f8c"
+      },
+      "stories-simple@1": {
+        "model": "stories@1",
+        "path": "contracts/stories-simple/1.json",
+        "sha256": "900b8198869040e7fa2f1a8358cffd2e8c1caeafb4dc1373f2b221e06bf413c2"
+      },
       "team-simple@1": {
         "model": "team@1",
         "path": "contracts/team-simple/1.json",
         "sha256": "ff0b83a814f00624ee3200454fc70fd9fde1789e75412e94b2aeac5c172ed9a8"
+      },
+      "testimonials-simple@1": {
+        "model": "testimonials@1",
+        "path": "contracts/testimonials-simple/1.json",
+        "sha256": "e8bb4ab2a54963fa56dc96a13f79e1dc3b8327020cb0fc1c21fa5f07d9dae38b"
       }
     },
     "path": "contracts/v0.json",
-    "sha256": "75ac42f7b2a2fd1ca5de1b7e8a079f5b744067c8ab5258b7ba0d3fd6db7056ff"
+    "sha256": "7f47629625c4996943c388c2f705ff05d3ab87adbc48c3b824d3530c40c329e4"
   },
   "items": [
     {
@@ -12131,6 +12181,149 @@
     },
     {
       "category": "marketing",
+      "contract": "contracts/faq-simple/1.json",
+      "description": "The heading, one paragraph and the questions with their answers as a list, each under a rule, in two columns or one.",
+      "group": "faq",
+      "kind": "block",
+      "model": "faq@1",
+      "name": "faq-simple",
+      "runtimes": {
+        "jinja2": {
+          "dependencies": [],
+          "files": [
+            "blocks/faq-simple.html.j2"
+          ],
+          "path": "jinja2/blocks/faq-simple.json",
+          "registryDependencies": [
+            "block",
+            "container",
+            "list",
+            "list-item",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "latte": {
+          "dependencies": [],
+          "files": [
+            "blocks/faq-simple.latte"
+          ],
+          "path": "latte/blocks/faq-simple.json",
+          "registryDependencies": [
+            "block",
+            "container",
+            "list",
+            "list-item",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "react": {
+          "dependencies": [],
+          "files": [
+            "blocks/faq-simple.tsx",
+            "blocks/faq-simple.types.ts"
+          ],
+          "path": "react/blocks/faq-simple.json",
+          "registryDependencies": [
+            "compose",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/faq-simple.tsx",
+            "blocks/faq-simple.types.ts"
+          ],
+          "path": "solid/blocks/faq-simple.json",
+          "registryDependencies": [
+            "compose",
+            "utils"
+          ]
+        },
+        "svelte": {
+          "dependencies": [],
+          "files": [
+            "blocks/faq-simple.svelte",
+            "blocks/faq-simple.types.ts"
+          ],
+          "path": "svelte/blocks/faq-simple.json",
+          "registryDependencies": [
+            "block",
+            "container",
+            "list",
+            "list-item",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "templ": {
+          "dependencies": [],
+          "files": [
+            "blocks/faq-simple.templ"
+          ],
+          "path": "templ/blocks/faq-simple.json",
+          "registryDependencies": [
+            "block",
+            "container",
+            "kit-box",
+            "kit-text",
+            "list",
+            "list-item",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "twig": {
+          "dependencies": [],
+          "files": [
+            "blocks/faq-simple.html.twig"
+          ],
+          "path": "twig/blocks/faq-simple.json",
+          "registryDependencies": [
+            "block",
+            "container",
+            "list",
+            "list-item",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "vue": {
+          "dependencies": [],
+          "files": [
+            "blocks/faq-simple.types.ts",
+            "blocks/faq-simple.vue"
+          ],
+          "path": "vue/blocks/faq-simple.json",
+          "registryDependencies": [
+            "block",
+            "container",
+            "list",
+            "list-item",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        }
+      },
+      "title": "Faq Simple",
+      "type": "registry:block"
+    },
+    {
+      "category": "marketing",
       "description": "Questions beside the heading, a help card, a picture or a finder, or as cards in three or four columns.",
       "group": "faq",
       "kind": "block",
@@ -14021,6 +14214,157 @@
         }
       },
       "title": "Feature Tabs",
+      "type": "registry:block"
+    },
+    {
+      "category": "marketing",
+      "contract": "contracts/features-simple/1.json",
+      "description": "The heading, one paragraph and the features as a list (an icon disc, a title, a line): in columns under the heading or beside it, the icon on top or at the side.",
+      "group": "features",
+      "kind": "block",
+      "model": "features@1",
+      "name": "features-simple",
+      "runtimes": {
+        "jinja2": {
+          "dependencies": [],
+          "files": [
+            "blocks/features-simple.html.j2"
+          ],
+          "path": "jinja2/blocks/features-simple.json",
+          "registryDependencies": [
+            "block",
+            "container",
+            "list",
+            "list-item",
+            "media-frame",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "latte": {
+          "dependencies": [],
+          "files": [
+            "blocks/features-simple.latte"
+          ],
+          "path": "latte/blocks/features-simple.json",
+          "registryDependencies": [
+            "block",
+            "container",
+            "list",
+            "list-item",
+            "media-frame",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "react": {
+          "dependencies": [],
+          "files": [
+            "blocks/features-simple.tsx",
+            "blocks/features-simple.types.ts"
+          ],
+          "path": "react/blocks/features-simple.json",
+          "registryDependencies": [
+            "compose",
+            "media-frame",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/features-simple.tsx",
+            "blocks/features-simple.types.ts"
+          ],
+          "path": "solid/blocks/features-simple.json",
+          "registryDependencies": [
+            "compose",
+            "media-frame",
+            "utils"
+          ]
+        },
+        "svelte": {
+          "dependencies": [],
+          "files": [
+            "blocks/features-simple.svelte",
+            "blocks/features-simple.types.ts"
+          ],
+          "path": "svelte/blocks/features-simple.json",
+          "registryDependencies": [
+            "block",
+            "container",
+            "list",
+            "list-item",
+            "media-frame",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "templ": {
+          "dependencies": [],
+          "files": [
+            "blocks/features-simple.templ"
+          ],
+          "path": "templ/blocks/features-simple.json",
+          "registryDependencies": [
+            "block",
+            "container",
+            "kit-box",
+            "kit-text",
+            "list",
+            "list-item",
+            "media-frame",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "twig": {
+          "dependencies": [],
+          "files": [
+            "blocks/features-simple.html.twig"
+          ],
+          "path": "twig/blocks/features-simple.json",
+          "registryDependencies": [
+            "block",
+            "container",
+            "list",
+            "list-item",
+            "media-frame",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "vue": {
+          "dependencies": [],
+          "files": [
+            "blocks/features-simple.types.ts",
+            "blocks/features-simple.vue"
+          ],
+          "path": "vue/blocks/features-simple.json",
+          "registryDependencies": [
+            "block",
+            "container",
+            "list",
+            "list-item",
+            "media-frame",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        }
+      },
+      "title": "Features Simple",
       "type": "registry:block"
     },
     {
@@ -16753,6 +17097,182 @@
       "type": "registry:ui"
     },
     {
+      "category": "marketing",
+      "contract": "contracts/gallery-hero/1.json",
+      "description": "A badge, the heading, one paragraph and up to two links as the actions beside three or four photos: at the end, at the start, or in a row under the copy.",
+      "group": "hero",
+      "kind": "block",
+      "model": "gallery@1",
+      "name": "gallery-hero",
+      "runtimes": {
+        "jinja2": {
+          "dependencies": [],
+          "files": [
+            "blocks/gallery-hero.html.j2"
+          ],
+          "path": "jinja2/blocks/gallery-hero.json",
+          "registryDependencies": [
+            "badge",
+            "block",
+            "box",
+            "container",
+            "group",
+            "link-button",
+            "list",
+            "list-item",
+            "media-frame",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "latte": {
+          "dependencies": [],
+          "files": [
+            "blocks/gallery-hero.latte"
+          ],
+          "path": "latte/blocks/gallery-hero.json",
+          "registryDependencies": [
+            "badge",
+            "block",
+            "box",
+            "container",
+            "group",
+            "link-button",
+            "list",
+            "list-item",
+            "media-frame",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "react": {
+          "dependencies": [],
+          "files": [
+            "blocks/gallery-hero.tsx",
+            "blocks/gallery-hero.types.ts"
+          ],
+          "path": "react/blocks/gallery-hero.json",
+          "registryDependencies": [
+            "compose",
+            "media-frame",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/gallery-hero.tsx",
+            "blocks/gallery-hero.types.ts"
+          ],
+          "path": "solid/blocks/gallery-hero.json",
+          "registryDependencies": [
+            "compose",
+            "media-frame",
+            "utils"
+          ]
+        },
+        "svelte": {
+          "dependencies": [],
+          "files": [
+            "blocks/gallery-hero.svelte",
+            "blocks/gallery-hero.types.ts"
+          ],
+          "path": "svelte/blocks/gallery-hero.json",
+          "registryDependencies": [
+            "badge",
+            "block",
+            "box",
+            "container",
+            "group",
+            "link-button",
+            "list",
+            "list-item",
+            "media-frame",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "templ": {
+          "dependencies": [],
+          "files": [
+            "blocks/gallery-hero.templ"
+          ],
+          "path": "templ/blocks/gallery-hero.json",
+          "registryDependencies": [
+            "badge",
+            "block",
+            "box",
+            "container",
+            "group",
+            "kit-box",
+            "kit-link",
+            "kit-text",
+            "link-button",
+            "list",
+            "list-item",
+            "media-frame",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "twig": {
+          "dependencies": [],
+          "files": [
+            "blocks/gallery-hero.html.twig"
+          ],
+          "path": "twig/blocks/gallery-hero.json",
+          "registryDependencies": [
+            "badge",
+            "block",
+            "box",
+            "container",
+            "group",
+            "link-button",
+            "list",
+            "list-item",
+            "media-frame",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "vue": {
+          "dependencies": [],
+          "files": [
+            "blocks/gallery-hero.types.ts",
+            "blocks/gallery-hero.vue"
+          ],
+          "path": "vue/blocks/gallery-hero.json",
+          "registryDependencies": [
+            "badge",
+            "block",
+            "box",
+            "container",
+            "group",
+            "link-button",
+            "list",
+            "list-item",
+            "media-frame",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        }
+      },
+      "title": "Gallery Hero",
+      "type": "registry:block"
+    },
+    {
       "category": "primitives",
       "description": "Grid primitive",
       "group": "",
@@ -18064,7 +18584,7 @@
     {
       "category": "marketing",
       "contract": "contracts/hero-simple/1.json",
-      "description": "A badge, the heading, one paragraph and up to two links as the actions (primary, then secondary), with one picture at the end, at the start or on top.",
+      "description": "A badge, the heading, one paragraph and up to two links as the actions (primary, then secondary), with one picture at the end, at the start (landscape or portrait), on top or at the bottom.",
       "group": "hero",
       "kind": "block",
       "model": "hero@1",
@@ -19553,6 +20073,152 @@
       },
       "title": "Input",
       "type": "registry:ui"
+    },
+    {
+      "category": "marketing",
+      "contract": "contracts/intro-simple/1.json",
+      "description": "Text only: a badge, a large heading, one paragraph and up to two links as the actions (primary, then secondary), centred or at the start, in the middle of the section or low in a tall one.",
+      "group": "hero",
+      "kind": "block",
+      "model": "intro@1",
+      "name": "intro-simple",
+      "runtimes": {
+        "jinja2": {
+          "dependencies": [],
+          "files": [
+            "blocks/intro-simple.html.j2"
+          ],
+          "path": "jinja2/blocks/intro-simple.json",
+          "registryDependencies": [
+            "badge",
+            "block",
+            "container",
+            "group",
+            "link-button",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "latte": {
+          "dependencies": [],
+          "files": [
+            "blocks/intro-simple.latte"
+          ],
+          "path": "latte/blocks/intro-simple.json",
+          "registryDependencies": [
+            "badge",
+            "block",
+            "container",
+            "group",
+            "link-button",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "react": {
+          "dependencies": [],
+          "files": [
+            "blocks/intro-simple.tsx"
+          ],
+          "path": "react/blocks/intro-simple.json",
+          "registryDependencies": [
+            "compose",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/intro-simple.tsx"
+          ],
+          "path": "solid/blocks/intro-simple.json",
+          "registryDependencies": [
+            "compose",
+            "utils"
+          ]
+        },
+        "svelte": {
+          "dependencies": [],
+          "files": [
+            "blocks/intro-simple.svelte"
+          ],
+          "path": "svelte/blocks/intro-simple.json",
+          "registryDependencies": [
+            "badge",
+            "block",
+            "container",
+            "group",
+            "link-button",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "templ": {
+          "dependencies": [],
+          "files": [
+            "blocks/intro-simple.templ"
+          ],
+          "path": "templ/blocks/intro-simple.json",
+          "registryDependencies": [
+            "badge",
+            "block",
+            "container",
+            "group",
+            "kit-box",
+            "kit-link",
+            "kit-text",
+            "link-button",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "twig": {
+          "dependencies": [],
+          "files": [
+            "blocks/intro-simple.html.twig"
+          ],
+          "path": "twig/blocks/intro-simple.json",
+          "registryDependencies": [
+            "badge",
+            "block",
+            "container",
+            "group",
+            "link-button",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "vue": {
+          "dependencies": [],
+          "files": [
+            "blocks/intro-simple.vue"
+          ],
+          "path": "vue/blocks/intro-simple.json",
+          "registryDependencies": [
+            "badge",
+            "block",
+            "container",
+            "group",
+            "link-button",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        }
+      },
+      "title": "Intro Simple",
+      "type": "registry:block"
     },
     {
       "category": "marketing",
@@ -23551,6 +24217,151 @@
       },
       "title": "Logo Slot",
       "type": "registry:component"
+    },
+    {
+      "category": "marketing",
+      "contract": "contracts/logos-simple/1.json",
+      "description": "A short heading over the logos as a list: a wrapping row or a grid of cards.",
+      "group": "proof",
+      "kind": "block",
+      "model": "logos@1",
+      "name": "logos-simple",
+      "runtimes": {
+        "jinja2": {
+          "dependencies": [],
+          "files": [
+            "blocks/logos-simple.html.j2"
+          ],
+          "path": "jinja2/blocks/logos-simple.json",
+          "registryDependencies": [
+            "block",
+            "container",
+            "list",
+            "list-item",
+            "media-frame",
+            "stack",
+            "title",
+            "utils"
+          ]
+        },
+        "latte": {
+          "dependencies": [],
+          "files": [
+            "blocks/logos-simple.latte"
+          ],
+          "path": "latte/blocks/logos-simple.json",
+          "registryDependencies": [
+            "block",
+            "container",
+            "list",
+            "list-item",
+            "media-frame",
+            "stack",
+            "title",
+            "utils"
+          ]
+        },
+        "react": {
+          "dependencies": [],
+          "files": [
+            "blocks/logos-simple.tsx",
+            "blocks/logos-simple.types.ts"
+          ],
+          "path": "react/blocks/logos-simple.json",
+          "registryDependencies": [
+            "compose",
+            "media-frame",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/logos-simple.tsx",
+            "blocks/logos-simple.types.ts"
+          ],
+          "path": "solid/blocks/logos-simple.json",
+          "registryDependencies": [
+            "compose",
+            "media-frame",
+            "utils"
+          ]
+        },
+        "svelte": {
+          "dependencies": [],
+          "files": [
+            "blocks/logos-simple.svelte",
+            "blocks/logos-simple.types.ts"
+          ],
+          "path": "svelte/blocks/logos-simple.json",
+          "registryDependencies": [
+            "block",
+            "container",
+            "list",
+            "list-item",
+            "media-frame",
+            "stack",
+            "title",
+            "utils"
+          ]
+        },
+        "templ": {
+          "dependencies": [],
+          "files": [
+            "blocks/logos-simple.templ"
+          ],
+          "path": "templ/blocks/logos-simple.json",
+          "registryDependencies": [
+            "block",
+            "container",
+            "kit-box",
+            "kit-text",
+            "list",
+            "list-item",
+            "media-frame",
+            "stack",
+            "title",
+            "utils"
+          ]
+        },
+        "twig": {
+          "dependencies": [],
+          "files": [
+            "blocks/logos-simple.html.twig"
+          ],
+          "path": "twig/blocks/logos-simple.json",
+          "registryDependencies": [
+            "block",
+            "container",
+            "list",
+            "list-item",
+            "media-frame",
+            "stack",
+            "title",
+            "utils"
+          ]
+        },
+        "vue": {
+          "dependencies": [],
+          "files": [
+            "blocks/logos-simple.types.ts",
+            "blocks/logos-simple.vue"
+          ],
+          "path": "vue/blocks/logos-simple.json",
+          "registryDependencies": [
+            "block",
+            "container",
+            "list",
+            "list-item",
+            "media-frame",
+            "stack",
+            "title",
+            "utils"
+          ]
+        }
+      },
+      "title": "Logos Simple",
+      "type": "registry:block"
     },
     {
       "category": "primitives",
@@ -29670,6 +30481,157 @@
         }
       },
       "title": "Photo Gallery",
+      "type": "registry:block"
+    },
+    {
+      "category": "marketing",
+      "contract": "contracts/photos-simple/1.json",
+      "description": "The heading, one paragraph and the photos as a list in two, three or four columns.",
+      "group": "company",
+      "kind": "block",
+      "model": "photos@1",
+      "name": "photos-simple",
+      "runtimes": {
+        "jinja2": {
+          "dependencies": [],
+          "files": [
+            "blocks/photos-simple.html.j2"
+          ],
+          "path": "jinja2/blocks/photos-simple.json",
+          "registryDependencies": [
+            "block",
+            "container",
+            "list",
+            "list-item",
+            "media-frame",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "latte": {
+          "dependencies": [],
+          "files": [
+            "blocks/photos-simple.latte"
+          ],
+          "path": "latte/blocks/photos-simple.json",
+          "registryDependencies": [
+            "block",
+            "container",
+            "list",
+            "list-item",
+            "media-frame",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "react": {
+          "dependencies": [],
+          "files": [
+            "blocks/photos-simple.tsx",
+            "blocks/photos-simple.types.ts"
+          ],
+          "path": "react/blocks/photos-simple.json",
+          "registryDependencies": [
+            "compose",
+            "media-frame",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/photos-simple.tsx",
+            "blocks/photos-simple.types.ts"
+          ],
+          "path": "solid/blocks/photos-simple.json",
+          "registryDependencies": [
+            "compose",
+            "media-frame",
+            "utils"
+          ]
+        },
+        "svelte": {
+          "dependencies": [],
+          "files": [
+            "blocks/photos-simple.svelte",
+            "blocks/photos-simple.types.ts"
+          ],
+          "path": "svelte/blocks/photos-simple.json",
+          "registryDependencies": [
+            "block",
+            "container",
+            "list",
+            "list-item",
+            "media-frame",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "templ": {
+          "dependencies": [],
+          "files": [
+            "blocks/photos-simple.templ"
+          ],
+          "path": "templ/blocks/photos-simple.json",
+          "registryDependencies": [
+            "block",
+            "container",
+            "kit-box",
+            "kit-text",
+            "list",
+            "list-item",
+            "media-frame",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "twig": {
+          "dependencies": [],
+          "files": [
+            "blocks/photos-simple.html.twig"
+          ],
+          "path": "twig/blocks/photos-simple.json",
+          "registryDependencies": [
+            "block",
+            "container",
+            "list",
+            "list-item",
+            "media-frame",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "vue": {
+          "dependencies": [],
+          "files": [
+            "blocks/photos-simple.types.ts",
+            "blocks/photos-simple.vue"
+          ],
+          "path": "vue/blocks/photos-simple.json",
+          "registryDependencies": [
+            "block",
+            "container",
+            "list",
+            "list-item",
+            "media-frame",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        }
+      },
+      "title": "Photos Simple",
       "type": "registry:block"
     },
     {
@@ -41354,6 +42316,155 @@
       "type": "registry:block"
     },
     {
+      "category": "marketing",
+      "contract": "contracts/stats-simple/1.json",
+      "description": "The heading, one paragraph and the figures as a list (a large value, a label, a note), in two, three or four columns, plain or on cards.",
+      "group": "proof",
+      "kind": "block",
+      "model": "stats@1",
+      "name": "stats-simple",
+      "runtimes": {
+        "jinja2": {
+          "dependencies": [],
+          "files": [
+            "blocks/stats-simple.html.j2"
+          ],
+          "path": "jinja2/blocks/stats-simple.json",
+          "registryDependencies": [
+            "block",
+            "card",
+            "container",
+            "list",
+            "list-item",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "latte": {
+          "dependencies": [],
+          "files": [
+            "blocks/stats-simple.latte"
+          ],
+          "path": "latte/blocks/stats-simple.json",
+          "registryDependencies": [
+            "block",
+            "card",
+            "container",
+            "list",
+            "list-item",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "react": {
+          "dependencies": [],
+          "files": [
+            "blocks/stats-simple.tsx",
+            "blocks/stats-simple.types.ts"
+          ],
+          "path": "react/blocks/stats-simple.json",
+          "registryDependencies": [
+            "compose",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/stats-simple.tsx",
+            "blocks/stats-simple.types.ts"
+          ],
+          "path": "solid/blocks/stats-simple.json",
+          "registryDependencies": [
+            "compose",
+            "utils"
+          ]
+        },
+        "svelte": {
+          "dependencies": [],
+          "files": [
+            "blocks/stats-simple.svelte",
+            "blocks/stats-simple.types.ts"
+          ],
+          "path": "svelte/blocks/stats-simple.json",
+          "registryDependencies": [
+            "block",
+            "card",
+            "container",
+            "list",
+            "list-item",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "templ": {
+          "dependencies": [],
+          "files": [
+            "blocks/stats-simple.templ"
+          ],
+          "path": "templ/blocks/stats-simple.json",
+          "registryDependencies": [
+            "block",
+            "card",
+            "container",
+            "kit-box",
+            "kit-text",
+            "list",
+            "list-item",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "twig": {
+          "dependencies": [],
+          "files": [
+            "blocks/stats-simple.html.twig"
+          ],
+          "path": "twig/blocks/stats-simple.json",
+          "registryDependencies": [
+            "block",
+            "card",
+            "container",
+            "list",
+            "list-item",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "vue": {
+          "dependencies": [],
+          "files": [
+            "blocks/stats-simple.types.ts",
+            "blocks/stats-simple.vue"
+          ],
+          "path": "vue/blocks/stats-simple.json",
+          "registryDependencies": [
+            "block",
+            "card",
+            "container",
+            "list",
+            "list-item",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        }
+      },
+      "title": "Stats Simple",
+      "type": "registry:block"
+    },
+    {
       "category": "onboarding",
       "description": "A multi-step form header with the current step.",
       "group": "setup",
@@ -41686,6 +42797,155 @@
         }
       },
       "title": "Steps List",
+      "type": "registry:block"
+    },
+    {
+      "category": "marketing",
+      "contract": "contracts/steps-simple/1.json",
+      "description": "The heading, one paragraph and the steps as an ordered list (a label, a title, a line), in a row of three or four, or one under the other.",
+      "group": "how-it-works",
+      "kind": "block",
+      "model": "steps@1",
+      "name": "steps-simple",
+      "runtimes": {
+        "jinja2": {
+          "dependencies": [],
+          "files": [
+            "blocks/steps-simple.html.j2"
+          ],
+          "path": "jinja2/blocks/steps-simple.json",
+          "registryDependencies": [
+            "badge",
+            "block",
+            "container",
+            "list",
+            "list-item",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "latte": {
+          "dependencies": [],
+          "files": [
+            "blocks/steps-simple.latte"
+          ],
+          "path": "latte/blocks/steps-simple.json",
+          "registryDependencies": [
+            "badge",
+            "block",
+            "container",
+            "list",
+            "list-item",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "react": {
+          "dependencies": [],
+          "files": [
+            "blocks/steps-simple.tsx",
+            "blocks/steps-simple.types.ts"
+          ],
+          "path": "react/blocks/steps-simple.json",
+          "registryDependencies": [
+            "compose",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/steps-simple.tsx",
+            "blocks/steps-simple.types.ts"
+          ],
+          "path": "solid/blocks/steps-simple.json",
+          "registryDependencies": [
+            "compose",
+            "utils"
+          ]
+        },
+        "svelte": {
+          "dependencies": [],
+          "files": [
+            "blocks/steps-simple.svelte",
+            "blocks/steps-simple.types.ts"
+          ],
+          "path": "svelte/blocks/steps-simple.json",
+          "registryDependencies": [
+            "badge",
+            "block",
+            "container",
+            "list",
+            "list-item",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "templ": {
+          "dependencies": [],
+          "files": [
+            "blocks/steps-simple.templ"
+          ],
+          "path": "templ/blocks/steps-simple.json",
+          "registryDependencies": [
+            "badge",
+            "block",
+            "container",
+            "kit-box",
+            "kit-text",
+            "list",
+            "list-item",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "twig": {
+          "dependencies": [],
+          "files": [
+            "blocks/steps-simple.html.twig"
+          ],
+          "path": "twig/blocks/steps-simple.json",
+          "registryDependencies": [
+            "badge",
+            "block",
+            "container",
+            "list",
+            "list-item",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "vue": {
+          "dependencies": [],
+          "files": [
+            "blocks/steps-simple.types.ts",
+            "blocks/steps-simple.vue"
+          ],
+          "path": "vue/blocks/steps-simple.json",
+          "registryDependencies": [
+            "badge",
+            "block",
+            "container",
+            "list",
+            "list-item",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        }
+      },
+      "title": "Steps Simple",
       "type": "registry:block"
     },
     {
@@ -42055,6 +43315,164 @@
         }
       },
       "title": "Store Locations",
+      "type": "registry:block"
+    },
+    {
+      "category": "marketing",
+      "contract": "contracts/stories-simple/1.json",
+      "description": "The heading, one paragraph and the stories as a list (a cover, the title as a link, a line): cards in two or three columns, or compact rows on a card surface.",
+      "group": "blog",
+      "kind": "block",
+      "model": "stories@1",
+      "name": "stories-simple",
+      "runtimes": {
+        "jinja2": {
+          "dependencies": [],
+          "files": [
+            "blocks/stories-simple.html.j2"
+          ],
+          "path": "jinja2/blocks/stories-simple.json",
+          "registryDependencies": [
+            "block",
+            "container",
+            "link",
+            "list",
+            "list-item",
+            "media-frame",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "latte": {
+          "dependencies": [],
+          "files": [
+            "blocks/stories-simple.latte"
+          ],
+          "path": "latte/blocks/stories-simple.json",
+          "registryDependencies": [
+            "block",
+            "container",
+            "link",
+            "list",
+            "list-item",
+            "media-frame",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "react": {
+          "dependencies": [],
+          "files": [
+            "blocks/stories-simple.tsx",
+            "blocks/stories-simple.types.ts"
+          ],
+          "path": "react/blocks/stories-simple.json",
+          "registryDependencies": [
+            "compose",
+            "media-frame",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/stories-simple.tsx",
+            "blocks/stories-simple.types.ts"
+          ],
+          "path": "solid/blocks/stories-simple.json",
+          "registryDependencies": [
+            "compose",
+            "media-frame",
+            "utils"
+          ]
+        },
+        "svelte": {
+          "dependencies": [],
+          "files": [
+            "blocks/stories-simple.svelte",
+            "blocks/stories-simple.types.ts"
+          ],
+          "path": "svelte/blocks/stories-simple.json",
+          "registryDependencies": [
+            "block",
+            "container",
+            "link",
+            "list",
+            "list-item",
+            "media-frame",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "templ": {
+          "dependencies": [],
+          "files": [
+            "blocks/stories-simple.templ"
+          ],
+          "path": "templ/blocks/stories-simple.json",
+          "registryDependencies": [
+            "block",
+            "container",
+            "kit-box",
+            "kit-link",
+            "kit-text",
+            "link",
+            "list",
+            "list-item",
+            "media-frame",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "twig": {
+          "dependencies": [],
+          "files": [
+            "blocks/stories-simple.html.twig"
+          ],
+          "path": "twig/blocks/stories-simple.json",
+          "registryDependencies": [
+            "block",
+            "container",
+            "link",
+            "list",
+            "list-item",
+            "media-frame",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "vue": {
+          "dependencies": [],
+          "files": [
+            "blocks/stories-simple.types.ts",
+            "blocks/stories-simple.vue"
+          ],
+          "path": "vue/blocks/stories-simple.json",
+          "registryDependencies": [
+            "block",
+            "container",
+            "link",
+            "list",
+            "list-item",
+            "media-frame",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        }
+      },
+      "title": "Stories Simple",
       "type": "registry:block"
     },
     {
@@ -45089,6 +46507,163 @@
         }
       },
       "title": "Testimonial Grid",
+      "type": "registry:block"
+    },
+    {
+      "category": "marketing",
+      "contract": "contracts/testimonials-simple/1.json",
+      "description": "The heading, one paragraph and the quotes as a list (the words, a portrait, the name and the role): on cards in two or three columns, in rows with the portrait at the side, or centred.",
+      "group": "proof",
+      "kind": "block",
+      "model": "testimonials@1",
+      "name": "testimonials-simple",
+      "runtimes": {
+        "jinja2": {
+          "dependencies": [],
+          "files": [
+            "blocks/testimonials-simple.html.j2"
+          ],
+          "path": "jinja2/blocks/testimonials-simple.json",
+          "registryDependencies": [
+            "block",
+            "container",
+            "group",
+            "list",
+            "list-item",
+            "media-frame",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "latte": {
+          "dependencies": [],
+          "files": [
+            "blocks/testimonials-simple.latte"
+          ],
+          "path": "latte/blocks/testimonials-simple.json",
+          "registryDependencies": [
+            "block",
+            "container",
+            "group",
+            "list",
+            "list-item",
+            "media-frame",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "react": {
+          "dependencies": [],
+          "files": [
+            "blocks/testimonials-simple.tsx",
+            "blocks/testimonials-simple.types.ts"
+          ],
+          "path": "react/blocks/testimonials-simple.json",
+          "registryDependencies": [
+            "compose",
+            "media-frame",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/testimonials-simple.tsx",
+            "blocks/testimonials-simple.types.ts"
+          ],
+          "path": "solid/blocks/testimonials-simple.json",
+          "registryDependencies": [
+            "compose",
+            "media-frame",
+            "utils"
+          ]
+        },
+        "svelte": {
+          "dependencies": [],
+          "files": [
+            "blocks/testimonials-simple.svelte",
+            "blocks/testimonials-simple.types.ts"
+          ],
+          "path": "svelte/blocks/testimonials-simple.json",
+          "registryDependencies": [
+            "block",
+            "container",
+            "group",
+            "list",
+            "list-item",
+            "media-frame",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "templ": {
+          "dependencies": [],
+          "files": [
+            "blocks/testimonials-simple.templ"
+          ],
+          "path": "templ/blocks/testimonials-simple.json",
+          "registryDependencies": [
+            "block",
+            "container",
+            "group",
+            "kit-box",
+            "kit-text",
+            "list",
+            "list-item",
+            "media-frame",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "twig": {
+          "dependencies": [],
+          "files": [
+            "blocks/testimonials-simple.html.twig"
+          ],
+          "path": "twig/blocks/testimonials-simple.json",
+          "registryDependencies": [
+            "block",
+            "container",
+            "group",
+            "list",
+            "list-item",
+            "media-frame",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "vue": {
+          "dependencies": [],
+          "files": [
+            "blocks/testimonials-simple.types.ts",
+            "blocks/testimonials-simple.vue"
+          ],
+          "path": "vue/blocks/testimonials-simple.json",
+          "registryDependencies": [
+            "block",
+            "container",
+            "group",
+            "list",
+            "list-item",
+            "media-frame",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        }
+      },
+      "title": "Testimonials Simple",
       "type": "registry:block"
     },
     {
@@ -48433,26 +50008,66 @@
       "type": "registry:block"
     }
   ],
-  "lastUpdated": "2026-11-20T15:45:34+03:00",
+  "lastUpdated": "2026-11-20T18:49:27+03:00",
   "layout": "<runtime>/index.json + <runtime>/{components/ui,components,blocks,utils,lib,themes}/<name>.json; use r/<runtime> as registryUrl",
   "models": {
+    "faq@1": {
+      "path": "models/faq@1.schema.json",
+      "sha256": "3c9d703570eaa76184918c515c8253cc1bb708d8af873f6cdee199f6a8b7ed03"
+    },
+    "features@1": {
+      "path": "models/features@1.schema.json",
+      "sha256": "ec97897a5e218914fed908d8c650a57212a8603c5b7c78a061e7e6a1409df8ba"
+    },
+    "gallery@1": {
+      "path": "models/gallery@1.schema.json",
+      "sha256": "1b2290a6a22f6d648d87d4b2f365cde7a17324197732db30049d54078d482f8d"
+    },
     "hero@1": {
       "path": "models/hero@1.schema.json",
       "sha256": "b114d150cc77d9249b8793c9591a6242db9c8d55d94d0dd06bfe6aecd335eee6"
+    },
+    "intro@1": {
+      "path": "models/intro@1.schema.json",
+      "sha256": "9ede625f409532dba4ca1f05345afb5b39d69d8945039d38a491618ff7ef5ee6"
+    },
+    "logos@1": {
+      "path": "models/logos@1.schema.json",
+      "sha256": "c2ca4e110e46821571e84581123062042b72b3dfbe47c07633449948fef13e1c"
+    },
+    "photos@1": {
+      "path": "models/photos@1.schema.json",
+      "sha256": "c17acd5d96bbba505b713274c1482e4a44796ca9e4df7718b74510c07cb25906"
     },
     "split@1": {
       "path": "models/split@1.schema.json",
       "sha256": "40d6489b3bbaa08ab9f5385ef1b8e1d75432b427f51c2598ec92e9c542aada6d"
     },
+    "stats@1": {
+      "path": "models/stats@1.schema.json",
+      "sha256": "c3ad6ffed0ddde4c362472342dc76b6ec29d77a87b350b2ad878f68aa310154a"
+    },
+    "steps@1": {
+      "path": "models/steps@1.schema.json",
+      "sha256": "cb6f8322e1848fdefa7801ca77db581e1611892c605e31a6cf3085ca8153097c"
+    },
+    "stories@1": {
+      "path": "models/stories@1.schema.json",
+      "sha256": "ef5881bfa8a7f74aac78fc57497f1237c1228c5c0066604b340392fee6c52bbb"
+    },
     "team@1": {
       "path": "models/team@1.schema.json",
       "sha256": "ac003fe0b80251f4fefe73e39572cd63f3eb58b35c5fdbd337d03e232fcf797c"
+    },
+    "testimonials@1": {
+      "path": "models/testimonials@1.schema.json",
+      "sha256": "e3c1b75c4dd7111f41f7a7bb52c7e297617d8805f51b4cae6b06ca40272003b1"
     }
   },
   "props": {
-    "digest": "sha256:76caabd7eff65e2dec45a0c30698a5014270b42508bd2be1ff9b4b726d41cbc9",
+    "digest": "sha256:cea386ad952022a8d44f0d2d6b2bc321463fc5775309501ac696d5d411d7ad10",
     "path": "props/v0.json",
-    "sha256": "52cf1a84c91c80615908f9edb8db458b3a790cfe0ada2f0edd1519eb5629552a",
+    "sha256": "10f39b3b31839a9071b29986731df9b98eb114098fe4afa69c6a3e9eaf7fc7a8",
     "version": "0"
   },
   "runtimes": [
@@ -48465,11 +50080,11 @@
     "latte",
     "jinja2"
   ],
-  "sourceCommit": "d1b34d962335dab54b3f41554993ab360a11fc9b",
+  "sourceCommit": "4d672d81844bf60c4b7a87356b2a82af351b935d",
   "variants": {
-    "digest": "sha256:d3fa7673d9fc9c96c904ff6412492df34e2da40418e38fdbd4f6f894eac75478",
+    "digest": "sha256:cb6d7cd5219746c156f881178a3213c5cd8761382580626633c13c06880646ef",
     "path": "variants/v0.json",
-    "sha256": "64b57e44098f217eeb8a3268c3ea3e52b64e61cb5dfc9c49ed3ce5d4db24a1b7",
+    "sha256": "c802d3fc0a1aed3d00bdb86dfc2fcaa1507bea82e204236cc6509ae9b74ad023",
     "version": "0"
   },
   "version": "0.1.0"

@@ -2,11 +2,47 @@
   "version": 0,
   "base": "https://registry.buildy.tw/contracts",
   "items": {
+    "faq-simple": {
+      "version": 1,
+      "block": "block.faqsimple",
+      "model": "faq@1",
+      "path": "faq-simple/1.json"
+    },
+    "features-simple": {
+      "version": 1,
+      "block": "block.featuressimple",
+      "model": "features@1",
+      "path": "features-simple/1.json"
+    },
+    "gallery-hero": {
+      "version": 1,
+      "block": "block.galleryhero",
+      "model": "gallery@1",
+      "path": "gallery-hero/1.json"
+    },
     "hero-simple": {
       "version": 1,
       "block": "block.herosimple",
       "model": "hero@1",
       "path": "hero-simple/1.json"
+    },
+    "intro-simple": {
+      "version": 1,
+      "block": "block.introsimple",
+      "model": "intro@1",
+      "path": "intro-simple/1.json"
+    },
+    "logos-simple": {
+      "version": 1,
+      "block": "block.logossimple",
+      "model": "logos@1",
+      "path": "logos-simple/1.json"
+    },
+    "photos-simple": {
+      "version": 1,
+      "block": "block.photossimple",
+      "model": "photos@1",
+      "path": "photos-simple/1.json"
     },
     "split-simple": {
       "version": 1,
@@ -14,11 +50,35 @@
       "model": "split@1",
       "path": "split-simple/1.json"
     },
+    "stats-simple": {
+      "version": 1,
+      "block": "block.statssimple",
+      "model": "stats@1",
+      "path": "stats-simple/1.json"
+    },
+    "steps-simple": {
+      "version": 1,
+      "block": "block.stepssimple",
+      "model": "steps@1",
+      "path": "steps-simple/1.json"
+    },
+    "stories-simple": {
+      "version": 1,
+      "block": "block.storiessimple",
+      "model": "stories@1",
+      "path": "stories-simple/1.json"
+    },
     "team-simple": {
       "version": 1,
       "block": "block.teamsimple",
       "model": "team@1",
       "path": "team-simple/1.json"
+    },
+    "testimonials-simple": {
+      "version": 1,
+      "block": "block.testimonialssimple",
+      "model": "testimonials@1",
+      "path": "testimonials-simple/1.json"
     }
   }
 }

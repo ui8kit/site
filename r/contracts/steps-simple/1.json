@@ -1,0 +1,117 @@
+{
+  "item": "steps-simple",
+  "version": 1,
+  "block": "block.stepssimple",
+  "organism": "StepsSimple",
+  "line": "simple",
+  "model": "steps@1",
+  "modelSchema": "https://registry.buildy.tw/models/steps@1.schema.json",
+  "axes": {
+    "layout": [
+      "row",
+      "column"
+    ],
+    "cols": [
+      "3",
+      "4"
+    ]
+  },
+  "defaults": {
+    "layout": "row",
+    "cols": "4"
+  },
+  "variants": [
+    {
+      "id": "row4",
+      "label": "Four steps in a row",
+      "axes": {
+        "layout": "row",
+        "cols": "4"
+      }
+    },
+    {
+      "id": "row3",
+      "label": "Three columns",
+      "axes": {
+        "layout": "row",
+        "cols": "3"
+      }
+    },
+    {
+      "id": "column",
+      "label": "One under the other",
+      "axes": {
+        "layout": "column",
+        "cols": "4"
+      },
+      "settings": {
+        "align": "start"
+      }
+    }
+  ],
+  "defaultVariant": "row4",
+  "settings": {
+    "level": {
+      "type": "1 | 2 | 3",
+      "default": 2
+    },
+    "padding": {
+      "type": "\"compact\" | \"standard\" | \"spacious\"",
+      "default": "standard"
+    },
+    "align": {
+      "type": "\"start\" | \"center\" | \"end\"",
+      "default": "center"
+    },
+    "landmarkLabel": {
+      "type": "string"
+    }
+  },
+  "modes": [
+    "wireframe"
+  ],
+  "defaultMode": "wireframe",
+  "places": [
+    {
+      "place": "title",
+      "kind": "heading",
+      "fields": [
+        "/title"
+      ]
+    },
+    {
+      "place": "description",
+      "kind": "text",
+      "fields": [
+        "/description"
+      ]
+    },
+    {
+      "place": "steps.label",
+      "kind": "badge",
+      "fields": [
+        "/steps/*/label"
+      ],
+      "list": "steps"
+    },
+    {
+      "place": "steps.title",
+      "kind": "heading",
+      "fields": [
+        "/steps/*/title"
+      ],
+      "list": "steps"
+    },
+    {
+      "place": "steps.description",
+      "kind": "text",
+      "fields": [
+        "/steps/*/description"
+      ],
+      "list": "steps"
+    }
+  ],
+  "wireframe": {
+    "items": 4
+  }
+}

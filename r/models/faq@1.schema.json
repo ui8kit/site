@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://registry.buildy.tw/models/faq@1.schema.json",
+  "title": "FaqContent",
+  "description": "FAQ content: the heading, a description and an ordered list of questions with their answers. One object is valid in every FAQ layout (one column, two columns).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "title",
+    "items"
+  ],
+  "properties": {
+    "title": {
+      "description": "the heading of the section",
+      "type": "string",
+      "maxLength": 120,
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "description": {
+      "description": "one paragraph under the heading; empty: none",
+      "type": "string",
+      "maxLength": 400
+    },
+    "items": {
+      "description": "the questions, in the order they are shown",
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 12,
+      "items": {
+        "title": "SimpleQuestion",
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "title",
+          "description"
+        ],
+        "properties": {
+          "id": {
+            "description": "stable key of the entry (the Codex entry id)",
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]*$"
+          },
+          "title": {
+            "description": "the question",
+            "type": "string",
+            "maxLength": 160,
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "description": {
+            "description": "the answer",
+            "type": "string",
+            "maxLength": 600,
+            "minLength": 1,
+            "pattern": "\\S"
+          }
+        }
+      }
+    }
+  }
+}

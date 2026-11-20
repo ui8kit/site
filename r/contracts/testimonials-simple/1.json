@@ -1,0 +1,131 @@
+{
+  "item": "testimonials-simple",
+  "version": 1,
+  "block": "block.testimonialssimple",
+  "organism": "TestimonialsSimple",
+  "line": "simple",
+  "model": "testimonials@1",
+  "modelSchema": "https://registry.buildy.tw/models/testimonials@1.schema.json",
+  "axes": {
+    "layout": [
+      "cards",
+      "rows",
+      "centered"
+    ],
+    "cols": [
+      "2",
+      "3"
+    ]
+  },
+  "defaults": {
+    "layout": "cards",
+    "cols": "3"
+  },
+  "variants": [
+    {
+      "id": "cols3",
+      "label": "Three cards",
+      "axes": {
+        "layout": "cards",
+        "cols": "3"
+      }
+    },
+    {
+      "id": "cards2",
+      "label": "Two long quotes on cards",
+      "axes": {
+        "layout": "cards",
+        "cols": "2"
+      }
+    },
+    {
+      "id": "portraitRows",
+      "label": "Portraits at the side",
+      "axes": {
+        "layout": "rows",
+        "cols": "3"
+      }
+    },
+    {
+      "id": "centered",
+      "label": "Centred quotes",
+      "axes": {
+        "layout": "centered",
+        "cols": "3"
+      }
+    }
+  ],
+  "defaultVariant": "cols3",
+  "settings": {
+    "level": {
+      "type": "1 | 2 | 3",
+      "default": 2
+    },
+    "padding": {
+      "type": "\"compact\" | \"standard\" | \"spacious\"",
+      "default": "standard"
+    },
+    "align": {
+      "type": "\"start\" | \"center\" | \"end\"",
+      "default": "center"
+    },
+    "landmarkLabel": {
+      "type": "string"
+    }
+  },
+  "modes": [
+    "wireframe"
+  ],
+  "defaultMode": "wireframe",
+  "places": [
+    {
+      "place": "title",
+      "kind": "heading",
+      "fields": [
+        "/title"
+      ]
+    },
+    {
+      "place": "description",
+      "kind": "text",
+      "fields": [
+        "/description"
+      ]
+    },
+    {
+      "place": "quotes.quote",
+      "kind": "text",
+      "fields": [
+        "/quotes/*/quote"
+      ],
+      "list": "quotes"
+    },
+    {
+      "place": "quotes.avatar",
+      "kind": "media",
+      "fields": [
+        "/quotes/*/avatar"
+      ],
+      "list": "quotes"
+    },
+    {
+      "place": "quotes.title",
+      "kind": "heading",
+      "fields": [
+        "/quotes/*/title"
+      ],
+      "list": "quotes"
+    },
+    {
+      "place": "quotes.description",
+      "kind": "text",
+      "fields": [
+        "/quotes/*/description"
+      ],
+      "list": "quotes"
+    }
+  ],
+  "wireframe": {
+    "items": 3
+  }
+}

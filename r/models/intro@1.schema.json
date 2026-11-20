@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://registry.buildy.tw/models/intro@1.schema.json",
+  "title": "IntroContent",
+  "description": "Intro content: an optional badge, the heading, a description and up to two actions (the first drawn as the primary button, the second as the secondary one). Text only: one object is valid in every intro layout (centred, at the start, low in the section).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "title"
+  ],
+  "properties": {
+    "badge": {
+      "description": "a short pill above the heading; empty: no badge",
+      "type": "string",
+      "maxLength": 40
+    },
+    "title": {
+      "description": "the heading of the section",
+      "type": "string",
+      "maxLength": 120,
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "description": {
+      "description": "one paragraph under the heading; empty: none",
+      "type": "string",
+      "maxLength": 400
+    },
+    "actionLabel": {
+      "description": "the label of the action; the link is drawn when the label and the address are both set",
+      "type": "string",
+      "maxLength": 40
+    },
+    "actionHref": {
+      "description": "the address of the action",
+      "type": "string",
+      "maxLength": 2048,
+      "pattern": "^(?:(?:https?|mailto|tel):|(?![A-Za-z][A-Za-z0-9+.-]*:))"
+    },
+    "secondaryActionLabel": {
+      "description": "the label of the second action (the secondary button after the first); drawn when the label and the address are both set; empty: none",
+      "type": "string",
+      "maxLength": 40
+    },
+    "secondaryActionHref": {
+      "description": "the address of the second action",
+      "type": "string",
+      "maxLength": 2048,
+      "pattern": "^(?:(?:https?|mailto|tel):|(?![A-Za-z][A-Za-z0-9+.-]*:))"
+    }
+  }
+}

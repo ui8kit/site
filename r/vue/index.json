@@ -1507,6 +1507,23 @@
     },
     {
       "dependencies": [],
+      "description": "The heading, one paragraph and the questions with their answers as a list, each under a rule, in two columns or one.",
+      "name": "faq-simple",
+      "registryDependencies": [
+        "block",
+        "container",
+        "list",
+        "list-item",
+        "stack",
+        "text",
+        "title",
+        "utils"
+      ],
+      "title": "Faq Simple",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
       "description": "Questions beside the heading, a help card, a picture or a finder, or as cards in three or four columns.",
       "name": "faq-split",
       "registryDependencies": [
@@ -1738,6 +1755,24 @@
         "utils"
       ],
       "title": "Feature Tabs",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "The heading, one paragraph and the features as a list (an icon disc, a title, a line): in columns under the heading or beside it, the icon on top or at the side.",
+      "name": "features-simple",
+      "registryDependencies": [
+        "block",
+        "container",
+        "list",
+        "list-item",
+        "media-frame",
+        "stack",
+        "text",
+        "title",
+        "utils"
+      ],
+      "title": "Features Simple",
       "type": "registry:block"
     },
     {
@@ -2068,6 +2103,28 @@
     },
     {
       "dependencies": [],
+      "description": "A badge, the heading, one paragraph and up to two links as the actions beside three or four photos: at the end, at the start, or in a row under the copy.",
+      "name": "gallery-hero",
+      "registryDependencies": [
+        "badge",
+        "block",
+        "box",
+        "container",
+        "group",
+        "link-button",
+        "list",
+        "list-item",
+        "media-frame",
+        "stack",
+        "text",
+        "title",
+        "utils"
+      ],
+      "title": "Gallery Hero",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
       "description": "Grid primitive",
       "name": "grid",
       "registryDependencies": [
@@ -2225,7 +2282,7 @@
     },
     {
       "dependencies": [],
-      "description": "A badge, the heading, one paragraph and up to two links as the actions (primary, then secondary), with one picture at the end, at the start or on top.",
+      "description": "A badge, the heading, one paragraph and up to two links as the actions (primary, then secondary), with one picture at the end, at the start (landscape or portrait), on top or at the bottom.",
       "name": "hero-simple",
       "registryDependencies": [
         "badge",
@@ -2398,6 +2455,24 @@
       ],
       "title": "Input",
       "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "Text only: a badge, a large heading, one paragraph and up to two links as the actions (primary, then secondary), centred or at the start, in the middle of the section or low in a tall one.",
+      "name": "intro-simple",
+      "registryDependencies": [
+        "badge",
+        "block",
+        "container",
+        "group",
+        "link-button",
+        "stack",
+        "text",
+        "title",
+        "utils"
+      ],
+      "title": "Intro Simple",
+      "type": "registry:block"
     },
     {
       "dependencies": [],
@@ -2840,6 +2915,23 @@
       ],
       "title": "Logo Slot",
       "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "A short heading over the logos as a list: a wrapping row or a grid of cards.",
+      "name": "logos-simple",
+      "registryDependencies": [
+        "block",
+        "container",
+        "list",
+        "list-item",
+        "media-frame",
+        "stack",
+        "title",
+        "utils"
+      ],
+      "title": "Logos Simple",
+      "type": "registry:block"
     },
     {
       "dependencies": [
@@ -3571,6 +3663,24 @@
         "utils"
       ],
       "title": "Photo Gallery",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "The heading, one paragraph and the photos as a list in two, three or four columns.",
+      "name": "photos-simple",
+      "registryDependencies": [
+        "block",
+        "container",
+        "list",
+        "list-item",
+        "media-frame",
+        "stack",
+        "text",
+        "title",
+        "utils"
+      ],
+      "title": "Photos Simple",
       "type": "registry:block"
     },
     {
@@ -4973,6 +5083,24 @@
     },
     {
       "dependencies": [],
+      "description": "The heading, one paragraph and the figures as a list (a large value, a label, a note), in two, three or four columns, plain or on cards.",
+      "name": "stats-simple",
+      "registryDependencies": [
+        "block",
+        "card",
+        "container",
+        "list",
+        "list-item",
+        "stack",
+        "text",
+        "title",
+        "utils"
+      ],
+      "title": "Stats Simple",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
       "description": "A multi-step form header with the current step.",
       "name": "stepper",
       "registryDependencies": [
@@ -5011,6 +5139,24 @@
         "utils"
       ],
       "title": "Steps List",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "The heading, one paragraph and the steps as an ordered list (a label, a title, a line), in a row of three or four, or one under the other.",
+      "name": "steps-simple",
+      "registryDependencies": [
+        "badge",
+        "block",
+        "container",
+        "list",
+        "list-item",
+        "stack",
+        "text",
+        "title",
+        "utils"
+      ],
+      "title": "Steps Simple",
       "type": "registry:block"
     },
     {
@@ -5057,6 +5203,25 @@
         "utils"
       ],
       "title": "Store Locations",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "The heading, one paragraph and the stories as a list (a cover, the title as a link, a line): cards in two or three columns, or compact rows on a card surface.",
+      "name": "stories-simple",
+      "registryDependencies": [
+        "block",
+        "container",
+        "link",
+        "list",
+        "list-item",
+        "media-frame",
+        "stack",
+        "text",
+        "title",
+        "utils"
+      ],
+      "title": "Stories Simple",
       "type": "registry:block"
     },
     {
@@ -5411,6 +5576,25 @@
         "utils"
       ],
       "title": "Testimonial Grid",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "The heading, one paragraph and the quotes as a list (the words, a portrait, the name and the role): on cards in two or three columns, in rows with the portrait at the side, or centred.",
+      "name": "testimonials-simple",
+      "registryDependencies": [
+        "block",
+        "container",
+        "group",
+        "list",
+        "list-item",
+        "media-frame",
+        "stack",
+        "text",
+        "title",
+        "utils"
+      ],
+      "title": "Testimonials Simple",
       "type": "registry:block"
     },
     {
@@ -5865,7 +6049,7 @@
       "type": "registry:block"
     }
   ],
-  "lastUpdated": "2026-11-20T15:45:34+03:00",
+  "lastUpdated": "2026-11-20T18:49:27+03:00",
   "registry": "ui",
   "version": "0.1.0"
 }
