@@ -104,6 +104,12 @@
       "model": "gallery@1",
       "path": "gallery-hero/1.json"
     },
+    "guarantees-simple": {
+      "version": 1,
+      "block": "block.guaranteessimple",
+      "model": "guarantees@1",
+      "path": "guarantees-simple/1.json"
+    },
     "header-simple": {
       "version": 1,
       "block": "block.headersimple",
@@ -217,6 +223,12 @@
       "block": "block.roomssimple",
       "model": "rooms@1",
       "path": "rooms-simple/1.json"
+    },
+    "services-simple": {
+      "version": 1,
+      "block": "block.servicessimple",
+      "model": "services@1",
+      "path": "services-simple/1.json"
     },
     "specs-simple": {
       "version": 1,

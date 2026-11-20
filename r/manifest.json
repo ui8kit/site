@@ -2,9 +2,9 @@
   "contractVersion": "2.0.0",
   "contracts": {
     "index": {
-      "bytes": 6979,
+      "bytes": 7305,
       "path": "contracts/v0.json",
-      "sha256": "a5c6c6529821dc01f2e2408bf5374c3dea6c67732b512f3d761c2479a63fafd7"
+      "sha256": "3de774cb15f09fe68427f0d57399d59fc0390c78f1ac47141156e1a0525d41ca"
     },
     "items": {
       "article-lead@1": {
@@ -141,6 +141,14 @@
         "model": "gallery@1",
         "path": "contracts/gallery-hero/1.json",
         "sha256": "d3d96918a81d9e9ac808cc319cd2fe90ae72458ee830cf77bbda5b747749db69",
+        "version": 1
+      },
+      "guarantees-simple@1": {
+        "block": "block.guaranteessimple",
+        "bytes": 1986,
+        "model": "guarantees@1",
+        "path": "contracts/guarantees-simple/1.json",
+        "sha256": "5d589c249adc92a4dfd82a1eccb2f63ab9b5c3e1703a2f6e8acaa69515329b0e",
         "version": 1
       },
       "header-simple@1": {
@@ -295,6 +303,14 @@
         "sha256": "d8b7b384d17c5306873aaa2949e4cd8c645c3d9308b0a6cb456a3eb4db304703",
         "version": 1
       },
+      "services-simple@1": {
+        "block": "block.servicessimple",
+        "bytes": 2083,
+        "model": "services@1",
+        "path": "contracts/services-simple/1.json",
+        "sha256": "54436e130dcf26d3047d8f995724c3bfcc6f3311626c8460009b9c1b20bf6cf9",
+        "version": 1
+      },
       "specs-simple@1": {
         "block": "block.specssimple",
         "bytes": 1593,
@@ -369,7 +385,7 @@
       }
     },
     "source": {
-      "manifest": "4e5993eafd2860d4497d245378fb490ade869a9a549b19436d2f1d3021e3366c"
+      "manifest": "615b8c796146b93f8dec67f93a802d5e607bb5181dd40d743ea0180f16bebdae"
     }
   },
   "models": {
@@ -474,6 +490,12 @@
       "id": "gallery@1",
       "path": "models/gallery@1.schema.json",
       "sha256": "728e408f73900e79639629aaa52698fee31b3a9fc87e73efdb1b11457906b7f2"
+    },
+    "guarantees@1": {
+      "bytes": 1753,
+      "id": "guarantees@1",
+      "path": "models/guarantees@1.schema.json",
+      "sha256": "4e1c0cbdf9f66c16db84e608bb7990f6fa08fdf0ff6171beae18df91759854f6"
     },
     "header@1": {
       "bytes": 2280,
@@ -589,6 +611,12 @@
       "path": "models/rooms@1.schema.json",
       "sha256": "2612627b469c7dbeceaf312201e47c722e4a1e121733e47e8f56b8776ef4a5b6"
     },
+    "services@1": {
+      "bytes": 2227,
+      "id": "services@1",
+      "path": "models/services@1.schema.json",
+      "sha256": "d2c08e64a0787cc57731503025854a7ce4ad8a4427312818653bdbd6f1adb828"
+    },
     "specs@1": {
       "bytes": 1794,
       "id": "specs@1",
@@ -645,17 +673,17 @@
     }
   },
   "props": {
-    "bytes": 2117251,
-    "digest": "sha256:e022c7e247a750e3277fbb7a4f349ec3fdceea2e0a20897451389314e90f8094",
-    "items": 161,
+    "bytes": 2124387,
+    "digest": "sha256:3920d4cfc5ca1efd310fe549faa5e2d770d43f48b41c216a1fb20f94c465948a",
+    "items": 163,
     "path": "props/v0.json",
-    "sha256": "2c3a1f3d1b15bd608ee95b2c3c15596fedd1c84b3920d4e2b2cb20083f952ff3",
+    "sha256": "b3beca3f924d5911be22fbf6147ee8987aa7231b959d2ba4cd10fc8885912c5c",
     "version": "0"
   },
   "runtimes": {
     "jinja2": {
       "counts": {
-        "block": 161,
+        "block": 163,
         "component": 137,
         "lib": 2,
         "primitive": 85,
@@ -1903,6 +1931,15 @@
             }
           },
           "type": "registry:ui"
+        },
+        "guarantees-simple": {
+          "files": {
+            "blocks/guarantees-simple.html.j2": {
+              "bytes": 4969,
+              "sha256": "d1dea180166ab6f00aba5bc7028c8338ba087f94d9f9160157f822b0649ac6b5"
+            }
+          },
+          "type": "registry:block"
         },
         "header-simple": {
           "files": {
@@ -3544,6 +3581,15 @@
           },
           "type": "registry:ui"
         },
+        "services-simple": {
+          "files": {
+            "blocks/services-simple.html.j2": {
+              "bytes": 6184,
+              "sha256": "047f7c03c0f3823e903ac814aa001077a27ea7d1d73cdffbc12b2038eda1bccc"
+            }
+          },
+          "type": "registry:block"
+        },
         "sheet": {
           "files": {
             "compose/sheet.html.j2": {
@@ -4257,11 +4303,11 @@
           "type": "registry:block"
         }
       },
-      "items": 386
+      "items": 388
     },
     "latte": {
       "counts": {
-        "block": 161,
+        "block": 163,
         "component": 137,
         "lib": 2,
         "primitive": 85,
@@ -5509,6 +5555,15 @@
             }
           },
           "type": "registry:ui"
+        },
+        "guarantees-simple": {
+          "files": {
+            "blocks/guarantees-simple.latte": {
+              "bytes": 4886,
+              "sha256": "3cd9cf8c9fa1c61e19adb6d38cea003e540f196f467ae652ae24f3be3d82af61"
+            }
+          },
+          "type": "registry:block"
         },
         "header-simple": {
           "files": {
@@ -7146,6 +7201,15 @@
           },
           "type": "registry:ui"
         },
+        "services-simple": {
+          "files": {
+            "blocks/services-simple.latte": {
+              "bytes": 6103,
+              "sha256": "15383a6128e7a8433b89d3a3a48af5b708cd888992409e56066f4b64779667cd"
+            }
+          },
+          "type": "registry:block"
+        },
         "sheet": {
           "files": {
             "compose/Sheet.latte": {
@@ -7859,11 +7923,11 @@
           "type": "registry:block"
         }
       },
-      "items": 386
+      "items": 388
     },
     "react": {
       "counts": {
-        "block": 161,
+        "block": 163,
         "component": 137,
         "lib": 2,
         "primitive": 89,
@@ -9301,6 +9365,19 @@
             }
           },
           "type": "registry:ui"
+        },
+        "guarantees-simple": {
+          "files": {
+            "blocks/guarantees-simple.tsx": {
+              "bytes": 3797,
+              "sha256": "db782391430ba5c1c6a3d20c9384f90d5f17f5daeae021a88259670404a812be"
+            },
+            "blocks/guarantees-simple.types.ts": {
+              "bytes": 230,
+              "sha256": "f6f2ad72da6adc3275ed2a1cf32350a4dded65606f3085cd61c8e6ae60c02910"
+            }
+          },
+          "type": "registry:block"
         },
         "header-simple": {
           "files": {
@@ -11153,6 +11230,19 @@
           },
           "type": "registry:ui"
         },
+        "services-simple": {
+          "files": {
+            "blocks/services-simple.tsx": {
+              "bytes": 4719,
+              "sha256": "d60292d283fe8c1d7829ce451013f3b1a67c55011986d8ec52d48bd91f415692"
+            },
+            "blocks/services-simple.types.ts": {
+              "bytes": 270,
+              "sha256": "506562b53f0a225e5fbdd6068cf6f21fed66959f534246ddf50e53dd3b7522d1"
+            }
+          },
+          "type": "registry:block"
+        },
         "sheet": {
           "files": {
             "compose/sheet.tsx": {
@@ -12207,11 +12297,11 @@
           "type": "registry:block"
         }
       },
-      "items": 407
+      "items": 409
     },
     "solid": {
       "counts": {
-        "block": 161,
+        "block": 163,
         "component": 137,
         "lib": 2,
         "primitive": 88,
@@ -13649,6 +13739,19 @@
             }
           },
           "type": "registry:ui"
+        },
+        "guarantees-simple": {
+          "files": {
+            "blocks/guarantees-simple.tsx": {
+              "bytes": 3759,
+              "sha256": "27544ce3821f3091b540e44b7a7b0a3883139b82e86ec65497787ed0e09fccf2"
+            },
+            "blocks/guarantees-simple.types.ts": {
+              "bytes": 230,
+              "sha256": "f6f2ad72da6adc3275ed2a1cf32350a4dded65606f3085cd61c8e6ae60c02910"
+            }
+          },
+          "type": "registry:block"
         },
         "header-simple": {
           "files": {
@@ -15492,6 +15595,19 @@
           },
           "type": "registry:ui"
         },
+        "services-simple": {
+          "files": {
+            "blocks/services-simple.tsx": {
+              "bytes": 4669,
+              "sha256": "5a75217c5b5613d3aa0beb224b2c64de079c7b5ff2a8a3aa2dd6a73bac2316fa"
+            },
+            "blocks/services-simple.types.ts": {
+              "bytes": 270,
+              "sha256": "506562b53f0a225e5fbdd6068cf6f21fed66959f534246ddf50e53dd3b7522d1"
+            }
+          },
+          "type": "registry:block"
+        },
         "sheet": {
           "files": {
             "compose/sheet.solid.tsx": {
@@ -16546,11 +16662,11 @@
           "type": "registry:block"
         }
       },
-      "items": 406
+      "items": 408
     },
     "svelte": {
       "counts": {
-        "block": 161,
+        "block": 163,
         "component": 137,
         "lib": 2,
         "primitive": 88,
@@ -17988,6 +18104,19 @@
             }
           },
           "type": "registry:ui"
+        },
+        "guarantees-simple": {
+          "files": {
+            "blocks/guarantees-simple.svelte": {
+              "bytes": 4058,
+              "sha256": "3d3f0b87defe603f32c12604e474aa78c80464f58d637ebb579e5e9f0a0dc318"
+            },
+            "blocks/guarantees-simple.types.ts": {
+              "bytes": 230,
+              "sha256": "f6f2ad72da6adc3275ed2a1cf32350a4dded65606f3085cd61c8e6ae60c02910"
+            }
+          },
+          "type": "registry:block"
         },
         "header-simple": {
           "files": {
@@ -19851,6 +19980,19 @@
           },
           "type": "registry:ui"
         },
+        "services-simple": {
+          "files": {
+            "blocks/services-simple.svelte": {
+              "bytes": 4936,
+              "sha256": "b0a6b492efea1fa00ff030a48aee31b7b78fcbd0a57e916a1a9cf521dd5d1420"
+            },
+            "blocks/services-simple.types.ts": {
+              "bytes": 270,
+              "sha256": "506562b53f0a225e5fbdd6068cf6f21fed66959f534246ddf50e53dd3b7522d1"
+            }
+          },
+          "type": "registry:block"
+        },
         "sheet": {
           "files": {
             "compose/Sheet.svelte": {
@@ -20905,11 +21047,11 @@
           "type": "registry:block"
         }
       },
-      "items": 406
+      "items": 408
     },
     "templ": {
       "counts": {
-        "block": 161,
+        "block": 163,
         "component": 137,
         "lib": 2,
         "primitive": 85,
@@ -22157,6 +22299,15 @@
             }
           },
           "type": "registry:ui"
+        },
+        "guarantees-simple": {
+          "files": {
+            "blocks/guarantees-simple.templ": {
+              "bytes": 5155,
+              "sha256": "647ce6a15e03df5c6415461e8c20420ee7becf5f2a2f17bec52ef85d5687fcb0"
+            }
+          },
+          "type": "registry:block"
         },
         "header-simple": {
           "files": {
@@ -23790,6 +23941,15 @@
           },
           "type": "registry:ui"
         },
+        "services-simple": {
+          "files": {
+            "blocks/services-simple.templ": {
+              "bytes": 6166,
+              "sha256": "831023cd520fa289def460be73447e6f9cc0fa66bf4ec07f615665008c6e7d9a"
+            }
+          },
+          "type": "registry:block"
+        },
         "sheet": {
           "files": {
             "compose/sheet.templ": {
@@ -24531,11 +24691,11 @@
           "type": "registry:block"
         }
       },
-      "items": 386
+      "items": 388
     },
     "twig": {
       "counts": {
-        "block": 161,
+        "block": 163,
         "component": 137,
         "lib": 2,
         "primitive": 85,
@@ -25783,6 +25943,15 @@
             }
           },
           "type": "registry:ui"
+        },
+        "guarantees-simple": {
+          "files": {
+            "blocks/guarantees-simple.html.twig": {
+              "bytes": 4996,
+              "sha256": "03d5e401ed1ecc9a1064367ade6438734d92410a8cd29a1af2ef26fd4034aa45"
+            }
+          },
+          "type": "registry:block"
         },
         "header-simple": {
           "files": {
@@ -27424,6 +27593,15 @@
           },
           "type": "registry:ui"
         },
+        "services-simple": {
+          "files": {
+            "blocks/services-simple.html.twig": {
+              "bytes": 6252,
+              "sha256": "185881ebb3b310a5a6fbc05579cdd085124bcfe18505ed200b717707560f8f04"
+            }
+          },
+          "type": "registry:block"
+        },
         "sheet": {
           "files": {
             "compose/Sheet.html.twig": {
@@ -28141,11 +28319,11 @@
           "type": "registry:block"
         }
       },
-      "items": 386
+      "items": 388
     },
     "vue": {
       "counts": {
-        "block": 161,
+        "block": 163,
         "component": 137,
         "lib": 2,
         "primitive": 88,
@@ -29583,6 +29761,19 @@
             }
           },
           "type": "registry:ui"
+        },
+        "guarantees-simple": {
+          "files": {
+            "blocks/guarantees-simple.types.ts": {
+              "bytes": 230,
+              "sha256": "f6f2ad72da6adc3275ed2a1cf32350a4dded65606f3085cd61c8e6ae60c02910"
+            },
+            "blocks/guarantees-simple.vue": {
+              "bytes": 3966,
+              "sha256": "af31e3cc9963b62408ed33275e4b87c9ce610207beeb467760511715091a46a0"
+            }
+          },
+          "type": "registry:block"
         },
         "header-simple": {
           "files": {
@@ -31446,6 +31637,19 @@
           },
           "type": "registry:ui"
         },
+        "services-simple": {
+          "files": {
+            "blocks/services-simple.types.ts": {
+              "bytes": 270,
+              "sha256": "506562b53f0a225e5fbdd6068cf6f21fed66959f534246ddf50e53dd3b7522d1"
+            },
+            "blocks/services-simple.vue": {
+              "bytes": 4760,
+              "sha256": "29363939abb8211dff271d01603e2bec60b68e59422a277577bd123e5b4e6185"
+            }
+          },
+          "type": "registry:block"
+        },
         "sheet": {
           "files": {
             "compose/Sheet.vue": {
@@ -32500,22 +32704,22 @@
           "type": "registry:block"
         }
       },
-      "items": 406
+      "items": 408
     }
   },
   "source": {
-    "commit": "004a0b4140cfc719d4f1355a3d0d881c4cae0933",
-    "commitDate": "2026-11-21T02:11:14+03:00",
+    "commit": "b509419e8ea571014a1984d2247bff9ff8137d1c",
+    "commitDate": "2026-11-21T02:56:01+03:00",
     "dirty": false,
     "repo": "private source monorepo"
   },
   "variants": {
-    "bytes": 148525,
-    "digest": "sha256:69ddffd21a4e36d94b5c2934c41d9d4600cba65127f5bb1068f7209352ef0d49",
-    "items": 157,
+    "bytes": 149773,
+    "digest": "sha256:ded7096648297e4deb79683289b4bb2f1c5e4a7f68283337961abbc38afe027b",
+    "items": 159,
     "path": "variants/v0.json",
-    "sha256": "ff6d252473322fa8b86c0829b5b4414edcb6f7e19fb578042f3b9361649959a9",
-    "variants": 663,
+    "sha256": "a2caa4d699a1cd25cd3d109803b8c38663e102efacb1ed77ba744127567d0d49",
+    "variants": 670,
     "version": "0"
   },
   "version": "0.1.0"

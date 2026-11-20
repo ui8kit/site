@@ -1,0 +1,71 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://registry.buildy.tw/models/services@1.schema.json",
+  "title": "ServicesContent",
+  "description": "Services content: the heading, a description and an ordered list of services, each with the name, a line, the price as it is shown and an optional address. One object is valid in every services layout (cards in three or two columns, rows).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "title",
+    "items"
+  ],
+  "properties": {
+    "title": {
+      "description": "the heading of the section",
+      "type": "string",
+      "maxLength": 120,
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "description": {
+      "description": "one paragraph under the heading; empty: none",
+      "type": "string",
+      "maxLength": 400
+    },
+    "items": {
+      "description": "the services, in the order they are shown",
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 9,
+      "items": {
+        "title": "Service",
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "title"
+        ],
+        "properties": {
+          "id": {
+            "description": "stable key of the entry (the Codex entry id)",
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]*$"
+          },
+          "title": {
+            "description": "the name of the service",
+            "type": "string",
+            "maxLength": 80,
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "description": {
+            "description": "one line about the service; empty: none",
+            "type": "string",
+            "maxLength": 200
+          },
+          "price": {
+            "description": "the price as it is shown (from 90 000 per project); empty: none",
+            "type": "string",
+            "maxLength": 40
+          },
+          "href": {
+            "description": "the address of the service page; empty: no link",
+            "type": "string",
+            "maxLength": 2048,
+            "pattern": "^(?:(?:https?|mailto|tel):|(?![A-Za-z][A-Za-z0-9+.-]*:))"
+          }
+        }
+      }
+    }
+  }
+}

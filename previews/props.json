@@ -6628,6 +6628,92 @@
    "rows": []
   }
  ],
+ "guarantees-simple": [
+  {
+   "docs": "The simple guarantees (model guarantees@1): the heading, a description and the promises as a list, each with a short title and a line. Text only. Axes: layout (strip: the promises side by side on one muted band; cards: a card surface per promise), cols (4, 3 columns from md up).",
+   "part": "GuaranteesSimple",
+   "rows": [
+    {
+     "name": "id",
+     "required": true,
+     "type": "string"
+    },
+    {
+     "name": "title",
+     "required": true,
+     "type": "string"
+    },
+    {
+     "default": "\"\"",
+     "desc": "one paragraph under the heading; empty: none",
+     "name": "description",
+     "type": "string"
+    },
+    {
+     "desc": "the promises, in the order they are shown (2 to 8)",
+     "name": "items",
+     "required": true,
+     "type": "Guarantee[]"
+    },
+    {
+     "default": "2",
+     "desc": "the level of the heading (1 on the first section of a page)",
+     "name": "level",
+     "type": "1 | 2 | 3",
+     "values": [
+      "1",
+      "2",
+      "3"
+     ]
+    },
+    {
+     "default": "\"standard\"",
+     "desc": "the vertical padding of the section: compact (py-8 lg:py-16), standard (py-16 lg:py-32), spacious (py-24 lg:py-40)",
+     "name": "padding",
+     "type": "\"compact\" | \"standard\" | \"spacious\"",
+     "values": [
+      "compact",
+      "standard",
+      "spacious"
+     ]
+    },
+    {
+     "default": "\"center\"",
+     "desc": "the alignment of the copy: start, center or end (logical, follows the writing direction): items-* on the column, text-* on the text",
+     "name": "align",
+     "type": "\"start\" | \"center\" | \"end\"",
+     "values": [
+      "start",
+      "center",
+      "end"
+     ]
+    },
+    {
+     "default": "\"strip\"",
+     "name": "layout",
+     "type": "\"strip\" | \"cards\"",
+     "values": [
+      "strip",
+      "cards"
+     ]
+    },
+    {
+     "default": "\"4\"",
+     "name": "cols",
+     "type": "\"4\" | \"3\"",
+     "values": [
+      "4",
+      "3"
+     ]
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
+    }
+   ]
+  }
+ ],
  "header-simple": [
   {
    "docs": "The simple header (model header@1): the brand as the link home, the navigation links as a list in a nav and one action. No menu button: the links wrap under the brand on a narrow screen. Axes: layout (inline: the links in the middle, end: the links beside the action, centered: the brand over the links).",
@@ -13973,6 +14059,92 @@
      "desc": "purely visual: role=none, no separator semantics",
      "name": "decorative",
      "type": "boolean"
+    }
+   ]
+  }
+ ],
+ "services-simple": [
+  {
+   "docs": "The simple services (model services@1): the heading, a description and the services as a list, each with the name (a link when the service has an address), a line and the price as it is shown (from 90 000 per project). Text only. Axes: layout (cards: a card surface per service; rows: one row per service, the price at the end from md up), cols (3, 2 columns of the cards).",
+   "part": "ServicesSimple",
+   "rows": [
+    {
+     "name": "id",
+     "required": true,
+     "type": "string"
+    },
+    {
+     "name": "title",
+     "required": true,
+     "type": "string"
+    },
+    {
+     "default": "\"\"",
+     "desc": "one paragraph under the heading; empty: none",
+     "name": "description",
+     "type": "string"
+    },
+    {
+     "desc": "the services, in the order they are shown (1 to 9)",
+     "name": "items",
+     "required": true,
+     "type": "Service[]"
+    },
+    {
+     "default": "2",
+     "desc": "the level of the heading (1 on the first section of a page)",
+     "name": "level",
+     "type": "1 | 2 | 3",
+     "values": [
+      "1",
+      "2",
+      "3"
+     ]
+    },
+    {
+     "default": "\"standard\"",
+     "desc": "the vertical padding of the section: compact (py-8 lg:py-16), standard (py-16 lg:py-32), spacious (py-24 lg:py-40)",
+     "name": "padding",
+     "type": "\"compact\" | \"standard\" | \"spacious\"",
+     "values": [
+      "compact",
+      "standard",
+      "spacious"
+     ]
+    },
+    {
+     "default": "\"center\"",
+     "desc": "the alignment of the copy: start, center or end (logical, follows the writing direction): items-* on the column, text-* on the text",
+     "name": "align",
+     "type": "\"start\" | \"center\" | \"end\"",
+     "values": [
+      "start",
+      "center",
+      "end"
+     ]
+    },
+    {
+     "default": "\"cards\"",
+     "name": "layout",
+     "type": "\"cards\" | \"rows\"",
+     "values": [
+      "cards",
+      "rows"
+     ]
+    },
+    {
+     "default": "\"3\"",
+     "name": "cols",
+     "type": "\"3\" | \"2\"",
+     "values": [
+      "3",
+      "2"
+     ]
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
     }
    ]
   }

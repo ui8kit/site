@@ -88,6 +88,11 @@
         "path": "contracts/gallery-hero/1.json",
         "sha256": "d3d96918a81d9e9ac808cc319cd2fe90ae72458ee830cf77bbda5b747749db69"
       },
+      "guarantees-simple@1": {
+        "model": "guarantees@1",
+        "path": "contracts/guarantees-simple/1.json",
+        "sha256": "5d589c249adc92a4dfd82a1eccb2f63ab9b5c3e1703a2f6e8acaa69515329b0e"
+      },
       "header-simple@1": {
         "model": "header@1",
         "path": "contracts/header-simple/1.json",
@@ -183,6 +188,11 @@
         "path": "contracts/rooms-simple/1.json",
         "sha256": "d8b7b384d17c5306873aaa2949e4cd8c645c3d9308b0a6cb456a3eb4db304703"
       },
+      "services-simple@1": {
+        "model": "services@1",
+        "path": "contracts/services-simple/1.json",
+        "sha256": "54436e130dcf26d3047d8f995724c3bfcc6f3311626c8460009b9c1b20bf6cf9"
+      },
       "specs-simple@1": {
         "model": "specs@1",
         "path": "contracts/specs-simple/1.json",
@@ -230,7 +240,7 @@
       }
     },
     "path": "contracts/v0.json",
-    "sha256": "a5c6c6529821dc01f2e2408bf5374c3dea6c67732b512f3d761c2479a63fafd7"
+    "sha256": "3de774cb15f09fe68427f0d57399d59fc0390c78f1ac47141156e1a0525d41ca"
   },
   "items": [
     {
@@ -20174,6 +20184,155 @@
       },
       "title": "Group",
       "type": "registry:ui"
+    },
+    {
+      "category": "marketing",
+      "contract": "contracts/guarantees-simple/1.json",
+      "description": "The heading, one paragraph and the promises (delivery, quality, returns), each a short title and a line: side by side on one muted band, or on cards, in four or three columns.",
+      "group": "features",
+      "kind": "block",
+      "model": "guarantees@1",
+      "name": "guarantees-simple",
+      "runtimes": {
+        "jinja2": {
+          "dependencies": [],
+          "files": [
+            "blocks/guarantees-simple.html.j2"
+          ],
+          "path": "jinja2/blocks/guarantees-simple.json",
+          "registryDependencies": [
+            "block",
+            "box",
+            "container",
+            "list",
+            "list-item",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "latte": {
+          "dependencies": [],
+          "files": [
+            "blocks/guarantees-simple.latte"
+          ],
+          "path": "latte/blocks/guarantees-simple.json",
+          "registryDependencies": [
+            "block",
+            "box",
+            "container",
+            "list",
+            "list-item",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "react": {
+          "dependencies": [],
+          "files": [
+            "blocks/guarantees-simple.tsx",
+            "blocks/guarantees-simple.types.ts"
+          ],
+          "path": "react/blocks/guarantees-simple.json",
+          "registryDependencies": [
+            "compose",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/guarantees-simple.tsx",
+            "blocks/guarantees-simple.types.ts"
+          ],
+          "path": "solid/blocks/guarantees-simple.json",
+          "registryDependencies": [
+            "compose",
+            "utils"
+          ]
+        },
+        "svelte": {
+          "dependencies": [],
+          "files": [
+            "blocks/guarantees-simple.svelte",
+            "blocks/guarantees-simple.types.ts"
+          ],
+          "path": "svelte/blocks/guarantees-simple.json",
+          "registryDependencies": [
+            "block",
+            "box",
+            "container",
+            "list",
+            "list-item",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "templ": {
+          "dependencies": [],
+          "files": [
+            "blocks/guarantees-simple.templ"
+          ],
+          "path": "templ/blocks/guarantees-simple.json",
+          "registryDependencies": [
+            "block",
+            "box",
+            "container",
+            "kit-box",
+            "kit-text",
+            "list",
+            "list-item",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "twig": {
+          "dependencies": [],
+          "files": [
+            "blocks/guarantees-simple.html.twig"
+          ],
+          "path": "twig/blocks/guarantees-simple.json",
+          "registryDependencies": [
+            "block",
+            "box",
+            "container",
+            "list",
+            "list-item",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "vue": {
+          "dependencies": [],
+          "files": [
+            "blocks/guarantees-simple.types.ts",
+            "blocks/guarantees-simple.vue"
+          ],
+          "path": "vue/blocks/guarantees-simple.json",
+          "registryDependencies": [
+            "block",
+            "box",
+            "container",
+            "list",
+            "list-item",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        }
+      },
+      "title": "Guarantees Simple",
+      "type": "registry:block"
     },
     {
       "category": "marketing",
@@ -43396,6 +43555,156 @@
       "type": "registry:ui"
     },
     {
+      "category": "marketing",
+      "contract": "contracts/services-simple/1.json",
+      "description": "The heading, one paragraph and the services (the name as a link, a line, the starting price): on cards in three or two columns, or rows with the price at the end.",
+      "group": "features",
+      "kind": "block",
+      "model": "services@1",
+      "name": "services-simple",
+      "runtimes": {
+        "jinja2": {
+          "dependencies": [],
+          "files": [
+            "blocks/services-simple.html.j2"
+          ],
+          "path": "jinja2/blocks/services-simple.json",
+          "registryDependencies": [
+            "block",
+            "container",
+            "link-plain",
+            "list",
+            "list-item",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "latte": {
+          "dependencies": [],
+          "files": [
+            "blocks/services-simple.latte"
+          ],
+          "path": "latte/blocks/services-simple.json",
+          "registryDependencies": [
+            "block",
+            "container",
+            "link-plain",
+            "list",
+            "list-item",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "react": {
+          "dependencies": [],
+          "files": [
+            "blocks/services-simple.tsx",
+            "blocks/services-simple.types.ts"
+          ],
+          "path": "react/blocks/services-simple.json",
+          "registryDependencies": [
+            "compose",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/services-simple.tsx",
+            "blocks/services-simple.types.ts"
+          ],
+          "path": "solid/blocks/services-simple.json",
+          "registryDependencies": [
+            "compose",
+            "utils"
+          ]
+        },
+        "svelte": {
+          "dependencies": [],
+          "files": [
+            "blocks/services-simple.svelte",
+            "blocks/services-simple.types.ts"
+          ],
+          "path": "svelte/blocks/services-simple.json",
+          "registryDependencies": [
+            "block",
+            "container",
+            "link-plain",
+            "list",
+            "list-item",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "templ": {
+          "dependencies": [],
+          "files": [
+            "blocks/services-simple.templ"
+          ],
+          "path": "templ/blocks/services-simple.json",
+          "registryDependencies": [
+            "block",
+            "container",
+            "kit-box",
+            "kit-link",
+            "kit-text",
+            "link-plain",
+            "list",
+            "list-item",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "twig": {
+          "dependencies": [],
+          "files": [
+            "blocks/services-simple.html.twig"
+          ],
+          "path": "twig/blocks/services-simple.json",
+          "registryDependencies": [
+            "block",
+            "container",
+            "link-plain",
+            "list",
+            "list-item",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "vue": {
+          "dependencies": [],
+          "files": [
+            "blocks/services-simple.types.ts",
+            "blocks/services-simple.vue"
+          ],
+          "path": "vue/blocks/services-simple.json",
+          "registryDependencies": [
+            "block",
+            "container",
+            "link-plain",
+            "list",
+            "list-item",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        }
+      },
+      "title": "Services Simple",
+      "type": "registry:block"
+    },
+    {
       "category": "primitives",
       "description": "Sheet primitive",
       "group": "",
@@ -54998,7 +55307,7 @@
       "type": "registry:block"
     }
   ],
-  "lastUpdated": "2026-11-21T02:11:14+03:00",
+  "lastUpdated": "2026-11-21T02:56:01+03:00",
   "layout": "<runtime>/index.json + <runtime>/{components/ui,components,blocks,utils,lib,themes}/<name>.json; use r/<runtime> as registryUrl",
   "models": {
     "article-lead@1": {
@@ -55068,6 +55377,10 @@
     "gallery@1": {
       "path": "models/gallery@1.schema.json",
       "sha256": "728e408f73900e79639629aaa52698fee31b3a9fc87e73efdb1b11457906b7f2"
+    },
+    "guarantees@1": {
+      "path": "models/guarantees@1.schema.json",
+      "sha256": "4e1c0cbdf9f66c16db84e608bb7990f6fa08fdf0ff6171beae18df91759854f6"
     },
     "header@1": {
       "path": "models/header@1.schema.json",
@@ -55145,6 +55458,10 @@
       "path": "models/rooms@1.schema.json",
       "sha256": "2612627b469c7dbeceaf312201e47c722e4a1e121733e47e8f56b8776ef4a5b6"
     },
+    "services@1": {
+      "path": "models/services@1.schema.json",
+      "sha256": "d2c08e64a0787cc57731503025854a7ce4ad8a4427312818653bdbd6f1adb828"
+    },
     "specs@1": {
       "path": "models/specs@1.schema.json",
       "sha256": "190ead29f6da241d6c9fd255aa6b9937477af0ace8f1940378fda9b7e48e5cd9"
@@ -55183,9 +55500,9 @@
     }
   },
   "props": {
-    "digest": "sha256:e022c7e247a750e3277fbb7a4f349ec3fdceea2e0a20897451389314e90f8094",
+    "digest": "sha256:3920d4cfc5ca1efd310fe549faa5e2d770d43f48b41c216a1fb20f94c465948a",
     "path": "props/v0.json",
-    "sha256": "2c3a1f3d1b15bd608ee95b2c3c15596fedd1c84b3920d4e2b2cb20083f952ff3",
+    "sha256": "b3beca3f924d5911be22fbf6147ee8987aa7231b959d2ba4cd10fc8885912c5c",
     "version": "0"
   },
   "runtimes": [
@@ -55198,11 +55515,11 @@
     "latte",
     "jinja2"
   ],
-  "sourceCommit": "004a0b4140cfc719d4f1355a3d0d881c4cae0933",
+  "sourceCommit": "b509419e8ea571014a1984d2247bff9ff8137d1c",
   "variants": {
-    "digest": "sha256:69ddffd21a4e36d94b5c2934c41d9d4600cba65127f5bb1068f7209352ef0d49",
+    "digest": "sha256:ded7096648297e4deb79683289b4bb2f1c5e4a7f68283337961abbc38afe027b",
     "path": "variants/v0.json",
-    "sha256": "ff6d252473322fa8b86c0829b5b4414edcb6f7e19fb578042f3b9361649959a9",
+    "sha256": "a2caa4d699a1cd25cd3d109803b8c38663e102efacb1ed77ba744127567d0d49",
     "version": "0"
   },
   "version": "0.1.0"

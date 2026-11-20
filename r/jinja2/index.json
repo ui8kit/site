@@ -2300,6 +2300,24 @@
     },
     {
       "dependencies": [],
+      "description": "The heading, one paragraph and the promises (delivery, quality, returns), each a short title and a line: side by side on one muted band, or on cards, in four or three columns.",
+      "name": "guarantees-simple",
+      "registryDependencies": [
+        "block",
+        "box",
+        "container",
+        "list",
+        "list-item",
+        "stack",
+        "text",
+        "title",
+        "utils"
+      ],
+      "title": "Guarantees Simple",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
       "description": "The brand as the link home, the navigation links and one action in a bar: the links in the middle, at the end beside the action, or centred under the brand. No menu button: the links wrap on a narrow screen.",
       "name": "header-simple",
       "registryDependencies": [
@@ -4940,6 +4958,24 @@
     },
     {
       "dependencies": [],
+      "description": "The heading, one paragraph and the services (the name as a link, a line, the starting price): on cards in three or two columns, or rows with the price at the end.",
+      "name": "services-simple",
+      "registryDependencies": [
+        "block",
+        "container",
+        "link-plain",
+        "list",
+        "list-item",
+        "stack",
+        "text",
+        "title",
+        "utils"
+      ],
+      "title": "Services Simple",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
       "description": "Sheet: Dialog + recipe sheet.",
       "name": "sheet",
       "registryDependencies": [
@@ -6178,7 +6214,7 @@
       "type": "registry:block"
     }
   ],
-  "lastUpdated": "2026-11-21T02:11:14+03:00",
+  "lastUpdated": "2026-11-21T02:56:01+03:00",
   "registry": "ui",
   "version": "0.1.0"
 }

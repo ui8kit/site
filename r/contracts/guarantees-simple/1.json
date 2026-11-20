@@ -1,0 +1,114 @@
+{
+  "item": "guarantees-simple",
+  "version": 1,
+  "block": "block.guaranteessimple",
+  "organism": "GuaranteesSimple",
+  "line": "simple",
+  "model": "guarantees@1",
+  "modelSchema": "https://registry.buildy.tw/models/guarantees@1.schema.json",
+  "axes": {
+    "layout": [
+      "strip",
+      "cards"
+    ],
+    "cols": [
+      "4",
+      "3"
+    ]
+  },
+  "defaults": {
+    "layout": "strip",
+    "cols": "4"
+  },
+  "variants": [
+    {
+      "id": "strip4",
+      "label": "A strip of four",
+      "axes": {
+        "layout": "strip",
+        "cols": "4"
+      }
+    },
+    {
+      "id": "strip3",
+      "label": "A strip of three",
+      "axes": {
+        "layout": "strip",
+        "cols": "3"
+      }
+    },
+    {
+      "id": "cards4",
+      "label": "Four cards",
+      "axes": {
+        "layout": "cards",
+        "cols": "4"
+      }
+    },
+    {
+      "id": "cards3",
+      "label": "Three cards",
+      "axes": {
+        "layout": "cards",
+        "cols": "3"
+      }
+    }
+  ],
+  "defaultVariant": "strip4",
+  "settings": {
+    "level": {
+      "type": "1 | 2 | 3",
+      "default": 2
+    },
+    "padding": {
+      "type": "\"compact\" | \"standard\" | \"spacious\"",
+      "default": "standard"
+    },
+    "align": {
+      "type": "\"start\" | \"center\" | \"end\"",
+      "default": "center"
+    },
+    "landmarkLabel": {
+      "type": "string"
+    }
+  },
+  "modes": [
+    "wireframe"
+  ],
+  "defaultMode": "wireframe",
+  "places": [
+    {
+      "place": "title",
+      "kind": "heading",
+      "fields": [
+        "/title"
+      ]
+    },
+    {
+      "place": "description",
+      "kind": "text",
+      "fields": [
+        "/description"
+      ]
+    },
+    {
+      "place": "items.title",
+      "kind": "heading",
+      "fields": [
+        "/items/*/title"
+      ],
+      "list": "items"
+    },
+    {
+      "place": "items.text",
+      "kind": "text",
+      "fields": [
+        "/items/*/text"
+      ],
+      "list": "items"
+    }
+  ],
+  "wireframe": {
+    "items": 4
+  }
+}

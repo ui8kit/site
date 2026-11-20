@@ -1,0 +1,60 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://registry.buildy.tw/models/guarantees@1.schema.json",
+  "title": "GuaranteesContent",
+  "description": "Guarantees content: the heading, a description and an ordered list of promises, each with a short title and a line. One object is valid in every guarantees layout (a strip, cards; four or three columns).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "title",
+    "items"
+  ],
+  "properties": {
+    "title": {
+      "description": "the heading of the section",
+      "type": "string",
+      "maxLength": 120,
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "description": {
+      "description": "one paragraph under the heading; empty: none",
+      "type": "string",
+      "maxLength": 400
+    },
+    "items": {
+      "description": "the promises, in the order they are shown",
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 8,
+      "items": {
+        "title": "Guarantee",
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "title"
+        ],
+        "properties": {
+          "id": {
+            "description": "stable key of the entry (the Codex entry id)",
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]*$"
+          },
+          "title": {
+            "description": "the promise in a few words",
+            "type": "string",
+            "maxLength": 60,
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "text": {
+            "description": "one line about the promise; empty: none",
+            "type": "string",
+            "maxLength": 160
+          }
+        }
+      }
+    }
+  }
+}
