@@ -113,7 +113,7 @@
       }
     },
     "source": {
-      "manifest": "ed31e6db32fb06c1421c1c877892976ce76c25da327ab09c341ca64078f20ba4"
+      "manifest": "0e584ce20f24f3d7edecdbc09afe97b69229cc1f33f3c22f309f13b97b5ae4f6"
     }
   },
   "models": {
@@ -964,8 +964,8 @@
         "faq-simple": {
           "files": {
             "blocks/faq-simple.html.j2": {
-              "bytes": 4137,
-              "sha256": "5c073d94d46456fcd998739874916cd861288c64e5f749670251584adec989d7"
+              "bytes": 4130,
+              "sha256": "aa9a4292094750c4fe1738ec3659f5ed6ee8c92b183515ddea3d8ea9699fd147"
             }
           },
           "type": "registry:block"
@@ -1477,8 +1477,8 @@
         "intro-simple": {
           "files": {
             "blocks/intro-simple.html.j2": {
-              "bytes": 4776,
-              "sha256": "59fd60af8a68de4d2c6189693a7618a77d417a7925418fdf724289003ee227fd"
+              "bytes": 4757,
+              "sha256": "ddc64ff57e5d86643b339f5e3e42e43c305d529aabd2316cd04cb73f660aa980"
             }
           },
           "type": "registry:block"
@@ -3081,8 +3081,8 @@
         "steps-simple": {
           "files": {
             "blocks/steps-simple.html.j2": {
-              "bytes": 5557,
-              "sha256": "52a2ae0b27436538e9895c4b59feacf0057693e9880f2c5f177dff88e657385d"
+              "bytes": 5550,
+              "sha256": "b3164f362ebf2bc962e1db949f01287fbcc619c60047939449a9217cf801d6bc"
             }
           },
           "type": "registry:block"
@@ -4282,8 +4282,8 @@
         "faq-simple": {
           "files": {
             "blocks/faq-simple.latte": {
-              "bytes": 4084,
-              "sha256": "3682176d88f24570cfd24df8dc206d7aa293ed63fad310a3c6fb224db813d140"
+              "bytes": 4077,
+              "sha256": "9997f24c008d2302515be96a8359e3c3569e5b6928375caf36cd78b8fc029b73"
             }
           },
           "type": "registry:block"
@@ -4795,8 +4795,8 @@
         "intro-simple": {
           "files": {
             "blocks/intro-simple.latte": {
-              "bytes": 4676,
-              "sha256": "50066eb4a0cade38aa0bd03c141d4e632dc331ab1c0e6e9de771423bae0c5f6c"
+              "bytes": 4655,
+              "sha256": "ce0bfed940b4a55eada0bbffdc41a90526d4b3e99c6fe36de77ffc89ac71e31f"
             }
           },
           "type": "registry:block"
@@ -6395,8 +6395,8 @@
         "steps-simple": {
           "files": {
             "blocks/steps-simple.latte": {
-              "bytes": 5456,
-              "sha256": "92590f877a169e388dd16148b04c699203e0211f93ee0148dcf8427912b70fb4"
+              "bytes": 5449,
+              "sha256": "b11baf106327030866c8ba7f1f172ee73fe7dbaaa8a2f98c836c33356a1030db"
             }
           },
           "type": "registry:block"
@@ -7726,8 +7726,8 @@
         "faq-simple": {
           "files": {
             "blocks/faq-simple.tsx": {
-              "bytes": 3248,
-              "sha256": "f405ecd5842852ff43437034a5505b12f45e2fd00f0aabeec292a33b8f33e277"
+              "bytes": 3241,
+              "sha256": "dd7d42761626c2f5a4e36c5db178eb7f243fdd00520f1169c726c273652504aa"
             },
             "blocks/faq-simple.types.ts": {
               "bytes": 241,
@@ -8275,8 +8275,8 @@
         "intro-simple": {
           "files": {
             "blocks/intro-simple.tsx": {
-              "bytes": 3891,
-              "sha256": "527fe02a5b46ba6ef5ed69139c88cddbc6a1ba52174c729473c45861756b69dd"
+              "bytes": 3872,
+              "sha256": "c0c6f3052db96e998c9bfb13120d9bd6d038ad70ad81db91c13359c2450a0688"
             }
           },
           "type": "registry:block"
@@ -10078,8 +10078,8 @@
         "steps-simple": {
           "files": {
             "blocks/steps-simple.tsx": {
-              "bytes": 4384,
-              "sha256": "e2e56f89fa122c16bcc94f1f3770f526d213fc071532b1b94fcba9749d7c38b8"
+              "bytes": 4377,
+              "sha256": "6d83a49bd2053f30042dcf5f2e84e26d2198c6d8ffd4cbd6d8eb5d0dcaf36ae6"
             },
             "blocks/steps-simple.types.ts": {
               "bytes": 255,
@@ -11694,8 +11694,8 @@
         "faq-simple": {
           "files": {
             "blocks/faq-simple.tsx": {
-              "bytes": 3210,
-              "sha256": "9961d1562c4a5afe998673e8c3e12e4aadf48c45b4654b85f9497df641b5ff67"
+              "bytes": 3203,
+              "sha256": "68b3b3a988e7f18a2ab72f3e96a013770072bb274acc31969cf838d02388cb27"
             },
             "blocks/faq-simple.types.ts": {
               "bytes": 241,
@@ -12243,8 +12243,8 @@
         "intro-simple": {
           "files": {
             "blocks/intro-simple.tsx": {
-              "bytes": 3860,
-              "sha256": "83d0ba01e7d079b2b416108d8d1f1c74c87f57e6c827ec7c97d65612106e8346"
+              "bytes": 3845,
+              "sha256": "d4f6d5653ac2d4e2028df6ed3a02d6d447e07bbb1ff9ab93792471a38d5fdb1c"
             }
           },
           "type": "registry:block"
@@ -14037,8 +14037,8 @@
         "steps-simple": {
           "files": {
             "blocks/steps-simple.tsx": {
-              "bytes": 4346,
-              "sha256": "2f0834a62378645c61a8615d66684880736a71591bb3d20755daeb74600f562e"
+              "bytes": 4339,
+              "sha256": "2e6dc74d9823b47cf41736ab6fb216ef4dcf8ca9abf5a03cca6aca9b219715f9"
             },
             "blocks/steps-simple.types.ts": {
               "bytes": 255,
@@ -15653,8 +15653,8 @@
         "faq-simple": {
           "files": {
             "blocks/faq-simple.svelte": {
-              "bytes": 3476,
-              "sha256": "b6e8704f4b016c48705975a20a53012ee17f8432a7b3c35f5f83fb2536038ced"
+              "bytes": 3469,
+              "sha256": "b0be260e46778ee9b5314ee5c46cf38df2847760355c7ed35b6c20d480793493"
             },
             "blocks/faq-simple.types.ts": {
               "bytes": 241,
@@ -16202,8 +16202,8 @@
         "intro-simple": {
           "files": {
             "blocks/intro-simple.svelte": {
-              "bytes": 4113,
-              "sha256": "f00a2ec0aa5d26af76425540802b015d6236da45d2248aa75b50c3ad4f7a2060"
+              "bytes": 4098,
+              "sha256": "325ac9a487b4a9c26de6c6132075017d68603efeab9b014b3207400d41f33265"
             }
           },
           "type": "registry:block"
@@ -18016,8 +18016,8 @@
         "steps-simple": {
           "files": {
             "blocks/steps-simple.svelte": {
-              "bytes": 4668,
-              "sha256": "8e562e9b81b8c77a995bdda633b4d23554314778c4b95b2276a55c8852f33b7d"
+              "bytes": 4661,
+              "sha256": "f888bf1850793402a01b42ca914590174bb001a81edfd99f346ad79b34d7b49d"
             },
             "blocks/steps-simple.types.ts": {
               "bytes": 255,
@@ -19502,8 +19502,8 @@
         "faq-simple": {
           "files": {
             "blocks/faq-simple.templ": {
-              "bytes": 4306,
-              "sha256": "5a51e99b25bc4be684434ec0dcf247b9846ca9e004d507e3e9897584abfe1397"
+              "bytes": 4299,
+              "sha256": "96ce76dd8d114b088b7188a3b2e95fb6bbc73c4ce57ee4011aac14614c5c4e85"
             }
           },
           "type": "registry:block"
@@ -20015,8 +20015,8 @@
         "intro-simple": {
           "files": {
             "blocks/intro-simple.templ": {
-              "bytes": 5008,
-              "sha256": "7ef2bd17f06731f528920536774af463d62b4ae59d827caa3aa3f3e8f6531230"
+              "bytes": 4993,
+              "sha256": "57edb6c2e9259e210df7c50a70a45a23811d84dcb8c621a67e77d4de9d17b34b"
             }
           },
           "type": "registry:block"
@@ -21611,8 +21611,8 @@
         "steps-simple": {
           "files": {
             "blocks/steps-simple.templ": {
-              "bytes": 5760,
-              "sha256": "ea861187b7c9687523d81b0dccd41af6059e9ef2d6aba3cdd2067392dc09eef8"
+              "bytes": 5753,
+              "sha256": "eb0f3ad36652a57a1ff04c76fcc63f448726652de09eeecb3ae3d4f7db1685b7"
             }
           },
           "type": "registry:block"
@@ -22840,8 +22840,8 @@
         "faq-simple": {
           "files": {
             "blocks/faq-simple.html.twig": {
-              "bytes": 4169,
-              "sha256": "9d0bdaf0129a733d3974e9bc1146e99aed99b682194f34a9babc937cb5fec4a6"
+              "bytes": 4162,
+              "sha256": "15749c12b114ac99899b936a03b55c413766e2d2017e7ac132e4837ca826dd6a"
             }
           },
           "type": "registry:block"
@@ -23353,8 +23353,8 @@
         "intro-simple": {
           "files": {
             "blocks/intro-simple.html.twig": {
-              "bytes": 4787,
-              "sha256": "33bc0029549e43dba993b20f5dfe456d41ac153af243eb201a77eab2b86704ab"
+              "bytes": 4768,
+              "sha256": "170474464d97f149a7eb2811d29fd109d8c36bf2a2674a426909408504dc3f64"
             }
           },
           "type": "registry:block"
@@ -24957,8 +24957,8 @@
         "steps-simple": {
           "files": {
             "blocks/steps-simple.html.twig": {
-              "bytes": 5570,
-              "sha256": "8b82b6f021a90d03570fe5855d9a4b170e868aa0c6fdf5df6f1801a9511f3acf"
+              "bytes": 5563,
+              "sha256": "073e02073fa10ade658497c1c26e25922d9275df6b4ca1dfc3f9b906c57fdcca"
             }
           },
           "type": "registry:block"
@@ -26296,8 +26296,8 @@
               "sha256": "99e5b3d3afaf2e0cde95ca75f7746cba75c354af6894a5b103cbebe1e77d7353"
             },
             "blocks/faq-simple.vue": {
-              "bytes": 3439,
-              "sha256": "089d42d9c58b787fe602fd28480ef8a17361e8aa6433e82c21b0e79bfcc81aa3"
+              "bytes": 3432,
+              "sha256": "77291fef8d258822c99fd063705e5a7fb5697b3484cde3788bdd73e2b3239fa7"
             }
           },
           "type": "registry:block"
@@ -26841,8 +26841,8 @@
         "intro-simple": {
           "files": {
             "blocks/intro-simple.vue": {
-              "bytes": 4107,
-              "sha256": "16657fa285769ed51c38bcb79f7b4992a646222f1a22eddba6cd2e14436b7eda"
+              "bytes": 4092,
+              "sha256": "3398de2a3288f608c2c9546b00ecb3b82a9ec66c1c42d75b25f336e9f2bb6699"
             }
           },
           "type": "registry:block"
@@ -28659,8 +28659,8 @@
               "sha256": "62dd903748f978d0cdc156dc5f7cbc5f0c6d60bdb3748671394e41dd060e6a52"
             },
             "blocks/steps-simple.vue": {
-              "bytes": 4561,
-              "sha256": "c5641850da8417037d2fdb8f5026f2ab5c336cbdb517b831e9f0d862c7e6b516"
+              "bytes": 4554,
+              "sha256": "6785ccd23fe97914053d041552247b08cd94ab5d29ba8cbbf11764d062a2f15e"
             }
           },
           "type": "registry:block"
@@ -29384,8 +29384,8 @@
     }
   },
   "source": {
-    "commit": "70773899d6b2da7b6c35b974b8f40f3d64677929",
-    "commitDate": "2026-11-20T19:04:56+03:00",
+    "commit": "f157606eb601f821281f6c3be979cbe1273e2f6c",
+    "commitDate": "2026-11-20T19:16:50+03:00",
     "dirty": false,
     "repo": "private source monorepo"
   },
