@@ -17,15 +17,15 @@
       },
       "team-simple@1": {
         "block": "block.teamsimple",
-        "bytes": 2148,
+        "bytes": 2149,
         "model": "team@1",
         "path": "contracts/team-simple/1.json",
-        "sha256": "56fba32f87b03a845a3123b0db9b4abe2f1e4be922e185309c1e581f322b1510",
+        "sha256": "ff0b83a814f00624ee3200454fc70fd9fde1789e75412e94b2aeac5c172ed9a8",
         "version": 1
       }
     },
     "source": {
-      "manifest": "cdabcc4e18459266c5d003d4d4a9940212fb04ddccde4ebaede3de344d0759ee"
+      "manifest": "edeed345a2cd44acf3b603c1c9e1f58f57c81dc602f740563e881236acbc5d2b"
     }
   },
   "models": {
@@ -43,11 +43,11 @@
     }
   },
   "props": {
-    "bytes": 1964033,
-    "digest": "sha256:dabd57786df8dbf3bbf1edc3c6465c3b25313b637ba4b9af7b4ff464bb3bd1f7",
+    "bytes": 1964034,
+    "digest": "sha256:fd43f59fc5c2c6ca1abd8a4d8d209f729620dfccf45857bcfcd37570e3f30b65",
     "items": 118,
     "path": "props/v0.json",
-    "sha256": "d0e6699a48ede1d69eceb15aefabb7f992008cdb43bdd5e08fcef27472ff2374",
+    "sha256": "4ea530101181d7cce5cf6e332fc19bd6696f3aedf8ed57eab7c43d868d0ef43f",
     "version": "0"
   },
   "runtimes": {
@@ -3062,8 +3062,8 @@
         "team-simple": {
           "files": {
             "blocks/team-simple.html.j2": {
-              "bytes": 6310,
-              "sha256": "270c59ec80a9c741f67fe369f37fcd02d06a64698ccea3ea25fd1e095a0b33a2"
+              "bytes": 6311,
+              "sha256": "14a16018ee6f7526768fa8202140128eda98d6e74156e3beb7f4cc026438b886"
             }
           },
           "type": "registry:block"
@@ -6277,8 +6277,8 @@
         "team-simple": {
           "files": {
             "blocks/team-simple.latte": {
-              "bytes": 6282,
-              "sha256": "7d1a3183453f087e33286053a7d7cfc868ad9d02c17680494fc74ad39cb9759e"
+              "bytes": 6283,
+              "sha256": "08fbd41b1fc84132815e67a870ffd3edd1532a2c57538eeb1651173c22c3e76a"
             }
           },
           "type": "registry:block"
@@ -9853,8 +9853,8 @@
         "team-simple": {
           "files": {
             "blocks/team-simple.tsx": {
-              "bytes": 4736,
-              "sha256": "2df27e87a651dcf3a10d96dd58a7de96a8abc006a8b4927f5ff355a7eca9bab8"
+              "bytes": 4737,
+              "sha256": "103b17aa25c9d67d1305c4b71a5ed867055258bbb391e98be66ea103b00298f2"
             },
             "blocks/team-simple.types.ts": {
               "bytes": 259,
@@ -13677,8 +13677,8 @@
         "team-simple": {
           "files": {
             "blocks/team-simple.tsx": {
-              "bytes": 4682,
-              "sha256": "a35c3d9a65440c0e4b53bbd7d9a1d5f8cc8ebed3e8d3d6c9651abf8ca357f17a"
+              "bytes": 4683,
+              "sha256": "4d72f30538a410ac153fa81cb912446e10bd0c350a4c2db0353770d5fc206b3a"
             },
             "blocks/team-simple.types.ts": {
               "bytes": 259,
@@ -17521,8 +17521,8 @@
         "team-simple": {
           "files": {
             "blocks/team-simple.svelte": {
-              "bytes": 4774,
-              "sha256": "399a12d5ce704404eb7534d7a786639829413f0f38d577bc068c1f15253579ad"
+              "bytes": 4775,
+              "sha256": "5d0c64e9e1e0933f5c77044b00c50286b17442524d8e295d96716923ae3fad3d"
             },
             "blocks/team-simple.types.ts": {
               "bytes": 259,
@@ -20989,8 +20989,8 @@
         "team-simple": {
           "files": {
             "blocks/team-simple.templ": {
-              "bytes": 6053,
-              "sha256": "e12b89963ce410168399f6fecd39616e5c823bde24049ad197e58f3ba985f950"
+              "bytes": 6054,
+              "sha256": "3ada669e6ea11d59e05937fd52160a08af252f8fce42c5eaab7fc858a9cb31e5"
             }
           },
           "type": "registry:block"
@@ -24236,8 +24236,8 @@
         "team-simple": {
           "files": {
             "blocks/team-simple.html.twig": {
-              "bytes": 6435,
-              "sha256": "483d62640d8606b276e478a3dbef4ef93705b5946051464b68ab8b0c14c7bcae"
+              "bytes": 6436,
+              "sha256": "90f622528e22f5f698159fec8db062efc2774e61bf649fb905f24aa185e77e29"
             }
           },
           "type": "registry:block"
@@ -27831,8 +27831,8 @@
               "sha256": "ef6fafb91ec2419f3e782c3a0ceea792a75ea2e0d0068afb9dce4c27f30b0fc2"
             },
             "blocks/team-simple.vue": {
-              "bytes": 4648,
-              "sha256": "338eeefa3b02cb1e4ea3dbb9a50d250d1de7b7ae1e4ea14d19bb40429344dd48"
+              "bytes": 4649,
+              "sha256": "938e34b78faa80dcc346db4c5ec6aecb70717e5eb074bcec9e5bfb8335a38a49"
             }
           },
           "type": "registry:block"
@@ -28294,8 +28294,8 @@
     }
   },
   "source": {
-    "commit": "03f1d41af54c98d9a97208a6da29aa6319084534",
-    "commitDate": "2026-11-19T19:20:07+03:00",
+    "commit": "3aed62438c2febfaedea073f9e3e75ec058fc8a3",
+    "commitDate": "2026-11-20T13:58:02+03:00",
     "dirty": false,
     "repo": "private source monorepo"
   },

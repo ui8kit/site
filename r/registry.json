@@ -11,7 +11,7 @@
       "team-simple@1": {
         "model": "team@1",
         "path": "contracts/team-simple/1.json",
-        "sha256": "56fba32f87b03a845a3123b0db9b4abe2f1e4be922e185309c1e581f322b1510"
+        "sha256": "ff0b83a814f00624ee3200454fc70fd9fde1789e75412e94b2aeac5c172ed9a8"
       }
     },
     "path": "contracts/v0.json",
@@ -48274,7 +48274,7 @@
       "type": "registry:block"
     }
   ],
-  "lastUpdated": "2026-11-19T19:20:07+03:00",
+  "lastUpdated": "2026-11-20T13:58:02+03:00",
   "layout": "<runtime>/index.json + <runtime>/{components/ui,components,blocks,utils,lib,themes}/<name>.json; use r/<runtime> as registryUrl",
   "models": {
     "hero@1": {
@@ -48287,9 +48287,9 @@
     }
   },
   "props": {
-    "digest": "sha256:dabd57786df8dbf3bbf1edc3c6465c3b25313b637ba4b9af7b4ff464bb3bd1f7",
+    "digest": "sha256:fd43f59fc5c2c6ca1abd8a4d8d209f729620dfccf45857bcfcd37570e3f30b65",
     "path": "props/v0.json",
-    "sha256": "d0e6699a48ede1d69eceb15aefabb7f992008cdb43bdd5e08fcef27472ff2374",
+    "sha256": "4ea530101181d7cce5cf6e332fc19bd6696f3aedf8ed57eab7c43d868d0ef43f",
     "version": "0"
   },
   "runtimes": [
@@ -48302,7 +48302,7 @@
     "latte",
     "jinja2"
   ],
-  "sourceCommit": "03f1d41af54c98d9a97208a6da29aa6319084534",
+  "sourceCommit": "3aed62438c2febfaedea073f9e3e75ec058fc8a3",
   "variants": {
     "digest": "sha256:88bf3c5455122327087b154730c14a427c3860e822a882540c0269b9464ae5db",
     "path": "variants/v0.json",

@@ -12827,7 +12827,7 @@
      ]
     },
     {
-     "default": "\"start\"",
+     "default": "\"center\"",
      "desc": "the alignment of the copy: start, center or end (logical, follows the writing direction): items-* on the column, text-* on the text",
      "name": "align",
      "type": "\"start\" | \"center\" | \"end\"",

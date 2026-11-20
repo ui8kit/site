@@ -67,7 +67,7 @@
     },
     "align": {
       "type": "\"start\" | \"center\" | \"end\"",
-      "default": "start"
+      "default": "center"
     },
     "landmarkLabel": {
       "type": "string"
