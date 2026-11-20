@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://registry.buildy.tw/models/rating@1.schema.json",
+  "title": "RatingContent",
+  "description": "Rating content: the score, a heading that names it, a line (the count, the scale) and the source as a link. One object is valid in every rating layout (a bar, centred).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "value",
+    "title"
+  ],
+  "properties": {
+    "value": {
+      "description": "the score as it is shown (4.9, 98%)",
+      "type": "string",
+      "maxLength": 8,
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "title": {
+      "description": "the heading of the section",
+      "type": "string",
+      "maxLength": 120,
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "description": {
+      "description": "the count and the scale (out of 5, from 1,240 reviews); empty: none",
+      "type": "string",
+      "maxLength": 160
+    },
+    "sourceLabel": {
+      "description": "the label of the source; the link is drawn when the label and the address are both set",
+      "type": "string",
+      "maxLength": 40
+    },
+    "sourceHref": {
+      "description": "the address of the source",
+      "type": "string",
+      "maxLength": 2048,
+      "pattern": "^(?:(?:https?|mailto|tel):|(?![A-Za-z][A-Za-z0-9+.-]*:))"
+    }
+  }
+}

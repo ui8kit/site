@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://registry.buildy.tw/models/choices@1.schema.json",
+  "title": "ChoicesContent",
+  "description": "Choices content: the heading, a description and an ordered list of options as links (sizes, versions, plans). One object is valid in every choices layout (a row, a grid).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "title",
+    "items"
+  ],
+  "properties": {
+    "title": {
+      "description": "the heading of the section",
+      "type": "string",
+      "maxLength": 120,
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "description": {
+      "description": "one paragraph under the heading; empty: none",
+      "type": "string",
+      "maxLength": 400
+    },
+    "items": {
+      "description": "the options, in the order they are shown",
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 8,
+      "items": {
+        "title": "ChoiceItem",
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "label",
+          "href"
+        ],
+        "properties": {
+          "id": {
+            "description": "stable key of the entry (the Codex entry id)",
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]*$"
+          },
+          "label": {
+            "description": "the text of the link",
+            "type": "string",
+            "maxLength": 40,
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "href": {
+            "description": "the address of the link",
+            "type": "string",
+            "maxLength": 2048,
+            "pattern": "^(?:(?:https?|mailto|tel):|(?![A-Za-z][A-Za-z0-9+.-]*:))"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "item": "error-simple",
+  "version": 1,
+  "block": "block.errorsimple",
+  "organism": "ErrorSimple",
+  "line": "simple",
+  "model": "error@1",
+  "modelSchema": "https://registry.buildy.tw/models/error@1.schema.json",
+  "axes": {},
+  "defaults": {},
+  "variants": [
+    {
+      "id": "center",
+      "label": "Centred",
+      "axes": {}
+    },
+    {
+      "id": "start",
+      "label": "At the start",
+      "axes": {},
+      "settings": {
+        "align": "start"
+      }
+    }
+  ],
+  "defaultVariant": "center",
+  "settings": {
+    "level": {
+      "type": "1 | 2 | 3",
+      "default": 2
+    },
+    "padding": {
+      "type": "\"compact\" | \"standard\" | \"spacious\"",
+      "default": "standard"
+    },
+    "align": {
+      "type": "\"start\" | \"center\" | \"end\"",
+      "default": "center"
+    },
+    "landmarkLabel": {
+      "type": "string"
+    }
+  },
+  "modes": [
+    "wireframe"
+  ],
+  "defaultMode": "wireframe",
+  "places": [
+    {
+      "place": "code",
+      "kind": "text",
+      "fields": [
+        "/code"
+      ]
+    },
+    {
+      "place": "title",
+      "kind": "heading",
+      "fields": [
+        "/title"
+      ]
+    },
+    {
+      "place": "description",
+      "kind": "text",
+      "fields": [
+        "/description"
+      ]
+    },
+    {
+      "place": "action",
+      "kind": "action",
+      "fields": [
+        "/actionLabel",
+        "/actionHref"
+      ]
+    }
+  ],
+  "wireframe": {
+    "items": 3
+  }
+}

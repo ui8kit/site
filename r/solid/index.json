@@ -180,6 +180,29 @@
     },
     {
       "dependencies": [],
+      "description": "The head of an article: the heading, the lead paragraph and the byline (the portrait, the author, the date) under a wide cover, or beside it.",
+      "name": "article-lead",
+      "registryDependencies": [
+        "compose",
+        "media-frame",
+        "utils"
+      ],
+      "title": "Article Lead",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "The heading, one paragraph and the sections of a text (a subheading and its paragraph): one reading column, or two columns under a centred head.",
+      "name": "article-simple",
+      "registryDependencies": [
+        "compose",
+        "utils"
+      ],
+      "title": "Article Simple",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
       "description": "Sign in, sign up and reset password.",
       "name": "auth-card",
       "registryDependencies": [
@@ -552,6 +575,18 @@
     },
     {
       "dependencies": [],
+      "description": "The heading, one paragraph and the chapters (a picture, a label, the title, a paragraph): rows with the picture at the side, or a pair with the picture under the copy.",
+      "name": "chapters-simple",
+      "registryDependencies": [
+        "compose",
+        "media-frame",
+        "utils"
+      ],
+      "title": "Chapters Simple",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
       "description": "Orders per day as bars or meters.",
       "name": "chart-panel",
       "registryDependencies": [
@@ -635,6 +670,17 @@
     },
     {
       "dependencies": [],
+      "description": "The heading, one paragraph and the options (sizes, versions) as outline links: a wrapping row, or a grid of four.",
+      "name": "choice-links",
+      "registryDependencies": [
+        "compose",
+        "utils"
+      ],
+      "title": "Choice Links",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
       "description": "A terminal or code window: a title bar with three round marks, then the lines. A `command` line starts with the prompt, an `output` line is muted. Static: the typing animation belongs to the port (TypingText contract).",
       "name": "code-window",
       "registryDependencies": [
@@ -643,6 +689,18 @@
       ],
       "title": "Code Window",
       "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "The heading, one paragraph and the collections (a picture and the name as one link) in four or two columns.",
+      "name": "collections-simple",
+      "registryDependencies": [
+        "compose",
+        "media-frame",
+        "utils"
+      ],
+      "title": "Collections Simple",
+      "type": "registry:block"
     },
     {
       "dependencies": [],
@@ -670,6 +728,17 @@
       ],
       "title": "Compare Mark",
       "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "The heading, one paragraph and two options side by side: their names in a header row, then a row per feature with the value of each.",
+      "name": "compare-simple",
+      "registryDependencies": [
+        "compose",
+        "utils"
+      ],
+      "title": "Compare Simple",
+      "type": "registry:block"
     },
     {
       "dependencies": [],
@@ -781,6 +850,18 @@
     },
     {
       "dependencies": [],
+      "description": "The heading, one paragraph and the teams to reach on cards (an icon, the name, a line, an action): in three or two columns, or rows with the icon at the side.",
+      "name": "contacts-simple",
+      "registryDependencies": [
+        "compose",
+        "media-frame",
+        "utils"
+      ],
+      "title": "Contacts Simple",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
       "description": "Container: Box + recipe container.",
       "name": "container",
       "registryDependencies": [
@@ -801,6 +882,17 @@
         "utils"
       ],
       "title": "Cookie Banner",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "The heading, one paragraph and the modules in order (a label, the title, a line, the length): rows in a narrow column, or two columns of cards.",
+      "name": "course-outline",
+      "registryDependencies": [
+        "compose",
+        "utils"
+      ],
+      "title": "Course Outline",
       "type": "registry:block"
     },
     {
@@ -1150,6 +1242,28 @@
     },
     {
       "dependencies": [],
+      "description": "A page for something that went wrong: the code, the heading, one paragraph and one action back; centred or at the start.",
+      "name": "error-simple",
+      "registryDependencies": [
+        "compose",
+        "utils"
+      ],
+      "title": "Error Simple",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "The first screen of an event: a badge, the name as a large heading, one paragraph, the date and the place, and one action; centred or at the start.",
+      "name": "event-intro",
+      "registryDependencies": [
+        "compose",
+        "utils"
+      ],
+      "title": "Event Intro",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
       "description": "The questions of FaqSplit as cards: the topic, the question, the answer and a read-more link; with an icon square on top in the icons shape. Shapes: grid3, grid4, icons (three columns).",
       "name": "faq-cards",
       "registryDependencies": [
@@ -1354,6 +1468,18 @@
     },
     {
       "dependencies": [],
+      "description": "The heading, one paragraph and the key points as a list beside one picture (at the end or the start), or the head over a wide picture with the points in three columns under it.",
+      "name": "feature-showcase-simple",
+      "registryDependencies": [
+        "compose",
+        "media-frame",
+        "utils"
+      ],
+      "title": "Feature Showcase Simple",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
       "description": "Features beside a picture: plain in two columns, as cards with actions, two figures over checked rows, or four metric cards with actions.",
       "name": "feature-split",
       "registryDependencies": [
@@ -1465,6 +1591,18 @@
       ],
       "title": "Figure Block",
       "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "One large picture with its caption (a title, a line, the credit): wide with the caption under it, or the caption at the side.",
+      "name": "figure-simple",
+      "registryDependencies": [
+        "compose",
+        "media-frame",
+        "utils"
+      ],
+      "title": "Figure Simple",
+      "type": "registry:block"
     },
     {
       "dependencies": [],
@@ -1620,6 +1758,17 @@
       ],
       "title": "Footer Signup Card",
       "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "The brand and one line beside the links (a row or a grid of columns), or everything centred; the copyright line under them.",
+      "name": "footer-simple",
+      "registryDependencies": [
+        "compose",
+        "utils"
+      ],
+      "title": "Footer Simple",
+      "type": "registry:block"
     },
     {
       "dependencies": [],
@@ -1786,6 +1935,17 @@
       ],
       "title": "Group",
       "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "The brand as the link home, the navigation links and one action in a bar: the links in the middle, at the end beside the action, or centred under the brand. No menu button: the links wrap on a narrow screen.",
+      "name": "header-simple",
+      "registryDependencies": [
+        "compose",
+        "utils"
+      ],
+      "title": "Header Simple",
+      "type": "registry:block"
     },
     {
       "dependencies": [],
@@ -2375,6 +2535,18 @@
     },
     {
       "dependencies": [],
+      "description": "The heading, one paragraph and the offices (the name, the address) in two columns beside one picture, at the start or the end.",
+      "name": "locations-simple",
+      "registryDependencies": [
+        "compose",
+        "media-frame",
+        "utils"
+      ],
+      "title": "Locations Simple",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
       "description": "Customers and partners as glyphs with names.",
       "name": "logo-cloud",
       "registryDependencies": [
@@ -2858,6 +3030,17 @@
     },
     {
       "dependencies": [],
+      "description": "The heading, one paragraph and two or three offers on cards, each with a title, a line and an action.",
+      "name": "offers-simple",
+      "registryDependencies": [
+        "compose",
+        "utils"
+      ],
+      "title": "Offers Simple",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
       "description": "OptGroup: SelectOptGroup.",
       "name": "opt-group",
       "registryDependencies": [
@@ -3308,6 +3491,17 @@
     },
     {
       "dependencies": [],
+      "description": "The heading, one paragraph and the plans on cards (the name, a badge on the highlighted plan, a line, the price, an action): in three or two columns, or one row each.",
+      "name": "pricing-simple",
+      "registryDependencies": [
+        "compose",
+        "utils"
+      ],
+      "title": "Pricing Simple",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
       "description": "Plans as a grid or a stack of cards.",
       "name": "pricing-tiers",
       "registryDependencies": [
@@ -3405,6 +3599,42 @@
     },
     {
       "dependencies": [],
+      "description": "The heading, one paragraph and the reviews on cards (the rating, the words, the reviewer with the portrait): in three or two columns, or one under the other.",
+      "name": "product-reviews",
+      "registryDependencies": [
+        "compose",
+        "media-frame",
+        "utils"
+      ],
+      "title": "Product Reviews",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "One product: the main picture and thumbnails beside the name, the price, one paragraph and the action; the pictures at the start, at the end or above.",
+      "name": "product-simple",
+      "registryDependencies": [
+        "compose",
+        "media-frame",
+        "utils"
+      ],
+      "title": "Product Simple",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "The heading, one paragraph and the products (a picture, the name as a link, the price): in three or four columns, or rows with the picture at the side.",
+      "name": "products-simple",
+      "registryDependencies": [
+        "compose",
+        "media-frame",
+        "utils"
+      ],
+      "title": "Products Simple",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
       "description": "Account settings: picture, name, email, bio and notifications.",
       "name": "profile-form",
       "registryDependencies": [
@@ -3415,6 +3645,18 @@
         "utils"
       ],
       "title": "Profile Form",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "A person: the name, the role, one paragraph and the links beside the portrait (at the end or the start), or under a round portrait.",
+      "name": "profile-intro",
+      "registryDependencies": [
+        "compose",
+        "media-frame",
+        "utils"
+      ],
+      "title": "Profile Intro",
       "type": "registry:block"
     },
     {
@@ -3500,6 +3742,28 @@
       ],
       "title": "Prose",
       "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "The words of a quote in large type with the author, a role line and the source under them: a bar at the side, or centred.",
+      "name": "pull-quote-simple",
+      "registryDependencies": [
+        "compose",
+        "utils"
+      ],
+      "title": "Pull Quote Simple",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "On a card surface: the heading and one paragraph beside the price, the action and a note; or all centred.",
+      "name": "purchase-simple",
+      "registryDependencies": [
+        "compose",
+        "utils"
+      ],
+      "title": "Purchase Simple",
+      "type": "registry:block"
     },
     {
       "dependencies": [],
@@ -3667,6 +3931,17 @@
       ],
       "title": "Rating",
       "type": "registry:component"
+    },
+    {
+      "dependencies": [],
+      "description": "The score, what it is and the source as a link: one bar on a card surface, or centred.",
+      "name": "rating-simple",
+      "registryDependencies": [
+        "compose",
+        "utils"
+      ],
+      "title": "Rating Simple",
+      "type": "registry:block"
     },
     {
       "dependencies": [],
@@ -4137,6 +4412,17 @@
     },
     {
       "dependencies": [],
+      "description": "The heading, one paragraph and the specifications as name and value rows on a muted surface, in one narrow column or two columns.",
+      "name": "specs-simple",
+      "registryDependencies": [
+        "compose",
+        "utils"
+      ],
+      "title": "Specs Simple",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
       "description": "Two halves: the heading, one paragraph and up to two links as the actions (primary, then secondary) beside one picture that fills its half to the edge of the screen.",
       "name": "split-simple",
       "registryDependencies": [
@@ -4283,6 +4569,18 @@
         "utils"
       ],
       "title": "Store Locations",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
+      "description": "The heading, one paragraph and the policies (payment, delivery, returns), each with an icon, a title and a line: on cards in columns, or rows.",
+      "name": "store-policies",
+      "registryDependencies": [
+        "compose",
+        "media-frame",
+        "utils"
+      ],
+      "title": "Store Policies",
       "type": "registry:block"
     },
     {
@@ -4863,6 +5161,17 @@
     },
     {
       "dependencies": [],
+      "description": "The heading, one paragraph and the rubrics of a blog on cards (a label, the title as a link, a line): in two or three columns, or one under the other.",
+      "name": "topics-simple",
+      "registryDependencies": [
+        "compose",
+        "utils"
+      ],
+      "title": "Topics Simple",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
       "description": "One stop of a product tour: the explained element and a callout with the step, a sentence and buttons. Placing it on the real element is a port contract.",
       "name": "tour-callout",
       "registryDependencies": [
@@ -5015,7 +5324,7 @@
       "type": "registry:block"
     }
   ],
-  "lastUpdated": "2026-11-20T19:16:50+03:00",
+  "lastUpdated": "2026-11-20T22:34:11+03:00",
   "registry": "ui",
   "version": "0.1.0"
 }

@@ -1,0 +1,84 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://registry.buildy.tw/models/profile@1.schema.json",
+  "title": "ProfileContent",
+  "description": "Profile intro content: the name as the heading, the role, a description, a portrait and an ordered list of links (a site, social profiles). One object is valid in every profile layout (the portrait at the end, at the start, above the name).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "title",
+    "role",
+    "imageAlt",
+    "links"
+  ],
+  "properties": {
+    "title": {
+      "description": "the name of the person (the heading)",
+      "type": "string",
+      "maxLength": 80,
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "role": {
+      "description": "the role and the company",
+      "type": "string",
+      "maxLength": 80,
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "description": {
+      "description": "one paragraph under the heading; empty: none",
+      "type": "string",
+      "maxLength": 400
+    },
+    "image": {
+      "description": "address of the portrait; none: the placeholder",
+      "type": "string",
+      "maxLength": 2048,
+      "pattern": "^(?:https?:|(?![A-Za-z][A-Za-z0-9+.-]*:))"
+    },
+    "imageAlt": {
+      "description": "alt text of the portrait",
+      "type": "string",
+      "maxLength": 160,
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "links": {
+      "description": "the links of the person, in the order they are shown",
+      "type": "array",
+      "minItems": 0,
+      "maxItems": 4,
+      "items": {
+        "title": "ProfileLink",
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "label",
+          "href"
+        ],
+        "properties": {
+          "id": {
+            "description": "stable key of the entry (the Codex entry id)",
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]*$"
+          },
+          "label": {
+            "description": "the text of the link",
+            "type": "string",
+            "maxLength": 40,
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "href": {
+            "description": "the address of the link",
+            "type": "string",
+            "maxLength": 2048,
+            "pattern": "^(?:(?:https?|mailto|tel):|(?![A-Za-z][A-Za-z0-9+.-]*:))"
+          }
+        }
+      }
+    }
+  }
+}

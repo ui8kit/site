@@ -1,0 +1,84 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://registry.buildy.tw/models/pricing@1.schema.json",
+  "title": "PricingContent",
+  "description": "Pricing content: the heading, a description and an ordered list of two to four plans, each with a name, the price as it is shown, a line, an optional badge (the highlighted plan) and an action. One object is valid in every pricing layout (cards in two or three columns, rows).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "title",
+    "plans"
+  ],
+  "properties": {
+    "title": {
+      "description": "the heading of the section",
+      "type": "string",
+      "maxLength": 120,
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "description": {
+      "description": "one paragraph under the heading; empty: none",
+      "type": "string",
+      "maxLength": 400
+    },
+    "plans": {
+      "description": "the plans, in the order they are shown",
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 4,
+      "items": {
+        "title": "PricingPlan",
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "title",
+          "price"
+        ],
+        "properties": {
+          "id": {
+            "description": "stable key of the entry (the Codex entry id)",
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]*$"
+          },
+          "title": {
+            "description": "the name of the plan",
+            "type": "string",
+            "maxLength": 40,
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "price": {
+            "description": "the price as it is shown ($12 / month)",
+            "type": "string",
+            "maxLength": 24,
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "description": {
+            "description": "one line about the plan; empty: none",
+            "type": "string",
+            "maxLength": 240
+          },
+          "badge": {
+            "description": "a short pill on the highlighted plan; empty: none",
+            "type": "string",
+            "maxLength": 24
+          },
+          "actionLabel": {
+            "description": "the label of the action; the link is drawn when the label and the address are both set",
+            "type": "string",
+            "maxLength": 40
+          },
+          "actionHref": {
+            "description": "the address of the action",
+            "type": "string",
+            "maxLength": 2048,
+            "pattern": "^(?:(?:https?|mailto|tel):|(?![A-Za-z][A-Za-z0-9+.-]*:))"
+          }
+        }
+      }
+    }
+  }
+}

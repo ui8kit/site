@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://registry.buildy.tw/models/specs@1.schema.json",
+  "title": "SpecsContent",
+  "description": "Specs content: the heading, a description and an ordered list of specifications, each a name and its value. One object is valid in every specs layout (rows, two columns).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "title",
+    "items"
+  ],
+  "properties": {
+    "title": {
+      "description": "the heading of the section",
+      "type": "string",
+      "maxLength": 120,
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "description": {
+      "description": "one paragraph under the heading; empty: none",
+      "type": "string",
+      "maxLength": 400
+    },
+    "items": {
+      "description": "the specifications, in the order they are shown",
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 16,
+      "items": {
+        "title": "SpecItem",
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "title",
+          "description"
+        ],
+        "properties": {
+          "id": {
+            "description": "stable key of the entry (the Codex entry id)",
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]*$"
+          },
+          "title": {
+            "description": "the name of the specification",
+            "type": "string",
+            "maxLength": 60,
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "description": {
+            "description": "the value as it is shown",
+            "type": "string",
+            "maxLength": 120,
+            "minLength": 1,
+            "pattern": "\\S"
+          }
+        }
+      }
+    }
+  }
+}

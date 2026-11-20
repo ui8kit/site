@@ -2,11 +2,77 @@
   "version": 0,
   "base": "https://registry.buildy.tw/contracts",
   "items": {
+    "article-lead": {
+      "version": 1,
+      "block": "block.articlelead",
+      "model": "article-lead@1",
+      "path": "article-lead/1.json"
+    },
+    "article-simple": {
+      "version": 1,
+      "block": "block.articlesimple",
+      "model": "article@1",
+      "path": "article-simple/1.json"
+    },
+    "chapters-simple": {
+      "version": 1,
+      "block": "block.chapterssimple",
+      "model": "chapters@1",
+      "path": "chapters-simple/1.json"
+    },
+    "choice-links": {
+      "version": 1,
+      "block": "block.choicelinks",
+      "model": "choices@1",
+      "path": "choice-links/1.json"
+    },
+    "collections-simple": {
+      "version": 1,
+      "block": "block.collectionssimple",
+      "model": "collections@1",
+      "path": "collections-simple/1.json"
+    },
+    "compare-simple": {
+      "version": 1,
+      "block": "block.comparesimple",
+      "model": "compare@1",
+      "path": "compare-simple/1.json"
+    },
+    "contacts-simple": {
+      "version": 1,
+      "block": "block.contactssimple",
+      "model": "contacts@1",
+      "path": "contacts-simple/1.json"
+    },
+    "course-outline": {
+      "version": 1,
+      "block": "block.courseoutline",
+      "model": "curriculum@1",
+      "path": "course-outline/1.json"
+    },
+    "error-simple": {
+      "version": 1,
+      "block": "block.errorsimple",
+      "model": "error@1",
+      "path": "error-simple/1.json"
+    },
+    "event-intro": {
+      "version": 1,
+      "block": "block.eventintro",
+      "model": "event@1",
+      "path": "event-intro/1.json"
+    },
     "faq-simple": {
       "version": 1,
       "block": "block.faqsimple",
       "model": "faq@1",
       "path": "faq-simple/1.json"
+    },
+    "feature-showcase-simple": {
+      "version": 1,
+      "block": "block.featureshowcasesimple",
+      "model": "feature-showcase@1",
+      "path": "feature-showcase-simple/1.json"
     },
     "features-simple": {
       "version": 1,
@@ -14,11 +80,29 @@
       "model": "features@1",
       "path": "features-simple/1.json"
     },
+    "figure-simple": {
+      "version": 1,
+      "block": "block.figuresimple",
+      "model": "figure@1",
+      "path": "figure-simple/1.json"
+    },
+    "footer-simple": {
+      "version": 1,
+      "block": "block.footersimple",
+      "model": "footer@1",
+      "path": "footer-simple/1.json"
+    },
     "gallery-hero": {
       "version": 1,
       "block": "block.galleryhero",
       "model": "gallery@1",
       "path": "gallery-hero/1.json"
+    },
+    "header-simple": {
+      "version": 1,
+      "block": "block.headersimple",
+      "model": "header@1",
+      "path": "header-simple/1.json"
     },
     "hero-simple": {
       "version": 1,
@@ -32,17 +116,83 @@
       "model": "intro@1",
       "path": "intro-simple/1.json"
     },
+    "locations-simple": {
+      "version": 1,
+      "block": "block.locationssimple",
+      "model": "locations@1",
+      "path": "locations-simple/1.json"
+    },
     "logos-simple": {
       "version": 1,
       "block": "block.logossimple",
       "model": "logos@1",
       "path": "logos-simple/1.json"
     },
+    "offers-simple": {
+      "version": 1,
+      "block": "block.offerssimple",
+      "model": "offers@1",
+      "path": "offers-simple/1.json"
+    },
     "photos-simple": {
       "version": 1,
       "block": "block.photossimple",
       "model": "photos@1",
       "path": "photos-simple/1.json"
+    },
+    "pricing-simple": {
+      "version": 1,
+      "block": "block.pricingsimple",
+      "model": "pricing@1",
+      "path": "pricing-simple/1.json"
+    },
+    "product-reviews": {
+      "version": 1,
+      "block": "block.productreviews",
+      "model": "reviews@1",
+      "path": "product-reviews/1.json"
+    },
+    "product-simple": {
+      "version": 1,
+      "block": "block.productsimple",
+      "model": "product@1",
+      "path": "product-simple/1.json"
+    },
+    "products-simple": {
+      "version": 1,
+      "block": "block.productssimple",
+      "model": "products@1",
+      "path": "products-simple/1.json"
+    },
+    "profile-intro": {
+      "version": 1,
+      "block": "block.profileintro",
+      "model": "profile@1",
+      "path": "profile-intro/1.json"
+    },
+    "pull-quote-simple": {
+      "version": 1,
+      "block": "block.pullquotesimple",
+      "model": "pull-quote@1",
+      "path": "pull-quote-simple/1.json"
+    },
+    "purchase-simple": {
+      "version": 1,
+      "block": "block.purchasesimple",
+      "model": "purchase@1",
+      "path": "purchase-simple/1.json"
+    },
+    "rating-simple": {
+      "version": 1,
+      "block": "block.ratingsimple",
+      "model": "rating@1",
+      "path": "rating-simple/1.json"
+    },
+    "specs-simple": {
+      "version": 1,
+      "block": "block.specssimple",
+      "model": "specs@1",
+      "path": "specs-simple/1.json"
     },
     "split-simple": {
       "version": 1,
@@ -62,6 +212,12 @@
       "model": "steps@1",
       "path": "steps-simple/1.json"
     },
+    "store-policies": {
+      "version": 1,
+      "block": "block.storepolicies",
+      "model": "store-policy@1",
+      "path": "store-policies/1.json"
+    },
     "stories-simple": {
       "version": 1,
       "block": "block.storiessimple",
@@ -79,6 +235,12 @@
       "block": "block.testimonialssimple",
       "model": "testimonials@1",
       "path": "testimonials-simple/1.json"
+    },
+    "topics-simple": {
+      "version": 1,
+      "block": "block.topicssimple",
+      "model": "topics@1",
+      "path": "topics-simple/1.json"
     }
   }
 }

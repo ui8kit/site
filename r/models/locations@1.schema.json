@@ -1,0 +1,74 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://registry.buildy.tw/models/locations@1.schema.json",
+  "title": "LocationsContent",
+  "description": "Locations content: the heading, a description, one picture (a map or a place) and an ordered list of offices, each with a name and the address. One object is valid in every locations layout (the picture at the start, at the end).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "title",
+    "imageAlt",
+    "items"
+  ],
+  "properties": {
+    "title": {
+      "description": "the heading of the section",
+      "type": "string",
+      "maxLength": 120,
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "description": {
+      "description": "one paragraph under the heading; empty: none",
+      "type": "string",
+      "maxLength": 400
+    },
+    "image": {
+      "description": "address of the picture; none: the placeholder",
+      "type": "string",
+      "maxLength": 2048,
+      "pattern": "^(?:https?:|(?![A-Za-z][A-Za-z0-9+.-]*:))"
+    },
+    "imageAlt": {
+      "description": "alt text of the picture",
+      "type": "string",
+      "maxLength": 160,
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "items": {
+      "description": "the offices, in the order they are shown",
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 6,
+      "items": {
+        "title": "LocationItem",
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "title"
+        ],
+        "properties": {
+          "id": {
+            "description": "stable key of the entry (the Codex entry id)",
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]*$"
+          },
+          "title": {
+            "description": "the name of the office or the city",
+            "type": "string",
+            "maxLength": 80,
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "description": {
+            "description": "the address and the hours; empty: none",
+            "type": "string",
+            "maxLength": 240
+          }
+        }
+      }
+    }
+  }
+}

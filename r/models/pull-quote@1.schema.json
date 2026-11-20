@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://registry.buildy.tw/models/pull-quote@1.schema.json",
+  "title": "PullQuoteContent",
+  "description": "Pull quote content: the words, the author, a role line and the source as a link. One object is valid in every pull quote layout (a rule at the side, centred).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "quote",
+    "title"
+  ],
+  "properties": {
+    "quote": {
+      "description": "the words that are quoted",
+      "type": "string",
+      "maxLength": 400,
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "title": {
+      "description": "the name of the author (names the section)",
+      "type": "string",
+      "maxLength": 80,
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "description": {
+      "description": "the role of the author; empty: none",
+      "type": "string",
+      "maxLength": 120
+    },
+    "sourceLabel": {
+      "description": "the label of the source; the link is drawn when the label and the address are both set",
+      "type": "string",
+      "maxLength": 40
+    },
+    "sourceHref": {
+      "description": "the address of the source",
+      "type": "string",
+      "maxLength": 2048,
+      "pattern": "^(?:(?:https?|mailto|tel):|(?![A-Za-z][A-Za-z0-9+.-]*:))"
+    }
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "item": "compare-simple",
+  "version": 1,
+  "block": "block.comparesimple",
+  "organism": "CompareSimple",
+  "line": "simple",
+  "model": "compare@1",
+  "modelSchema": "https://registry.buildy.tw/models/compare@1.schema.json",
+  "axes": {
+    "width": [
+      "wide",
+      "narrow"
+    ]
+  },
+  "defaults": {
+    "width": "wide"
+  },
+  "variants": [
+    {
+      "id": "twoProducts",
+      "label": "Two options",
+      "axes": {
+        "width": "wide"
+      }
+    },
+    {
+      "id": "narrow",
+      "label": "Two options, narrow",
+      "axes": {
+        "width": "narrow"
+      }
+    }
+  ],
+  "defaultVariant": "twoProducts",
+  "settings": {
+    "level": {
+      "type": "1 | 2 | 3",
+      "default": 2
+    },
+    "padding": {
+      "type": "\"compact\" | \"standard\" | \"spacious\"",
+      "default": "standard"
+    },
+    "align": {
+      "type": "\"start\" | \"center\" | \"end\"",
+      "default": "center"
+    },
+    "landmarkLabel": {
+      "type": "string"
+    }
+  },
+  "modes": [
+    "wireframe"
+  ],
+  "defaultMode": "wireframe",
+  "places": [
+    {
+      "place": "title",
+      "kind": "heading",
+      "fields": [
+        "/title"
+      ]
+    },
+    {
+      "place": "description",
+      "kind": "text",
+      "fields": [
+        "/description"
+      ]
+    },
+    {
+      "place": "firstLabel",
+      "kind": "text",
+      "fields": [
+        "/firstLabel"
+      ]
+    },
+    {
+      "place": "secondLabel",
+      "kind": "text",
+      "fields": [
+        "/secondLabel"
+      ]
+    },
+    {
+      "place": "rows.title",
+      "kind": "text",
+      "fields": [
+        "/rows/*/title"
+      ],
+      "list": "rows"
+    },
+    {
+      "place": "rows.first",
+      "kind": "text",
+      "fields": [
+        "/rows/*/first"
+      ],
+      "list": "rows"
+    },
+    {
+      "place": "rows.second",
+      "kind": "text",
+      "fields": [
+        "/rows/*/second"
+      ],
+      "list": "rows"
+    }
+  ],
+  "wireframe": {
+    "items": 3
+  }
+}

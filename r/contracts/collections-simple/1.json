@@ -1,0 +1,93 @@
+{
+  "item": "collections-simple",
+  "version": 1,
+  "block": "block.collectionssimple",
+  "organism": "CollectionsSimple",
+  "line": "simple",
+  "model": "collections@1",
+  "modelSchema": "https://registry.buildy.tw/models/collections@1.schema.json",
+  "axes": {
+    "cols": [
+      "4",
+      "3",
+      "2"
+    ]
+  },
+  "defaults": {
+    "cols": "4"
+  },
+  "variants": [
+    {
+      "id": "cards4",
+      "label": "Four columns",
+      "axes": {
+        "cols": "4"
+      }
+    },
+    {
+      "id": "cards2",
+      "label": "Two columns",
+      "axes": {
+        "cols": "2"
+      }
+    }
+  ],
+  "defaultVariant": "cards4",
+  "settings": {
+    "level": {
+      "type": "1 | 2 | 3",
+      "default": 2
+    },
+    "padding": {
+      "type": "\"compact\" | \"standard\" | \"spacious\"",
+      "default": "standard"
+    },
+    "align": {
+      "type": "\"start\" | \"center\" | \"end\"",
+      "default": "center"
+    },
+    "landmarkLabel": {
+      "type": "string"
+    }
+  },
+  "modes": [
+    "wireframe"
+  ],
+  "defaultMode": "wireframe",
+  "places": [
+    {
+      "place": "title",
+      "kind": "heading",
+      "fields": [
+        "/title"
+      ]
+    },
+    {
+      "place": "description",
+      "kind": "text",
+      "fields": [
+        "/description"
+      ]
+    },
+    {
+      "place": "items.image",
+      "kind": "media",
+      "fields": [
+        "/items/*/image"
+      ],
+      "list": "items"
+    },
+    {
+      "place": "items.title",
+      "kind": "text",
+      "fields": [
+        "/items/*/title",
+        "/items/*/href"
+      ],
+      "list": "items"
+    }
+  ],
+  "wireframe": {
+    "items": 4
+  }
+}

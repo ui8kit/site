@@ -1,0 +1,103 @@
+{
+  "item": "offers-simple",
+  "version": 1,
+  "block": "block.offerssimple",
+  "organism": "OffersSimple",
+  "line": "simple",
+  "model": "offers@1",
+  "modelSchema": "https://registry.buildy.tw/models/offers@1.schema.json",
+  "axes": {
+    "cols": [
+      "2",
+      "3"
+    ]
+  },
+  "defaults": {
+    "cols": "2"
+  },
+  "variants": [
+    {
+      "id": "duo",
+      "label": "Two offers",
+      "axes": {
+        "cols": "2"
+      }
+    },
+    {
+      "id": "duoStart",
+      "label": "Two offers, the heading at the start",
+      "axes": {
+        "cols": "2"
+      },
+      "settings": {
+        "align": "start"
+      }
+    }
+  ],
+  "defaultVariant": "duo",
+  "settings": {
+    "level": {
+      "type": "1 | 2 | 3",
+      "default": 2
+    },
+    "padding": {
+      "type": "\"compact\" | \"standard\" | \"spacious\"",
+      "default": "standard"
+    },
+    "align": {
+      "type": "\"start\" | \"center\" | \"end\"",
+      "default": "center"
+    },
+    "landmarkLabel": {
+      "type": "string"
+    }
+  },
+  "modes": [
+    "wireframe"
+  ],
+  "defaultMode": "wireframe",
+  "places": [
+    {
+      "place": "title",
+      "kind": "heading",
+      "fields": [
+        "/title"
+      ]
+    },
+    {
+      "place": "description",
+      "kind": "text",
+      "fields": [
+        "/description"
+      ]
+    },
+    {
+      "place": "items.title",
+      "kind": "heading",
+      "fields": [
+        "/items/*/title"
+      ],
+      "list": "items"
+    },
+    {
+      "place": "items.description",
+      "kind": "text",
+      "fields": [
+        "/items/*/description"
+      ],
+      "list": "items"
+    },
+    {
+      "place": "items.action",
+      "kind": "action",
+      "fields": [
+        "/items/*/actionLabel",
+        "/items/*/actionHref"
+      ],
+      "list": "items"
+    }
+  ],
+  "wireframe": {
+    "items": 2
+  }
+}

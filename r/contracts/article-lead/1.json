@@ -1,0 +1,107 @@
+{
+  "item": "article-lead",
+  "version": 1,
+  "block": "block.articlelead",
+  "organism": "ArticleLead",
+  "line": "simple",
+  "model": "article-lead@1",
+  "modelSchema": "https://registry.buildy.tw/models/article-lead@1.schema.json",
+  "axes": {
+    "media": [
+      "top",
+      "start",
+      "end"
+    ]
+  },
+  "defaults": {
+    "media": "top"
+  },
+  "variants": [
+    {
+      "id": "mediaTop",
+      "label": "Cover above",
+      "axes": {
+        "media": "top"
+      }
+    },
+    {
+      "id": "mediaStart",
+      "label": "Cover at the start",
+      "axes": {
+        "media": "start"
+      }
+    },
+    {
+      "id": "mediaEnd",
+      "label": "Cover at the end",
+      "axes": {
+        "media": "end"
+      }
+    }
+  ],
+  "defaultVariant": "mediaTop",
+  "settings": {
+    "level": {
+      "type": "1 | 2 | 3",
+      "default": 2
+    },
+    "padding": {
+      "type": "\"compact\" | \"standard\" | \"spacious\"",
+      "default": "standard"
+    },
+    "align": {
+      "type": "\"start\" | \"center\" | \"end\"",
+      "default": "start"
+    },
+    "landmarkLabel": {
+      "type": "string"
+    }
+  },
+  "modes": [
+    "wireframe"
+  ],
+  "defaultMode": "wireframe",
+  "places": [
+    {
+      "place": "title",
+      "kind": "heading",
+      "fields": [
+        "/title"
+      ]
+    },
+    {
+      "place": "description",
+      "kind": "text",
+      "fields": [
+        "/description"
+      ]
+    },
+    {
+      "place": "media",
+      "kind": "media",
+      "fields": [
+        "/avatar",
+        "/author",
+        "/image",
+        "/imageAlt"
+      ]
+    },
+    {
+      "place": "author",
+      "kind": "text",
+      "fields": [
+        "/author"
+      ]
+    },
+    {
+      "place": "date",
+      "kind": "text",
+      "fields": [
+        "/date"
+      ]
+    }
+  ],
+  "wireframe": {
+    "items": 3
+  }
+}

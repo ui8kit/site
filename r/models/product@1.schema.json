@@ -1,0 +1,86 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://registry.buildy.tw/models/product@1.schema.json",
+  "title": "ProductContent",
+  "description": "Product content: the name as the heading, a description, the price as it is shown, the main picture, up to four more pictures and one action. One object is valid in every product layout (the pictures at the start, at the end, above).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "title",
+    "price",
+    "imageAlt",
+    "photos"
+  ],
+  "properties": {
+    "title": {
+      "description": "the heading of the section",
+      "type": "string",
+      "maxLength": 120,
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "description": {
+      "description": "one paragraph under the heading; empty: none",
+      "type": "string",
+      "maxLength": 400
+    },
+    "price": {
+      "description": "the price as it is shown",
+      "type": "string",
+      "maxLength": 24,
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "image": {
+      "description": "address of the main picture; none: the placeholder",
+      "type": "string",
+      "maxLength": 2048,
+      "pattern": "^(?:https?:|(?![A-Za-z][A-Za-z0-9+.-]*:))"
+    },
+    "imageAlt": {
+      "description": "alt text of the main picture",
+      "type": "string",
+      "maxLength": 160,
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "actionLabel": {
+      "description": "the label of the action; the link is drawn when the label and the address are both set",
+      "type": "string",
+      "maxLength": 40
+    },
+    "actionHref": {
+      "description": "the address of the action",
+      "type": "string",
+      "maxLength": 2048,
+      "pattern": "^(?:(?:https?|mailto|tel):|(?![A-Za-z][A-Za-z0-9+.-]*:))"
+    },
+    "photos": {
+      "description": "more pictures of the product, thumbnails under the main picture (named by the product)",
+      "type": "array",
+      "minItems": 0,
+      "maxItems": 4,
+      "items": {
+        "title": "ProductPhoto",
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id"
+        ],
+        "properties": {
+          "id": {
+            "description": "stable key of the entry (the Codex entry id)",
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]*$"
+          },
+          "image": {
+            "description": "address of the picture; none: the placeholder",
+            "type": "string",
+            "maxLength": 2048,
+            "pattern": "^(?:https?:|(?![A-Za-z][A-Za-z0-9+.-]*:))"
+          }
+        }
+      }
+    }
+  }
+}

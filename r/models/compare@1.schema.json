@@ -1,0 +1,87 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://registry.buildy.tw/models/compare@1.schema.json",
+  "title": "CompareContent",
+  "description": "Compare content: the heading, a description, the names of the two options and an ordered list of rows, each a feature with the value of each option. One object is valid in every compare layout (a table, cards).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "title",
+    "firstLabel",
+    "secondLabel",
+    "rows"
+  ],
+  "properties": {
+    "title": {
+      "description": "the heading of the section",
+      "type": "string",
+      "maxLength": 120,
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "description": {
+      "description": "one paragraph under the heading; empty: none",
+      "type": "string",
+      "maxLength": 400
+    },
+    "firstLabel": {
+      "description": "the name of the first option",
+      "type": "string",
+      "maxLength": 40,
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "secondLabel": {
+      "description": "the name of the second option",
+      "type": "string",
+      "maxLength": 40,
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "rows": {
+      "description": "the rows, in the order they are shown",
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 12,
+      "items": {
+        "title": "CompareLine",
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "title",
+          "first",
+          "second"
+        ],
+        "properties": {
+          "id": {
+            "description": "stable key of the entry (the Codex entry id)",
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]*$"
+          },
+          "title": {
+            "description": "the feature that is compared",
+            "type": "string",
+            "maxLength": 80,
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "first": {
+            "description": "the value of the first option",
+            "type": "string",
+            "maxLength": 60,
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "second": {
+            "description": "the value of the second option",
+            "type": "string",
+            "maxLength": 60,
+            "minLength": 1,
+            "pattern": "\\S"
+          }
+        }
+      }
+    }
+  }
+}

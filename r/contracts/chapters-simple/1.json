@@ -1,0 +1,107 @@
+{
+  "item": "chapters-simple",
+  "version": 1,
+  "block": "block.chapterssimple",
+  "organism": "ChaptersSimple",
+  "line": "simple",
+  "model": "chapters@1",
+  "modelSchema": "https://registry.buildy.tw/models/chapters@1.schema.json",
+  "axes": {
+    "layout": [
+      "rows",
+      "paired"
+    ]
+  },
+  "defaults": {
+    "layout": "rows"
+  },
+  "variants": [
+    {
+      "id": "illustratedRows",
+      "label": "Rows with pictures",
+      "axes": {
+        "layout": "rows"
+      }
+    },
+    {
+      "id": "paired",
+      "label": "A pair",
+      "axes": {
+        "layout": "paired"
+      }
+    }
+  ],
+  "defaultVariant": "illustratedRows",
+  "settings": {
+    "level": {
+      "type": "1 | 2 | 3",
+      "default": 2
+    },
+    "padding": {
+      "type": "\"compact\" | \"standard\" | \"spacious\"",
+      "default": "standard"
+    },
+    "align": {
+      "type": "\"start\" | \"center\" | \"end\"",
+      "default": "center"
+    },
+    "landmarkLabel": {
+      "type": "string"
+    }
+  },
+  "modes": [
+    "wireframe"
+  ],
+  "defaultMode": "wireframe",
+  "places": [
+    {
+      "place": "title",
+      "kind": "heading",
+      "fields": [
+        "/title"
+      ]
+    },
+    {
+      "place": "description",
+      "kind": "text",
+      "fields": [
+        "/description"
+      ]
+    },
+    {
+      "place": "items.image",
+      "kind": "media",
+      "fields": [
+        "/items/*/image"
+      ],
+      "list": "items"
+    },
+    {
+      "place": "items.label",
+      "kind": "badge",
+      "fields": [
+        "/items/*/label"
+      ],
+      "list": "items"
+    },
+    {
+      "place": "items.title",
+      "kind": "heading",
+      "fields": [
+        "/items/*/title"
+      ],
+      "list": "items"
+    },
+    {
+      "place": "items.description",
+      "kind": "text",
+      "fields": [
+        "/items/*/description"
+      ],
+      "list": "items"
+    }
+  ],
+  "wireframe": {
+    "items": 3
+  }
+}

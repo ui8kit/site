@@ -1,0 +1,114 @@
+{
+  "item": "product-simple",
+  "version": 1,
+  "block": "block.productsimple",
+  "organism": "ProductSimple",
+  "line": "simple",
+  "model": "product@1",
+  "modelSchema": "https://registry.buildy.tw/models/product@1.schema.json",
+  "axes": {
+    "media": [
+      "start",
+      "end",
+      "top"
+    ]
+  },
+  "defaults": {
+    "media": "start"
+  },
+  "variants": [
+    {
+      "id": "mediaStart",
+      "label": "Pictures at the start",
+      "axes": {
+        "media": "start"
+      }
+    },
+    {
+      "id": "mediaEnd",
+      "label": "Pictures at the end",
+      "axes": {
+        "media": "end"
+      }
+    },
+    {
+      "id": "mediaTop",
+      "label": "Pictures above",
+      "axes": {
+        "media": "top"
+      }
+    }
+  ],
+  "defaultVariant": "mediaStart",
+  "settings": {
+    "level": {
+      "type": "1 | 2 | 3",
+      "default": 2
+    },
+    "padding": {
+      "type": "\"compact\" | \"standard\" | \"spacious\"",
+      "default": "standard"
+    },
+    "align": {
+      "type": "\"start\" | \"center\" | \"end\"",
+      "default": "start"
+    },
+    "landmarkLabel": {
+      "type": "string"
+    }
+  },
+  "modes": [
+    "wireframe"
+  ],
+  "defaultMode": "wireframe",
+  "places": [
+    {
+      "place": "title",
+      "kind": "heading",
+      "fields": [
+        "/title"
+      ]
+    },
+    {
+      "place": "price",
+      "kind": "text",
+      "fields": [
+        "/price"
+      ]
+    },
+    {
+      "place": "description",
+      "kind": "text",
+      "fields": [
+        "/description"
+      ]
+    },
+    {
+      "place": "action",
+      "kind": "action",
+      "fields": [
+        "/actionLabel",
+        "/actionHref"
+      ]
+    },
+    {
+      "place": "media",
+      "kind": "media",
+      "fields": [
+        "/image",
+        "/imageAlt"
+      ]
+    },
+    {
+      "place": "photos.image",
+      "kind": "media",
+      "fields": [
+        "/photos/*/image"
+      ],
+      "list": "photos"
+    }
+  ],
+  "wireframe": {
+    "items": 3
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://registry.buildy.tw/models/error@1.schema.json",
+  "title": "ErrorContent",
+  "description": "Error content: the code (404, 500), a heading, a description and one action back. One object is valid in every error layout (centred, at the start).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "code",
+    "title"
+  ],
+  "properties": {
+    "code": {
+      "description": "the code as it is shown (404)",
+      "type": "string",
+      "maxLength": 8,
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "title": {
+      "description": "the heading of the section",
+      "type": "string",
+      "maxLength": 120,
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "description": {
+      "description": "one paragraph under the heading; empty: none",
+      "type": "string",
+      "maxLength": 400
+    },
+    "actionLabel": {
+      "description": "the label of the action; the link is drawn when the label and the address are both set",
+      "type": "string",
+      "maxLength": 40
+    },
+    "actionHref": {
+      "description": "the address of the action",
+      "type": "string",
+      "maxLength": 2048,
+      "pattern": "^(?:(?:https?|mailto|tel):|(?![A-Za-z][A-Za-z0-9+.-]*:))"
+    }
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "item": "purchase-simple",
+  "version": 1,
+  "block": "block.purchasesimple",
+  "organism": "PurchaseSimple",
+  "line": "simple",
+  "model": "purchase@1",
+  "modelSchema": "https://registry.buildy.tw/models/purchase@1.schema.json",
+  "axes": {
+    "layout": [
+      "panel",
+      "centered"
+    ]
+  },
+  "defaults": {
+    "layout": "panel"
+  },
+  "variants": [
+    {
+      "id": "panel",
+      "label": "A panel",
+      "axes": {
+        "layout": "panel"
+      }
+    },
+    {
+      "id": "centered",
+      "label": "Centred",
+      "axes": {
+        "layout": "centered"
+      }
+    }
+  ],
+  "defaultVariant": "panel",
+  "settings": {
+    "level": {
+      "type": "1 | 2 | 3",
+      "default": 2
+    },
+    "padding": {
+      "type": "\"compact\" | \"standard\" | \"spacious\"",
+      "default": "standard"
+    },
+    "landmarkLabel": {
+      "type": "string"
+    }
+  },
+  "modes": [
+    "wireframe"
+  ],
+  "defaultMode": "wireframe",
+  "places": [
+    {
+      "place": "title",
+      "kind": "heading",
+      "fields": [
+        "/title"
+      ]
+    },
+    {
+      "place": "description",
+      "kind": "text",
+      "fields": [
+        "/description"
+      ]
+    },
+    {
+      "place": "price",
+      "kind": "text",
+      "fields": [
+        "/price"
+      ]
+    },
+    {
+      "place": "action",
+      "kind": "action",
+      "fields": [
+        "/actionLabel",
+        "/actionHref"
+      ]
+    },
+    {
+      "place": "note",
+      "kind": "text",
+      "fields": [
+        "/note"
+      ]
+    }
+  ],
+  "wireframe": {
+    "items": 3
+  }
+}

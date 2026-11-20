@@ -1,0 +1,74 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://registry.buildy.tw/models/chapters@1.schema.json",
+  "title": "ChaptersContent",
+  "description": "Chapters content: the heading, a description and an ordered list of chapters, each with a picture, a short label, a title and a line. One object is valid in every chapters layout (rows with the picture at the side, a pair).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "title",
+    "items"
+  ],
+  "properties": {
+    "title": {
+      "description": "the heading of the section",
+      "type": "string",
+      "maxLength": 120,
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "description": {
+      "description": "one paragraph under the heading; empty: none",
+      "type": "string",
+      "maxLength": 400
+    },
+    "items": {
+      "description": "the chapters, in the order they are read",
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 6,
+      "items": {
+        "title": "ChapterItem",
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "label",
+          "title"
+        ],
+        "properties": {
+          "id": {
+            "description": "stable key of the entry (the Codex entry id)",
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]*$"
+          },
+          "image": {
+            "description": "address of the picture of the chapter; none: the placeholder",
+            "type": "string",
+            "maxLength": 2048,
+            "pattern": "^(?:https?:|(?![A-Za-z][A-Za-z0-9+.-]*:))"
+          },
+          "label": {
+            "description": "the short label (Chapter 1)",
+            "type": "string",
+            "maxLength": 24,
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "title": {
+            "description": "the title of the chapter (the alt text of the picture)",
+            "type": "string",
+            "maxLength": 80,
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "description": {
+            "description": "one paragraph about the chapter; empty: none",
+            "type": "string",
+            "maxLength": 400
+          }
+        }
+      }
+    }
+  }
+}

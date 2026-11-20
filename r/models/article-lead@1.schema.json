@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://registry.buildy.tw/models/article-lead@1.schema.json",
+  "title": "ArticleLeadContent",
+  "description": "Article lead content: the heading, the lead paragraph, a cover picture, the author with the portrait and the date. One object is valid in every article lead layout (the cover above, at the start, at the end).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "title",
+    "imageAlt",
+    "author",
+    "date"
+  ],
+  "properties": {
+    "title": {
+      "description": "the heading of the section",
+      "type": "string",
+      "maxLength": 120,
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "description": {
+      "description": "one paragraph under the heading; empty: none",
+      "type": "string",
+      "maxLength": 400
+    },
+    "image": {
+      "description": "address of the cover picture; none: the placeholder",
+      "type": "string",
+      "maxLength": 2048,
+      "pattern": "^(?:https?:|(?![A-Za-z][A-Za-z0-9+.-]*:))"
+    },
+    "imageAlt": {
+      "description": "alt text of the cover picture",
+      "type": "string",
+      "maxLength": 160,
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "author": {
+      "description": "the name of the author",
+      "type": "string",
+      "maxLength": 80,
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "avatar": {
+      "description": "address of the portrait of the author; none: the placeholder",
+      "type": "string",
+      "maxLength": 2048,
+      "pattern": "^(?:https?:|(?![A-Za-z][A-Za-z0-9+.-]*:))"
+    },
+    "date": {
+      "description": "the date as it is shown",
+      "type": "string",
+      "maxLength": 40,
+      "minLength": 1,
+      "pattern": "\\S"
+    }
+  }
+}

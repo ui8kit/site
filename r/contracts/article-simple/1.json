@@ -1,0 +1,97 @@
+{
+  "item": "article-simple",
+  "version": 1,
+  "block": "block.articlesimple",
+  "organism": "ArticleSimple",
+  "line": "simple",
+  "model": "article@1",
+  "modelSchema": "https://registry.buildy.tw/models/article@1.schema.json",
+  "axes": {
+    "layout": [
+      "column",
+      "columns"
+    ]
+  },
+  "defaults": {
+    "layout": "column"
+  },
+  "variants": [
+    {
+      "id": "column",
+      "label": "One reading column",
+      "axes": {
+        "layout": "column"
+      },
+      "settings": {
+        "align": "start"
+      }
+    },
+    {
+      "id": "twoColumns",
+      "label": "Two columns",
+      "axes": {
+        "layout": "columns"
+      },
+      "settings": {
+        "align": "center"
+      }
+    }
+  ],
+  "defaultVariant": "column",
+  "settings": {
+    "level": {
+      "type": "1 | 2 | 3",
+      "default": 2
+    },
+    "padding": {
+      "type": "\"compact\" | \"standard\" | \"spacious\"",
+      "default": "standard"
+    },
+    "align": {
+      "type": "\"start\" | \"center\" | \"end\"",
+      "default": "start"
+    },
+    "landmarkLabel": {
+      "type": "string"
+    }
+  },
+  "modes": [
+    "wireframe"
+  ],
+  "defaultMode": "wireframe",
+  "places": [
+    {
+      "place": "title",
+      "kind": "heading",
+      "fields": [
+        "/title"
+      ]
+    },
+    {
+      "place": "description",
+      "kind": "text",
+      "fields": [
+        "/description"
+      ]
+    },
+    {
+      "place": "sections.title",
+      "kind": "heading",
+      "fields": [
+        "/sections/*/title"
+      ],
+      "list": "sections"
+    },
+    {
+      "place": "sections.description",
+      "kind": "text",
+      "fields": [
+        "/sections/*/description"
+      ],
+      "list": "sections"
+    }
+  ],
+  "wireframe": {
+    "items": 3
+  }
+}

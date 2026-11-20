@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://registry.buildy.tw/models/footer@1.schema.json",
+  "title": "FooterContent",
+  "description": "Footer content: the brand, one line about the site, an ordered list of links and the copyright line. One object is valid in every footer layout (the brand beside the links, a grid of links, centred).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "brand",
+    "links",
+    "copyright"
+  ],
+  "properties": {
+    "brand": {
+      "description": "the name of the site",
+      "type": "string",
+      "maxLength": 40,
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "description": {
+      "description": "one line about the site; empty: none",
+      "type": "string",
+      "maxLength": 240
+    },
+    "links": {
+      "description": "the links, in the order they are shown",
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 12,
+      "items": {
+        "title": "FooterLink",
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "label",
+          "href"
+        ],
+        "properties": {
+          "id": {
+            "description": "stable key of the entry (the Codex entry id)",
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]*$"
+          },
+          "label": {
+            "description": "the text of the link",
+            "type": "string",
+            "maxLength": 40,
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "href": {
+            "description": "the address of the link",
+            "type": "string",
+            "maxLength": 2048,
+            "pattern": "^(?:(?:https?|mailto|tel):|(?![A-Za-z][A-Za-z0-9+.-]*:))"
+          }
+        }
+      }
+    },
+    "copyright": {
+      "description": "the copyright line",
+      "type": "string",
+      "maxLength": 120,
+      "minLength": 1,
+      "pattern": "\\S"
+    }
+  }
+}

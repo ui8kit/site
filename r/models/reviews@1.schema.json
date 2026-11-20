@@ -1,0 +1,82 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://registry.buildy.tw/models/reviews@1.schema.json",
+  "title": "ReviewsContent",
+  "description": "Reviews content: the heading, a description and an ordered list of reviews, each with the rating as it is shown, the words, the portrait, the name and a line (the date, the product). One object is valid in every reviews layout (cards in two or three columns, rows).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "title",
+    "items"
+  ],
+  "properties": {
+    "title": {
+      "description": "the heading of the section",
+      "type": "string",
+      "maxLength": 120,
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "description": {
+      "description": "one paragraph under the heading; empty: none",
+      "type": "string",
+      "maxLength": 400
+    },
+    "items": {
+      "description": "the reviews, in the order they are shown",
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 6,
+      "items": {
+        "title": "ReviewItem",
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "rating",
+          "quote",
+          "title"
+        ],
+        "properties": {
+          "id": {
+            "description": "stable key of the entry (the Codex entry id)",
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]*$"
+          },
+          "rating": {
+            "description": "the rating as it is shown (5 / 5)",
+            "type": "string",
+            "maxLength": 16,
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "quote": {
+            "description": "the words of the review",
+            "type": "string",
+            "maxLength": 400,
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "avatar": {
+            "description": "address of the portrait; none: the placeholder",
+            "type": "string",
+            "maxLength": 2048,
+            "pattern": "^(?:https?:|(?![A-Za-z][A-Za-z0-9+.-]*:))"
+          },
+          "title": {
+            "description": "the name of the reviewer",
+            "type": "string",
+            "maxLength": 80,
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "description": {
+            "description": "a line: the date or the product; empty: none",
+            "type": "string",
+            "maxLength": 80
+          }
+        }
+      }
+    }
+  }
+}

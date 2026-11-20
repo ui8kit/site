@@ -1,0 +1,134 @@
+{
+  "item": "pricing-simple",
+  "version": 1,
+  "block": "block.pricingsimple",
+  "organism": "PricingSimple",
+  "line": "simple",
+  "model": "pricing@1",
+  "modelSchema": "https://registry.buildy.tw/models/pricing@1.schema.json",
+  "axes": {
+    "layout": [
+      "cards",
+      "rows"
+    ],
+    "cols": [
+      "3",
+      "2"
+    ]
+  },
+  "defaults": {
+    "layout": "cards",
+    "cols": "3"
+  },
+  "variants": [
+    {
+      "id": "cards3",
+      "label": "Three plans on cards",
+      "axes": {
+        "layout": "cards",
+        "cols": "3"
+      }
+    },
+    {
+      "id": "cards2",
+      "label": "Two plans on cards",
+      "axes": {
+        "layout": "cards",
+        "cols": "2"
+      }
+    },
+    {
+      "id": "rows",
+      "label": "One row per plan",
+      "axes": {
+        "layout": "rows",
+        "cols": "3"
+      },
+      "settings": {
+        "align": "start"
+      }
+    }
+  ],
+  "defaultVariant": "cards3",
+  "settings": {
+    "level": {
+      "type": "1 | 2 | 3",
+      "default": 2
+    },
+    "padding": {
+      "type": "\"compact\" | \"standard\" | \"spacious\"",
+      "default": "standard"
+    },
+    "align": {
+      "type": "\"start\" | \"center\" | \"end\"",
+      "default": "center"
+    },
+    "landmarkLabel": {
+      "type": "string"
+    }
+  },
+  "modes": [
+    "wireframe"
+  ],
+  "defaultMode": "wireframe",
+  "places": [
+    {
+      "place": "title",
+      "kind": "heading",
+      "fields": [
+        "/title"
+      ]
+    },
+    {
+      "place": "description",
+      "kind": "text",
+      "fields": [
+        "/description"
+      ]
+    },
+    {
+      "place": "plans.badge",
+      "kind": "badge",
+      "fields": [
+        "/plans/*/badge"
+      ],
+      "list": "plans"
+    },
+    {
+      "place": "plans.title",
+      "kind": "heading",
+      "fields": [
+        "/plans/*/title"
+      ],
+      "list": "plans"
+    },
+    {
+      "place": "plans.description",
+      "kind": "text",
+      "fields": [
+        "/plans/*/description"
+      ],
+      "list": "plans"
+    },
+    {
+      "place": "plans.price",
+      "kind": "text",
+      "fields": [
+        "/plans/*/price"
+      ],
+      "list": "plans"
+    },
+    {
+      "place": "plans.action",
+      "kind": "action",
+      "fields": [
+        "/plans/*/actionLabel",
+        "/plans/*/actionHref"
+      ],
+      "list": "plans"
+    }
+  ],
+  "wireframe": {
+    "items": 3
+  }
+}

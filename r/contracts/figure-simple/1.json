@@ -1,0 +1,90 @@
+{
+  "item": "figure-simple",
+  "version": 1,
+  "block": "block.figuresimple",
+  "organism": "FigureSimple",
+  "line": "simple",
+  "model": "figure@1",
+  "modelSchema": "https://registry.buildy.tw/models/figure@1.schema.json",
+  "axes": {
+    "layout": [
+      "wide",
+      "end",
+      "start"
+    ]
+  },
+  "defaults": {
+    "layout": "wide"
+  },
+  "variants": [
+    {
+      "id": "wide",
+      "label": "Wide, the caption under it",
+      "axes": {
+        "layout": "wide"
+      }
+    },
+    {
+      "id": "captionEnd",
+      "label": "The caption at the end",
+      "axes": {
+        "layout": "end"
+      }
+    },
+    {
+      "id": "captionStart",
+      "label": "The caption at the start",
+      "axes": {
+        "layout": "start"
+      }
+    }
+  ],
+  "defaultVariant": "wide",
+  "settings": {
+    "padding": {
+      "type": "\"compact\" | \"standard\" | \"spacious\"",
+      "default": "standard"
+    },
+    "landmarkLabel": {
+      "type": "string"
+    }
+  },
+  "modes": [
+    "wireframe"
+  ],
+  "defaultMode": "wireframe",
+  "places": [
+    {
+      "place": "media",
+      "kind": "media",
+      "fields": [
+        "/image",
+        "/imageAlt"
+      ]
+    },
+    {
+      "place": "title",
+      "kind": "text",
+      "fields": [
+        "/title"
+      ]
+    },
+    {
+      "place": "description",
+      "kind": "text",
+      "fields": [
+        "/description"
+      ]
+    },
+    {
+      "place": "credit",
+      "kind": "text",
+      "fields": [
+        "/credit"
+      ]
+    }
+  ],
+  "wireframe": {
+    "items": 3
+  }
+}

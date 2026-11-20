@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://registry.buildy.tw/models/purchase@1.schema.json",
+  "title": "PurchaseContent",
+  "description": "Purchase content: the heading, a description, the price as it is shown, a note (delivery, returns) and one action. One object is valid in every purchase layout (a panel, centred).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "title",
+    "price"
+  ],
+  "properties": {
+    "title": {
+      "description": "the heading of the section",
+      "type": "string",
+      "maxLength": 120,
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "description": {
+      "description": "one paragraph under the heading; empty: none",
+      "type": "string",
+      "maxLength": 400
+    },
+    "price": {
+      "description": "the price as it is shown",
+      "type": "string",
+      "maxLength": 24,
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "note": {
+      "description": "a short note under the action; empty: none",
+      "type": "string",
+      "maxLength": 120
+    },
+    "actionLabel": {
+      "description": "the label of the action; the link is drawn when the label and the address are both set",
+      "type": "string",
+      "maxLength": 40
+    },
+    "actionHref": {
+      "description": "the address of the action",
+      "type": "string",
+      "maxLength": 2048,
+      "pattern": "^(?:(?:https?|mailto|tel):|(?![A-Za-z][A-Za-z0-9+.-]*:))"
+    }
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://registry.buildy.tw/models/figure@1.schema.json",
+  "title": "FigureContent",
+  "description": "Figure content: one large picture with its caption: a title, a line and the credit. One object is valid in every figure layout (wide with the caption under it, the caption at the side).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "imageAlt",
+    "title"
+  ],
+  "properties": {
+    "image": {
+      "description": "address of the picture; none: the placeholder",
+      "type": "string",
+      "maxLength": 2048,
+      "pattern": "^(?:https?:|(?![A-Za-z][A-Za-z0-9+.-]*:))"
+    },
+    "imageAlt": {
+      "description": "alt text of the picture",
+      "type": "string",
+      "maxLength": 160,
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "title": {
+      "description": "the title of the caption (names the section)",
+      "type": "string",
+      "maxLength": 120,
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "description": {
+      "description": "the caption; empty: none",
+      "type": "string",
+      "maxLength": 400
+    },
+    "credit": {
+      "description": "the credit of the picture; empty: none",
+      "type": "string",
+      "maxLength": 80
+    }
+  }
+}

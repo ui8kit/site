@@ -1,0 +1,82 @@
+{
+  "item": "pull-quote-simple",
+  "version": 1,
+  "block": "block.pullquotesimple",
+  "organism": "PullQuoteSimple",
+  "line": "simple",
+  "model": "pull-quote@1",
+  "modelSchema": "https://registry.buildy.tw/models/pull-quote@1.schema.json",
+  "axes": {
+    "layout": [
+      "rule",
+      "centered"
+    ]
+  },
+  "defaults": {
+    "layout": "rule"
+  },
+  "variants": [
+    {
+      "id": "standalone",
+      "label": "A bar at the side",
+      "axes": {
+        "layout": "rule"
+      }
+    },
+    {
+      "id": "centered",
+      "label": "Centred",
+      "axes": {
+        "layout": "centered"
+      }
+    }
+  ],
+  "defaultVariant": "standalone",
+  "settings": {
+    "padding": {
+      "type": "\"compact\" | \"standard\" | \"spacious\"",
+      "default": "standard"
+    },
+    "landmarkLabel": {
+      "type": "string"
+    }
+  },
+  "modes": [
+    "wireframe"
+  ],
+  "defaultMode": "wireframe",
+  "places": [
+    {
+      "place": "quote",
+      "kind": "text",
+      "fields": [
+        "/quote"
+      ]
+    },
+    {
+      "place": "title",
+      "kind": "text",
+      "fields": [
+        "/title"
+      ]
+    },
+    {
+      "place": "description",
+      "kind": "text",
+      "fields": [
+        "/description"
+      ]
+    },
+    {
+      "place": "sourceLabel",
+      "kind": "text",
+      "fields": [
+        "/sourceLabel",
+        "/sourceHref"
+      ]
+    }
+  ],
+  "wireframe": {
+    "items": 3
+  }
+}

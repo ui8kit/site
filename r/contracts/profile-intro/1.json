@@ -1,0 +1,110 @@
+{
+  "item": "profile-intro",
+  "version": 1,
+  "block": "block.profileintro",
+  "organism": "ProfileIntro",
+  "line": "simple",
+  "model": "profile@1",
+  "modelSchema": "https://registry.buildy.tw/models/profile@1.schema.json",
+  "axes": {
+    "media": [
+      "end",
+      "start",
+      "top"
+    ]
+  },
+  "defaults": {
+    "media": "end"
+  },
+  "variants": [
+    {
+      "id": "portraitEnd",
+      "label": "Portrait at the end",
+      "axes": {
+        "media": "end"
+      }
+    },
+    {
+      "id": "portraitStart",
+      "label": "Portrait at the start",
+      "axes": {
+        "media": "start"
+      }
+    },
+    {
+      "id": "portraitTop",
+      "label": "Round portrait above",
+      "axes": {
+        "media": "top"
+      },
+      "settings": {
+        "align": "center"
+      }
+    }
+  ],
+  "defaultVariant": "portraitEnd",
+  "settings": {
+    "level": {
+      "type": "1 | 2 | 3",
+      "default": 2
+    },
+    "padding": {
+      "type": "\"compact\" | \"standard\" | \"spacious\"",
+      "default": "standard"
+    },
+    "align": {
+      "type": "\"start\" | \"center\" | \"end\"",
+      "default": "start"
+    },
+    "landmarkLabel": {
+      "type": "string"
+    }
+  },
+  "modes": [
+    "wireframe"
+  ],
+  "defaultMode": "wireframe",
+  "places": [
+    {
+      "place": "title",
+      "kind": "heading",
+      "fields": [
+        "/title"
+      ]
+    },
+    {
+      "place": "role",
+      "kind": "text",
+      "fields": [
+        "/role"
+      ]
+    },
+    {
+      "place": "description",
+      "kind": "text",
+      "fields": [
+        "/description"
+      ]
+    },
+    {
+      "place": "links.label",
+      "kind": "action",
+      "fields": [
+        "/links/*/label",
+        "/links/*/href"
+      ],
+      "list": "links"
+    },
+    {
+      "place": "media",
+      "kind": "media",
+      "fields": [
+        "/image",
+        "/imageAlt"
+      ]
+    }
+  ],
+  "wireframe": {
+    "items": 3
+  }
+}

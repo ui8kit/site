@@ -1,0 +1,118 @@
+{
+  "item": "products-simple",
+  "version": 1,
+  "block": "block.productssimple",
+  "organism": "ProductsSimple",
+  "line": "simple",
+  "model": "products@1",
+  "modelSchema": "https://registry.buildy.tw/models/products@1.schema.json",
+  "axes": {
+    "layout": [
+      "grid",
+      "rows"
+    ],
+    "cols": [
+      "3",
+      "4"
+    ]
+  },
+  "defaults": {
+    "layout": "grid",
+    "cols": "3"
+  },
+  "variants": [
+    {
+      "id": "cards3",
+      "label": "Three columns",
+      "axes": {
+        "layout": "grid",
+        "cols": "3"
+      }
+    },
+    {
+      "id": "denseGrid",
+      "label": "Four columns, compact",
+      "axes": {
+        "layout": "grid",
+        "cols": "4"
+      }
+    },
+    {
+      "id": "rows",
+      "label": "Rows",
+      "axes": {
+        "layout": "rows",
+        "cols": "3"
+      },
+      "settings": {
+        "align": "start"
+      }
+    }
+  ],
+  "defaultVariant": "cards3",
+  "settings": {
+    "level": {
+      "type": "1 | 2 | 3",
+      "default": 2
+    },
+    "padding": {
+      "type": "\"compact\" | \"standard\" | \"spacious\"",
+      "default": "standard"
+    },
+    "align": {
+      "type": "\"start\" | \"center\" | \"end\"",
+      "default": "center"
+    },
+    "landmarkLabel": {
+      "type": "string"
+    }
+  },
+  "modes": [
+    "wireframe"
+  ],
+  "defaultMode": "wireframe",
+  "places": [
+    {
+      "place": "title",
+      "kind": "heading",
+      "fields": [
+        "/title"
+      ]
+    },
+    {
+      "place": "description",
+      "kind": "text",
+      "fields": [
+        "/description"
+      ]
+    },
+    {
+      "place": "items.image",
+      "kind": "media",
+      "fields": [
+        "/items/*/image"
+      ],
+      "list": "items"
+    },
+    {
+      "place": "items.title",
+      "kind": "heading",
+      "fields": [
+        "/items/*/title",
+        "/items/*/href"
+      ],
+      "list": "items"
+    },
+    {
+      "place": "items.price",
+      "kind": "text",
+      "fields": [
+        "/items/*/price"
+      ],
+      "list": "items"
+    }
+  ],
+  "wireframe": {
+    "items": 3
+  }
+}

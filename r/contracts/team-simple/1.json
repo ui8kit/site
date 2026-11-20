@@ -7,6 +7,12 @@
   "model": "team@1",
   "modelSchema": "https://registry.buildy.tw/models/team@1.schema.json",
   "axes": {
+    "layout": [
+      "grid",
+      "aside",
+      "byline",
+      "list"
+    ],
     "cols": [
       "2",
       "3",
@@ -18,6 +24,7 @@
     ]
   },
   "defaults": {
+    "layout": "grid",
     "cols": "3",
     "surface": "plain"
   },
@@ -26,6 +33,7 @@
       "id": "cols3",
       "label": "Three columns",
       "axes": {
+        "layout": "grid",
         "cols": "3",
         "surface": "plain"
       }
@@ -34,6 +42,7 @@
       "id": "cols2",
       "label": "Two columns",
       "axes": {
+        "layout": "grid",
         "cols": "2",
         "surface": "plain"
       }
@@ -42,6 +51,7 @@
       "id": "cols4",
       "label": "Four columns",
       "axes": {
+        "layout": "grid",
         "cols": "4",
         "surface": "plain"
       }
@@ -50,8 +60,45 @@
       "id": "cards3",
       "label": "Three columns on cards",
       "axes": {
+        "layout": "grid",
         "cols": "3",
         "surface": "cards"
+      }
+    },
+    {
+      "id": "portraitRow",
+      "label": "The heading beside large portraits",
+      "axes": {
+        "layout": "aside",
+        "cols": "3",
+        "surface": "plain"
+      },
+      "settings": {
+        "align": "start"
+      }
+    },
+    {
+      "id": "bylineCols3",
+      "label": "Small portraits beside the names, on cards",
+      "axes": {
+        "layout": "byline",
+        "cols": "3",
+        "surface": "cards"
+      },
+      "settings": {
+        "align": "start"
+      }
+    },
+    {
+      "id": "sideList",
+      "label": "A compact list in two columns",
+      "axes": {
+        "layout": "list",
+        "cols": "2",
+        "surface": "plain"
+      },
+      "settings": {
+        "align": "start"
       }
     }
   ],

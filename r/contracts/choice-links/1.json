@@ -1,0 +1,84 @@
+{
+  "item": "choice-links",
+  "version": 1,
+  "block": "block.choicelinks",
+  "organism": "ChoiceLinks",
+  "line": "simple",
+  "model": "choices@1",
+  "modelSchema": "https://registry.buildy.tw/models/choices@1.schema.json",
+  "axes": {
+    "layout": [
+      "row",
+      "grid"
+    ]
+  },
+  "defaults": {
+    "layout": "row"
+  },
+  "variants": [
+    {
+      "id": "row",
+      "label": "A row",
+      "axes": {
+        "layout": "row"
+      }
+    },
+    {
+      "id": "grid",
+      "label": "A grid",
+      "axes": {
+        "layout": "grid"
+      }
+    }
+  ],
+  "defaultVariant": "row",
+  "settings": {
+    "level": {
+      "type": "1 | 2 | 3",
+      "default": 2
+    },
+    "padding": {
+      "type": "\"compact\" | \"standard\" | \"spacious\"",
+      "default": "standard"
+    },
+    "align": {
+      "type": "\"start\" | \"center\" | \"end\"",
+      "default": "center"
+    },
+    "landmarkLabel": {
+      "type": "string"
+    }
+  },
+  "modes": [
+    "wireframe"
+  ],
+  "defaultMode": "wireframe",
+  "places": [
+    {
+      "place": "title",
+      "kind": "heading",
+      "fields": [
+        "/title"
+      ]
+    },
+    {
+      "place": "description",
+      "kind": "text",
+      "fields": [
+        "/description"
+      ]
+    },
+    {
+      "place": "items.label",
+      "kind": "action",
+      "fields": [
+        "/items/*/label",
+        "/items/*/href"
+      ],
+      "list": "items"
+    }
+  ],
+  "wireframe": {
+    "items": 3
+  }
+}

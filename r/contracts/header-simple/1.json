@@ -1,0 +1,82 @@
+{
+  "item": "header-simple",
+  "version": 1,
+  "block": "block.headersimple",
+  "organism": "HeaderSimple",
+  "line": "simple",
+  "model": "header@1",
+  "modelSchema": "https://registry.buildy.tw/models/header@1.schema.json",
+  "axes": {
+    "layout": [
+      "inline",
+      "end",
+      "centered"
+    ]
+  },
+  "defaults": {
+    "layout": "inline"
+  },
+  "variants": [
+    {
+      "id": "inline",
+      "label": "Links in the middle",
+      "axes": {
+        "layout": "inline"
+      }
+    },
+    {
+      "id": "linksEnd",
+      "label": "Links at the end",
+      "axes": {
+        "layout": "end"
+      }
+    },
+    {
+      "id": "centered",
+      "label": "Centred under the brand",
+      "axes": {
+        "layout": "centered"
+      }
+    }
+  ],
+  "defaultVariant": "inline",
+  "settings": {
+    "landmarkLabel": {
+      "type": "string"
+    }
+  },
+  "modes": [
+    "wireframe"
+  ],
+  "defaultMode": "wireframe",
+  "places": [
+    {
+      "place": "brand",
+      "kind": "text",
+      "fields": [
+        "/brand",
+        "/brandHref"
+      ]
+    },
+    {
+      "place": "links.label",
+      "kind": "text",
+      "fields": [
+        "/links/*/label",
+        "/links/*/href"
+      ],
+      "list": "links"
+    },
+    {
+      "place": "action",
+      "kind": "action",
+      "fields": [
+        "/actionLabel",
+        "/actionHref"
+      ]
+    }
+  ],
+  "wireframe": {
+    "items": 3
+  }
+}

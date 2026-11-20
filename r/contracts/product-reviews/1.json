@@ -1,0 +1,122 @@
+{
+  "item": "product-reviews",
+  "version": 1,
+  "block": "block.productreviews",
+  "organism": "ProductReviews",
+  "line": "simple",
+  "model": "reviews@1",
+  "modelSchema": "https://registry.buildy.tw/models/reviews@1.schema.json",
+  "axes": {
+    "layout": [
+      "cards",
+      "rows"
+    ],
+    "cols": [
+      "3",
+      "2"
+    ]
+  },
+  "defaults": {
+    "layout": "cards",
+    "cols": "3"
+  },
+  "variants": [
+    {
+      "id": "cards3",
+      "label": "Three cards",
+      "axes": {
+        "layout": "cards",
+        "cols": "3"
+      }
+    },
+    {
+      "id": "rows",
+      "label": "One under the other",
+      "axes": {
+        "layout": "rows",
+        "cols": "3"
+      }
+    }
+  ],
+  "defaultVariant": "cards3",
+  "settings": {
+    "level": {
+      "type": "1 | 2 | 3",
+      "default": 2
+    },
+    "padding": {
+      "type": "\"compact\" | \"standard\" | \"spacious\"",
+      "default": "standard"
+    },
+    "align": {
+      "type": "\"start\" | \"center\" | \"end\"",
+      "default": "center"
+    },
+    "landmarkLabel": {
+      "type": "string"
+    }
+  },
+  "modes": [
+    "wireframe"
+  ],
+  "defaultMode": "wireframe",
+  "places": [
+    {
+      "place": "title",
+      "kind": "heading",
+      "fields": [
+        "/title"
+      ]
+    },
+    {
+      "place": "description",
+      "kind": "text",
+      "fields": [
+        "/description"
+      ]
+    },
+    {
+      "place": "items.rating",
+      "kind": "text",
+      "fields": [
+        "/items/*/rating"
+      ],
+      "list": "items"
+    },
+    {
+      "place": "items.quote",
+      "kind": "text",
+      "fields": [
+        "/items/*/quote"
+      ],
+      "list": "items"
+    },
+    {
+      "place": "items.avatar",
+      "kind": "media",
+      "fields": [
+        "/items/*/avatar"
+      ],
+      "list": "items"
+    },
+    {
+      "place": "items.title",
+      "kind": "heading",
+      "fields": [
+        "/items/*/title"
+      ],
+      "list": "items"
+    },
+    {
+      "place": "items.description",
+      "kind": "text",
+      "fields": [
+        "/items/*/description"
+      ],
+      "list": "items"
+    }
+  ],
+  "wireframe": {
+    "items": 3
+  }
+}

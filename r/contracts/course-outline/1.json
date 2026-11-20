@@ -1,0 +1,107 @@
+{
+  "item": "course-outline",
+  "version": 1,
+  "block": "block.courseoutline",
+  "organism": "CourseOutline",
+  "line": "simple",
+  "model": "curriculum@1",
+  "modelSchema": "https://registry.buildy.tw/models/curriculum@1.schema.json",
+  "axes": {
+    "layout": [
+      "rows",
+      "cards"
+    ]
+  },
+  "defaults": {
+    "layout": "rows"
+  },
+  "variants": [
+    {
+      "id": "moduleRows",
+      "label": "Rows",
+      "axes": {
+        "layout": "rows"
+      }
+    },
+    {
+      "id": "cards",
+      "label": "Two columns of cards",
+      "axes": {
+        "layout": "cards"
+      }
+    }
+  ],
+  "defaultVariant": "moduleRows",
+  "settings": {
+    "level": {
+      "type": "1 | 2 | 3",
+      "default": 2
+    },
+    "padding": {
+      "type": "\"compact\" | \"standard\" | \"spacious\"",
+      "default": "standard"
+    },
+    "align": {
+      "type": "\"start\" | \"center\" | \"end\"",
+      "default": "start"
+    },
+    "landmarkLabel": {
+      "type": "string"
+    }
+  },
+  "modes": [
+    "wireframe"
+  ],
+  "defaultMode": "wireframe",
+  "places": [
+    {
+      "place": "title",
+      "kind": "heading",
+      "fields": [
+        "/title"
+      ]
+    },
+    {
+      "place": "description",
+      "kind": "text",
+      "fields": [
+        "/description"
+      ]
+    },
+    {
+      "place": "modules.label",
+      "kind": "badge",
+      "fields": [
+        "/modules/*/label"
+      ],
+      "list": "modules"
+    },
+    {
+      "place": "modules.title",
+      "kind": "heading",
+      "fields": [
+        "/modules/*/title"
+      ],
+      "list": "modules"
+    },
+    {
+      "place": "modules.description",
+      "kind": "text",
+      "fields": [
+        "/modules/*/description"
+      ],
+      "list": "modules"
+    },
+    {
+      "place": "modules.meta",
+      "kind": "text",
+      "fields": [
+        "/modules/*/meta"
+      ],
+      "list": "modules"
+    }
+  ],
+  "wireframe": {
+    "items": 3
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "item": "footer-simple",
+  "version": 1,
+  "block": "block.footersimple",
+  "organism": "FooterSimple",
+  "line": "simple",
+  "model": "footer@1",
+  "modelSchema": "https://registry.buildy.tw/models/footer@1.schema.json",
+  "axes": {
+    "layout": [
+      "row",
+      "grid",
+      "centered"
+    ]
+  },
+  "defaults": {
+    "layout": "row"
+  },
+  "variants": [
+    {
+      "id": "brandLinks",
+      "label": "The brand beside a row of links",
+      "axes": {
+        "layout": "row"
+      }
+    },
+    {
+      "id": "linkGrid",
+      "label": "Links in columns",
+      "axes": {
+        "layout": "grid"
+      }
+    },
+    {
+      "id": "centered",
+      "label": "Centred",
+      "axes": {
+        "layout": "centered"
+      }
+    }
+  ],
+  "defaultVariant": "brandLinks",
+  "settings": {
+    "padding": {
+      "type": "\"compact\" | \"standard\" | \"spacious\"",
+      "default": "compact"
+    },
+    "landmarkLabel": {
+      "type": "string"
+    }
+  },
+  "modes": [
+    "wireframe"
+  ],
+  "defaultMode": "wireframe",
+  "places": [
+    {
+      "place": "brand",
+      "kind": "text",
+      "fields": [
+        "/brand"
+      ]
+    },
+    {
+      "place": "description",
+      "kind": "text",
+      "fields": [
+        "/description"
+      ]
+    },
+    {
+      "place": "links.label",
+      "kind": "text",
+      "fields": [
+        "/links/*/label",
+        "/links/*/href"
+      ],
+      "list": "links"
+    },
+    {
+      "place": "copyright",
+      "kind": "text",
+      "fields": [
+        "/copyright"
+      ]
+    }
+  ],
+  "wireframe": {
+    "items": 3
+  }
+}

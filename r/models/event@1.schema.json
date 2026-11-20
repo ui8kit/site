@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://registry.buildy.tw/models/event@1.schema.json",
+  "title": "EventContent",
+  "description": "Event intro content: an optional badge, the name of the event as the heading, a description, the date, the place and one action. One object is valid in every event intro layout (centred, at the start).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "title",
+    "date",
+    "place"
+  ],
+  "properties": {
+    "badge": {
+      "description": "a short pill above the heading; empty: no badge",
+      "type": "string",
+      "maxLength": 40
+    },
+    "title": {
+      "description": "the heading of the section",
+      "type": "string",
+      "maxLength": 120,
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "description": {
+      "description": "one paragraph under the heading; empty: none",
+      "type": "string",
+      "maxLength": 400
+    },
+    "date": {
+      "description": "the date and the time as they are shown",
+      "type": "string",
+      "maxLength": 60,
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "place": {
+      "description": "the place or the city, or online",
+      "type": "string",
+      "maxLength": 80,
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "actionLabel": {
+      "description": "the label of the action; the link is drawn when the label and the address are both set",
+      "type": "string",
+      "maxLength": 40
+    },
+    "actionHref": {
+      "description": "the address of the action",
+      "type": "string",
+      "maxLength": 2048,
+      "pattern": "^(?:(?:https?|mailto|tel):|(?![A-Za-z][A-Za-z0-9+.-]*:))"
+    }
+  }
+}
