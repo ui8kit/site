@@ -33,7 +33,7 @@
       }
     },
     "source": {
-      "manifest": "67e99e0db944e995c201aeb7a823985f6e84f8ce2fc1d33a9c4571ff9417ea4a"
+      "manifest": "a9cb7e48a66b5dc760f14d87ac043af66033833d9e9080952df3f194f443a002"
     }
   },
   "models": {
@@ -28380,8 +28380,8 @@
     }
   },
   "source": {
-    "commit": "44b70307459ab4dcac991d4a3a7a6048e6ca6ada",
-    "commitDate": "2026-11-20T15:16:25+03:00",
+    "commit": "d1b34d962335dab54b3f41554993ab360a11fc9b",
+    "commitDate": "2026-11-20T15:45:34+03:00",
     "dirty": false,
     "repo": "private source monorepo"
   },

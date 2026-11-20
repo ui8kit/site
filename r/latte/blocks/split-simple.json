@@ -14,7 +14,7 @@
   "meta": {
     "category": "marketing",
     "contract": "contracts/split-simple/1.json",
-    "group": "hero",
+    "group": "split",
     "kind": "block",
     "model": "split@1",
     "tags": [

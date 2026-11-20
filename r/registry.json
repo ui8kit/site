@@ -40695,7 +40695,7 @@
       "category": "marketing",
       "contract": "contracts/split-simple/1.json",
       "description": "Two halves: the heading, one paragraph and up to two links as the actions (primary, then secondary) beside one picture that fills its half to the edge of the screen.",
-      "group": "hero",
+      "group": "split",
       "kind": "block",
       "model": "split@1",
       "name": "split-simple",
@@ -48433,7 +48433,7 @@
       "type": "registry:block"
     }
   ],
-  "lastUpdated": "2026-11-20T15:16:25+03:00",
+  "lastUpdated": "2026-11-20T15:45:34+03:00",
   "layout": "<runtime>/index.json + <runtime>/{components/ui,components,blocks,utils,lib,themes}/<name>.json; use r/<runtime> as registryUrl",
   "models": {
     "hero@1": {
@@ -48465,7 +48465,7 @@
     "latte",
     "jinja2"
   ],
-  "sourceCommit": "44b70307459ab4dcac991d4a3a7a6048e6ca6ada",
+  "sourceCommit": "d1b34d962335dab54b3f41554993ab360a11fc9b",
   "variants": {
     "digest": "sha256:d3fa7673d9fc9c96c904ff6412492df34e2da40418e38fdbd4f6f894eac75478",
     "path": "variants/v0.json",
