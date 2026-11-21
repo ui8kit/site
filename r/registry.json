@@ -56075,7 +56075,7 @@
       "type": "registry:block"
     }
   ],
-  "lastUpdated": "2026-11-21T03:43:16+03:00",
+  "lastUpdated": "2026-11-21T22:17:37+03:00",
   "layout": "<runtime>/index.json + <runtime>/{components/ui,components,blocks,utils,lib,themes}/<name>.json; use r/<runtime> as registryUrl",
   "models": {
     "amenities@1": {
@@ -56288,9 +56288,9 @@
     }
   },
   "props": {
-    "digest": "sha256:f1d6a911b010c8cc50a53011c220a398fe7db35e20b54d4d15dc14e211ce0722",
+    "digest": "sha256:6b23550c053ab0735abb93c87808380962555f589ac9dc2cf71a5e11e11e3a2f",
     "path": "props/v0.json",
-    "sha256": "448efc44a97129375c724e40145a812bc1931cd2356d431b628b914fa6be27fa",
+    "sha256": "856ff7aa2b2c0ef21a8b7fea3c30c07aa576c6a6fc97f630841b5a2e1870c18c",
     "version": "0"
   },
   "runtimes": [
@@ -56303,7 +56303,7 @@
     "latte",
     "jinja2"
   ],
-  "sourceCommit": "698069ec24386c2e83660fd33d2f26c71d24a01f",
+  "sourceCommit": "63e01c9a97b77e86f26dfe47a1b305af27a9cea8",
   "variants": {
     "digest": "sha256:9e70b8612956517e1c7644d94657be0a75f61b1a96d400a70e37ab4893b2422a",
     "path": "variants/v0.json",

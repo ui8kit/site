@@ -747,6 +747,12 @@
      "type": "string"
     },
     {
+     "default": "\"\"",
+     "desc": "sizes of the picture as a srcset (`hero-960.webp 960w, hero-1280.webp 1280w`); none: `image` only",
+     "name": "imageSrcset",
+     "type": "string"
+    },
+    {
      "desc": "the name of the author",
      "name": "author",
      "required": true,
@@ -5672,6 +5678,12 @@
      "type": "string"
     },
     {
+     "default": "\"\"",
+     "desc": "sizes of the picture as a srcset (`hero-960.webp 960w, hero-1280.webp 1280w`); none: `image` only",
+     "name": "imageSrcset",
+     "type": "string"
+    },
+    {
      "desc": "the key points, in the order they are shown (1 to 6)",
      "name": "items",
      "required": true,
@@ -6165,6 +6177,12 @@
      "desc": "alt text of the picture",
      "name": "imageAlt",
      "required": true,
+     "type": "string"
+    },
+    {
+     "default": "\"\"",
+     "desc": "sizes of the picture as a srcset (`hero-960.webp 960w, hero-1280.webp 1280w`); none: `image` only",
+     "name": "imageSrcset",
      "type": "string"
     },
     {
@@ -7382,6 +7400,11 @@
      "type": "string"
     },
     {
+     "desc": "sizes of the picture as a srcset (`hero-960.webp 960w, hero-1280.webp 1280w`); none: `image` only",
+     "name": "imageSrcset",
+     "type": "string"
+    },
+    {
      "desc": "address of the picture in the dark theme; none: image",
      "name": "imageDark",
      "type": "string"
@@ -8424,6 +8447,12 @@
      "type": "string"
     },
     {
+     "default": "\"\"",
+     "desc": "sizes of the picture as a srcset (`hero-960.webp 960w, hero-1280.webp 1280w`); none: `image` only",
+     "name": "imageSrcset",
+     "type": "string"
+    },
+    {
      "desc": "the offices, in the order they are shown (1 to 6)",
      "name": "items",
      "required": true,
@@ -8793,7 +8822,7 @@
  ],
  "media-frame": [
   {
-   "docs": "A picture in a fixed ratio that follows the theme. `src` is the picture of the light theme, `darkSrc` the one of the dark theme (without it the dark theme shows `src`). Without both (an empty string counts as none) it shows the built-in neutral placeholders (base64 data URIs, one light and one dark), so a page can be laid out before it has pictures; the placeholder is decorative (`alt` is empty), stands in for a real `src` and is switched by the theme token. A real picture gets `alt` and loads lazily. `ratio` comes from the recipe; the corners are the plain theme radius.",
+   "docs": "A picture in a fixed ratio that follows the theme. `src` is the picture of the light theme, `darkSrc` the one of the dark theme (without it the dark theme shows `src`). Without both (an empty string counts as none) it shows the built-in neutral placeholders (base64 data URIs, one light and one dark), so a page can be laid out before it has pictures; the placeholder is decorative (`alt` is empty), stands in for a real `src` and is switched by the theme token. A real picture gets `alt` and loads lazily. `ratio` comes from the recipe; the corners are the plain theme radius. `srcset` lists sizes of `src` (written by an export, e.g. WebP 960w / 1280w / 1920w) and `sizes` says how wide the picture is shown, so the browser picks a size; the dark picture takes the srcset only when it is `src` (no `darkSrc`).",
    "part": "MediaFrame",
    "rows": [
     {
@@ -8824,6 +8853,17 @@
       "3/4",
       "21/9"
      ]
+    },
+    {
+     "desc": "sizes of `src` as a srcset (`hero-960.webp 960w, hero-1280.webp 1280w`); used only with a `src`, for the dark theme only without `darkSrc`",
+     "name": "srcset",
+     "type": "string"
+    },
+    {
+     "default": "\"100vw\"",
+     "desc": "how wide the picture is shown (the `sizes` of the srcset)",
+     "name": "sizes",
+     "type": "string"
     }
    ]
   }
@@ -12363,6 +12403,12 @@
     },
     {
      "default": "\"\"",
+     "desc": "sizes of the picture as a srcset (`hero-960.webp 960w, hero-1280.webp 1280w`); none: `image` only",
+     "name": "imageSrcset",
+     "type": "string"
+    },
+    {
+     "default": "\"\"",
      "desc": "the label of the action; the link is drawn when the label and the address are both set",
      "name": "actionLabel",
      "type": "string"
@@ -12626,6 +12672,12 @@
      "type": "string"
     },
     {
+     "default": "\"\"",
+     "desc": "sizes of the picture as a srcset (`hero-960.webp 960w, hero-1280.webp 1280w`); none: `image` only",
+     "name": "imageSrcset",
+     "type": "string"
+    },
+    {
      "desc": "the links of the person, in the order they are shown (0 to 4)",
      "name": "links",
      "required": true,
@@ -12854,6 +12906,12 @@
      "desc": "alt text of the picture",
      "name": "imageAlt",
      "required": true,
+     "type": "string"
+    },
+    {
+     "default": "\"\"",
+     "desc": "sizes of the picture as a srcset (`hero-960.webp 960w, hero-1280.webp 1280w`); none: `image` only",
+     "name": "imageSrcset",
      "type": "string"
     },
     {
@@ -15382,6 +15440,11 @@
     {
      "desc": "alt text of the picture; none: the title",
      "name": "imageAlt",
+     "type": "string"
+    },
+    {
+     "desc": "sizes of the picture as a srcset (`hero-960.webp 960w, hero-1280.webp 1280w`); none: `image` only",
+     "name": "imageSrcset",
      "type": "string"
     },
     {
