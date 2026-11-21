@@ -14,6 +14,12 @@
       "model": "article@1",
       "path": "article-simple/1.json"
     },
+    "cases-simple": {
+      "version": 1,
+      "block": "block.casessimple",
+      "model": "cases@1",
+      "path": "cases-simple/1.json"
+    },
     "chapters-simple": {
       "version": 1,
       "block": "block.chapterssimple",
@@ -277,6 +283,12 @@
       "block": "block.testimonialssimple",
       "model": "testimonials@1",
       "path": "testimonials-simple/1.json"
+    },
+    "timeline-simple": {
+      "version": 1,
+      "block": "block.timelinesimple",
+      "model": "timeline@1",
+      "path": "timeline-simple/1.json"
     },
     "topics-simple": {
       "version": 1,

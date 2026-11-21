@@ -1,0 +1,117 @@
+{
+  "item": "timeline-simple",
+  "version": 1,
+  "block": "block.timelinesimple",
+  "organism": "TimelineSimple",
+  "line": "simple",
+  "model": "timeline@1",
+  "modelSchema": "https://registry.buildy.tw/models/timeline@1.schema.json",
+  "axes": {
+    "layout": [
+      "column",
+      "grid"
+    ],
+    "cols": [
+      "2",
+      "4"
+    ]
+  },
+  "defaults": {
+    "layout": "column",
+    "cols": "2"
+  },
+  "variants": [
+    {
+      "id": "column",
+      "label": "One column",
+      "axes": {
+        "layout": "column",
+        "cols": "2"
+      }
+    },
+    {
+      "id": "grid2",
+      "label": "Two columns",
+      "axes": {
+        "layout": "grid",
+        "cols": "2"
+      }
+    },
+    {
+      "id": "grid4",
+      "label": "Four columns",
+      "axes": {
+        "layout": "grid",
+        "cols": "4"
+      },
+      "settings": {
+        "align": "center"
+      }
+    }
+  ],
+  "defaultVariant": "column",
+  "settings": {
+    "level": {
+      "type": "1 | 2 | 3",
+      "default": 2
+    },
+    "padding": {
+      "type": "\"compact\" | \"standard\" | \"spacious\"",
+      "default": "standard"
+    },
+    "align": {
+      "type": "\"start\" | \"center\" | \"end\"",
+      "default": "start"
+    },
+    "landmarkLabel": {
+      "type": "string"
+    }
+  },
+  "modes": [
+    "wireframe"
+  ],
+  "defaultMode": "wireframe",
+  "places": [
+    {
+      "place": "title",
+      "kind": "heading",
+      "fields": [
+        "/title"
+      ]
+    },
+    {
+      "place": "description",
+      "kind": "text",
+      "fields": [
+        "/description"
+      ]
+    },
+    {
+      "place": "items.date",
+      "kind": "text",
+      "fields": [
+        "/items/*/date"
+      ],
+      "list": "items"
+    },
+    {
+      "place": "items.title",
+      "kind": "heading",
+      "fields": [
+        "/items/*/title"
+      ],
+      "list": "items"
+    },
+    {
+      "place": "items.text",
+      "kind": "text",
+      "fields": [
+        "/items/*/text"
+      ],
+      "list": "items"
+    }
+  ],
+  "wireframe": {
+    "items": 2
+  }
+}

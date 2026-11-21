@@ -13,6 +13,11 @@
         "path": "contracts/article-simple/1.json",
         "sha256": "70aa68c9337171d17c036cd4664dec4145f900c9119a7a7721995a09d4fe581a"
       },
+      "cases-simple@1": {
+        "model": "cases@1",
+        "path": "contracts/cases-simple/1.json",
+        "sha256": "9031d3c041b98dbb9f7cd72807b5ce6efb9697750703b245b35504a3e6d08912"
+      },
       "chapters-simple@1": {
         "model": "chapters@1",
         "path": "contracts/chapters-simple/1.json",
@@ -233,6 +238,11 @@
         "path": "contracts/testimonials-simple/1.json",
         "sha256": "e8bb4ab2a54963fa56dc96a13f79e1dc3b8327020cb0fc1c21fa5f07d9dae38b"
       },
+      "timeline-simple@1": {
+        "model": "timeline@1",
+        "path": "contracts/timeline-simple/1.json",
+        "sha256": "990c60012326a52ca013e677344ba3edb60f7b0acf6ad09bf4a9bc27ce9251ed"
+      },
       "topics-simple@1": {
         "model": "topics@1",
         "path": "contracts/topics-simple/1.json",
@@ -240,7 +250,7 @@
       }
     },
     "path": "contracts/v0.json",
-    "sha256": "3de774cb15f09fe68427f0d57399d59fc0390c78f1ac47141156e1a0525d41ca"
+    "sha256": "433e74b66a070eb54f6c85ed8b62427b606856412de95192803ad94151bec75d"
   },
   "items": [
     {
@@ -5875,6 +5885,164 @@
       },
       "title": "Cart Table",
       "type": "registry:component"
+    },
+    {
+      "category": "marketing",
+      "contract": "contracts/cases-simple/1.json",
+      "description": "The heading, one paragraph and the case studies (a picture, the client, the title as a link, the result in one line): on cards in three or two columns, or rows with the picture at the start.",
+      "group": "proof",
+      "kind": "block",
+      "model": "cases@1",
+      "name": "cases-simple",
+      "runtimes": {
+        "jinja2": {
+          "dependencies": [],
+          "files": [
+            "blocks/cases-simple.html.j2"
+          ],
+          "path": "jinja2/blocks/cases-simple.json",
+          "registryDependencies": [
+            "block",
+            "container",
+            "link-plain",
+            "list",
+            "list-item",
+            "media-frame",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "latte": {
+          "dependencies": [],
+          "files": [
+            "blocks/cases-simple.latte"
+          ],
+          "path": "latte/blocks/cases-simple.json",
+          "registryDependencies": [
+            "block",
+            "container",
+            "link-plain",
+            "list",
+            "list-item",
+            "media-frame",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "react": {
+          "dependencies": [],
+          "files": [
+            "blocks/cases-simple.tsx",
+            "blocks/cases-simple.types.ts"
+          ],
+          "path": "react/blocks/cases-simple.json",
+          "registryDependencies": [
+            "compose",
+            "media-frame",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/cases-simple.tsx",
+            "blocks/cases-simple.types.ts"
+          ],
+          "path": "solid/blocks/cases-simple.json",
+          "registryDependencies": [
+            "compose",
+            "media-frame",
+            "utils"
+          ]
+        },
+        "svelte": {
+          "dependencies": [],
+          "files": [
+            "blocks/cases-simple.svelte",
+            "blocks/cases-simple.types.ts"
+          ],
+          "path": "svelte/blocks/cases-simple.json",
+          "registryDependencies": [
+            "block",
+            "container",
+            "link-plain",
+            "list",
+            "list-item",
+            "media-frame",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "templ": {
+          "dependencies": [],
+          "files": [
+            "blocks/cases-simple.templ"
+          ],
+          "path": "templ/blocks/cases-simple.json",
+          "registryDependencies": [
+            "block",
+            "container",
+            "kit-box",
+            "kit-link",
+            "kit-text",
+            "link-plain",
+            "list",
+            "list-item",
+            "media-frame",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "twig": {
+          "dependencies": [],
+          "files": [
+            "blocks/cases-simple.html.twig"
+          ],
+          "path": "twig/blocks/cases-simple.json",
+          "registryDependencies": [
+            "block",
+            "container",
+            "link-plain",
+            "list",
+            "list-item",
+            "media-frame",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "vue": {
+          "dependencies": [],
+          "files": [
+            "blocks/cases-simple.types.ts",
+            "blocks/cases-simple.vue"
+          ],
+          "path": "vue/blocks/cases-simple.json",
+          "registryDependencies": [
+            "block",
+            "container",
+            "link-plain",
+            "list",
+            "list-item",
+            "media-frame",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        }
+      },
+      "title": "Cases Simple",
+      "type": "registry:block"
     },
     {
       "category": "commerce",
@@ -53131,6 +53299,149 @@
       "type": "registry:component"
     },
     {
+      "category": "marketing",
+      "contract": "contracts/timeline-simple/1.json",
+      "description": "The heading, one paragraph and the steps of a process or a history (the date or the stage, a title, a line) as an ordered list: one column of muted steps, or side by side in two or four columns.",
+      "group": "how-it-works",
+      "kind": "block",
+      "model": "timeline@1",
+      "name": "timeline-simple",
+      "runtimes": {
+        "jinja2": {
+          "dependencies": [],
+          "files": [
+            "blocks/timeline-simple.html.j2"
+          ],
+          "path": "jinja2/blocks/timeline-simple.json",
+          "registryDependencies": [
+            "block",
+            "container",
+            "list",
+            "list-item",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "latte": {
+          "dependencies": [],
+          "files": [
+            "blocks/timeline-simple.latte"
+          ],
+          "path": "latte/blocks/timeline-simple.json",
+          "registryDependencies": [
+            "block",
+            "container",
+            "list",
+            "list-item",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "react": {
+          "dependencies": [],
+          "files": [
+            "blocks/timeline-simple.tsx",
+            "blocks/timeline-simple.types.ts"
+          ],
+          "path": "react/blocks/timeline-simple.json",
+          "registryDependencies": [
+            "compose",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/timeline-simple.tsx",
+            "blocks/timeline-simple.types.ts"
+          ],
+          "path": "solid/blocks/timeline-simple.json",
+          "registryDependencies": [
+            "compose",
+            "utils"
+          ]
+        },
+        "svelte": {
+          "dependencies": [],
+          "files": [
+            "blocks/timeline-simple.svelte",
+            "blocks/timeline-simple.types.ts"
+          ],
+          "path": "svelte/blocks/timeline-simple.json",
+          "registryDependencies": [
+            "block",
+            "container",
+            "list",
+            "list-item",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "templ": {
+          "dependencies": [],
+          "files": [
+            "blocks/timeline-simple.templ"
+          ],
+          "path": "templ/blocks/timeline-simple.json",
+          "registryDependencies": [
+            "block",
+            "container",
+            "kit-box",
+            "kit-text",
+            "list",
+            "list-item",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "twig": {
+          "dependencies": [],
+          "files": [
+            "blocks/timeline-simple.html.twig"
+          ],
+          "path": "twig/blocks/timeline-simple.json",
+          "registryDependencies": [
+            "block",
+            "container",
+            "list",
+            "list-item",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "vue": {
+          "dependencies": [],
+          "files": [
+            "blocks/timeline-simple.types.ts",
+            "blocks/timeline-simple.vue"
+          ],
+          "path": "vue/blocks/timeline-simple.json",
+          "registryDependencies": [
+            "block",
+            "container",
+            "list",
+            "list-item",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        }
+      },
+      "title": "Timeline Simple",
+      "type": "registry:block"
+    },
+    {
       "category": "primitives",
       "description": "Title primitive",
       "group": "",
@@ -55307,7 +55618,7 @@
       "type": "registry:block"
     }
   ],
-  "lastUpdated": "2026-11-21T02:56:01+03:00",
+  "lastUpdated": "2026-11-21T03:02:41+03:00",
   "layout": "<runtime>/index.json + <runtime>/{components/ui,components,blocks,utils,lib,themes}/<name>.json; use r/<runtime> as registryUrl",
   "models": {
     "article-lead@1": {
@@ -55317,6 +55628,10 @@
     "article@1": {
       "path": "models/article@1.schema.json",
       "sha256": "7c6e6ac7fff67a42cb47d4487af5245cb72fd9ba179cf5cd0a4dc7504408c48e"
+    },
+    "cases@1": {
+      "path": "models/cases@1.schema.json",
+      "sha256": "3de8d6233fde5c74b5242bbe415e25339c1b7c15f20ffefa329cc12bb86efaf9"
     },
     "chapters@1": {
       "path": "models/chapters@1.schema.json",
@@ -55494,15 +55809,19 @@
       "path": "models/testimonials@1.schema.json",
       "sha256": "e3c1b75c4dd7111f41f7a7bb52c7e297617d8805f51b4cae6b06ca40272003b1"
     },
+    "timeline@1": {
+      "path": "models/timeline@1.schema.json",
+      "sha256": "3a02a147eb16f2b01ed3aa3ffb41e6fbc274242d6f73bc5f049a1ab39d9b5f72"
+    },
     "topics@1": {
       "path": "models/topics@1.schema.json",
       "sha256": "7e85157dcbbeec16b931dcb9dceb9a4ac6a730e74ca632aba69153ac3229ef53"
     }
   },
   "props": {
-    "digest": "sha256:3920d4cfc5ca1efd310fe549faa5e2d770d43f48b41c216a1fb20f94c465948a",
+    "digest": "sha256:66b0720a9228528de20b4a5607fb4cbb81b0d2a198563f6d26f6cf758b6ae5b6",
     "path": "props/v0.json",
-    "sha256": "b3beca3f924d5911be22fbf6147ee8987aa7231b959d2ba4cd10fc8885912c5c",
+    "sha256": "e923b3bc352c707b3613be83d4c776e489a1b2eb9be53d28f6de672b28ae0d79",
     "version": "0"
   },
   "runtimes": [
@@ -55515,11 +55834,11 @@
     "latte",
     "jinja2"
   ],
-  "sourceCommit": "b509419e8ea571014a1984d2247bff9ff8137d1c",
+  "sourceCommit": "998fe6cd6238ccc4208dab0462cdc45f85ccfce6",
   "variants": {
-    "digest": "sha256:ded7096648297e4deb79683289b4bb2f1c5e4a7f68283337961abbc38afe027b",
+    "digest": "sha256:6404facd90203894d83aeb118a20add2751e93533fe9414833d88586d338ab4c",
     "path": "variants/v0.json",
-    "sha256": "a2caa4d699a1cd25cd3d109803b8c38663e102efacb1ed77ba744127567d0d49",
+    "sha256": "fa24c8b72432b9ddbba07b5c4f8f18b9d38e1e3c4f370d5f94dfaddbe8de0d41",
     "version": "0"
   },
   "version": "0.1.0"

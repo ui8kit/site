@@ -1721,6 +1721,92 @@
    ]
   }
  ],
+ "cases-simple": [
+  {
+   "docs": "The simple case studies (model cases@1): the heading, a description and the cases as a list, each with a picture, the client (the primary token), the title (a link when the case has an address) and the result in one line. Axes: layout (cards: a card surface per case, the picture on top; rows: the picture at the start, a third of the row from md up), cols (3, 2 columns of the cards).",
+   "part": "CasesSimple",
+   "rows": [
+    {
+     "name": "id",
+     "required": true,
+     "type": "string"
+    },
+    {
+     "name": "title",
+     "required": true,
+     "type": "string"
+    },
+    {
+     "default": "\"\"",
+     "desc": "one paragraph under the heading; empty: none",
+     "name": "description",
+     "type": "string"
+    },
+    {
+     "desc": "the cases, in the order they are shown (1 to 6)",
+     "name": "items",
+     "required": true,
+     "type": "CaseStudy[]"
+    },
+    {
+     "default": "2",
+     "desc": "the level of the heading (1 on the first section of a page)",
+     "name": "level",
+     "type": "1 | 2 | 3",
+     "values": [
+      "1",
+      "2",
+      "3"
+     ]
+    },
+    {
+     "default": "\"standard\"",
+     "desc": "the vertical padding of the section: compact (py-8 lg:py-16), standard (py-16 lg:py-32), spacious (py-24 lg:py-40)",
+     "name": "padding",
+     "type": "\"compact\" | \"standard\" | \"spacious\"",
+     "values": [
+      "compact",
+      "standard",
+      "spacious"
+     ]
+    },
+    {
+     "default": "\"center\"",
+     "desc": "the alignment of the copy: start, center or end (logical, follows the writing direction): items-* on the column, text-* on the text",
+     "name": "align",
+     "type": "\"start\" | \"center\" | \"end\"",
+     "values": [
+      "start",
+      "center",
+      "end"
+     ]
+    },
+    {
+     "default": "\"cards\"",
+     "name": "layout",
+     "type": "\"cards\" | \"rows\"",
+     "values": [
+      "cards",
+      "rows"
+     ]
+    },
+    {
+     "default": "\"3\"",
+     "name": "cols",
+     "type": "\"3\" | \"2\"",
+     "values": [
+      "3",
+      "2"
+     ]
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
+    }
+   ]
+  }
+ ],
  "category-nav": [
   {
    "docs": "Navigation between product categories as chips, a bar with an underline, a side list, tiles with a big icon, or chips under a toolbar (search, sort and the number shown). The current one carries aria-current. Axes: layout (chips, bar, sidebar, tiles, toolbar), count (show, hide), icon (show, hide), density.",
@@ -16910,6 +16996,92 @@
      "name": "items",
      "required": true,
      "type": "TimelineItem[]"
+    }
+   ]
+  }
+ ],
+ "timeline-simple": [
+  {
+   "docs": "The simple timeline (model timeline@1): the heading, a description and the steps of a process or a history as an ordered list, each with the date or the stage (the primary token), a title and a line. Text only. Axes: layout (column: one narrow column, a muted line at the start of each step; grid: the steps side by side), cols (2, 4 columns of the grid from md up).",
+   "part": "TimelineSimple",
+   "rows": [
+    {
+     "name": "id",
+     "required": true,
+     "type": "string"
+    },
+    {
+     "name": "title",
+     "required": true,
+     "type": "string"
+    },
+    {
+     "default": "\"\"",
+     "desc": "one paragraph under the heading; empty: none",
+     "name": "description",
+     "type": "string"
+    },
+    {
+     "desc": "the steps, in their order (2 to 8)",
+     "name": "items",
+     "required": true,
+     "type": "TimelineStep[]"
+    },
+    {
+     "default": "2",
+     "desc": "the level of the heading (1 on the first section of a page)",
+     "name": "level",
+     "type": "1 | 2 | 3",
+     "values": [
+      "1",
+      "2",
+      "3"
+     ]
+    },
+    {
+     "default": "\"standard\"",
+     "desc": "the vertical padding of the section: compact (py-8 lg:py-16), standard (py-16 lg:py-32), spacious (py-24 lg:py-40)",
+     "name": "padding",
+     "type": "\"compact\" | \"standard\" | \"spacious\"",
+     "values": [
+      "compact",
+      "standard",
+      "spacious"
+     ]
+    },
+    {
+     "default": "\"start\"",
+     "desc": "the alignment of the copy: start, center or end (logical, follows the writing direction): items-* on the column, text-* on the text",
+     "name": "align",
+     "type": "\"start\" | \"center\" | \"end\"",
+     "values": [
+      "start",
+      "center",
+      "end"
+     ]
+    },
+    {
+     "default": "\"column\"",
+     "name": "layout",
+     "type": "\"column\" | \"grid\"",
+     "values": [
+      "column",
+      "grid"
+     ]
+    },
+    {
+     "default": "\"2\"",
+     "name": "cols",
+     "type": "\"2\" | \"4\"",
+     "values": [
+      "2",
+      "4"
+     ]
+    },
+    {
+     "desc": "accessible name of the landmark of this component when the page shows it more than once (a variant); replaces the heading name of the root landmark, follows the name of a nested one",
+     "name": "landmarkLabel",
+     "type": "string"
     }
    ]
   }

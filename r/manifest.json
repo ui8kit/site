@@ -2,9 +2,9 @@
   "contractVersion": "2.0.0",
   "contracts": {
     "index": {
-      "bytes": 7305,
+      "bytes": 7611,
       "path": "contracts/v0.json",
-      "sha256": "3de774cb15f09fe68427f0d57399d59fc0390c78f1ac47141156e1a0525d41ca"
+      "sha256": "433e74b66a070eb54f6c85ed8b62427b606856412de95192803ad94151bec75d"
     },
     "items": {
       "article-lead@1": {
@@ -21,6 +21,14 @@
         "model": "article@1",
         "path": "contracts/article-simple/1.json",
         "sha256": "70aa68c9337171d17c036cd4664dec4145f900c9119a7a7721995a09d4fe581a",
+        "version": 1
+      },
+      "cases-simple@1": {
+        "block": "block.casessimple",
+        "bytes": 2201,
+        "model": "cases@1",
+        "path": "contracts/cases-simple/1.json",
+        "sha256": "9031d3c041b98dbb9f7cd72807b5ce6efb9697750703b245b35504a3e6d08912",
         "version": 1
       },
       "chapters-simple@1": {
@@ -375,6 +383,14 @@
         "sha256": "e8bb4ab2a54963fa56dc96a13f79e1dc3b8327020cb0fc1c21fa5f07d9dae38b",
         "version": 1
       },
+      "timeline-simple@1": {
+        "block": "block.timelinesimple",
+        "bytes": 2021,
+        "model": "timeline@1",
+        "path": "contracts/timeline-simple/1.json",
+        "sha256": "990c60012326a52ca013e677344ba3edb60f7b0acf6ad09bf4a9bc27ce9251ed",
+        "version": 1
+      },
       "topics-simple@1": {
         "block": "block.topicssimple",
         "bytes": 2007,
@@ -385,7 +401,7 @@
       }
     },
     "source": {
-      "manifest": "615b8c796146b93f8dec67f93a802d5e607bb5181dd40d743ea0180f16bebdae"
+      "manifest": "6095295ebc06c39bd32db853242f14e0a95beab8597cec08ee7d16c11aa83211"
     }
   },
   "models": {
@@ -400,6 +416,12 @@
       "id": "article@1",
       "path": "models/article@1.schema.json",
       "sha256": "7c6e6ac7fff67a42cb47d4487af5245cb72fd9ba179cf5cd0a4dc7504408c48e"
+    },
+    "cases@1": {
+      "bytes": 2469,
+      "id": "cases@1",
+      "path": "models/cases@1.schema.json",
+      "sha256": "3de8d6233fde5c74b5242bbe415e25339c1b7c15f20ffefa329cc12bb86efaf9"
     },
     "chapters@1": {
       "bytes": 2290,
@@ -665,6 +687,12 @@
       "path": "models/testimonials@1.schema.json",
       "sha256": "e3c1b75c4dd7111f41f7a7bb52c7e297617d8805f51b4cae6b06ca40272003b1"
     },
+    "timeline@1": {
+      "bytes": 1992,
+      "id": "timeline@1",
+      "path": "models/timeline@1.schema.json",
+      "sha256": "3a02a147eb16f2b01ed3aa3ffb41e6fbc274242d6f73bc5f049a1ab39d9b5f72"
+    },
     "topics@1": {
       "bytes": 2264,
       "id": "topics@1",
@@ -673,17 +701,17 @@
     }
   },
   "props": {
-    "bytes": 2124387,
-    "digest": "sha256:3920d4cfc5ca1efd310fe549faa5e2d770d43f48b41c216a1fb20f94c465948a",
-    "items": 163,
+    "bytes": 2131693,
+    "digest": "sha256:66b0720a9228528de20b4a5607fb4cbb81b0d2a198563f6d26f6cf758b6ae5b6",
+    "items": 165,
     "path": "props/v0.json",
-    "sha256": "b3beca3f924d5911be22fbf6147ee8987aa7231b959d2ba4cd10fc8885912c5c",
+    "sha256": "e923b3bc352c707b3613be83d4c776e489a1b2eb9be53d28f6de672b28ae0d79",
     "version": "0"
   },
   "runtimes": {
     "jinja2": {
       "counts": {
-        "block": 163,
+        "block": 165,
         "component": 137,
         "lib": 2,
         "primitive": 85,
@@ -1067,6 +1095,15 @@
             }
           },
           "type": "registry:component"
+        },
+        "cases-simple": {
+          "files": {
+            "blocks/cases-simple.html.j2": {
+              "bytes": 6244,
+              "sha256": "545ca5ab6a36a0d708f4cef27ae455ab3072761fa3f445e81a4bbbee562377c4"
+            }
+          },
+          "type": "registry:block"
         },
         "category-nav": {
           "files": {
@@ -4148,6 +4185,15 @@
           },
           "type": "registry:component"
         },
+        "timeline-simple": {
+          "files": {
+            "blocks/timeline-simple.html.j2": {
+              "bytes": 5086,
+              "sha256": "3005671f8c5cf3ce0fcb58868255dc0329243986ff60020612c3ab0b9d317147"
+            }
+          },
+          "type": "registry:block"
+        },
         "title": {
           "files": {
             "compose/title.html.j2": {
@@ -4303,11 +4349,11 @@
           "type": "registry:block"
         }
       },
-      "items": 388
+      "items": 390
     },
     "latte": {
       "counts": {
-        "block": 163,
+        "block": 165,
         "component": 137,
         "lib": 2,
         "primitive": 85,
@@ -4691,6 +4737,15 @@
             }
           },
           "type": "registry:component"
+        },
+        "cases-simple": {
+          "files": {
+            "blocks/cases-simple.latte": {
+              "bytes": 6184,
+              "sha256": "49957a963722d4fb1fc863aed7a0fa526dbe18cc056f6c4a6b10714d2b141279"
+            }
+          },
+          "type": "registry:block"
         },
         "category-nav": {
           "files": {
@@ -7768,6 +7823,15 @@
           },
           "type": "registry:component"
         },
+        "timeline-simple": {
+          "files": {
+            "blocks/timeline-simple.latte": {
+              "bytes": 5011,
+              "sha256": "584514b430e7a9ec35166e53c4eb8cc15862cd8ce5f2393235c586995b7b59d3"
+            }
+          },
+          "type": "registry:block"
+        },
         "title": {
           "files": {
             "compose/Title.latte": {
@@ -7923,11 +7987,11 @@
           "type": "registry:block"
         }
       },
-      "items": 388
+      "items": 390
     },
     "react": {
       "counts": {
-        "block": 163,
+        "block": 165,
         "component": 137,
         "lib": 2,
         "primitive": 89,
@@ -8364,6 +8428,19 @@
             }
           },
           "type": "registry:component"
+        },
+        "cases-simple": {
+          "files": {
+            "blocks/cases-simple.tsx": {
+              "bytes": 4754,
+              "sha256": "cf56b2b0419fe049d19fe1b1a75b9519afafe59f3b245d64f5a1e4ff09f264c4"
+            },
+            "blocks/cases-simple.types.ts": {
+              "bytes": 286,
+              "sha256": "5bb9b37d9909aa2b3f718b74dc79fa1c077563a2fc540ac8c64340699e568a23"
+            }
+          },
+          "type": "registry:block"
         },
         "category-nav": {
           "files": {
@@ -12054,6 +12131,19 @@
           },
           "type": "registry:component"
         },
+        "timeline-simple": {
+          "files": {
+            "blocks/timeline-simple.tsx": {
+              "bytes": 3888,
+              "sha256": "210e87fc3b76711c8185c69bf6a68c9166207b5be6f80d8d8e758e7754e50061"
+            },
+            "blocks/timeline-simple.types.ts": {
+              "bytes": 249,
+              "sha256": "e8e8b365416f0514f3de2602b5091c1887f56b1e53335fc59e100f43571779b2"
+            }
+          },
+          "type": "registry:block"
+        },
         "title": {
           "files": {
             "compose/title.tsx": {
@@ -12297,11 +12387,11 @@
           "type": "registry:block"
         }
       },
-      "items": 409
+      "items": 411
     },
     "solid": {
       "counts": {
-        "block": 163,
+        "block": 165,
         "component": 137,
         "lib": 2,
         "primitive": 88,
@@ -12738,6 +12828,19 @@
             }
           },
           "type": "registry:component"
+        },
+        "cases-simple": {
+          "files": {
+            "blocks/cases-simple.tsx": {
+              "bytes": 4700,
+              "sha256": "d729958f84aaab9c3561aecfd8987eb09045dc90e9091db97bfc6b63b991f272"
+            },
+            "blocks/cases-simple.types.ts": {
+              "bytes": 286,
+              "sha256": "5bb9b37d9909aa2b3f718b74dc79fa1c077563a2fc540ac8c64340699e568a23"
+            }
+          },
+          "type": "registry:block"
         },
         "category-nav": {
           "files": {
@@ -16419,6 +16522,19 @@
           },
           "type": "registry:component"
         },
+        "timeline-simple": {
+          "files": {
+            "blocks/timeline-simple.tsx": {
+              "bytes": 3850,
+              "sha256": "7589d068fa068bc4470b49d01f1cdcebf23c8e3a3815e1bde1cb4c87c765ec36"
+            },
+            "blocks/timeline-simple.types.ts": {
+              "bytes": 249,
+              "sha256": "e8e8b365416f0514f3de2602b5091c1887f56b1e53335fc59e100f43571779b2"
+            }
+          },
+          "type": "registry:block"
+        },
         "title": {
           "files": {
             "compose/title.solid.tsx": {
@@ -16662,11 +16778,11 @@
           "type": "registry:block"
         }
       },
-      "items": 408
+      "items": 410
     },
     "svelte": {
       "counts": {
-        "block": 163,
+        "block": 165,
         "component": 137,
         "lib": 2,
         "primitive": 88,
@@ -17103,6 +17219,19 @@
             }
           },
           "type": "registry:component"
+        },
+        "cases-simple": {
+          "files": {
+            "blocks/cases-simple.svelte": {
+              "bytes": 4961,
+              "sha256": "8131c36202ab583cde6235eeaae67c2575272984682cb0d6a0e6cd46b1c57c39"
+            },
+            "blocks/cases-simple.types.ts": {
+              "bytes": 286,
+              "sha256": "5bb9b37d9909aa2b3f718b74dc79fa1c077563a2fc540ac8c64340699e568a23"
+            }
+          },
+          "type": "registry:block"
         },
         "category-nav": {
           "files": {
@@ -20804,6 +20933,19 @@
           },
           "type": "registry:component"
         },
+        "timeline-simple": {
+          "files": {
+            "blocks/timeline-simple.svelte": {
+              "bytes": 4098,
+              "sha256": "6195495df05574c9836ac50b9af7f817fd2884b9eaf2ca3fe490dfaf9a4d5581"
+            },
+            "blocks/timeline-simple.types.ts": {
+              "bytes": 249,
+              "sha256": "e8e8b365416f0514f3de2602b5091c1887f56b1e53335fc59e100f43571779b2"
+            }
+          },
+          "type": "registry:block"
+        },
         "title": {
           "files": {
             "compose/Title.svelte": {
@@ -21047,11 +21189,11 @@
           "type": "registry:block"
         }
       },
-      "items": 408
+      "items": 410
     },
     "templ": {
       "counts": {
-        "block": 163,
+        "block": 165,
         "component": 137,
         "lib": 2,
         "primitive": 85,
@@ -21435,6 +21577,15 @@
             }
           },
           "type": "registry:component"
+        },
+        "cases-simple": {
+          "files": {
+            "blocks/cases-simple.templ": {
+              "bytes": 6155,
+              "sha256": "4b5f3471bee5a2f8c33f3d86c50ab0f15e86d87cceb5ce01fad68ea4f597e4ce"
+            }
+          },
+          "type": "registry:block"
         },
         "category-nav": {
           "files": {
@@ -24508,6 +24659,15 @@
           },
           "type": "registry:component"
         },
+        "timeline-simple": {
+          "files": {
+            "blocks/timeline-simple.templ": {
+              "bytes": 5270,
+              "sha256": "bf93a645a9440a4de5004a29a756a8ecb5180118cda81c3237e7801fa4b5d0ab"
+            }
+          },
+          "type": "registry:block"
+        },
         "title": {
           "files": {
             "compose/title.templ": {
@@ -24691,11 +24851,11 @@
           "type": "registry:block"
         }
       },
-      "items": 388
+      "items": 390
     },
     "twig": {
       "counts": {
-        "block": 163,
+        "block": 165,
         "component": 137,
         "lib": 2,
         "primitive": 85,
@@ -25079,6 +25239,15 @@
             }
           },
           "type": "registry:component"
+        },
+        "cases-simple": {
+          "files": {
+            "blocks/cases-simple.html.twig": {
+              "bytes": 6337,
+              "sha256": "3107a199a2b935e06e6bd0ccdac9df71604afa61ae71dfdcfede09d5369841ec"
+            }
+          },
+          "type": "registry:block"
         },
         "category-nav": {
           "files": {
@@ -28160,6 +28329,15 @@
           },
           "type": "registry:component"
         },
+        "timeline-simple": {
+          "files": {
+            "blocks/timeline-simple.html.twig": {
+              "bytes": 5113,
+              "sha256": "1ef5230956ae018d3223e88521e182407ca7e92c036d557a965a7bbf4123f60a"
+            }
+          },
+          "type": "registry:block"
+        },
         "title": {
           "files": {
             "compose/Title.html.twig": {
@@ -28319,11 +28497,11 @@
           "type": "registry:block"
         }
       },
-      "items": 388
+      "items": 390
     },
     "vue": {
       "counts": {
-        "block": 163,
+        "block": 165,
         "component": 137,
         "lib": 2,
         "primitive": 88,
@@ -28760,6 +28938,19 @@
             }
           },
           "type": "registry:component"
+        },
+        "cases-simple": {
+          "files": {
+            "blocks/cases-simple.types.ts": {
+              "bytes": 286,
+              "sha256": "5bb9b37d9909aa2b3f718b74dc79fa1c077563a2fc540ac8c64340699e568a23"
+            },
+            "blocks/cases-simple.vue": {
+              "bytes": 4771,
+              "sha256": "c4c82c467d236675a3ebd6416eacb9f7502471f3830320b3d5086e3af4bc6265"
+            }
+          },
+          "type": "registry:block"
         },
         "category-nav": {
           "files": {
@@ -32461,6 +32652,19 @@
           },
           "type": "registry:component"
         },
+        "timeline-simple": {
+          "files": {
+            "blocks/timeline-simple.types.ts": {
+              "bytes": 249,
+              "sha256": "e8e8b365416f0514f3de2602b5091c1887f56b1e53335fc59e100f43571779b2"
+            },
+            "blocks/timeline-simple.vue": {
+              "bytes": 4013,
+              "sha256": "a7d681caac1d1b327365fc30ef1ecb03133b70a4dce6fcab268b4e6e100cc07a"
+            }
+          },
+          "type": "registry:block"
+        },
         "title": {
           "files": {
             "compose/Title.vue": {
@@ -32704,22 +32908,22 @@
           "type": "registry:block"
         }
       },
-      "items": 408
+      "items": 410
     }
   },
   "source": {
-    "commit": "b509419e8ea571014a1984d2247bff9ff8137d1c",
-    "commitDate": "2026-11-21T02:56:01+03:00",
+    "commit": "998fe6cd6238ccc4208dab0462cdc45f85ccfce6",
+    "commitDate": "2026-11-21T03:02:41+03:00",
     "dirty": false,
     "repo": "private source monorepo"
   },
   "variants": {
-    "bytes": 149773,
-    "digest": "sha256:ded7096648297e4deb79683289b4bb2f1c5e4a7f68283337961abbc38afe027b",
-    "items": 159,
+    "bytes": 150889,
+    "digest": "sha256:6404facd90203894d83aeb118a20add2751e93533fe9414833d88586d338ab4c",
+    "items": 161,
     "path": "variants/v0.json",
-    "sha256": "a2caa4d699a1cd25cd3d109803b8c38663e102efacb1ed77ba744127567d0d49",
-    "variants": 670,
+    "sha256": "fa24c8b72432b9ddbba07b5c4f8f18b9d38e1e3c4f370d5f94dfaddbe8de0d41",
+    "variants": 676,
     "version": "0"
   },
   "version": "0.1.0"

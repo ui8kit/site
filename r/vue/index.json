@@ -679,6 +679,25 @@
     },
     {
       "dependencies": [],
+      "description": "The heading, one paragraph and the case studies (a picture, the client, the title as a link, the result in one line): on cards in three or two columns, or rows with the picture at the start.",
+      "name": "cases-simple",
+      "registryDependencies": [
+        "block",
+        "container",
+        "link-plain",
+        "list",
+        "list-item",
+        "media-frame",
+        "stack",
+        "text",
+        "title",
+        "utils"
+      ],
+      "title": "Cases Simple",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
       "description": "Categories as chips, a bar, a side list, tiles, or chips under a toolbar.",
       "name": "category-nav",
       "registryDependencies": [
@@ -6420,6 +6439,23 @@
     },
     {
       "dependencies": [],
+      "description": "The heading, one paragraph and the steps of a process or a history (the date or the stage, a title, a line) as an ordered list: one column of muted steps, or side by side in two or four columns.",
+      "name": "timeline-simple",
+      "registryDependencies": [
+        "block",
+        "container",
+        "list",
+        "list-item",
+        "stack",
+        "text",
+        "title",
+        "utils"
+      ],
+      "title": "Timeline Simple",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
       "description": "Title primitive",
       "name": "title",
       "registryDependencies": [
@@ -6669,7 +6705,7 @@
       "type": "registry:block"
     }
   ],
-  "lastUpdated": "2026-11-21T02:56:01+03:00",
+  "lastUpdated": "2026-11-21T03:02:41+03:00",
   "registry": "ui",
   "version": "0.1.0"
 }

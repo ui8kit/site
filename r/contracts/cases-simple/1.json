@@ -1,0 +1,126 @@
+{
+  "item": "cases-simple",
+  "version": 1,
+  "block": "block.casessimple",
+  "organism": "CasesSimple",
+  "line": "simple",
+  "model": "cases@1",
+  "modelSchema": "https://registry.buildy.tw/models/cases@1.schema.json",
+  "axes": {
+    "layout": [
+      "cards",
+      "rows"
+    ],
+    "cols": [
+      "3",
+      "2"
+    ]
+  },
+  "defaults": {
+    "layout": "cards",
+    "cols": "3"
+  },
+  "variants": [
+    {
+      "id": "cards3",
+      "label": "Three case cards",
+      "axes": {
+        "layout": "cards",
+        "cols": "3"
+      }
+    },
+    {
+      "id": "cards2",
+      "label": "Two columns",
+      "axes": {
+        "layout": "cards",
+        "cols": "2"
+      }
+    },
+    {
+      "id": "rows",
+      "label": "Rows, the picture at the start",
+      "axes": {
+        "layout": "rows",
+        "cols": "3"
+      },
+      "settings": {
+        "align": "start"
+      }
+    }
+  ],
+  "defaultVariant": "cards3",
+  "settings": {
+    "level": {
+      "type": "1 | 2 | 3",
+      "default": 2
+    },
+    "padding": {
+      "type": "\"compact\" | \"standard\" | \"spacious\"",
+      "default": "standard"
+    },
+    "align": {
+      "type": "\"start\" | \"center\" | \"end\"",
+      "default": "center"
+    },
+    "landmarkLabel": {
+      "type": "string"
+    }
+  },
+  "modes": [
+    "wireframe"
+  ],
+  "defaultMode": "wireframe",
+  "places": [
+    {
+      "place": "title",
+      "kind": "heading",
+      "fields": [
+        "/title"
+      ]
+    },
+    {
+      "place": "description",
+      "kind": "text",
+      "fields": [
+        "/description"
+      ]
+    },
+    {
+      "place": "items.image",
+      "kind": "media",
+      "fields": [
+        "/items/*/image"
+      ],
+      "list": "items"
+    },
+    {
+      "place": "items.client",
+      "kind": "text",
+      "fields": [
+        "/items/*/client"
+      ],
+      "list": "items"
+    },
+    {
+      "place": "items.title",
+      "kind": "heading",
+      "fields": [
+        "/items/*/title",
+        "/items/*/href"
+      ],
+      "list": "items"
+    },
+    {
+      "place": "items.result",
+      "kind": "text",
+      "fields": [
+        "/items/*/result"
+      ],
+      "list": "items"
+    }
+  ],
+  "wireframe": {
+    "items": 3
+  }
+}

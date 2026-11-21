@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://registry.buildy.tw/models/timeline@1.schema.json",
+  "title": "TimelineContent",
+  "description": "Timeline content: the heading, a description and the steps of a process or a history, each with the date or the stage, a title and a line. One object is valid in every timeline layout (one column, two or four columns).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "title",
+    "items"
+  ],
+  "properties": {
+    "title": {
+      "description": "the heading of the section",
+      "type": "string",
+      "maxLength": 120,
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "description": {
+      "description": "one paragraph under the heading; empty: none",
+      "type": "string",
+      "maxLength": 400
+    },
+    "items": {
+      "description": "the steps, in their order",
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 8,
+      "items": {
+        "title": "TimelineStep",
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "date",
+          "title"
+        ],
+        "properties": {
+          "id": {
+            "description": "stable key of the entry (the Codex entry id)",
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]*$"
+          },
+          "date": {
+            "description": "the date or the stage as it is shown (Week 1, 2024)",
+            "type": "string",
+            "maxLength": 40,
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "title": {
+            "description": "the title of the step",
+            "type": "string",
+            "maxLength": 80,
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "text": {
+            "description": "one line about the step; empty: none",
+            "type": "string",
+            "maxLength": 200
+          }
+        }
+      }
+    }
+  }
+}
