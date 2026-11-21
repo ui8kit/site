@@ -3,6 +3,11 @@
   "contractVersion": "2.0.0",
   "contracts": {
     "items": {
+      "amenities-simple@1": {
+        "model": "amenities@1",
+        "path": "contracts/amenities-simple/1.json",
+        "sha256": "52590f838558e822742ac7c052403906be5dac8ae4fdc870fe0da006d94ceea8"
+      },
       "article-lead@1": {
         "model": "article-lead@1",
         "path": "contracts/article-lead/1.json",
@@ -52,6 +57,16 @@
         "model": "cta@1",
         "path": "contracts/cta-simple/1.json",
         "sha256": "b7a19d889f9f999e856d2c44413d75f7e0870e283d8a28d6edb53527baf3453f"
+      },
+      "delivery-simple@1": {
+        "model": "delivery@1",
+        "path": "contracts/delivery-simple/1.json",
+        "sha256": "e8ce821996941e76c3891ea10d59447a2dcdef098438b9fc93e56baa643c6fea"
+      },
+      "digital-simple@1": {
+        "model": "digital@1",
+        "path": "contracts/digital-simple/1.json",
+        "sha256": "2db74f9cc816efbe8806bf0c87e715c7024986a1bafb18d13fcab9d11f13e253"
       },
       "error-simple@1": {
         "model": "error@1",
@@ -250,7 +265,7 @@
       }
     },
     "path": "contracts/v0.json",
-    "sha256": "433e74b66a070eb54f6c85ed8b62427b606856412de95192803ad94151bec75d"
+    "sha256": "aa2cca7fb4173722a126946091fa38fa1cd49c8367b2c8650995cbd47ac759ae"
   },
   "items": [
     {
@@ -1181,6 +1196,149 @@
       },
       "title": "Alert",
       "type": "registry:ui"
+    },
+    {
+      "category": "marketing",
+      "contract": "contracts/amenities-simple/1.json",
+      "description": "The heading, one paragraph and the amenities of a stay or a venue as short names: muted rows in three or two columns, or outlined pills in a wrapping row.",
+      "group": "features",
+      "kind": "block",
+      "model": "amenities@1",
+      "name": "amenities-simple",
+      "runtimes": {
+        "jinja2": {
+          "dependencies": [],
+          "files": [
+            "blocks/amenities-simple.html.j2"
+          ],
+          "path": "jinja2/blocks/amenities-simple.json",
+          "registryDependencies": [
+            "block",
+            "container",
+            "list",
+            "list-item",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "latte": {
+          "dependencies": [],
+          "files": [
+            "blocks/amenities-simple.latte"
+          ],
+          "path": "latte/blocks/amenities-simple.json",
+          "registryDependencies": [
+            "block",
+            "container",
+            "list",
+            "list-item",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "react": {
+          "dependencies": [],
+          "files": [
+            "blocks/amenities-simple.tsx",
+            "blocks/amenities-simple.types.ts"
+          ],
+          "path": "react/blocks/amenities-simple.json",
+          "registryDependencies": [
+            "compose",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/amenities-simple.tsx",
+            "blocks/amenities-simple.types.ts"
+          ],
+          "path": "solid/blocks/amenities-simple.json",
+          "registryDependencies": [
+            "compose",
+            "utils"
+          ]
+        },
+        "svelte": {
+          "dependencies": [],
+          "files": [
+            "blocks/amenities-simple.svelte",
+            "blocks/amenities-simple.types.ts"
+          ],
+          "path": "svelte/blocks/amenities-simple.json",
+          "registryDependencies": [
+            "block",
+            "container",
+            "list",
+            "list-item",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "templ": {
+          "dependencies": [],
+          "files": [
+            "blocks/amenities-simple.templ"
+          ],
+          "path": "templ/blocks/amenities-simple.json",
+          "registryDependencies": [
+            "block",
+            "container",
+            "kit-box",
+            "kit-text",
+            "list",
+            "list-item",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "twig": {
+          "dependencies": [],
+          "files": [
+            "blocks/amenities-simple.html.twig"
+          ],
+          "path": "twig/blocks/amenities-simple.json",
+          "registryDependencies": [
+            "block",
+            "container",
+            "list",
+            "list-item",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "vue": {
+          "dependencies": [],
+          "files": [
+            "blocks/amenities-simple.types.ts",
+            "blocks/amenities-simple.vue"
+          ],
+          "path": "vue/blocks/amenities-simple.json",
+          "registryDependencies": [
+            "block",
+            "container",
+            "list",
+            "list-item",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        }
+      },
+      "title": "Amenities Simple",
+      "type": "registry:block"
     },
     {
       "category": "promo",
@@ -11083,6 +11241,149 @@
       "type": "registry:block"
     },
     {
+      "category": "marketing",
+      "contract": "contracts/delivery-simple/1.json",
+      "description": "The heading, one paragraph and the delivery zones (the area, the time, the minimum order, the price): card rows with the price at the end, or cards in three columns.",
+      "group": "delivery",
+      "kind": "block",
+      "model": "delivery@1",
+      "name": "delivery-simple",
+      "runtimes": {
+        "jinja2": {
+          "dependencies": [],
+          "files": [
+            "blocks/delivery-simple.html.j2"
+          ],
+          "path": "jinja2/blocks/delivery-simple.json",
+          "registryDependencies": [
+            "block",
+            "container",
+            "list",
+            "list-item",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "latte": {
+          "dependencies": [],
+          "files": [
+            "blocks/delivery-simple.latte"
+          ],
+          "path": "latte/blocks/delivery-simple.json",
+          "registryDependencies": [
+            "block",
+            "container",
+            "list",
+            "list-item",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "react": {
+          "dependencies": [],
+          "files": [
+            "blocks/delivery-simple.tsx",
+            "blocks/delivery-simple.types.ts"
+          ],
+          "path": "react/blocks/delivery-simple.json",
+          "registryDependencies": [
+            "compose",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/delivery-simple.tsx",
+            "blocks/delivery-simple.types.ts"
+          ],
+          "path": "solid/blocks/delivery-simple.json",
+          "registryDependencies": [
+            "compose",
+            "utils"
+          ]
+        },
+        "svelte": {
+          "dependencies": [],
+          "files": [
+            "blocks/delivery-simple.svelte",
+            "blocks/delivery-simple.types.ts"
+          ],
+          "path": "svelte/blocks/delivery-simple.json",
+          "registryDependencies": [
+            "block",
+            "container",
+            "list",
+            "list-item",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "templ": {
+          "dependencies": [],
+          "files": [
+            "blocks/delivery-simple.templ"
+          ],
+          "path": "templ/blocks/delivery-simple.json",
+          "registryDependencies": [
+            "block",
+            "container",
+            "kit-box",
+            "kit-text",
+            "list",
+            "list-item",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "twig": {
+          "dependencies": [],
+          "files": [
+            "blocks/delivery-simple.html.twig"
+          ],
+          "path": "twig/blocks/delivery-simple.json",
+          "registryDependencies": [
+            "block",
+            "container",
+            "list",
+            "list-item",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "vue": {
+          "dependencies": [],
+          "files": [
+            "blocks/delivery-simple.types.ts",
+            "blocks/delivery-simple.vue"
+          ],
+          "path": "vue/blocks/delivery-simple.json",
+          "registryDependencies": [
+            "block",
+            "container",
+            "list",
+            "list-item",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        }
+      },
+      "title": "Delivery Simple",
+      "type": "registry:block"
+    },
+    {
       "category": "primitives",
       "description": "Dialog primitive",
       "group": "",
@@ -11188,6 +11489,162 @@
       },
       "title": "Dialog",
       "type": "registry:ui"
+    },
+    {
+      "category": "marketing",
+      "contract": "contracts/digital-simple/1.json",
+      "description": "The heading, one paragraph and the digital goods (the format as a pill, the name as a link, a line, the price): on cards in three columns, or rows with the price at the end.",
+      "group": "product",
+      "kind": "block",
+      "model": "digital@1",
+      "name": "digital-simple",
+      "runtimes": {
+        "jinja2": {
+          "dependencies": [],
+          "files": [
+            "blocks/digital-simple.html.j2"
+          ],
+          "path": "jinja2/blocks/digital-simple.json",
+          "registryDependencies": [
+            "badge",
+            "block",
+            "container",
+            "link-plain",
+            "list",
+            "list-item",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "latte": {
+          "dependencies": [],
+          "files": [
+            "blocks/digital-simple.latte"
+          ],
+          "path": "latte/blocks/digital-simple.json",
+          "registryDependencies": [
+            "badge",
+            "block",
+            "container",
+            "link-plain",
+            "list",
+            "list-item",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "react": {
+          "dependencies": [],
+          "files": [
+            "blocks/digital-simple.tsx",
+            "blocks/digital-simple.types.ts"
+          ],
+          "path": "react/blocks/digital-simple.json",
+          "registryDependencies": [
+            "compose",
+            "utils"
+          ]
+        },
+        "solid": {
+          "dependencies": [],
+          "files": [
+            "blocks/digital-simple.tsx",
+            "blocks/digital-simple.types.ts"
+          ],
+          "path": "solid/blocks/digital-simple.json",
+          "registryDependencies": [
+            "compose",
+            "utils"
+          ]
+        },
+        "svelte": {
+          "dependencies": [],
+          "files": [
+            "blocks/digital-simple.svelte",
+            "blocks/digital-simple.types.ts"
+          ],
+          "path": "svelte/blocks/digital-simple.json",
+          "registryDependencies": [
+            "badge",
+            "block",
+            "container",
+            "link-plain",
+            "list",
+            "list-item",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "templ": {
+          "dependencies": [],
+          "files": [
+            "blocks/digital-simple.templ"
+          ],
+          "path": "templ/blocks/digital-simple.json",
+          "registryDependencies": [
+            "badge",
+            "block",
+            "container",
+            "kit-box",
+            "kit-link",
+            "kit-text",
+            "link-plain",
+            "list",
+            "list-item",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "twig": {
+          "dependencies": [],
+          "files": [
+            "blocks/digital-simple.html.twig"
+          ],
+          "path": "twig/blocks/digital-simple.json",
+          "registryDependencies": [
+            "badge",
+            "block",
+            "container",
+            "link-plain",
+            "list",
+            "list-item",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        },
+        "vue": {
+          "dependencies": [],
+          "files": [
+            "blocks/digital-simple.types.ts",
+            "blocks/digital-simple.vue"
+          ],
+          "path": "vue/blocks/digital-simple.json",
+          "registryDependencies": [
+            "badge",
+            "block",
+            "container",
+            "link-plain",
+            "list",
+            "list-item",
+            "stack",
+            "text",
+            "title",
+            "utils"
+          ]
+        }
+      },
+      "title": "Digital Simple",
+      "type": "registry:block"
     },
     {
       "category": "primitives",
@@ -55618,9 +56075,13 @@
       "type": "registry:block"
     }
   ],
-  "lastUpdated": "2026-11-21T03:02:41+03:00",
+  "lastUpdated": "2026-11-21T03:43:16+03:00",
   "layout": "<runtime>/index.json + <runtime>/{components/ui,components,blocks,utils,lib,themes}/<name>.json; use r/<runtime> as registryUrl",
   "models": {
+    "amenities@1": {
+      "path": "models/amenities@1.schema.json",
+      "sha256": "4de03f100f09a5ab90f8684853d4bd6ca5f59d8231aa8f4b48f87b67ae8a4cbc"
+    },
     "article-lead@1": {
       "path": "models/article-lead@1.schema.json",
       "sha256": "eae6233434a9bd8330b253110fc4731ab270c38a7e165c00bd0f111384ee3db6"
@@ -55660,6 +56121,14 @@
     "curriculum@1": {
       "path": "models/curriculum@1.schema.json",
       "sha256": "29cb5db578daed45f74a868adc151a15ea48f36f445812eb8be85b83d22d2b23"
+    },
+    "delivery@1": {
+      "path": "models/delivery@1.schema.json",
+      "sha256": "248be518dae39f2974450d58cf49de826362eb6beebb649727871a30874dd36e"
+    },
+    "digital@1": {
+      "path": "models/digital@1.schema.json",
+      "sha256": "36a8571e56c52ab4611f26138164c864ee94d03060a6b0aa481858c71090aa5a"
     },
     "error@1": {
       "path": "models/error@1.schema.json",
@@ -55819,9 +56288,9 @@
     }
   },
   "props": {
-    "digest": "sha256:66b0720a9228528de20b4a5607fb4cbb81b0d2a198563f6d26f6cf758b6ae5b6",
+    "digest": "sha256:f1d6a911b010c8cc50a53011c220a398fe7db35e20b54d4d15dc14e211ce0722",
     "path": "props/v0.json",
-    "sha256": "e923b3bc352c707b3613be83d4c776e489a1b2eb9be53d28f6de672b28ae0d79",
+    "sha256": "448efc44a97129375c724e40145a812bc1931cd2356d431b628b914fa6be27fa",
     "version": "0"
   },
   "runtimes": [
@@ -55834,11 +56303,11 @@
     "latte",
     "jinja2"
   ],
-  "sourceCommit": "998fe6cd6238ccc4208dab0462cdc45f85ccfce6",
+  "sourceCommit": "698069ec24386c2e83660fd33d2f26c71d24a01f",
   "variants": {
-    "digest": "sha256:6404facd90203894d83aeb118a20add2751e93533fe9414833d88586d338ab4c",
+    "digest": "sha256:9e70b8612956517e1c7644d94657be0a75f61b1a96d400a70e37ab4893b2422a",
     "path": "variants/v0.json",
-    "sha256": "fa24c8b72432b9ddbba07b5c4f8f18b9d38e1e3c4f370d5f94dfaddbe8de0d41",
+    "sha256": "1f134afb31893ab74650e2f80083a3bdb592359d55f0d14ee2108bca24bde02b",
     "version": "0"
   },
   "version": "0.1.0"

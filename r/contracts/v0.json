@@ -2,6 +2,12 @@
   "version": 0,
   "base": "https://registry.buildy.tw/contracts",
   "items": {
+    "amenities-simple": {
+      "version": 1,
+      "block": "block.amenitiessimple",
+      "model": "amenities@1",
+      "path": "amenities-simple/1.json"
+    },
     "article-lead": {
       "version": 1,
       "block": "block.articlelead",
@@ -61,6 +67,18 @@
       "block": "block.ctasimple",
       "model": "cta@1",
       "path": "cta-simple/1.json"
+    },
+    "delivery-simple": {
+      "version": 1,
+      "block": "block.deliverysimple",
+      "model": "delivery@1",
+      "path": "delivery-simple/1.json"
+    },
+    "digital-simple": {
+      "version": 1,
+      "block": "block.digitalsimple",
+      "model": "digital@1",
+      "path": "digital-simple/1.json"
     },
     "error-simple": {
       "version": 1,

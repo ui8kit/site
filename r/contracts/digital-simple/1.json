@@ -1,0 +1,111 @@
+{
+  "item": "digital-simple",
+  "version": 1,
+  "block": "block.digitalsimple",
+  "organism": "DigitalSimple",
+  "line": "simple",
+  "model": "digital@1",
+  "modelSchema": "https://registry.buildy.tw/models/digital@1.schema.json",
+  "axes": {
+    "layout": [
+      "cards",
+      "rows"
+    ]
+  },
+  "defaults": {
+    "layout": "cards"
+  },
+  "variants": [
+    {
+      "id": "cards3",
+      "label": "Three cards",
+      "axes": {
+        "layout": "cards"
+      }
+    },
+    {
+      "id": "rows",
+      "label": "Rows, the price at the end",
+      "axes": {
+        "layout": "rows"
+      },
+      "settings": {
+        "align": "start"
+      }
+    }
+  ],
+  "defaultVariant": "cards3",
+  "settings": {
+    "level": {
+      "type": "1 | 2 | 3",
+      "default": 2
+    },
+    "padding": {
+      "type": "\"compact\" | \"standard\" | \"spacious\"",
+      "default": "standard"
+    },
+    "align": {
+      "type": "\"start\" | \"center\" | \"end\"",
+      "default": "center"
+    },
+    "landmarkLabel": {
+      "type": "string"
+    }
+  },
+  "modes": [
+    "wireframe"
+  ],
+  "defaultMode": "wireframe",
+  "places": [
+    {
+      "place": "title",
+      "kind": "heading",
+      "fields": [
+        "/title"
+      ]
+    },
+    {
+      "place": "description",
+      "kind": "text",
+      "fields": [
+        "/description"
+      ]
+    },
+    {
+      "place": "items.format",
+      "kind": "badge",
+      "fields": [
+        "/items/*/format"
+      ],
+      "list": "items"
+    },
+    {
+      "place": "items.title",
+      "kind": "heading",
+      "fields": [
+        "/items/*/title",
+        "/items/*/href"
+      ],
+      "list": "items"
+    },
+    {
+      "place": "items.description",
+      "kind": "text",
+      "fields": [
+        "/items/*/description"
+      ],
+      "list": "items"
+    },
+    {
+      "place": "items.price",
+      "kind": "text",
+      "fields": [
+        "/items/*/price"
+      ],
+      "list": "items"
+    }
+  ],
+  "wireframe": {
+    "items": 3
+  }
+}

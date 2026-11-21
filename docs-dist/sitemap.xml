@@ -4,6 +4,7 @@
   <url><loc>https://ui.buildy.tw/blocks/about-company/</loc></url>
   <url><loc>https://ui.buildy.tw/blocks/about-me/</loc></url>
   <url><loc>https://ui.buildy.tw/blocks/activity-feed/</loc></url>
+  <url><loc>https://ui.buildy.tw/blocks/amenities-simple/</loc></url>
   <url><loc>https://ui.buildy.tw/blocks/announcement-bar/</loc></url>
   <url><loc>https://ui.buildy.tw/blocks/app-shell/</loc></url>
   <url><loc>https://ui.buildy.tw/blocks/article-body/</loc></url>
@@ -39,6 +40,8 @@
   <url><loc>https://ui.buildy.tw/blocks/dashboard-overview/</loc></url>
   <url><loc>https://ui.buildy.tw/blocks/dashboard-shell/</loc></url>
   <url><loc>https://ui.buildy.tw/blocks/delivery-info/</loc></url>
+  <url><loc>https://ui.buildy.tw/blocks/delivery-simple/</loc></url>
+  <url><loc>https://ui.buildy.tw/blocks/digital-simple/</loc></url>
   <url><loc>https://ui.buildy.tw/blocks/dish-bento/</loc></url>
   <url><loc>https://ui.buildy.tw/blocks/dish-card/</loc></url>
   <url><loc>https://ui.buildy.tw/blocks/dish-cart-grid/</loc></url>

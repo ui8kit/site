@@ -128,6 +128,25 @@
     },
     {
       "dependencies": [],
+      "description": "The heading, one paragraph and the amenities of a stay or a venue as short names: muted rows in three or two columns, or outlined pills in a wrapping row.",
+      "name": "amenities-simple",
+      "registryDependencies": [
+        "block",
+        "container",
+        "kit-box",
+        "kit-text",
+        "list",
+        "list-item",
+        "stack",
+        "text",
+        "title",
+        "utils"
+      ],
+      "title": "Amenities Simple",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
       "description": "A thin strip above the page with one sentence and a link.",
       "name": "announcement-bar",
       "registryDependencies": [
@@ -1386,6 +1405,25 @@
     },
     {
       "dependencies": [],
+      "description": "The heading, one paragraph and the delivery zones (the area, the time, the minimum order, the price): card rows with the price at the end, or cards in three columns.",
+      "name": "delivery-simple",
+      "registryDependencies": [
+        "block",
+        "container",
+        "kit-box",
+        "kit-text",
+        "list",
+        "list-item",
+        "stack",
+        "text",
+        "title",
+        "utils"
+      ],
+      "title": "Delivery Simple",
+      "type": "registry:block"
+    },
+    {
+      "dependencies": [],
       "description": "Dialog: Dialog + recipe dialog.",
       "name": "dialog",
       "registryDependencies": [
@@ -1395,6 +1433,28 @@
       ],
       "title": "Dialog",
       "type": "registry:ui"
+    },
+    {
+      "dependencies": [],
+      "description": "The heading, one paragraph and the digital goods (the format as a pill, the name as a link, a line, the price): on cards in three columns, or rows with the price at the end.",
+      "name": "digital-simple",
+      "registryDependencies": [
+        "badge",
+        "block",
+        "container",
+        "kit-box",
+        "kit-link",
+        "kit-text",
+        "link-plain",
+        "list",
+        "list-item",
+        "stack",
+        "text",
+        "title",
+        "utils"
+      ],
+      "title": "Digital Simple",
+      "type": "registry:block"
     },
     {
       "dependencies": [],
@@ -6971,7 +7031,7 @@
       "type": "registry:block"
     }
   ],
-  "lastUpdated": "2026-11-21T03:02:41+03:00",
+  "lastUpdated": "2026-11-21T03:43:16+03:00",
   "registry": "ui",
   "version": "0.1.0"
 }

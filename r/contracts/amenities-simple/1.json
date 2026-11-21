@@ -1,0 +1,98 @@
+{
+  "item": "amenities-simple",
+  "version": 1,
+  "block": "block.amenitiessimple",
+  "organism": "AmenitiesSimple",
+  "line": "simple",
+  "model": "amenities@1",
+  "modelSchema": "https://registry.buildy.tw/models/amenities@1.schema.json",
+  "axes": {
+    "layout": [
+      "grid",
+      "pills"
+    ],
+    "cols": [
+      "3",
+      "2"
+    ]
+  },
+  "defaults": {
+    "layout": "grid",
+    "cols": "3"
+  },
+  "variants": [
+    {
+      "id": "grid3",
+      "label": "Three columns",
+      "axes": {
+        "layout": "grid",
+        "cols": "3"
+      }
+    },
+    {
+      "id": "grid2",
+      "label": "Two columns",
+      "axes": {
+        "layout": "grid",
+        "cols": "2"
+      }
+    },
+    {
+      "id": "pills",
+      "label": "Pills in a row",
+      "axes": {
+        "layout": "pills",
+        "cols": "3"
+      }
+    }
+  ],
+  "defaultVariant": "grid3",
+  "settings": {
+    "level": {
+      "type": "1 | 2 | 3",
+      "default": 2
+    },
+    "padding": {
+      "type": "\"compact\" | \"standard\" | \"spacious\"",
+      "default": "standard"
+    },
+    "align": {
+      "type": "\"start\" | \"center\" | \"end\"",
+      "default": "center"
+    },
+    "landmarkLabel": {
+      "type": "string"
+    }
+  },
+  "modes": [
+    "wireframe"
+  ],
+  "defaultMode": "wireframe",
+  "places": [
+    {
+      "place": "title",
+      "kind": "heading",
+      "fields": [
+        "/title"
+      ]
+    },
+    {
+      "place": "description",
+      "kind": "text",
+      "fields": [
+        "/description"
+      ]
+    },
+    {
+      "place": "items.title",
+      "kind": "text",
+      "fields": [
+        "/items/*/title"
+      ],
+      "list": "items"
+    }
+  ],
+  "wireframe": {
+    "items": 3
+  }
+}

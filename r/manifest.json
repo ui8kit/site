@@ -2,11 +2,19 @@
   "contractVersion": "2.0.0",
   "contracts": {
     "index": {
-      "bytes": 7611,
+      "bytes": 8088,
       "path": "contracts/v0.json",
-      "sha256": "433e74b66a070eb54f6c85ed8b62427b606856412de95192803ad94151bec75d"
+      "sha256": "aa2cca7fb4173722a126946091fa38fa1cd49c8367b2c8650995cbd47ac759ae"
     },
     "items": {
+      "amenities-simple@1": {
+        "block": "block.amenitiessimple",
+        "bytes": 1694,
+        "model": "amenities@1",
+        "path": "contracts/amenities-simple/1.json",
+        "sha256": "52590f838558e822742ac7c052403906be5dac8ae4fdc870fe0da006d94ceea8",
+        "version": 1
+      },
       "article-lead@1": {
         "block": "block.articlelead",
         "bytes": 1903,
@@ -85,6 +93,22 @@
         "model": "cta@1",
         "path": "contracts/cta-simple/1.json",
         "sha256": "b7a19d889f9f999e856d2c44413d75f7e0870e283d8a28d6edb53527baf3453f",
+        "version": 1
+      },
+      "delivery-simple@1": {
+        "block": "block.deliverysimple",
+        "bytes": 1895,
+        "model": "delivery@1",
+        "path": "contracts/delivery-simple/1.json",
+        "sha256": "e8ce821996941e76c3891ea10d59447a2dcdef098438b9fc93e56baa643c6fea",
+        "version": 1
+      },
+      "digital-simple@1": {
+        "block": "block.digitalsimple",
+        "bytes": 1975,
+        "model": "digital@1",
+        "path": "contracts/digital-simple/1.json",
+        "sha256": "2db74f9cc816efbe8806bf0c87e715c7024986a1bafb18d13fcab9d11f13e253",
         "version": 1
       },
       "error-simple@1": {
@@ -401,10 +425,16 @@
       }
     },
     "source": {
-      "manifest": "6095295ebc06c39bd32db853242f14e0a95beab8597cec08ee7d16c11aa83211"
+      "manifest": "0565f11b590aa88ce8cdd01020b742572c44df63fd689b98f0ca7614ee5d2846"
     }
   },
   "models": {
+    "amenities@1": {
+      "bytes": 1565,
+      "id": "amenities@1",
+      "path": "models/amenities@1.schema.json",
+      "sha256": "4de03f100f09a5ab90f8684853d4bd6ca5f59d8231aa8f4b48f87b67ae8a4cbc"
+    },
     "article-lead@1": {
       "bytes": 1780,
       "id": "article-lead@1",
@@ -464,6 +494,18 @@
       "id": "curriculum@1",
       "path": "models/curriculum@1.schema.json",
       "sha256": "29cb5db578daed45f74a868adc151a15ea48f36f445812eb8be85b83d22d2b23"
+    },
+    "delivery@1": {
+      "bytes": 2165,
+      "id": "delivery@1",
+      "path": "models/delivery@1.schema.json",
+      "sha256": "248be518dae39f2974450d58cf49de826362eb6beebb649727871a30874dd36e"
+    },
+    "digital@1": {
+      "bytes": 2450,
+      "id": "digital@1",
+      "path": "models/digital@1.schema.json",
+      "sha256": "36a8571e56c52ab4611f26138164c864ee94d03060a6b0aa481858c71090aa5a"
     },
     "error@1": {
       "bytes": 1309,
@@ -701,17 +743,17 @@
     }
   },
   "props": {
-    "bytes": 2131693,
-    "digest": "sha256:66b0720a9228528de20b4a5607fb4cbb81b0d2a198563f6d26f6cf758b6ae5b6",
-    "items": 165,
+    "bytes": 2142354,
+    "digest": "sha256:f1d6a911b010c8cc50a53011c220a398fe7db35e20b54d4d15dc14e211ce0722",
+    "items": 168,
     "path": "props/v0.json",
-    "sha256": "e923b3bc352c707b3613be83d4c776e489a1b2eb9be53d28f6de672b28ae0d79",
+    "sha256": "448efc44a97129375c724e40145a812bc1931cd2356d431b628b914fa6be27fa",
     "version": "0"
   },
   "runtimes": {
     "jinja2": {
       "counts": {
-        "block": 165,
+        "block": 168,
         "component": 137,
         "lib": 2,
         "primitive": 85,
@@ -780,6 +822,15 @@
             }
           },
           "type": "registry:ui"
+        },
+        "amenities-simple": {
+          "files": {
+            "blocks/amenities-simple.html.j2": {
+              "bytes": 4373,
+              "sha256": "63f65a16828abacfd592feb6ac2f0fe16fe20ccab3adfca3e3c254465eba74d3"
+            }
+          },
+          "type": "registry:block"
         },
         "announcement-bar": {
           "files": {
@@ -1384,6 +1435,15 @@
           },
           "type": "registry:block"
         },
+        "delivery-simple": {
+          "files": {
+            "blocks/delivery-simple.html.j2": {
+              "bytes": 5515,
+              "sha256": "29783f63644f6f86436b883ac135387fdb3bb21c864398c8df11aae88f15025e"
+            }
+          },
+          "type": "registry:block"
+        },
         "dialog": {
           "files": {
             "compose/dialog.html.j2": {
@@ -1392,6 +1452,15 @@
             }
           },
           "type": "registry:ui"
+        },
+        "digital-simple": {
+          "files": {
+            "blocks/digital-simple.html.j2": {
+              "bytes": 6290,
+              "sha256": "13b0ff729b781ab52c10e05de0615f8908da3cb90db670d10a9755ed83f6c93c"
+            }
+          },
+          "type": "registry:block"
         },
         "disclosure": {
           "files": {
@@ -4349,11 +4418,11 @@
           "type": "registry:block"
         }
       },
-      "items": 390
+      "items": 393
     },
     "latte": {
       "counts": {
-        "block": 165,
+        "block": 168,
         "component": 137,
         "lib": 2,
         "primitive": 85,
@@ -4422,6 +4491,15 @@
             }
           },
           "type": "registry:ui"
+        },
+        "amenities-simple": {
+          "files": {
+            "blocks/amenities-simple.latte": {
+              "bytes": 4294,
+              "sha256": "a50d11913a10c4d1063a9c008cdcb61fb8562dcd9559bd7f7311ec3350d24a87"
+            }
+          },
+          "type": "registry:block"
         },
         "announcement-bar": {
           "files": {
@@ -5026,6 +5104,15 @@
           },
           "type": "registry:block"
         },
+        "delivery-simple": {
+          "files": {
+            "blocks/delivery-simple.latte": {
+              "bytes": 5453,
+              "sha256": "ddd2c55bd716723e6ec4400a221b2e8636bf884f5f0184c1e7d2beb5ee48072e"
+            }
+          },
+          "type": "registry:block"
+        },
         "dialog": {
           "files": {
             "compose/Dialog.latte": {
@@ -5034,6 +5121,15 @@
             }
           },
           "type": "registry:ui"
+        },
+        "digital-simple": {
+          "files": {
+            "blocks/digital-simple.latte": {
+              "bytes": 6224,
+              "sha256": "20bc4ddc914253e3dd70b3c553a6ae7b91026b8d2817a97deff01f4442f97879"
+            }
+          },
+          "type": "registry:block"
         },
         "disclosure": {
           "files": {
@@ -7987,11 +8083,11 @@
           "type": "registry:block"
         }
       },
-      "items": 390
+      "items": 393
     },
     "react": {
       "counts": {
-        "block": 165,
+        "block": 168,
         "component": 137,
         "lib": 2,
         "primitive": 89,
@@ -8069,6 +8165,19 @@
             }
           },
           "type": "registry:ui"
+        },
+        "amenities-simple": {
+          "files": {
+            "blocks/amenities-simple.tsx": {
+              "bytes": 3626,
+              "sha256": "1523798c9741e30da86d18fb23c58eb475c3b0fac8ccf8f03dd626fbbb835213"
+            },
+            "blocks/amenities-simple.types.ts": {
+              "bytes": 211,
+              "sha256": "645c55e6e28826b917929cf90a2c006dfb97f2f630ef989a4b855c52e220a6ed"
+            }
+          },
+          "type": "registry:block"
         },
         "announcement-bar": {
           "files": {
@@ -8810,6 +8919,19 @@
           },
           "type": "registry:block"
         },
+        "delivery-simple": {
+          "files": {
+            "blocks/delivery-simple.tsx": {
+              "bytes": 4231,
+              "sha256": "beb8d40f2a45bec9761e972c00c7780a37b733aa34f453e127d1382a4932aa5b"
+            },
+            "blocks/delivery-simple.types.ts": {
+              "bytes": 270,
+              "sha256": "b94d01fc03d3a322dc39b2f22cf63cf6b5a9cd8ac9b4936bb9cb8be47e82d2f5"
+            }
+          },
+          "type": "registry:block"
+        },
         "dialog": {
           "files": {
             "compose/dialog.tsx": {
@@ -8818,6 +8940,19 @@
             }
           },
           "type": "registry:ui"
+        },
+        "digital-simple": {
+          "files": {
+            "blocks/digital-simple.tsx": {
+              "bytes": 4737,
+              "sha256": "7f07211f613a3496b7eaa83f16d8b3bb66df69f3d6e40ed1458bf1b48f3b6328"
+            },
+            "blocks/digital-simple.types.ts": {
+              "bytes": 292,
+              "sha256": "a6a16e3b9fd3bcbcd42066e7e0cfa0010ae40aedb24c1e5e92fad83a6eae5afb"
+            }
+          },
+          "type": "registry:block"
         },
         "disclosure": {
           "files": {
@@ -12387,11 +12522,11 @@
           "type": "registry:block"
         }
       },
-      "items": 411
+      "items": 414
     },
     "solid": {
       "counts": {
-        "block": 165,
+        "block": 168,
         "component": 137,
         "lib": 2,
         "primitive": 88,
@@ -12469,6 +12604,19 @@
             }
           },
           "type": "registry:ui"
+        },
+        "amenities-simple": {
+          "files": {
+            "blocks/amenities-simple.tsx": {
+              "bytes": 3596,
+              "sha256": "3208cd3c5992cff6bbff0108ba2a598b4ab43fea7fab24750aa9b1c084960f50"
+            },
+            "blocks/amenities-simple.types.ts": {
+              "bytes": 211,
+              "sha256": "645c55e6e28826b917929cf90a2c006dfb97f2f630ef989a4b855c52e220a6ed"
+            }
+          },
+          "type": "registry:block"
         },
         "announcement-bar": {
           "files": {
@@ -13210,6 +13358,19 @@
           },
           "type": "registry:block"
         },
+        "delivery-simple": {
+          "files": {
+            "blocks/delivery-simple.tsx": {
+              "bytes": 4189,
+              "sha256": "be3e380e615cca0669acbfffb4a9aca7ad66199a32415806283049aefe9c3342"
+            },
+            "blocks/delivery-simple.types.ts": {
+              "bytes": 270,
+              "sha256": "b94d01fc03d3a322dc39b2f22cf63cf6b5a9cd8ac9b4936bb9cb8be47e82d2f5"
+            }
+          },
+          "type": "registry:block"
+        },
         "dialog": {
           "files": {
             "compose/dialog.solid.tsx": {
@@ -13218,6 +13379,19 @@
             }
           },
           "type": "registry:ui"
+        },
+        "digital-simple": {
+          "files": {
+            "blocks/digital-simple.tsx": {
+              "bytes": 4687,
+              "sha256": "31cd01458113416b84d5874fb0996e7ea7cce901e4d337e76c37d0ef4ee06eee"
+            },
+            "blocks/digital-simple.types.ts": {
+              "bytes": 292,
+              "sha256": "a6a16e3b9fd3bcbcd42066e7e0cfa0010ae40aedb24c1e5e92fad83a6eae5afb"
+            }
+          },
+          "type": "registry:block"
         },
         "disclosure": {
           "files": {
@@ -16778,11 +16952,11 @@
           "type": "registry:block"
         }
       },
-      "items": 410
+      "items": 413
     },
     "svelte": {
       "counts": {
-        "block": 165,
+        "block": 168,
         "component": 137,
         "lib": 2,
         "primitive": 88,
@@ -16860,6 +17034,19 @@
             }
           },
           "type": "registry:ui"
+        },
+        "amenities-simple": {
+          "files": {
+            "blocks/amenities-simple.svelte": {
+              "bytes": 3879,
+              "sha256": "2e70e2d1f965e4951c888df982754cb29525a8f6bf308dbdd936a0e21bd77430"
+            },
+            "blocks/amenities-simple.types.ts": {
+              "bytes": 211,
+              "sha256": "645c55e6e28826b917929cf90a2c006dfb97f2f630ef989a4b855c52e220a6ed"
+            }
+          },
+          "type": "registry:block"
         },
         "announcement-bar": {
           "files": {
@@ -17601,6 +17788,19 @@
           },
           "type": "registry:block"
         },
+        "delivery-simple": {
+          "files": {
+            "blocks/delivery-simple.svelte": {
+              "bytes": 4413,
+              "sha256": "c5da4da4aa3cc39b1bd633fe05b840e22096ad8e9600cbc31462ffbabb92e4e2"
+            },
+            "blocks/delivery-simple.types.ts": {
+              "bytes": 270,
+              "sha256": "b94d01fc03d3a322dc39b2f22cf63cf6b5a9cd8ac9b4936bb9cb8be47e82d2f5"
+            }
+          },
+          "type": "registry:block"
+        },
         "dialog": {
           "files": {
             "compose/Dialog.svelte": {
@@ -17609,6 +17809,19 @@
             }
           },
           "type": "registry:ui"
+        },
+        "digital-simple": {
+          "files": {
+            "blocks/digital-simple.svelte": {
+              "bytes": 4979,
+              "sha256": "ebbe14407624b5065d585134abb5b67c3cfdc22cc0e7a4c227db2369682c677f"
+            },
+            "blocks/digital-simple.types.ts": {
+              "bytes": 292,
+              "sha256": "a6a16e3b9fd3bcbcd42066e7e0cfa0010ae40aedb24c1e5e92fad83a6eae5afb"
+            }
+          },
+          "type": "registry:block"
         },
         "disclosure": {
           "files": {
@@ -21189,11 +21402,11 @@
           "type": "registry:block"
         }
       },
-      "items": 410
+      "items": 413
     },
     "templ": {
       "counts": {
-        "block": 165,
+        "block": 168,
         "component": 137,
         "lib": 2,
         "primitive": 85,
@@ -21262,6 +21475,15 @@
             }
           },
           "type": "registry:ui"
+        },
+        "amenities-simple": {
+          "files": {
+            "blocks/amenities-simple.templ": {
+              "bytes": 4692,
+              "sha256": "18d248357bb6c1a5619ea17e59c6fb4d00167bfb6e300466caee4d40c93c1444"
+            }
+          },
+          "type": "registry:block"
         },
         "announcement-bar": {
           "files": {
@@ -21866,6 +22088,15 @@
           },
           "type": "registry:block"
         },
+        "delivery-simple": {
+          "files": {
+            "blocks/delivery-simple.templ": {
+              "bytes": 5500,
+              "sha256": "4adc64db81046d4110cf902c1eb1a3ae60da8e560ef3d134411bc279e7aab3cc"
+            }
+          },
+          "type": "registry:block"
+        },
         "dialog": {
           "files": {
             "compose/dialog.templ": {
@@ -21874,6 +22105,15 @@
             }
           },
           "type": "registry:ui"
+        },
+        "digital-simple": {
+          "files": {
+            "blocks/digital-simple.templ": {
+              "bytes": 6172,
+              "sha256": "4e396662e16c54dc14528857e20bc796f7da3ec18cd1765b851dbaed4b20b8b0"
+            }
+          },
+          "type": "registry:block"
         },
         "disclosure": {
           "files": {
@@ -24851,11 +25091,11 @@
           "type": "registry:block"
         }
       },
-      "items": 390
+      "items": 393
     },
     "twig": {
       "counts": {
-        "block": 165,
+        "block": 168,
         "component": 137,
         "lib": 2,
         "primitive": 85,
@@ -24924,6 +25164,15 @@
             }
           },
           "type": "registry:ui"
+        },
+        "amenities-simple": {
+          "files": {
+            "blocks/amenities-simple.html.twig": {
+              "bytes": 4372,
+              "sha256": "a2fe1ea65e4bcea3526d6b15c647f847ee76347afbccf862c234609528a159e0"
+            }
+          },
+          "type": "registry:block"
         },
         "announcement-bar": {
           "files": {
@@ -25528,6 +25777,15 @@
           },
           "type": "registry:block"
         },
+        "delivery-simple": {
+          "files": {
+            "blocks/delivery-simple.html.twig": {
+              "bytes": 5585,
+              "sha256": "038bb1fca7fbe123742d62da0aa421c86fb714047a439e628f712fbd8076bb86"
+            }
+          },
+          "type": "registry:block"
+        },
         "dialog": {
           "files": {
             "compose/Dialog.html.twig": {
@@ -25536,6 +25794,15 @@
             }
           },
           "type": "registry:ui"
+        },
+        "digital-simple": {
+          "files": {
+            "blocks/digital-simple.html.twig": {
+              "bytes": 6383,
+              "sha256": "8e2a7660ff70a2eaeb74114e96f21b749199260a41d6e788c29f86c6a87e1517"
+            }
+          },
+          "type": "registry:block"
         },
         "disclosure": {
           "files": {
@@ -28497,11 +28764,11 @@
           "type": "registry:block"
         }
       },
-      "items": 390
+      "items": 393
     },
     "vue": {
       "counts": {
-        "block": 165,
+        "block": 168,
         "component": 137,
         "lib": 2,
         "primitive": 88,
@@ -28579,6 +28846,19 @@
             }
           },
           "type": "registry:ui"
+        },
+        "amenities-simple": {
+          "files": {
+            "blocks/amenities-simple.types.ts": {
+              "bytes": 211,
+              "sha256": "645c55e6e28826b917929cf90a2c006dfb97f2f630ef989a4b855c52e220a6ed"
+            },
+            "blocks/amenities-simple.vue": {
+              "bytes": 3813,
+              "sha256": "39125f37df35d656c1cc14b1e4600f888029914725d1dd51214ff5af3f61165d"
+            }
+          },
+          "type": "registry:block"
         },
         "announcement-bar": {
           "files": {
@@ -29320,6 +29600,19 @@
           },
           "type": "registry:block"
         },
+        "delivery-simple": {
+          "files": {
+            "blocks/delivery-simple.types.ts": {
+              "bytes": 270,
+              "sha256": "b94d01fc03d3a322dc39b2f22cf63cf6b5a9cd8ac9b4936bb9cb8be47e82d2f5"
+            },
+            "blocks/delivery-simple.vue": {
+              "bytes": 4306,
+              "sha256": "ca1ceb8f14fbef66ca351d90c42665ee233de88c807a9572eb49f57e12e7b0fd"
+            }
+          },
+          "type": "registry:block"
+        },
         "dialog": {
           "files": {
             "compose/Dialog.vue": {
@@ -29328,6 +29621,19 @@
             }
           },
           "type": "registry:ui"
+        },
+        "digital-simple": {
+          "files": {
+            "blocks/digital-simple.types.ts": {
+              "bytes": 292,
+              "sha256": "a6a16e3b9fd3bcbcd42066e7e0cfa0010ae40aedb24c1e5e92fad83a6eae5afb"
+            },
+            "blocks/digital-simple.vue": {
+              "bytes": 4804,
+              "sha256": "fb9be51f39127612949c8745259b706099f9de15861b89a5e81961c58dd9854e"
+            }
+          },
+          "type": "registry:block"
         },
         "disclosure": {
           "files": {
@@ -32908,22 +33214,22 @@
           "type": "registry:block"
         }
       },
-      "items": 410
+      "items": 413
     }
   },
   "source": {
-    "commit": "998fe6cd6238ccc4208dab0462cdc45f85ccfce6",
-    "commitDate": "2026-11-21T03:02:41+03:00",
+    "commit": "698069ec24386c2e83660fd33d2f26c71d24a01f",
+    "commitDate": "2026-11-21T03:43:16+03:00",
     "dirty": false,
     "repo": "private source monorepo"
   },
   "variants": {
-    "bytes": 150889,
-    "digest": "sha256:6404facd90203894d83aeb118a20add2751e93533fe9414833d88586d338ab4c",
-    "items": 161,
+    "bytes": 152215,
+    "digest": "sha256:9e70b8612956517e1c7644d94657be0a75f61b1a96d400a70e37ab4893b2422a",
+    "items": 164,
     "path": "variants/v0.json",
-    "sha256": "fa24c8b72432b9ddbba07b5c4f8f18b9d38e1e3c4f370d5f94dfaddbe8de0d41",
-    "variants": 676,
+    "sha256": "1f134afb31893ab74650e2f80083a3bdb592359d55f0d14ee2108bca24bde02b",
+    "variants": 683,
     "version": "0"
   },
   "version": "0.1.0"

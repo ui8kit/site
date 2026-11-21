@@ -1,0 +1,73 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://registry.buildy.tw/models/delivery@1.schema.json",
+  "title": "DeliveryContent",
+  "description": "Delivery zones content: the heading, a description and the zones, each with the area, the delivery time, the price and the minimum order as they are shown. One object is valid in every delivery layout (rows, cards).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "title",
+    "items"
+  ],
+  "properties": {
+    "title": {
+      "description": "the heading of the section",
+      "type": "string",
+      "maxLength": 120,
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "description": {
+      "description": "one paragraph under the heading; empty: none",
+      "type": "string",
+      "maxLength": 400
+    },
+    "items": {
+      "description": "the zones, nearest first",
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 6,
+      "items": {
+        "title": "DeliveryZone",
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "title",
+          "price"
+        ],
+        "properties": {
+          "id": {
+            "description": "stable key of the entry (the Codex entry id)",
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]*$"
+          },
+          "title": {
+            "description": "the area of the zone",
+            "type": "string",
+            "maxLength": 80,
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "time": {
+            "description": "the delivery time as it is shown; empty: none",
+            "type": "string",
+            "maxLength": 40
+          },
+          "price": {
+            "description": "the delivery price as it is shown (free, 290 ₽)",
+            "type": "string",
+            "maxLength": 40,
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "minimum": {
+            "description": "the minimum order as it is shown; empty: none",
+            "type": "string",
+            "maxLength": 60
+          }
+        }
+      }
+    }
+  }
+}
