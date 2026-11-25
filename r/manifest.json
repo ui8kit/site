@@ -24192,8 +24192,8 @@
         "recipes": {
           "files": {
             "compose/compose.go": {
-              "bytes": 2324,
-              "sha256": "df577d4b10997cd3a7547d5d7a4ab362916751ef933ea55a40016092ba5a83f1"
+              "bytes": 9620,
+              "sha256": "6a40f3847def99c35ee9e205cd9725860779442306fdb8d0e7c89015e626d9af"
             },
             "compose/compose.json": {
               "bytes": 43949,
@@ -24977,8 +24977,8 @@
               "sha256": "b442cf7fa2f792fec5bee0432336d124ff2a5eb5dc5db1fd08f234b006a46585"
             },
             "orgutils/dyn.go": {
-              "bytes": 16271,
-              "sha256": "de3c58f646cd91bdaed46a57c96a7230320cc137b67d1c5fbe32b3c14f6057c1"
+              "bytes": 17247,
+              "sha256": "0de13d42cfdccc2c55cf068d4729e3fedff76c45abe8363d225605e72d6d6799"
             },
             "orgutils/expr.go": {
               "bytes": 2438,
@@ -33218,8 +33218,8 @@
     }
   },
   "source": {
-    "commit": "63e01c9a97b77e86f26dfe47a1b305af27a9cea8",
-    "commitDate": "2026-11-21T22:17:37+03:00",
+    "commit": "54c1c7db26d242f48539bd4f196c6ec9bd9c24bb",
+    "commitDate": "2026-11-25T22:10:28+03:00",
     "dirty": false,
     "repo": "private source monorepo"
   },

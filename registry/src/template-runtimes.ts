@@ -94,7 +94,7 @@ export function buildTemplateRuntime(src: string, rt: TemplateRuntime, kinds: Ma
   };
   const sources = new Map<string, { kind: Kind; files: string[] }>();
   for (const f of [...files.keys()].sort(cmp)) {
-    if (rt === "templ" && f.endsWith("_templ.go")) continue;
+    if (rt === "templ" && (f.endsWith("_templ.go") || f.endsWith("_test.go"))) continue;
     const name = groupOf(f);
     if (!name) { problems.push(`${rt}: ${f} belongs to no item`); continue; }
     const kind = name === "utils" ? "utils" : name === "presets" || name === "recipes" ? "lib" : kinds.get(name);
